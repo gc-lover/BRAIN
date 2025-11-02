@@ -7,6 +7,10 @@ date: "YYYY-MM-DD"
 author: "User"
 ---
 
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-03 00:04  
+**api-readiness-notes:** Шаблон для создания идей, не конкретная идея, не предназначен для создания API
+
 # [Название идеи]
 
 **Статус:** recorded  

@@ -215,6 +215,72 @@ documents:
     issues: []
     api_target: null
 
+  # 06-tasks/config/ - Конфигурационные файлы
+  - path: ".BRAIN/06-tasks/config/AGENTS-REGISTRY.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Служебный конфигурационный файл, описывает агентов проекта и их правила, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/config/RULES-QUICK-GUIDE.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Служебный конфигурационный файл, описание правил Cursor, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/config/CURSOR-RULES-DIAGNOSTIC.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Служебный конфигурационный файл, диагностика проблем с правилами Cursor, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/config/ЧЕКБРЕЙН.MD"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Служебный конфигурационный файл, чеклист для агента проверки готовности документов, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  # 06-tasks/ideas/ - Идеи и шаблоны
+  - path: ".BRAIN/06-tasks/ideas/IDEA-TEMPLATE.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Шаблон для создания идей, не конкретная идея, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/ideas/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Служебный файл, индекс идей, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  # Служебные файлы
+  - path: ".BRAIN/МЕНЕДЖЕР.MD"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 00:04"
+    checker: "AI Agent"
+    notes: "Инструкция для агента-менеджера, описание работы менеджера, не предназначена для создания API"
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
