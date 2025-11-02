@@ -285,7 +285,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/relationships-system.md"
     status: "ready"
     version: "1.2.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики системы отношений и репутации. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -294,7 +294,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/npc-relationships-system.md"
     status: "ready"
     version: "1.2.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики отношений с NPC, включая романтику и эмоции NPC. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -303,7 +303,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/npc-hiring-system.md"
     status: "ready"
     version: "1.1.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики найма NPC для различных ролей. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -312,7 +312,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/player-orders-system.md"
     status: "ready"
     version: "1.1.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики системы заказов игроков через NPC. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -321,7 +321,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/mentorship-system.md"
     status: "ready"
     version: "1.1.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики системы наставничества. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -330,7 +330,7 @@ documents:
   - path: ".BRAIN/02-gameplay/social/family-relationships-system.md"
     status: "ready"
     version: "1.1.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики семейных отношений с NPC. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
@@ -349,7 +349,7 @@ documents:
   - path: ".BRAIN/02-gameplay/progression/classes-overview.md"
     status: "ready"
     version: "1.7.0"
-    checked: "2025-11-03 16:30"
+    checked: "2025-11-03 01:55"
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные механики системы классов, подклассов, способностей и общих навыков. TODO блоки только по балансировке и детальной проработке способностей (не блокируют создание API)."
     issues: []
