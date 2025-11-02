@@ -1,5 +1,9 @@
 # Архитектура директорий .BRAIN
 
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-02 23:12  
+**api-readiness-notes:** Служебный файл, описание архитектуры репозитория, не предназначен для создания API
+
 ## Предлагаемая структура
 
 ```
@@ -260,6 +264,10 @@
 **Дата создания:** YYYY-MM-DD  
 **Последнее обновление:** YYYY-MM-DD  
 **Приоритет:** низкий | средний | высокий | критический
+
+**api-readiness:** ready | needs-work | blocked | in-review | not-applicable  
+**api-readiness-check-date:** YYYY-MM-DD HH:MM  
+**api-readiness-notes:** Заметки о готовности/проблемах (опционально)
 
 ---
 **API Tasks Status:**

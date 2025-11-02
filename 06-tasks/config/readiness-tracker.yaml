@@ -1,0 +1,254 @@
+# Трекер готовности документов .BRAIN к созданию API задач
+
+# Этот файл отслеживает готовность документов в .BRAIN к созданию API задач для API-SWAGGER.
+# Используется для отслеживания проверенных документов и их статусов готовности.
+
+# Структура записи:
+# - path: путь к документу в .BRAIN (относительно корня репозитория)
+# - status: статус готовности (ready, needs-work, blocked, in-review, not-applicable)
+# - version: версия документа из метаданных
+# - checked: дата и время проверки (YYYY-MM-DD HH:MM)
+# - checker: кто проверил (AI Agent или имя)
+# - notes: заметки о готовности/проблемах
+# - issues: список проблем/TODO, которые блокируют готовность
+# - api_target: предполагаемый путь к файлу API (если определен)
+
+# Статусы готовности:
+# - ready: документ готов к созданию задачи API
+# - needs-work: нужна доработка документа
+# - blocked: заблокирован зависимостями
+# - in-review: проверяется на готовность
+# - not-applicable: документ не предназначен для создания API
+
+documents:
+  # 01-concepts/ - Концептуальные документы
+  - path: ".BRAIN/01-concepts/vision.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Документ слишком концептуальный, не содержит конкретных механик для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/01-concepts/design-philosophy.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Документ описывает философию дизайна, не содержит конкретных механик для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/01-concepts/core-pillars.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Документ описывает столпы игры, не содержит конкретных механик для создания API"
+    issues: []
+    api_target: null
+
+  # 03-lore/ - Документы лора
+  - path: ".BRAIN/03-lore/universe.md"
+    status: "needs-work"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Есть блокирующие TODO блоки: детальная проработка временной шкалы и лора симуляции будет позже"
+    issues:
+      - "TODO: Детальная проработка временной шкалы и расчета игрового времени будет позже"
+      - "TODO: Детальная проработка лора симуляции и её раскрытия будет позже"
+    api_target: null
+
+  - path: ".BRAIN/03-lore/factions/factions-overview.md"
+    status: "needs-work"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Есть блокирующие TODO блоки: списки конкретных корпораций, банд и организаций будут проработаны позже. Нужна детализация конкретных фракций для создания API"
+    issues:
+      - "TODO: Список конкретных корпораций будет проработан позже"
+      - "TODO: Список конкретных банд будет проработан позже"
+      - "TODO: Список конкретных организаций будет проработан позже"
+    api_target: null
+
+  - path: ".BRAIN/03-lore/locations/locations-overview.md"
+    status: "needs-work"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Есть блокирующий TODO: конкретный список городов и их распределение будут проработаны позже. Нужна детализация конкретных локаций для создания API"
+    issues:
+      - "TODO: Конкретный список городов и их распределение будут проработаны позже"
+    api_target: null
+
+  - path: ".BRAIN/03-lore/characters/characters-overview.md"
+    status: "needs-work"
+    version: "1.0.0"
+    checked: "2025-11-02 23:10"
+    checker: "AI Agent"
+    notes: "Есть блокирующий TODO: детальная проработка конкретных NPC и их ролей будет позже. Нужна детализация конкретных персонажей и механик взаимодействия для создания API"
+    issues:
+      - "TODO: Детальная проработка конкретных NPC и их ролей будет позже"
+    api_target: null
+
+  # Служебные файлы и README
+  - path: ".BRAIN/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, описание репозитория, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/ARCHITECTURE.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, описание архитектуры репозитория, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/01-concepts/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/README.md"
+    status: "needs-work"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела. Ссылается на документы, которые еще не созданы. Документы с механиками (combat, progression и т.д.) отсутствуют, только описаны в README"
+    issues:
+      - "Документы с механиками (combat, progression и т.д.) отсутствуют"
+    api_target: null
+
+  - path: ".BRAIN/03-lore/README.md"
+    status: "needs-work"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела. Ссылается на документы, которые требуют доработки (TODO блоки в дочерних документах)"
+    issues:
+      - "Дочерние документы имеют TODO блоки и требуют доработки"
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/README.md"
+    status: "needs-work"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела. Документы с конкретными механиками (quest-system, branching-stories и т.д.) отсутствуют, только описаны в README"
+    issues:
+      - "Документы с конкретными механиками (quest-system, branching-stories и т.д.) отсутствуют"
+    api_target: null
+
+  - path: ".BRAIN/05-technical/README.md"
+    status: "needs-work"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела. Документы с техническими требованиями (endpoints, data-models и т.д.) отсутствуют, только описаны в README"
+    issues:
+      - "Документы с техническими требованиями (endpoints, data-models и т.д.) отсутствуют"
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела задач, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/07-research/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела исследований, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/08-references/README.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Служебный файл, обзор раздела справочных материалов, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/08-references/glossary.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Справочный документ, глоссарий терминов, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/08-references/abbreviations.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Справочный документ, список сокращений, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/08-references/links.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-02 23:12"
+    checker: "AI Agent"
+    notes: "Справочный документ, список ссылок, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+# Примеры записей:
+#
+# documents:
+#   - path: ".BRAIN/02-gameplay/combat/shooter-mechanics.md"
+#     status: "ready"
+#     version: "1.0.0"
+#     checked: "2025-11-02 15:30"
+#     checker: "AI Agent"
+#     notes: "Документ готов, содержит все необходимые детали для создания API"
+#     issues: []
+#     api_target: "api/v1/gameplay/combat/shooting.yaml"
+#
+#   - path: ".BRAIN/03-lore/factions/factions-overview.md"
+#     status: "needs-work"
+#     version: "1.0.0"
+#     checked: "2025-11-02 15:30"
+#     checker: "AI Agent"
+#     notes: "Есть TODO блоки, нужна детализация конкретных фракций"
+#     issues:
+#       - "TODO: Список конкретных корпораций будет проработан позже"
+#       - "TODO: Список конкретных банд будет проработан позже"
+#     api_target: null
+#
+#   - path: ".BRAIN/01-concepts/vision.md"
+#     status: "not-applicable"
+#     version: "1.0.0"
+#     checked: "2025-11-02 15:30"
+#     checker: "AI Agent"
+#     notes: "Документ слишком концептуальный, не содержит механик для API"
+#     issues: []
+#     api_target: null
+
+# Примечания:
+# - Файл обновляется автоматически при проверке документов
+# - При изменении статуса документа нужно обновить этот файл
+# - Связан с brain-mapping.yaml в API-SWAGGER для отслеживания созданных задач
+
