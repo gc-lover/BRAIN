@@ -1,8 +1,8 @@
 # Боевая система — Киберпсихоз
 
-**api-readiness:** draft  
-**api-readiness-check-date:** 2025-11-03  
-**api-readiness-notes:** Выделено из `combat-implants.md`. Полная система киберпсихоза.
+**api-readiness:** review  
+**api-readiness-check-date:** 2025-11-03 18:38  
+**api-readiness-notes:** Документ содержит детальные решения по системе человечности, симптомам, прогрессии, последствиям, управлению, MMORPG контексту (v1.0.0). Готов к проверке на готовность к API разработке.
 
 ---
 

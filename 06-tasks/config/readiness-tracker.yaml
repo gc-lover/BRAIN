@@ -419,6 +419,42 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking-types.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:38"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам хакерства, зависимости от класса/навыков, механике перегрева, применению. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 18:38"
+    checker: "AI Agent"
+    notes: "Обзорный документ, содержит ссылки на детальные документы системы хакерства. Не предназначен для создания API, так как не содержит конкретных механик."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-cyberpsychosis.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:38"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по системе человечности, симптомам, прогрессии, последствиям, управлению, MMORPG контексту. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-implants.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 18:38"
+    checker: "AI Agent"
+    notes: "Обзорный документ, содержит ссылки на детальные документы системы имплантов. Не предназначен для создания API, так как не содержит конкретных механик."
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
