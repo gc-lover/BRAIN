@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03  
 **Последнее обновление:** 2025-11-03
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-010: api/v1/gameplay/economy/trading.yaml (2025-11-03)
+- Last Updated: 2025-11-03 21:06
+---
+
 **Связанные документы:**
 - `economy-overview.md` - обзор экономической системы
 - `economy-type.md` - тип экономической системы
