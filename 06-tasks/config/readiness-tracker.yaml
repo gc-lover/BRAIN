@@ -455,6 +455,42 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking-networks.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:40"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по структуре сетей (простые/сложные/изолированные), взлому сетей, защите сетей. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:40"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по хакерству врагов, PvP хакерству, обнаружению хакерства. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-cyberspace.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:40"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типу киберпространства, структуре, тренировочным боям, хабам, глобальным событиям, PvP, PvE контенту, турнирам, доступу. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-implants-limits.md"
+    status: "review"
+    version: "1.0.0"
+    checked: "2025-11-03 18:40"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по ограничениям имплантов (слоты, совместимость, общий лимит), лимиту имплантов, энергетическому лимиту. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:

@@ -1,8 +1,8 @@
 # Боевая система — Интеграция хакерства с боем
 
-**api-readiness:** draft  
-**api-readiness-check-date:** 2025-11-03  
-**api-readiness-notes:** Выделено из `combat-hacking.md`. Содержит решения по врагам, PvP, обнаружению.
+**api-readiness:** review  
+**api-readiness-check-date:** 2025-11-03 18:40  
+**api-readiness-notes:** Документ содержит детальные решения по хакерству врагов, PvP хакерству, обнаружению хакерства (v1.0.0). Готов к проверке на готовность к API разработке.
 
 ---
 
