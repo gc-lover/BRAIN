@@ -491,6 +491,82 @@ documents:
     issues: []
     api_target: null
 
+  # 02-gameplay/economy/ - Экономическая система
+  - path: ".BRAIN/02-gameplay/economy/economy-overview.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Обзорный документ, содержит ссылки на детальные документы экономической системы. Не предназначен для создания API, так как не содержит конкретных механик."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-type.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типу экономической системы (гибридная система управления, комбинация рынков, гибридная система цен). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-trading.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам торговли (комбинация всех типов), влиянию социальных структур, торговым маршрутам. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-crafting.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам крафта (гибридная система + механики из лора Cyberpunk), механикам крафта, источникам рецептов. Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-currencies-resources.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам валют (региональные валюты + биржа валют), типам ресурсов (все + товары из лора Cyberpunk), добыче ресурсов (комбинация всех способов). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-world-impact.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по влиянию на социальные структуры, влияние на игровой мир, живая экономика (комбинация игроков + событий). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/economy-monetization.md"
+    status: "review"
+    version: null
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам контента (все + из лора Cyberpunk), гибридной системе монетизации (игровая валюта + реальные деньги). TODO только для детальной проработки инструментов и механик монетизации (ближе к релизу, не блокирует API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/economy/equipment-matrix.md"
+    status: "needs-work"
+    version: "0.1.0"
+    checked: "2025-11-03 18:42"
+    checker: "AI Agent"
+    notes: "Приняты решения G1–G7, требуется схема данных, список характеристик по типам предметов и правила генерации. Документ в стадии черновика."
+    issues:
+      - "Требуется детализация схемы данных"
+      - "Требуется список характеристик по типам предметов"
+      - "Требуется детализация правил генерации"
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
