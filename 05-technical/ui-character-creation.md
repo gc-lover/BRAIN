@@ -1,14 +1,14 @@
 # Начальный интерфейс: выбор и создание персонажа
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** review - детализация завершена  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-03  
-**Последнее обновление:** 2025-11-03  
+**Последнее обновление:** 2025-11-04  
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-03 21:30  
-**api-readiness-notes:** Документ описывает текстовый веб-интерфейс для создания персонажа, требуется детализация для API
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-04 00:01  
+**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные модели данных (Account, Character, CharacterSummary, CharacterClass, CharacterOrigin, Faction, City), полное описание API endpoints с параметрами, валидацией и обработкой ошибок (аутентификация, персонажи, справочные данные). Все необходимые детали для создания API спецификации присутствуют (v1.1.0).
 
 ---
 
@@ -570,45 +570,594 @@
 
 ## 5. Технические требования
 
-### 5.1. Формат данных
+### 5.1. Модели данных
 
-**Валидация полей:**
-- Имя персонажа: 3-20 символов, буквы, цифры, пробелы, дефисы
-- Email: стандартный формат email
-- Логин: 3-20 символов, буквы, цифры, подчеркивания
-- Пароль: минимум 8 символов, буквы, цифры, специальные символы
+#### 5.1.1. Модель: Account (Аккаунт)
 
-**Структура данных персонажа:**
-- Идентификатор персонажа (UUID)
-- Имя персонажа
-- Класс
-- Пол
-- Происхождение
-- Фракция
-- Стартовая локация
-- Физические параметры (рост, телосложение, цвета)
-- Особые приметы
-- Дата создания
-- Последний вход
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "email": "string",
+  "username": "string",
+  "created_at": "datetime",
+  "last_login": "datetime",
+  "is_active": "boolean"
+}
+```
 
----
-
-### 5.2. API требования
-
-**Необходимые endpoints:**
-- `POST /api/v1/auth/login` - вход в систему
-- `POST /api/v1/auth/register` - регистрация
-- `GET /api/v1/characters` - список персонажей игрока
-- `POST /api/v1/characters` - создание персонажа
-- `DELETE /api/v1/characters/{id}` - удаление персонажа
-- `GET /api/v1/characters/classes` - список классов
-- `GET /api/v1/characters/origins` - список происхождений
-- `GET /api/v1/factions` - список фракций
-- `GET /api/v1/locations/cities` - список городов
+**Поля:**
+- `id` (UUID) - уникальный идентификатор аккаунта
+- `email` (string, required, unique) - email адрес, формат: стандартный email
+- `username` (string, required, unique, 3-20 символов) - логин пользователя, допустимые символы: буквы, цифры, подчеркивания
+- `created_at` (datetime) - дата создания аккаунта
+- `last_login` (datetime, nullable) - дата последнего входа
+- `is_active` (boolean) - активен ли аккаунт
 
 ---
 
-### 5.3. UI/UX требования
+#### 5.1.2. Модель: Character (Персонаж)
+
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "account_id": "uuid",
+  "name": "string",
+  "class": "string",
+  "subclass": "string",
+  "gender": "string",
+  "origin": "string",
+  "faction_id": "uuid",
+  "faction_name": "string",
+  "city_id": "uuid",
+  "city_name": "string",
+  "appearance": {
+    "height": "integer",
+    "body_type": "string",
+    "hair_color": "string",
+    "eye_color": "string",
+    "skin_color": "string",
+    "distinctive_features": "string"
+  },
+  "level": "integer",
+  "created_at": "datetime",
+  "last_login": "datetime"
+}
+```
+
+**Поля:**
+- `id` (UUID) - уникальный идентификатор персонажа
+- `account_id` (UUID) - идентификатор аккаунта владельца
+- `name` (string, required, 3-20 символов) - имя персонажа, допустимые символы: буквы, цифры, пробелы, дефисы
+- `class` (string, required, enum) - класс персонажа (Solo, Netrunner, Fixer, Rockerboy, Media, Nomad, Corpo, Lawman, Medtech, Techie, Politician, Trader, Teacher)
+- `subclass` (string, nullable) - подкласс персонажа
+- `gender` (string, required, enum) - пол (male, female, other)
+- `origin` (string, required, enum) - происхождение (street_kid, corpo, nomad)
+- `faction_id` (UUID, nullable) - идентификатор фракции
+- `faction_name` (string, nullable) - название фракции
+- `city_id` (UUID, required) - идентификатор стартового города
+- `city_name` (string, required) - название стартового города
+- `appearance` (object) - внешность персонажа
+  - `height` (integer, 150-220) - рост в см
+  - `body_type` (string, enum) - телосложение (thin, normal, muscular, large)
+  - `hair_color` (string) - цвет волос
+  - `eye_color` (string) - цвет глаз
+  - `skin_color` (string) - цвет кожи
+  - `distinctive_features` (string, nullable, max 500 символов) - особые приметы
+- `level` (integer, default: 1) - уровень персонажа
+- `created_at` (datetime) - дата создания персонажа
+- `last_login` (datetime, nullable) - дата последнего входа в игру
+
+---
+
+#### 5.1.3. Модель: CharacterSummary (Краткая информация о персонаже)
+
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "name": "string",
+  "class": "string",
+  "level": "integer",
+  "faction_name": "string",
+  "city_name": "string",
+  "last_login": "datetime"
+}
+```
+
+**Использование:** Для списка персонажей (без детальной информации)
+
+---
+
+#### 5.1.4. Модель: CharacterClass (Класс персонажа)
+
+**Структура:**
+```json
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "subclasses": [
+    {
+      "id": "string",
+      "name": "string",
+      "description": "string"
+    }
+  ]
+}
+```
+
+**Поля:**
+- `id` (string) - идентификатор класса
+- `name` (string) - название класса
+- `description` (string) - описание класса
+- `subclasses` (array) - список подклассов
+
+---
+
+#### 5.1.5. Модель: CharacterOrigin (Происхождение)
+
+**Структура:**
+```json
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "starting_skills": ["string"],
+  "available_factions": ["string"],
+  "starting_resources": {
+    "currency": "integer",
+    "items": ["string"]
+  }
+}
+```
+
+**Поля:**
+- `id` (string) - идентификатор происхождения
+- `name` (string) - название происхождения
+- `description` (string) - описание происхождения
+- `starting_skills` (array) - стартовые навыки
+- `available_factions` (array) - доступные фракции для этого происхождения
+- `starting_resources` (object) - начальные ресурсы
+
+---
+
+#### 5.1.6. Модель: Faction (Фракция)
+
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "name": "string",
+  "type": "string",
+  "description": "string",
+  "available_for_origins": ["string"]
+}
+```
+
+**Поля:**
+- `id` (UUID) - идентификатор фракции
+- `name` (string) - название фракции
+- `type` (string, enum) - тип фракции (corporation, gang, organization)
+- `description` (string) - описание фракции
+- `available_for_origins` (array) - доступные происхождения для старта
+
+---
+
+#### 5.1.7. Модель: City (Город)
+
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "name": "string",
+  "region": "string",
+  "description": "string",
+  "available_for_factions": ["uuid"]
+}
+```
+
+**Поля:**
+- `id` (UUID) - идентификатор города
+- `name` (string) - название города
+- `region` (string) - регион/сервер
+- `description` (string) - описание города
+- `available_for_factions` (array) - доступные фракции для старта в этом городе
+
+---
+
+### 5.2. API Endpoints
+
+#### 5.2.1. Аутентификация
+
+**POST `/api/v1/auth/register`** - Регистрация нового аккаунта
+
+**Request Body:**
+```json
+{
+  "email": "string",
+  "username": "string",
+  "password": "string",
+  "password_confirm": "string",
+  "terms_accepted": "boolean"
+}
+```
+
+**Валидация:**
+- `email`: required, формат email, уникальность
+- `username`: required, 3-20 символов, буквы/цифры/подчеркивания, уникальность
+- `password`: required, минимум 8 символов, буквы/цифры/спецсимволы
+- `password_confirm`: required, должно совпадать с password
+- `terms_accepted`: required, true
+
+**Response:**
+- `201 Created` - успешная регистрация
+  ```json
+  {
+    "account_id": "uuid",
+    "message": "Account created successfully"
+  }
+  ```
+- `400 Bad Request` - ошибка валидации
+- `409 Conflict` - email/username уже существует
+
+---
+
+**POST `/api/v1/auth/login`** - Вход в систему
+
+**Request Body:**
+```json
+{
+  "login": "string",
+  "password": "string"
+}
+```
+
+**Валидация:**
+- `login`: required (email или username)
+- `password`: required
+
+**Response:**
+- `200 OK` - успешный вход
+  ```json
+  {
+    "token": "string",
+    "account_id": "uuid",
+    "expires_at": "datetime"
+  }
+  ```
+- `401 Unauthorized` - неверные credentials
+- `403 Forbidden` - аккаунт заблокирован
+
+---
+
+#### 5.2.2. Персонажи
+
+**GET `/api/v1/characters`** - Список персонажей игрока
+
+**Headers:**
+- `Authorization: Bearer {token}`
+
+**Response:**
+- `200 OK`
+  ```json
+  {
+    "characters": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "class": "string",
+        "level": "integer",
+        "faction_name": "string",
+        "city_name": "string",
+        "last_login": "datetime"
+      }
+    ],
+    "max_characters": "integer",
+    "current_count": "integer"
+  }
+  ```
+
+**Бизнес-правила:**
+- Возвращает только персонажей текущего аккаунта
+- Максимальное количество персонажей: 3-5 (зависит от подписки)
+
+---
+
+**POST `/api/v1/characters`** - Создание нового персонажа
+
+**Headers:**
+- `Authorization: Bearer {token}`
+
+**Request Body:**
+```json
+{
+  "name": "string",
+  "class": "string",
+  "subclass": "string",
+  "gender": "string",
+  "origin": "string",
+  "faction_id": "uuid",
+  "city_id": "uuid",
+  "appearance": {
+    "height": "integer",
+    "body_type": "string",
+    "hair_color": "string",
+    "eye_color": "string",
+    "skin_color": "string",
+    "distinctive_features": "string"
+  }
+}
+```
+
+**Валидация:**
+- `name`: required, 3-20 символов, буквы/цифры/пробелы/дефисы, уникальность
+- `class`: required, enum (Solo, Netrunner, Fixer, Rockerboy, Media, Nomad, Corpo, Lawman, Medtech, Techie, Politician, Trader, Teacher)
+- `subclass`: nullable, должен соответствовать выбранному классу
+- `gender`: required, enum (male, female, other)
+- `origin`: required, enum (street_kid, corpo, nomad)
+- `faction_id`: nullable, должна быть доступна для выбранного происхождения
+- `city_id`: required, должен быть доступен для выбранной фракции
+- `appearance.height`: required, 150-220
+- `appearance.body_type`: required, enum (thin, normal, muscular, large)
+- `appearance.hair_color`: required, string
+- `appearance.eye_color`: required, string
+- `appearance.skin_color`: required, string
+- `appearance.distinctive_features`: nullable, max 500 символов
+
+**Response:**
+- `201 Created` - персонаж создан
+  ```json
+  {
+    "character": {
+      "id": "uuid",
+      "name": "string",
+      "class": "string",
+      "level": 1,
+      "faction_name": "string",
+      "city_name": "string",
+      "created_at": "datetime"
+    }
+  }
+  ```
+- `400 Bad Request` - ошибка валидации
+- `403 Forbidden` - достигнут лимит персонажей
+- `409 Conflict` - имя персонажа уже существует
+
+**Бизнес-правила:**
+- Проверка лимита персонажей на аккаунт
+- Проверка доступности фракции для происхождения
+- Проверка доступности города для фракции
+- Создание персонажа с уровнем 1 и начальными ресурсами
+
+---
+
+**DELETE `/api/v1/characters/{character_id}`** - Удаление персонажа
+
+**Headers:**
+- `Authorization: Bearer {token}`
+
+**Path Parameters:**
+- `character_id` (UUID) - идентификатор персонажа
+
+**Response:**
+- `200 OK` - персонаж удален
+  ```json
+  {
+    "message": "Character deleted successfully"
+  }
+  ```
+- `404 Not Found` - персонаж не найден
+- `403 Forbidden` - персонаж принадлежит другому аккаунту
+
+**Бизнес-правила:**
+- Требуется подтверждение (можно добавить в UI)
+- Персонаж должен принадлежать текущему аккаунту
+- Необратимое удаление (все данные удаляются)
+
+---
+
+#### 5.2.3. Справочные данные
+
+**GET `/api/v1/characters/classes`** - Список доступных классов
+
+**Response:**
+- `200 OK`
+  ```json
+  {
+    "classes": [
+      {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "subclasses": [
+          {
+            "id": "string",
+            "name": "string",
+            "description": "string"
+          }
+        ]
+      }
+    ]
+  }
+  ```
+
+---
+
+**GET `/api/v1/characters/origins`** - Список доступных происхождений
+
+**Response:**
+- `200 OK`
+  ```json
+  {
+    "origins": [
+      {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "starting_skills": ["string"],
+        "available_factions": ["uuid"],
+        "starting_resources": {
+          "currency": "integer",
+          "items": ["string"]
+        }
+      }
+    ]
+  }
+  ```
+
+---
+
+**GET `/api/v1/factions`** - Список доступных фракций
+
+**Query Parameters:**
+- `origin` (string, optional) - фильтр по происхождению
+
+**Response:**
+- `200 OK`
+  ```json
+  {
+    "factions": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "type": "string",
+        "description": "string",
+        "available_for_origins": ["string"]
+      }
+    ]
+  }
+  ```
+
+**Бизнес-правила:**
+- Если передан `origin`, возвращаются только фракции, доступные для этого происхождения
+
+---
+
+**GET `/api/v1/locations/cities`** - Список доступных городов
+
+**Query Parameters:**
+- `faction_id` (UUID, optional) - фильтр по фракции
+- `region` (string, optional) - фильтр по региону/серверу
+
+**Response:**
+- `200 OK`
+  ```json
+  {
+    "cities": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "region": "string",
+        "description": "string",
+        "available_for_factions": ["uuid"]
+      }
+    ]
+  }
+  ```
+
+**Бизнес-правила:**
+- Если передан `faction_id`, возвращаются только города, доступные для этой фракции
+- Если передан `region`, возвращаются только города в этом регионе
+
+---
+
+### 5.3. Валидация полей
+
+**Правила валидации:**
+
+1. **Имя персонажа:**
+   - Длина: 3-20 символов
+   - Допустимые символы: буквы (a-z, A-Z, кириллица), цифры (0-9), пробелы, дефисы (-)
+   - Уникальность в рамках аккаунта
+   - Проверка на запрещенные слова/имена
+
+2. **Email:**
+   - Формат: стандартный RFC 5322
+   - Уникальность в системе
+   - Проверка на существующие домены
+
+3. **Логин:**
+   - Длина: 3-20 символов
+   - Допустимые символы: буквы (a-z, A-Z), цифры (0-9), подчеркивания (_)
+   - Уникальность в системе
+   - Не может начинаться с цифры
+
+4. **Пароль:**
+   - Минимум 8 символов
+   - Должен содержать: буквы (a-z, A-Z), цифры (0-9), специальные символы (!@#$%^&*)
+   - Рекомендуется: минимум 1 заглавная буква, 1 цифра, 1 спецсимвол
+
+5. **Рост:**
+   - Диапазон: 150-220 см
+   - Только целые числа
+
+6. **Особые приметы:**
+   - Максимум 500 символов
+   - Допустимые символы: буквы, цифры, пробелы, знаки препинания
+
+---
+
+### 5.4. Обработка ошибок
+
+**Стандартные коды ошибок:**
+
+- `400 Bad Request` - ошибка валидации данных
+  ```json
+  {
+    "error": "validation_error",
+    "message": "Validation failed",
+    "details": {
+      "field": ["error_message"]
+    }
+  }
+  ```
+
+- `401 Unauthorized` - отсутствует или неверный токен авторизации
+  ```json
+  {
+    "error": "unauthorized",
+    "message": "Authentication required"
+  }
+  ```
+
+- `403 Forbidden` - недостаточно прав или достигнут лимит
+  ```json
+  {
+    "error": "forbidden",
+    "message": "Character limit reached or insufficient permissions"
+  }
+  ```
+
+- `404 Not Found` - ресурс не найден
+  ```json
+  {
+    "error": "not_found",
+    "message": "Resource not found"
+  }
+  ```
+
+- `409 Conflict` - конфликт (уже существует)
+  ```json
+  {
+    "error": "conflict",
+    "message": "Resource already exists",
+    "field": "name"
+  }
+  ```
+
+- `500 Internal Server Error` - внутренняя ошибка сервера
+  ```json
+  {
+    "error": "internal_error",
+    "message": "Internal server error"
+  }
+  ```
+
+---
+
+### 5.5. UI/UX требования
 
 **Принципы:**
 - Простота и понятность интерфейса
@@ -638,4 +1187,5 @@
 ## История изменений
 
 - v1.0.0 (2025-11-03) - Создание документа с описанием начального интерфейса для текстовой веб-версии
+- v1.1.0 (2025-11-04) - Детализация технических требований: добавлены модели данных (Account, Character, CharacterSummary, CharacterClass, CharacterOrigin, Faction, City), полное описание API endpoints с параметрами, валидацией и обработкой ошибок. Документ готов к созданию API задач.
 
