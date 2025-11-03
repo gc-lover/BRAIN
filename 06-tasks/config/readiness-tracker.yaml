@@ -619,16 +619,12 @@ documents:
     api_target: null
 
   - path: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
-    status: "needs-work"
-    version: "0.1.0"
-    checked: "2025-11-03 18:48"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-03 20:05"
     checker: "AI Agent"
-    notes: "Каркас требований без спецификации API. Нужны сущности (PersonalNPC, ScenarioBlueprint, Contract, License), события (запуск/остановка, нарушение условий, KPI-достижения), контракты и модели прав для создания API."
-    issues:
-      - "Требуется формализация моделей данных (PersonalNPC, ScenarioBlueprint, Contract, License)"
-      - "Требуется описание событий/сигналов (запуск/остановка, нарушение условий, KPI-достижения)"
-      - "Требуется спецификация матрицы прав и лимитов"
-      - "Требуется спецификация API (соц/эко/бой интеграции)"
+    notes: "Документ готов к созданию API задач. Формализованы модели данных (PersonalNPC, ScenarioBlueprint, ScenarioInstance, Contract, License, Certificate, AuditLog, Ledger), события/сигналы и матрица прав (v1.0.0). TODO только для детализации конкретных сценариев и балансировки (не блокирует создание API)."
+    issues: []
     api_target: null
 
 # Примеры записей:

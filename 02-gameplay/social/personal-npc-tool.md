@@ -6,9 +6,9 @@
 **Последнее обновление:** 2025-11-03  
 **Приоритет:** высокий
 
-**api-readiness:** review  
-**api-readiness-check-date:** 2025-11-03 20:00  
-**api-readiness-notes:** Формализованы модели данных (PersonalNPC, ScenarioBlueprint, ScenarioInstance, Contract, License, Certificate, AuditLog, Ledger), события/сигналы и матрица прав (v1.0.0). TODO только для детализации конкретных сценариев и балансировки (не блокирует создание API). Готов к проверке на готовность к API разработке.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-03 20:05  
+**api-readiness-notes:** Документ готов к созданию API задач. Формализованы модели данных (PersonalNPC, ScenarioBlueprint, ScenarioInstance, Contract, License, Certificate, AuditLog, Ledger), события/сигналы и матрица прав (v1.0.0). TODO только для детализации конкретных сценариев и балансировки (не блокирует создание API).
 
 ---
 
