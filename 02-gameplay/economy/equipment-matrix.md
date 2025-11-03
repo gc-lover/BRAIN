@@ -82,6 +82,36 @@
 - Импланты/киберпсихоз: `02-gameplay/combat/combat-implants.md`
 - Экономика/крафт/торговля: `02-gameplay/economy/economy-overview.md`, `economy-crafting.md`, `economy-trading.md`, `economy-monetization.md`
 
+---
+
+## Бренды и сигнатуры (лор + авторские + пользовательские)
+
+### Лорные бренды (ядро)
+- Arasaka — smart/сетевые системы, точность/скрытность; сигнатуры: smartLock, hackIntegration, lowNoise
+- Militech — power/tech вооружение, бронепробитие/надёжность; сигнатуры: penetration+, recoilStability, ruggedness
+- Kang Tao — smart-оружие масс-сегмента, управляемость; сигнатуры: smartAssist, handling+, lightweight
+- Tsunami Defense — премиум-точность и дальность; сигнатуры: accuracy++, ADSBonus, lowRecoil
+- Budget/Constitutional/Federated Arms — массовый рынок, дешёвые апгрейды; сигнатуры: costEfficiency, easyModding
+- Kiroshi (оптика) — крит/восприятие; сигнатуры: critScope, detection+, glareReduce
+- Zetatech / Biotechnica / Dynalar — кибервар/импланты; сигнатуры: energyOpt, heatDissipation, compat+
+
+### Авторские бренды (по регионам/лигам)
+- Borealis Heavy (Европа) — тяжёлое оружие/броня; сигнатуры: armor+, suppression, overheatResist
+- Shinka Dynamics (Азия) — лёгкие платформы/дроны; сигнатуры: mobility+, ioBandwidth, signalStealth
+- NuevoSol (Америка) — логистика/штурмовые; сигнатуры: magSize+, reload-, convoyPerks
+- VolgaTek (СНГ) — гибридные тех-решения; сигнатуры: repairEase, durability+, retrofitCompat
+
+### Пользовательские бренды (жёсткий пайплайн)
+- Review: визуал/лор, баланс-лимиты, сигнатуры из разрешённых пулов
+- Ограничения: допустимые affix-теги, caps по статам/прокам, региональные квоты
+- Маркетплейс: публикация за депозит, отзыв/патчи по жалобам
+
+### Сигнатуры → маппинг на данные
+- brand.signatureBonuses → пресеты для StatsCore/StatsExtended/Affix-пулов
+- brandLock/setBonuses → использование Affix.kind set|unique
+- region/league gates → rarityWeightsByZone, constraints
+
+---
 ## TODO
 
 - Уточнить пул базовых и расширенных характеристик по типам предметов
