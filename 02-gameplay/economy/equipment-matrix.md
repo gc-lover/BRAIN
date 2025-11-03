@@ -1,13 +1,14 @@
 # Процедурная матрица снаряжения (оружие/импланты/экипировка)
 
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** review - детализация завершена  
+**Версия:** 1.0.0  
 **Дата создания:** 2025-11-03  
+**Последнее обновление:** 2025-11-03  
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-03  
-**api-readiness-notes:** Приняты решения G1–G7, требуется схема данных, список характеристик по типам предметов и правила генерации.
+**api-readiness:** review  
+**api-readiness-check-date:** 2025-11-03 19:40  
+**api-readiness-notes:** Детализирована схема данных, список характеристик по типам предметов и правила генерации (v1.0.0). Готов к проверке на готовность к API разработке.
 
 ---
 
@@ -33,45 +34,284 @@
 
 ---
 
-## Каркас данных (черновик)
+## Схема данных (формализованная)
 
-- ItemBase { id, type, brandId, rarity, seed, level, zoneTag }
-- StatsCore { damage, rof, accuracy, recoil, weight, durability }
-- StatsExtended { damageType, penetration, noise, heatGen, energyUse, hackResist, heatDissipation, implantCompat }
-- Affix { id, kind: simple|set|unique, tags, values, conditions }
-- Brand { id, name, factionId?, signatureBonuses, visualStyle }
-- GenerationRules { rarityWeightsByZone, affixPoolsByType, constraints, seedPolicy }
-- Crafting { recipeId, components, facilities, licenses, risks }
+### ItemBase
+- **id**: string (UUID) - уникальный идентификатор предмета
+- **type**: enum [weapon, armor, implant, cyberdeck, mod] - тип предмета
+- **subtype**: string - подтип (пистолет, ПП, штурмовая и т.д. для оружия; торс, голова и т.д. для брони)
+- **brandId**: string - идентификатор бренда
+- **rarity**: enum [common, uncommon, rare, epic, legendary, artifact] - редкость
+- **seed**: string - сид для генерации (детерминированная генерация)
+- **level**: int (1-50+) - уровень предмета
+- **zoneTag**: string? - тег зоны генерации (опционально)
+- **leagueId**: string? - идентификатор лиги (опционально)
+- **createdAt**: datetime - дата создания
+- **version**: string - версия генератора (для обратной совместимости)
+
+### StatsCore (общие характеристики)
+- **damage**: float? - урон (только для оружия)
+- **rof**: float? - скорострельность, выстрелов/сек (только для оружия)
+- **accuracy**: float (0.0-100.0) - точность в процентах (оружие)
+- **recoil**: float (0.0-100.0) - отдача в процентах (оружие)
+- **weight**: float (кг) - вес предмета (все типы)
+- **durability**: float (0.0-100.0) - прочность в процентах (оружие, броня, импланты)
+- **armor**: float? - броня (только для брони)
+- **mobilityPenalty**: float (0.0-100.0)? - штраф к подвижности в процентах (только для брони)
+
+### StatsExtended (расширенные характеристики)
+- **damageType**: enum [kinetic, energy, explosive, melee, smart, chemical, emp, cyber]? - тип урона (оружие)
+- **penetration**: float (0.0-100.0)? - бронепробитие в процентах (оружие)
+- **noise**: float (0.0-100.0)? - уровень шума в процентах (оружие, броня)
+- **heatGen**: float? - генерация тепла (оружие, импланты, кибердеки)
+- **energyUse**: float? - потребление энергии (оружие, импланты, кибердеки)
+- **hackResist**: float (0.0-100.0)? - сопротивление взлому в процентах (импланты, кибердеки)
+- **heatDissipation**: float? - рассеивание тепла (броня, импланты)
+- **implantCompat**: float (0.0-100.0)? - совместимость с имплантами в процентах (оружие, броня)
+- **resistances**: object? - сопротивления урону {physical, emp, thermal, chemical} в процентах (броня)
+
+### WeaponStats (специфичные характеристики оружия)
+- **magSize**: int - размер магазина
+- **reloadTime**: float (сек) - время перезарядки
+- **hipfirePenalty**: float (0.0-100.0) - штраф к точности при стрельбе с бедра в процентах
+- **adsBonus**: float (0.0-100.0) - бонус к точности при прицеливании в процентах
+- **handling**: float (0.0-100.0) - управляемость в процентах (скорость прицеливания, мобильность)
+- **range**: float (м) - эффективная дальность
+- **cyberdeckSlots**: int? - количество слотов кибердеки для умного оружия
+
+### ArmorStats (специфичные характеристики брони)
+- **slotType**: enum [torso, head, arms, legs] - тип слота брони
+- **modSlots**: object - слоты модов {optics: int, plates: int, rigs: int, utility: int}
+- **noiseDamp**: float (0.0-100.0) - подавление шума в процентах
+- **energyBuffer**: float? - энергетический буфер
+
+### ImplantStats (специфичные характеристики имплантов)
+- **slotType**: enum [combat, tactical, defensive, mobility, os] - тип слота импланта
+- **energyDrain**: float - потребление энергии
+- **compatLevel**: int (1-10) - уровень совместимости с другими имплантами
+- **abilityPower**: float? - сила способностей (множитель)
+- **cooldownMod**: float? - модификатор кулдауна способностей (множитель)
+- **statMultipliers**: object? - множители характеристик {damage, accuracy, speed, armor}
+- **humanityImpact**: float (-100.0-0.0) - влияние на человечность (отрицательное значение)
+- **synergyTags**: string[] - теги для синергии {weaponClass, deckLevel, brand}
+- **maintenanceCost**: float? - стоимость обслуживания (валютные единицы)
+
+### CyberdeckStats (специфичные характеристики кибердеков)
+- **quickhackSlots**: int - количество слотов для quickhacks
+- **deckEnergy**: float - энергия кибердеки
+- **regenRate**: float - скорость восстановления энергии (единиц/сек)
+- **ioBandwidth**: float - пропускная способность I/O
+- **overheatThreshold**: float - порог перегрева
+- **iceBypass**: float (0.0-100.0) - обход ICE в процентах
+- **signalDistance**: float (м) - дистанция сигнала
+- **detectionFootprint**: float (0.0-100.0) - след обнаружения в процентах
+- **cyberpsychosisRiskFactor**: float (0.0-1.0) - фактор риска киберпсихоза (от перегрева/нагрузки)
+
+### ModStats (специфичные характеристики модов)
+- **slot**: enum [barrel, sight, plate, cooling, utility] - тип слота мода
+- **statDelta**: object - изменения характеристик (дельта значений)
+- **drawbacks**: object? - недостатки (штрафы к характеристикам)
+- **conditionalProcs**: object[]? - условные эффекты (триггеры)
+- **setBonuses**: object? - сет-бонусы (при наличии нескольких модов одного бренда/набора)
+- **brandLock**: string? - привязка к бренду (только для определенного бренда)
+
+### Affix (модификаторы/аффиксы)
+- **id**: string (UUID) - уникальный идентификатор аффикса
+- **kind**: enum [simple, set, unique] - тип аффикса
+- **tags**: string[] - теги (weaponClass, damageType, brand и т.д.)
+- **values**: object - значения модификаций (изменения характеристик)
+- **conditions**: object? - условия активации (опционально)
+- **brandLock**: string? - привязка к бренду (опционально)
+- **rarityRequirement**: enum? - требование к редкости предмета (опционально)
+
+### Brand (бренд)
+- **id**: string (UUID) - уникальный идентификатор бренда
+- **name**: string - название бренда
+- **origin**: enum [lore, authored, user] - происхождение бренда
+- **factionId**: string? - идентификатор фракции (опционально)
+- **signatureBonuses**: object[] - сигнатурные бонусы (пресеты для статов/аффиксов)
+- **visualStyle**: string? - визуальный стиль (опционально)
+- **status**: enum [active, suspended] - статус бренда
+- **createdAt**: datetime - дата создания
+- **version**: string - версия бренда
+
+### GenerationRules (правила генерации)
+- **id**: string (UUID) - идентификатор правил
+- **seedVersion**: string - версия генератора сидов
+- **rarityWeightsByZone**: object - веса редкостей по зонам {zoneTag: {rarity: weight}}
+- **affixPoolsByType**: object - пулы аффиксов по типам {itemType: {affixId: weight}}
+- **constraints**: object? - ограничения (caps по статам, запрещенные комбинации)
+- **seedPolicy**: object - политика сидов {format: string, components: string[]}
+
+### CraftingRecipe (рецепт крафта)
+- **id**: string (UUID) - идентификатор рецепта
+- **itemType**: enum [weapon, armor, implant, cyberdeck, mod] - тип предмета
+- **components**: object[] - компоненты {itemId: string, quantity: int}
+- **facilities**: string[] - требуемые станции/оборудование
+- **licenses**: string[] - требуемые лицензии
+- **skills**: object? - требуемые навыки {skillId: string, level: int}
+- **reputation**: object? - требуемая репутация {factionId: string, standing: float}
+- **quality**: enum [common, uncommon, rare, epic, legendary] - качество результата (зависит от компонентов)
+- **risks**: object? - риски {failureChance: float, downgradeChance: float}
 
 ---
 
-## Типы предметов и их характеристики (черновик)
+## Типы предметов и их характеристики (детализировано)
 
-1) Оружие (пистолет, ПП, штурмовая, дробовик, снайперка, тяжёлое)
-- Ядро: damage, rof, accuracy, recoil, magSize, reloadTime
-- Расширения: damageType, penetration, noise, heatGen, energyUse, hipfirePenalty, adsBonus, handling
-- Синергии: implantCompat, cyberdeckSlots?, brandSignature
+### 1. Оружие (weapon)
 
-2) Броня/экипировка (торс, голова, руки, ноги)
-- Ядро: armor, durability, weight, mobilityPenalty
-- Расширения: resistances (phys/emp/thermal/chem), noiseDamp, heatDissipation, energyBuffer
-- Слоты модов: optics/plates/rigs/utility
+**Подтипы:**
+- Пистолет (pistol)
+- Пистолет-пулемёт (smg)
+- Штурмовая винтовка (assault_rifle)
+- Дробовик (shotgun)
+- Снайперская винтовка (sniper_rifle)
+- Тяжёлое оружие (heavy_weapon)
 
-3) Импланты (боевые/тактические/защитные/двигательные/OS)
-- Ядро: slotType, energyDrain, heatGen, compatLevel, rarity
-- Расширения: abilityPower, cooldownMod, statMultipliers, hackResist, humanityImpact
-- Особое: synergyTags (weaponClass, deckLevel, brand), maintenanceCost
+**Обязательные характеристики (StatsCore + WeaponStats):**
+- `damage`: float (урон за выстрел)
+- `rof`: float (выстрелов/сек)
+- `accuracy`: float (0.0-100.0, точность в %)
+- `recoil`: float (0.0-100.0, отдача в %)
+- `weight`: float (кг)
+- `durability`: float (0.0-100.0, прочность в %)
+- `magSize`: int (размер магазина)
+- `reloadTime`: float (сек, время перезарядки)
+- `hipfirePenalty`: float (0.0-100.0, штраф к точности при стрельбе с бедра в %)
+- `adsBonus`: float (0.0-100.0, бонус к точности при прицеливании в %)
+- `handling`: float (0.0-100.0, управляемость в %)
+- `range`: float (м, эффективная дальность)
 
-4) Кибердеки
-- Ядро: quickhackSlots, deckEnergy, regenRate, ioBandwidth
-- Расширения: overheatThreshold, iceBypass, signalDistance, detectionFootprint
-- Связь: cyberpsychosisRiskFactor (от перегрева/нагрузки)
+**Опциональные характеристики (StatsExtended):**
+- `damageType`: enum [kinetic, energy, explosive, smart, chemical, emp, cyber]
+- `penetration`: float (0.0-100.0, бронепробитие в %)
+- `noise`: float (0.0-100.0, уровень шума в %)
+- `heatGen`: float (генерация тепла)
+- `energyUse`: float (потребление энергии)
+- `implantCompat`: float (0.0-100.0, совместимость с имплантами в %)
+- `cyberdeckSlots`: int (количество слотов кибердеки для умного оружия)
 
-5) Модификации/аугменты (моды ствола, прицелы, пластины, охлаждение)
-- Ядро: slot, statDelta, drawbacks
-- Расширения: conditionalProcs, setBonuses, brandLock
+**Диапазоны значений (примерные, для балансировки):**
+- Пистолет: damage 15-45, rof 3-8, range 30-80м
+- ПП: damage 10-35, rof 8-15, range 20-50м
+- Штурмовая: damage 25-60, rof 5-12, range 50-150м
+- Дробовик: damage 40-100, rof 1-3, range 5-30м
+- Снайперка: damage 80-200, rof 0.5-2, range 150-500м
+- Тяжёлое: damage 100-300, rof 1-5, range 30-200м
 
-Примечание: для каждого типа предмета характеристики модульны — активируются только релевантные поля.
+### 2. Броня/экипировка (armor)
+
+**Подтипы:**
+- Торс (torso)
+- Голова (head)
+- Руки (arms)
+- Ноги (legs)
+
+**Обязательные характеристики (StatsCore + ArmorStats):**
+- `armor`: float (броня)
+- `durability`: float (0.0-100.0, прочность в %)
+- `weight`: float (кг)
+- `mobilityPenalty`: float (0.0-100.0, штраф к подвижности в %)
+- `slotType`: enum [torso, head, arms, legs]
+- `modSlots`: object {optics: int, plates: int, rigs: int, utility: int}
+
+**Опциональные характеристики (StatsExtended + ArmorStats):**
+- `resistances`: object {physical: float, emp: float, thermal: float, chemical: float} (0.0-100.0, сопротивления в %)
+- `noise`: float (0.0-100.0, уровень шума в %)
+- `noiseDamp`: float (0.0-100.0, подавление шума в %)
+- `heatDissipation`: float (рассеивание тепла)
+- `energyBuffer`: float (энергетический буфер)
+- `implantCompat`: float (0.0-100.0, совместимость с имплантами в %)
+
+**Диапазоны значений (примерные):**
+- Торс: armor 50-200, mobilityPenalty 5-25%
+- Голова: armor 30-150, mobilityPenalty 0-10%
+- Руки: armor 20-100, mobilityPenalty 2-15%
+- Ноги: armor 30-120, mobilityPenalty 3-20%
+
+### 3. Импланты (implant)
+
+**Подтипы:**
+- Боевые (combat): имплант точности, урона, скорострельности, критического урона
+- Тактические (tactical): киберглаза, кибердека (базовая)
+- Защитные (defensive): киберкожа, имплант восстановления
+- Двигательные (mobility): киберноги, скорость, прыжки
+- OS (os): Сандевистан, продвинутая кибердека, Берсерк
+
+**Обязательные характеристики (ImplantStats):**
+- `slotType`: enum [combat, tactical, defensive, mobility, os]
+- `energyDrain`: float (потребление энергии)
+- `heatGen`: float (генерация тепла)
+- `compatLevel`: int (1-10, уровень совместимости)
+- `durability`: float (0.0-100.0, прочность в %)
+- `weight`: float (кг)
+
+**Опциональные характеристики (ImplantStats):**
+- `abilityPower`: float (сила способностей, множитель)
+- `cooldownMod`: float (модификатор кулдауна, множитель)
+- `statMultipliers`: object {damage: float, accuracy: float, speed: float, armor: float} (множители)
+- `hackResist`: float (0.0-100.0, сопротивление взлому в %)
+- `humanityImpact`: float (-100.0-0.0, влияние на человечность, отрицательное)
+- `synergyTags`: string[] (теги для синергии: weaponClass, deckLevel, brand)
+- `maintenanceCost`: float (стоимость обслуживания, валютные единицы)
+
+**Диапазоны значений (примерные):**
+- Боевые: energyDrain 10-50, statMultipliers.damage 1.05-1.25, humanityImpact -5 до -20
+- Тактические: energyDrain 15-60, abilityPower 1.1-1.5, humanityImpact -5 до -25
+- Защитные: energyDrain 5-40, statMultipliers.armor 1.1-1.3, humanityImpact -3 до -15
+- Двигательные: energyDrain 8-45, statMultipliers.speed 1.15-1.4, humanityImpact -5 до -20
+- OS: energyDrain 20-100, abilityPower 1.2-2.0, humanityImpact -10 до -50
+
+### 4. Кибердеки (cyberdeck)
+
+**Обязательные характеристики (CyberdeckStats):**
+- `quickhackSlots`: int (количество слотов для quickhacks)
+- `deckEnergy`: float (энергия кибердеки)
+- `regenRate`: float (скорость восстановления энергии, единиц/сек)
+- `ioBandwidth`: float (пропускная способность I/O)
+- `weight`: float (кг)
+- `durability`: float (0.0-100.0, прочность в %)
+
+**Опциональные характеристики (CyberdeckStats):**
+- `heatGen`: float (генерация тепла)
+- `energyUse`: float (потребление энергии)
+- `overheatThreshold`: float (порог перегрева)
+- `iceBypass`: float (0.0-100.0, обход ICE в %)
+- `signalDistance`: float (м, дистанция сигнала)
+- `detectionFootprint`: float (0.0-100.0, след обнаружения в %)
+- `cyberpsychosisRiskFactor`: float (0.0-1.0, фактор риска киберпсихоза)
+
+**Диапазоны значений (примерные):**
+- Базовые: quickhackSlots 2-4, deckEnergy 100-200, regenRate 5-15
+- Продвинутые: quickhackSlots 4-6, deckEnergy 200-400, regenRate 15-30
+- Легендарные: quickhackSlots 6-8, deckEnergy 400-800, regenRate 30-60
+
+### 5. Модификации/аугменты (mod)
+
+**Подтипы:**
+- Моды ствола (barrel): увеличение урона, точности, дальности
+- Прицелы (sight): увеличение точности, дальности, обнаружения
+- Пластины (plate): увеличение брони, сопротивлений
+- Охлаждение (cooling): снижение heatGen, увеличение heatDissipation
+- Утилиты (utility): различные бонусы (шум, энергия, совместимость)
+
+**Обязательные характеристики (ModStats):**
+- `slot`: enum [barrel, sight, plate, cooling, utility]
+- `statDelta`: object (изменения характеристик, дельта значений)
+
+**Опциональные характеристики (ModStats):**
+- `drawbacks`: object (недостатки, штрафы к характеристикам)
+- `conditionalProcs`: object[] (условные эффекты, триггеры)
+- `setBonuses`: object (сет-бонусы при наличии нескольких модов одного бренда/набора)
+- `brandLock`: string (привязка к бренду)
+
+**Примеры statDelta:**
+- Barrel mod: {damage: +5, accuracy: +2, range: +10}
+- Sight mod: {accuracy: +10, adsBonus: +5, detectionRange: +20}
+- Plate mod: {armor: +15, resistances.physical: +5}
+- Cooling mod: {heatGen: -10, heatDissipation: +15}
+
+**Примечание:** Для каждого типа предмета характеристики модульны — активируются только релевантные поля.
 
 ---
 
@@ -112,58 +352,214 @@
 - region/league gates → rarityWeightsByZone, constraints
 
 ---
-## TODO
+## TODO для дальнейшей проработки
 
-- Уточнить пул базовых и расширенных характеристик по типам предметов
-- Сформировать набор брендов (лорные/авторские) и их сигнатуры; прописать пайплайн пользовательских
-- Описать генератор (веса, сиды, совместимость, ограничения)
-- Определить контракты заказных сборок и лицензии на реролл
+- [ ] Детализация конкретных брендов (лорные/авторские) и их сигнатур (пресеты для статов/аффиксов)
+- [ ] Формирование пулов аффиксов по типам предметов (affixPoolsByType)
+- [ ] Детализация контрактов заказных сборок (спецификация, SLA, эскроу)
+- [ ] Детализация системы лицензий (L1-L3, получение, аудит)
+- [ ] Балансировка весов редкостей по зонам (rarityWeightsByZone)
+- [ ] Балансировка caps по статам (по редкости, лиге, режиму)
 
 ## История изменений
 
 - v0.1.0 (2025-11-03) — создан каркас и зафиксированы решения G1–G7
+- v1.0.0 (2025-11-03) — детализированы схема данных, список характеристик по типам предметов и правила генерации
+  - ✅ Формализована схема данных (ItemBase, StatsCore, StatsExtended, WeaponStats, ArmorStats, ImplantStats, CyberdeckStats, ModStats, Affix, Brand, GenerationRules, CraftingRecipe)
+  - ✅ Детализированы характеристики для всех типов предметов (оружие, броня, импланты, кибердеки, моды)
+  - ✅ Формализованы правила генерации (система редкости, веса по контексту, сид-политика, совместимость, алгоритм генерации, анти-абуз)
 
 ---
 
-## Правила генерации (черновик)
+## Правила генерации (формализованные)
 
-### 1. Редкость
-- Уровни: common, uncommon, rare, epic, legendary, artifact
-- Влияние редкости: количество слотов аффиксов, сила диапазонов, шанс уникальных/сетовых эффектов
+### 1. Система редкости
 
-### 2. Веса по контексту
-- Зоны/TTK: более опасные зоны → более высокий вес редкостей; PvE/PvP/экстракт различаются пулами
-- Лига/стадия: поздние стадии лиги поднимают потолок редкости и усиливают сигнатуры брендов
-- Регион/фракция: локальные бренды/аффиксы получают бонус-веса; санкции/блокировки снижают вес
+**Уровни редкости:**
+- `common` (обычный) - базовые характеристики, 0-1 слот аффиксов
+- `uncommon` (необычный) - небольшое улучшение, 1-2 слота аффиксов
+- `rare` (редкий) - заметное улучшение, 2-3 слота аффиксов
+- `epic` (эпический) - значительное улучшение, 3-4 слота аффиксов, шанс сетовых эффектов
+- `legendary` (легендарный) - максимальное улучшение, 4-5 слотов аффиксов, шанс уникальных эффектов
+- `artifact` (артефактный) - экстремальное улучшение, 5-6 слотов аффиксов, уникальные эффекты
 
-### 3. Сид-политика
-- item.seed формируется из: (brandId, zoneTag, leagueId, rarity, rollIdx)
-- Детализация: одинаковый seed → воспроизводимые статы/аффиксы в пределах версии генератора
-- Версионирование генератора: seedVersion в GenerationRules для обратной совместимости
+**Влияние редкости:**
+- **Количество слотов аффиксов:** common (0-1) → artifact (5-6)
+- **Сила диапазонов:** common (±5% от базовых) → artifact (±25-30% от базовых)
+- **Шанс уникальных/сетовых эффектов:** common (0%) → artifact (50-75%)
+- **Модификаторы сигнатур брендов:** common (×1.0) → artifact (×1.5-2.0)
+
+### 2. Веса редкостей по контексту (rarityWeightsByZone)
+
+**Формат:**
+```yaml
+rarityWeightsByZone:
+  zoneTag:
+    common: float
+    uncommon: float
+    rare: float
+    epic: float
+    legendary: float
+    artifact: float
+```
+
+**Правила весов:**
+- **Базовые веса по зонам:**
+  - Легкие зоны (low risk): common (60%), uncommon (25%), rare (12%), epic (2.5%), legendary (0.4%), artifact (0.1%)
+  - Средние зоны (medium risk): common (40%), uncommon (30%), rare (20%), epic (7%), legendary (2.5%), artifact (0.5%)
+  - Сложные зоны (high risk): common (25%), uncommon (25%), rare (25%), epic (15%), legendary (8%), artifact (2%)
+  - Экстремальные зоны (extreme risk): common (10%), uncommon (15%), rare (25%), epic (25%), legendary (20%), artifact (5%)
+
+- **Модификаторы:**
+  - **PvP зоны:** +10% к редким редкостям (epic+), -5% к common/uncommon
+  - **Экстракт зоны:** +15% к редким редкостям (epic+), -10% к common/uncommon
+  - **Лига/стадия:** поздние стадии лиги поднимают потолок редкости (+25% к epic/legendary/artifact на стадии 5+)
+  - **Фракционный контроль:** контроль зоны своей фракцией → +10% к весу брендов фракции, +5% к epic/legendary
+  - **События:** глобальные/фракционные события → временные модификаторы весов (±15% к определенным редкостям)
+
+### 3. Сид-политика (seedPolicy)
+
+**Формат сида:**
+```
+seed = hash(brandId:zoneTag:leagueId:rarity:rollIdx:seedVersion)
+```
+
+**Компоненты сида:**
+- `brandId`: string - идентификатор бренда
+- `zoneTag`: string - тег зоны генерации
+- `leagueId`: string? - идентификатор лиги (опционально)
+- `rarity`: enum - уровень редкости
+- `rollIdx`: int - индекс ролла (для множественных генераций)
+- `seedVersion`: string - версия генератора (для обратной совместимости)
+
+**Детерминированность:**
+- Одинаковый seed → воспроизводимые статы/аффиксы в пределах версии генератора
+- Изменение seedVersion → новая генерация (для обновления баланса)
+- Использование сида гарантирует: одинаковые входные данные → одинаковый результат
+
+**Версионирование генератора:**
+- `seedVersion` в GenerationRules: "v1.0.0", "v1.1.0" и т.д.
+- Изменение версии требуется при:
+  - Балансовых изменениях
+  - Добавлении новых брендов/аффиксов
+  - Изменении алгоритма генерации
 
 ### 4. Совместимость и ограничения
-- Имплант-совместимость: implantCompat и synergyTags фильтруют/взвешивают доступные аффиксы
-- Энергобюджет/перегрев: energyUse+heatGen не должны превышать лимиты билда/имплантов/деки
-- Киберпсихоз-риск: при превышении порогов heat/energy повышается риск (см. combat-implants)
+
+**Имплант-совместимость:**
+- `implantCompat` (0.0-100.0) - базовый процент совместимости
+- `synergyTags` - теги для синергии (weaponClass, deckLevel, brand)
+- Фильтрация аффиксов: только совместимые аффиксы доступны для ролла
+- Взвешивание: совместимые аффиксы имеют повышенный вес (+20-50%)
+
+**Энергобюджет/перегрев:**
+- Суммарный `energyUse` + `heatGen` не должны превышать лимиты билда/имплантов/деки
+- Валидация при генерации: если превышение → переролл характеристик или понижение редкости
+- Лимиты зависят от:
+  - Количества имплантов (combat-implants-limits.md)
+  - Уровня кибердеки (CyberdeckStats.deckEnergy)
+  - Стадии киберпсихоза (combat-cyberpsychosis.md)
+
+**Киберпсихоз-риск:**
+- При превышении порогов `heatGen`/`energyUse` повышается `cyberpsychosisRiskFactor`
+- Интеграция с combat-cyberpsychosis.md:
+  - Превышение лимитов → ускорение прогрессии киберпсихоза (+20-30%)
+  - Критическое превышение → временное ускорение прогрессии (+50% на 2-4 часа)
 
 ### 5. Фракционные/брендовые модификаторы
-- brand.signatureBonuses применяются как пресеты к пулам аффиксов/статов
-- factionControl в зоне добавляет временные модификаторы весов/редкостей/аффиксов
-- Сет-эффекты: при 2+/3+ предметах одного бренда активируются setBonuses (ограничения баланса)
 
-### 6. Алгоритм (высокий уровень)
-1) Выбор редкости (с учётом весов: зона/TTK/лига/фракция)
-2) Выбор бренда (локальные веса + пользовательские ограничения)
-3) Генерация базовых статов (StatsCore) по seed и типу предмета
-4) Применение расширений (StatsExtended) и проверка лимитов energy/heat
-5) Роллинг аффиксов (simple→set→unique по шансам редкости)
-6) Применение сигнатур бренда/фракции и сет-бонусов
-7) Валидация совместимости/ограничений → при фейле переролл аффикса/понижение редкости
+**Сигнатуры брендов:**
+- `brand.signatureBonuses` - пресеты для статов/аффиксов
+- Применение: модифицируют базовые характеристики предмета
+- Примеры:
+  - Arasaka: +accuracy, +hackIntegration, -noise
+  - Militech: +penetration, +recoilStability, +durability
+
+**Фракционный контроль:**
+- `factionControl` в зоне → временные модификаторы весов/редкостей/аффиксов
+- Бонусы для членов фракции:
+  - +10% к весу брендов фракции
+  - +5% к epic/legendary редкостям
+  - +15% к сетовым аффиксам фракции
+- Штрафы для врагов:
+  - -10% к весу брендов фракции
+  - -5% к epic/legendary редкостям
+
+**Сет-эффекты:**
+- При 2+ предметах одного бренда → активируются `setBonuses` (уровень 1)
+- При 3+ предметах одного бренда → активируются `setBonuses` (уровень 2)
+- При 4+ предметах одного бренда → активируются `setBonuses` (уровень 3)
+- Ограничения баланса: сет-бонусы ограничены caps по статам
+
+### 6. Алгоритм генерации (детализированный)
+
+**Шаг 1: Выбор редкости**
+1. Определить контекст: зона (zoneTag), лига (leagueId), фракционный контроль
+2. Применить модификаторы: PvP/экстракт/лига/фракция/события
+3. Выбрать редкость по весам `rarityWeightsByZone[zoneTag]` с учетом модификаторов
+
+**Шаг 2: Выбор бренда**
+1. Определить локальные веса брендов (регион, фракция, событие)
+2. Применить пользовательские ограничения (если есть)
+3. Выбрать бренд по весам с учетом контекста
+
+**Шаг 3: Генерация базовых статов (StatsCore)**
+1. Сформировать seed: `hash(brandId:zoneTag:leagueId:rarity:rollIdx:seedVersion)`
+2. Генерация по seed и типу предмета:
+   - Для оружия: damage, rof, accuracy, recoil, magSize, reloadTime, range
+   - Для брони: armor, mobilityPenalty, modSlots
+   - Для имплантов: energyDrain, heatGen, compatLevel
+   - Для кибердеков: quickhackSlots, deckEnergy, regenRate, ioBandwidth
+3. Применение базовых диапазонов по редкости: common (±5%) → artifact (±25-30%)
+
+**Шаг 4: Применение расширенных статов (StatsExtended)**
+1. Генерация расширенных характеристик по типу предмета
+2. Проверка лимитов energy/heat: если превышение → корректировка значений
+3. Применение сигнатур бренда: модификация статов через `brand.signatureBonuses`
+
+**Шаг 5: Роллинг аффиксов**
+1. Определить количество слотов по редкости: common (0-1) → artifact (5-6)
+2. Для каждого слота:
+   - Выбрать тип аффикса: simple (70%), set (25%), unique (5%) - базовые шансы, зависят от редкости
+   - Фильтрация по совместимости: implantCompat, synergyTags
+   - Выбор аффикса из пула `affixPoolsByType[itemType]` с учетом весов
+   - Применение значений модификаций из `affix.values`
+
+**Шаг 6: Применение сигнатур и сет-бонусов**
+1. Применение сигнатур бренда: финальные модификаторы статов
+2. Проверка сет-бонусов: если 2+ предметов одного бренда → активировать `setBonuses`
+3. Применение фракционных модификаторов: если есть фракционный контроль в зоне
+
+**Шаг 7: Валидация и финализация**
+1. Проверка совместимости: импланты, энергобюджет, киберпсихоз
+2. Проверка ограничений: caps по статам, запрещенные комбинации
+3. Если валидация не прошла:
+   - Переролл аффикса (максимум 3 попытки)
+   - Понижение редкости (если превышение лимитов критично)
+   - Финализация предмета с корректированными значениями
 
 ### 7. Анти-абуз и баланс
-- caps по ключевым статам на редкость/лигу/режим
-- запрет некоторых комбинаций аффиксов/сигнатур
-- лимиты на количество «уникальных» эффектов в билде
+
+**Caps по ключевым статам:**
+- **По редкости:** common (caps ×1.0) → artifact (caps ×1.5-2.0)
+- **По лиге:** ранние стадии (caps ×1.0) → поздние стадии (caps ×1.25-1.5)
+- **По режиму:** PvE (caps ×1.0) → PvP (caps ×1.1-1.2)
+
+**Запрещенные комбинации:**
+- Некоторые комбинации аффиксов/сигнатур запрещены (список в constraints)
+- Примеры: damage+accuracy+penetration одновременно на artifact (слишком мощно)
+- Проверка в валидации: если запрещенная комбинация → переролл аффиксов
+
+**Лимиты на уникальные эффекты:**
+- Максимум 1 уникальный эффект на билд (предмет + импланты + моды)
+- Максимум 3 сетовых эффекта на билд
+- Проверка в валидации: если превышение → понижение редкости/удаление аффикса
+
+**Примеры caps по статам (для legendary):**
+- damage: +50% максимум
+- accuracy: +30% максимум
+- armor: +40% максимум
+- energyDrain: -30% минимум (снижение потребления)
 
 ---
 
