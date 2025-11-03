@@ -1,6 +1,6 @@
 # Текущий статус работы
 
-**Последнее обновление:** 2025-11-03 16:30
+**Последнее обновление:** 2025-11-03 19:07
 
 ---
 
@@ -20,6 +20,7 @@
    - ✅ Способности: комбинации источников/гибридные билды/киберпсихоз - [2025-11-03-abilities-combinations.md](archive/abilities-combinations.md) → `02-gameplay/combat/combat-abilities.md` (v1.2.0)
    - ✅ Паркур: интеграция с боем (атаки с воздуха/стрельба в движении/способности/комбо) - [2025-11-03-freerun-combat-integration.md](archive/freerun-combat-integration.md) → `02-gameplay/combat/combat-freerun.md` (v1.1.0)
    - ✅ Стелс: система обнаружения (каналы/профили врагов/импланты/сети) - [2025-11-03-stealth-detection-system.md](archive/stealth-detection-system.md) → `02-gameplay/combat/combat-stealth.md` (v1.1.0)
+   - ✅ Импланты: типы и применение/механики/получение и улучшение/визуализация - [2025-11-03-implants-types-and-application.md](archive/2025-11-03-implants-types-and-application.md), [2025-11-03-implants-mechanics.md](archive/2025-11-03-implants-mechanics.md), [2025-11-03-implants-acquisition.md](archive/2025-11-03-implants-acquisition.md), [2025-11-03-implants-visuals.md](archive/2025-11-03-implants-visuals.md) → `02-gameplay/combat/combat-implants-*.md` (v1.1.0)
 
 4. **Система прокачки:**
    - ✅ Первый брейншторм - [2025-11-02-progression-system.md](archive/2025-11-02-progression-system.md) → `02-gameplay/progression/classes-overview.md`
@@ -49,7 +50,7 @@
 
 ## 🔄 В процессе
 
-**Активные обсуждения:** См. `active/`
+**Активные обсуждения:** Нет активных обсуждений (все завершены и заархивированы)
 
 ---
 
