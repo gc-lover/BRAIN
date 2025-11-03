@@ -16,6 +16,12 @@
 - `02-gameplay/combat/combat-hacking.md` - хакерство
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-020: api/v1/gameplay/economy/world-impact.yaml (2025-11-03)
+- Last Updated: 2025-11-03 21:18
+---
 
 ## Контекст
 
