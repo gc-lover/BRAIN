@@ -45,6 +45,36 @@
 
 ---
 
+## Типы предметов и их характеристики (черновик)
+
+1) Оружие (пистолет, ПП, штурмовая, дробовик, снайперка, тяжёлое)
+- Ядро: damage, rof, accuracy, recoil, magSize, reloadTime
+- Расширения: damageType, penetration, noise, heatGen, energyUse, hipfirePenalty, adsBonus, handling
+- Синергии: implantCompat, cyberdeckSlots?, brandSignature
+
+2) Броня/экипировка (торс, голова, руки, ноги)
+- Ядро: armor, durability, weight, mobilityPenalty
+- Расширения: resistances (phys/emp/thermal/chem), noiseDamp, heatDissipation, energyBuffer
+- Слоты модов: optics/plates/rigs/utility
+
+3) Импланты (боевые/тактические/защитные/двигательные/OS)
+- Ядро: slotType, energyDrain, heatGen, compatLevel, rarity
+- Расширения: abilityPower, cooldownMod, statMultipliers, hackResist, humanityImpact
+- Особое: synergyTags (weaponClass, deckLevel, brand), maintenanceCost
+
+4) Кибердеки
+- Ядро: quickhackSlots, deckEnergy, regenRate, ioBandwidth
+- Расширения: overheatThreshold, iceBypass, signalDistance, detectionFootprint
+- Связь: cyberpsychosisRiskFactor (от перегрева/нагрузки)
+
+5) Модификации/аугменты (моды ствола, прицелы, пластины, охлаждение)
+- Ядро: slot, statDelta, drawbacks
+- Расширения: conditionalProcs, setBonuses, brandLock
+
+Примечание: для каждого типа предмета характеристики модульны — активируются только релевантные поля.
+
+---
+
 ## Интеграции
 
 - Фракции/бренды: `03-lore/factions/factions-overview.md`
