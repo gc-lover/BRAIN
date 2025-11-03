@@ -1,6 +1,6 @@
 # Текущий статус работы
 
-**Последнее обновление:** 2025-11-03
+**Последнее обновление:** 2025-11-03 16:30
 
 ---
 
@@ -16,6 +16,10 @@
 
 3. **Боевая система:**
    - ✅ Первый брейншторм - [2025-11-02-combat-system.md](archive/2025-11-02-combat-system.md) → `02-gameplay/combat/combat-overview.md` и связанные документы
+   - ✅ Экстрактшутер: типы лута/редкость/источники/сложность - [2025-11-03-extract-loot-types-and-rarity.md](archive/extract-loot-types-and-rarity.md) → `02-gameplay/combat/combat-extract.md` (v1.2.0)
+   - ✅ Способности: комбинации источников/гибридные билды/киберпсихоз - [2025-11-03-abilities-combinations.md](archive/abilities-combinations.md) → `02-gameplay/combat/combat-abilities.md` (v1.2.0)
+   - ✅ Паркур: интеграция с боем (атаки с воздуха/стрельба в движении/способности/комбо) - [2025-11-03-freerun-combat-integration.md](archive/freerun-combat-integration.md) → `02-gameplay/combat/combat-freerun.md` (v1.1.0)
+   - ✅ Стелс: система обнаружения (каналы/профили врагов/импланты/сети) - [2025-11-03-stealth-detection-system.md](archive/stealth-detection-system.md) → `02-gameplay/combat/combat-stealth.md` (v1.1.0)
 
 4. **Система прокачки:**
    - ✅ Первый брейншторм - [2025-11-02-progression-system.md](archive/2025-11-02-progression-system.md) → `02-gameplay/progression/classes-overview.md`
