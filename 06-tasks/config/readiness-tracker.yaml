@@ -392,6 +392,33 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/combat/combat-shooting.md"
+    status: "review"
+    version: "1.1.0"
+    checked: "2025-11-03 18:36"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по сочетанию шутера/MMORPG, стилю стрельбы, TTK, системе урона, движению и стрельбе, покрытию и укрытиям. TODO только для детализации отдачи и прицеливания (не блокирует API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-pvp-pve.md"
+    status: "review"
+    version: "1.1.0"
+    checked: "2025-11-03 18:36"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по PvP зонам, условному PvP, безопасным зонам, PvE зонам, сложности AI, типам контента. TODO только для детализации систем 'беспредела', условного PvP и прогрессии AI (не блокируют API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-overview.md"
+    status: "not-applicable"
+    version: null
+    checked: "2025-11-03 18:36"
+    checker: "AI Agent"
+    notes: "Обзорный документ, содержит ссылки на детальные документы боевой системы. Не предназначен для создания API, так как не содержит конкретных механик."
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
