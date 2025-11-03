@@ -9,6 +9,12 @@
 **Дата создания:** 2025-11-03
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-018: api/v1/gameplay/combat/pvp-pve.yaml (2025-11-03)
+- Last Updated: 2025-11-03 21:16
+---
 
 ## Концепция баланса PvP/PvE
 
