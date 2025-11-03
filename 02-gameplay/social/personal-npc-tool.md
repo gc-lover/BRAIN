@@ -503,6 +503,16 @@ baseDailyCost = licenseCost + maintenanceCost + energyCost + partsCost + insuran
 - [ ] Балансировка лимитов по лицензиям (L1-L3)
 - [ ] Детализация интеграций с economy/social/combat (конкретные API endpoints)
 
+---
+
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-001: api/v1/gameplay/social/personal-npc-tool.yaml (2025-11-03)
+- Last Updated: 2025-11-03 20:33
+
+---
+
 ## История изменений
 
 - v0.1.0 (2025-11-03) — создан каркас инструмента

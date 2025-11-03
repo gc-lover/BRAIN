@@ -145,6 +145,14 @@
 
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-004: api/v1/gameplay/combat/cyberpsychosis.yaml (2025-11-03)
+- Last Updated: 2025-11-03 20:38
+
+---
+
 ## Источники
 - Cyberpunk 2077 (игра), настольная игра, Edgerunners (аниме)
 

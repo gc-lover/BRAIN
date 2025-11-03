@@ -361,6 +361,16 @@
 - [ ] Балансировка весов редкостей по зонам (rarityWeightsByZone)
 - [ ] Балансировка caps по статам (по редкости, лиге, режиму)
 
+---
+
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-002: api/v1/gameplay/economy/equipment-matrix.yaml (2025-11-03)
+- Last Updated: 2025-11-03 20:40
+
+---
+
 ## История изменений
 
 - v0.1.0 (2025-11-03) — создан каркас и зафиксированы решения G1–G7

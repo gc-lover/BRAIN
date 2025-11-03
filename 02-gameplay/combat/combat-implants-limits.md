@@ -27,6 +27,14 @@
 
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-003: api/v1/gameplay/combat/implants-limits.yaml (2025-11-03)
+- Last Updated: 2025-11-03 20:38
+
+---
+
 ## История изменений
 - v1.0.0 (2025-11-03) — Выделено из `combat-implants.md`
 
