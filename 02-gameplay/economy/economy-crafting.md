@@ -15,13 +15,6 @@
 - `economy-trading.md` - торговля
 - `02-gameplay/combat/combat-implants.md` - импланты
 
----
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-012: api/v1/gameplay/economy/crafting.yaml (2025-11-03)
-- Last Updated: 2025-11-03 21:08
----
 
 ## Контекст
 

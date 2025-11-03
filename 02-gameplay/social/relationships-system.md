@@ -8,13 +8,6 @@
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
----
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-009: api/v1/gameplay/social/relationships.yaml (2025-11-03)
-- Last Updated: 2025-11-03 21:05
----
 
 
 ## Концепция системы отношений

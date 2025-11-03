@@ -4,8 +4,6 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит 3 авторских класса: Politician, Trader, Teacher.
 
----
-
 ## Авторские классы
 
 Классы, созданные специально для игры, которые дополняют систему классов из лора Cyberpunk.

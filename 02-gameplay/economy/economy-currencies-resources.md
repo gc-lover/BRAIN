@@ -15,13 +15,6 @@
 - `economy-trading.md` - торговля
 - `economy-crafting.md` - крафт
 
----
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-013: api/v1/gameplay/economy/currencies-resources.yaml (2025-11-03)
-- Last Updated: 2025-11-03 21:09
----
 
 ## Контекст
 

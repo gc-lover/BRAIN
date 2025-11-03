@@ -4,8 +4,6 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит список всех 10 основных классов из лора Cyberpunk с подклассами.
 
----
-
 ## Основные классы из лора Cyberpunk
 
 Список классов из оригинального лора Cyberpunk 2020/Red для использования в игре.

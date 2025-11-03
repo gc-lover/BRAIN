@@ -270,12 +270,6 @@
 **api-readiness-notes:** Заметки о готовности/проблемах (опционально)
 
 ---
-**API Tasks Status:**
-- Status: not_created | created | in_progress | completed
-- Tasks: 
-  - API-TASK-XXX: api/v1/path/to/file.yaml (YYYY-MM-DD)
-- Last Updated: YYYY-MM-DD
----
 
 ## Описание
 

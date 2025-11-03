@@ -363,12 +363,6 @@
 
 ---
 
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-002: api/v1/gameplay/economy/equipment-matrix.yaml (2025-11-03)
-- Last Updated: 2025-11-03 20:40
-
 ---
 
 ## История изменений

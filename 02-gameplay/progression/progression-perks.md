@@ -8,13 +8,6 @@
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
----
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-014: api/v1/gameplay/progression/perks.yaml (2025-11-03)
-- Last Updated: 2025-11-03 21:10
----
 
 
 ## Система перков — ✅ Решение

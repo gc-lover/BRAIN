@@ -505,13 +505,6 @@ baseDailyCost = licenseCost + maintenanceCost + energyCost + partsCost + insuran
 
 ---
 
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-001: api/v1/gameplay/social/personal-npc-tool.yaml (2025-11-03)
-- Last Updated: 2025-11-03 20:33
-
----
 
 ## История изменений
 
