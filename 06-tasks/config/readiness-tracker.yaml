@@ -355,6 +355,43 @@ documents:
     issues: []
     api_target: null
 
+  # 02-gameplay/combat/ - Боевая система
+  - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
+    status: "review"
+    version: "1.2.0"
+    checked: "2025-11-03 18:27"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по типам лута, редкости, источникам, влиянию сложности зоны. TODO только для страховки/восстановления и времени в зоне (не блокируют API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
+    status: "review"
+    version: "1.2.0"
+    checked: "2025-11-03 18:27"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по источникам способностей, типам, ограничениям, комбинациям, гибридным билдам, влиянию на киберпсихоз. TODO только для балансировки (не блокирует API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-freerun.md"
+    status: "review"
+    version: "1.1.0"
+    checked: "2025-11-03 18:27"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по интеграции паркура с боем (атаки с воздуха, стрельба в движении, мобильные способности, комбо). TODO только для балансировки (не блокирует API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/combat/combat-stealth.md"
+    status: "review"
+    version: "1.1.0"
+    checked: "2025-11-03 18:27"
+    checker: "AI Agent"
+    notes: "Документ содержит детальные решения по системе обнаружения (каналы, профили врагов, импланты, сети). TODO только для балансировки (не блокирует API). Готов к проверке на готовность к API разработке."
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
