@@ -25,6 +25,7 @@
 
 6. **Экономическая система:**
    - ✅ Первый брейншторм - [2025-11-03-economy-system.md](archive/2025-11-03-economy-system.md) → `02-gameplay/economy/economy-overview.md`
+   - ✅ Процедурная матрица снаряжения (v0.1.0) → `02-gameplay/economy/equipment-matrix.md`
 
 7. **Локации (высокий уровень):**
    - ✅ Решения L1–L14 зафиксированы (v1.2.0) → `03-lore/locations/locations-overview.md`
