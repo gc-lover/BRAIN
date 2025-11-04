@@ -1,0 +1,322 @@
+{
+  "quests": [
+    {
+      "id": "quest-delivery-001",
+      "name": "Доставка груза",
+      "description": "Офицер NCPD Сара Миллер просит доставить посылку из Downtown в Watson торговцу Рита Морено. Это простое задание для новичков, но нужно быть осторожным при перемещении между районами.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 1,
+      "objectives": [
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест от Сары Миллер",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-sarah-miller"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-move-to-watson",
+          "description": "Переместиться в Watson",
+          "type": "location",
+          "target": {
+            "type": "location",
+            "id": "loc-watson-001"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-find-rita",
+          "description": "Найти Риту Морено в Watson",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-rita-moreno"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-deliver-package",
+          "description": "Передать посылку Рите Морено",
+          "type": "delivery",
+          "target": {
+            "type": "npc",
+            "id": "npc-rita-moreno"
+          },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 100,
+        "money": 200,
+        "items": [],
+        "reputation": {
+          "faction": "ncpd",
+          "amount": 5
+        }
+      },
+      "requirements": {
+        "level": 1,
+        "reputation": null,
+        "completedQuests": []
+      }
+    },
+    {
+      "id": "quest-find-trader-001",
+      "name": "Найти торговца",
+      "description": "Фиксер Марко \"Фикс\" Санчес просит найти торговца Джейка Арчера в Downtown и поговорить с ним о поставке. Это простое задание, но нужно знать, где искать.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 1,
+      "objectives": [
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест от Марко \"Фикс\" Санчеса",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-marco-fix"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-move-to-downtown",
+          "description": "Переместиться в Downtown",
+          "type": "location",
+          "target": {
+            "type": "location",
+            "id": "loc-downtown-001"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-find-jake",
+          "description": "Найти Джейка Арчера в Downtown",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-jake-archer"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-talk-about-supply",
+          "description": "Поговорить с Джейком о поставке",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-jake-archer"
+          },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 150,
+        "money": 250,
+        "items": [],
+        "reputation": {
+          "faction": "independent",
+          "amount": 5
+        }
+      },
+      "requirements": {
+        "level": 1,
+        "reputation": null,
+        "completedQuests": []
+      }
+    },
+    {
+      "id": "quest-package-delivery-001",
+      "name": "Доставка посылки",
+      "description": "Рабочая Анна Петрова просит доставить посылку из Santo Domingo в Watson. Путь может быть опасным, но если быть осторожным, все будет хорошо.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 2,
+      "objectives": [
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест от Анны Петровой",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-anna-petrova"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-get-package",
+          "description": "Получить посылку",
+          "type": "item",
+          "target": {
+            "type": "item",
+            "id": "item-package-delivery"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-move-to-watson",
+          "description": "Переместиться в Watson",
+          "type": "location",
+          "target": {
+            "type": "location",
+            "id": "loc-watson-001"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-deliver-package",
+          "description": "Передать посылку получателю",
+          "type": "delivery",
+          "target": {
+            "type": "npc",
+            "id": "npc-marco-fix"
+          },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 200,
+        "money": 300,
+        "items": ["item-medkit-basic"],
+        "reputation": null
+      },
+      "requirements": {
+        "level": 2,
+        "reputation": null,
+        "completedQuests": []
+      }
+    },
+    {
+      "id": "quest-show-respect-001",
+      "name": "Показать уважение",
+      "description": "Лидер банды Valentinos Хосе \"Тигр\" Рамирес просит выполнить задание, чтобы показать уважение к банде. Это опасное задание для опытных игроков.",
+      "type": "side",
+      "giverNpcId": "npc-jose-tiger",
+      "level": 5,
+      "objectives": [
+        {
+          "id": "obj-get-access",
+          "description": "Получить доступ к Хосе \"Тигр\" Рамиресу (требуется репутация или выполнение предварительных заданий)",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-jose-tiger"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-jose-tiger"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-complete-task",
+          "description": "Выполнить задание (детали зависят от реализации)",
+          "type": "kill",
+          "target": {
+            "type": "enemy",
+            "id": "npc-gangster-generic"
+          },
+          "quantity": 3
+        },
+        {
+          "id": "obj-return-to-jose",
+          "description": "Вернуться к Хосе",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-jose-tiger"
+          },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 500,
+        "money": 500,
+        "items": [],
+        "reputation": {
+          "faction": "valentinos",
+          "amount": 10
+        }
+      },
+      "requirements": {
+        "level": 5,
+        "reputation": {
+          "faction": "valentinos",
+          "minValue": 0
+        },
+        "completedQuests": []
+      }
+    },
+    {
+      "id": "quest-first-combat-001",
+      "name": "Первый бой",
+      "description": "Фиксер Марко просит разобраться с бандитами в Watson. Это первый бой для игрока. Нужно быть готовым к опасности.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 3,
+      "objectives": [
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест от Марко",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-marco-fix"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-find-gangsters",
+          "description": "Найти бандитов в Watson",
+          "type": "location",
+          "target": {
+            "type": "location",
+            "id": "loc-watson-001"
+          },
+          "quantity": 1
+        },
+        {
+          "id": "obj-defeat-gangsters",
+          "description": "Победить бандитов в бою (если бой реализован в MVP)",
+          "type": "kill",
+          "target": {
+            "type": "enemy",
+            "id": "npc-gangster-generic"
+          },
+          "quantity": 2
+        },
+        {
+          "id": "obj-return-to-marco",
+          "description": "Вернуться к Марко",
+          "type": "npc",
+          "target": {
+            "type": "npc",
+            "id": "npc-marco-fix"
+          },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 300,
+        "money": 400,
+        "items": [],
+        "reputation": null
+      },
+      "requirements": {
+        "level": 3,
+        "reputation": null,
+        "completedQuests": []
+      }
+    }
+  ]
+}
+
