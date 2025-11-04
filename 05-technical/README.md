@@ -13,8 +13,9 @@
 - `ui-mvp-screens.md` - Детальное описание всех экранов MVP (требует создания)
 
 ### UI/UX (Интерфейсы)
+- `ui-registration.md` - Экран регистрации ✅ ready
 - `ui-character-creation.md` - Начальный интерфейс: выбор и создание персонажа ✅ ready
-- `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ⚠️ needs-work
+- `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ✅ ready
 
 ### API Requirements (Требования к API)
 - `api-requirements/mvp-endpoints.md` - Endpoints для MVP (требует создания)
@@ -40,6 +41,7 @@
 
 **Готово:**
 - ✅ План MVP (mvp-text-version-plan.md)
+- ✅ Регистрация (ui-registration.md) - ready
 - ✅ Создание персонажа (ui-character-creation.md) - ready
 - ✅ Основной интерфейс (ui-main-game.md) - ready
 - ✅ API требования для MVP (api-requirements/mvp-endpoints.md)
