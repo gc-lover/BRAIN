@@ -1,14 +1,14 @@
 # Основной игровой интерфейс (текстовая версия)
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** review - детализация завершена  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-04  
 **Последнее обновление:** 2025-11-04  
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-04 00:05  
-**api-readiness-notes:** Документ в процессе брейншторма, требуется детализация интерфейсов для текстовой версии
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-04 16:30  
+**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные описания всех интерфейсов для текстовой версии, решения по вопросам интерфейса (гибридные варианты), полное описание API endpoints с request/response схемами для всех систем (персонаж, локации, инвентарь, квесты, NPC, бой, торговля). Все необходимые детали для создания API спецификации присутствуют (v1.1.0).
 
 ---
 
@@ -684,136 +684,811 @@
 
 ### 10.2. API требования
 
-**Необходимые endpoints для основного интерфейса:**
-- `GET /api/v1/character/status` - статус персонажа (здоровье, энергия, человечность)
-- `GET /api/v1/location/current` - текущая локация персонажа
-- `GET /api/v1/location/{id}` - информация о локации
-- `GET /api/v1/location/{id}/actions` - доступные действия в локации
-- `GET /api/v1/location/{id}/npcs` - NPC в локации
-- `POST /api/v1/location/move` - перемещение между локациями
-- `GET /api/v1/inventory` - инвентарь персонажа
-- `GET /api/v1/character/stats` - характеристики персонажа
-- `GET /api/v1/quests` - список квестов
-- `GET /api/v1/combat/status` - статус боя
-- `POST /api/v1/combat/action` - действие в бою
-- `GET /api/v1/social/friends` - список друзей
-- `GET /api/v1/social/chat` - чат
-- `GET /api/v1/trade/shops` - магазины
-- `GET /api/v1/trade/market` - рынок/аукцион
+#### 10.2.1. Главный экран / Статус персонажа
+
+**Endpoints:**
+
+**GET /api/v1/characters/{characterId}/status**
+- Описание: Получение статуса персонажа (здоровье, энергия, человечность, уровень, опыт)
+- Response:
+  ```json
+  {
+    "characterId": "uuid",
+    "name": "string",
+    "level": "integer",
+    "experience": "integer",
+    "health": {
+      "current": "integer",
+      "max": "integer",
+      "percentage": "integer"
+    },
+    "energy": {
+      "current": "integer",
+      "max": "integer",
+      "percentage": "integer"
+    },
+    "humanity": {
+      "current": "integer",
+      "max": "integer",
+      "percentage": "integer"
+    }
+  }
+  ```
+
+**GET /api/v1/characters/{characterId}/stats**
+- Описание: Получение характеристик персонажа
+- Response:
+  ```json
+  {
+    "characterId": "uuid",
+    "attributes": {
+      "strength": "integer",
+      "reflexes": "integer",
+      "intelligence": "integer",
+      "technical": "integer",
+      "cool": "integer"
+    },
+    "skills": [
+      {
+        "name": "string",
+        "level": "integer",
+        "maxLevel": "integer"
+      }
+    ]
+  }
+  ```
 
 ---
 
-## 11. Вопросы для проработки
+#### 10.2.2. Локации
+
+**Endpoints:**
+
+**GET /api/v1/locations/current**
+- Описание: Получение текущей локации персонажа
+- Response:
+  ```json
+  {
+    "locationId": "uuid",
+    "name": "string",
+    "description": "string",
+    "city": "string",
+    "district": "string",
+    "dangerLevel": "low|medium|high|extreme",
+    "connectedLocations": ["uuid"],
+    "npcs": ["uuid"],
+    "availableActions": ["string"]
+  }
+  ```
+
+**GET /api/v1/locations/{locationId}**
+- Описание: Получение информации о локации
+- Response: аналогично GET /api/v1/locations/current
+
+**GET /api/v1/locations/{locationId}/actions**
+- Описание: Получение доступных действий в локации
+- Response:
+  ```json
+  {
+    "locationId": "uuid",
+    "actions": [
+      {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "type": "explore|talk|use|rest|hack|combat",
+        "available": "boolean",
+        "requirements": {
+          "level": "integer",
+          "skills": ["string"],
+          "items": ["uuid"]
+        }
+      }
+    ]
+  }
+  ```
+
+**GET /api/v1/locations/{locationId}/npcs**
+- Описание: Получение списка NPC в локации
+- Response:
+  ```json
+  {
+    "locationId": "uuid",
+    "npcs": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "description": "string",
+        "faction": "string",
+        "type": "trader|quest_giver|guard|citizen",
+        "availableQuests": ["uuid"]
+      }
+    ]
+  }
+  ```
+
+**POST /api/v1/locations/move**
+- Описание: Перемещение персонажа между локациями
+- Request:
+  ```json
+  {
+    "characterId": "uuid",
+    "targetLocationId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "newLocationId": "uuid",
+    "travelTime": "integer",
+    "message": "string"
+  }
+  ```
+
+**GET /api/v1/locations**
+- Описание: Получение списка доступных локаций (для карты)
+- Query Parameters:
+  - `city` (optional): фильтр по городу
+  - `district` (optional): фильтр по району
+  - `dangerLevel` (optional): фильтр по опасности
+  - `minLevel` (optional): минимальный уровень
+- Response:
+  ```json
+  {
+    "locations": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "city": "string",
+        "district": "string",
+        "dangerLevel": "string",
+        "minLevel": "integer",
+        "available": "boolean"
+      }
+    ]
+  }
+  ```
+
+---
+
+#### 10.2.3. Инвентарь
+
+**Endpoints:**
+
+**GET /api/v1/inventory/{characterId}**
+- Описание: Получение инвентаря персонажа
+- Response:
+  ```json
+  {
+    "characterId": "uuid",
+    "weight": {
+      "current": "integer",
+      "max": "integer"
+    },
+    "equipped": {
+      "head": "uuid|null",
+      "body": "uuid|null",
+      "arms": "uuid|null",
+      "legs": "uuid|null",
+      "weapon1": "uuid|null",
+      "weapon2": "uuid|null",
+      "implants": ["uuid"]
+    },
+    "items": [
+      {
+        "id": "uuid",
+        "itemId": "uuid",
+        "name": "string",
+        "type": "weapon|armor|implant|consumable|resource|quest",
+        "quantity": "integer",
+        "equipped": "boolean",
+        "slot": "string|null"
+      }
+    ]
+  }
+  ```
+
+**POST /api/v1/inventory/{characterId}/equip**
+- Описание: Экипировка предмета
+- Request:
+  ```json
+  {
+    "inventoryItemId": "uuid",
+    "slot": "head|body|arms|legs|weapon1|weapon2"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string"
+  }
+  ```
+
+**POST /api/v1/inventory/{characterId}/unequip**
+- Описание: Снятие предмета
+- Request:
+  ```json
+  {
+    "inventoryItemId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string"
+  }
+  ```
+
+**POST /api/v1/inventory/{characterId}/use**
+- Описание: Использование предмета
+- Request:
+  ```json
+  {
+    "inventoryItemId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "effects": {
+      "health": "integer",
+      "energy": "integer"
+    },
+    "message": "string"
+  }
+  ```
+
+---
+
+#### 10.2.4. Квесты
+
+**Endpoints:**
+
+**GET /api/v1/quests/{characterId}**
+- Описание: Получение списка квестов персонажа
+- Query Parameters:
+  - `status` (optional): active|completed|available
+  - `type` (optional): main|side|daily|weekly|faction
+- Response:
+  ```json
+  {
+    "characterId": "uuid",
+    "activeQuests": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "description": "string",
+        "type": "string",
+        "progress": {
+          "current": "integer",
+          "total": "integer"
+        },
+        "objectives": [
+          {
+            "id": "string",
+            "description": "string",
+            "completed": "boolean"
+          }
+        ],
+        "rewards": {
+          "experience": "integer",
+          "money": "integer",
+          "items": ["uuid"],
+          "reputation": {
+            "faction": "string",
+            "amount": "integer"
+          }
+        }
+      }
+    ],
+    "availableQuests": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "description": "string",
+        "type": "string",
+        "giverNpcId": "uuid",
+        "rewards": {
+          "experience": "integer",
+          "money": "integer"
+        },
+        "requirements": {
+          "level": "integer",
+          "reputation": {
+            "faction": "string",
+            "minValue": "integer"
+          }
+        }
+      }
+    ]
+  }
+  ```
+
+**GET /api/v1/quests/{questId}**
+- Описание: Получение детальной информации о квесте
+- Response:
+  ```json
+  {
+    "id": "uuid",
+    "name": "string",
+    "description": "string",
+    "type": "string",
+    "giverNpcId": "uuid",
+    "progress": {
+      "current": "integer",
+      "total": "integer"
+    },
+    "objectives": [
+      {
+        "id": "string",
+        "description": "string",
+        "completed": "boolean",
+        "target": {
+          "type": "location|npc|item|kill",
+          "id": "uuid|string"
+        }
+      }
+    ],
+    "rewards": {
+      "experience": "integer",
+      "money": "integer",
+      "items": ["uuid"],
+      "reputation": {
+        "faction": "string",
+        "amount": "integer"
+      }
+    },
+    "status": "active|completed|available"
+  }
+  ```
+
+**POST /api/v1/quests/{questId}/accept**
+- Описание: Принятие квеста
+- Request:
+  ```json
+  {
+    "characterId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string"
+  }
+  ```
+
+**POST /api/v1/quests/{questId}/complete**
+- Описание: Завершение квеста
+- Request:
+  ```json
+  {
+    "characterId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "rewards": {
+      "experience": "integer",
+      "money": "integer",
+      "items": ["uuid"],
+      "reputation": {
+        "faction": "string",
+        "amount": "integer"
+      }
+    },
+    "message": "string"
+  }
+  ```
+
+**POST /api/v1/quests/{questId}/abandon**
+- Описание: Отказ от квеста
+- Request:
+  ```json
+  {
+    "characterId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string"
+  }
+  ```
+
+---
+
+#### 10.2.5. NPC и взаимодействие
+
+**Endpoints:**
+
+**GET /api/v1/npcs/{npcId}**
+- Описание: Получение информации о NPC
+- Response:
+  ```json
+  {
+    "id": "uuid",
+    "name": "string",
+    "description": "string",
+    "locationId": "uuid",
+    "faction": "string",
+    "type": "trader|quest_giver|guard|citizen",
+    "reputation": {
+      "faction": "string",
+      "value": "integer"
+    },
+    "availableQuests": ["uuid"],
+    "tradeAvailable": "boolean"
+  }
+  ```
+
+**GET /api/v1/npcs/{npcId}/dialogue**
+- Описание: Получение диалогов с NPC
+- Response:
+  ```json
+  {
+    "npcId": "uuid",
+    "greeting": "string",
+    "dialogueOptions": [
+      {
+        "id": "string",
+        "text": "string",
+        "requirements": {
+          "reputation": {
+            "faction": "string",
+            "minValue": "integer"
+          },
+          "quests": ["uuid"]
+        }
+      }
+    ]
+  }
+  ```
+
+**POST /api/v1/npcs/{npcId}/interact**
+- Описание: Взаимодействие с NPC
+- Request:
+  ```json
+  {
+    "characterId": "uuid",
+    "action": "talk|trade|quest|leave",
+    "dialogueOptionId": "string|null"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "response": "string",
+    "tradeData": "object|null",
+    "questData": "object|null"
+  }
+  ```
+
+---
+
+#### 10.2.6. Бой (текстовая версия)
+
+**Endpoints:**
+
+**POST /api/v1/combat/start**
+- Описание: Начало боя
+- Request:
+  ```json
+  {
+    "characterId": "uuid",
+    "enemyId": "uuid",
+    "locationId": "uuid"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "combatId": "uuid",
+    "character": {
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      },
+      "energy": {
+        "current": "integer",
+        "max": "integer"
+      }
+    },
+    "enemy": {
+      "id": "uuid",
+      "name": "string",
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      },
+      "description": "string"
+    },
+    "turn": "player|enemy",
+    "availableActions": ["attack|defend|ability|item|escape"]
+  }
+  ```
+
+**GET /api/v1/combat/{combatId}/status**
+- Описание: Получение статуса боя
+- Response:
+  ```json
+  {
+    "combatId": "uuid",
+    "character": {
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      },
+      "energy": {
+        "current": "integer",
+        "max": "integer"
+      }
+    },
+    "enemy": {
+      "id": "uuid",
+      "name": "string",
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      }
+    },
+    "turn": "player|enemy",
+    "availableActions": ["string"],
+    "combatLog": [
+      {
+        "timestamp": "datetime",
+        "actor": "player|enemy",
+        "action": "string",
+        "description": "string",
+        "damage": "integer|null",
+        "effects": ["string"]
+      }
+    ]
+  }
+  ```
+
+**POST /api/v1/combat/{combatId}/action**
+- Описание: Выполнение действия в бою
+- Request:
+  ```json
+  {
+    "action": "attack|defend|ability|item|escape",
+    "target": "enemy|self",
+    "abilityId": "uuid|null",
+    "itemId": "uuid|null"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "turn": "player|enemy",
+    "actionResult": {
+      "actor": "player|enemy",
+      "action": "string",
+      "description": "string",
+      "damage": "integer|null",
+      "effects": ["string"]
+    },
+    "character": {
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      },
+      "energy": {
+        "current": "integer",
+        "max": "integer"
+      }
+    },
+    "enemy": {
+      "health": {
+        "current": "integer",
+        "max": "integer"
+      }
+    },
+    "combatEnded": "boolean",
+    "victory": "boolean|null",
+    "rewards": {
+      "experience": "integer",
+      "money": "integer",
+      "items": ["uuid"]
+    }|null
+  }
+  ```
+
+**POST /api/v1/combat/{combatId}/end**
+- Описание: Завершение боя (побег или завершение)
+- Request:
+  ```json
+  {
+    "reason": "escape|victory|defeat"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string"
+  }
+  ```
+
+---
+
+#### 10.2.7. Торговля (опционально для MVP)
+
+**Endpoints:**
+
+**GET /api/v1/trade/shops/{npcId}**
+- Описание: Получение товаров у торговца
+- Response:
+  ```json
+  {
+    "npcId": "uuid",
+    "shopName": "string",
+    "items": [
+      {
+        "id": "uuid",
+        "name": "string",
+        "type": "string",
+        "price": "integer",
+        "quantity": "integer",
+        "description": "string"
+      }
+    ],
+    "reputationDiscount": "integer"
+  }
+  ```
+
+**POST /api/v1/trade/buy**
+- Описание: Покупка предмета
+- Request:
+  ```json
+  {
+    "characterId": "uuid",
+    "npcId": "uuid",
+    "itemId": "uuid",
+    "quantity": "integer"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string",
+    "remainingMoney": "integer"
+  }
+  ```
+
+**POST /api/v1/trade/sell**
+- Описание: Продажа предмета
+- Request:
+  ```json
+  {
+    "characterId": "uuid",
+    "npcId": "uuid",
+    "inventoryItemId": "uuid",
+    "quantity": "integer"
+  }
+  ```
+- Response:
+  ```json
+  {
+    "success": "boolean",
+    "message": "string",
+    "moneyReceived": "integer",
+    "newMoney": "integer"
+  }
+  ```
+
+---
+
+#### 10.2.8. Обработка ошибок
+
+**Стандартные коды ошибок:**
+- `400 Bad Request` - некорректный запрос
+- `401 Unauthorized` - не авторизован
+- `403 Forbidden` - нет доступа
+- `404 Not Found` - ресурс не найден
+- `409 Conflict` - конфликт (например, квест уже принят)
+- `500 Internal Server Error` - внутренняя ошибка сервера
+
+**Формат ошибки:**
+```json
+{
+  "error": {
+    "code": "string",
+    "message": "string",
+    "details": "object|null"
+  }
+}
+```
+
+---
+
+## 11. Решения по вопросам интерфейса
 
 ### Q1: Структура главного экрана
 
-**Вопрос:** Как должен выглядеть главный экран игры?
+**Решение: Гибридный экран (C) с элементами информативного (B)**
 
-**Варианты:**
+**Реализация:**
+- Основная информация всегда видна (статус персонажа, текущая локация)
+- Текстовое описание локации отображается по умолчанию
+- Дополнительные секции (активные квесты, уведомления) сворачиваются/разворачиваются
+- Настройка отображения элементов через настройки
+- Пресеты интерфейса (компактный, информативный, минималистичный)
 
-**A. Минималистичный экран**
-- Только статус персонажа и текущая локация
-- Меню действий
-- Простота, но меньше информации
-
-**B. Информативный экран**
-- Статус персонажа
-- Текущая локация с описанием
-- Быстрые действия
-- Активные квесты
-- Уведомления
-
-**C. Гибридный экран**
-- Основная информация всегда видна
-- Дополнительные секции сворачиваются/разворачиваются
-- Настройка отображения элементов
-
-**D. Собственный вариант** (опишите)
+**Преимущества:**
+- Баланс между информативностью и простотой
+- Гибкость для разных стилей игры
+- Возможность настройки под себя
 
 ---
 
 ### Q2: Навигация по локациям
 
-**Вопрос:** Как должна работать навигация между локациями?
+**Решение: Гибридная система (D) с иерархической структурой**
 
-**Варианты:**
+**Реализация:**
+- Иерархическая структура: Город → Район → Зона → Локация
+- Текстовое описание каждой локации при выборе
+- Список доступных локаций с фильтрацией (по уровню, опасности, типу)
+- Визуализация связей между локациями (текстовый список связанных локаций)
+- Быстрый доступ к часто посещаемым локациям
 
-**A. Простой список локаций**
-- Список всех доступных локаций
-- Выбор локации для перемещения
-- Простота реализации
-
-**B. Иерархическая структура**
-- Город → Район → Зона → Локация
-- Многоуровневая навигация
-- Больше детализации
-
-**C. Карта с текстовым описанием**
-- Визуальная карта (текстовая или ASCII)
-- Текстовое описание локаций
-- Клик/выбор для перемещения
-
-**D. Гибридная система**
-- Иерархическая структура
-- Карта для визуализации
-- Текстовые описания локаций
-
-**E. Собственный вариант** (опишите)
+**Преимущества:**
+- Логичная структура навигации
+- Легко масштабируется для добавления новых локаций
+- Гибкость в отображении (можно показывать только доступные локации)
 
 ---
 
 ### Q3: Текстовый бой
 
-**Вопрос:** Как должен работать текстовый бой?
+**Решение: Гибридная система (D) - пошаговый бой с текстовыми описаниями**
 
-**Варианты:**
+**Реализация:**
+- Пошаговый бой: ход игрока → ход противника
+- Выбор действия каждый ход (атака, защита, способность, предмет, побег)
+- Детальные текстовые описания каждого действия
+- Логи боя с временными метками
+- Опциональная автоматизация простых действий (для ускорения)
 
-**A. Пошаговый бой**
-- Ход игрока → ход противника
-- Выбор действия каждый ход
-- Классический пошаговый бой
-
-**B. Реалтайм с паузами**
-- Время идет, но можно сделать паузу
-- Выбор действий в реальном времени
-- Более динамичный
-
-**C. Текстовое описание боя**
-- Игрок выбирает общую тактику
-- Система описывает исход боя
-- Меньше контроля, больше атмосферы
-
-**D. Гибридная система**
-- Пошаговый бой с текстовыми описаниями
-- Выбор действий каждый ход
-- Детальные логи боя
-
-**E. Собственный вариант** (опишите)
+**Преимущества:**
+- Полный контроль игрока над боем
+- Атмосферные текстовые описания
+- Возможность ускорения для простых боев
+- Гибкость для разных стилей боя
 
 ---
 
 ### Q4: Информационная насыщенность
 
-**Вопрос:** Сколько информации должно быть на экране?
+**Решение: Настраиваемая информация (C) с умными пресетами**
 
-**Варианты:**
+**Реализация:**
+- Игрок выбирает что показывать через настройки
+- Пресеты интерфейса:
+  - **Компактный** - минимальная информация, максимум места для действий
+  - **Информативный** - вся информация, максимум данных
+  - **Сбалансированный** - оптимальный баланс (по умолчанию)
+  - **Комбат** - фокус на боевых данных (здоровье, энергия, способности)
+  - **Торговец** - фокус на экономике (деньги, инвентарь, цены)
+  - **Хакер** - фокус на технических данных (киберпространство, хакерство)
+- Динамическое скрытие/показ элементов в зависимости от контекста
 
-**A. Минимальная информация**
-- Только самое необходимое
-- Остальное в подменю
-- Простота, но больше кликов
-
-**B. Максимальная информация**
-- Вся информация на экране
-- Много данных сразу
-- Может быть перегружен
-
-**C. Настраиваемая информация**
-- Игрок выбирает что показывать
-- Пресеты интерфейса (комбат, торговец, хакер)
-- Баланс между простотой и информативностью
-
-**D. Собственный вариант** (опишите)
+**Преимущества:**
+- Максимальная гибкость для разных стилей игры
+- Адаптивность под текущую ситуацию
+- Персонализация интерфейса
 
 ---
 
@@ -829,6 +1504,7 @@
 
 ## История изменений
 
+- v1.1.0 (2025-11-04) - Детализация интерфейсов, решения по вопросам (гибридные варианты), добавлены детальные API endpoints для всех систем
 - v1.0.0 (2025-11-04) - Создание документа с описанием основного игрового интерфейса для текстовой версии
 
 
