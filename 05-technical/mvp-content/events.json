@@ -1,0 +1,199 @@
+{
+  "events": {
+    "random": [
+      {
+        "id": "event-police-patrol",
+        "name": "Патруль NCPD",
+        "description": "Вы видите патруль NCPD на улице. Офицеры проверяют прохожих, ищут подозрительных личностей. Вы можете пройти незамеченным, но если у вас есть незаконные предметы, лучше быть осторожным.",
+        "locationTypes": ["corporate", "residential"],
+        "dangerLevel": ["low", "medium"],
+        "effects": {
+          "reputation": {
+            "faction": "ncpd",
+            "amount": 0
+          }
+        },
+        "options": [
+          {
+            "id": "avoid",
+            "text": "Избежать патруля",
+            "description": "Вы обходите патруль, стараясь не привлекать внимание.",
+            "effects": {}
+          },
+          {
+            "id": "talk",
+            "text": "Поговорить с офицерами",
+            "description": "Вы подходите к офицерам и здороваетесь. Они вежливы, но насторожены.",
+            "effects": {
+              "reputation": {
+                "faction": "ncpd",
+                "amount": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "event-gang-conflict",
+        "name": "Конфликт банд",
+        "description": "Вы видите конфликт между бандами на улице. Valentinos и Maelstrom сражаются за территорию. Стрельба, крики, хаос. Лучше держаться подальше, но если вы готовы, можете вмешаться.",
+        "locationTypes": ["criminal", "industrial"],
+        "dangerLevel": ["high", "extreme"],
+        "effects": {
+          "reputation": {
+            "faction": "valentinos",
+            "amount": 0
+          }
+        },
+        "options": [
+          {
+            "id": "avoid",
+            "text": "Избежать конфликта",
+            "description": "Вы обходите конфликт, стараясь не попасть в перестрелку.",
+            "effects": {}
+          },
+          {
+            "id": "help-valentinos",
+            "text": "Помочь Valentinos",
+            "description": "Вы вмешиваетесь в конфликт на стороне Valentinos. Это опасно, но может улучшить вашу репутацию с бандой.",
+            "effects": {
+              "reputation": {
+                "faction": "valentinos",
+                "amount": 10
+              },
+              "reputation": {
+                "faction": "maelstrom",
+                "amount": -10
+              },
+              "combat": true
+            }
+          },
+          {
+            "id": "help-maelstrom",
+            "text": "Помочь Maelstrom",
+            "description": "Вы вмешиваетесь в конфликт на стороне Maelstrom. Это опасно, но может улучшить вашу репутацию с бандой.",
+            "effects": {
+              "reputation": {
+                "faction": "maelstrom",
+                "amount": 10
+              },
+              "reputation": {
+                "faction": "valentinos",
+                "amount": -10
+              },
+              "combat": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "event-fixer-offer",
+        "name": "Предложение фиксера",
+        "description": "Вы встречаете фиксера на улице. Он предлагает вам работу - быстрое и прибыльное задание. Но это может быть опасно.",
+        "locationTypes": ["industrial", "criminal"],
+        "dangerLevel": ["medium", "high"],
+        "effects": {},
+        "options": [
+          {
+            "id": "accept",
+            "text": "Принять предложение",
+            "description": "Вы принимаете предложение фиксера. Он дает вам задание.",
+            "effects": {
+              "quest": "random"
+            }
+          },
+          {
+            "id": "refuse",
+            "text": "Отказаться",
+            "description": "Вы отказываетесь от предложения. Фиксер недоволен, но уходит.",
+            "effects": {}
+          }
+        ]
+      },
+      {
+        "id": "event-found-item",
+        "name": "Найденный предмет",
+        "description": "Вы нашли предмет на улице - кто-то обронил его или забыл. Это может быть полезно, но брать чужие вещи может быть опасно.",
+        "locationTypes": ["all"],
+        "dangerLevel": ["all"],
+        "effects": {},
+        "options": [
+          {
+            "id": "take",
+            "text": "Взять предмет",
+            "description": "Вы поднимаете предмет и кладете в инвентарь. Это может быть полезно.",
+            "effects": {
+              "item": "random"
+            }
+          },
+          {
+            "id": "leave",
+            "text": "Оставить предмет",
+            "description": "Вы оставляете предмет на месте. Лучше не трогать чужие вещи.",
+            "effects": {}
+          }
+        ]
+      },
+      {
+        "id": "event-corporate-meeting",
+        "name": "Корпоративная встреча",
+        "description": "Вы видите корпоративную встречу на улице. Корпоративные руководители обсуждают дела. Вы можете подслушать, но это может быть опасно.",
+        "locationTypes": ["corporate"],
+        "dangerLevel": ["low", "medium"],
+        "effects": {},
+        "options": [
+          {
+            "id": "listen",
+            "text": "Подслушать",
+            "description": "Вы подслушиваете разговор. Вы узнаете полезную информацию, но если вас заметят, могут быть проблемы.",
+            "effects": {
+              "information": "corporate",
+              "reputation": {
+                "faction": "independent",
+                "amount": -5
+              }
+            }
+          },
+          {
+            "id": "ignore",
+            "text": "Игнорировать",
+            "description": "Вы игнорируете встречу и идете дальше. Лучше не вмешиваться в корпоративные дела.",
+            "effects": {}
+          }
+        ]
+      }
+    ],
+    "location": [
+      {
+        "id": "event-location-explored",
+        "name": "Локация исследована",
+        "description": "Вы хорошо исследовали эту локацию. Вы знаете все интересные места и можете найти что-то полезное.",
+        "effects": {
+          "experience": 10,
+          "item": "random"
+        }
+      }
+    ],
+    "time": [
+      {
+        "id": "event-night-danger",
+        "name": "Опасность ночи",
+        "description": "Ночь в Night City - это время опасности. Банды активнее, патрули NCPD реже. Вы чувствуете, что нужно быть осторожнее.",
+        "timeOfDay": "night",
+        "effects": {
+          "dangerLevel": "increased"
+        }
+      },
+      {
+        "id": "event-day-safe",
+        "name": "Безопасность дня",
+        "description": "День в Night City - это время относительной безопасности. Корпорации работают, NCPD патрулирует улицы. Вы чувствуете себя безопаснее.",
+        "timeOfDay": "day",
+        "effects": {
+          "dangerLevel": "decreased"
+        }
+      }
+    ]
+  }
+}
+
