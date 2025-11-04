@@ -37,11 +37,11 @@
   - Правила для AI создателя заданий
   - Применяются при работе с задачами или .BRAIN документами
 
-#### BACK-GO
+#### BACK-JAVA
 
-- **back-go-rules.mdc** - `autoAttach: ["BACK-GO/**/*"]`
-  - Правила для работы с бекендом на Go
-  - Применяются при работе с файлами в `BACK-GO/`
+- **back-go-rules.mdc** - `autoAttach: ["BACK-JAVA/**/*"]`
+  - Правила для работы с бекендом на Java Spring Boot
+  - Применяются при работе с файлами в `BACK-JAVA/`
 
 #### FRONT-WEB
 
@@ -118,7 +118,7 @@
 
 ### Backend Agent
 - **Правила:** project-rules.mdc + back-go-rules.mdc
-- **Работает с:** `BACK-GO/**/*.go`
+- **Работает с:** `BACK-JAVA/**/*.java`
 
 ### Frontend Agent
 - **Правила:** project-rules.mdc + front-web-rules.mdc

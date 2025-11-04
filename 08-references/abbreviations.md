@@ -28,7 +28,7 @@
 
 - **.BRAIN** - Репозиторий идей и концепций
 - **API-SWAGGER** - Репозиторий API документации
-- **BACK-GO** - Бекенд репозиторий (Go)
+- **BACK-JAVA** - Бекенд репозиторий (Java Spring Boot)
 - **FRONT-WEB** - Фронтенд репозиторий (Web)
 - **GAME-CPP-FOR-UE5** - Репозиторий для Unreal Engine 5
 

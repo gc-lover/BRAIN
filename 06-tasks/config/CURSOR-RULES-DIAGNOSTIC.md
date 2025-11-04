@@ -22,7 +22,7 @@ NECPGAME/ (workspace root)
 │   └── .cursor/rules/
 │       ├── api-swagger-rules.mdc ⚠️
 │       └── api-task-creator-rules.mdc ⚠️
-├── BACK-GO/
+├── BACK-JAVA/
 │   └── .cursor/rules/
 │       └── back-go-rules.mdc ⚠️
 ├── FRONT-WEB/
@@ -59,7 +59,7 @@ NECPGAME/ (workspace root)
     ├── brain-readiness-checker-rules.mdc (autoAttach: [".BRAIN/**/*.md"]) ✅ - для проверки готовности
     ├── api-swagger-rules.mdc (autoAttach: ["API-SWAGGER/**/*"]) ✅ - для работы с API-SWAGGER
     ├── api-task-creator-rules.mdc (autoAttach: ["API-SWAGGER/tasks/**/*", ".BRAIN/**/*.md"]) ✅ - для создания задач
-    ├── back-go-rules.mdc (autoAttach: ["BACK-GO/**/*"]) ✅ - для работы с BACK-GO
+    ├── back-go-rules.mdc (autoAttach: ["BACK-JAVA/**/*"]) ✅ - для работы с BACK-JAVA
     ├── front-web-rules.mdc (autoAttach: ["FRONT-WEB/**/*"]) ✅ - для работы с FRONT-WEB
     └── game-cpp-rules.mdc (autoAttach: ["GAME-CPP-FOR-UE5/**/*"]) ✅ - для работы с GAME-CPP-FOR-UE5
 ```
@@ -142,7 +142,7 @@ alwaysApply: false
    # Копировать правила
    cp .BRAIN/.cursor/rules/*.mdc .cursor/rules/
    cp API-SWAGGER/.cursor/rules/*.mdc .cursor/rules/
-   cp BACK-GO/.cursor/rules/*.mdc .cursor/rules/
+   cp BACK-JAVA/.cursor/rules/*.mdc .cursor/rules/
    cp FRONT-WEB/.cursor/rules/*.mdc .cursor/rules/
    cp GAME-CPP-FOR-UE5/.cursor/rules/*.mdc .cursor/rules/
    ```
@@ -154,7 +154,7 @@ alwaysApply: false
    ```bash
    rm -rf .BRAIN/.cursor/rules
    rm -rf API-SWAGGER/.cursor/rules
-   rm -rf BACK-GO/.cursor/rules
+   rm -rf BACK-JAVA/.cursor/rules
    rm -rf FRONT-WEB/.cursor/rules
    rm -rf GAME-CPP-FOR-UE5/.cursor/rules
    ```

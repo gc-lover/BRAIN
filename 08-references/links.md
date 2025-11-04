@@ -9,7 +9,7 @@
 ## Документация проектов
 
 - [API-SWAGGER Repository](../API-SWAGGER/README.md) - API документация
-- [BACK-GO Repository](../BACK-GO/README.md) - Бекенд документация
+- [BACK-JAVA Repository](../BACK-JAVA/README.md) - Бекенд документация
 - [FRONT-WEB Repository](../FRONT-WEB/README.md) - Фронтенд документация
 
 ## Источники вдохновения
@@ -25,7 +25,9 @@
 ### Технологии
 
 #### Backend
-- [Go Documentation](https://go.dev/doc/)
+- [Java Documentation](https://docs.oracle.com/en/java/)
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 - [Docker Documentation](https://docs.docker.com/)
 

@@ -53,10 +53,10 @@
 ### 5. Backend Agent
 
 **Имя агента:** `backend-agent`  
-**Роль:** Разработка бекенда на Go  
+**Роль:** Разработка бекенда на Java Spring Boot  
 **Правило:** `.cursor/rules/back-go-rules.mdc`  
-**Применяется к:** `BACK-GO/**/*`, `BACK-GO/**/*.go`  
-**Описание:** Разрабатывает бекенд сервис на языке Go
+**Применяется к:** `BACK-JAVA/**/*`, `BACK-JAVA/**/*.java`  
+**Описание:** Разрабатывает бекенд сервис на Java Spring Boot
 
 ---
 
@@ -73,10 +73,10 @@
 ### 7. Game Agent
 
 **Имя агента:** `game-agent`  
-**Роль:** Разработка прослойки между BACK-GO и UE5  
+**Роль:** Разработка прослойки между BACK-JAVA (Java Spring Boot) и UE5  
 **Правило:** `.cursor/rules/game-cpp-rules.mdc`  
 **Применяется к:** `GAME-CPP-FOR-UE5/**/*`, `GAME-CPP-FOR-UE5/**/*.cpp`, `GAME-CPP-FOR-UE5/**/*.h`, `GAME-CPP-FOR-UE5/**/*.hpp`  
-**Описание:** Разрабатывает прослойку между BACK-GO и Unreal Engine 5
+**Описание:** Разрабатывает прослойку между BACK-JAVA и Unreal Engine 5
 
 ---
 

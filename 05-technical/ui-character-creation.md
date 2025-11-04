@@ -1189,3 +1189,12 @@
 - v1.0.0 (2025-11-03) - Создание документа с описанием начального интерфейса для текстовой веб-версии
 - v1.1.0 (2025-11-04) - Детализация технических требований: добавлены модели данных (Account, Character, CharacterSummary, CharacterClass, CharacterOrigin, Faction, City), полное описание API endpoints с параметрами, валидацией и обработкой ошибок. Документ готов к созданию API задач.
 
+---
+
+## API Tasks Status
+
+**Status:** created
+**Tasks:**
+- [API-TASK-026](../../API-SWAGGER/tasks/active/queue/task-026-character-creation-api.md): api/v1/auth/character-creation.yaml (2025-01-27)
+**Last Updated:** 2025-01-27 12:00
+
