@@ -36,16 +36,21 @@
 
 ## Статус MVP
 
-**Текущий этап:** Документация MVP
+**Текущий этап:** Документация MVP + Контент
 
 **Готово:**
 - ✅ План MVP (mvp-text-version-plan.md)
-- ✅ Создание персонажа (ui-character-creation.md)
+- ✅ Создание персонажа (ui-character-creation.md) - ready
+- ✅ Основной интерфейс (ui-main-game.md) - ready
+- ✅ API требования для MVP (api-requirements/mvp-endpoints.md)
+- ✅ Модели данных для MVP (api-requirements/mvp-data-models.md)
+- ✅ Минимальный набор данных (mvp-initial-data.md)
+- ✅ JSON данные для MVP (mvp-data-json/*.json)
+- ✅ Детальные тексты и контент (mvp-content/*)
 
 **Требует работы:**
-- ⚠️ Основной интерфейс (ui-main-game.md) - детализация
-- ⚠️ API требования для MVP
-- ⚠️ Модели данных для MVP
-- ⚠️ UI спецификация для MVP
-- ⚠️ Минимальный набор данных
+- ⚠️ UI спецификация для MVP (ui-mvp-screens.md)
+- ⚠️ Архитектура бекенда для MVP
+- ⚠️ Архитектура фронтенда для MVP
+- ⚠️ SQL скрипты для миграций БД
 
