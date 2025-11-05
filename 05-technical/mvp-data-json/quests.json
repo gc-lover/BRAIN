@@ -317,6 +317,168 @@
         "completedQuests": []
       }
     }
+    ,
+    {
+      "id": "quest-merchant-defense-002",
+      "name": "Защита торговца",
+      "description": "Рита Морено просит защитить ее от бандитов в Watson. Это первый боевой квест для новичка; можно попытаться решить конфликт переговором (COOL проверка) или вступить в бой.",
+      "type": "side",
+      "giverNpcId": "npc-rita-moreno",
+      "level": 1,
+      "objectives": [
+        {
+          "id": "obj-accept-quest",
+          "description": "Принять квест у Риты Морено",
+          "type": "npc",
+          "target": { "type": "npc", "id": "npc-rita-moreno" },
+          "quantity": 1
+        },
+        {
+          "id": "obj-defeat-bandits",
+          "description": "Победить бандитов (или убедить их уйти)",
+          "type": "kill",
+          "target": { "type": "enemy", "id": "npc-gangster-generic" },
+          "quantity": 2
+        },
+        {
+          "id": "obj-return-to-rita",
+          "description": "Вернуться к Рите Морено",
+          "type": "npc",
+          "target": { "type": "npc", "id": "npc-rita-moreno" },
+          "quantity": 1
+        }
+      ],
+      "rewards": {
+        "experience": 150,
+        "money": 400,
+        "items": ["item-medkit-basic", "item-components-basic"],
+        "reputation": { "faction": "independent", "amount": 5 }
+      },
+      "requirements": {
+        "level": 1,
+        "reputation": null,
+        "completedQuests": ["quest-delivery-001"]
+      }
+    }
+    ,
+    {
+      "id": "quest-class-solo-2010-shadow-contract",
+      "name": "Теневой контракт",
+      "description": "Фиксер Марко предлагает соло скрытно ликвидировать угрозу, связанную с корпоративными прокси-конфликтами эпохи 2008–2010. Минимум шума, максимум эффекта.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept-quest", "description": "Принять контракт у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-move-to-downtown", "description": "Переместиться в Downtown (корпоративная зона)", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-neutralize-targets", "description": "Нейтрализовать 2 цели прокси-банды", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 2 },
+        { "id": "obj-return-to-fix", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 220, "money": 350, "items": [], "reputation": null },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-class-netrunner-2011-netwatch-signal",
+      "name": "Сигнал NetWatch",
+      "description": "Во время сетевых войн 2010–2011 всплыли уязвимости старой инфраструктуры. Фиксер просит извлечь данные о сигнатурах NetWatch с корпоративного узла.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept-quest", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-reach-node", "description": "Добраться до корпоративного узла в Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-obtain-datashard", "description": "Получить даташард с сигнатурами (импровизация)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Марко с данными", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 230, "money": 320, "items": [], "reputation": null },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-class-techie-2025-repair-grid",
+      "name": "Сетевой ремонт",
+      "description": "После разрушений 2023 начался ремонт городской инфраструктуры. Анна из Santo Domingo просит помочь восстановить узел энергосети.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept-quest", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-move-to-sd", "description": "Переместиться в Santo Domingo", "type": "location", "target": { "type": "location", "id": "loc-santo-domingo-001" }, "quantity": 1 },
+        { "id": "obj-collect-parts", "description": "Собрать электронику (2 шт.)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-return-anna", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 220, "money": 280, "items": ["item-components-basic"], "reputation": null },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-faction-arasaka-legacy-2070",
+      "name": "Наследие Реликта",
+      "description": "Через корпоративного посредника вы получаете заказ на поиск следов технологического наследия проектов Arasaka времён 2070-х.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-scout-corporate", "description": "Осмотреть корпоративные башни Westbrook", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-recover-tech", "description": "Получить технологические данные (электроника)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return-chen", "description": "Вернуться к Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 380, "money": 600, "items": [], "reputation": { "faction": "independent", "amount": 5 } },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-faction-militech-contract-2065",
+      "name": "Контракт Militech",
+      "description": "Через корп-канал приходит запрос: проверить склад с вооружением, связанный с проектами Militech 2060-х.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять контракт у Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-move-watson", "description": "Переместиться в Watson (склад)", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-clear-hostiles", "description": "Зачистить враждебных (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 420, "money": 700, "items": [], "reputation": null },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-faction-valentinos-honor-2000s",
+      "name": "Честь улиц",
+      "description": "Хосе ‘Тигр’ поручает задание, отражающее кодекс Valentinos: защитить семью в конфликте с конкурентами.",
+      "type": "side",
+      "giverNpcId": "npc-jose-tiger",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept", "description": "Представиться Хосе и принять задание", "type": "npc", "target": { "type": "npc", "id": "npc-jose-tiger" }, "quantity": 1 },
+        { "id": "obj-move-heywood", "description": "Переместиться в Heywood", "type": "location", "target": { "type": "location", "id": "loc-heywood-001" }, "quantity": 1 },
+        { "id": "obj-protect", "description": "Отразить нападение (2 противника)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 2 },
+        { "id": "obj-return-jose", "description": "Вернуться к Хосе", "type": "npc", "target": { "type": "npc", "id": "npc-jose-tiger" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 260, "money": 320, "items": [], "reputation": { "faction": "valentinos", "amount": 8 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-faction-maelstrom-salvage-2045",
+      "name": "Железный трофей",
+      "description": "После ‘Времени Красного’ в руинах полно хабара. Фиксер просит добыть тех-лом, который интересует Maelstrom.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-scavenge-watson", "description": "Собрать компоненты в Watson", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 3 },
+        { "id": "obj-clear-ambush", "description": "Отразить засаду мародёров", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 2 },
+        { "id": "obj-return-fix", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 330, "money": 450, "items": [], "reputation": null },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": [] }
+    }
   ]
 }
 

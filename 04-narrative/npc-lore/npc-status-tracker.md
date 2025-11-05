@@ -1,10 +1,10 @@
 # Трекер статусов NPC
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 17:30  
+**api-readiness-check-date:** 2025-11-05 18:05  
 **api-readiness-notes:** Служебный файл, трекер статусов NPC, не предназначен для создания API
 
-**Последнее обновление:** 2025-11-05 17:30
+**Последнее обновление:** 2025-11-05 18:05
 
 ---
 
@@ -496,6 +496,136 @@
 
 ---
 
+### Созданные NPC
+
+#### 27. Saburo Arasaka
+**Файл:** `important/saburo-arasaka.md`  
+**Статус:** ✅ Создан  
+**Роль:** Глава Arasaka  
+**Фракция:** Arasaka  
+**Приоритет:** high
+
+#### 28. Hanako Arasaka
+**Файл:** `important/hanako-arasaka.md`  
+**Статус:** ✅ Создан  
+**Роль:** Наследница Arasaka  
+**Фракция:** Arasaka  
+**Приоритет:** high
+
+#### 29. Yorinobu Arasaka
+**Файл:** `important/yorinobu-arasaka.md`  
+**Статус:** ✅ Создан  
+**Роль:** Наследник/реформатор  
+**Фракция:** Arasaka  
+**Приоритет:** high
+
+#### 30. Dakota Smith
+**Файл:** `important/dakota-smith.md`  
+**Статус:** ✅ Создан  
+**Роль:** Фиксер (Badlands)  
+**Фракция:** Номады/Независимая  
+**Приоритет:** high
+
+#### 31. El Capitan
+**Файл:** `important/el-capitan.md`  
+**Статус:** ✅ Создан  
+**Роль:** Фиксер (Santo Domingo)  
+**Фракция:** Независимый  
+**Приоритет:** high
+
+#### 32. Nix
+**Файл:** `important/nix.md`  
+**Статус:** ✅ Создан  
+**Роль:** Нетраннер/брокер софта  
+**Фракция:** Независимый  
+**Приоритет:** medium
+
+#### 33. Sasquatch (Animals)
+**Файл:** `important/sasquatch.md`  
+**Статус:** ✅ Создан  
+**Роль:** Лидер/чемпион  
+**Фракция:** Animals  
+**Приоритет:** high
+
+#### 34. Hiromi Sato (Tyger Claws)
+**Файл:** `important/hiromi-sato.md`  
+**Статус:** ✅ Создан  
+**Роль:** Влиятельный представитель  
+**Фракция:** Tyger Claws  
+**Приоритет:** medium
+
+#### 35. Susie Q (The Mox)
+**Файл:** `important/susie-q.md`  
+**Статус:** ✅ Создан  
+**Роль:** Лидер The Mox  
+**Фракция:** The Mox  
+**Приоритет:** medium
+
+#### 36. Faraday
+**Файл:** `important/faraday.md`  
+**Статус:** ✅ Создан  
+**Роль:** Фиксер (Edgerunners)  
+**Фракция:** Независимый  
+**Приоритет:** medium
+
+#### 37. Maine
+**Файл:** `important/maine.md`  
+**Статус:** ✅ Создан  
+**Роль:** Лидер команды  
+**Фракция:** Независимый  
+**Приоритет:** medium
+
+#### 38. Lucy
+**Файл:** `important/lucy.md`  
+**Статус:** ✅ Создан  
+**Роль:** Нетраннер  
+**Фракция:** Независимый  
+**Приоритет:** high
+
+#### 39. David Martinez
+**Файл:** `important/david-martinez.md`  
+**Статус:** ✅ Создан  
+**Роль:** Наёмник  
+**Фракция:** Независимый  
+**Приоритет:** high
+
+#### 40. Rebecca
+**Файл:** `important/rebecca.md`  
+**Статус:** ✅ Создан  
+**Роль:** Стрелок  
+**Фракция:** Независимый  
+**Приоритет:** medium
+
+#### 41. Kiwi
+**Файл:** `important/kiwi.md`  
+**Статус:** ✅ Создан  
+**Роль:** Нетраннер  
+**Фракция:** Независимый  
+**Приоритет:** medium
+
+#### 42. Kurt Hansen
+**Файл:** `important/kurt-hansen.md`  
+**Статус:** ✅ Создан  
+**Роль:** Лидер сил Dogtown  
+**Фракция:** Частная армия  
+**Приоритет:** medium
+
+#### 43. Rosalind Myers (NUSA)
+**Файл:** `important/rosalind-myers.md`  
+**Статус:** ✅ Создан  
+**Роль:** Президент НСША  
+**Фракция:** NUSA  
+**Приоритет:** high
+
+#### 44. Solomon Reed (NUSA)
+**Файл:** `important/solomon-reed.md`  
+**Статус:** ✅ Создан  
+**Роль:** Агент NUSA  
+**Фракция:** NUSA  
+**Приоритет:** high
+
+---
+
 ## Второстепенные NPC (common/)
 
 ### Торговцы (traders/)
@@ -562,24 +692,68 @@
 
 ---
 
+#### 4. Скупщик техники
+**Файл:** `common/traders/flea-market-tech-scrapper.md`  
+**Статус:** ✅ Создан  
+**Тип:** Торговец  
+**Приоритет:** medium
+
+#### 5. Беженец (2040-е)
+**Файл:** `common/citizens/refugee-2040s-santo-domingo.md`  
+**Статус:** ✅ Создан  
+**Тип:** Гражданский  
+**Приоритет:** low
+
+#### 6. Корпоративный клерк (2070-е)
+**Файл:** `common/citizens/corporate-office-worker-2070s.md`  
+**Статус:** ✅ Создан  
+**Тип:** Гражданский  
+**Приоритет:** low
+
+#### 7. Бугай Animals
+**Файл:** `common/enemies/animals-bruiser.md`  
+**Статус:** ✅ Создан  
+**Тип:** Враг  
+**Приоритет:** medium
+
+#### 8. Боевик Tyger Claws
+**Файл:** `common/enemies/tyger-claws-enforcer.md`  
+**Статус:** ✅ Создан  
+**Тип:** Враг  
+**Приоритет:** medium
+
+#### 9. Патрульный офицер NCPD
+**Файл:** `common/service/ncpd-patrol-officer.md`  
+**Статус:** ✅ Создан  
+**Тип:** Служебный  
+**Приоритет:** medium
+
+#### 10. Парамедик Trauma Team
+**Файл:** `common/service/trauma-team-paramedic.md`  
+**Статус:** ✅ Создан  
+**Тип:** Служебный  
+**Приоритет:** medium
+
+---
+
 ## Статистика
 
 ### Всего NPC
 
 **Важные NPC:**
-- ✅ Создано: 26
+- ✅ Создано: 44
 - ⏳ Запланировано: 0
-- **Всего:** 26
+- **Всего:** 44
 
 **Второстепенные NPC:**
-- ✅ Создано: 3
+- ✅ Создано: 10
 - ⏳ Запланировано: 0
-- **Всего:** 3
+- **Всего:** 10
 
 **Общий итог:**
-- ✅ Создано: 29
+- ✅ Создано: 54
 - ⏳ Запланировано: 0
-- **Всего:** 29
+- **Всего:** 54
 
 ---
 
@@ -600,6 +774,23 @@
 11. ✅ Сара Миллер (NCPD)
 12. ✅ Такемура
 13. ✅ Rogue
+14. ✅ Dakota Smith
+15. ✅ El Capitan
+16. ✅ Saburo Arasaka
+17. ✅ Hanako Arasaka
+18. ✅ Yorinobu Arasaka
+19. ✅ Hiromi Sato (Tyger Claws)
+20. ✅ Susie Q (The Mox)
+21. ✅ Faraday
+22. ✅ Maine
+23. ✅ Lucy
+24. ✅ David Martinez
+25. ✅ Rebecca
+26. ✅ Kiwi
+27. ✅ Kurt Hansen
+28. ✅ Rosalind Myers (NUSA)
+29. ✅ Solomon Reed (NUSA)
+30. ✅ Sasquatch (Animals)
 
 ### Средний приоритет (medium)
 
@@ -610,10 +801,22 @@
 5. ✅ Misty
 6. ✅ Джейк Арчер
 7. ✅ Рита Морено
+8. ✅ Nix
+9. ✅ Brigitte
+10. ✅ T-Bug
+11. ✅ Fingers (Robert)
+12. ✅ Evelyn Parker
 
 ### Низкий приоритет (low)
 
 1. ✅ Анна Петрова
+2. ✅ Скупщик техники
+3. ✅ Беженец (2040-е)
+4. ✅ Корпоративный клерк (2070-е)
+5. ✅ Бугай Animals
+6. ✅ Боевик Tyger Claws
+7. ✅ Патрульный офицер NCPD
+8. ✅ Парамедик Trauma Team
 
 ---
 
@@ -651,4 +854,5 @@
 - v1.1.0 (2025-11-05 17:00) - Обновление статусов: добавлено 11 новых созданных NPC (Rogue, Hiroshi Tanaka, James "Iron" Reed, Sara Miller, Royce, Takemura, Kerry Eurodyne, Misty, Jake Archer, Rita Moreno, Anna Petrova)
 - v1.2.0 (2025-11-05 17:15) - Завершение создания всех запланированных NPC: добавлено 3 новых созданных NPC (River Ward, Alt Cunningham, Dexter DeShawn). Все 21 NPC созданы.
 - v1.3.0 (2025-11-05 17:30) - Добавлено 8 важных NPC (Wakako Okada, Padre Ibarra, Meredith Stout, Placide, Brigitte, T-Bug, Fingers, Evelyn Parker). Обновлена статистика.
+- v1.4.0 (2025-11-05 18:05) — Добавлено: 18 важных и 7 common NPC; создан `era-index.md`; обновлена статистика.
 

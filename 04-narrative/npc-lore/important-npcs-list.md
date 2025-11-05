@@ -3,7 +3,7 @@
 **Статус:** draft  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-05  
-**Последнее обновление:** 2025-11-05  
+**Последнее обновление:** 2025-11-05 18:05  
 **Приоритет:** высокий
 
 **api-readiness:** not-applicable  
@@ -125,6 +125,9 @@
 - Wakako Okada (Westbrook) — `important/wakako-okada.md`
 - Sebastian "Padre" Ibarra (Heywood) — `important/padre-ibarra.md`
 - Rogue — `important/rogue.md`
+- Dakota Smith (Badlands) — `important/dakota-smith.md`
+- El Capitan (Santo Domingo) — `important/el-capitan.md`
+- Faraday (Edgerunners) — `important/faraday.md`
 
 **Функция:**
 - Дают задания
@@ -138,13 +141,18 @@
 **Описание:** Лидеры корпораций, банд и организаций.
 
 **Примеры:**
+- Saburo Arasaka — `important/saburo-arasaka.md`
+- Hanako Arasaka — `important/hanako-arasaka.md`
+- Yorinobu Arasaka — `important/yorinobu-arasaka.md`
 - Хироши Танака (Arasaka)
 - Джеймс "Железный" Рид (Militech)
 - Хосе "Тигр" Рамирес (Valentinos)
 - Ройс (Maelstrom)
 - Brigitte (Voodoo Boys) — `important/brigitte.md`
 - Placide (Voodoo Boys) — `important/placide.md`
-- Сара Миллер (NCPD)
+- Susie Q (The Mox) — `important/susie-q.md`
+- Sasquatch (Animals) — `important/sasquatch.md`
+- Kurt Hansen (Dogtown) — `important/kurt-hansen.md`
 
 **Функция:**
 - Дают задания от фракций
@@ -193,6 +201,28 @@
 - Alt Cunningham — `important/alt-cunningham.md`
 - Judy Alvarez — `important/judy-alvarez.md`
 - Evelyn Parker — `important/evelyn-parker.md`
+- Nix — `important/nix.md`
+- Lucy — `important/lucy.md`
+- Kiwi — `important/kiwi.md`
+
+---
+
+### 3.6. Edgerunners
+
+- David Martinez — `important/david-martinez.md`
+- Maine — `important/maine.md`
+- Rebecca — `important/rebecca.md`
+- Lucy — `important/lucy.md`
+- Kiwi — `important/kiwi.md`
+- Faraday — `important/faraday.md`
+
+---
+
+### 3.7. NUSA / Phantom Liberty
+
+- Rosalind Myers — `important/rosalind-myers.md`
+- Solomon Reed — `important/solomon-reed.md`
+- Kurt Hansen — `important/kurt-hansen.md`
 
 ---
 

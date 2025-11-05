@@ -379,7 +379,7 @@ documents:
   - path: ".BRAIN/02-gameplay/progression/progression-skills.md"
     status: "in-review"
     version: "1.1.0"
-    checked: "2025-11-05 17:14"
+    checked: "2025-11-05 18:08"
     checker: "AI Agent"
     notes: "Добавлены по 5 навыков на категорию, классовые модификаторы, требования к продвинутым навыкам, ранги и прогресс. Требуется баланс коэффициентов и подклассовые различия."
     issues:
@@ -395,6 +395,28 @@ documents:
     notes: "Определены стартовые бонусы по классам, рост/капы и базовые требования к предметам/имплантам. Требуется сверка с балансом классов и предметов."
     issues:
       - "Сверить требования с equipment-matrix.md и имплантами"
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/progression/progression-skills-classes.md"
+    status: "in-review"
+    version: "1.0.0"
+    checked: "2025-11-05 18:08"
+    checker: "AI Agent"
+    notes: "Классовые и подклассовые модификаторы, примеры эксклюзивных навыков. Требуется баланс и полная проработка по всем подклассам."
+    issues:
+      - "Баланс модификаторов подклассов"
+      - "Уточнить список эксклюзивов по классам"
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/progression/progression-skills-mapping.md"
+    status: "in-review"
+    version: "1.0.0"
+    checked: "2025-11-05 18:08"
+    checker: "AI Agent"
+    notes: "Таблица соответствий навыков к предметам и имплантам с опорой на equipment-matrix и combat-implants-types."
+    issues:
+      - "Расширить покрытие маппинга по всем навыкам"
+      - "Выверить теги и поля с equipment-matrix.md"
     api_target: null
 
   # 02-gameplay/combat/ - Боевая система

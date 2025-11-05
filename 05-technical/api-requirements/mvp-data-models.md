@@ -1,14 +1,14 @@
 # Модели данных для MVP
 
 **Статус:** draft  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-04  
 **Последнее обновление:** 2025-11-04  
 **Приоритет:** критический
 
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-04 16:45  
-**api-readiness-notes:** Документ определяет модели данных для MVP, требуется детализация для создания API спецификации
+**api-readiness:** in-review  
+**api-readiness-check-date:** 2025-11-05 18:08  
+**api-readiness-notes:** Добавлены модели навыков (Skill/CharacterSkill) и требования/эффекты. Требуется сверка с progression-*.md и equipment/implants.
 
 ---
 
@@ -795,6 +795,95 @@
 
 ---
 
+### 2.5. Skill (Навык)
+
+**Описание:** Справочник навыков (активные/пассивные/поддерживающие)
+
+**Структура:**
+```json
+{
+  "id": "string",
+  "name": "string",
+  "category": "string",
+  "type": "string",
+  "base": {
+    "value": "number",
+    "resource": "string",
+    "cooldownSec": "number"
+  },
+  "attributeCoefficients": {
+    "STR": "number",
+    "REF": "number",
+    "INT": "number",
+    "TECH": "number",
+    "COOL": "number",
+    "AGI": "number",
+    "WILL": "number",
+    "EMP": "number"
+  },
+  "requirements": {
+    "level": "integer|null",
+    "class": "string|null",
+    "subclass": "string|null",
+    "attributes": {"STR":"integer|null","REF":"integer|null","INT":"integer|null","TECH":"integer|null","COOL":"integer|null","AGI":"integer|null","WILL":"integer|null","EMP":"integer|null"},
+    "items": [{"type":"string","subtype":"string"}],
+    "implants": [{"slotType":"string","tier":"string|null"}]
+  },
+  "links": {
+    "items": ["uuid"],
+    "implants": ["uuid"],
+    "synergyTags": ["string"]
+  },
+  "rankScaling": {
+    "ranks": [
+      {"rank":1,"baseBonus":0.0,"costReduction":0.0,"cooldownReduction":0.0},
+      {"rank":2,"baseBonus":0.05,"costReduction":0.05,"cooldownReduction":0.05},
+      {"rank":3,"baseBonus":0.10,"costReduction":0.10,"cooldownReduction":0.10},
+      {"rank":4,"baseBonus":0.15,"costReduction":0.15,"cooldownReduction":0.15},
+      {"rank":5,"baseBonus":0.20,"costReduction":0.20,"cooldownReduction":0.20}
+    ]
+  },
+  "exclusiveTo": {"class":"string|null","subclass":"string|null"},
+  "description": "string"
+}
+```
+
+**Поля:**
+- `type` (enum): "active"|"passive"|"support"
+- `category` (enum): gunplay|melee|mobility|stealth|hacking|tech|social
+- `base.value` — базовый эффект (проценты/единицы) для формул из `progression-skills.md`
+- `attributeCoefficients` — коэффициенты атрибутов (см. `progression-attributes.md`)
+- `requirements.items/implants` — соответствуют типам из `equipment-matrix.md` и `combat-implants-types.md`
+
+---
+
+### 2.6. CharacterSkill (Навык персонажа)
+
+**Описание:** Прогресс и ранги навыков персонажа
+
+**Структура:**
+```json
+{
+  "id": "uuid",
+  "characterId": "uuid",
+  "skillId": "string",
+  "rank": "integer",
+  "experience": "integer",
+  "lastUsedAt": "datetime|null"
+}
+```
+
+**Поля:**
+- `rank` (1-5)
+- `experience` — опыт навыка (используется для апа ранга)
+- `lastUsedAt` — анти-абуз/лимиты (см. дневной мягкий лимит)
+
+**Связи:**
+- Многие к одному с Character
+- Многие к одному со Skill
+
+---
+
 ## 3. Связи между моделями
 
 ### 3.1. Диаграмма связей
@@ -825,7 +914,10 @@ Quest (1) ──< (N) QuestProgress
 
 ### 4.1. Критические TODO
 
-**TODO:** Детализация системы навыков (Skills) - требуется для полноценной системы прокачки.
+**TODO:** Детализация системы навыков (Skills):
+- [x] Базовые модели Skill/CharacterSkill (в этом документе)
+- [ ] Наполнение справочника навыков (по категориям)
+- [ ] Связи с предметами/имплантами (ID, теги)
 
 **TODO:** Детализация системы перков (Perks) - требуется для разнообразия персонажей.
 
