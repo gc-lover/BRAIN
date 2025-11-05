@@ -23,6 +23,12 @@
 - `game-tutorial-flow.md` - Туториал и первые шаги игрока ✅ ready
 - `game-first-quest-intro.md` - Первый квест и введение в игру ✅ ready
 
+### Unique Starts (Уникальные старты)
+- `game-start-unique-starts.md` - Общая структура уникальных стартов ✅ ready
+- `game-start-by-origin.md` - Старты по происхождениям (Street Kid, Corpo, Nomad) ✅ ready
+- `game-start-by-faction.md` - Старты по фракциям (Arasaka, Militech, Valentinos, Maelstrom, NCPD) ✅ ready
+- `game-start-by-class.md` - Старты по классам (Solo, Netrunner, Techie) ✅ ready
+
 ### API Requirements (Требования к API)
 - `api-requirements/mvp-endpoints.md` - Endpoints для MVP ✅ ready
 - `api-requirements/mvp-data-models.md` - Модели данных для MVP ✅ ready
