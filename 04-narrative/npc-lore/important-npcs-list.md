@@ -3,7 +3,7 @@
 **Статус:** draft  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-05  
-**Последнее обновление:** 2025-11-05 18:05  
+**Последнее обновление:** 2025-11-05 18:13  
 **Приоритет:** высокий
 
 **api-readiness:** not-applicable  
@@ -127,6 +127,7 @@
 - Rogue — `important/rogue.md`
 - Dakota Smith (Badlands) — `important/dakota-smith.md`
 - El Capitan (Santo Domingo) — `important/el-capitan.md`
+- Mr. Hands (Pacifica) — `important/mr-hands.md`
 - Faraday (Edgerunners) — `important/faraday.md`
 
 **Функция:**
@@ -144,6 +145,9 @@
 - Saburo Arasaka — `important/saburo-arasaka.md`
 - Hanako Arasaka — `important/hanako-arasaka.md`
 - Yorinobu Arasaka — `important/yorinobu-arasaka.md`
+- Anders Hellman — `important/anders-hellman.md`
+- Arthur Jenkins — `important/arthur-jenkins.md`
+- Abernathy — `important/abernathy.md`
 - Хироши Танака (Arasaka)
 - Джеймс "Железный" Рид (Militech)
 - Хосе "Тигр" Рамирес (Valentinos)
@@ -204,6 +208,8 @@
 - Nix — `important/nix.md`
 - Lucy — `important/lucy.md`
 - Kiwi — `important/kiwi.md`
+- Song So Mi (Songbird) — `important/song-so-mi-songbird.md`
+- Mr. Blue Eyes — `important/mr-blue-eyes.md`
 
 ---
 
@@ -223,6 +229,7 @@
 - Rosalind Myers — `important/rosalind-myers.md`
 - Solomon Reed — `important/solomon-reed.md`
 - Kurt Hansen — `important/kurt-hansen.md`
+- NetWatch Agent Vogel — `important/netwatch-agent-vogel.md`
 
 ---
 

@@ -428,6 +428,70 @@ documents:
     issues: []
     api_target: null
 
+  # 04-narrative/quests/side/ - Побочные квесты
+  - path: ".BRAIN/04-narrative/quests/side/README.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Индекс side-квестов и шаблон формата."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2020–2030."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2030-2045.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2030–2045."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2045-2060.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2045–2060."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2060-2077.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2060–2077."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2078-2090.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2078–2090."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/side/side-quests-2090-2093.md"
+    status: "not-applicable"
+    version: "0.1.0"
+    checked: "2025-11-05 18:24"
+    checker: "AI Agent"
+    notes: "Пакет side-квестов периода 2090–2093 (эпилог)."
+    issues: []
+    api_target: null
+
   # 02-gameplay/combat/ - Боевая система
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     status: "ready"

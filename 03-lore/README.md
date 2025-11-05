@@ -24,11 +24,21 @@
 
 ### Timeline Author (Авторская хронология)
 - `timeline-author/` - Авторские события NECPGAME (2020-2090)
-  - `2020-2030-author-events.md` - Ранний период: сети, импланты, DAO-районы
-  - `2030-2045-author-events.md` - Консолидация, память и права, приватные войны
-  - `2045-2060-author-events.md` - Time of the Red+: сети, ИИ-культы, коридоры
-  - `2060-2077-author-events.md` - Неокорпоративный порядок, предвестники раскрытия
-  - `2078-2090-author-events.md` - Параметрики мира, мета-суды, перезапуск
+  - Периоды:
+    - `2020-2030-author-events.md` - Ранний период: сети, импланты, DAO-районы
+    - `2030-2045-author-events.md` - Консолидация, память и права, приватные войны
+    - `2045-2060-author-events.md` - Time of the Red+: сети, ИИ-культы, коридоры
+    - `2060-2077-author-events.md` - Неокорпоративный порядок, предвестники раскрытия
+    - `2078-2090-author-events.md` - Параметрики мира, мета-суды, перезапуск
+  - Регионы:
+    - `timeline-author/regions/europe-2020-2093.md` - Европа
+    - `timeline-author/regions/asia-2020-2093.md` - Азия
+    - `timeline-author/regions/cis-2020-2093.md` - СНГ
+    - `timeline-author/regions/america-2020-2093.md` - Америка
+  - Фракции:
+    - `timeline-author/factions/corps-2020-2093.md` - Корпорации
+    - `timeline-author/factions/gangs-2020-2093.md` - Банды
+    - `timeline-author/factions/nomads-2020-2093.md` - Номады
 
 ### Factions (Фракции)
 - `factions-overview.md` - Обзор фракций (первый брейншторм)

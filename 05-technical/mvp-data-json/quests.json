@@ -362,6 +362,127 @@
     }
     ,
     {
+      "id": "quest-main-2020-echoes-of-war",
+      "name": "Эхо войны (2020)",
+      "description": "Фиксер Марко просит найти следы прокси-конфликтов начала 2010-х: собрать тех-свидетельства корпоративных диверсий в Downtown.",
+      "type": "main",
+      "giverNpcId": "npc-marco-fix",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-collect", "description": "Собрать тех-свидетельство (электроника)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 240, "money": 300, "items": [], "reputation": null },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] }
+    }
+    ,
+    {
+      "id": "quest-main-2023-shattered-city",
+      "name": "Разбитый город (2023)",
+      "description": "Анна просит помочь в восстановлении: зачистить опасный участок и добыть запчасти для энергосети в Watson.",
+      "type": "main",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Watson", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-clear", "description": "Нейтрализовать угрозы (2)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 2 },
+        { "id": "obj-collect", "description": "Собрать электронику (2)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 320, "money": 360, "items": ["item-components-basic"], "reputation": null },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-main-2020-echoes-of-war"] }
+    }
+    ,
+    {
+      "id": "quest-main-2025-blackwall-line",
+      "name": "Линия Blackwall (2025)",
+      "description": "Марко получает заказ на сбор телеметрии для локальных протоколов безопасности Blackwall. Нужно аккуратно действовать в корпоративной зоне.",
+      "type": "main",
+      "giverNpcId": "npc-marco-fix",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-collect", "description": "Получить телеметрию (электроника)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 360, "money": 420, "items": [], "reputation": null },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": ["quest-main-2023-shattered-city"] }
+    }
+    ,
+    {
+      "id": "quest-main-2035-free-city-charter",
+      "name": "Хартия Свободного города (2035)",
+      "description": "Офицер Миллер просит содействия: обеспечить порядок при переговорах по городскому уставу в эпоху восстановления.",
+      "type": "main",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары Миллер", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Westbrook", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-consult", "description": "Проконсультироваться с Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Саре Миллер", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 420, "money": 480, "items": [], "reputation": { "faction": "ncpd", "amount": 8 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-main-2025-blackwall-line"] }
+    }
+    ,
+    {
+      "id": "quest-main-2069-border-of-power",
+      "name": "Граница власти (2069)",
+      "description": "Элизабет Чен вовлекает вас в корпоративный спор вокруг статуса Свободного города. Нужны доказательства и сила.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Westbrook", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-clear", "description": "Зачистить враждебных агентов (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 560, "money": 700, "items": [], "reputation": null },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-main-2035-free-city-charter"] }
+    }
+    ,
+    {
+      "id": "quest-main-2077-relics-shadow",
+      "name": "Тень ‘Реликта’ (2077)",
+      "description": "Виктор Вектор просит проверить слухи о всплывших прототипах интерфейсов, связанных с легендарным проектом.",
+      "type": "main",
+      "giverNpcId": "npc-victor-vector",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять просьбу Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-collect", "description": "Получить тех-данные (электроника)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 620, "money": 780, "items": [], "reputation": null },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": ["quest-main-2069-border-of-power"] }
+    }
+    ,
+    {
+      "id": "quest-main-2093-net-shift",
+      "name": "Сдвиг Сети (2093)",
+      "description": "Элизабет сообщает о ‘серой стене’ — новом феномене на границе Blackwall. Нужно исследовать и обеспечить безопасность.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-move", "description": "Переместиться в Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-clear", "description": "Зачистить аномальные угрозы (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-collect", "description": "Получить диагностические логи (электроника)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет Чен", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 900, "money": 1200, "items": [], "reputation": null },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-main-2077-relics-shadow"] }
+    }
+    ,
+    {
       "id": "quest-class-solo-2010-shadow-contract",
       "name": "Теневой контракт",
       "description": "Фиксер Марко предлагает соло скрытно ликвидировать угрозу, связанную с корпоративными прокси-конфликтами эпохи 2008–2010. Минимум шума, максимум эффекта.",

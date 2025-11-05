@@ -1,7 +1,7 @@
 # Архитектура директорий .BRAIN
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 10:49  
+**api-readiness-check-date:** 2025-11-05 18:13  
 **api-readiness-notes:** Служебный файл, описание архитектуры репозитория, не предназначен для создания API
 
 ## Предлагаемая структура
@@ -163,6 +163,7 @@
 │   ├── npc-lore/                       # Лор NPC
 │   │   ├── README.md                  # Обзор лора NPC
 │   │   ├── NPC-TEMPLATE.md            # Шаблон для создания NPC
+│   │   ├── era-index.md               # Индекс NPC по эпохам (ссылки на таймлайн)
 │   │   ├── important-npcs-list.md     # Список важных NPC
 │   │   ├── important/                  # Важные NPC
 │   │   │   ├── marco-fix-sanchez.md    # Марко "Фикс" Санчес
