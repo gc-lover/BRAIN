@@ -52,3 +52,7 @@
 - 2060–2077: `../../04-narrative/scenarios/main-story/2060-2077-main-story.md`
 - 2077: `../../04-narrative/scenarios/main-story/2077-main-story.md`
 - 2078–2093: `../../04-narrative/scenarios/main-story/2078-2093-main-story.md`
+
+## Ветки и Origins
+- Ветки по классам (эпохи): `../../04-narrative/scenarios/main-story/classes/README.md`
+- Origins: `../../04-narrative/scenarios/origins/README.md`

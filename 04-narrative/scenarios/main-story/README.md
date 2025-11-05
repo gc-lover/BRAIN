@@ -22,3 +22,8 @@
 - Авторские эпохи: `03-lore/timeline-author/*`
 - D&D-проверки: `04-narrative/quest-dnd-checks.md`, `02-gameplay/combat/combat-dnd-core.md`
 - Мировые события: `02-gameplay/world/events/*`
+
+## Доп. разделы
+- Ветки по классам: `./classes/README.md`
+- Origins (стартовые истории): `../origins/README.md`
+- Подробные D&D‑узлы по эпохам: `./dd-nodes/`
