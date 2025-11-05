@@ -185,11 +185,6 @@
 │       ├── event/                       # Диалоги событий
 │       ├── branching/                   # Ветвление диалогов
 │       └── romance/                     # Романтические диалоги
-│   │   ├── choice-consequences.md      # Последствия выбора
-│   │   └── story-branches.md          # Ветви сюжета
-│   ├── dialogues/                     # Диалоги
-│   │   ├── README.md                  # Обзор диалогов
-│   │   ├── dialogue-system.md          # Система диалогов
 │   │   └── dialogue-examples.md        # Примеры диалогов
 │   └── romances/                      # Романтические линии
 │       ├── README.md                  # Обзор романтических линий
