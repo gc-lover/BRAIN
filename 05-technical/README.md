@@ -15,6 +15,7 @@
 ### UI/UX (Интерфейсы)
 - `ui-registration.md` - Экран регистрации ✅ ready
 - `ui-character-creation.md` - Начальный интерфейс: выбор и создание персонажа ✅ ready
+- `ui-game-start.md` - Начало игры и боевая система D&D формата ✅ ready
 - `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ✅ ready
 
 ### API Requirements (Требования к API)
