@@ -1,9 +1,14 @@
 # Скрипт автоматического коммита для агентов
 # Использование: .\autocommit.ps1 [сообщение коммита]
+# Кодировка: UTF-8
 
 param(
-    [string]$CommitMessage = "Автоматический коммит: обновления от агента"
+    [string]$CommitMessage = ""
 )
+
+# Устанавливаем кодировку UTF-8 для PowerShell
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 # Получаем текущую директорию репозитория
 $RepoRoot = git rev-parse --show-toplevel 2>$null
@@ -26,21 +31,11 @@ Write-Host "Добавление изменений..." -ForegroundColor Cyan
 git add -A
 
 # Генерируем сообщение коммита, если не указано явно
-if ($CommitMessage -eq "Автоматический коммит: обновления от агента") {
+if ([string]::IsNullOrWhiteSpace($CommitMessage)) {
     # Пытаемся сгенерировать осмысленное сообщение на основе измененных файлов
     $ChangedFiles = git diff --cached --name-only
     
     if ($ChangedFiles) {
-        $FileTypes = @()
-        $ChangedFiles | ForEach-Object {
-            $ext = [System.IO.Path]::GetExtension($_)
-            if ($ext) { $FileTypes += $ext }
-        }
-        
-        $FileTypes = $FileTypes | Group-Object | Sort-Object Count -Descending | Select-Object -First 3
-        
-        $Types = ($FileTypes | ForEach-Object { $_.Name }) -join ", "
-        
         # Определяем тип изменений
         $Action = "Обновление"
         if ($ChangedFiles | Where-Object { $_ -match "\.md$" }) {
@@ -55,12 +50,14 @@ if ($CommitMessage -eq "Автоматический коммит: обновл�
         
         $FileCount = ($ChangedFiles | Measure-Object).Count
         $CommitMessage = "${Action}: изменения в файлах (${FileCount} файлов)"
+    } else {
+        $CommitMessage = "Автоматический коммит: обновления от агента"
     }
 }
 
-# Делаем коммит
+# Делаем коммит с правильным экранированием сообщения
 Write-Host "Создание коммита: $CommitMessage" -ForegroundColor Cyan
-$CommitResult = git commit -m $CommitMessage 2>&1
+$CommitResult = git commit -m "$CommitMessage" 2>&1
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Ошибка при создании коммита: $CommitResult" -ForegroundColor Red
@@ -69,9 +66,16 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Коммит создан успешно" -ForegroundColor Green
 
+# Определяем текущую ветку
+$CurrentBranch = git rev-parse --abbrev-ref HEAD 2>$null
+if (-not $CurrentBranch) {
+    Write-Host "Предупреждение: Не удалось определить текущую ветку, используем 'main'" -ForegroundColor Yellow
+    $CurrentBranch = "main"
+}
+
 # Отправляем изменения
-Write-Host "Отправка изменений в GitHub..." -ForegroundColor Cyan
-$PushResult = git push origin main 2>&1
+Write-Host "Отправка изменений в GitHub (ветка: $CurrentBranch)..." -ForegroundColor Cyan
+$PushResult = git push origin "$CurrentBranch" 2>&1
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Предупреждение: Не удалось отправить изменения: $PushResult" -ForegroundColor Yellow
@@ -81,4 +85,3 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 exit 0
-
