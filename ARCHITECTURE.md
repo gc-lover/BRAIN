@@ -162,9 +162,17 @@
 │   │   └── mythology/                  # Мифология и легенды
 │   ├── npc-lore/                       # Лор NPC
 │   │   ├── README.md                  # Обзор лора NPC
+│   │   ├── NPC-TEMPLATE.md            # Шаблон для создания NPC
+│   │   ├── important-npcs-list.md     # Список важных NPC
 │   │   ├── important/                  # Важные NPC
-│   │   ├── common/                     # Обычные NPC
-│   │   └── enemies/                     # Враги
+│   │   │   ├── marco-fix-sanchez.md    # Марко "Фикс" Санчес
+│   │   │   ├── jose-tiger-ramirez.md   # Хосе "Тигр" Рамирес
+│   │   │   └── [другие важные NPC]     # Другие важные NPC (отдельные файлы)
+│   │   └── common/                     # Второстепенные NPC
+│   │       ├── traders/                # Торговцы
+│   │       ├── citizens/               # Обычные горожане
+│   │       ├── enemies/                # Враги и бандиты
+│   │       └── service/                 # Служебные NPC
 │   ├── events-lore/                    # Лор событий
 │   │   ├── README.md                  # Обзор лора событий
 │   │   ├── world/                      # Мировые события
