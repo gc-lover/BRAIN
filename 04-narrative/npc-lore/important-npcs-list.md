@@ -122,7 +122,9 @@
 
 **Примеры:**
 - Марко "Фикс" Санчес
-- Другие фиксеры (будут добавлены)
+- Wakako Okada (Westbrook) — `important/wakako-okada.md`
+- Sebastian "Padre" Ibarra (Heywood) — `important/padre-ibarra.md`
+- Rogue — `important/rogue.md`
 
 **Функция:**
 - Дают задания
@@ -140,6 +142,8 @@
 - Джеймс "Железный" Рид (Militech)
 - Хосе "Тигр" Рамирес (Valentinos)
 - Ройс (Maelstrom)
+- Brigitte (Voodoo Boys) — `important/brigitte.md`
+- Placide (Voodoo Boys) — `important/placide.md`
 - Сара Миллер (NCPD)
 
 **Функция:**
@@ -156,7 +160,7 @@
 **Примеры:**
 - Джейк Арчер (Downtown)
 - Рита Морено (Watson)
-- Другие торговцы (будут добавлены)
+- Fingers (Robert) — риппердок «серой зоны» — `important/fingers-robert.md`
 
 **Функция:**
 - Продают товары
@@ -171,12 +175,24 @@
 
 **Примеры:**
 - Виктор Вектор (Downtown)
-- Другие риппердоки (будут добавлены)
+- Fingers (Robert) — `important/fingers-robert.md`
 
 **Функция:**
 - Устанавливают импланты
 - Дают советы о киберпсихозе
 - Предоставляют медицинские услуги
+
+---
+
+### 3.5. Нетраннеры / BD
+
+**Описание:** Нетраннеры, связывающие игроков с различными фракциями и заданиями.
+
+**Примеры:**
+- T-Bug — `important/t-bug.md`
+- Alt Cunningham — `important/alt-cunningham.md`
+- Judy Alvarez — `important/judy-alvarez.md`
+- Evelyn Parker — `important/evelyn-parker.md`
 
 ---
 

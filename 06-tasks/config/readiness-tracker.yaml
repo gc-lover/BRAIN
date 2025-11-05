@@ -348,6 +348,16 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/progression/progression-attributes.md"
+    status: "in-review"
+    version: "1.0.0"
+    checked: "2025-11-05 17:14"
+    checker: "AI Agent"
+    notes: "Детализированы формулы производных параметров, киберпсихоз, требования к предметам/имплантам, капы/рост. Требуется связка с навыками и матрицей."
+    issues:
+      - "Заполнить механику прокачки атрибутов через использование навыков"
+    api_target: null
+
   - path: ".BRAIN/02-gameplay/progression/progression-perks.md"
     status: "ready"
     version: "1.0.0"
@@ -364,6 +374,27 @@ documents:
     checker: "AI Agent"
     notes: "Документ готов к созданию API задач. Содержит детальные решения по системе перерождений (механика, типы, преимущества, ограничения). Все необходимые детали для создания API спецификации присутствуют."
     issues: []
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/progression/progression-skills.md"
+    status: "needs-work"
+    version: "1.0.0"
+    checked: "2025-11-05 17:14"
+    checker: "AI Agent"
+    notes: "Создан каркас таксономии активных/пассивных навыков и базовых формул. Требуется заполнить списки и классовые модификаторы."
+    issues:
+      - "Заполнить список навыков по категориям (минимум 5 на категорию)"
+      - "Добавить классовые модификаторы коэффициентов"
+    api_target: null
+
+  - path: ".BRAIN/02-gameplay/progression/progression-attributes-matrix.md"
+    status: "in-review"
+    version: "1.0.0"
+    checked: "2025-11-05 17:14"
+    checker: "AI Agent"
+    notes: "Определены стартовые бонусы по классам, рост/капы и базовые требования к предметам/имплантам. Требуется сверка с балансом классов и предметов."
+    issues:
+      - "Сверить требования с equipment-matrix.md и имплантами"
     api_target: null
 
   # 02-gameplay/combat/ - Боевая система
