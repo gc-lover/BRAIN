@@ -19,9 +19,12 @@
 - `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ✅ ready
 
 ### API Requirements (Требования к API)
-- `api-requirements/mvp-endpoints.md` - Endpoints для MVP (требует создания)
-- `api-requirements/mvp-data-models.md` - Модели данных для MVP (требует создания)
+- `api-requirements/mvp-endpoints.md` - Endpoints для MVP ✅ ready
+- `api-requirements/mvp-data-models.md` - Модели данных для MVP ✅ ready
 - `api-requirements/equipment-matrix-entities.md` - Equipment Matrix entities ✅ ready
+
+### Attributes & D&D (Характеристики и D&D)
+- `attributes-dnd-mapping.md` - Сопоставление характеристик с D&D системой ✅ ready
 
 ### Database (База данных)
 - `database/schema.md` - Схема БД для MVP (требует создания)
