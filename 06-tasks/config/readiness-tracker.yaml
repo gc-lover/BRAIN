@@ -419,6 +419,15 @@ documents:
       - "Выверить теги и поля с equipment-matrix.md"
     api_target: null
 
+  - path: ".BRAIN/03-lore/timeline/timeline-gameplay-integration.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-05 18:12"
+    checker: "AI Agent"
+    notes: "Справочная карта соответствий событий лора игровым системам"
+    issues: []
+    api_target: null
+
   # 02-gameplay/combat/ - Боевая система
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     status: "ready"
