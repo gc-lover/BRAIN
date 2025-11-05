@@ -18,6 +18,11 @@
 - `ui-game-start.md` - Начало игры и боевая система D&D формата ✅ ready
 - `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ✅ ready
 
+### Game Start Flow (Сценарий начала игры)
+- `game-start-scenario.md` - Общий сценарий запуска игры ✅ ready
+- `game-tutorial-flow.md` - Туториал и первые шаги игрока ✅ ready
+- `game-first-quest-intro.md` - Первый квест и введение в игру ✅ ready
+
 ### API Requirements (Требования к API)
 - `api-requirements/mvp-endpoints.md` - Endpoints для MVP ✅ ready
 - `api-requirements/mvp-data-models.md` - Модели данных для MVP ✅ ready
