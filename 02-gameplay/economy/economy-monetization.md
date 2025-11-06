@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по типам контента (все + из лора Cyberpunk), гибридной системе монетизации (игровая валюта + реальные деньги). TODO только для детальной проработки инструментов и механик монетизации (ближе к релизу, не блокирует создание API).
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/monetization
+
 ---
 **API Tasks Status:**
 - Status: created

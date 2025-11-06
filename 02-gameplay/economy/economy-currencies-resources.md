@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по типам валют (региональные валюты + биржа валют), типам ресурсов (все + товары из лора Cyberpunk), добыче ресурсов (комбинация всех способов). Все необходимые детали для создания API спецификации присутствуют.
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/currencies
+
 ---
 **API Tasks Status:**
 - Status: created

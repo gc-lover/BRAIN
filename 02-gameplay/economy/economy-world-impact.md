@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по влиянию на социальные структуры, влияние на игровой мир, живая экономика (комбинация игроков + событий). Все необходимые детали для создания API спецификации присутствуют.
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/world-impact
+
 ---
 **API Tasks Status:**
 - Status: created

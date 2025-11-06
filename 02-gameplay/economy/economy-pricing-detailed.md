@@ -13,6 +13,10 @@
 **Дата:** 2025-11-06  
 **Статус:** Ready for API
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/pricing
+
 ---
 
 ## 💰 БАЗОВОЕ ЦЕНООБРАЗОВАНИЕ
