@@ -1664,6 +1664,16 @@ documents:
     issues: []
     api_target: "api/schemas/quest.json"
 
+  # 05-technical/ - Архитектура систем
+  - path: ".BRAIN/05-technical/global-state-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:32"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Техническая архитектура Global State System. Event Sourcing, Event Store, State Management, синхронизация MMORPG. 10 категорий событий, Event Processing Pipeline, State Reconstruction, Projections, Performance Optimization, API endpoints. Готов к реализации!"
+    issues: []
+    api_target: "api/v1/global-state.yaml"
+
 # Примеры записей:
 #
 # documents:

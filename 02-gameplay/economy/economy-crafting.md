@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03  
 **Последнее обновление:** 2025-11-03
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-066: api/v1/gameplay/economy/crafting.yaml (2025-11-07)
+- Last Updated: 2025-11-07 01:25
+---
+
 **Связанные документы:**
 - `economy-overview.md` - обзор экономической системы
 - `economy-currencies-resources.md` - валюты и ресурсы

@@ -3,6 +3,14 @@
 **api-readiness-check-date:** 2025-11-06
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-064: api/v1/narrative/romance-events.yaml (2025-11-07)
+- Last Updated: 2025-11-07 01:15
+---
+
 # Система романтических событий (Romance Events System)
 
 Модульная система событий для создания динамических романтических отношений с любыми NPC и игроками.
