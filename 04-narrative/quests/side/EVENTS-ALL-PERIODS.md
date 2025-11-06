@@ -13,6 +13,10 @@
 **Версия:** 1.0.0  
 **Статус:** Complete
 
+**target-domain:** narrative  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/events
+
 ---
 
 ## Обзор

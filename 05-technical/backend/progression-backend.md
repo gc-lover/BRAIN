@@ -18,7 +18,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 05:30  
+**Последнее обновление:** 2025-11-07 (обновлено для микросервисов)  
 **Приоритет:** КРИТИЧЕСКИЙ (MVP блокер!)  
 **Автор:** AI Brain Manager
 
@@ -37,6 +37,23 @@
 - ✅ Attribute points distribution
 - ✅ Skill experience tracking
 - ✅ Skill level up rewards
+
+---
+
+## Микросервисная архитектура
+
+**Ответственный микросервис:** gameplay-service  
+**Порт:** 8083  
+**API Gateway маршрут:** `/api/v1/gameplay/progression/*`  
+**Статус:** 📋 В планах (Фаза 2)
+
+**Взаимодействие с другими сервисами:**
+- character-service: обновление level, attributes, skills
+- achievement-service (world): проверка level achievements
+
+**Event Bus события:**
+- Публикует: `character:level-up`, `character:skill-leveled`, `character:attribute-increased`
+- Подписывается: `combat:enemy-killed` (experience), `quest:completed` (experience), `skill:used` (skill exp)
 
 ---
 
