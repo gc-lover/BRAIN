@@ -53,5 +53,253 @@ implementations:
   #     commit: "def456ghi789"
   #     notes: ""
 
-  # Реальные записи будут добавлены автоматически агентами
+  # === AUTHENTICATION & CHARACTER MANAGEMENT ===
+  
+  - api_path: "api/v1/auth/character-creation.yaml"
+    task_id: "API-TASK-001"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "AuthController - регистрация и создание персонажа"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/characters/status.yaml"
+    task_id: "API-TASK-002"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "CharactersStatusController - управление статусами персонажей"
+    frontend:
+      status: "not_started"
+  
+  # === GAME START & INITIAL STATE ===
+  
+  - api_path: "api/v1/game/start.yaml"
+    task_id: "API-TASK-003"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "GameStartController - старт игры"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/game/initial-state.yaml"
+    task_id: "API-TASK-004"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "GameInitialStateController - начальное состояние игры"
+    frontend:
+      status: "not_started"
+  
+  # === GAMEPLAY SYSTEMS ===
+  
+  - api_path: "api/v1/gameplay/actions/actions.yaml"
+    task_id: "API-TASK-005"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "GameplayActionsController - действия игрока"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/inventory/inventory.yaml"
+    task_id: "API-TASK-006"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "InventoryController - управление инвентарем"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/locations/locations.yaml"
+    task_id: "API-TASK-007"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "CitiesController - справочные данные городов"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/trading/trading.yaml"
+    task_id: "API-TASK-008"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "TradingController - торговля"
+    frontend:
+      status: "not_started"
+  
+  # === COMBAT SYSTEMS ===
+  
+  - api_path: "api/v1/combat/combat.yaml"
+    task_id: "API-TASK-009"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "CombatController - боевая система"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/gameplay/combat/weapons.yaml"
+    task_id: "API-TASK-010"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "WeaponsController - оружие, мастерство, модификации"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/gameplay/combat/abilities.yaml"
+    task_id: "API-TASK-011"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "AbilitiesController - способности персонажа (VALORANT style)"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/gameplay/combat/cyberpsychosis.yaml"
+    task_id: "API-TASK-012"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "CyberpsychosisController - система киберпсихоза"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/gameplay/combat/implants-limits.yaml"
+    task_id: "API-TASK-013"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "ImplantsLimitsController - лимиты имплантов"
+    frontend:
+      status: "not_started"
+  
+  # === SOCIAL & NARRATIVE ===
+  
+  - api_path: "api/v1/npcs/npcs.yaml"
+    task_id: "API-TASK-014"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "NPCsController - взаимодействие с NPC"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/quests/quests.yaml"
+    task_id: "API-TASK-015"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "QuestsController - система квестов"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/events/random-events.yaml"
+    task_id: "API-TASK-016"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "EventsController - случайные события"
+    frontend:
+      status: "not_started"
+  
+  # === CHARACTER SYSTEMS ===
+  
+  # CharactersController использует auth/character-creation.yaml (уже записан в API-TASK-001)
+  
+  # === ADDITIONAL SYSTEMS ===
+  
+  - api_path: "api/v1/gameplay/locations/gameplay-locations.yaml"
+    task_id: "API-TASK-018"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "LocationsController - игровые локации"
+    frontend:
+      status: "not_started"
+  
+  - api_path: "api/v1/factions/factions.yaml"
+    task_id: "API-TASK-019"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-06 10:00"
+      completed: "2025-11-06 23:25"
+      agent: "Backend Agent"
+      commit: "06b79a9"
+      notes: "FactionsController - система фракций"
+    frontend:
+      status: "not_started"
 
