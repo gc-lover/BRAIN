@@ -12,6 +12,14 @@
 **Приоритет:** critical
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-071: api/v1/meta/league-system.yaml (2025-11-07)
+- Last Updated: 2025-11-07 01:50
+---
+
+---
 
 ## Краткое описание
 

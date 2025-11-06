@@ -4,6 +4,14 @@
 **api-readiness-notes:** Техническая архитектура системы Global State для регистрации всех событий и управления состоянием мира. Event Sourcing, Event Store, State Management, синхронизация MMORPG.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-074: api/v1/technical/global-state.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:05
+---
+
 # Global State System - Архитектура управления состоянием мира
 
 **Статус:** approved  
