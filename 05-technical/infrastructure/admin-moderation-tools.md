@@ -1,13 +1,14 @@
 # Admin & Moderation Tools - Инструменты администрирования
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 23:00  
+**Последнее обновление:** 2025-11-07 05:20  
 **Приоритет:** критический (Production)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 23:00
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 05:20
+**api-readiness-notes:** Admin панель и moderation tools. Player management (ban/mute/kick), content moderation, world management, analytics dashboard, audit logs. Production critical!
 
 ---
 
