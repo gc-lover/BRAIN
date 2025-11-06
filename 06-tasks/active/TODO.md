@@ -9,12 +9,13 @@
 ### ✅ Результаты финальной проверки:
 - **Всего markdown файлов:** 1394
 - **Документов с api-readiness:** 1394 (100%)
-- **Готовых к API (ready):** 146 документов (+7 world-events!)
+- **Готовых к API (ready):** 154 документа (+8 новых economy systems!)
 - **Справочных (not-applicable):** 45 документов
 - **Требуют доработки:** 0 документов
 - **Документов без метаданных:** 0 файлов
 
-**Последнее обновление (2025-11-06 22:15):**
+**Последнее обновление (2025-11-06 22:23):**
+- ✅ 8 НОВЫХ экономических документов СОЗДАНЫ: stock-exchange, currency-exchange, trading-guilds, logistics, contracts, investments, economy-events, analytics
 - ✅ 7 документов world-events: `in-review` → `ready`
 - ✅ 2 документа economy: `in-review` → `ready`
 - ✅ 4 README файла: `needs-work` → `not-applicable`

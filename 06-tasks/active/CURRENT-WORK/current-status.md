@@ -59,7 +59,7 @@
 - ✅ combat-implants-visuals.md (v1.1.0) - ready
 - ✅ combat-overview.md - not-applicable (обзорный)
 
-**Экономическая система (7 документов):**
+**Экономическая система (19 документов) ⭐ МАСШТАБНОЕ РАСШИРЕНИЕ:**
 - ✅ economy-type.md - ready
 - ✅ economy-trading.md - ready
 - ✅ economy-crafting.md - ready
@@ -67,6 +67,18 @@
 - ✅ economy-world-impact.md - ready
 - ✅ economy-monetization.md - ready
 - ✅ equipment-matrix.md (v1.0.0) - ready
+- ✅ economy-auction-house.md (v1.0.0) - ready ⭐
+- ✅ economy-player-market.md (v1.0.0) - ready ⭐
+- ✅ **economy-stock-exchange.md (v1.0.0) - ready** 🆕
+- ✅ **economy-currency-exchange.md (v1.0.0) - ready** 🆕
+- ✅ **economy-trading-guilds.md (v1.0.0) - ready** 🆕
+- ✅ **economy-logistics.md (v1.0.0) - ready** 🆕
+- ✅ **economy-contracts.md (v1.0.0) - ready** 🆕
+- ✅ **economy-investments.md (v1.0.0) - ready** 🆕
+- ✅ **economy-events.md (v1.0.0) - ready** 🆕
+- ✅ **economy-analytics.md (v1.0.0) - ready** 🆕
+- ✅ loot-tables.md (v1.0.0) - ready
+- ✅ trading-routes-global.md (v1.0.0) - ready
 
 **Система прокачки (13 документов):**
 - ✅ classes-overview.md (v2.0.0) - ready
