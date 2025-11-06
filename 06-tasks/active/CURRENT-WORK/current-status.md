@@ -185,7 +185,7 @@
 - ✅ loot-tables.md (v1.0.0) - ready
 - ✅ trading-routes-global.md (v1.0.0) - ready
 
-**Технические документы (7 документов):**
+**Технические документы (11 документов):**
 - ✅ quests-expanded-2020-2030.json (v2.0.0) - ready
 - ✅ quests-json-schema.md (v1.0.0) - ready
 - ✅ global-state-system.md (v1.0.0) - ready ⭐ НОВЫЙ!
@@ -193,8 +193,12 @@
 - ✅ matchmaking-system.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
 - ✅ chat-system.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
 - ✅ realtime-server-architecture.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
+- ✅ authentication-authorization-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
+- ✅ player-character-management.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
+- ✅ inventory-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
+- ✅ loot-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
 
-**Итого готовых к API:** 108 документов (+70 новых!)
+**Итого готовых к API:** 112 документов (+74 новых!)
 
 ---
 
@@ -218,29 +222,35 @@
 
 ## 📊 Статистика готовности к API
 
-- **Готово к API (ready):** 108 документов (+70 новых!)
+- **Готово к API (ready):** 112 документов (+74 новых!)
 - **Требуют доработки (needs-work):** 0 документов с механиками
 - **Не применимо (not-applicable):** Обзорные документы, концептуальные документы, служебные файлы
 - **В проверке (in-review):** 0 документов
 
-**Процент готовности игровых механик к API:** 100% (108 готовых из 108 документов с механиками)
+**Процент готовности игровых механик к API:** 100% (112 готовых из 112 документов с механиками)
 
-**Новые готовые документы (2025-11-06 21:55):**
+**Новые готовые документы (2025-11-07 05:20):**
 - Боевая система: +20 документов (17 базовых + 3 D&D интеграции)
 - Progression система: +13 документов (attributes, skills, matrices, mapping, classes)
 - Социальные механики: +30 документов (mentorship: 6, npc-hiring: 8, player-orders: 8, reputation: 1, др: 7)
 - Квестовая система: +17 документов (quest-system, dnd-checks, 7 EXPANDED side-quests, 8 main quest D&D nodes)
 - Мировые события: +4 документа (global-events, framework, travel-events, world-state-player-impact ⭐)
 - Экономика: +9 документов (7 базовых + loot-tables + trading-routes)
-- Технические: +7 документов (JSON структуры, JSON-схема, **global-state-system** ⭐, **4 критических backend систем** ⭐⭐⭐)
+- Технические: +11 документов (JSON структуры, **global-state** ⭐, **4 критических backend** ⭐⭐, **4 MVP блокера** ⭐⭐⭐)
 - Лор: +4 документа
-- **ИТОГО: 108 документов готовы к созданию API задач**
+- **ИТОГО: 112 документов готовы к созданию API задач**
 
 **⭐⭐⭐ 4 КРИТИЧЕСКИХ BACKEND СИСТЕМЫ (2025-11-06 21:55):**
 1. **Session Management System** - управление игровыми сессиями (login/logout, heartbeat, AFK, reconnection)
 2. **Matchmaking System** - подбор игроков для PvP/PvE/raids (MMR, балансировка команд)
 3. **Chat System** - внутриигровой чат (каналы, модерация, voice chat)
 4. **Real-Time Server Architecture** - архитектура real-time сервера (синхронизация позиций, lag compensation)
+
+**⭐⭐⭐ 4 MVP БЛОКЕРА (2025-11-07 05:20):**
+1. **Authentication & Authorization System** - аутентификация и авторизация (БЕЗ ЭТОГО ИГРА НЕ ЗАПУСТИТСЯ!)
+2. **Player & Character Management** - управление игроками и персонажами (БЕЗ ЭТОГО ИГРА НЕ ЗАПУСТИТСЯ!)
+3. **Inventory System** - система инвентаря (БЕЗ ЭТОГО ИГРА НЕ РАБОТАЕТ!)
+4. **Loot System** - генерация и распределение лута (БЕЗ ЭТОГО НЕТ PROGRESSION!)
 
 ---
 
@@ -251,6 +261,42 @@
 ---
 
 ## История завершенных задач
+
+**2025-11-07 05:20:**
+- ✅ СОЗДАНЫ 4 MVP БЛОКЕРА (~3400 строк!)
+  1. **authentication-authorization-system.md** - Authentication & Authorization (~850 строк)
+     - Регистрация (email/password + OAuth: Steam, Google, Discord)
+     - Login/Logout, JWT tokens (access 15min + refresh 7days)
+     - Password recovery (email reset), 2FA (TOTP)
+     - Roles & Permissions (PLAYER, MODERATOR, ADMIN, SUPER_ADMIN)
+     - Account linking, brute force protection, rate limiting
+     - Структура БД (accounts + account_roles + password_reset_tokens + email_verification_tokens + login_history)
+  2. **player-character-management.md** - Player & Character Management (~800 строк)
+     - Player profiles (account-wide settings, premium currency)
+     - Character creation/deletion, switching, slots (3 base + 2 premium)
+     - Character data (attributes, skills, level, experience, reputation, position)
+     - Appearance customization, naming validation
+     - Soft delete + restore (30 дней grace period)
+     - Структура БД (players + characters + character_slots + character_stats_snapshot)
+  3. **inventory-system.md** - Inventory System (~900 строк)
+     - Inventory slots (50 slots), item stacking, weight/encumbrance
+     - Item pickup/drop, use/consume
+     - Equipment slots (weapons, armor, implants, cyberware)
+     - Bank/Stash storage (100 slots, shared between characters)
+     - Transfer items (trade, mail, auction)
+     - Item durability, bind-on-pickup/equip
+     - Структура БД (character_inventory + character_items + item_templates + equipment_slots + bank_storage)
+  4. **loot-system.md** - Loot System (~850 строк)
+     - Loot generation (weighted loot tables)
+     - Loot drops (NPC death, container open)
+     - Distribution (solo/party/raid), loot modes (personal/shared/roll/master looter)
+     - Roll system (need/greed/pass, 60s timer)
+     - Boss loot (гарантированный + случайный)
+     - Auto-loot settings, loot history
+     - Структура БД (loot_tables + world_drops + loot_rolls + loot_history)
+- ✅ Создан анализ пробелов: `backend-architecture-gaps.md` (20+ недостающих систем, приоритизация)
+- ✅ Все 4 документа добавлены в readiness-tracker.yaml со статусом `ready`
+- ✅ Обновлена статистика: 112 документов готовы к API (+4 MVP блокера)
 
 **2025-11-06 21:55:**
 - ✅ СОЗДАНЫ 4 КРИТИЧЕСКИХ BACKEND ДОКУМЕНТА (~3000 строк!)
