@@ -1552,9 +1552,9 @@ documents:
   - path: ".BRAIN/02-gameplay/world/events/world-events-framework.md"
     status: "ready"
     version: "0.1.0"
-    checked: "2025-11-06 20:41"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Фреймворк мировых событий (генераторы, DC-скейлинг, влияние фракций/экономики/технологий)."
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Фреймворк мировых событий определяет унифицированную логику событий по всем эпохам: DC-скейлинг, AI-слайдеры фракций, экономические множители, технологические доступы, генераторы событий (d100 таблицы), квестовые хуки."
     issues: []
     api_target: "api/v1/world/events/framework.yaml"
 
@@ -1566,6 +1566,61 @@ documents:
     notes: "Документ готов к созданию API задач. События перемещения игроков по миру 2020-2093."
     issues: []
     api_target: "api/v1/world/events/travel-all.yaml"
+
+  # 02-gameplay/world/events/ - Мировые события по эпохам (2025-11-06)
+  - path: ".BRAIN/02-gameplay/world/events/world-events-1990-2000.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 1990-2000: DC-скейлинг, AI-слайдеры фракций, экономика, D&D генератор событий (d100)."
+    issues: []
+    api_target: "api/v1/world/events/epoch-1990-2000.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-2000-2020.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 2000-2020 (корпоративные войны): DC-скейлинг, AI-слайдеры, D&D генератор (d100)."
+    issues: []
+    api_target: "api/v1/world/events/epoch-2000-2020.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-2020-2040.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 2020-2040 (разрушение и восстановление): DC-скейлинг, AI-слайдеры, D&D генератор (d100), рад-зоны."
+    issues: []
+    api_target: "api/v1/world/events/epoch-2020-2040.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-2040-2060.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 2040-2060 (Time of the Red): DC-скейлинг, AI-слайдеры, D&D генератор (d100), брейндэнс, киберпсихоз."
+    issues: []
+    api_target: "api/v1/world/events/epoch-2040-2060.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-2060-2077.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 2060-2077 (пик корп.контроля): DC-скейлинг, AI-слайдеры, D&D генератор (d100), Blackwall, независимость Night City."
+    issues: []
+    api_target: "api/v1/world/events/epoch-2060-2077.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-2077.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ готов к созданию API задач. Мировые события эпохи 2077 (события CP2077 и Phantom Liberty): DC-скейлинг, AI-слайдеры, D&D генератор (d100), Dogtown."
+    issues: []
+    api_target: "api/v1/world/events/epoch-2077.yaml"
 
   # 02-gameplay/world/ - Мировое состояние
   - path: ".BRAIN/02-gameplay/world/world-state-player-impact.md"
