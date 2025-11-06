@@ -3,15 +3,6 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Полная система инвентаря. Slots, stacking, weight/encumbrance, pickup/drop, use/consume, equipment slots, bank/stash, transfer items (trade, mail, auction).
 ---
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-128: api/v1/inventory/inventory.yaml (2025-11-07 10:10)
-- Last Updated: 2025-11-07 00:18
----
-
-
 
 # Inventory System - Система инвентаря
 

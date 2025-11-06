@@ -3,15 +3,6 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Полная система лута. Loot generation (из таблиц), drops (NPC, containers), distribution (solo/party/raid), roll system (need/greed), personal/shared loot, boss loot, instancing.
 ---
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-129: api/v1/loot/loot-generation.yaml (2025-11-07 10:15)
-- Last Updated: 2025-11-07 00:18
----
-
-
 
 # Loot System - Система генерации и распределения лута
 
