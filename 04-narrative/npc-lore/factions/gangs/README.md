@@ -23,6 +23,15 @@
 - Animals
   - `animals/alpha-2070-2085.md`
   - `animals/elite-combat-trainer-2070-2088.md` **(новый, детализированный)**
+- Mox
+  - `mox/madame-2065-2080.md`
+  - `mox/evac-coordinator-2068-2082.md`
+  - `mox/security-chief-2068-2088.md` **(новый)**
+- Wraiths
+  - `wraiths/warlord-2060-2080.md` **(новый, детализированный — король пустошей)**
+  - `wraiths/master-mechanic-2055-2085.md` **(новый — мастер-механик)**
+- Scavengers
+  - `scavengers/boss-scav-den-2070-2088.md` **(новый — главарь логова)**
 
 ---
 

@@ -1846,6 +1846,446 @@
         "theme": "beyond-blackwall"
       }
     }
+    ,
+    {
+      "id": "quest-class-fixer-2022-first-deal",
+      "name": "Первая сделка (2022)",
+      "description": "Фиксер налаживает связи после DataKrash. Первая сделка с торговцем оружия.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-meet-dealer", "description": "Встретиться с торговцем", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-negotiate", "description": "Провести переговоры", "type": "item", "target": { "type": "item", "id": "item-weapon-basic" }, "quantity": 1 },
+        { "id": "obj-resolve-dispute", "description": "Разрешить конфликт (соц/бой)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 2 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 320, "money": 450, "items": ["item-weapon-basic"], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 13, "bonus": "smooth-negotiation", "description": "Гладкие переговоры", "successEffects": { "moneyBonus": 100, "xpBonus": 40 } },
+          { "type": "streetwise", "dc": 12, "bonus": "know-market", "description": "Знание рынка", "successEffects": { "reduceEnemies": 1, "xpBonus": 30 } }
+        ],
+        "classRequired": "fixer",
+        "epoch": "2020-2030",
+        "theme": "first-deal"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-fixer-2035-network-builder",
+      "name": "Строитель сети (2035)",
+      "description": "Фиксер создаёт сеть контактов в новом независимом городе.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-recruit-contacts", "description": "Завербовать контакты (×4)", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 4 },
+        { "id": "obj-setup-deals", "description": "Организовать сделки (×3)", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 3 },
+        { "id": "obj-protect-network", "description": "Защитить сеть от рейда (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Доложить Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 620, "money": 850, "items": ["item-corporate-data"], "reputation": { "faction": "independent", "amount": 25 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-class-fixer-2022-first-deal"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 16, "bonus": "charisma-network", "description": "Харизма сети", "successEffects": { "recruitBonus": 2, "xpBonus": 80 } },
+          { "type": "streetwise", "dc": 15, "bonus": "spot-threats", "description": "Заметить угрозы", "successEffects": { "reduceEnemies": 2 } }
+        ],
+        "classRequired": "fixer",
+        "epoch": "2030-2045",
+        "theme": "network-building"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-fixer-2058-red-market-monopoly",
+      "name": "Монополия красного рынка (2058)",
+      "description": "Фиксер стремится контролировать красный рынок имплантов.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-eliminate-rivals", "description": "Убрать конкурентов (соц/бой, 4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-secure-suppliers", "description": "Закрепить поставщиков (×3)", "type": "item", "target": { "type": "item", "id": "item-implant-rare" }, "quantity": 3 },
+        { "id": "obj-establish-monopoly", "description": "Установить монополию", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 820, "money": 1150, "items": ["item-implant-rare"], "reputation": { "faction": "independent", "amount": 30 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-class-fixer-2035-network-builder"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "intimidate-rivals", "description": "Запугать соперников", "successEffects": { "reduceEnemies": 3, "xpBonus": 100 } },
+          { "type": "streetwise", "dc": 17, "bonus": "market-control", "description": "Контроль рынка", "successEffects": { "moneyBonus": 300 } }
+        ],
+        "classRequired": "fixer",
+        "epoch": "2045-2060",
+        "theme": "market-control"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-fixer-2078-parameter-broker",
+      "name": "Брокер параметров (2078)",
+      "description": "Фиксер торгует голосами на параметрической ярмарке.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-collect-votes", "description": "Собрать голоса (×50)", "type": "item", "target": { "type": "item", "id": "item-vote-token" }, "quantity": 50 },
+        { "id": "obj-negotiate-buyers", "description": "Провести переговоры с покупателями (×5)", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 5 },
+        { "id": "obj-defend-deals", "description": "Защитить сделки от налёта (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-return", "description": "Доложить Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1150, "money": 1550, "items": [], "reputation": { "faction": "independent", "amount": 40 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-class-fixer-2058-red-market-monopoly"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 19, "bonus": "master-negotiator", "description": "Мастер переговоров", "successEffects": { "moneyBonus": 500, "xpBonus": 150 } },
+          { "type": "streetwise", "dc": 18, "bonus": "vote-market", "description": "Рынок голосов", "successEffects": { "xpBonus": 120 } }
+        ],
+        "classRequired": "fixer",
+        "epoch": "2077-2093",
+        "theme": "vote-trading"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-nomad-2025-convoy-run",
+      "name": "Конвойный рейс (2025)",
+      "description": "Номад ведёт конвой через опасные земли после DataKrash.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-prepare-convoy", "description": "Подготовить конвой", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-travel", "description": "Пересечь опасные земли", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-defend-convoy", "description": "Защитить конвой от рейдеров (7)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 7 },
+        { "id": "obj-return", "description": "Доставить груз", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 420, "money": 580, "items": ["item-armor-basic"], "reputation": { "faction": "nomads", "amount": 20 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 14, "bonus": "vehicle-repair", "description": "Ремонт транспорта", "successEffects": { "timeReduction": 10 } },
+          { "type": "tactics", "dc": 14, "bonus": "convoy-defense", "description": "Оборона конвоя", "successEffects": { "reduceEnemies": 3 } }
+        ],
+        "classRequired": "nomad",
+        "epoch": "2020-2030",
+        "theme": "convoy-protection"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-nomad-2040-badlands-cartographer",
+      "name": "Картограф пустошей (2040)",
+      "description": "Номад исследует и картирует новые маршруты через пустоши.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-scout-routes", "description": "Разведать маршруты (×5)", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 5 },
+        { "id": "obj-mark-waypoints", "description": "Отметить точки (×8)", "type": "item", "target": { "type": "item", "id": "item-map-data" }, "quantity": 8 },
+        { "id": "obj-survive-hazards", "description": "Выжить в опасностях (scavs, 6)", "type": "kill", "target": { "type": "enemy", "id": "npc-scav" }, "quantity": 6 },
+        { "id": "obj-return", "description": "Доставить карту Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 580, "money": 760, "items": ["item-map-data"], "reputation": { "faction": "nomads", "amount": 25 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-class-nomad-2025-convoy-run"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "perception", "dc": 15, "bonus": "scout-routes", "description": "Разведать маршруты", "successEffects": { "xpBonus": 70 } },
+          { "type": "survival", "dc": 15, "bonus": "survive-badlands", "description": "Выжить в пустошах", "successEffects": { "reduceEnemies": 3 } }
+        ],
+        "classRequired": "nomad",
+        "epoch": "2030-2045",
+        "theme": "exploration"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-nomad-2055-clan-unification",
+      "name": "Объединение кланов (2055)",
+      "description": "Номад помогает объединить разрозненные кланы для выживания.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-visit-clans", "description": "Посетить кланы (×4)", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 4 },
+        { "id": "obj-negotiate-alliance", "description": "Провести переговоры об альянсе", "type": "item", "target": { "type": "item", "id": "item-treaty-document" }, "quantity": 1 },
+        { "id": "obj-defend-meeting", "description": "Защитить встречу от налёта (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-return", "description": "Доложить Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 880, "money": 1100, "items": [], "reputation": { "faction": "nomads", "amount": 40 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-class-nomad-2040-badlands-cartographer"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "unite-clans", "description": "Объединить кланы", "successEffects": { "xpBonus": 120, "reputationBonus": 10 } },
+          { "type": "tactics", "dc": 17, "bonus": "defend-summit", "description": "Защитить встречу", "successEffects": { "reduceEnemies": 4 } }
+        ],
+        "classRequired": "nomad",
+        "epoch": "2045-2060",
+        "theme": "clan-politics"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-nomad-2087-frontier-settlement",
+      "name": "Поселение на границе (2087)",
+      "description": "Номад основывает новое поселение на границе Badlands.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-find-location", "description": "Найти место для поселения", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-build-infrastructure", "description": "Построить инфраструктуру (×5)", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 5 },
+        { "id": "obj-defend-settlement", "description": "Защитить от налётов (10)", "type": "kill", "target": { "type": "enemy", "id": "npc-scav" }, "quantity": 10 },
+        { "id": "obj-establish", "description": "Основать поселение", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1280, "money": 1650, "items": ["item-armor-advanced"], "reputation": { "faction": "nomads", "amount": 50 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-nomad-2055-clan-unification"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 19, "bonus": "build-settlement", "description": "Построить поселение", "successEffects": { "xpBonus": 150 } },
+          { "type": "tactics", "dc": 19, "bonus": "defend-home", "description": "Защитить дом", "successEffects": { "reduceEnemies": 5 } }
+        ],
+        "classRequired": "nomad",
+        "epoch": "2077-2093",
+        "theme": "settlement-building"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-rockerboy-2030-underground-concert",
+      "name": "Подпольный концерт (2030)",
+      "description": "Рокербой организует подпольный концерт против корпо-цензуры.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-find-venue", "description": "Найти место для концерта", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-promote", "description": "Распространить слово (соц)", "type": "item", "target": { "type": "item", "id": "item-flyer" }, "quantity": 10 },
+        { "id": "obj-perform", "description": "Провести концерт", "type": "item", "target": { "type": "item", "id": "item-setlist" }, "quantity": 1 },
+        { "id": "obj-evade-ncpd", "description": "Избежать NCPD рейда (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 480, "money": 620, "items": [], "reputation": { "faction": "independent", "amount": 25 } },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 15, "bonus": "hype-crowd", "description": "Разогреть толпу", "successEffects": { "xpBonus": 80, "reputationBonus": 10 } },
+          { "type": "performance", "dc": 15, "bonus": "epic-concert", "description": "Эпичный концерт", "successEffects": { "xpBonus": 100 } }
+        ],
+        "classRequired": "rockerboy",
+        "epoch": "2030-2045",
+        "theme": "rebellion-music"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-rockerboy-2062-voice-of-rebellion",
+      "name": "Голос восстания (2062)",
+      "description": "Рокербой создаёт песню, которая становится гимном протеста.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-write-song", "description": "Написать песню", "type": "item", "target": { "type": "item", "id": "item-song-data" }, "quantity": 1 },
+        { "id": "obj-record", "description": "Записать в студии", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-distribute", "description": "Распространить песню (×100)", "type": "item", "target": { "type": "item", "id": "item-song-copy" }, "quantity": 100 },
+        { "id": "obj-defend-studio", "description": "Защитить студию от корпо-рейда (7)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 7 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 950, "money": 1200, "items": [], "reputation": { "faction": "independent", "amount": 35 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": ["quest-class-rockerboy-2030-underground-concert"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 18, "bonus": "inspire-masses", "description": "Вдохновить массы", "successEffects": { "xpBonus": 130, "reputationBonus": 15 } },
+          { "type": "performance", "dc": 18, "bonus": "anthem-creation", "description": "Создание гимна", "successEffects": { "xpBonus": 150 } }
+        ],
+        "classRequired": "rockerboy",
+        "epoch": "2060-2077",
+        "theme": "protest-anthem"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-rockerboy-2077-final-stand",
+      "name": "Последний концерт (2077)",
+      "description": "Рокербой организует концерт во время кризиса, объединяя город.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-prepare-venue", "description": "Подготовить арену", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-unite-factions", "description": "Объединить фракции через музыку (соц, ×5)", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 5 },
+        { "id": "obj-perform-final", "description": "Провести финальный концерт", "type": "item", "target": { "type": "item", "id": "item-setlist" }, "quantity": 1 },
+        { "id": "obj-defend-event", "description": "Защитить от атаки (9)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 9 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1050, "money": 1350, "items": [], "reputation": { "faction": "independent", "amount": 45 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-class-rockerboy-2062-voice-of-rebellion"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 19, "bonus": "unite-city", "description": "Объединить город", "successEffects": { "xpBonus": 160, "reputationBonus": 20 } },
+          { "type": "performance", "dc": 19, "bonus": "legendary-concert", "description": "Легендарный концерт", "successEffects": { "xpBonus": 180 } }
+        ],
+        "classRequired": "rockerboy",
+        "epoch": "2060-2077",
+        "theme": "unity-concert"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-rockerboy-2090-new-anthem",
+      "name": "Новый гимн (2090)",
+      "description": "Рокербой создаёт гимн для эпохи параметров и метауправления.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-compose-anthem", "description": "Сочинить новый гимн", "type": "item", "target": { "type": "item", "id": "item-song-data" }, "quantity": 1 },
+        { "id": "obj-perform-at-fair", "description": "Выступить на параметрической ярмарке", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-inspire-vote", "description": "Вдохновить голосование (соц)", "type": "item", "target": { "type": "item", "id": "item-vote-token" }, "quantity": 50 },
+        { "id": "obj-defend-stage", "description": "Защитить сцену от саботажа (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1300, "money": 1700, "items": [], "reputation": { "faction": "independent", "amount": 55 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-rockerboy-2077-final-stand"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 20, "bonus": "shape-future", "description": "Формировать будущее", "successEffects": { "xpBonus": 200, "reputationBonus": 25 } },
+          { "type": "performance", "dc": 20, "bonus": "meta-anthem", "description": "Мета-гимн", "successEffects": { "xpBonus": 220 } }
+        ],
+        "classRequired": "rockerboy",
+        "epoch": "2077-2093",
+        "theme": "meta-era-anthem"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-corpo-2024-loyalty-test",
+      "name": "Тест на лояльность (2024)",
+      "description": "Корпорат проходит тест на лояльность после DataKrash.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-retrieve-data", "description": "Вернуть корпоративные данные", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-eliminate-leak", "description": "Устранить утечку (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-prove-loyalty", "description": "Доказать лояльность", "type": "item", "target": { "type": "item", "id": "item-loyalty-badge" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 340, "money": 480, "items": ["item-loyalty-badge"], "reputation": { "faction": "arasaka", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 13, "bonus": "corporate-composure", "description": "Корпоративное спокойствие", "successEffects": { "xpBonus": 40 } },
+          { "type": "investigation", "dc": 12, "bonus": "find-leak", "description": "Найти утечку", "successEffects": { "reduceEnemies": 2 } }
+        ],
+        "classRequired": "corpo",
+        "epoch": "2020-2030",
+        "theme": "loyalty-test"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-corpo-2048-hostile-takeover",
+      "name": "Враждебное поглощение (2048)",
+      "description": "Корпорат участвует во враждебном поглощении конкурента.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-gather-intel", "description": "Собрать разведданные (×3)", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 3 },
+        { "id": "obj-sabotage-rival", "description": "Саботировать конкурента", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-eliminate-resistance", "description": "Устранить сопротивление (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 6 },
+        { "id": "obj-finalize-takeover", "description": "Завершить поглощение", "type": "item", "target": { "type": "item", "id": "item-takeover-documents" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 720, "money": 950, "items": ["item-takeover-documents"], "reputation": { "faction": "arasaka", "amount": 30 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": ["quest-class-corpo-2024-loyalty-test"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 16, "bonus": "corporate-warfare", "description": "Корпоративная война", "successEffects": { "xpBonus": 90 } },
+          { "type": "investigation", "dc": 16, "bonus": "intel-gathering", "description": "Сбор разведданных", "successEffects": { "reduceEnemies": 3 } }
+        ],
+        "classRequired": "corpo",
+        "epoch": "2045-2060",
+        "theme": "hostile-takeover"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-corpo-2073-border-war",
+      "name": "Пограничная война (2073)",
+      "description": "Корпорат координирует боевые операции на границе Arasaka/Militech.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-coordinate-forces", "description": "Координировать силы", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-execute-strategy", "description": "Выполнить стратегию", "type": "item", "target": { "type": "item", "id": "item-battle-plan" }, "quantity": 1 },
+        { "id": "obj-eliminate-targets", "description": "Устранить цели (9)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 9 },
+        { "id": "obj-secure-border", "description": "Закрепить границу", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1080, "money": 1400, "items": ["item-military-commendation"], "reputation": { "faction": "arasaka", "amount": 40 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-class-corpo-2048-hostile-takeover"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tactics", "dc": 18, "bonus": "military-strategy", "description": "Военная стратегия", "successEffects": { "reduceEnemies": 4, "xpBonus": 140 } },
+          { "type": "cool", "dc": 18, "bonus": "command-presence", "description": "Командное присутствие", "successEffects": { "xpBonus": 120 } }
+        ],
+        "classRequired": "corpo",
+        "epoch": "2060-2077",
+        "theme": "border-conflict"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-corpo-2091-meta-manipulation",
+      "name": "Мета-манипуляция (2091)",
+      "description": "Корпорат манипулирует параметрическими ярмарками для корпоративной выгоды.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-analyze-votes", "description": "Проанализировать голоса (×100)", "type": "item", "target": { "type": "item", "id": "item-vote-token" }, "quantity": 100 },
+        { "id": "obj-manipulate-parameters", "description": "Манипулировать параметрами", "type": "item", "target": { "type": "item", "id": "item-parameter-control" }, "quantity": 1 },
+        { "id": "obj-eliminate-opposition", "description": "Устранить оппозицию (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-secure-advantage", "description": "Закрепить преимущество", "type": "item", "target": { "type": "item", "id": "item-corporate-advantage" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1350, "money": 1750, "items": ["item-corporate-advantage"], "reputation": { "faction": "arasaka", "amount": 55 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-corpo-2073-border-war"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 20, "bonus": "meta-control", "description": "Мета-контроль", "successEffects": { "xpBonus": 200 } },
+          { "type": "investigation", "dc": 19, "bonus": "vote-analysis", "description": "Анализ голосов", "successEffects": { "xpBonus": 180 } }
+        ],
+        "classRequired": "corpo",
+        "epoch": "2077-2093",
+        "theme": "meta-manipulation"
+      }
+    }
   ]
 }
 
