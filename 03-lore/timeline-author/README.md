@@ -5,7 +5,7 @@
 **api-readiness-notes:** Авторские события, созданные на основе концепций NECPGAME и вдохновлённые лором Cyberpunk. Для лора игры, не для API.
 
 **Статус:** draft  
-**Версия:** 0.3.0  
+**Версия:** 1.0.0  
 **Дата создания:** 2025-11-05  
 **Приоритет:** высокий
 
@@ -32,25 +32,68 @@
 - `regions/asia-2020-2093.md` — Азия
 - `regions/cis-2020-2093.md` — СНГ
 - `regions/america-2020-2093.md` — Америка
+- `regions/africa-2020-2093.md` — Африка
+- `regions/middle-east-2020-2093.md` — Ближний Восток
+- `regions/oceania-2020-2093.md` — Океания
 
 ## Города
 
-- Европа:  
-  - `regions/europe/cities/london-2020-2093.md` — Лондон  
-  - `regions/europe/cities/paris-2020-2093.md` — Париж  
-  - `regions/europe/cities/berlin-2020-2093.md` — Берлин
-- Азия:  
-  - `regions/asia/cities/tokyo-2020-2093.md` — Токио  
-  - `regions/asia/cities/shanghai-2020-2093.md` — Шанхай  
-  - `regions/asia/cities/singapore-2020-2093.md` — Сингапур
-- СНГ:  
-  - `regions/cis/cities/moscow-2020-2093.md` — Москва  
-  - `regions/cis/cities/saint-petersburg-2020-2093.md` — Санкт-Петербург
-- Америка:  
-  - `regions/america/cities/los-angeles-2020-2093.md` — Лос-Анджелес  
-  - `regions/america/cities/new-york-2020-2093.md` — Нью-Йорк  
-  - `regions/america/cities/mexico-city-2020-2093.md` — Мехико  
-  - `regions/america/cities/sao-paulo-2020-2093.md` — Сан-Паулу
+### Европа
+- `regions/europe/cities/london-2020-2093.md` — Лондон
+- `regions/europe/cities/paris-2020-2093.md` — Париж
+- `regions/europe/cities/berlin-2020-2093.md` — Берлин
+- `regions/europe/cities/warsaw-2020-2093.md` — Варшава
+- `regions/europe/cities/istanbul-2020-2093.md` — Стамбул
+- `regions/europe/cities/amsterdam-2020-2093.md` — Амстердам
+- `regions/europe/cities/rome-2020-2093.md` — Рим
+- `regions/europe/cities/barcelona-2020-2093.md` — Барселона
+
+### Азия
+- `regions/asia/cities/tokyo-2020-2093.md` — Токио
+- `regions/asia/cities/shanghai-2020-2093.md` — Шанхай
+- `regions/asia/cities/singapore-2020-2093.md` — Сингапур
+- `regions/asia/cities/seoul-2020-2093.md` — Сеул
+- `regions/asia/cities/hong-kong-2020-2093.md` — Гонконг
+- `regions/asia/cities/bangkok-2020-2093.md` — Бангкок
+- `regions/asia/cities/delhi-2020-2093.md` — Дели
+- `regions/asia/cities/mumbai-2020-2093.md` — Мумбаи
+- `regions/asia/cities/jakarta-2020-2093.md` — Джакарта
+
+### СНГ
+- `regions/cis/cities/moscow-2020-2093.md` — Москва
+- `regions/cis/cities/saint-petersburg-2020-2093.md` — Санкт-Петербург
+- `regions/cis/cities/kazan-2020-2093.md` — Казань
+- `regions/cis/cities/novosibirsk-2020-2093.md` — Новосибирск
+- `regions/cis/cities/kyiv-2020-2093.md` — Киев
+- `regions/cis/cities/almaty-2020-2093.md` — Алматы
+- `regions/cis/cities/minsk-2020-2093.md` — Минск
+- `regions/cis/cities/tashkent-2020-2093.md` — Ташкент
+
+### Америка
+- `regions/america/cities/los-angeles-2020-2093.md` — Лос-Анджелес
+- `regions/america/cities/new-york-2020-2093.md` — Нью-Йорк
+- `regions/america/cities/mexico-city-2020-2093.md` — Мехико
+- `regions/america/cities/sao-paulo-2020-2093.md` — Сан-Паулу
+- `regions/america/cities/chicago-2020-2093.md` — Чикаго
+- `regions/america/cities/miami-2020-2093.md` — Майами
+- `regions/america/cities/toronto-2020-2093.md` — Торонто
+- `regions/america/cities/vancouver-2020-2093.md` — Ванкувер
+- `regions/america/cities/buenos-aires-2020-2093.md` — Буэнос-Айрес
+- `regions/america/cities/bogota-2020-2093.md` — Богота
+
+### Африка
+- `regions/africa/cities/lagos-2020-2093.md` — Лагос
+- `regions/africa/cities/cape-town-2020-2093.md` — Кейптаун
+- `regions/africa/cities/nairobi-2020-2093.md` — Найроби
+
+### Ближний Восток
+- `regions/middle-east/cities/dubai-2020-2093.md` — Дубай
+- `regions/middle-east/cities/tel-aviv-2020-2093.md` — Тель-Авив
+- `regions/middle-east/cities/riyadh-2020-2093.md` — Эр-Рияд
+
+### Океания
+- `regions/oceania/cities/sydney-2020-2093.md` — Сидней
+- `regions/oceania/cities/auckland-2020-2093.md` — Окленд
 
 ## Фракции
 
@@ -58,19 +101,16 @@
 - `factions/gangs-2020-2093.md` — Банды
 - `factions/nomads-2020-2093.md` — Номады
 
-## Примечания
+## Статистика
 
-- Это авторский канон NECPGAME, совместимый со стилем и духом Cyberpunk.
-- События поддерживают: живой мир, выбор и последствия, глобальные социальные механики, хардкорность.
-
-## Источники влияния
-
-- `01-concepts/core-pillars.md`, `vision.md`, `design-philosophy.md`, `vision-unique-features.md`
-- `03-lore/universe.md`
-- `04-narrative/quest-system.md`
+- **Регионы:** 7 (Европа, Азия, СНГ, Америка, Африка, Ближний Восток, Океания)
+- **Города:** 38 (8 Европа + 9 Азия + 8 СНГ + 10 Америка + 3 Африка + 3 Ближний Восток + 2 Океания)
+- **Фракции:** 3 (Корпорации, Банды, Номады)
+- **Временной охват:** 2020–2093 (73 года, ~1 лига)
 
 ## История изменений
 
+- v1.0.0 (2025-11-05) — Глубокая проработка: добавлены новые регионы (Африка, Ближний Восток, Океания) и расширены города всех регионов до 38
 - v0.3.0 (2025-11-05) — Добавлены города по регионам
 - v0.2.0 (2025-11-05) — Добавлены разделы Регионы и Фракции
 - v0.1.0 (2025-11-05) — Создан раздел и структура файлов
