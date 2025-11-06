@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит систему классовых способностей и "Свой путь".
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-050: api/v1/gameplay/progression/class-abilities.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:05
+---
+
 ## Система классов и подклассов
 
 **Решение (2025-11-03):** Гибридная система классов

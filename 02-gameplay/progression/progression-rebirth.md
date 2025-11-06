@@ -8,6 +8,14 @@
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-055: api/v1/gameplay/progression/rebirth.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:30
+---
+
 
 
 ## Система перерождений — ✅ Решение

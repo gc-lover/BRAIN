@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит список всех 10 основных классов из лора Cyberpunk с подклассами.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-049: api/v1/gameplay/progression/classes-canon.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:00
+---
+
 ## Основные классы из лора Cyberpunk
 
 Список классов из оригинального лора Cyberpunk 2020/Red для использования в игре.

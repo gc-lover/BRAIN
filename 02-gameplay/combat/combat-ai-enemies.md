@@ -5,6 +5,14 @@
 **Статус:** Ready for API
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-047: api/v1/gameplay/combat/ai-enemies.yaml (2025-11-06)
+- Last Updated: 2025-11-06 23:50
+---
+
+---
 
 ## 🤖 ФИЛОСОФИЯ AI
 

@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-048: api/v1/gameplay/progression/classes.yaml (2025-11-06)
+- Last Updated: 2025-11-06 23:55
+---
+
+---
 
 ## Карта документов (одна фича — один файл)
 

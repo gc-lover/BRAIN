@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит полный список общих навыков для всех классов.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-052: api/v1/gameplay/progression/general-skills.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:15
+---
+
 ## Общие навыки
 
 Универсальные навыки, доступные всем классам независимо от выбора класса или "Своего пути".

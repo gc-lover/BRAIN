@@ -1571,6 +1571,16 @@ documents:
     issues: []
     api_target: "api/v1/world/events/travel-all.yaml"
 
+  # 02-gameplay/world/ - Мировое состояние
+  - path: ".BRAIN/02-gameplay/world/world-state-player-impact.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Централизованный документ о влиянии игроков на глобальное состояние мира. Объединяет ВСЕ системы: экономику, политику, территории, фракции, события, социальные структуры, боевую систему, квесты, технологии. 10 систем влияния, 8 категорий world state, формулы накопления, пороги, балансировка."
+    issues: []
+    api_target: "api/v1/world/state.yaml"
+
   # 04-narrative/quests/main/ - Детальные узлы основных квестов
   - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
     status: "ready"

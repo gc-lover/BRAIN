@@ -8,6 +8,14 @@
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-046: api/v1/gameplay/combat/extraction.yaml (2025-11-06)
+- Last Updated: 2025-11-06 23:45
+---
+
 
 
 ## Концепция экстрактшутера
