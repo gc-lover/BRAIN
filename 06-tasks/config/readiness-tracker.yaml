@@ -1103,6 +1103,89 @@ documents:
     issues: []
     api_target: null
 
+  # Детализация экономики и крафта (v2.0.0 - 2025-11-06)
+  - path: ".BRAIN/02-gameplay/economy/economy-currencies-detailed.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "12 валют детально: Eurodollar, региональные, фракционные, крипто, premium (NO P2W). Курсы обмена, fees, caps. Готов к API."
+    issues: []
+    api_target: "api/v1/economy/currencies.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-resources-catalog.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "20+ ресурсов каталог: raw materials, electronics, bio/chem, data, components, exotic. Tier T1-T5, sources, values, uses. Готов к API."
+    issues: []
+    api_target: "api/v1/economy/resources.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-crafting-recipes.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "13 детальных рецептов: weapons, armor, implants, mods, consumables. Components, costs, time, success rates, progression T1-T5. Готов к API."
+    issues: []
+    api_target: "api/v1/economy/crafting.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-pricing-detailed.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "Pricing система: формулы, multipliers, dynamic pricing (supply/demand), regional/faction modifiers, AH mechanics, trade routes. Готов к API."
+    issues: []
+    api_target: "api/v1/economy/pricing.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-production-chains.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "Production chains: от руды до legendary. 3 полные цепочки, optimization strategies, bulk production, profitability analysis. Готов к API."
+    issues: []
+    api_target: "api/v1/economy/production.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/ECONOMY-EXPANSION-SUMMARY.md"
+    status: "not-applicable"
+    version: "2.0.0"
+    checked: "2025-11-06 05:15"
+    checker: "AI Agent"
+    notes: "Сводка детализации экономики. Документация, не для API."
+    issues: []
+    api_target: null
+
+  # Детализация социальных механик (v2.0.0 - 2025-11-06)
+  - path: ".BRAIN/02-gameplay/social/reputation-tiers-detailed.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:30"
+    checker: "AI Agent"
+    notes: "8 репутационных тиров (Hated → Legendary) с конкретными breakpoints, benefits, prices, access, titles. Faction-specific rewards. Gain/loss rates. Готов к API."
+    issues: []
+    api_target: "api/v1/social/reputation.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-catalog.md"
+    status: "ready"
+    version: "2.0.0"
+    checked: "2025-11-06 05:30"
+    checker: "AI Agent"
+    notes: "13 конкретных hireable NPCs (T1-T5): Bodyguards, Vendors, Ripperdocs, Fixers, Combat specialists. Costs, skills, abilities, ROI analysis. Legendary NPCs: Alt AI, Adam Smasher. Готов к API."
+    issues: []
+    api_target: "api/v1/social/npcs.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/SOCIAL-MECHANICS-EXPANSION-SUMMARY.md"
+    status: "not-applicable"
+    version: "2.0.0"
+    checked: "2025-11-06 05:30"
+    checker: "AI Agent"
+    notes: "Сводка детализации социальных механик. Документация, не для API."
+    issues: []
+    api_target: null
+
   - path: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
     status: "ready"
     version: "1.0.0"
