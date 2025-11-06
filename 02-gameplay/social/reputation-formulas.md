@@ -2,6 +2,10 @@
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-05 19:35  
 **api-readiness-notes:** Репутационные формулы: расчёт репутации фракций, влияние на DC, доступы, бонусы, штрафы, heat.
+
+**target-domain:** social  
+**target-microservice:** social-service (port 8084)  
+**target-frontend-module:** modules/social/reputation
 ---
 
 ---
