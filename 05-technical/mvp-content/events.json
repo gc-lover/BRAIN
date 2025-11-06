@@ -1,4 +1,18 @@
 {
+  "_metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-11-04",
+    "api_readiness": "ready",
+    "api_tasks": [
+      {
+        "task_id": "API-TASK-036",
+        "task_file": "API-SWAGGER/tasks/active/queue/task-036-random-events-api.md",
+        "target_api": "api/v1/events/random-events.yaml",
+        "status": "queued",
+        "created": "2025-11-06 22:00"
+      }
+    ]
+  },
   "events": {
     "random": [
       {
