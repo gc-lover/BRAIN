@@ -115,43 +115,39 @@ documents:
     api_target: null
 
   - path: ".BRAIN/02-gameplay/README.md"
-    status: "needs-work"
+    status: "not-applicable"
     version: null
-    checked: "2025-11-02 23:12"
-    checker: "AI Agent"
-    notes: "Служебный файл, обзор раздела. Ссылается на документы, которые еще не созданы. Документы с механиками (combat, progression и т.д.) отсутствуют, только описаны в README"
-    issues:
-      - "Документы с механиками (combat, progression и т.д.) отсутствуют"
+    checked: "2025-11-06 22:11"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный файл-индекс раздела игровых механик. Сам не содержит механик для API. Дочерние документы с механиками имеют свои статусы готовности (большинство ready после расширений)."
+    issues: []
     api_target: null
 
   - path: ".BRAIN/03-lore/README.md"
-    status: "needs-work"
+    status: "not-applicable"
     version: null
-    checked: "2025-11-02 23:12"
-    checker: "AI Agent"
-    notes: "Служебный файл, обзор раздела. Ссылается на документы, которые требуют доработки (TODO блоки в дочерних документах)"
-    issues:
-      - "Дочерние документы имеют TODO блоки и требуют доработки"
+    checked: "2025-11-06 22:11"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный файл-индекс раздела лора. Сам не содержит механик для API. Дочерние документы имеют свои статусы готовности. Раздел содержит полную энциклопедию мира (94 города, 7 регионов, 73 года истории)."
+    issues: []
     api_target: null
 
   - path: ".BRAIN/04-narrative/README.md"
-    status: "needs-work"
+    status: "not-applicable"
     version: null
-    checked: "2025-11-02 23:12"
-    checker: "AI Agent"
-    notes: "Служебный файл, обзор раздела. Документы с конкретными механиками (quest-system, branching-stories и т.д.) отсутствуют, только описаны в README"
-    issues:
-      - "Документы с конкретными механиками (quest-system, branching-stories и т.д.) отсутствуют"
+    checked: "2025-11-06 22:11"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный файл-индекс раздела литературной части проекта. Сам не содержит механик для API. Дочерние документы (quests, scenarios, npc-lore) имеют свои статусы готовности."
+    issues: []
     api_target: null
 
   - path: ".BRAIN/05-technical/README.md"
-    status: "needs-work"
+    status: "not-applicable"
     version: null
-    checked: "2025-11-02 23:12"
-    checker: "AI Agent"
-    notes: "Служебный файл, обзор раздела. Документы с техническими требованиями (endpoints, data-models и т.д.) отсутствуют, только описаны в README"
-    issues:
-      - "Документы с техническими требованиями (endpoints, data-models и т.д.) отсутствуют"
+    checked: "2025-11-06 22:11"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный файл-индекс раздела технических документов. Сам не содержит спецификаций для API. Дочерние документы (api-specs, mvp-data-json) имеют свои статусы готовности."
+    issues: []
     api_target: null
 
   - path: ".BRAIN/06-tasks/README.md"
