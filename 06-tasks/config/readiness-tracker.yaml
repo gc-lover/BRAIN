@@ -1674,6 +1674,25 @@ documents:
     issues: []
     api_target: "api/v1/global-state.yaml"
 
+  # 02-gameplay/economy/ - Дополнительные экономические механики (2025-11-06)
+  - path: ".BRAIN/02-gameplay/economy/economy-auction-house.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:06"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ детально проработан (1654 строки). Содержит все необходимые детали: механики размещения лотов, системы ордеров, комиссии, поиск/фильтрацию, историю цен, структуру БД (3 таблицы + materialized view), UI/UX концепцию, API endpoints. Готов к созданию API задач."
+    issues: []
+    api_target: "api/v1/economy/auction-house.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-player-market.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:06"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ детально проработан (1829 строк). Содержит все необходимые детали: систему ордеров (buy/sell), стакан заявок, исполнение ордеров (market/limit), частичное исполнение, комиссии, историю сделок, графики цен, структуру БД (2 таблицы + 2 materialized views), UI/UX концепцию, API endpoints (15+ REST + 3 WebSocket), торговые стратегии. Готов к созданию API задач."
+    issues: []
+    api_target: "api/v1/economy/player-market.yaml"
+
 # Примеры записей:
 #
 # documents:
