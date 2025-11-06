@@ -12,6 +12,48 @@
 
 ---
 
+## API Tasks Status
+
+**Статус:** Задания созданы  
+**Последнее обновление:** 2025-11-06 21:00
+
+**Созданные задания:**
+- **API-TASK-028:** Locations API - `api/v1/locations/locations.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-028-locations-api.md`
+  
+- **API-TASK-029:** Inventory API - `api/v1/inventory/inventory.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-029-inventory-api.md`
+  
+- **API-TASK-030:** Quests API - `api/v1/quests/quests.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-030-quests-api.md`
+  
+- **API-TASK-031:** NPCs and Dialogues API - `api/v1/npcs/npcs.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-031-npcs-dialogues-api.md`
+  
+- **API-TASK-032:** Combat API - `api/v1/combat/combat.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-032-combat-api.md`
+  
+- **API-TASK-033:** Trading API - `api/v1/trading/trading.yaml` (queued)
+  - Создано: 2025-11-06 19:01
+  - Файл задания: `tasks/active/queue/task-033-trading-api.md`
+  
+- **API-TASK-034:** Gameplay Actions API - `api/v1/gameplay/actions/actions.yaml` (queued)
+  - Создано: 2025-11-06 21:00
+  - Файл задания: `tasks/active/queue/task-034-gameplay-actions-api.md`
+  - Описание: API для выполнения игровых действий в локациях (explore, rest, use, hack)
+
+**Статус обработки:**
+- ✅ Документ проверен на готовность к созданию API задач
+- ✅ Созданы задания для всех основных систем
+- ⏳ Задания в очереди на выполнение
+
+---
+
 ## Общее описание
 
 Описание основного игрового интерфейса для текстовой веб-версии NECPGAME, который заменяет полноценный 3D мир системой меню и текстовых интерфейсов.
