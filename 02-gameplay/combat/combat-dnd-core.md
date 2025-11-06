@@ -2,6 +2,10 @@
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-06 18:25  
 **api-readiness-notes:** D&D система проверок полностью проработана (d20/d100, DC, модификаторы, критические успехи/провалы, 9 атрибутов, навыки, преимущества/помехи). Готово для создания API задач.
+
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/mechanics
 ---
 
 ---

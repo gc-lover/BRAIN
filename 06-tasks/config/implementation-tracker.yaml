@@ -434,8 +434,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/loot-system.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 01:20"
+    completed: "2025-11-07 01:45"
+    agent: "Backend Agent"
+    commit: "9068445"
     priority: "CRITICAL"
+    notes: "Generated from OpenAPI. 4 endpoints, LootApi, LootService, LootServiceImpl, LootController, 2 Entities, migration 062. Stubs with TODOs"
   frontend:
     status: "not_started"
     priority: "CRITICAL"
@@ -447,8 +452,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/trade-system.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 01:45"
+    completed: "2025-11-07 02:10"
+    agent: "Backend Agent"
+    commit: "62ff524"
     priority: "HIGH"
+    notes: "Generated from OpenAPI. 5 endpoints, TradeApi, TradeService, TradeServiceImpl, TradeController, TradeSessionEntity, migration 063. Stubs with TODOs"
   frontend:
     status: "not_started"
     priority: "HIGH"

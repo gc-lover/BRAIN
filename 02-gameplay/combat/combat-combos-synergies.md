@@ -4,6 +4,10 @@
 **Дата:** 2025-11-06  
 **Статус:** Ready for API
 
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/combos
+
 ---
 **API Tasks Status:**
 - Status: created
