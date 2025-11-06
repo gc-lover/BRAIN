@@ -2066,6 +2066,34 @@ documents:
     issues: []
     api_target: null
 
+  # 05-technical/backend/ - MVP Content Systems (2025-11-07)
+  - path: ".BRAIN/05-technical/backend/quest-engine-backend.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:30"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Quest Engine backend - микрофича (~400 строк). Quest state machine, dialogue tree execution, skill check processing (D&D dice rolls), branch selection, condition evaluation. Структура БД (quest_instances + dialogue_state + skill_check_results). БЕЗ ЭТОГО НЕТ КОНТЕНТА!"
+    issues: []
+    api_target: "api/v1/quests/engine.yaml"
+
+  - path: ".BRAIN/05-technical/backend/combat-session-backend.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:30"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Combat Session backend - микрофича (~400 строк). Combat instances, turn order, damage calculation, death handling, combat rewards. Структура БД (combat_sessions + combat_logs). БЕЗ ЭТОГО НЕТ БОЕВОГО ГЕЙМПЛЕЯ!"
+    issues: []
+    api_target: "api/v1/combat/session.yaml"
+
+  - path: ".BRAIN/05-technical/backend/progression-backend.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:30"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Progression backend - микрофича (~400 строк). Experience calculation/award, level up logic, attribute points distribution, skill experience tracking, skill level up. Структура БД (character_progression + skill_experience). БЕЗ ЭТОГО НЕТ ПРОГРЕССИИ!"
+    issues: []
+    api_target: "api/v1/progression.yaml"
+
 # Примеры записей:
 #
 # documents:
