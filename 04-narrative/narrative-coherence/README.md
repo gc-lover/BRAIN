@@ -195,6 +195,20 @@
 
 ---
 
+## Быстрый старт
+
+**Для обзора:**
+- [ФИНАЛЬНАЯ-СВОДКА.md](./ФИНАЛЬНАЯ-СВОДКА.md) - краткая сводка
+- [SUMMARY-FOR-USER.md](./SUMMARY-FOR-USER.md) - для пользователей
+- [ЧТО-СДЕЛАНО-ЧТО-ОСТАЛОСЬ.md](./ЧТО-СДЕЛАНО-ЧТО-ОСТАЛОСЬ.md) - статус
+
+**Для backend:**
+- [Step-by-Step Setup Part 1](./phase6-documentation/dev-guides/step-by-step-part1-setup.md)
+- [Troubleshooting Part 1](./phase6-documentation/dev-guides/troubleshooting-part1-common.md)
+- [Performance Part 1](./phase6-documentation/dev-guides/performance-part1-database.md)
+
+---
+
 ## Связанные документы
 
 ### Документы проекта
@@ -203,11 +217,6 @@
 - [Quest System](./../../quest-system.md)
 - [Quest D&D Checks](./../../quest-dnd-checks.md)
 - [Master Quest Index](./../../quests/MASTER-QUEST-INDEX.md)
-- [Branching Quests Summary](./../../quests/BRANCHING-QUESTS-SUMMARY.md)
-
-**Database:**
-- [Quest Branching Database Design](./../../06-tasks/active/CURRENT-WORK/active/2025-11-06-quest-branching-database-design.md)
-- [Global State System](./../../05-technical/backend/global-state-system.md)
 
 **Timeline:**
 - [Master Timeline Index](./../../03-lore/timeline/MASTER-TIMELINE-INDEX.md)
