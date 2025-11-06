@@ -19,6 +19,10 @@
 **api-readiness-check-date:** 2025-11-06 22:00  
 **api-readiness-notes:** Готов к review перед созданием API задач
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/currency-exchange
+
 ---
 
 ## Краткое описание

@@ -1,6 +1,10 @@
 ---
 **api-readiness:** ready
 **api-readiness-check-date:** 2025-11-06
+
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/trading
 ---
 
 ---

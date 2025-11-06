@@ -1,9 +1,29 @@
 # Realtime Server Architecture - Навигация
 
-**Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:20  
+**Версия:** 1.0.2  
+**Дата:** 2025-11-07  
 **Статус:** approved  
 **api-readiness:** ready
+
+---
+
+## Микросервисная архитектура
+
+**Ответственный микросервис:** world-service  
+**Порт:** 8086  
+**WebSocket маршрут:** `ws://localhost:8080/ws` (через API Gateway)  
+**Статус:** 📋 В планах (Фаза 3)
+
+**Взаимодействие с другими сервисами:**
+- gameplay-service: real-time combat events
+- character-service: player position updates
+- social-service: chat messages relay
+
+**WebSocket topics:**
+- `/topic/zone/{zoneId}/players` - игроки в зоне
+- `/topic/character/{characterId}/combat` - combat события
+- `/topic/zone/{zoneId}/chat` - zone chat
+- `/topic/world/events` - мировые события
 
 ---
 
