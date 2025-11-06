@@ -29,16 +29,16 @@
 ## Регионы
 
 - `regions/europe-2020-2093.md` — Европа (12 городов)
-- `regions/asia-2020-2093.md` — Азия (12 городов)
+- `regions/asia-2020-2093.md` — Азия (16 городов)
 - `regions/cis-2020-2093.md` — СНГ (8 городов)
-- `regions/america-2020-2093.md` — Америка (13 городов)
-- `regions/africa-2020-2093.md` — Африка (6 городов)
+- `regions/america-2020-2093.md` — Америка (15 городов)
+- `regions/africa-2020-2093.md` — Африка (9 городов)
 - `regions/middle-east-2020-2093.md` — Ближний Восток (5 городов)
 - `regions/oceania-2020-2093.md` — Океания (4 города)
 
 ## Города по регионам
 
-### Европа (12 городов)
+### Европа (15 городов)
 - `regions/europe/cities/london-2020-2093.md` — Лондон
 - `regions/europe/cities/paris-2020-2093.md` — Париж
 - `regions/europe/cities/berlin-2020-2093.md` — Берлин
@@ -51,8 +51,11 @@
 - `regions/europe/cities/stockholm-2020-2093.md` — Стокгольм
 - `regions/europe/cities/vienna-2020-2093.md` — Вена
 - `regions/europe/cities/athens-2020-2093.md` — Афины
+ - `regions/europe/cities/madrid-2020-2093.md` — Мадрид
+ - `regions/europe/cities/oslo-2020-2093.md` — Осло
+ - `regions/europe/cities/budapest-2020-2093.md` — Будапешт
 
-### Азия (12 городов)
+### Азия (16 городов)
 - `regions/asia/cities/tokyo-2020-2093.md` — Токио
 - `regions/asia/cities/shanghai-2020-2093.md` — Шанхай
 - `regions/asia/cities/singapore-2020-2093.md` — Сингапур
@@ -65,6 +68,10 @@
 - `regions/asia/cities/beijing-2020-2093.md` — Пекин
 - `regions/asia/cities/taipei-2020-2093.md` — Тайбэй
 - `regions/asia/cities/kuala-lumpur-2020-2093.md` — Куала-Лумпур
+ - `regions/asia/cities/dhaka-2020-2093.md` — Дакка
+ - `regions/asia/cities/karachi-2020-2093.md` — Карачи
+ - `regions/asia/cities/manila-2020-2093.md` — Манила
+ - `regions/asia/cities/ho-chi-minh-2020-2093.md` — Хошимин
 
 ### СНГ (8 городов)
 - `regions/cis/cities/moscow-2020-2093.md` — Москва
@@ -76,7 +83,7 @@
 - `regions/cis/cities/minsk-2020-2093.md` — Минск
 - `regions/cis/cities/tashkent-2020-2093.md` — Ташкент
 
-### Америка (13 городов)
+### Америка (15 городов)
 - `regions/america/cities/los-angeles-2020-2093.md` — Лос-Анджелес
 - `regions/america/cities/new-york-2020-2093.md` — Нью-Йорк
 - `regions/america/cities/mexico-city-2020-2093.md` — Мехико
@@ -90,14 +97,19 @@
 - `regions/america/cities/seattle-2020-2093.md` — Сиэтл
 - `regions/america/cities/havana-2020-2093.md` — Гавана
 - `regions/america/cities/lima-2020-2093.md` — Лима
+ - `regions/america/cities/rio-de-janeiro-2020-2093.md` — Рио-де-Жанейро
+ - `regions/america/cities/san-francisco-2020-2093.md` — Сан-Франциско
 
-### Африка (6 городов)
+### Африка (9 городов)
 - `regions/africa/cities/lagos-2020-2093.md` — Лагос
 - `regions/africa/cities/cape-town-2020-2093.md` — Кейптаун
 - `regions/africa/cities/nairobi-2020-2093.md` — Найроби
 - `regions/africa/cities/cairo-2020-2093.md` — Каир
 - `regions/africa/cities/kinshasa-2020-2093.md` — Киншаса
 - `regions/africa/cities/addis-ababa-2020-2093.md` — Аддис-Абеба
+ - `regions/africa/cities/johannesburg-2020-2093.md` — Йоханнесбург
+ - `regions/africa/cities/casablanca-2020-2093.md` — Касабланка
+ - `regions/africa/cities/accra-2020-2093.md` — Аккра
 
 ### Ближний Восток (5 городов)
 - `regions/middle-east/cities/dubai-2020-2093.md` — Дубай
@@ -121,14 +133,15 @@
 ## Финальная Статистика
 
 - **Регионы:** 7 (Европа, Азия, СНГ, Америка, Африка, Ближний Восток, Океания)
-- **Города:** 60 (12 Европа + 12 Азия + 8 СНГ + 13 Америка + 6 Африка + 5 Ближний Восток + 4 Океания)
+- **Города:** 79 (15 Европа + 16 Азия + 8 СНГ + 15 Америка + 9 Африка + 5 Ближний Восток + 4 Океания)
 - **Фракции:** 3 (Корпорации, Банды, Номады)
 - **Временной охват:** 2020–2093 (73 года, ~1 лига)
 - **Общий охват:** Глобальная сеть событий, покрывающая все континенты
 
 ## История изменений
 
-- v2.0.0 (2025-11-05) — Полное покрытие: добавлены недостающие города (Прага, Стокгольм, Вена, Афины, Каир, Киншаса, Аддис-Абеба, Мельбурн, Веллингтон, Иерусалим, Тегеран, Пекин, Тайбэй, Куала-Лумпур, Сиэтл, Гавана, Лима). Итого 60 городов.
+- v2.1.0 (2025-11-06) — Расширение покрытия: добавлены Дакка, Карачи, Манила, Хошимин (Азия); Йоханнесбург, Касабланка, Аккра (Африка); Мадрид, Осло, Будапешт (Европа); Рио-де-Жанейро, Сан-Франциско (Америка). Итого 79 городов.
+ - v2.0.0 (2025-11-05) — Полное покрытие: добавлены недостающие города (Прага, Стокгольм, Вена, Афины, Каир, Киншаса, Аддис-Абеба, Мельбурн, Веллингтон, Иерусалим, Тегеран, Пекин, Тайбэй, Куала-Лумпур, Сиэтл, Гавана, Лима). Итого 60 городов.
 - v1.0.0 (2025-11-05) — Глубокая проработка: добавлены новые регионы (Африка, Ближний Восток, Океания) и расширены города всех регионов до 38
 - v0.3.0 (2025-11-05) — Добавлены города по регионам
 - v0.2.0 (2025-11-05) — Добавлены разделы Регионы и Фракции
