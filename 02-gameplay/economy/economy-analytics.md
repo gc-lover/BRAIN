@@ -10,6 +10,10 @@
 **api-readiness-check-date:** 2025-11-06 22:23  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные механики аналитики и графиков: типы графиков, технические индикаторы, market sentiment, heat maps, portfolio analytics, trade history analysis, alerts, структуру БД, API endpoints. Все необходимые детали для создания API спецификации присутствуют.
 
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/analytics
+
 ---
 **API Tasks Status:**
 - Status: created

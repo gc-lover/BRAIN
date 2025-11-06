@@ -2,6 +2,10 @@
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-06 22:15  
 **api-readiness-notes:** Документ готов к созданию API задач. Фреймворк мировых событий определяет унифицированную логику событий по всем эпохам: DC-скейлинг, AI-слайдеры фракций, экономические множители, технологические доступы, генераторы событий (d100 таблицы), квестовые хуки. Все необходимые детали для создания API спецификации присутствуют.
+
+**target-domain:** world  
+**target-microservice:** world-service (port 8086)  
+**target-frontend-module:** modules/world/events
 ---
 ---
 **API Tasks Status:**

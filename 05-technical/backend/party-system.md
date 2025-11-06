@@ -18,7 +18,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 05:20  
+**Последнее обновление:** 2025-11-07 (обновлено для микросервисов)  
 **Приоритет:** высокий  
 **Автор:** AI Brain Manager
 
@@ -36,6 +36,24 @@
 - ✅ Loot settings (need/greed, personal, master looter)
 - ✅ Shared quest progress
 - ✅ Party chat integration
+
+---
+
+## Микросервисная архитектура
+
+**Ответственный микросервис:** social-service  
+**Порт:** 8084  
+**API Gateway маршрут:** `/api/v1/social/party/*`  
+**Статус:** 📋 В планах (Фаза 3)
+
+**Взаимодействие с другими сервисами:**
+- gameplay-service: shared quest progress
+- economy-service: loot distribution в party
+- matchmaking-service (gameplay): party queue для dungeons/raids
+
+**Event Bus события:**
+- Публикует: `party:created`, `party:member-joined`, `party:disbanded`, `party:loot-rolled`
+- Подписывается: `quest:objective-completed` (shared progress), `combat:loot-dropped` (distribute)
 
 ---
 

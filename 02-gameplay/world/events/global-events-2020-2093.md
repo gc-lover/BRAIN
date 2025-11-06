@@ -1,6 +1,10 @@
 ---
 **api-readiness:** ready
 **api-readiness-check-date:** 2025-11-06
+
+**target-domain:** world  
+**target-microservice:** world-service (port 8086)  
+**target-frontend-module:** modules/world/events
 ---
 
 ---
