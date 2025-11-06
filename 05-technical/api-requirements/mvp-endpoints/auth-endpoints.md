@@ -9,7 +9,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 06:05  
+**Последнее обновление:** 2025-11-07 (обновлено для микросервисов)  
 **Приоритет:** КРИТИЧЕСКИЙ (MVP)  
 **Автор:** AI Brain Manager
 
@@ -19,6 +19,21 @@
 
 ---
 
+## Микросервисная архитектура
+
+**Ответственный микросервис:** auth-service  
+**Порт:** 8081  
+**API Gateway:** http://localhost:8080  
+**Статус:** ✅ Реализовано
+
+**Маршрутизация:**
+```
+Frontend → http://localhost:8080/api/v1/auth/*
+  ↓ (API Gateway routing)
+auth-service (localhost:8081)
+  ↓
+Response → API Gateway → Frontend
+```
 
 **API Tasks Status:**
 - ✅ Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
