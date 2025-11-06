@@ -303,3 +303,88 @@ implementations:
     frontend:
       status: "not_started"
 
+  # === NEW CRITICAL SYSTEMS (2025-11-07 23:45) ===
+  # MVP Блокеры
+
+  - api_path: "api/v1/auth/authentication.yaml"
+    task_id: "API-TASK-126"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/players/player-management.yaml"
+    task_id: "API-TASK-127"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/inventory/inventory-management.yaml"
+    task_id: "API-TASK-128"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/loot/loot-system.yaml"
+    task_id: "API-TASK-129"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  # Tier 2 Systems
+
+  - api_path: "api/v1/trade/trade-system.yaml"
+    task_id: "API-TASK-130"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/mail/mail-system.yaml"
+    task_id: "API-TASK-131"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/party-system.yaml"
+    task_id: "API-TASK-132"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/friend-system.yaml"
+    task_id: "API-TASK-133"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/guild-system.yaml"
+    task_id: "API-TASK-134"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/notification-system.yaml"
+    task_id: "API-TASK-135"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
