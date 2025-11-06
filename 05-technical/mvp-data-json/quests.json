@@ -467,7 +467,7 @@
     {
       "id": "quest-main-2093-net-shift",
       "name": "Сдвиг Сети (2093)",
-      "description": "Элизабет сообщает о ‘серой стене’ — новом феномене на границе Blackwall. Нужно исследовать и обеспечить безопасность.",
+      "description": "Элизабет сообщает о 'серой стене' — новом феномене на границе Blackwall. Нужно исследовать и обеспечить безопасность.",
       "type": "main",
       "giverNpcId": "npc-elizabeth-chen",
       "level": 10,
@@ -480,6 +480,345 @@
       ],
       "rewards": { "experience": 900, "money": 1200, "items": [], "reputation": null },
       "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-main-2077-relics-shadow"] }
+    }
+    ,
+    {
+      "id": "quest-side-2030-supply-disruption",
+      "name": "Нарушение поставок (2030)",
+      "description": "Торговец Джейк Арчер просит разобраться с бандой, которая перехватывает его поставки между Downtown и Watson.",
+      "type": "side",
+      "giverNpcId": "npc-jake-archer",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Джейка", "type": "npc", "target": { "type": "npc", "id": "npc-jake-archer" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Исследовать место перехвата (Watson)", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-clear-bandits", "description": "Нейтрализовать бандитов (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-recover-goods", "description": "Вернуть украденный груз", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-return", "description": "Вернуться к Джейку", "type": "npc", "target": { "type": "npc", "id": "npc-jake-archer" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 280, "money": 380, "items": ["item-medkit-basic"], "reputation": { "faction": "independent", "amount": 5 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "perception", "dc": 12, "bonus": "reveal-ambush", "description": "Заметить засаду заранее" },
+          { "type": "cool", "dc": 13, "bonus": "negotiate", "description": "Договориться с бандитами без боя" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2040-red-dawn",
+      "name": "Красный рассвет (2040)",
+      "description": "Марко просит помочь эвакуировать выживших из зоны поражения после взрыва 2023. Руины опасны, но люди нуждаются в помощи.",
+      "type": "main",
+      "giverNpcId": "npc-marco-fix",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-move-ruins", "description": "Переместиться в руины Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-find-survivors", "description": "Найти выживших (3)", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-clear-path", "description": "Зачистить путь от угроз (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-escort", "description": "Сопроводить выживших в безопасное место", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 480, "money": 520, "items": ["item-components-basic"], "reputation": { "faction": "independent", "amount": 10 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-main-2035-free-city-charter"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 14, "bonus": "repair-shield", "description": "Починить защитные экраны для безопасного прохода" },
+          { "type": "medical", "dc": 12, "bonus": "heal-survivors", "description": "Оказать первую помощь выжившим (+XP)" }
+        ],
+        "environment": "red-dust-zone",
+        "hazards": ["radiation", "collapsed-buildings", "hostile-scavs"]
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2045-scav-problem",
+      "name": "Проблема скавов (2045)",
+      "description": "Рита Морено жалуется на скавов, охотящихся за имплантами в Watson. Нужно показать им, что этот район под защитой.",
+      "type": "side",
+      "giverNpcId": "npc-rita-moreno",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Риты", "type": "npc", "target": { "type": "npc", "id": "npc-rita-moreno" }, "quantity": 1 },
+        { "id": "obj-track", "description": "Выследить логово скавов", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-eliminate", "description": "Нейтрализовать скавов (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-evidence", "description": "Собрать доказательства (украденные импланты)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-return", "description": "Вернуться к Рите", "type": "npc", "target": { "type": "npc", "id": "npc-rita-moreno" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 340, "money": 420, "items": ["item-medkit-basic"], "reputation": { "faction": "independent", "amount": 8 } },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tracking", "dc": 13, "bonus": "find-hideout-fast", "description": "Быстро найти убежище скавов" },
+          { "type": "intimidation", "dc": 14, "bonus": "scare-off", "description": "Напугать скавов, чтобы они покинули район" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2050-network-recovery",
+      "name": "Восстановление Сети (2050)",
+      "description": "Элизабет Чен нанимает нетраннера для восстановления локальной сетевой инфраструктуры после DataKrash. Это опасно — старые ИИ могут быть все еще активны.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-access-node", "description": "Получить доступ к узлу (Downtown)", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-clear-corrupted", "description": "Очистить поврежденные данные (взлом)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 3 },
+        { "id": "obj-combat", "description": "Противостоять враждебным программам (боевые прокси)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-restore", "description": "Восстановить сетевой узел", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 520, "money": 640, "items": [], "reputation": { "faction": "independent", "amount": 12 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": ["quest-main-2040-red-dawn"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "int", "dc": 15, "bonus": "bypass-firewall", "description": "Обойти старые файрволы" },
+          { "type": "tech", "dc": 14, "bonus": "repair-node", "description": "Починить физические повреждения узла" }
+        ],
+        "netrunnerRequired": true
+      }
+    }
+    ,
+    {
+      "id": "quest-faction-6th-street-2055",
+      "name": "Патриотический долг (2055)",
+      "description": "6th Street просит помощи в защите Santo Domingo от банд. Они позиционируют себя как защитники простых людей.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-patrol", "description": "Патрулировать Santo Domingo", "type": "location", "target": { "type": "location", "id": "loc-santo-domingo-001" }, "quantity": 1 },
+        { "id": "obj-engage", "description": "Отразить нападение банды (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-return", "description": "Отчитаться перед Анной", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 420, "money": 480, "items": [], "reputation": { "faction": "6th-street", "amount": 15 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tactics", "dc": 14, "bonus": "ambush-setup", "description": "Организовать засаду для банды" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2060-corp-return",
+      "name": "Возвращение корпораций (2060)",
+      "description": "Сара Миллер сообщает о возвращении корпоративного присутствия в городе. NCPD нужна помощь в мониторинге ситуации.",
+      "type": "main",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-surveillance", "description": "Провести наблюдение в Westbrook", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-gather-intel", "description": "Собрать корпоративные данные", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-confront", "description": "Противостоять корпоративным оперативникам (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 540, "money": 660, "items": [], "reputation": { "faction": "ncpd", "amount": 10 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": ["quest-main-2050-network-recovery"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "stealth", "dc": 15, "bonus": "undetected", "description": "Провести наблюдение незаметно" },
+          { "type": "cool", "dc": 14, "bonus": "talk-down", "description": "Договориться с оперативниками" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2065-implant-rush",
+      "name": "Имплант-лихорадка (2065)",
+      "description": "Виктор Вектор обеспокоен ростом случаев киберпсихоза из-за новых военных имплантов. Нужно найти источник и остановить нелегальную торговлю.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Расследовать случаи в Watson", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-find-dealer", "description": "Найти торговца нелегальными имплантами", "type": "npc", "target": { "type": "npc", "id": "npc-gangster-generic" }, "quantity": 1 },
+        { "id": "obj-confront-supplier", "description": "Противостоять поставщикам (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-confiscate", "description": "Конфисковать опасные импланты", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 580, "money": 720, "items": ["item-components-basic"], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "medical", "dc": 15, "bonus": "identify-implant", "description": "Определить происхождение имплантов" },
+          { "type": "intimidation", "dc": 14, "bonus": "scare-dealer", "description": "Напугать торговца для получения информации" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2070-nusa-tensions",
+      "name": "Напряжение с NUSA (2070)",
+      "description": "Элизабет Чен предупреждает о растущих противоречиях между Найт-Сити и NUSA. Нужно собрать разведданные о возможной интервенции.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-meet-informant", "description": "Встретиться с информатором (Downtown)", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-infiltrate", "description": "Проникнуть в NUSA представительство", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-steal-data", "description": "Украсть разведданные", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 2 },
+        { "id": "obj-escape", "description": "Избежать преследования (4 агента)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 640, "money": 800, "items": [], "reputation": { "faction": "independent", "amount": 20 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-main-2060-corp-return"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "stealth", "dc": 16, "bonus": "silent-infiltration", "description": "Проникнуть незаметно" },
+          { "type": "int", "dc": 15, "bonus": "hack-terminal", "description": "Взломать защищенный терминал" },
+          { "type": "cool", "dc": 16, "bonus": "bluff-guards", "description": "Обмануть охрану" }
+        ],
+        "highRisk": true
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2075-street-war",
+      "name": "Уличная война (2075)",
+      "description": "Марко просит вмешаться в конфликт между Valentinos и Maelstrom, который угрожает перерасти в полномасштабную войну.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Расследовать причины конфликта", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-meet-valentinos", "description": "Встретиться с представителем Valentinos", "type": "npc", "target": { "type": "npc", "id": "npc-jose-tiger" }, "quantity": 1 },
+        { "id": "obj-choice", "description": "Сделать выбор: помочь одной стороне или остановить конфликт", "type": "choice", "target": null, "quantity": 1 },
+        { "id": "obj-combat", "description": "Участвовать в схватке (5 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 680, "money": 860, "items": [], "reputation": { "faction": "valentinos", "amount": 15 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "mediate", "description": "Выступить посредником и остановить войну" },
+          { "type": "intimidation", "dc": 16, "bonus": "threat", "description": "Угрозой заставить обе стороны отступить" }
+        ],
+        "choice": {
+          "optionA": { "side": "valentinos", "reputation": { "valentinos": 20, "maelstrom": -20 } },
+          "optionB": { "side": "maelstrom", "reputation": { "maelstrom": 20, "valentinos": -20 } },
+          "optionC": { "side": "neutral", "reputation": { "independent": 15 } }
+        }
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2080-corporate-shadow",
+      "name": "Корпоративная тень (2080)",
+      "description": "Сара Миллер расследует серию убийств, связанных с корпоративными экспериментами. NCPD нужна помощь того, кто не боится копать глубоко.",
+      "type": "main",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-crime-scene", "description": "Осмотреть место преступления (Downtown)", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-gather-clues", "description": "Собрать улики", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 3 },
+        { "id": "obj-trace", "description": "Выследить корпоративную лабораторию (Westbrook)", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-infiltrate-lab", "description": "Проникнуть в лабораторию", "type": "location", "target": { "type": "location", "id": "loc-westbrook-001" }, "quantity": 1 },
+        { "id": "obj-combat-guards", "description": "Противостоять охране (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-destroy-evidence", "description": "Уничтожить незаконные эксперименты", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 760, "money": 980, "items": ["item-components-basic"], "reputation": { "faction": "ncpd", "amount": 20 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-main-2070-nusa-tensions"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "perception", "dc": 16, "bonus": "find-hidden-clues", "description": "Найти скрытые улики" },
+          { "type": "tech", "dc": 17, "bonus": "hack-security", "description": "Взломать систему безопасности" },
+          { "type": "medical", "dc": 15, "bonus": "analyze-experiments", "description": "Проанализировать эксперименты" }
+        ],
+        "morality": "grey-area"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2085-nomad-passage",
+      "name": "Проход номадов (2085)",
+      "description": "Анна Петрова просит помочь номадам, которые хотят пройти через Найт-Сити. Некоторые банды против этого.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-meet-nomads", "description": "Встретиться с номадами на окраине", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-negotiate", "description": "Договориться с бандами о безопасном проходе", "type": "npc", "target": { "type": "npc", "id": "npc-jose-tiger" }, "quantity": 1 },
+        { "id": "obj-escort", "description": "Сопроводить конвой через город", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-defend", "description": "Защитить номадов от нападения (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 620, "money": 760, "items": [], "reputation": { "faction": "nomads", "amount": 20 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 16, "bonus": "peaceful-passage", "description": "Договориться о безопасном проходе" },
+          { "type": "driving", "dc": 15, "bonus": "fast-escort", "description": "Быстро провести конвой" }
+        ]
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2090-simulation-whispers",
+      "name": "Шепот симуляции (2090)",
+      "description": "Виктор Вектор получил странные данные от пациента: упоминания о 'границах мира' и 'симуляции'. Нужно разобраться, что это значит.",
+      "type": "main",
+      "giverNpcId": "npc-victor-vector",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-find-patient", "description": "Найти пациента (Watson)", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-interview", "description": "Допросить пациента", "type": "npc", "target": { "type": "npc", "id": "npc-gangster-generic" }, "quantity": 1 },
+        { "id": "obj-access-net", "description": "Получить доступ к глубоким слоям Сети", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-uncover", "description": "Раскрыть аномалии в данных", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 3 },
+        { "id": "obj-face-truth", "description": "Противостоять защитникам симуляции (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Вернуться к Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 940, "money": 1300, "items": [], "reputation": null },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-main-2080-corporate-shadow"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "int", "dc": 18, "bonus": "understand-simulation", "description": "Понять природу симуляции" },
+          { "type": "cool", "dc": 17, "bonus": "resist-madness", "description": "Сопротивляться безумию от истины" }
+        ],
+        "storyImpact": "high",
+        "philosophy": "simulation-theory"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2092-final-stand",
+      "name": "Последний рубеж (2092)",
+      "description": "Марко просит помощи в защите Watson от окончательного захвата корпорациями. Это может быть последний шанс сохранить независимость района.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-rally", "description": "Собрать ополчение из местных", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-fortify", "description": "Укрепить оборону района", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 5 },
+        { "id": "obj-first-wave", "description": "Отразить первую волну (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-second-wave", "description": "Отразить вторую волну (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-boss-fight", "description": "Победить корпоративного лидера", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1100, "money": 1500, "items": ["item-components-basic"], "reputation": { "faction": "independent", "amount": 30 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "leadership", "dc": 18, "bonus": "inspire-militia", "description": "Вдохновить ополчение на бой" },
+          { "type": "tactics", "dc": 17, "bonus": "defense-strategy", "description": "Разработать эффективную стратегию обороны" }
+        ],
+        "epicBattle": true,
+        "multipleWaves": true
+      }
     }
     ,
     {
