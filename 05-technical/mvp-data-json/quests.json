@@ -1534,6 +1534,318 @@
         "epoch": "2077-2093"
       }
     }
+    ,
+    {
+      "id": "quest-main-2027-rebuild-protocol",
+      "name": "Протокол восстановления (2027)",
+      "description": "DataKrash оставил слепые зоны в МАКСТАК. Восстановить узлы связи и защитить их от рейдов.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-restore-nodes", "description": "Восстановить узлы связи (×3)", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 3 },
+        { "id": "obj-defend", "description": "Отразить рейд (5 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 420, "money": 550, "items": ["item-cyberdeck-basic"], "reputation": { "faction": "netwatch", "amount": 15 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-main-2023-shattered-city"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 14, "bonus": "fast-repair", "description": "Быстрый ремонт", "successEffects": { "timeReduction": 10, "xpBonus": 40 } },
+          { "type": "hacking", "dc": 14, "bonus": "secure-nodes", "description": "Защитить узлы", "successEffects": { "reduceEnemies": 2 } }
+        ],
+        "epoch": "2020-2030",
+        "theme": "post-datakrash-recovery"
+      }
+    }
+    ,
+    {
+      "id": "quest-faction-valentinos-2028-chapel",
+      "name": "Часовня Валентинос (2028)",
+      "description": "Валентинос просят помочь защитить часовню от налёта Maelstrom.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-fortify", "description": "Укрепить периметр", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-repel", "description": "Отразить налёт (6 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 380, "money": 500, "items": [], "reputation": { "faction": "valentinos", "amount": 25 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tactics", "dc": 13, "bonus": "defensive-position", "description": "Оборонительная позиция", "successEffects": { "reduceEnemies": 3 } },
+          { "type": "cool", "dc": 14, "bonus": "rally-defenders", "description": "Сплотить защитников", "successEffects": { "xpBonus": 50 } }
+        ],
+        "factionRequired": "valentinos",
+        "epoch": "2020-2030"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2033-dome-tax",
+      "name": "Налоговый спор в куполе (2033)",
+      "description": "DAO купола требует дополнительный налог. Жители сопротивляются.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Расследовать претензии", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-mediate", "description": "Посредничество (соц/бой)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Доложить Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 480, "money": 620, "items": [], "reputation": { "faction": "ncpd", "amount": 12 } },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 15, "bonus": "negotiate", "description": "Переговоры", "successEffects": { "reduceEnemies": 3, "xpBonus": 60 } },
+          { "type": "investigation", "dc": 14, "bonus": "find-corruption", "description": "Раскрыть коррупцию", "successEffects": { "xpBonus": 80 } }
+        ],
+        "epoch": "2030-2045",
+        "theme": "dome-governance"
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2042-underground-map",
+      "name": "Карты подземелья (2042)",
+      "description": "Картография Низа открывает новые экстракт-маршруты. Нужно их разведать.",
+      "type": "main",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-scout-routes", "description": "Разведать маршруты (×4)", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 4 },
+        { "id": "obj-clear-scavs", "description": "Зачистить Scavs (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-scav" }, "quantity": 8 },
+        { "id": "obj-map-data", "description": "Передать данные карты", "type": "item", "target": { "type": "item", "id": "item-map-data" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 600, "money": 800, "items": ["item-map-data"], "reputation": { "faction": "nomads", "amount": 20 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-main-2035-free-city-charter"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "perception", "dc": 16, "bonus": "hidden-passages", "description": "Найти скрытые проходы", "successEffects": { "xpBonus": 80 } },
+          { "type": "stealth", "dc": 15, "bonus": "avoid-patrols", "description": "Избежать патрулей", "successEffects": { "reduceEnemies": 4 } }
+        ],
+        "epoch": "2030-2045",
+        "theme": "underground-exploration"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2048-warm-corridors",
+      "name": "Тёплые коридоры (2048)",
+      "description": "Инфраструктурные операции в тёплых коридорах города. Ремонт и оборона.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-repair", "description": "Починить системы (×3)", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 3 },
+        { "id": "obj-defend", "description": "Защитить от налёта (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 680, "money": 900, "items": [], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 16, "bonus": "efficient-repair", "description": "Эффективный ремонт", "successEffects": { "timeReduction": 12, "xpBonus": 60 } },
+          { "type": "perception", "dc": 15, "bonus": "early-warning", "description": "Раннее предупреждение", "successEffects": { "reduceEnemies": 2 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "infrastructure"
+      }
+    }
+    ,
+    {
+      "id": "quest-faction-arasaka-2055-blackwall-breach",
+      "name": "Брешь в Blackwall (2055)",
+      "description": "Arasaka обнаружила брешь в Blackwall. Исследовать и нейтрализовать угрозу.",
+      "type": "main",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-scan-breach", "description": "Сканировать брешь", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-combat-ai", "description": "Сразиться с AI прокси (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 6 },
+        { "id": "obj-seal-breach", "description": "Запечатать брешь", "type": "item", "target": { "type": "item", "id": "item-blackwall-data" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 850, "money": 1100, "items": ["item-blackwall-data"], "reputation": { "faction": "arasaka", "amount": 30 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-main-2040-red-dawn"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "int", "dc": 17, "bonus": "analyze-breach", "description": "Анализ бреши", "successEffects": { "xpBonus": 100 } },
+          { "type": "netrunning-combat", "dc": 18, "bonus": "quick-seal", "description": "Быстрая герметизация", "successEffects": { "reduceEnemies": 3, "xpBonus": 120 } }
+        ],
+        "factionRequired": "arasaka",
+        "epoch": "2045-2060",
+        "theme": "blackwall-operations"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2058-red-market-auction",
+      "name": "Аукцион красного рынка (2058)",
+      "description": "Редкий имплант на аукционе. Получить его любой ценой.",
+      "type": "side",
+      "giverNpcId": "npc-victor-vector",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-enter-auction", "description": "Попасть на аукцион", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-win-bid", "description": "Выиграть ставку (соц/кража)", "type": "item", "target": { "type": "item", "id": "item-implant-rare" }, "quantity": 1 },
+        { "id": "obj-escape", "description": "Покинуть локацию", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доставить имплант Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 750, "money": 1000, "items": ["item-implant-rare"], "reputation": { "faction": "independent", "amount": 18 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "win-auction", "description": "Выиграть аукцион", "successEffects": { "moneyBonus": 300 } },
+          { "type": "stealth", "dc": 18, "bonus": "steal-implant", "description": "Украсть имплант", "successEffects": { "skipCombat": true, "xpBonus": 100 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "black-market"
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2065-gray-theater",
+      "name": "Серый театр (2065)",
+      "description": "Прокси-война между корпорациями. Оффлайн-рейды и тайные операции.",
+      "type": "main",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-infiltrate", "description": "Проникнуть на объект", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-sabotage", "description": "Саботировать операцию", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-eliminate", "description": "Устранить охрану (7)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 7 },
+        { "id": "obj-escape", "description": "Уйти незамеченным", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Доложить Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 920, "money": 1200, "items": ["item-corporate-data"], "reputation": { "faction": "ncpd", "amount": 22 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": ["quest-faction-arasaka-2055-blackwall-breach"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "stealth", "dc": 18, "bonus": "silent-infiltration", "description": "Тихое проникновение", "successEffects": { "reduceEnemies": 4 } },
+          { "type": "tech", "dc": 17, "bonus": "quick-sabotage", "description": "Быстрый саботаж", "successEffects": { "timeReduction": 15 } },
+          { "type": "cool", "dc": 17, "bonus": "nerves-of-steel", "description": "Стальные нервы", "successEffects": { "xpBonus": 100 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "proxy-war"
+      }
+    }
+    ,
+    {
+      "id": "quest-faction-militech-2070-border-conflict",
+      "name": "Пограничный конфликт (2070)",
+      "description": "Militech просит помочь в столкновении на границе с Arasaka.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-reach-border", "description": "Достичь границы", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-engage", "description": "Вступить в бой (9)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 9 },
+        { "id": "obj-secure-zone", "description": "Удержать зону", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1020, "money": 1350, "items": ["item-weapon-advanced"], "reputation": { "faction": "militech", "amount": 35 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tactics", "dc": 18, "bonus": "tactical-superiority", "description": "Тактическое преимущество", "successEffects": { "reduceEnemies": 4 } },
+          { "type": "gunplay", "dc": 18, "bonus": "accurate-fire", "description": "Точная стрельба", "successEffects": { "xpBonus": 120 } }
+        ],
+        "factionRequired": "militech",
+        "epoch": "2060-2077",
+        "theme": "corporate-war"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2075-reality-artifact",
+      "name": "Артефакт реальности (2075)",
+      "description": "Грань намёков: обнаружен артефакт с аномальными свойствами.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-locate", "description": "Найти артефакт", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Исследовать свойства", "type": "item", "target": { "type": "item", "id": "item-relic-fragment" }, "quantity": 1 },
+        { "id": "obj-defend", "description": "Защитить от охотников (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-return", "description": "Доставить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 980, "money": 1280, "items": ["item-relic-fragment"], "reputation": { "faction": "independent", "amount": 25 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "int", "dc": 18, "bonus": "understand-artifact", "description": "Понять артефакт", "successEffects": { "xpBonus": 140 } },
+          { "type": "perception", "dc": 17, "bonus": "detect-hunters", "description": "Обнаружить охотников", "successEffects": { "reduceEnemies": 3 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "reality-anomalies"
+      }
+    }
+    ,
+    {
+      "id": "quest-main-2082-parameter-fair",
+      "name": "Параметрическая ярмарка (2082)",
+      "description": "Первая параметрическая ярмарка. Голосование за параметры мира.",
+      "type": "main",
+      "giverNpcId": "npc-victor-vector",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Виктора", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-attend", "description": "Посетить ярмарку", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-vote", "description": "Проголосовать за параметры", "type": "item", "target": { "type": "item", "id": "item-vote-token" }, "quantity": 1 },
+        { "id": "obj-prevent-sabotage", "description": "Предотвратить саботаж (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-return", "description": "Доложить Виктору", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1100, "money": 1400, "items": [], "reputation": { "faction": "independent", "amount": 30 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-main-2077-relics-shadow"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 18, "bonus": "influence-vote", "description": "Повлиять на голосование", "successEffects": { "xpBonus": 150 } },
+          { "type": "perception", "dc": 19, "bonus": "detect-sabotage", "description": "Обнаружить саботаж", "successEffects": { "reduceEnemies": 4 } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "meta-governance"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2088-archive-expedition",
+      "name": "Экспедиция за заслон (2088)",
+      "description": "Архивы за Blackwall. Высокорисковая экспедиция за артефактами.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-cross-blackwall", "description": "Пересечь Blackwall", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-fight-ai", "description": "Сразиться с AI (10)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 10 },
+        { "id": "obj-retrieve", "description": "Забрать артефакты (×3)", "type": "item", "target": { "type": "item", "id": "item-blackwall-data" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1250, "money": 1600, "items": ["item-blackwall-data"], "reputation": { "faction": "netwatch", "amount": 40 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "netrunning-combat", "dc": 20, "bonus": "survive-ai", "description": "Выжить против AI", "successEffects": { "reduceEnemies": 5, "xpBonus": 180 } },
+          { "type": "cool", "dc": 19, "bonus": "resist-madness", "description": "Сопротивление безумию", "successEffects": { "statusProtection": "insanity" } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "beyond-blackwall"
+      }
+    }
   ]
 }
 
