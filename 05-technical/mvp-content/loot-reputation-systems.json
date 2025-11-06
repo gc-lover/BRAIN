@@ -132,6 +132,26 @@
           }
         ]
       }
+      ,
+      "npc-elite-guardian": {
+        "name": "Элитный страж (эндгейм)",
+        "level": "10-12",
+        "lootPools": [
+          { "type": "guaranteed", "items": [ { "id": "money-eddies", "min": 250, "max": 500 }, { "id": "xp-bonus", "amount": 120 } ] },
+          { "type": "uncommon", "chance": 0.6, "items": [ { "id": "item-weapon-elite", "chance": 0.25 }, { "id": "item-armor-advanced", "chance": 0.2 } ] },
+          { "type": "rare", "chance": 0.2, "items": [ { "id": "item-implant-military", "chance": 0.12 }, { "id": "item-blackwall-data", "chance": 0.08 } ] }
+        ]
+      }
+      ,
+      "npc-relic-carrier": {
+        "name": "Носитель Реликта",
+        "level": "9-11",
+        "lootPools": [
+          { "type": "guaranteed", "items": [ { "id": "item-relic-data", "chance": 1.0 } ] },
+          { "type": "uncommon", "chance": 0.5, "items": [ { "id": "money-eddies", "min": 200, "max": 600 } ] },
+          { "type": "rare", "chance": 0.15, "items": [ { "id": "item-implant-experimental", "chance": 0.1 } ] }
+        ]
+      }
     },
     "containers": {
       "container-generic-trash": {
@@ -206,6 +226,14 @@
             "faction-quest": 1.1,
             "class-quest": 0.95
           }
+        }
+        ,
+        "endgame": {
+          "description": "Модификаторы наград поздней игры (уровни 9-12)",
+          "experienceMultiplierByLevel": { "9": 1.05, "10": 1.1, "11": 1.15, "12": 1.2 },
+          "moneyMultiplierByLevel": { "9": 1.05, "10": 1.1, "11": 1.15, "12": 1.25 },
+          "peacefulResolutionBonus": 0.1,
+          "highRiskBonus": 0.2
         }
       }
     }
@@ -349,12 +377,22 @@
         "multipliers": {
           "quest-completion": 1.0,
           "critical-success": 1.5,
-          "repeated-action": 0.5
+          "repeated-action": 0.5,
+          "endgame-choice-truth": 1.3,
+          "endgame-choice-stability": 1.2
         },
         "caps": {
           "daily-max-per-faction": 50,
           "single-action-max": 25
         }
+      },
+      "reputation-conversion": {
+        "description": "Учет конфликтов фракций: прирост одной снижает прирост другой",
+        "rules": [
+          { "gainFaction": "corporations", "affectedFaction": "nomads", "factor": 0.7 },
+          { "gainFaction": "ncpd", "affectedFaction": "valentinos", "factor": 0.5 },
+          { "gainFaction": "ncpd", "affectedFaction": "maelstrom", "factor": 0.5 }
+        ]
       },
       "reputation-decay": {
         "enabled": false,

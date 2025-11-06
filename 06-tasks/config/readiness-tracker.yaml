@@ -575,6 +575,51 @@ documents:
     issues: []
     api_target: "api/v1/quests/side/2020-2030.yaml"
 
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2030-2045.json"
+    status: "in-review"
+    version: "2.0.0"
+    checked: "2025-11-06 03:20"
+    checker: "AI Agent"
+    notes: "JSON квестов 2030–2045: 12 квестов-скелетов с полями диалогов, проверок, лута и репутации."
+    issues: []
+    api_target: "api/v1/quests/side/2030-2045.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2045-2060.json"
+    status: "in-review"
+    version: "2.0.0"
+    checked: "2025-11-06 03:20"
+    checker: "AI Agent"
+    notes: "JSON квестов 2045–2060: 12 квестов-скелетов с полями диалогов, проверок, лута и репутации."
+    issues: []
+    api_target: "api/v1/quests/side/2045-2060.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2060-2077.json"
+    status: "in-review"
+    version: "2.0.0"
+    checked: "2025-11-06 03:20"
+    checker: "AI Agent"
+    notes: "JSON квестов 2060–2077: 12 квестов-скелетов с полями диалогов, проверок, лута и репутации."
+    issues: []
+    api_target: "api/v1/quests/side/2060-2077.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2078-2090.json"
+    status: "in-review"
+    version: "2.0.0"
+    checked: "2025-11-06 03:20"
+    checker: "AI Agent"
+    notes: "JSON квестов 2078–2090: 12 квестов-скелетов с полями диалогов, проверок, лута и репутации."
+    issues: []
+    api_target: "api/v1/quests/side/2078-2090.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2090-2093.json"
+    status: "in-review"
+    version: "2.0.0"
+    checked: "2025-11-06 03:20"
+    checker: "AI Agent"
+    notes: "JSON квестов 2090–2093: 12 квестов-скелетов с полями диалогов, проверок, лута и репутации."
+    issues: []
+    api_target: "api/v1/quests/side/2090-2093.yaml"
+
   # 02-gameplay/combat/ - Боевая система
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     status: "ready"
