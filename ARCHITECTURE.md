@@ -241,6 +241,14 @@
 │   ├── active/                        # Активные задания
 │   │   └── TODO.md                    # Список задач
 │   ├── completed/                    # Выполненные задания
+│   ├── config/                        # Конфигурация и трекеры
+│   │   ├── readiness-tracker.yaml    # Трекер готовности документов
+│   │   ├── implementation-tracker.yaml # Трекер реализации backend/frontend
+│   │   ├── STATUSES-GUIDE.md         # Справочник систем статусов
+│   │   ├── WORKFLOW-DETAILS.md       # Детали воркфлоу агентов
+│   │   └── TEMPLATES-GUIDE.md        # Справочник шаблонов
+│   ├── ideas/                         # Идеи проекта
+│   │   └── IDEA-TEMPLATE.md          # Шаблон идеи
 │   └── templates/                     # Шаблоны заданий
 │
 ├── 07-research/                       # Исследования и анализ
@@ -322,6 +330,35 @@
 - `review` - на проверке
 - `approved` - утвержден
 - `deprecated` - устарел
+
+### 6. Шаблоны документов
+
+**ОБЯЗАТЕЛЬНОЕ правило:** Перед массовым созданием однотипных документов (3+) необходимо создать шаблон.
+
+**Где хранятся шаблоны:**
+1. **В этом файле** (ARCHITECTURE.md) - основное хранилище с описанием всех шаблонов
+2. **В соответствующих директориях** - файлы `[ТИП]-TEMPLATE.md`
+
+**Существующие шаблоны:**
+- **IDEA-TEMPLATE.md** (`.BRAIN/06-tasks/ideas/IDEA-TEMPLATE.md`) - шаблон для идей
+- **NPC-TEMPLATE.md** (`.BRAIN/04-narrative/npc-lore/NPC-TEMPLATE.md`) - шаблон для описания NPC
+
+**Планируемые шаблоны:**
+- QUEST-TEMPLATE.md - для квестов (в разработке)
+- LOCATION-TEMPLATE.md - для локаций (в разработке)
+- FACTION-TEMPLATE.md - для фракций (в разработке)
+
+**Подробнее о шаблонах:** См. [TEMPLATES-GUIDE.md](./06-tasks/config/TEMPLATES-GUIDE.md)
+
+### 7. Системы отслеживания
+
+**В проекте используется 3 системы отслеживания:**
+
+1. **readiness-tracker.yaml** (`06-tasks/config/`) - готовность документов к созданию API
+2. **brain-mapping.yaml** (`API-SWAGGER/tasks/config/`) - связи .BRAIN → задания API
+3. **implementation-tracker.yaml** (`06-tasks/config/`) - статусы реализации backend/frontend
+
+**Подробнее:** См. [STATUSES-GUIDE.md](./06-tasks/config/STATUSES-GUIDE.md)
 
 ## Формат документов
 

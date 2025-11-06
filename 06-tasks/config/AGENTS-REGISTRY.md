@@ -4,7 +4,61 @@
 **api-readiness-check-date:** 2025-11-03 00:04  
 **api-readiness-notes:** Служебный конфигурационный файл, описывает агентов проекта и их правила, не предназначен для создания API
 
-**Назначение:** Документ содержит список всех агентов проекта и их правила
+**Назначение:** Документ содержит список всех агентов проекта, их правила и воркфлоу взаимодействия
+
+---
+
+## Воркфлоу агентов
+
+Полная цепочка разработки от идеи до реализации:
+
+```
+ИДЕЯ → МЕНЕДЖЕР → Brain Readiness Checker → ДУАПИТАСК → АПИТАСК → БЭКТАСК → ФРОНТТАСК → ✅ ГОТОВАЯ ФИЧА
+```
+
+**Подробное описание:** См. [DEVELOPMENT-WORKFLOW.md](../../../DEVELOPMENT-WORKFLOW.md)
+
+---
+
+## Системы отслеживания
+
+Проект использует **3 системы отслеживания** статусов на разных этапах воркфлоу:
+
+### 1. readiness-tracker.yaml
+
+**Расположение:** `.BRAIN/06-tasks/config/readiness-tracker.yaml`  
+**Назначение:** Отслеживание готовности документов .BRAIN к созданию API задач  
+**Кто обновляет:** МЕНЕДЖЕР, Brain Readiness Checker  
+**Статусы:** ready, needs-work, blocked, in-review, not-applicable
+
+### 2. brain-mapping.yaml
+
+**Расположение:** `API-SWAGGER/tasks/config/brain-mapping.yaml`  
+**Назначение:** Связи .BRAIN документов → задания API → API спецификации  
+**Кто обновляет:** ДУАПИТАСК (создаёт, status: queued), АПИТАСК (обновляет, status: completed)  
+**Статусы:** queued, assigned, in_progress, completed, failed
+
+### 3. implementation-tracker.yaml
+
+**Расположение:** `.BRAIN/06-tasks/config/implementation-tracker.yaml`  
+**Назначение:** Отслеживание реализации backend и frontend для каждого API  
+**Кто обновляет:** АПИТАСК (создаёт запись), БЭКТАСК (обновляет backend), ФРОНТТАСК (обновляет frontend)  
+**Статусы:** not_started, in_progress, completed, failed
+
+**Подробнее о статусах:** См. [STATUSES-GUIDE.md](./STATUSES-GUIDE.md)
+
+---
+
+## Таблица: Кто что обновляет
+
+| Агент | Document Status | API Readiness | Task Status (brain-mapping) | Implementation Status (backend) | Implementation Status (frontend) |
+|-------|----------------|---------------|----------------------------|-------------------------------|--------------------------------|
+| **МЕНЕДЖЕР** | ✅ Обновляет | ✅ Первичная оценка | ❌ | ❌ | ❌ |
+| **Brain Readiness Checker** | ❌ | ✅ Обновляет | ❌ | ❌ | ❌ |
+| **ДУАПИТАСК** | ❌ | ❌ | ✅ Создаёт (queued) | ❌ | ❌ |
+| **АПИТАСК** | ❌ | ❌ | ✅ Обновляет (completed) | ✅ Создаёт запись (not_started) | ✅ Создаёт запись (not_started) |
+| **БЭКТАСК** | ❌ | ❌ | ❌ | ✅ Обновляет (in_progress → completed) | ❌ |
+| **ФРОНТТАСК** | ❌ | ❌ | ❌ | ❌ | ✅ Обновляет (in_progress → completed) |
 
 ---
 
