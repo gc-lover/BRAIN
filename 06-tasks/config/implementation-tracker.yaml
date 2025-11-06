@@ -729,3 +729,25 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+- api_path: "api/v1/gameplay/economy/economy-events.yaml"
+  task_id: "API-TASK-165"
+  brain_source: ".BRAIN/02-gameplay/economy/economy-events.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
+- api_path: "api/v1/gameplay/economy/production-chains.yaml"
+  task_id: "API-TASK-166"
+  brain_source: ".BRAIN/02-gameplay/economy/economy-production-chains.md v2.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
