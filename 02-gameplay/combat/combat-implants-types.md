@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по типам имплантов и их применению (v1.1.0). Все необходимые детали для создания API спецификации присутствуют.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-043: api/v1/gameplay/combat/implants.yaml (2025-11-06)
+- Last Updated: 2025-11-06 23:30
+---
+
 
 ## 1. Типы имплантов для боя — ✅ Решение
 

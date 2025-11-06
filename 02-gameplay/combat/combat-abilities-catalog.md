@@ -5,6 +5,14 @@
 **Статус:** Ready for API
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-039: api/v1/gameplay/combat/abilities-catalog.yaml (2025-11-06)
+- Last Updated: 2025-11-06 23:10
+---
+
+---
 
 ## 📖 Структура Способности
 
