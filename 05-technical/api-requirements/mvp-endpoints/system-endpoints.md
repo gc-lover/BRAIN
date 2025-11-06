@@ -9,7 +9,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 06:05  
+**Последнее обновление:** 2025-11-07 (обновлено для микросервисов)  
 **Приоритет:** КРИТИЧЕСКИЙ (MVP)  
 **Автор:** AI Brain Manager
 
@@ -19,6 +19,18 @@
 
 ---
 
+## Микросервисная архитектура
+
+**System endpoints в каждом микросервисе:**
+- auth-service (8081): `/actuator/health`, `/actuator/info`
+- character-service (8082): `/actuator/health`
+- gameplay-service (8083): `/actuator/health`
+- social-service (8084): `/actuator/health`
+- economy-service (8085): `/actuator/health`
+- world-service (8086): `/actuator/health`
+
+**API Gateway health:** http://localhost:8080/actuator/health  
+**Eureka Dashboard:** http://localhost:8761
 
 **API Tasks Status:**
 - ✅ Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
