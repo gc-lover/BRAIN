@@ -2286,6 +2286,629 @@
         "theme": "meta-manipulation"
       }
     }
+    ,
+    {
+      "id": "quest-romance-sarah-01-first-meeting",
+      "name": "Знакомство: Сара Миллер",
+      "description": "Первая встреча с офицером NCPD Сарой Миллер. Профессиональное общение перерастает в нечто большее.",
+      "type": "romance",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-complete-quest", "description": "Выполнить задание Сары", "type": "item", "target": { "type": "quest", "id": "quest-delivery-001" }, "quantity": 1 },
+        { "id": "obj-talk", "description": "Поговорить с Сарой после задания", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-choice", "description": "Сделать выбор", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-choice" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 150, "money": 0, "items": [], "reputation": { "faction": "ncpd", "amount": 5 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-delivery-001"] },
+      "metadata": {
+        "romanceStage": 1,
+        "romanceNpc": "npc-sarah-miller",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 14, "bonus": "flirt", "description": "Флиртовать", "successEffects": { "romancePoints": 10 } }
+        ],
+        "epoch": "2020-2030",
+        "theme": "romance-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-sarah-02-trust",
+      "name": "Доверие: Ночной патруль",
+      "description": "Сара приглашает на совместный ночной патруль. Личные разговоры, опасность, сближение.",
+      "type": "romance",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-patrol", "description": "Патрулировать с Сарой", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-defend", "description": "Защитить Сару (4 врага)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-personal-talk", "description": "Личный разговор", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-personal" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 350, "money": 0, "items": ["item-sarah-gift"], "reputation": { "faction": "ncpd", "amount": 10 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-romance-sarah-01-first-meeting"] },
+      "metadata": {
+        "romanceStage": 2,
+        "romanceNpc": "npc-sarah-miller",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 15, "bonus": "protect", "description": "Защитить партнёра", "successEffects": { "romancePoints": 15 } },
+          { "type": "empathy", "dc": 14, "bonus": "listen", "description": "Слушать историю", "successEffects": { "romancePoints": 10 } }
+        ],
+        "epoch": "2030-2045",
+        "theme": "romance-trust"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-sarah-03-conflict",
+      "name": "Конфликт: Долг или сердце",
+      "description": "Сара сталкивается с выбором между долгом NCPD и чувствами. Игрок помогает разрешить конфликт.",
+      "type": "romance",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-investigate", "description": "Расследовать дело", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-choice-duty", "description": "Выбор: долг или чувства", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-conflict" }, "quantity": 1 },
+        { "id": "obj-resolve", "description": "Разрешить конфликт", "type": "item", "target": { "type": "item", "id": "item-resolution" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 550, "money": 0, "items": [], "reputation": { "faction": "ncpd", "amount": 15 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-romance-sarah-02-trust"] },
+      "metadata": {
+        "romanceStage": 3,
+        "romanceNpc": "npc-sarah-miller",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "support-decision", "description": "Поддержать решение", "successEffects": { "romancePoints": 20 } }
+        ],
+        "branching": true,
+        "epoch": "2045-2060",
+        "theme": "romance-conflict"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-sarah-04-commitment",
+      "name": "Обязательство: Совместная миссия",
+      "description": "Сара и игрок работают вместе на опасной миссии. Отношения переходят на новый уровень.",
+      "type": "romance",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-mission", "description": "Выполнить совместную миссию", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-combat-together", "description": "Сражаться вместе (7 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 7 },
+        { "id": "obj-confession", "description": "Признание", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-confession" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 850, "money": 0, "items": ["item-sarah-keepsake"], "reputation": { "faction": "ncpd", "amount": 25 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-romance-sarah-03-conflict"] },
+      "metadata": {
+        "romanceStage": 4,
+        "romanceNpc": "npc-sarah-miller",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 18, "bonus": "confession", "description": "Признаться в чувствах", "successEffects": { "romancePoints": 25 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "romance-commitment"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-sarah-05-future",
+      "name": "Будущее вместе",
+      "description": "Финальная стадия романа с Сарой. Решение о совместном будущем в опасном Night City.",
+      "type": "romance",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-final-choice", "description": "Принять решение о будущем", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-future" }, "quantity": 1 },
+        { "id": "obj-protect-future", "description": "Защитить будущее (финальная битва, 10 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 10 },
+        { "id": "obj-commitment-ceremony", "description": "Церемония обязательства", "type": "item", "target": { "type": "item", "id": "item-commitment-ring" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1200, "money": 0, "items": ["item-commitment-ring"], "reputation": { "faction": "ncpd", "amount": 50 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-romance-sarah-04-commitment"] },
+      "metadata": {
+        "romanceStage": 5,
+        "romanceNpc": "npc-sarah-miller",
+        "romanceRequired": true,
+        "romanceFinal": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 20, "bonus": "commitment", "description": "Дать обязательство", "successEffects": { "romancePoints": 50, "partnerAbility": "sarah-backup" } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "romance-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-elizabeth-01-curiosity",
+      "name": "Любопытство: Элизабет Чен",
+      "description": "Элизабет Чен замечает необычные способности игрока. Начало интриги.",
+      "type": "romance",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 4,
+      "objectives": [
+        { "id": "obj-netrunning-demo", "description": "Продемонстрировать навыки netrunning", "type": "item", "target": { "type": "item", "id": "item-blackwall-data" }, "quantity": 1 },
+        { "id": "obj-private-talk", "description": "Приватный разговор", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-intro" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 200, "money": 0, "items": [], "reputation": { "faction": "netwatch", "amount": 5 } },
+      "requirements": { "level": 4, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "romanceStage": 1,
+        "romanceNpc": "npc-elizabeth-chen",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "int", "dc": 15, "bonus": "impress", "description": "Впечатлить интеллектом", "successEffects": { "romancePoints": 10 } }
+        ],
+        "epoch": "2030-2045",
+        "theme": "romance-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-elizabeth-02-collaboration",
+      "name": "Сотрудничество: Проект Blackwall",
+      "description": "Элизабет приглашает на совместный исследовательский проект. Близость через общую работу.",
+      "type": "romance",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-research", "description": "Совместное исследование", "type": "item", "target": { "type": "item", "id": "item-blackwall-data" }, "quantity": 3 },
+        { "id": "obj-ai-combat", "description": "Защитить исследование (5 AI прокси)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 5 },
+        { "id": "obj-intellectual-bond", "description": "Интеллектуальная связь", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-bond" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 450, "money": 0, "items": ["item-elizabeth-research-notes"], "reputation": { "faction": "netwatch", "amount": 15 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": ["quest-romance-elizabeth-01-curiosity"] },
+      "metadata": {
+        "romanceStage": 2,
+        "romanceNpc": "npc-elizabeth-chen",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "int", "dc": 16, "bonus": "collaborate", "description": "Эффективное сотрудничество", "successEffects": { "romancePoints": 15 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "romance-trust"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-elizabeth-03-vulnerability",
+      "name": "Уязвимость: Тёмное прошлое",
+      "description": "Элизабет открывает тёмное прошлое. Игрок помогает справиться с демонами.",
+      "type": "romance",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-listen", "description": "Выслушать историю", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-past" }, "quantity": 1 },
+        { "id": "obj-confront-past", "description": "Противостоять прошлому", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-support", "description": "Поддержать", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-support" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 650, "money": 0, "items": [], "reputation": { "faction": "netwatch", "amount": 20 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": ["quest-romance-elizabeth-02-collaboration"] },
+      "metadata": {
+        "romanceStage": 3,
+        "romanceNpc": "npc-elizabeth-chen",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "empathy", "dc": 17, "bonus": "understanding", "description": "Понимание", "successEffects": { "romancePoints": 20 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "romance-conflict"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-elizabeth-04-choice",
+      "name": "Выбор: Корпорация или любовь",
+      "description": "Arasaka требует от Элизабет выбора. Игрок помогает принять решение.",
+      "type": "romance",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-arasaka-ultimatum", "description": "Получить ультиматум Arasaka", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-ultimatum" }, "quantity": 1 },
+        { "id": "obj-help-decide", "description": "Помочь с решением", "type": "item", "target": { "type": "item", "id": "item-decision-data" }, "quantity": 1 },
+        { "id": "obj-consequences", "description": "Столкнуться с последствиями (8 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 8 }
+      ],
+      "rewards": { "experience": 950, "money": 0, "items": ["item-elizabeth-momento"], "reputation": { "faction": "netwatch", "amount": 30 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-romance-elizabeth-03-vulnerability"] },
+      "metadata": {
+        "romanceStage": 4,
+        "romanceNpc": "npc-elizabeth-chen",
+        "romanceRequired": true,
+        "branching": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 19, "bonus": "stand-together", "description": "Выстоять вместе", "successEffects": { "romancePoints": 25 } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "romance-commitment"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-elizabeth-05-beyond",
+      "name": "За гранью: Новый путь",
+      "description": "Элизабет и игрок строят будущее вне корпоративного контроля.",
+      "type": "romance",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 12,
+      "objectives": [
+        { "id": "obj-escape-plan", "description": "Спланировать побег", "type": "item", "target": { "type": "item", "id": "item-escape-plan" }, "quantity": 1 },
+        { "id": "obj-final-stand", "description": "Финальное противостояние (12 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 12 },
+        { "id": "obj-new-beginning", "description": "Новое начало", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-new-life" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1400, "money": 0, "items": ["item-new-life-token"], "reputation": { "faction": "independent", "amount": 50 } },
+      "requirements": { "level": 12, "reputation": null, "completedQuests": ["quest-romance-elizabeth-04-choice"] },
+      "metadata": {
+        "romanceStage": 5,
+        "romanceNpc": "npc-elizabeth-chen",
+        "romanceRequired": true,
+        "romanceFinal": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 20, "bonus": "new-life", "description": "Новая жизнь", "successEffects": { "romancePoints": 50, "partnerAbility": "elizabeth-netrunning-support" } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "romance-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-marco-01-business",
+      "name": "Деловое знакомство: Марко Фикс",
+      "description": "Марко Фикс видит в игроке не только партнёра по бизнесу.",
+      "type": "romance",
+      "giverNpcId": "npc-marco-fix",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-deal", "description": "Провести сделку с Марко", "type": "item", "target": { "type": "item", "id": "item-weapon-basic" }, "quantity": 1 },
+        { "id": "obj-drinks", "description": "Выпить после сделки", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-drinks" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 180, "money": 200, "items": [], "reputation": { "faction": "independent", "amount": 5 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "romanceStage": 1,
+        "romanceNpc": "npc-marco-fix",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "streetwise", "dc": 13, "bonus": "charm", "description": "Очарование", "successEffects": { "romancePoints": 10 } }
+        ],
+        "epoch": "2020-2030",
+        "theme": "romance-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-marco-02-trust",
+      "name": "Доверие фиксера",
+      "description": "Марко доверяет важную операцию. Личная связь усиливается.",
+      "type": "romance",
+      "giverNpcId": "npc-marco-fix",
+      "level": 5,
+      "objectives": [
+        { "id": "obj-operation", "description": "Выполнить операцию", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-protect-marco", "description": "Защитить Марко (5 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-personal-moment", "description": "Личный момент", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-moment" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 400, "money": 400, "items": ["item-marco-gift"], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 5, "reputation": null, "completedQuests": ["quest-romance-marco-01-business"] },
+      "metadata": {
+        "romanceStage": 2,
+        "romanceNpc": "npc-marco-fix",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "streetwise", "dc": 15, "bonus": "loyalty", "description": "Лояльность", "successEffects": { "romancePoints": 15 } }
+        ],
+        "epoch": "2030-2045",
+        "theme": "romance-trust"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-marco-03-rival",
+      "name": "Соперник: Конкурирующий фиксер",
+      "description": "Конкурирующий фиксер угрожает Марко и отношениям.",
+      "type": "romance",
+      "giverNpcId": "npc-marco-fix",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-identify-rival", "description": "Выявить соперника", "type": "item", "target": { "type": "item", "id": "item-intel" }, "quantity": 1 },
+        { "id": "obj-confront", "description": "Противостоять сопернику (6 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-declaration", "description": "Признание", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-declaration" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 600, "money": 600, "items": [], "reputation": { "faction": "independent", "amount": 20 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-romance-marco-02-trust"] },
+      "metadata": {
+        "romanceStage": 3,
+        "romanceNpc": "npc-marco-fix",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "stand-by", "description": "Поддержать", "successEffects": { "romancePoints": 20 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "romance-conflict"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-marco-04-partnership",
+      "name": "Партнёрство: Общий бизнес",
+      "description": "Марко предлагает совместный бизнес. Отношения и дело сливаются.",
+      "type": "romance",
+      "giverNpcId": "npc-marco-fix",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-establish-business", "description": "Основать бизнес", "type": "item", "target": { "type": "item", "id": "item-business-license" }, "quantity": 1 },
+        { "id": "obj-first-deal-together", "description": "Первая совместная сделка", "type": "item", "target": { "type": "item", "id": "item-deal-contract" }, "quantity": 1 },
+        { "id": "obj-celebrate", "description": "Отпраздновать", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-celebrate" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 900, "money": 1000, "items": ["item-partnership-token"], "reputation": { "faction": "independent", "amount": 30 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-romance-marco-03-rival"] },
+      "metadata": {
+        "romanceStage": 4,
+        "romanceNpc": "npc-marco-fix",
+        "romanceRequired": true,
+        "skillChecks": [
+          { "type": "streetwise", "dc": 18, "bonus": "business-acumen", "description": "Деловая хватка", "successEffects": { "romancePoints": 25 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "romance-commitment"
+      }
+    }
+    ,
+    {
+      "id": "quest-romance-marco-05-empire",
+      "name": "Империя вдвоём",
+      "description": "Марко и игрок строят фиксерскую империю и будущее вместе.",
+      "type": "romance",
+      "giverNpcId": "npc-marco-fix",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-expand-empire", "description": "Расширить империю", "type": "item", "target": { "type": "item", "id": "item-territory-control" }, "quantity": 5 },
+        { "id": "obj-eliminate-threats", "description": "Устранить угрозы (10 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 10 },
+        { "id": "obj-commitment", "description": "Обязательство на всю жизнь", "type": "dialogue", "target": { "type": "dialogue", "id": "romance-lifelong" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1300, "money": 2000, "items": ["item-fixer-empire-ring"], "reputation": { "faction": "independent", "amount": 50 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-romance-marco-04-partnership"] },
+      "metadata": {
+        "romanceStage": 5,
+        "romanceNpc": "npc-marco-fix",
+        "romanceRequired": true,
+        "romanceFinal": true,
+        "skillChecks": [
+          { "type": "streetwise", "dc": 20, "bonus": "empire-building", "description": "Построение империи", "successEffects": { "romancePoints": 50, "partnerAbility": "marco-network-access" } }
+        ],
+        "epoch": "2077-2093",
+        "theme": "romance-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-am-01-border-skirmish",
+      "name": "Пограничная стычка",
+      "description": "Начало войны Arasaka vs Militech. Первые столкновения на границе территорий.",
+      "type": "faction-war",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-choose-side", "description": "Выбрать сторону: Arasaka или Militech", "type": "dialogue", "target": { "type": "dialogue", "id": "faction-choice" }, "quantity": 1 },
+        { "id": "obj-border-patrol", "description": "Патрулировать границу", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-skirmish", "description": "Участвовать в стычке (8 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 8 }
+      ],
+      "rewards": { "experience": 800, "money": 1000, "items": ["item-faction-token"], "reputation": { "faction": "arasaka-or-militech", "amount": 20 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "factionWarStage": 1,
+        "factionWarSide": "choice",
+        "branching": true,
+        "skillChecks": [],
+        "epoch": "2060-2077",
+        "theme": "faction-war-start"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-am-02-supply-raid",
+      "name": "Рейд на склады",
+      "description": "Саботаж поставок противника. Уничтожение складов и конвоев.",
+      "type": "faction-war",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-locate-supply", "description": "Найти склады противника", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-sabotage", "description": "Саботировать склады", "type": "item", "target": { "type": "item", "id": "item-explosives" }, "quantity": 3 },
+        { "id": "obj-defend-escape", "description": "Отбиться при побеге (10 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 10 }
+      ],
+      "rewards": { "experience": 950, "money": 1200, "items": [], "reputation": { "faction": "arasaka-or-militech", "amount": 30 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-factionwar-am-01-border-skirmish"] },
+      "metadata": {
+        "factionWarStage": 2,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "stealth", "dc": 18, "bonus": "silent-sabotage", "description": "Тихий саботаж", "successEffects": { "reduceEnemies": 5 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "faction-war-sabotage"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-am-03-assassination",
+      "name": "Цель: Высокопоставленный офицер",
+      "description": "Устранение ключевых фигур противника. Высокая опасность.",
+      "type": "faction-war",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-intel", "description": "Собрать разведданные о цели", "type": "item", "target": { "type": "item", "id": "item-intel" }, "quantity": 1 },
+        { "id": "obj-infiltrate", "description": "Проникнуть в штаб", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-assassinate", "description": "Устранить офицера", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-officer" }, "quantity": 1 },
+        { "id": "obj-escape", "description": "Эвакуация (12 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 12 }
+      ],
+      "rewards": { "experience": 1100, "money": 1500, "items": ["item-officer-badge"], "reputation": { "faction": "arasaka-or-militech", "amount": 40 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": ["quest-factionwar-am-02-supply-raid"] },
+      "metadata": {
+        "factionWarStage": 3,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "stealth", "dc": 19, "bonus": "assassination", "description": "Тихое убийство", "successEffects": { "reduceEnemies": 6 } },
+          { "type": "tactics", "dc": 18, "bonus": "escape-plan", "description": "План эвакуации", "successEffects": { "reduceEnemies": 4 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "faction-war-assassination"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-am-04-territory-control",
+      "name": "Контроль территории",
+      "description": "Захват и удержание ключевых точек. Масштабные бои.",
+      "type": "faction-war",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-assault", "description": "Штурм укреплённой позиции", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-capture", "description": "Захватить позицию (15 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 15 },
+        { "id": "obj-defend", "description": "Удержать позицию (10 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 10 }
+      ],
+      "rewards": { "experience": 1300, "money": 1800, "items": ["item-territory-flag"], "reputation": { "faction": "arasaka-or-militech", "amount": 50 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-factionwar-am-03-assassination"] },
+      "metadata": {
+        "factionWarStage": 4,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "tactics", "dc": 20, "bonus": "assault-tactics", "description": "Тактика штурма", "successEffects": { "reduceEnemies": 7 } },
+          { "type": "tactics", "dc": 19, "bonus": "defense-tactics", "description": "Тактика обороны", "successEffects": { "reduceEnemies": 5 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "faction-war-territory"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-am-05-decisive-battle",
+      "name": "Решающая битва",
+      "description": "Финальное столкновение корпораций. Исход войны решается.",
+      "type": "faction-war",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 12,
+      "objectives": [
+        { "id": "obj-prepare-forces", "description": "Подготовить силы", "type": "item", "target": { "type": "item", "id": "item-battle-plan" }, "quantity": 1 },
+        { "id": "obj-final-assault", "description": "Финальный штурм (20 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-guard" }, "quantity": 20 },
+        { "id": "obj-defeat-commander", "description": "Победить командира противника", "type": "kill", "target": { "type": "enemy", "id": "npc-corpo-commander" }, "quantity": 1 },
+        { "id": "obj-claim-victory", "description": "Заявить о победе", "type": "dialogue", "target": { "type": "dialogue", "id": "faction-war-victory" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1500, "money": 2500, "items": ["item-war-trophy"], "reputation": { "faction": "arasaka-or-militech", "amount": 100 } },
+      "requirements": { "level": 12, "reputation": null, "completedQuests": ["quest-factionwar-am-04-territory-control"] },
+      "metadata": {
+        "factionWarStage": 5,
+        "factionWarFinal": true,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "tactics", "dc": 20, "bonus": "command-army", "description": "Командование армией", "successEffects": { "reduceEnemies": 10, "xpBonus": 300 } }
+        ],
+        "epoch": "2060-2077",
+        "theme": "faction-war-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-gangs-01-turf-dispute",
+      "name": "Спор о территории",
+      "description": "Valentinos vs Maelstrom. Начало gang war за контроль улиц.",
+      "type": "faction-war",
+      "giverNpcId": "npc-marco-fix",
+      "level": 6,
+      "objectives": [
+        { "id": "obj-choose-gang", "description": "Выбрать банду: Valentinos или Maelstrom", "type": "dialogue", "target": { "type": "dialogue", "id": "gang-choice" }, "quantity": 1 },
+        { "id": "obj-street-fight", "description": "Уличный бой (6 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-claim-turf", "description": "Заявить права на территорию", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 600, "money": 800, "items": [], "reputation": { "faction": "valentinos-or-maelstrom", "amount": 20 } },
+      "requirements": { "level": 6, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "factionWarStage": 1,
+        "factionWarSide": "choice",
+        "branching": true,
+        "skillChecks": [],
+        "epoch": "2045-2060",
+        "theme": "gang-war-start"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-gangs-02-weapons-deal",
+      "name": "Оружейная сделка",
+      "description": "Перехват оружейной сделки противника. Укрепление позиций.",
+      "type": "faction-war",
+      "giverNpcId": "npc-marco-fix",
+      "level": 7,
+      "objectives": [
+        { "id": "obj-intercept-deal", "description": "Перехватить сделку", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-steal-weapons", "description": "Забрать оружие", "type": "item", "target": { "type": "item", "id": "item-weapon-cache" }, "quantity": 3 },
+        { "id": "obj-fight-gang", "description": "Сразиться с бандой (8 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 }
+      ],
+      "rewards": { "experience": 700, "money": 950, "items": ["item-weapon-cache"], "reputation": { "faction": "valentinos-or-maelstrom", "amount": 25 } },
+      "requirements": { "level": 7, "reputation": null, "completedQuests": ["quest-factionwar-gangs-01-turf-dispute"] },
+      "metadata": {
+        "factionWarStage": 2,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "streetwise", "dc": 16, "bonus": "intercept-intel", "description": "Разведданные", "successEffects": { "reduceEnemies": 3 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "gang-war-weapons"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-gangs-03-gang-leader",
+      "name": "Дуэль лидеров",
+      "description": "Вызов лидеру противоборствующей банды. Поединок решает всё.",
+      "type": "faction-war",
+      "giverNpcId": "npc-marco-fix",
+      "level": 8,
+      "objectives": [
+        { "id": "obj-challenge", "description": "Бросить вызов", "type": "dialogue", "target": { "type": "dialogue", "id": "gang-challenge" }, "quantity": 1 },
+        { "id": "obj-duel", "description": "Дуэль с лидером (1v1)", "type": "kill", "target": { "type": "enemy", "id": "npc-gang-leader" }, "quantity": 1 },
+        { "id": "obj-aftermath", "description": "Последствия дуэли (10 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 10 }
+      ],
+      "rewards": { "experience": 900, "money": 1100, "items": ["item-gang-trophy"], "reputation": { "faction": "valentinos-or-maelstrom", "amount": 35 } },
+      "requirements": { "level": 8, "reputation": null, "completedQuests": ["quest-factionwar-gangs-02-weapons-deal"] },
+      "metadata": {
+        "factionWarStage": 3,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "cool", "dc": 18, "bonus": "duel-mastery", "description": "Мастерство дуэли", "successEffects": { "xpBonus": 150 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "gang-war-duel"
+      }
+    }
+    ,
+    {
+      "id": "quest-factionwar-gangs-04-gang-war-climax",
+      "name": "Кульминация gang war",
+      "description": "Массовое столкновение банд. Улицы горят.",
+      "type": "faction-war",
+      "giverNpcId": "npc-marco-fix",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-rally-gang", "description": "Собрать банду", "type": "item", "target": { "type": "item", "id": "item-gang-backup" }, "quantity": 10 },
+        { "id": "obj-street-war", "description": "Уличная война (15 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 15 },
+        { "id": "obj-claim-victory", "description": "Заявить о победе", "type": "dialogue", "target": { "type": "dialogue", "id": "gang-war-victory" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1050, "money": 1400, "items": [], "reputation": { "faction": "valentinos-or-maelstrom", "amount": 50 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": ["quest-factionwar-gangs-03-gang-leader"] },
+      "metadata": {
+        "factionWarStage": 4,
+        "factionWarFinal": true,
+        "factionWarSide": "player-choice",
+        "skillChecks": [
+          { "type": "streetwise", "dc": 19, "bonus": "gang-leadership", "description": "Лидерство банды", "successEffects": { "reduceEnemies": 7, "xpBonus": 200 } }
+        ],
+        "epoch": "2045-2060",
+        "theme": "gang-war-finale"
+      }
+    }
   ]
 }
 
