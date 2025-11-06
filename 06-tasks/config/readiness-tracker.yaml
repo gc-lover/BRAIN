@@ -1909,6 +1909,80 @@ documents:
     issues: []
     api_target: "api/v1/loot.yaml"
 
+  # 05-technical/backend/ - Tier 2 Social & Economy Systems (2025-11-07)
+  - path: ".BRAIN/05-technical/backend/trade-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система P2P торговли. Trade window, trade offers, confirmation (двойное), trade history, restrictions (bound items), gold + items trade, distance check (10m), anti-scam protection. Структура БД (trade_sessions + trade_history). Критично для экономики!"
+    issues: []
+    api_target: "api/v1/trade.yaml"
+
+  - path: ".BRAIN/05-technical/backend/mail-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Почтовая система. Send mail (text + attachments), receive, inbox pagination, item/gold attachments (до 10 предметов), COD (cash on delivery), system mail (награды, события), expiration (30 дней), return to sender. Структура БД (mail_messages). Критично для коммуникации и экономики!"
+    issues: []
+    api_target: "api/v1/mail.yaml"
+
+  - path: ".BRAIN/05-technical/backend/notification-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система уведомлений. In-game notifications (popup, toast), WebSocket push (real-time), email notifications, types (quest/achievement/friend/guild/trade/mail), preferences, history (30 дней), priority levels. Структура БД (notifications). Критично для UX!"
+    issues: []
+    api_target: "api/v1/notifications.yaml"
+
+  - path: ".BRAIN/05-technical/backend/party-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система групп (backend). Party creation/dissolution, invites/join/leave/kick, party leader (смена), party composition (роли), loot settings (need/greed/personal/master looter), shared quest progress, party chat integration. Структура БД (parties). Критично для group content!"
+    issues: []
+    api_target: "api/v1/party.yaml"
+
+  - path: ".BRAIN/05-technical/backend/friend-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система друзей. Friend list (add/remove), friend requests (send/accept/decline), online status, ignore/block list, recent players. Структура БД (friendships). Критично для социальной составляющей!"
+    issues: []
+    api_target: "api/v1/friends.yaml"
+
+  - path: ".BRAIN/05-technical/backend/guild-system-backend.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Техническая архитектура гильдий. Guild creation/deletion, membership management (invite/join/leave/kick), ranks/roles/permissions, guild bank (общий склад), guild events, guild progression (levels, perks), guild wars support. Структура БД (guilds + guild_members). Критично для MMORPG социальной структуры!"
+    issues: []
+    api_target: "api/v1/guild.yaml"
+
+  # 05-technical/ - Архитектурные overview документы (2025-11-07)
+  - path: ".BRAIN/05-technical/backend-architecture-overview.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ архитектурный документ! Полный overview всей backend архитектуры NECPGAME. Все 15 систем, их взаимосвязи, layered architecture, service dependencies, data flow examples, integration map, technology stack, deployment architecture, API structure, WebSocket channels, data storage strategy, event types. ЦЕНТРАЛЬНАЯ КАРТА для понимания всей архитектуры!"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/05-technical/frontend-backend-integration.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Интеграция веб-фронтенда с бекендом. API communication (REST + WebSocket), authentication flow (JWT tokens), state management (Zustand/Redux), caching strategy (React Query), real-time updates (WebSocket), asset delivery (CDN), SSR для SEO (Next.js), error handling, optimistic updates, performance optimization. Критично для веб-версии игры!"
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
