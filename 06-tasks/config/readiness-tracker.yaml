@@ -1744,6 +1744,79 @@ documents:
     issues: []
     api_target: "api/v1/economy/player-market.yaml"
 
+  # 02-gameplay/economy/ - Расширенные экономические системы (2025-11-06)
+  - path: ".BRAIN/02-gameplay/economy/economy-stock-exchange.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Биржа акций: 15+ корпораций, 4 типа ордеров, дивиденды, влияние событий, индексы/ETF, фьючерсы/опционы, insider trading, IPO, структура БД (6 таблиц), API endpoints (8 REST + 2 WebSocket)."
+    issues: []
+    api_target: "api/v1/economy/stock-exchange.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Валютная биржа: 12 региональных валют, валютные пары (major/minor/exotic), спреды/комиссии, арбитраж (региональный/triangular), hedging, carry trade, leverage trading, структура БД (3 таблицы), API endpoints (4 REST + 1 WebSocket)."
+    issues: []
+    api_target: "api/v1/economy/currency-exchange.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Торговые гильдии: создание/типы, структура ролей, общий капитал, распределение прибыли, торговые квоты, эксклюзивные маршруты, уровни гильдий (1-5), Guild Hall, совместные операции, структура БД (3 таблицы), API endpoints (6 REST)."
+    issues: []
+    api_target: "api/v1/economy/trading-guilds.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-logistics.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Логистика: транспортные средства (5 типов), маршруты (локальные/региональные/глобальные), риски транспортировки (4 типа), страхование груза (3 плана), конвои/эскорт, скорость доставки, cargo management, структура БД (2 таблицы), API endpoints (4 REST)."
+    issues: []
+    api_target: "api/v1/economy/logistics.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Контракты между игроками: 4 типа контрактов (exchange/service/courier/auction), escrow system, collateral, репутационная система, арбитраж/dispute resolution, структура БД (2 таблицы), API endpoints (5 REST)."
+    issues: []
+    api_target: "api/v1/economy/contracts.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-investments.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Инвестиции: 5 типов (corporate/faction/regional/real estate/production chains), portfolio management, диверсификация, risk analysis, ROI расчёты, структура БД (2 таблицы), API endpoints (4 REST)."
+    issues: []
+    api_target: "api/v1/economy/investments.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-events.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Экономические события: 4 основных типа (crisis/inflation/recession/boom), торговые войны/санкции, корпоративные события (scandals/M&A/breakthroughs), commodity events, структура БД (2 таблицы), API endpoints (3 REST)."
+    issues: []
+    api_target: "api/v1/economy/events.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/economy-analytics.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 22:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Аналитика и графики: 4 типа графиков (line/candlestick/OHLC/area), технические индикаторы (MA/RSI/MACD/Bollinger), market sentiment, heat maps, portfolio analytics, trade history analysis, alerts/notifications, структура БД (1 таблица), API endpoints (4 REST)."
+    issues: []
+    api_target: "api/v1/economy/analytics.yaml"
+
   # 05-technical/backend/ - Backend критические системы (2025-11-06)
   - path: ".BRAIN/05-technical/backend/session-management-system.md"
     status: "ready"
