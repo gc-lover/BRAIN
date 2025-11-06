@@ -241,6 +241,24 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/06-tasks/config/WORKFLOW-DETAILS.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-06 22:42"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный справочный документ, описывает воркфлоу проекта для агентов, не предназначен для создания API"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/config/STATUSES-GUIDE.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-06 22:42"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Служебный справочный документ, описывает системы статусов для агентов, не предназначен для создания API"
+    issues: []
+    api_target: null
+
   # 06-tasks/ideas/ - Идеи и шаблоны
   - path: ".BRAIN/06-tasks/ideas/IDEA-TEMPLATE.md"
     status: "not-applicable"
