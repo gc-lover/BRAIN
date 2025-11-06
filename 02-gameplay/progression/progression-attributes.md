@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-05 17:14  
 **api-readiness-notes:** Детализированы формулы производных параметров, киберпсихоз, требования к предметам/имплантам, классовые старт-бонусы. Требуется связывание с новым файлом навыков и матрицей атрибутов.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/attributes
+
 **Статус:** review  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-05

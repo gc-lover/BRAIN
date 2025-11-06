@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:35  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по системе перков (структура, получение, ограничения, комбинации) (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/perks
+
 **Статус:** ✅ Решено  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03

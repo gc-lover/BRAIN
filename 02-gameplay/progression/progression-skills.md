@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-06 18:20  
 **api-readiness-notes:** Создан базовый каркас таксономии навыков, формулы и связь с атрибутами. Нужна детализация списков навыков по категориям и классам.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/skills
+
 **Статус:** draft  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-05
