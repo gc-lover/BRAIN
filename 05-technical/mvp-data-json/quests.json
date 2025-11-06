@@ -1329,6 +1329,211 @@
         "storyImpact": "maximum"
       }
     }
+    ,
+    {
+      "id": "quest-class-solo-2090-shield-ops",
+      "name": "Щитовые операции (2090)",
+      "description": "Сара Миллер привлекает соло к скрытому прикрытию VIP на фоне параметрических ярмарок.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-scout", "description": "Осмотреть локацию ярмарки", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-prevent-attack", "description": "Предотвратить нападение (6)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 6 },
+        { "id": "obj-protect-vip", "description": "Сохранить VIP невредимым", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1050, "money": 1350, "items": [], "reputation": { "faction": "ncpd", "amount": 20 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "perception", "dc": 18, "bonus": "spot-threats", "description": "Заранее заметить угрозы", "successEffects": { "reduceEnemies": 3 } },
+          { "type": "tactics", "dc": 18, "bonus": "positioning", "description": "Правильно расставить посты", "successEffects": { "reduceEnemies": 2, "xpBonus": 60 } },
+          { "type": "intimidation", "dc": 17, "bonus": "deter-attackers", "description": "Отпугнуть нападающих", "successEffects": { "reduceEnemies": 2 } }
+        ],
+        "classRequired": "solo",
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-solo-2092-vip-extraction",
+      "name": "Экстракция VIP (2092)",
+      "description": "Сорвать похищение и вывести VIP из зоны корпоративной войны.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-enter-zone", "description": "Войти в зону конфликта", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-extract", "description": "Вывести VIP", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-escape", "description": "Избежать преследования (8)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 8 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1200, "money": 1600, "items": ["item-armor-advanced"], "reputation": { "faction": "ncpd", "amount": 30 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-solo-2090-shield-ops"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "stealth", "dc": 19, "bonus": "silent-extract", "description": "Тихая экстракция", "successEffects": { "reduceEnemies": 4, "xpBonus": 120 } },
+          { "type": "tactics", "dc": 19, "bonus": "clean-route", "description": "Чистый маршрут", "successEffects": { "reduceEnemies": 3 } },
+          { "type": "cool", "dc": 18, "bonus": "hold-nerve", "description": "Держать нервы", "successEffects": { "xpBonus": 80 } }
+        ],
+        "classRequired": "solo",
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-netrunner-2090-blackwall-scout",
+      "name": "Разведка Blackwall (2090)",
+      "description": "Элизабет просит собрать телеметрию с новых секторов у границы Blackwall.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-scan", "description": "Сканировать сектор (×2)", "type": "item", "target": { "type": "item", "id": "item-blackwall-data" }, "quantity": 2 },
+        { "id": "obj-defeat-ice", "description": "Победить ICE (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1000, "money": 1300, "items": ["item-blackwall-data"], "reputation": { "faction": "netwatch", "amount": 20 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "int", "dc": 18, "bonus": "optimize-scan", "description": "Оптимизировать скан", "successEffects": { "xpBonus": 80 } },
+          { "type": "netrunning-combat", "dc": 19, "bonus": "fast-ice", "description": "Быстро побеждать ICE", "successEffects": { "reduceEnemies": 1 } }
+        ],
+        "classRequired": "netrunner",
+        "netrunningRequired": true,
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-netrunner-2092-guardian-break",
+      "name": "Слом стражей (2092)",
+      "description": "Внедриться в узел и отключить трёх стражей системы.",
+      "type": "side",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-breach", "description": "Взломать узел", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-disable-guards", "description": "Отключить стражей (3)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Доложить Элизабет", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1150, "money": 1500, "items": ["item-ai-core-fragment"], "reputation": { "faction": "netwatch", "amount": 25 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-netrunner-2090-blackwall-scout"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "netrunning-combat", "dc": 20, "bonus": "overclock", "description": "Оверклок взлома", "successEffects": { "reduceEnemies": 2, "xpBonus": 140 } },
+          { "type": "cool", "dc": 18, "bonus": "resist-shock", "description": "Сопротивление кибершоку", "successEffects": { "statusProtection": "stun" } }
+        ],
+        "classRequired": "netrunner",
+        "netrunningRequired": true,
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-techie-2090-city-grid-overhaul",
+      "name": "Капремонт городской сетки (2090)",
+      "description": "Оптимизировать энергоузлы и датчики в Watson и Downtown.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 10,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Анны", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-repair-1", "description": "Починить узел Watson", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-repair-2", "description": "Починить узел Downtown", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-collect", "description": "Собрать компоненты (×3)", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 3 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 980, "money": 1200, "items": ["item-components-basic"], "reputation": { "faction": "independent", "amount": 18 } },
+      "requirements": { "level": 10, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 18, "bonus": "optimize-grid", "description": "Оптимизация сети", "successEffects": { "timeReduction": 15, "xpBonus": 60 } },
+          { "type": "int", "dc": 17, "bonus": "predict-failure", "description": "Предсказать отказ", "successEffects": { "xpBonus": 40 } }
+        ],
+        "classRequired": "techie",
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-class-techie-2092-drone-swarm",
+      "name": "Рой дронов (2092)",
+      "description": "Остановить вышедший из-под контроля рой и вернуть ядра.",
+      "type": "side",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-disable", "description": "Отключить дронов (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-recover-cores", "description": "Вернуть ядра (×2)", "type": "item", "target": { "type": "item", "id": "item-drone-parts" }, "quantity": 2 },
+        { "id": "obj-return", "description": "Вернуться к Анне", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1150, "money": 1450, "items": ["item-armor-basic"], "reputation": { "faction": "independent", "amount": 20 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": ["quest-class-techie-2090-city-grid-overhaul"] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "tech", "dc": 19, "bonus": "jam-swarm", "description": "Глушение роя", "successEffects": { "reduceEnemies": 3, "xpBonus": 120 } },
+          { "type": "perception", "dc": 18, "bonus": "track-drones", "description": "Отследить остатки роя", "successEffects": { "xpBonus": 60 } }
+        ],
+        "classRequired": "techie",
+        "epoch": "2077-2093"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2084-market-chaos",
+      "name": "Хаос на рынке (2084)",
+      "description": "Черный рынок имплантов вышел из-под контроля. Нужна стабилизация ситуации.",
+      "type": "side",
+      "giverNpcId": "npc-marco-fix",
+      "level": 9,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-investigate", "description": "Выявить организаторов", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-confront", "description": "Уладить конфликт (бой/соц)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-return", "description": "Вернуться к Марко", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 820, "money": 1050, "items": [], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 9, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 17, "bonus": "broker-peace", "description": "Посредничество", "successEffects": { "reduceEnemies": 3, "xpBonus": 60 } },
+          { "type": "investigation", "dc": 17, "bonus": "find-boss", "description": "Найти лидера", "successEffects": { "xpBonus": 60 } }
+        ],
+        "epoch": "2060-2077"
+      }
+    }
+    ,
+    {
+      "id": "quest-side-2091-parameter-riot",
+      "name": "Параметрический бунт (2091)",
+      "description": "Толпа протестующих против тестов параметров блокирует район.",
+      "type": "side",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 11,
+      "objectives": [
+        { "id": "obj-accept", "description": "Принять задание у Сары", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-deescalate", "description": "Деэскалация конфликта", "type": "item", "target": { "type": "item", "id": "item-electronics-standard" }, "quantity": 1 },
+        { "id": "obj-detain", "description": "Задержать подстрекателей (5)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-return", "description": "Вернуться к Саре", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 1180, "money": 1500, "items": [], "reputation": { "faction": "ncpd", "amount": 28 } },
+      "requirements": { "level": 11, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "skillChecks": [
+          { "type": "cool", "dc": 19, "bonus": "crowd-control", "description": "Контроль толпы", "successEffects": { "reduceEnemies": 4, "xpBonus": 120 } },
+          { "type": "perception", "dc": 18, "bonus": "spot-instigators", "description": "Выявить подстрекателей", "successEffects": { "xpBonus": 80 } }
+        ],
+        "epoch": "2077-2093"
+      }
+    }
   ]
 }
 
