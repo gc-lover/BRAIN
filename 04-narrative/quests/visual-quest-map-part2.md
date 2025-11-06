@@ -16,6 +16,16 @@
 
 ---
 
+
+**API Tasks Status:**
+- Задача создана: [API-TASK-176](../../../API-SWAGGER/tasks/active/queue/task-176-*.md)
+- Дата создания задачи: 2025-11-07
+- Статус: queued (ожидает выполнения АПИТАСК агентом)
+- Категория: SPLIT document (part1/part2)
+- Следующий шаг: АПИТАСК агент создаст OpenAPI спецификацию
+
+---
+
 ## См. оригинал: VISUAL-QUEST-MAP.md
 
 ---

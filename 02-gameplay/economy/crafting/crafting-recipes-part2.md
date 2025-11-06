@@ -16,6 +16,16 @@
 
 ---
 
+
+**API Tasks Status:**
+- Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
+- Дата создания задачи: 2025-11-07
+- Статус: queued (ожидает выполнения АПИТАСК агентом)
+- Категория: SPLIT document (part1/part2)
+- Следующий шаг: АПИТАСК агент создаст OpenAPI спецификацию
+
+---
+
 ## См. оригинал: economy-crafting-recipes.md
 
 ---
