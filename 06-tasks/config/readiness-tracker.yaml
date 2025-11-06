@@ -1543,6 +1543,62 @@ documents:
     issues: []
     api_target: "api/v1/quests/dnd-checks.yaml"
 
+  # 02-gameplay/world/events/ - Мировые события
+  - path: ".BRAIN/02-gameplay/world/events/global-events-2020-2093.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Глобальные события 2020-2093 (Political, Economic, Tech, Environmental, Social)."
+    issues: []
+    api_target: "api/v1/world/events/global.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-framework.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Фреймворк мировых событий (генераторы, DC-скейлинг, влияние фракций/экономики/технологий)."
+    issues: []
+    api_target: "api/v1/world/events/framework.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/events/world-events-travel-2020-2093.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. События перемещения игроков по миру 2020-2093."
+    issues: []
+    api_target: "api/v1/world/events/travel-all.yaml"
+
+  # 04-narrative/quests/main/ - Детальные узлы основных квестов
+  - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Детальные D&D узлы для квеста 1.1 Первые шаги. UI синхронизация - задача фронтенда."
+    issues: []
+    api_target: "api/v1/quests/main/first-steps-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/002-choose-path-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Детальные D&D узлы для квеста 1.2 Выбор пути."
+    issues: []
+    api_target: "api/v1/quests/main/choose-path-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/042-black-barrier-heist-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Детальные D&D узлы для квеста 4.2 Взлом заслона (heist)."
+    issues: []
+    api_target: "api/v1/quests/main/black-barrier-heist-nodes.yaml"
+
 # Примеры записей:
 #
 # documents:
