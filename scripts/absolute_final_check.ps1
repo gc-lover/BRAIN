@@ -41,7 +41,7 @@ if ($trueUnprocessed.Count -gt 0) {
     Write-Host "`nTRUE UNPROCESSED:" -ForegroundColor Red
     $trueUnprocessed | ForEach-Object { Write-Host "  - $_" -ForegroundColor Red }
 } else {
-    Write-Host "`n✅✅✅ ALL READY DOCUMENTS ARE FULLY PROCESSED! ✅✅✅" -ForegroundColor Green
-    Write-Host "ДУАПИТАСК work is 100% COMPLETE!" -ForegroundColor Green
+    Write-Host "`nALL READY DOCUMENTS ARE FULLY PROCESSED!" -ForegroundColor Green
+    Write-Host "DUAPITASK work is 100% COMPLETE!" -ForegroundColor Green
 }
 
