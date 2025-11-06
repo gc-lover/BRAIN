@@ -1,13 +1,14 @@
 # Caching Strategy - Стратегия кэширования
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 23:00  
+**Последнее обновление:** 2025-11-07 05:20  
 **Приоритет:** критический (Performance)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 23:00
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 05:20
+**api-readiness-notes:** Многоуровневая стратегия кэширования. L1 (CDN static), L2 (Redis hot data), L3 (app-level), TTL policies, invalidation strategy, cache warming. Performance critical!
 
 ---
 

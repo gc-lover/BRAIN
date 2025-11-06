@@ -2021,6 +2021,51 @@ documents:
     issues: []
     api_target: "api/v1/admin/anti-cheat.yaml"
 
+  - path: ".BRAIN/05-technical/infrastructure/admin-moderation-tools.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Admin панель и moderation tools. Player management (ban/mute/kick/view stats), content moderation (chat/names/profiles), world management (spawn events/change state), analytics dashboard, audit logs (кто что сделал). Production critical для operations!"
+    issues: []
+    api_target: "api/v1/admin/tools.yaml"
+
+  - path: ".BRAIN/05-technical/infrastructure/api-gateway-architecture.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "API Gateway architecture. Routing (service discovery), load balancing, authentication check (JWT validation), rate limiting (per user/IP/endpoint), caching, logging (request/response), API versioning. Kong или Spring Cloud Gateway. Production critical для scalability!"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/05-technical/infrastructure/database-architecture.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Database architecture. PostgreSQL sharding strategy (по player_id), replication (read replicas для queries), partitioning (time-based для logs/events), backup/restore strategy, connection pooling, migration strategy. Production critical для scalability!"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/05-technical/infrastructure/caching-strategy.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Многоуровневая стратегия кэширования. L1 (CDN для static assets), L2 (Redis для hot data: sessions, positions, leaderboards), L3 (application-level cache), TTL policies по типу данных, cache invalidation strategy (event-driven), cache warming (preload критичных данных). Performance critical!"
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/05-technical/infrastructure/cdn-asset-delivery.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "CDN для доставки ассетов. Cloudflare/AWS CloudFront providers, geo-distributed PoPs (global coverage), asset versioning, cache invalidation, compression (gzip/brotli), progressive loading (для веб-клиента), image optimization. Performance critical для веб-версии!"
+    issues: []
+    api_target: null
+
 # Примеры записей:
 #
 # documents:
