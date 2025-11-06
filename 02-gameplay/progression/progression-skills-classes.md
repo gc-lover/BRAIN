@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-05 18:08  
 **api-readiness-notes:** Базовые модификаторы по классам, примеры подклассовых бонусов и эксклюзивных навыков. Требуется балансировка величин и полная раскладка по всем подклассам.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/skills
+
 **Статус:** review  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-05

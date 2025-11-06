@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по интеграции паркура с боем (атаки с воздуха, стрельба в движении, мобильные способности, комбо) (v1.1.0). TODO только для балансировки (не блокирует создание API).
 
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/movement
+
 **Статус:** review - проверка готовности к созданию API задач  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03

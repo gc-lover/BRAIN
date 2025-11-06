@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит полный список общих навыков для всех классов.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/skills
+
 ---
 **API Tasks Status:**
 - Status: created

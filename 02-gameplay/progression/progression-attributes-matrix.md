@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-05 17:14  
 **api-readiness-notes:** Определены стартовые бонусы по классам, политика роста и капов, базовые требования к предметам/имплантам. Требуется сверка с балансом классов и списками предметов.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/attributes
+
 **Статус:** review  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-05

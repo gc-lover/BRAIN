@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит систему классовых способностей и "Свой путь".
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/classes
+
 ---
 **API Tasks Status:**
 - Status: created

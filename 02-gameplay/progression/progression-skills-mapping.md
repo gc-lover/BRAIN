@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-05 18:08  
 **api-readiness-notes:** Добавлена базовая таблица соответствий навыков категориям предметов и типам имплантов с тегами из `equipment-matrix.md` и `combat-implants-types.md`. Требуется расширение и балансировка.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/skills
+
 **Статус:** review  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-05
