@@ -1,8 +1,46 @@
 # Список задач (TODO)
 
-**Последнее обновление:** 2025-11-03 18:21
+**Последнее обновление:** 2025-11-06 22:15
 
 ## Активные задачи
+
+### ✅ МАСШТАБНОЕ ОБНОВЛЕНИЕ 2025-11-06
+
+#### Квестовая система (2020-2093)
+- [x] Добавлено 113+ квестов в `quests.json`
+  - [x] Main quests: 15+ (полная сюжетная линия)
+  - [x] Side quests: 25+ (все эпохи покрыты)
+  - [x] Class quests: 28+ (Solo, Netrunner, Techie, Fixer, Nomad, Rockerboy, Corpo)
+  - [x] Faction quests: 12+ (Arasaka, Militech, Valentinos, Maelstrom, NCPD, Nomads)
+  - [x] Romance quests: 15 (Sarah Miller, Elizabeth Chen, Marco Fix — 5 stages each)
+  - [x] Faction War quests: 9 (Arasaka vs Militech, Valentinos vs Maelstrom)
+  - [x] Origin quests: 9 (Solo, Netrunner, Fixer, Nomad — 3 quests each)
+
+#### Детальные спецификации
+- [x] Создано 25+ спецификационных документов с диалогами (20-30 узлов каждый)
+  - [x] Quest specs: 18+ файлов (main/side/class quests)
+  - [x] Romance specs: 2 файла (system + Sarah conflict quest)
+  - [x] Origin specs: 2 файла (system + Solo origin)
+  - [x] Faction War specs: 1 файл (system overview)
+  - [x] Endgame Raid specs: 2 файла (Blackwall Expedition, Corpo Tower Assault)
+
+#### Системы и механики
+- [x] Romance System: 3 NPC, 5 stages, partner abilities
+- [x] Faction War System: 2 wars, side choice, world impact
+- [x] Origin Stories: 4 classes, branching backstories, permanent perks
+- [x] Endgame Raids: 2 raids, 10-15 players, hardcore mechanics
+- [x] Skill Check System: 25+ skills, DC levels, advantage/disadvantage
+- [x] Loot & Reputation: 6 enemy types, 6 factions, formulas
+- [x] Travel Events: 39 events across all epochs
+
+#### Документация
+- [x] Content Overview 2020-2093: полная сводка
+- [x] API readiness: все системы готовы для API-SWAGGER
+- [x] D&D combat integration: initiative, AC, states
+
+---
+
+## Предыдущие активные задачи
 
 ### Высокий приоритет
 - [x] Создать архитектуру директорий
