@@ -175,3 +175,6 @@ Wait time > 15 min: priority +5 (urgent)
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 1/3: Matchmaking Queue (split from matchmaking-system.md)
 
+
+
+

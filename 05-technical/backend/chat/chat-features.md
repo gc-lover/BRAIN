@@ -247,3 +247,6 @@ public ChatHistoryResponse getHistory(
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 3/3: Chat Features (split from chat-system.md)
 
+
+
+

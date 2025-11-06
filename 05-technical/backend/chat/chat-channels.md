@@ -235,3 +235,6 @@ private List<UUID> getRecipients(ChannelType channelType, String channelId) {
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 1/3: Chat Channels (split from chat-system.md)
 
+
+
+

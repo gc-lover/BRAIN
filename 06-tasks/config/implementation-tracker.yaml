@@ -380,11 +380,126 @@ implementations:
     frontend:
       status: "not_started"
 
-  - api_path: "api/v1/technical/notification-system.yaml"
-    task_id: "API-TASK-135"
-    api_status: "completed"
-    backend:
-      status: "not_started"
-    frontend:
-      status: "not_started"
+    - api_path: "api/v1/technical/notification-system.yaml"
+      task_id: "API-TASK-135"
+      api_status: "completed"
+      backend:
+        status: "not_started"
+      frontend:
+        status: "not_started"
+
+# === КРИТИЧЕСКИЕ СИСТЕМЫ (2025-11-07 НОВАЯ СЕССИЯ) ===
+# MVP Блокеры - КРИТИЧНО для запуска игры
+
+- api_path: "api/v1/auth/authentication.yaml"
+  task_id: "API-TASK-136"
+  brain_source: ".BRAIN/05-technical/backend/authentication-authorization-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/players/player-management.yaml"
+  task_id: "API-TASK-137"
+  brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/inventory/inventory-management.yaml"
+  task_id: "API-TASK-138"
+  brain_source: ".BRAIN/05-technical/backend/inventory-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/loot/loot-system.yaml"
+  task_id: "API-TASK-139"
+  brain_source: ".BRAIN/05-technical/backend/loot-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+# Tier 2 Systems - Важные социальные и торговые механики
+
+- api_path: "api/v1/trade/trade-system.yaml"
+  task_id: "API-TASK-140"
+  brain_source: ".BRAIN/05-technical/backend/trade-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/mail/mail-system.yaml"
+  task_id: "API-TASK-141"
+  brain_source: ".BRAIN/05-technical/backend/mail-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/social/party-system.yaml"
+  task_id: "API-TASK-142"
+  brain_source: ".BRAIN/05-technical/backend/party-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/social/friend-system.yaml"
+  task_id: "API-TASK-143"
+  brain_source: ".BRAIN/05-technical/backend/friend-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/social/guild-system.yaml"
+  task_id: "API-TASK-144"
+  brain_source: ".BRAIN/05-technical/backend/guild-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/technical/notification-system.yaml"
+  task_id: "API-TASK-145"
+  brain_source: ".BRAIN/05-technical/backend/notification-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
 

@@ -156,3 +156,6 @@ public boolean isSmurf(UUID playerId) {
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 3/3: Matchmaking Rating (split from matchmaking-system.md)
 
+
+
+

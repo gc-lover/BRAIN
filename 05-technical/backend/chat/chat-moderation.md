@@ -207,3 +207,6 @@ private void autoBan(UUID playerId, String reason, Duration duration) {
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 2/3: Chat Moderation (split from chat-system.md)
 
+
+
+
