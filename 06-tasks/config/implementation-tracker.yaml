@@ -1,0 +1,57 @@
+# Трекер реализации API (Backend + Frontend)
+
+# Этот файл отслеживает статусы реализации backend и frontend для каждого API.
+# Используется для контроля выполнения полного цикла разработки от API спецификации до реализации.
+
+# Структура записи:
+# - api_path: путь к файлу OpenAPI спецификации (относительно API-SWAGGER/)
+# - task_id: ID задания из brain-mapping.yaml (API-TASK-XXX)
+# - api_status: статус API спецификации (queued, in_progress, completed, failed)
+# - backend: статус реализации бекенда
+#   - status: not_started, in_progress, completed, failed
+#   - started: дата и время начала работы (YYYY-MM-DD HH:MM)
+#   - completed: дата и время завершения (YYYY-MM-DD HH:MM)
+#   - agent: имя агента (Backend Agent)
+#   - commit: хэш коммита с реализацией
+#   - notes: дополнительные примечания (опционально)
+# - frontend: статус реализации фронтенда
+#   - status: not_started, in_progress, completed, failed
+#   - started: дата и время начала работы (YYYY-MM-DD HH:MM)
+#   - completed: дата и время завершения (YYYY-MM-DD HH:MM)
+#   - agent: имя агента (Frontend Agent)
+#   - commit: хэш коммита с реализацией
+#   - notes: дополнительные примечания (опционально)
+
+# Статусы:
+# - not_started: реализация ещё не начата
+# - in_progress: реализация в процессе
+# - completed: реализация завершена успешно
+# - failed: реализация провалилась (с описанием проблемы в notes)
+
+# Обязательные обновления:
+# 1. АПИТАСК: После создания API спецификации создаёт запись с api_status: "completed", backend/frontend: "not_started"
+# 2. БЭКТАСК: При начале обновляет backend.status: "in_progress", при завершении: "completed"
+# 3. ФРОНТТАСК: При начале обновляет frontend.status: "in_progress", при завершении: "completed"
+
+implementations:
+  # Пример заполненной записи:
+  # - api_path: "api/v1/auth/character-creation.yaml"
+  #   task_id: "API-TASK-026"
+  #   api_status: "completed"
+  #   backend:
+  #     status: "completed"
+  #     started: "2025-11-07 10:00"
+  #     completed: "2025-11-07 15:00"
+  #     agent: "Backend Agent"
+  #     commit: "abc123def456"
+  #     notes: ""
+  #   frontend:
+  #     status: "completed"
+  #     started: "2025-11-07 16:00"
+  #     completed: "2025-11-07 20:00"
+  #     agent: "Frontend Agent"
+  #     commit: "def456ghi789"
+  #     notes: ""
+
+  # Реальные записи будут добавлены автоматически агентами
+

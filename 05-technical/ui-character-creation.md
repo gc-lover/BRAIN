@@ -11,6 +11,14 @@
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные модели данных (Account, Character, CharacterSummary, CharacterClass, CharacterOrigin, Faction, City), полное описание API endpoints с параметрами, валидацией и обработкой ошибок (аутентификация, персонажи, справочные данные). Все необходимые детали для создания API спецификации присутствуют (v1.1.0).
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-110: api/v1/ui/character-creation.yaml (2025-11-07)
+- Last Updated: 2025-11-07 05:50
+---
+
+---
 
 ## Общее описание
 

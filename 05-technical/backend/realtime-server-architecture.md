@@ -4,6 +4,14 @@
 **api-readiness-notes:** Полная архитектура real-time сервера. Game server instances, zone/instance management, player position sync, network protocol, lag compensation, bandwidth optimization.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-111: api/v1/technical/realtime-server.yaml (2025-11-07)
+- Last Updated: 2025-11-07 05:55
+---
+
 # Real-Time Server Architecture - Архитектура real-time сервера
 
 **Статус:** approved  
