@@ -411,6 +411,51 @@ documents:
     issues: []
     api_target: "api/v1/progression/skills-mapping.yaml"
 
+  - path: ".BRAIN/02-gameplay/progression/classes-progression-link.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Связь классов с системой прокачки (гибридная система, классовые и общие навыки)."
+    issues: []
+    api_target: "api/v1/progression/classes-link.yaml"
+
+  - path: ".BRAIN/02-gameplay/progression/classes-abilities.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Способности классов и подклассов."
+    issues: []
+    api_target: "api/v1/progression/classes-abilities.yaml"
+
+  - path: ".BRAIN/02-gameplay/progression/classes-general-skills.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Общие навыки, доступные всем классам."
+    issues: []
+    api_target: "api/v1/progression/general-skills.yaml"
+
+  - path: ".BRAIN/02-gameplay/progression/classes-authored.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Авторские классы персонажей (расширение канона)."
+    issues: []
+    api_target: "api/v1/progression/classes-authored.yaml"
+
+  - path: ".BRAIN/02-gameplay/progression/classes-canon.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Канонические классы из Cyberpunk."
+    issues: []
+    api_target: "api/v1/progression/classes-canon.yaml"
+
   - path: ".BRAIN/03-lore/timeline/timeline-gameplay-integration.md"
     status: "not-applicable"
     version: "1.0.0"
@@ -1095,6 +1140,33 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/combat/combat-dnd-core.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "D&D система проверок полностью проработана (d20/d100, DC, модификаторы, критические успехи/провалы, 9 атрибутов, навыки, преимущества/помехи). Готов к API."
+    issues: []
+    api_target: "api/v1/combat/dnd-checks.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Интеграция D&D проверок в реальный бой (микро-проверки, влияние имплантов и способностей). Готов к API."
+    issues: []
+    api_target: "api/v1/combat/dnd-integration.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-dnd-mechanics-integration.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Интеграция D&D проверок во все игровые механики (хакерство, крафт, торговля, социальные механики). Готов к API."
+    issues: []
+    api_target: "api/v1/combat/dnd-mechanics.yaml"
+
   # Детализация экономики и крафта (v2.0.0 - 2025-11-06)
   - path: ".BRAIN/02-gameplay/economy/economy-currencies-detailed.md"
     status: "ready"
@@ -1150,6 +1222,24 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Полные лут-таблицы для всех типов квестов, событий, врагов. Формулы вероятностей, редкость, модификаторы."
+    issues: []
+    api_target: "api/v1/economy/loot-tables.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/trading-routes-global.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Глобальные торговые маршруты между регионами и городами."
+    issues: []
+    api_target: "api/v1/economy/trading-routes.yaml"
+
   # Детализация социальных механик (v2.0.0 - 2025-11-06)
   - path: ".BRAIN/02-gameplay/social/reputation-tiers-detailed.md"
     status: "ready"
@@ -1177,6 +1267,216 @@ documents:
     notes: "Сводка детализации социальных механик. Документация, не для API."
     issues: []
     api_target: null
+
+  # Детализация mentorship системы
+  - path: ".BRAIN/02-gameplay/social/mentorship-types.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Типы наставничества (игрок→игрок, игрок→NPC, NPC→игрок, корпоративное). Детальные механики и особенности."
+    issues: []
+    api_target: "api/v1/social/mentorship-types.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/mentorship-mechanics.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Механики наставничества (процесс, бонусы, прогресс, вознаграждения)."
+    issues: []
+    api_target: "api/v1/social/mentorship-mechanics.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/mentorship-abilities.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Способности наставников по подклассам Teacher."
+    issues: []
+    api_target: "api/v1/social/mentorship-abilities.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/mentorship-relationships.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Система отношений наставник-ученик."
+    issues: []
+    api_target: "api/v1/social/mentorship-relationships.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/mentorship-special.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Специальные механики наставничества (legacy, линии учеников, наследие)."
+    issues: []
+    api_target: "api/v1/social/mentorship-special.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/mentorship-world-impact.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Влияние наставничества на игровой мир."
+    issues: []
+    api_target: "api/v1/social/mentorship-world-impact.yaml"
+
+  # Детализация npc-hiring системы
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-types.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Типы наймаемых NPC (боевые, торговцы, специалисты)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-types.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-process.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Процесс найма NPC (поиск, переговоры, контракты)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-process.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-management.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Управление нанятыми NPC (команды, зарплата, лояльность)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-management.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-effectiveness.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Эффективность нанятых NPC (навыки, производительность, рост)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-effectiveness.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-limits.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Ограничения системы найма NPC (слоты, стоимость, лояльность)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-limits.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-economy.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Экономика найма NPC (зарплата, контракты, расходы)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-economy.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-advanced.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Продвинутые механики найма (обучение, специализация, elite NPC)."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-advanced.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Влияние найма NPC на игровой мир."
+    issues: []
+    api_target: "api/v1/social/npc-hiring-world-impact.yaml"
+
+  # Детализация player-orders системы
+  - path: ".BRAIN/02-gameplay/social/player-orders-types.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Типы заказов игроков (боевые, торговые, крафт, социальные)."
+    issues: []
+    api_target: "api/v1/social/player-orders-types.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-creation.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Создание заказов игроками (интерфейс, требования, стоимость)."
+    issues: []
+    api_target: "api/v1/social/player-orders-creation.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-execution.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Выполнение заказов (процесс, прогресс, завершение)."
+    issues: []
+    api_target: "api/v1/social/player-orders-execution.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-via-npc.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Система заказов через NPC (фиксеры, посредники)."
+    issues: []
+    api_target: "api/v1/social/player-orders-via-npc.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-economy.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Экономика заказов (цены, комиссии, валюты)."
+    issues: []
+    api_target: "api/v1/social/player-orders-economy.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-reputation.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Влияние заказов на репутацию."
+    issues: []
+    api_target: "api/v1/social/player-orders-reputation.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-advanced.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Продвинутые механики заказов (guilds, contracts, long-term)."
+    issues: []
+    api_target: "api/v1/social/player-orders-advanced.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/player-orders-world-impact.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Влияние системы заказов на игровой мир."
+    issues: []
+    api_target: "api/v1/social/player-orders-world-impact.yaml"
+
+  - path: ".BRAIN/02-gameplay/social/reputation-formulas.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Формулы расчета репутации с фракциями."
+    issues: []
+    api_target: "api/v1/social/reputation-formulas.yaml"
 
   # Техническая документация для API (v1.0.0 - 2025-11-06)
   - path: ".BRAIN/05-technical/api-specs/api-endpoints-complete.md"
@@ -1223,6 +1523,25 @@ documents:
     notes: "Документ готов к созданию API задач. Формализованы модели данных (PersonalNPC, ScenarioBlueprint, ScenarioInstance, Contract, License, Certificate, AuditLog, Ledger), события/сигналы и матрица прав (v1.0.0). TODO только для детализации конкретных сценариев и балансировки (не блокирует создание API)."
     issues: []
     api_target: null
+
+  # 04-narrative/ - Квестовая система
+  - path: ".BRAIN/04-narrative/quest-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Философия и требования системы квестов с D&D/MMORPG интеграцией."
+    issues: []
+    api_target: "api/v1/quests/quest-system.yaml"
+
+  - path: ".BRAIN/04-narrative/quest-dnd-checks.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. Категории проверок для квестов (Social, Combat, Hacking, Tech, Stealth, Physical, Mental)."
+    issues: []
+    api_target: "api/v1/quests/dnd-checks.yaml"
 
 # Примеры записей:
 #
