@@ -8,6 +8,14 @@
 **api-readiness-notes:** Полная спецификация endgame raid «Blackwall Expedition». 10-15 игроков, 3 фазы, hardcore механики.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-119: api/v1/narrative/raids/raid-blackwall.yaml (2025-11-07)
+- Last Updated: 2025-11-07 06:40
+---
+
 # ENDGAME RAID: Blackwall Expedition
 
 ## 1. Синопсис

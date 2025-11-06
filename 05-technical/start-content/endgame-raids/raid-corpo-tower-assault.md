@@ -8,6 +8,14 @@
 **api-readiness-notes:** Полная спецификация endgame raid «Corpo Tower Assault». 10-15 игроков, 3 фазы, hardcore stealth/combat.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-120: api/v1/narrative/raids/raid-corpo-tower.yaml (2025-11-07)
+- Last Updated: 2025-11-07 06:45
+---
+
 # ENDGAME RAID: Corpo Tower Assault
 
 ## 1. Синопсис
