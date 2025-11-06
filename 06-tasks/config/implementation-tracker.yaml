@@ -578,3 +578,38 @@ implementations:
     status: "not_started"
     priority: "CRITICAL"
 
+# === NARRATIVE CONTENT APIS (2025-11-07 СЕССИЯ 3) ===
+
+- api_path: "api/v1/narrative/faction-quests.yaml"
+  task_id: "API-TASK-152"
+  brain_source: "9 faction quest JSON files v3.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/narrative/quest-catalog.yaml"
+  task_id: "API-TASK-153"
+  brain_source: "20+ quest JSON files (expanded + additional)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/gameplay/world/random-events-extended.yaml"
+  task_id: "API-TASK-154"
+  brain_source: ".BRAIN/04-narrative/quests/side/EVENTS-ALL-PERIODS.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
