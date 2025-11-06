@@ -832,6 +832,28 @@ implementations:
     status: "not_started"
     priority: "LOW"
 
+- api_path: "api/v1/technical/global-state-extended.yaml"
+  task_id: "API-TASK-176"
+  brain_source: ".BRAIN/05-technical/global-state/ (5 documents v1.0.0)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/gameplay/social/player-orders-extended.yaml"
+  task_id: "API-TASK-177"
+  brain_source: ".BRAIN/02-gameplay/social/player-orders-*.md (8 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
