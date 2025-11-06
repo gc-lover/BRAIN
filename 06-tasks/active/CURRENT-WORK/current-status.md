@@ -11,7 +11,7 @@
 **Статистика проверки:**
 - **Всего markdown файлов:** 1394
 - **Документов с метаданными api-readiness:** 1394 (100%)
-- **Готовых к API (ready):** 139 документов
+- **Готовых к API (ready):** 146 документов (+7 world-events!)
 - **Справочных (not-applicable):** 45 документов
 - **Требуют доработки (needs-work/blocked):** 0 документов
 
@@ -19,9 +19,11 @@
 - ✅ economy-auction-house.md: `in-review` → `ready`
 - ✅ economy-player-market.md: `in-review` → `ready`
 - ✅ 4 README файла: `needs-work` → `not-applicable`
+- ✅ 7 world-events файлов: `in-review` → `ready`
 - ✅ readiness-tracker.yaml синхронизирован
 
 **Коммиты:**
+- commit c62d485: docs: обновление статусов мировых событий - 7 документов
 - commit 4f7f0f9: docs: update readiness status - all README files
 - commit e437866: docs: update readiness status - economy auction-house and player-market
 
@@ -179,7 +181,7 @@
 - ✅ quests-json-schema.md (v1.0.0) - ready
 - ✅ global-state-system.md (v1.0.0) - ready ⭐ НОВЫЙ!
 
-**Итого готовых к API:** 104 документа (+66 новых!)
+**Итого готовых к API:** 146 документов (+7 новых world-events!)
 
 ---
 
