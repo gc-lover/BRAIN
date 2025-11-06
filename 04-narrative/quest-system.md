@@ -10,6 +10,10 @@
 **api-readiness-check-date:** 2025-11-06 18:15  
 **api-readiness-notes:** Система квестов полностью проработана (10 типов, ветвление, последствия, интеграция с главным сюжетом 2090-2093). Готово для создания API задач.
 
+**target-domain:** narrative  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/quests
+
 ---
 **API Tasks Status:**
 - Status: created

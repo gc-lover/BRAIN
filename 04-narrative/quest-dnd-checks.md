@@ -2,6 +2,10 @@
 **api-readiness:** in-review  
 **api-readiness-check-date:** 2025-11-05 17:09  
 **api-readiness-notes:** Спецификация проверок для квестов/диалогов: пулы, DC, ветвления, UI.
+
+**target-domain:** narrative  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/quests
 ---
 ---
 **API Tasks Status:**
