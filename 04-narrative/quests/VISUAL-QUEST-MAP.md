@@ -1,7 +1,14 @@
+---
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 18:00  
+**api-readiness-notes:** Visual Quest Map. Полная карта квестов всех регионов. 607 строк.
+---
+
 # 🗺️ ВИЗУАЛЬНАЯ КАРТА КВЕСТОВ NECPGAME
 
 **Версия:** 3.0.0  
-**Масштаб:** City + Badlands + Cyberspace
+**Масштаб:** City + Badlands + Cyberspace  
+**Статус:** approved
 
 ---
 
@@ -599,6 +606,15 @@ SkillCheck.java
 ```
 
 **Готово удивлять. Готово вдохновлять. Готово стать легендой.** 🔥🎮
+
+---
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
+  - API-TASK-179: api/v1/narrative/quest-map.yaml (2025-11-07)
+- **Last Updated:** 2025-11-07 18:00
 
 ---
 
