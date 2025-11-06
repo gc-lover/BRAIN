@@ -1,13 +1,14 @@
 # Anti-Cheat System - Система защиты от читов
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 23:00  
+**Последнее обновление:** 2025-11-07 05:20  
 **Приоритет:** критический (Production)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 23:00
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 05:20
+**api-readiness-notes:** Многоуровневая защита от читов. Client validation, server reconciliation, pattern detection (speedhack, teleport, damage hack), auto-ban, manual review queue. Готов к API!
 
 ---
 

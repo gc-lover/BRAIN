@@ -1983,6 +1983,44 @@ documents:
     issues: []
     api_target: null
 
+  # 05-technical/backend/ - Tier 3 Engagement Systems (2025-11-07)
+  - path: ".BRAIN/05-technical/backend/achievement-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система достижений. Achievement definitions, progress tracking, unlock rewards (titles/badges/stats), notifications, categories (combat/social/exploration/economy), rarity (common→legendary), event-driven tracking. Структура БД (achievements + player_achievements). Engagement feature!"
+    issues: []
+    api_target: "api/v1/achievements.yaml"
+
+  - path: ".BRAIN/05-technical/backend/leaderboard-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система рейтингов. Global/seasonal/friend/guild leaderboards, multiple categories (level/PvP/economy/raids), Redis sorted sets для real-time updates, caching, pagination. Engagement feature!"
+    issues: []
+    api_target: "api/v1/leaderboards.yaml"
+
+  - path: ".BRAIN/05-technical/backend/daily-weekly-reset-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система автоматических сбросов. Daily/weekly resets для quests, rewards, limits, bonuses. Scheduled jobs (Spring @Scheduled, cron), reset logic, timezone handling. Engagement feature!"
+    issues: []
+    api_target: "api/v1/reset-jobs.yaml"
+
+  # 05-technical/infrastructure/ - Production Infrastructure (2025-11-07)
+  - path: ".BRAIN/05-technical/infrastructure/anti-cheat-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Система защиты от читов. Multi-level защита (client validation, server reconciliation, pattern detection), auto-ban thresholds, manual review queue, audit logs. Типы читов: speedhack, teleport, damage hack, item duplication. Production critical!"
+    issues: []
+    api_target: "api/v1/admin/anti-cheat.yaml"
+
 # Примеры записей:
 #
 # documents:

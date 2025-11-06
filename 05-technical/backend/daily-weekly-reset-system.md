@@ -1,13 +1,14 @@
 # Daily/Weekly Reset System - Система сбросов
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 23:00  
+**Последнее обновление:** 2025-11-07 05:20  
 **Приоритет:** средний (Engagement)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 23:00
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 05:20
+**api-readiness-notes:** Система автоматических сбросов. Daily/weekly resets для квестов, rewards, limits, bonuses. Scheduled jobs (cron), reset logic. Готов к API!
 
 ---
 
