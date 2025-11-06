@@ -2,6 +2,10 @@
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-05 19:25  
 **api-readiness-notes:** World events для перемещений между локациями: 10-15 событий на эпоху, с skill-checks, лутом, репутацией.
+
+**target-domain:** world  
+**target-microservice:** world-service (port 8086)  
+**target-frontend-module:** modules/world/events
 ---
 ---
 **API Tasks Status:**
