@@ -189,11 +189,11 @@
 - Progression система: +13 документов (attributes, skills, matrices, mapping, classes)
 - Социальные механики: +30 документов (mentorship: 6, npc-hiring: 8, player-orders: 8, reputation: 1, др: 7)
 - Квестовая система: +17 документов (quest-system, dnd-checks, 7 EXPANDED side-quests, 8 main quest D&D nodes)
-- Мировые события: +3 документа (global-events, framework, travel-events)
+- Мировые события: +4 документа (global-events, framework, travel-events, world-state-player-impact ⭐)
 - Экономика: +9 документов (7 базовых + loot-tables + trading-routes)
 - Технические: +2 документа (JSON структуры квестов + JSON-схема)
 - Лор: +4 документа
-- **ИТОГО: 102 документа готовы к созданию API задач**
+- **ИТОГО: 103 документа готовы к созданию API задач**
 
 ---
 
