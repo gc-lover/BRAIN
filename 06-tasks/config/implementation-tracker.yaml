@@ -889,6 +889,30 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+# === FINAL ADDITIONS (2025-11-07 BATCH 10) ===
+
+- api_path: "api/v1/gameplay/world/travel-events.yaml"
+  task_id: "API-TASK-181"
+  brain_source: ".BRAIN/02-gameplay/world/events/ (8 travel documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
+- api_path: "api/v1/narrative/narrative-tools.yaml"
+  task_id: "API-TASK-182"
+  brain_source: ".BRAIN/04-narrative/ (split + generators)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "LOW"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
