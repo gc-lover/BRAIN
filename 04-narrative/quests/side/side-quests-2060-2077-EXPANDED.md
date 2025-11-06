@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-144: api/v1/narrative/side-quests/side-quests-2060-2077.yaml (2025-11-07 10:50)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Побочные квесты: 2060–2077 (РАСШИРЕННАЯ ВЕРСИЯ)
 
 **api-readiness:** in-review  

@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-159: api/v1/progression/attributes-matrix.yaml (2025-11-07 11:22)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Матрица атрибутов — Старт, рост, капы и требования
 
 **api-readiness:** in-review  

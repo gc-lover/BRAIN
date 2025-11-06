@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-05 19:20  
 **api-readiness-notes:** JSON-схема для quests.json с полными полями для skill-checks, диалогов, ветвлений, репутации и лута.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-148: api/schemas/quest-schema.json (2025-11-07 10:58)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # JSON-схема для quests.json
 

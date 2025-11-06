@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-05 17:09  
 **api-readiness-notes:** Узлы проверок для квеста 3.2. Тактическая операция банды.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-143: api/v1/narrative/main-quests/032-street-wars-operation.yaml (2025-11-07 10:47)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Квест 3.2 «Бандитская операция» — D&D узлы проверок
 

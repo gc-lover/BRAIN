@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-159: api/v1/progression/skills-mapping.yaml (2025-11-07 11:22)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Навыки — соответствия предметам и имплантам
 
 **api-readiness:** in-review  

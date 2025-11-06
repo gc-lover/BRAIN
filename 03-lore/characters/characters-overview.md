@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-162: api/v1/lore/characters.yaml (2025-11-07 11:28)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Обзор персонажей NECPGAME
 
 **Статус:** review - категории NPC и роли добавлены  

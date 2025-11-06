@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-153: api/v1/economy/investments.yaml (2025-11-07 11:08)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Экономика - Инвестиции
 
 **Статус:** draft  

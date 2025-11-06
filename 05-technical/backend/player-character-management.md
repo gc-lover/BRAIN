@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Полная система управления игроками и персонажами. Account profiles, character creation/deletion, character switching, slots, data storage, appearance customization.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-127: api/v1/players/players.yaml (2025-11-07 10:05)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Player & Character Management System - Управление игроками и персонажами
 

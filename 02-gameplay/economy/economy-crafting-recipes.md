@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-155: api/v1/economy/crafting-recipes.yaml (2025-11-07 11:12)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Рецепты Крафта
 
 **Версия:** 2.0.0  

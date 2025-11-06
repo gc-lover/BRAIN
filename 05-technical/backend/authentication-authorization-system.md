@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Полная система аутентификации и авторизации. Регистрация, login, JWT tokens, OAuth, password recovery, 2FA, roles/permissions, account linking.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-126: api/v1/auth/authentication.yaml (2025-11-07 10:00)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Authentication & Authorization System - Система аутентификации и авторизации
 

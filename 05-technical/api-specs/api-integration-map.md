@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-163: api/docs/integration-architecture.md (2025-11-07 11:30)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # API Integration Map
 
 **Версия:** 1.0.0  

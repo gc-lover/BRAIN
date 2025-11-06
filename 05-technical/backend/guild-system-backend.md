@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Техническая архитектура гильдий. Guild creation, membership, ranks/roles/permissions, guild bank, events, progression, wars.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-135: api/v1/guilds/guild-system.yaml (2025-11-07 10:30)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Guild System Backend - Техническая архитектура гильдий
 

@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Интеграция фронтенда и бекенда для веб-версии. API calls, WebSocket, state management, caching, asset delivery, authentication flow.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-163: api/docs/frontend-integration.md (2025-11-07 11:30)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Frontend-Backend Integration - Интеграция веб-фронтенда с бекендом
 

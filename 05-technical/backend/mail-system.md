@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Почтовая система. Send mail, receive, inbox pagination, item/gold attachments, COD, system mail, expiration.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-131: api/v1/mail/mail-system.yaml (2025-11-07 10:22)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Mail System - Почтовая система
 

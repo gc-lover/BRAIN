@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Система групп. Party creation, invites, roles, loot settings, shared quests, party chat integration.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-133: api/v1/party/party-system.yaml (2025-11-07 10:26)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Party System Backend - Система групп (backend архитектура)
 

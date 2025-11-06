@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-151: api/v1/economy/logistics.yaml (2025-11-07 11:04)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Экономика - Логистика и перевозка
 
 **Статус:** draft  

@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-136: api/v1/achievements/achievements.yaml (2025-11-07 10:32)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Achievement System - Система достижений
 
 **Статус:** approved  

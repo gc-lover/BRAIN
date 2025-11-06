@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-05 17:09  
 **api-readiness-notes:** Узлы проверок для сложной многошаговой сцены (heist). Требует синхронизации с боевыми микро-проверками.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-143: api/v1/narrative/main-quests/042-black-barrier-heist.yaml (2025-11-07 10:47)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Квест 4.2 «Взлом заслона» — D&D узлы проверок (Heist)
 

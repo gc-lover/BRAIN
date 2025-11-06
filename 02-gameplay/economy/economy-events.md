@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-154: api/v1/economy/economy-events.yaml (2025-11-07 11:10)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Экономика - Экономические события
 
 **Статус:** draft  

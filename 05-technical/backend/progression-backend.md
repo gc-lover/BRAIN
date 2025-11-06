@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:30  
 **api-readiness-notes:** Progression backend - level up, experience, skill progression, attribute points. Микрофича (~400 строк). MVP блокер!
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-140: api/v1/progression/progression-engine.yaml (2025-11-07 10:40)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Progression System Backend - Backend системы прогрессии
 

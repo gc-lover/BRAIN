@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-161: docs/api-gateway-arch.md (2025-11-07 11:26)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # API Gateway Architecture - Архитектура API шлюза
 
 **Статус:** approved  

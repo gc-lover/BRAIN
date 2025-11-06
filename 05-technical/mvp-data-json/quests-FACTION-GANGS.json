@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-145: api/v1/narrative/faction-quests/faction-gangs.yaml (2025-11-07 10:52)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 {
   "version": "3.0.0",
   "factions": ["6th_Street","Maelstrom","Tyger_Claws","Valentinos","Voodoo_Boys"],

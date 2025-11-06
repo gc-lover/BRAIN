@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-158: api/v1/social/mentorship/mentorship-abilities.yaml (2025-11-07 11:20)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Система наставничества — Уникальные способности Teacher класса
 
 **api-readiness:** ready  

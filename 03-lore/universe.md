@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-162: api/v1/lore/universe.yaml (2025-11-07 11:28)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Вселенная NECPGAME
 
 **Статус:** review - временная шкала и лор симуляции детализированы  

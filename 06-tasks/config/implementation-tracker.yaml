@@ -659,3 +659,25 @@ implementations:
     status: "not_started"
     priority: "LOW"
 
+- api_path: "api/v1/gameplay/economy/logistics.yaml"
+  task_id: "API-TASK-159"
+  brain_source: ".BRAIN/02-gameplay/economy/economy-logistics.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/lore/lore-reference.yaml"
+  task_id: "API-TASK-160"
+  brain_source: ".BRAIN/03-lore/ (4 documents v1.1.0-v1.2.0)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "LOW"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+

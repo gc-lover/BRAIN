@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:30  
 **api-readiness-notes:** Quest Engine backend - state machine, dialogue execution, skill checks, branching. Микрофича (~400 строк). MVP блокер!
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-138: api/v1/quests/quest-engine.yaml (2025-11-07 10:36)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Quest Engine Backend - Backend движок квестов
 

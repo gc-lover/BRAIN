@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-152: api/v1/economy/contracts.yaml (2025-11-07 11:06)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Экономика - Контракты и сделки
 
 **Статус:** draft  

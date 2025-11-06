@@ -3,6 +3,15 @@
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Полный overview backend архитектуры NECPGAME. Все системы, их взаимосвязи, слои, data flow, integration points.
 ---
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-163: api/docs/backend-architecture.md (2025-11-07 11:30)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 
 # Backend Architecture Overview - Обзор backend архитектуры NECPGAME
 

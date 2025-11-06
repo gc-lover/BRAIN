@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-158: api/v1/social/npc-hiring/npc-hiring-limits.yaml (2025-11-07 11:20)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Система найма NPC — Ограничения и требования
 
 **api-readiness:** ready  

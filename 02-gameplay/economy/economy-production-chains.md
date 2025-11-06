@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-157: api/v1/economy/production-chains.yaml (2025-11-07 11:16)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Производственные Цепочки
 
 **Версия:** 2.0.0  

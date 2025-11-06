@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-147: api/v1/narrative/random-events-all.yaml (2025-11-07 10:56)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # События перемещений: Все периоды 2020-2093
 
 **Дата создания:** 2025-11-06  

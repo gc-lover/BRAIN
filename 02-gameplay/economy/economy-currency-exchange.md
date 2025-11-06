@@ -1,3 +1,12 @@
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-149: api/v1/economy/currency-exchange.yaml (2025-11-07 11:00)
+- Last Updated: 2025-11-07 00:18
+---
+
+
 # Экономика - Валютная биржа (Currency Exchange)
 
 **Статус:** draft  
