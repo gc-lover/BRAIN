@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Обзорный документ. Детализация вынесена в файлы-фичи.
 
+**target-domain:** gameplay-progression  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/progression/classes
+
 **Статус:** Обзор  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
