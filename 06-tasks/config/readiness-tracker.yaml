@@ -1186,6 +1186,43 @@ documents:
     issues: []
     api_target: null
 
+  # Техническая документация для API (v1.0.0 - 2025-11-06)
+  - path: ".BRAIN/05-technical/api-specs/api-endpoints-complete.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:45"
+    checker: "AI Agent"
+    notes: "180+ API endpoints детально: Quests, Combat, Economy, Social, Player, Items, Guilds, World. Request/Response examples, auth, rate limiting. Готов к созданию OpenAPI specs."
+    issues: []
+    api_target: "api/openapi/*.yaml"
+
+  - path: ".BRAIN/05-technical/api-specs/api-data-models.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:45"
+    checker: "AI Agent"
+    notes: "29 data models (JSON schemas): Quest, Ability, Weapon, Enemy, Currency, Resource, Recipe, NPC, Reputation, etc. Validation rules, relationships. Готов к codegen."
+    issues: []
+    api_target: "api/schemas/*.json"
+
+  - path: ".BRAIN/05-technical/api-specs/api-integration-map.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:45"
+    checker: "AI Agent"
+    notes: "System architecture, data flows, service dependencies, event-driven design, WebSocket channels, caching, transactions. Готов к backend implementation."
+    issues: []
+    api_target: "docs/architecture.md"
+
+  - path: ".BRAIN/05-technical/API-TECHNICAL-DOCUMENTATION-SUMMARY.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-06 05:45"
+    checker: "AI Agent"
+    notes: "Сводка технической документации API. Reference документ, не для API."
+    issues: []
+    api_target: null
+
   - path: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
     status: "ready"
     version: "1.0.0"
