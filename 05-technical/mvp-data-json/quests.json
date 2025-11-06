@@ -2909,6 +2909,305 @@
         "theme": "gang-war-finale"
       }
     }
+    ,
+    {
+      "id": "quest-origin-solo-01-first-gig",
+      "name": "Origin: Solo — Первый контракт",
+      "description": "Первый контракт как Solo. Backstory: бывший военный/corpo-security ищет работу в Night City.",
+      "type": "origin",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 1,
+      "objectives": [
+        { "id": "obj-intro", "description": "Прибыть в Night City", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-meet-sarah", "description": "Встретить Сару Миллер", "type": "npc", "target": { "type": "npc", "id": "npc-sarah-miller" }, "quantity": 1 },
+        { "id": "obj-first-combat", "description": "Первый бой (3 врага)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 3 }
+      ],
+      "rewards": { "experience": 200, "money": 300, "items": ["item-weapon-basic"], "reputation": { "faction": "ncpd", "amount": 10 } },
+      "requirements": { "level": 1, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "originClass": "solo",
+        "originStage": 1,
+        "backstory": "military-veteran",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-solo-02-reputation",
+      "name": "Origin: Solo — Построение репутации",
+      "description": "Выполнить серию контрактов. Backstory продолжается: заработать репутацию в Night City.",
+      "type": "origin",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-contract-1", "description": "Контракт 1: Охрана (5 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-contract-2", "description": "Контракт 2: Эскорт", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-contract-3", "description": "Контракт 3: Зачистка (7 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 7 }
+      ],
+      "rewards": { "experience": 350, "money": 450, "items": ["item-armor-basic"], "reputation": { "faction": "ncpd", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": ["quest-origin-solo-01-first-gig"] },
+      "metadata": {
+        "originClass": "solo",
+        "originStage": 2,
+        "backstory": "building-reputation",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-growth"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-solo-03-rival",
+      "name": "Origin: Solo — Соперник",
+      "description": "Соперник-Solo бросает вызов. Backstory: доказать, что ты лучший.",
+      "type": "origin",
+      "giverNpcId": "npc-sarah-miller",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-rival-challenge", "description": "Принять вызов", "type": "dialogue", "target": { "type": "dialogue", "id": "rival-challenge" }, "quantity": 1 },
+        { "id": "obj-duel", "description": "Дуэль с соперником (1v1)", "type": "kill", "target": { "type": "enemy", "id": "npc-solo-rival" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 500, "money": 600, "items": ["item-rival-trophy"], "reputation": { "faction": "independent", "amount": 20 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-origin-solo-02-reputation"] },
+      "metadata": {
+        "originClass": "solo",
+        "originStage": 3,
+        "originFinal": true,
+        "backstory": "proving-yourself",
+        "skillChecks": [
+          { "type": "tactics", "dc": 14, "bonus": "duel-mastery", "description": "Мастерство дуэли", "successEffects": { "xpBonus": 100 } }
+        ],
+        "epoch": "2020-2030",
+        "theme": "origin-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-netrunner-01-first-dive",
+      "name": "Origin: Netrunner — Первое погружение",
+      "description": "Первый netrunning опыт. Backstory: tech-genius из стрит-культуры.",
+      "type": "origin",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 1,
+      "objectives": [
+        { "id": "obj-learn-netrunning", "description": "Обучение netrunning", "type": "item", "target": { "type": "item", "id": "item-cyberdeck-basic" }, "quantity": 1 },
+        { "id": "obj-first-hack", "description": "Первый взлом", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-defeat-ice", "description": "Победить ICE (2)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 2 }
+      ],
+      "rewards": { "experience": 200, "money": 300, "items": ["item-cyberdeck-basic"], "reputation": { "faction": "netwatch", "amount": 10 } },
+      "requirements": { "level": 1, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "originClass": "netrunner",
+        "originStage": 1,
+        "backstory": "tech-genius",
+        "netrunningRequired": true,
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-netrunner-02-data-heist",
+      "name": "Origin: Netrunner — Кража данных",
+      "description": "Первая серьёзная кража данных. Backstory: привлечение внимания NetWatch.",
+      "type": "origin",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-target-system", "description": "Определить цель", "type": "item", "target": { "type": "item", "id": "item-intel" }, "quantity": 1 },
+        { "id": "obj-infiltrate-net", "description": "Проникнуть в сеть", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-steal-data", "description": "Украсть данные", "type": "item", "target": { "type": "item", "id": "item-corporate-data" }, "quantity": 1 },
+        { "id": "obj-escape-ice", "description": "Уйти от ICE (4)", "type": "kill", "target": { "type": "enemy", "id": "npc-ai-combat-proxy" }, "quantity": 4 }
+      ],
+      "rewards": { "experience": 350, "money": 450, "items": ["item-corporate-data"], "reputation": { "faction": "netwatch", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": ["quest-origin-netrunner-01-first-dive"] },
+      "metadata": {
+        "originClass": "netrunner",
+        "originStage": 2,
+        "backstory": "data-heist",
+        "netrunningRequired": true,
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-growth"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-netrunner-03-netwatch-offer",
+      "name": "Origin: Netrunner — Предложение NetWatch",
+      "description": "NetWatch делает предложение. Backstory: выбор пути.",
+      "type": "origin",
+      "giverNpcId": "npc-elizabeth-chen",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-meet-netwatch", "description": "Встретиться с NetWatch", "type": "npc", "target": { "type": "npc", "id": "npc-elizabeth-chen" }, "quantity": 1 },
+        { "id": "obj-choice", "description": "Принять решение", "type": "dialogue", "target": { "type": "dialogue", "id": "netwatch-offer" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 500, "money": 600, "items": ["item-netwatch-badge"], "reputation": { "faction": "netwatch", "amount": 25 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-origin-netrunner-02-data-heist"] },
+      "metadata": {
+        "originClass": "netrunner",
+        "originStage": 3,
+        "originFinal": true,
+        "backstory": "netwatch-offer",
+        "branching": true,
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-fixer-01-street-connections",
+      "name": "Origin: Fixer — Уличные связи",
+      "description": "Начало как fixer. Backstory: streetwise kid из Badlands прибывает в Night City.",
+      "type": "origin",
+      "giverNpcId": "npc-marco-fix",
+      "level": 1,
+      "objectives": [
+        { "id": "obj-arrive-nc", "description": "Прибыть в Night City", "type": "location", "target": { "type": "location", "id": "loc-downtown-001" }, "quantity": 1 },
+        { "id": "obj-meet-marco", "description": "Встретить Марко Фикс", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-first-deal", "description": "Первая сделка", "type": "item", "target": { "type": "item", "id": "item-weapon-basic" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 200, "money": 400, "items": [], "reputation": { "faction": "independent", "amount": 10 } },
+      "requirements": { "level": 1, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "originClass": "fixer",
+        "originStage": 1,
+        "backstory": "badlands-kid",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-fixer-02-network-building",
+      "name": "Origin: Fixer — Построение сети",
+      "description": "Создание первых контактов. Backstory: завербовать ключевых людей.",
+      "type": "origin",
+      "giverNpcId": "npc-marco-fix",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-recruit-1", "description": "Завербовать торговца", "type": "npc", "target": { "type": "npc", "id": "npc-anna-petrova" }, "quantity": 1 },
+        { "id": "obj-recruit-2", "description": "Завербовать info-broker", "type": "npc", "target": { "type": "npc", "id": "npc-victor-vector" }, "quantity": 1 },
+        { "id": "obj-deal", "description": "Организовать сделку", "type": "item", "target": { "type": "item", "id": "item-components-basic" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 350, "money": 500, "items": [], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": ["quest-origin-fixer-01-street-connections"] },
+      "metadata": {
+        "originClass": "fixer",
+        "originStage": 2,
+        "backstory": "network-building",
+        "skillChecks": [
+          { "type": "cool", "dc": 13, "bonus": "recruit", "description": "Завербовать", "successEffects": { "xpBonus": 50 } }
+        ],
+        "epoch": "2020-2030",
+        "theme": "origin-growth"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-fixer-03-first-empire",
+      "name": "Origin: Fixer — Первая империя",
+      "description": "Создание фиксерской империи. Backstory: стать настоящим фиксером Night City.",
+      "type": "origin",
+      "giverNpcId": "npc-marco-fix",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-territory", "description": "Закрепить территорию", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-rival", "description": "Убрать конкурента (4 врага)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 4 },
+        { "id": "obj-establish", "description": "Основать империю", "type": "item", "target": { "type": "item", "id": "item-fixer-license" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 500, "money": 700, "items": ["item-fixer-license"], "reputation": { "faction": "independent", "amount": 25 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-origin-fixer-02-network-building"] },
+      "metadata": {
+        "originClass": "fixer",
+        "originStage": 3,
+        "originFinal": true,
+        "backstory": "first-empire",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-finale"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-nomad-01-clan-departure",
+      "name": "Origin: Nomad — Отъезд из клана",
+      "description": "Покидание клана номадов. Backstory: конфликт с лидером, путь в Night City.",
+      "type": "origin",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 1,
+      "objectives": [
+        { "id": "obj-clan-conflict", "description": "Конфликт с кланом", "type": "dialogue", "target": { "type": "dialogue", "id": "clan-conflict" }, "quantity": 1 },
+        { "id": "obj-leave-badlands", "description": "Покинуть Badlands", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-survive-journey", "description": "Выжить в путешествии (3 scavs)", "type": "kill", "target": { "type": "enemy", "id": "npc-scav" }, "quantity": 3 }
+      ],
+      "rewards": { "experience": 200, "money": 300, "items": ["item-nomad-vehicle"], "reputation": { "faction": "nomads", "amount": −10 } },
+      "requirements": { "level": 1, "reputation": null, "completedQuests": [] },
+      "metadata": {
+        "originClass": "nomad",
+        "originStage": 1,
+        "backstory": "clan-departure",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-introduction"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-nomad-02-nc-arrival",
+      "name": "Origin: Nomad — Прибытие в Night City",
+      "description": "Первые дни в городе. Backstory: адаптация к городской жизни.",
+      "type": "origin",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 2,
+      "objectives": [
+        { "id": "obj-find-work", "description": "Найти работу", "type": "npc", "target": { "type": "npc", "id": "npc-marco-fix" }, "quantity": 1 },
+        { "id": "obj-first-job", "description": "Первая работа (5 врагов)", "type": "kill", "target": { "type": "enemy", "id": "npc-gangster-generic" }, "quantity": 5 },
+        { "id": "obj-establish-base", "description": "Найти базу", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 350, "money": 450, "items": [], "reputation": { "faction": "independent", "amount": 15 } },
+      "requirements": { "level": 2, "reputation": null, "completedQuests": ["quest-origin-nomad-01-clan-departure"] },
+      "metadata": {
+        "originClass": "nomad",
+        "originStage": 2,
+        "backstory": "city-adaptation",
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-growth"
+      }
+    }
+    ,
+    {
+      "id": "quest-origin-nomad-03-clan-reconciliation",
+      "name": "Origin: Nomad — Примирение с кланом",
+      "description": "Возможность вернуться в клан OR создать свой. Backstory: выбор пути.",
+      "type": "origin",
+      "giverNpcId": "npc-anna-petrova",
+      "level": 3,
+      "objectives": [
+        { "id": "obj-return-badlands", "description": "Вернуться в Badlands", "type": "location", "target": { "type": "location", "id": "loc-watson-001" }, "quantity": 1 },
+        { "id": "obj-meet-clan", "description": "Встретиться с кланом", "type": "dialogue", "target": { "type": "dialogue", "id": "clan-meeting" }, "quantity": 1 },
+        { "id": "obj-choice", "description": "Принять решение", "type": "dialogue", "target": { "type": "dialogue", "id": "nomad-choice" }, "quantity": 1 }
+      ],
+      "rewards": { "experience": 500, "money": 600, "items": ["item-clan-token"], "reputation": { "faction": "nomads", "amount": 30 } },
+      "requirements": { "level": 3, "reputation": null, "completedQuests": ["quest-origin-nomad-02-nc-arrival"] },
+      "metadata": {
+        "originClass": "nomad",
+        "originStage": 3,
+        "originFinal": true,
+        "backstory": "reconciliation",
+        "branching": true,
+        "skillChecks": [],
+        "epoch": "2020-2030",
+        "theme": "origin-finale"
+      }
+    }
   ]
 }
 
