@@ -766,6 +766,43 @@ documents:
     issues: []
     api_target: "api/v1/quests/faction/media-politics.yaml"
 
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-ANIMALS-MOX-WRAITHS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:45"
+    checker: "AI Agent"
+    notes: "3 квеста малых банд: Mox (восстание кукол), Animals (белковые войны), Wraiths (короли пустыни), Scavs (кольцо органов). Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/minor-gangs.yaml"
+
+  # Документация квестов
+  - path: ".BRAIN/04-narrative/quests/BRANCHING-QUESTS-SUMMARY.md"
+    status: "not-applicable"
+    version: "3.0.0"
+    checked: "2025-11-06 04:45"
+    checker: "AI Agent"
+    notes: "Сводка по квестам с глубокими ветвлениями. Документация, не для API."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/MEGA-QUEST-EXPANSION-SUMMARY.md"
+    status: "not-applicable"
+    version: "3.0.0"
+    checked: "2025-11-06 04:45"
+    checker: "AI Agent"
+    notes: "Общая сводка мега-расширения. Документация, не для API."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/04-narrative/quests/FINAL-CONTENT-REPORT.md"
+    status: "not-applicable"
+    version: "3.0.0"
+    checked: "2025-11-06 04:45"
+    checker: "AI Agent"
+    notes: "Финальный отчёт по всему контенту. Документация, не для API."
+    issues: []
+    api_target: null
+
   # 02-gameplay/combat/ - Боевая система
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     status: "ready"
