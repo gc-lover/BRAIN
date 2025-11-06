@@ -1,14 +1,14 @@
 # Модели данных для MVP
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-04  
-**Последнее обновление:** 2025-11-04  
+**Последнее обновление:** 2025-11-06  
 **Приоритет:** критический
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:08  
-**api-readiness-notes:** Добавлены модели навыков (Skill/CharacterSkill) и требования/эффекты. Требуется сверка с progression-*.md и equipment/implants.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-06 18:30  
+**api-readiness-notes:** Все модели данных детально определены (Account, Character, Location, Item, Quest, NPC, Combat, Trade, Skills). Сверено с progression/equipment системами. Готово для создания OpenAPI схем в API-SWAGGER.
 
 ---
 

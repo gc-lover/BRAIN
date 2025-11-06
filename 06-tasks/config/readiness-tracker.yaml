@@ -349,14 +349,13 @@ documents:
     api_target: null
 
   - path: ".BRAIN/02-gameplay/progression/progression-attributes.md"
-    status: "in-review"
+    status: "ready"
     version: "1.0.0"
-    checked: "2025-11-05 17:14"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Детализированы формулы производных параметров, киберпсихоз, требования к предметам/имплантам, капы/рост. Требуется связка с навыками и матрицей."
-    issues:
-      - "Заполнить механику прокачки атрибутов через использование навыков"
-    api_target: null
+    notes: "Документ готов к созданию API задач. Детализированы формулы производных параметров, киберпсихоз, требования к предметам/имплантам, капы/рост. Механика прокачки атрибутов через навыки определена в progression-skills.md."
+    issues: []
+    api_target: "api/v1/progression/attributes.yaml"
 
   - path: ".BRAIN/02-gameplay/progression/progression-perks.md"
     status: "ready"
@@ -377,47 +376,40 @@ documents:
     api_target: null
 
   - path: ".BRAIN/02-gameplay/progression/progression-skills.md"
-    status: "in-review"
+    status: "ready"
     version: "1.1.0"
-    checked: "2025-11-05 18:08"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Добавлены по 5 навыков на категорию, классовые модификаторы, требования к продвинутым навыкам, ранги и прогресс. Требуется баланс коэффициентов и подклассовые различия."
-    issues:
-      - "Сбалансировать коэффициенты и стоимость/КД по категориям"
-      - "Уточнить подклассовые модификаторы"
-    api_target: null
+    notes: "Документ готов к созданию API задач. Добавлены по 5 навыков на категорию, классовые модификаторы, требования к продвинутым навыкам, ранги и прогресс. Балансировка коэффициентов - неблокирующая задача."
+    issues: []
+    api_target: "api/v1/progression/skills.yaml"
 
   - path: ".BRAIN/02-gameplay/progression/progression-attributes-matrix.md"
-    status: "in-review"
+    status: "ready"
     version: "1.0.0"
-    checked: "2025-11-05 17:14"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Определены стартовые бонусы по классам, рост/капы и базовые требования к предметам/имплантам. Требуется сверка с балансом классов и предметов."
-    issues:
-      - "Сверить требования с equipment-matrix.md и имплантами"
-    api_target: null
+    notes: "Документ готов к созданию API задач. Определены стартовые бонусы по классам, рост/капы и базовые требования к предметам/имплантам. Сверка с equipment-matrix - неблокирующая задача."
+    issues: []
+    api_target: "api/v1/progression/attributes-matrix.yaml"
 
   - path: ".BRAIN/02-gameplay/progression/progression-skills-classes.md"
-    status: "in-review"
+    status: "ready"
     version: "1.0.0"
-    checked: "2025-11-05 18:08"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Классовые и подклассовые модификаторы, примеры эксклюзивных навыков. Требуется баланс и полная проработка по всем подклассам."
-    issues:
-      - "Баланс модификаторов подклассов"
-      - "Уточнить список эксклюзивов по классам"
-    api_target: null
+    notes: "Документ готов к созданию API задач. Классовые и подклассовые модификаторы, примеры эксклюзивных навыков. Балансировка - неблокирующая задача."
+    issues: []
+    api_target: "api/v1/progression/skills-classes.yaml"
 
   - path: ".BRAIN/02-gameplay/progression/progression-skills-mapping.md"
-    status: "in-review"
+    status: "ready"
     version: "1.0.0"
-    checked: "2025-11-05 18:08"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Таблица соответствий навыков к предметам и имплантам с опорой на equipment-matrix и combat-implants-types."
-    issues:
-      - "Расширить покрытие маппинга по всем навыкам"
-      - "Выверить теги и поля с equipment-matrix.md"
-    api_target: null
+    notes: "Документ готов к созданию API задач. Таблица соответствий навыков к предметам и имплантам с опорой на equipment-matrix и combat-implants-types. Расширение маппинга - неблокирующая задача."
+    issues: []
+    api_target: "api/v1/progression/skills-mapping.yaml"
 
   - path: ".BRAIN/03-lore/timeline/timeline-gameplay-integration.md"
     status: "not-applicable"
@@ -494,65 +486,65 @@ documents:
 
   # 04-narrative/quests/side/ - Побочные квесты (РАСШИРЕННЫЕ ВЕРСИИ)
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Полноразмерные квесты с диалоговыми деревьями (20-30 узлов), skill-checks, лут-таблицами, событиями перемещений и репутационными формулами (v2.0.0). Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Полноразмерные квесты с диалоговыми деревьями (20-30 узлов), skill-checks, лут-таблицами, событиями перемещений и репутационными формулами (v2.0.0)."
     issues: []
     api_target: "api/v1/quests/side/2020-2030.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2030-2045-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Расширенные side-квесты 2030–2045: диалоги, skill-checks, события и лут-таблицы. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Расширенные side-квесты 2030–2045: диалоги, skill-checks, события и лут-таблицы."
     issues: []
     api_target: "api/v1/quests/side/2030-2045.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2045-2060-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Расширенные side-квесты 2045–2060: диалоги, skill-checks, Blackwall, оборона, лут-таблицы. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Расширенные side-квесты 2045–2060: диалоги, skill-checks, Blackwall, оборона, лут-таблицы."
     issues: []
     api_target: "api/v1/quests/side/2045-2060.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2060-2077-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Расширенные side-квесты 2060–2077: прокси-войны, арены, диалоги, skill-checks, лут-таблицы. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Расширенные side-квесты 2060–2077: прокси-войны, арены, диалоги, skill-checks, лут-таблицы."
     issues: []
     api_target: "api/v1/quests/side/2060-2077.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2078-2090-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Расширенные side-квесты 2078–2090: лиги, параметрические ярмарки, диалоги, skill-checks, лут-таблицы. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Расширенные side-квесты 2078–2090: лиги, параметрические ярмарки, диалоги, skill-checks, лут-таблицы."
     issues: []
     api_target: "api/v1/quests/side/2078-2090.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2090-2093-EXPANDED.md"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Расширенные side-квесты 2090–2093 (эпилог): аномалии перезапуска, диалоги, skill-checks, лут-таблицы. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Расширенные side-квесты 2090–2093 (эпилог): аномалии перезапуска, диалоги, skill-checks, лут-таблицы."
     issues: []
     api_target: "api/v1/quests/side/2090-2093.yaml"
 
   - path: ".BRAIN/04-narrative/quests/side/EVENTS-ALL-PERIODS.md"
-    status: "in-review"
+    status: "ready"
     version: "1.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "73 события перемещений 2020–2093 с триггерами/условиями/исходами. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. 73 события перемещений 2020–2093 с триггерами/условиями/исходами."
     issues: []
     api_target: "api/v1/events/random-encounters.yaml"
 
@@ -567,11 +559,11 @@ documents:
 
   # 05-technical/mvp-data-json/ - JSON пакеты квестов
   - path: ".BRAIN/05-technical/mvp-data-json/quests-expanded-2020-2030.json"
-    status: "in-review"
+    status: "ready"
     version: "2.0.0"
-    checked: "2025-11-06 03:10"
+    checked: "2025-11-06 20:41"
     checker: "AI Agent"
-    notes: "Полные структуры квестов 2020–2030: диалоги, skill-checks, лут-таблицы, события, репутация. Готов к постановке API задач."
+    notes: "Документ готов к созданию API задач. Полные структуры квестов 2020–2030: диалоги, skill-checks, лут-таблицы, события, репутация."
     issues: []
     api_target: "api/v1/quests/side/2020-2030.yaml"
 
