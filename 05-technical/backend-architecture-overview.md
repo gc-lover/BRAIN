@@ -37,7 +37,7 @@
 ```
 ┌───────────────────────────────────────────────────────────┐
 │                    CLIENT LAYER                            │
-│  - Web Client (React/Next.js)                              │
+│  - Web Client (React 18 + TypeScript)                      │
 │  - UE5 Client (C++ прослойка GAME-CPP-FOR-UE5)            │
 │  - Mobile Client (будущее)                                 │
 └─────────────────────┬─────────────────────────────────────┘
@@ -45,56 +45,57 @@
                       │ HTTP/REST + WebSocket
                       ▼
 ┌───────────────────────────────────────────────────────────┐
-│                   API GATEWAY LAYER                        │
-│  - API Gateway (Kong/Spring Cloud Gateway)                 │
-│  - Load Balancer                                           │
-│  - Rate Limiting                                           │
-│  - Authentication Check (JWT validation)                   │
-│  - Request Routing                                         │
+│              INFRASTRUCTURE LAYER                          │
+│                                                            │
+│  ┌──────────────────────────────────────────┐            │
+│  │  API Gateway (Spring Cloud Gateway)       │            │
+│  │  Port: 8080 (единая точка входа)          │            │
+│  │  - Request Routing                         │            │
+│  │  - JWT Validation                          │            │
+│  │  - Load Balancing                          │            │
+│  │  - Circuit Breaker                         │            │
+│  │  - CORS                                    │            │
+│  └──────────────────────────────────────────┘            │
+│                                                            │
+│  ┌──────────────────┐  ┌──────────────────┐              │
+│  │ Service Discovery│  │  Config Server   │              │
+│  │ (Eureka - 8761)  │  │  (Port 8888)     │              │
+│  └──────────────────┘  └──────────────────┘              │
 └─────────────────────┬─────────────────────────────────────┘
                       │
-                      │
+                      │ Service Registry & Config
                       ▼
 ┌───────────────────────────────────────────────────────────┐
-│                APPLICATION LAYER (Services)                │
+│              MICROSERVICES LAYER                           │
 │                                                            │
 │  ┌──────────────────┐  ┌──────────────────┐              │
-│  │   Auth Service   │  │  Session Service │              │
+│  │  Auth Service    │  │ Character Service│              │
+│  │  (Port 8081)     │  │  (Port 8082)     │              │
+│  │  /api/v1/auth/*  │  │ /api/v1/chars/*  │              │
 │  └──────────────────┘  └──────────────────┘              │
 │                                                            │
 │  ┌──────────────────┐  ┌──────────────────┐              │
-│  │ Character Service│  │ Inventory Service│              │
+│  │ Gameplay Service │  │  Social Service  │              │
+│  │  (Port 8083)     │  │  (Port 8084)     │              │
+│  │/api/v1/gameplay/*│  │ /api/v1/social/* │              │
 │  └──────────────────┘  └──────────────────┘              │
 │                                                            │
 │  ┌──────────────────┐  ┌──────────────────┐              │
-│  │  Quest Service   │  │  Combat Service  │              │
-│  └──────────────────┘  └──────────────────┘              │
-│                                                            │
-│  ┌──────────────────┐  ┌──────────────────┐              │
-│  │  Loot Service    │  │  Trade Service   │              │
-│  └──────────────────┘  └──────────────────┘              │
-│                                                            │
-│  ┌──────────────────┐  ┌──────────────────┐              │
-│  │ Matchmaking Svc  │  │   Chat Service   │              │
-│  └──────────────────┘  └──────────────────┘              │
-│                                                            │
-│  ┌──────────────────┐  ┌──────────────────┐              │
-│  │   Guild Service  │  │   Party Service  │              │
-│  └──────────────────┘  └──────────────────┘              │
-│                                                            │
-│  ┌──────────────────┐  ┌──────────────────┐              │
-│  │  Friend Service  │  │Notification Svc  │              │
+│  │ Economy Service  │  │  World Service   │              │
+│  │  (Port 8085)     │  │  (Port 8086)     │              │
+│  │/api/v1/economy/* │  │ /api/v1/world/*  │              │
 │  └──────────────────┘  └──────────────────┘              │
 │                                                            │
 └─────────────────────┬─────────────────────────────────────┘
                       │
-                      │ Event Bus (inter-service communication)
+                      │ REST (Feign Client) + Event Bus
                       ▼
 ┌───────────────────────────────────────────────────────────┐
 │                    EVENT BUS LAYER                         │
+│  - Message Queue (Kafka/RabbitMQ)                          │
 │  - Event Publishing/Subscription                           │
 │  - Asynchronous processing                                 │
-│  - Event handlers для интеграций                           │
+│  - Circuit Breaker patterns                                │
 └─────────────────────┬─────────────────────────────────────┘
                       │
                       │
@@ -104,19 +105,24 @@
 │                                                            │
 │  ┌──────────────────┐  ┌──────────────────┐              │
 │  │   PostgreSQL     │  │      Redis       │              │
-│  │  (Persistent)    │  │     (Cache)      │              │
+│  │  (Port 5433)     │  │   (Cache+State)  │              │
+│  │  - Persistent    │  │  - Sessions      │              │
+│  │  - ACID          │  │  - Cache         │              │
 │  └──────────────────┘  └──────────────────┘              │
 │                                                            │
 └───────────────────────────────────────────────────────────┘
 
 ┌───────────────────────────────────────────────────────────┐
 │             GAME SERVER LAYER (Real-Time)                  │
-│  - Game Server Instances                                   │
+│  - Game Server Instances (WebSocket)                       │
 │  - Zone Management                                         │
 │  - Player Position Sync                                    │
 │  - Combat Processing                                       │
 │  - AI/NPC Behavior                                         │
 └───────────────────────────────────────────────────────────┘
+
+** Примечание: Монолитное приложение (все 107 endpoints) все еще работает 
+   параллельно на порту 8080 для обратной совместимости во время миграции
 ```
 
 ---

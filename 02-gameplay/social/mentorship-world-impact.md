@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит влияние на мир и экономику.
 
+**target-domain:** social  
+**target-microservice:** social-service (port 8084)  
+**target-frontend-module:** modules/social/mentorship
+
 ---
 
 ## 7. Социальное влияние наставничества
