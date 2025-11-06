@@ -92,7 +92,7 @@
 - `economy-trading.md` - Торговля (общая концепция)
 - `economy-auction-house.md` - ⭐ Аукцион дом (детальная проработка для MVP)
 - `economy-player-market.md` - ⭐ Рынок игроков с ордерами (детальная проработка для MVP)
-- `stock-exchange/` - ⭐ Биржа акций (7 микрофич, Post-MVP)
+- `stock-exchange/` - ⭐ Биржа акций (10 микрофич, Post-MVP)
   - `stock-exchange-overview.md` - Обзор биржи
   - `stock-corporations.md` - Корпорации на бирже (25+)
   - `stock-trading.md` - Торговля акциями
@@ -103,6 +103,13 @@
   - `stock-advanced.md` - Short selling, margin (Expansion)
   - `stock-protection.md` - Защита от манипуляций
   - `stock-integration.md` - Интеграция с геймплеем
+- `economy-currency-exchange.md` - ⭐ Валютная биржа (обмен валют)
+- `economy-trading-guilds.md` - ⭐ Торговые гильдии
+- `economy-logistics.md` - ⭐ Логистика и перевозка
+- `economy-contracts.md` - ⭐ Контракты между игроками
+- `economy-investments.md` - ⭐ Инвестиции (портфель, диверсификация)
+- `economy-events.md` - ⭐ Экономические события
+- `economy-analytics.md` - ⭐ Аналитика и инструменты
 - `economy-crafting.md` - Крафт
 - `economy-world-impact.md` - Влияние экономики на игровой мир
 - `economy-monetization.md` - Монетизация и создание контента
