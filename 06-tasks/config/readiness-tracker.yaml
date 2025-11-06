@@ -1048,6 +1048,61 @@ documents:
     issues: []
     api_target: null
 
+  # Расширенная детализация боевой системы (v1.0.0 - 2025-11-06)
+  - path: ".BRAIN/02-gameplay/combat/combat-abilities-catalog.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "Каталог 34+ конкретных способностей: Combat, Hacking, Tech, Stealth, Support, Mobility, Medic. Полные характеристики: урон, кулдаун, энергия, синергии, апгрейды. Готов к API."
+    issues: []
+    api_target: "api/v1/abilities/catalog.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-roles-detailed.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "Детальные боевые роли: Tank, DPS (Burst/Sustained), Support, Healer, 4 Hybrid. Тактики, экипировка, team compositions, progression paths. Готов к API."
+    issues: []
+    api_target: "api/v1/combat/roles.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-combos-synergies.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "14+ combos: Solo, Team, Legendary. Synergy matrices (Equipment+Ability, Implant+Ability). Skill ceiling система. Combo scoring. Готов к API."
+    issues: []
+    api_target: "api/v1/combat/combos.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-weapon-classes-detailed.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "7 классов оружия, 80+ моделей, 5 брендов, mod system, weapon mastery (5 ranks), meta recommendations. Готов к API."
+    issues: []
+    api_target: "api/v1/weapons/catalog.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "15+ типов врагов, 10+ AI тактик, adaptive learning AI, emotion/morale system, 6+ boss fights (Adam Smasher, Blackwall Guardian, etc). Готов к API."
+    issues: []
+    api_target: "api/v1/enemies/catalog.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/COMBAT-SYSTEM-EXPANSION-SUMMARY.md"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-06 05:00"
+    checker: "AI Agent"
+    notes: "Сводка детализации боевой системы. Документация, не для API."
+    issues: []
+    api_target: null
+
   - path: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
     status: "ready"
     version: "1.0.0"
