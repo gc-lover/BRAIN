@@ -283,3 +283,4 @@ timeModifier = timeSinceLastEvent / cooldown (max 0.2)
 - Репутация: +5-10
 - Уникальные флаги/доступы
 
+

@@ -335,3 +335,4 @@ modifiers = (1 + classBonus) * (1 + originBonus) * (1 + questBonus) * (1 + skill
 - conflictModifier: модификатор конфликта (-0.8 до +0.2)
 ```
 
+

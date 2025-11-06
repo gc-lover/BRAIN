@@ -323,3 +323,4 @@ criticalMultiplier = 0.5
 finalChance = 0.10 * 0.8 * 0.95 * 0.9 * 0.5 = 0.0342 (3.42%)
 ```
 
+
