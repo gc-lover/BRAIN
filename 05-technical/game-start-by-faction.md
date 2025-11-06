@@ -11,6 +11,14 @@
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальное описание стартов для каждой фракции (Arasaka, Militech, Valentinos, Maelstrom, NCPD). Все необходимые детали для создания API спецификации присутствуют (v1.0.0).
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-115: api/v1/game/start-by-faction.yaml (2025-11-07)
+- Last Updated: 2025-11-07 06:20
+---
+
+---
 
 ## Общее описание
 
