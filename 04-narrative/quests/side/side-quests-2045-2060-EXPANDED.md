@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-06 01:30  
 **api-readiness-notes:** Полноразмерные квесты с диалоговыми деревьями (20-30 узлов), skill-checks, лут-таблицами, событиями перемещений и репутационными формулами
 
+**target-domain:** narrative  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/quests/side
+
 **Статус:** expanded  
 **Версия:** 2.0.0  
 **Дата создания:** 2025-11-06  
