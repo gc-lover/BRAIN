@@ -3,19 +3,67 @@
 **Статус:** draft  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 23:00  
+**Последнее обновление:** 2025-11-07 (обновлено для микросервисов)  
 **Приоритет:** критический (Production)
 
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 23:00
+**api-readiness-check-date:** 2025-11-07
 
 ---
 
 ## Краткое описание
 
-Централизованная система обработки ошибок и логирования.
+Централизованная система обработки ошибок и логирования для микросервисной архитектуры.
 
 **Микрофича:** Error handling, logging, monitoring, alerting
+
+---
+
+## Микросервисная архитектура
+
+### Centralized Logging (Планируется - ELK Stack)
+
+**Проблема:** Логи разбросаны по 6+ микросервисам  
+**Решение:** Централизованное хранилище логов
+
+**Stack:**
+```
+Микросервисы
+  ↓ (Logstash)
+Elasticsearch (хранилище)
+  ↓
+Kibana (визуализация, поиск)
+```
+
+**Каждый микросервис отправляет логи:**
+```
+auth-service (8081) → Logstash → Elasticsearch
+character-service (8082) → Logstash → Elasticsearch
+gameplay-service (8083) → Logstash → Elasticsearch
+social-service (8084) → Logstash → Elasticsearch
+economy-service (8085) → Logstash → Elasticsearch
+world-service (8086) → Logstash → Elasticsearch
+```
+
+### Distributed Tracing (Zipkin/Jaeger)
+
+**Проблема:** Запрос проходит через несколько сервисов  
+**Решение:** Trace ID для отслеживания
+
+**Пример:**
+```
+Client → API Gateway (trace_id: abc-123)
+  ↓
+auth-service (trace_id: abc-123) validates token
+  ↓
+character-service (trace_id: abc-123) creates character
+  ↓
+economy-service (trace_id: abc-123) creates inventory
+  ↓
+Response (trace_id: abc-123)
+```
+
+**Все логи с одинаковым trace_id = один запрос!**
 
 ---
 
