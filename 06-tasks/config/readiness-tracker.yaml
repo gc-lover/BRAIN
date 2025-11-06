@@ -620,6 +620,152 @@ documents:
     issues: []
     api_target: "api/v1/quests/side/2090-2093.yaml"
 
+  # Дополнительные пакеты квестов по периодам
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2020-2030-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "Дополнительно 4 квеста для 2020-2030: охота, доставка, саботаж, спасение. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2020-2030-p1.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2020-2030-ADDITIONAL-2.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "Дополнительно 6 квестов для 2020-2030: гонки, расследование, оборона, хакерство, арена, шантаж. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2020-2030-p2.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2030-2045-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "15 дополнительных квестов для 2030-2045: DAO, подмир, память, AI, различные типы. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2030-2045.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2045-2060-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "15 дополнительных квестов для 2045-2060: Блэкволл, номады, штурмы, катастрофы. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2045-2060.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2060-2077-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "15 дополнительных квестов для 2060-2077: медиа, арены, суды, корпо-перевороты. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2060-2077.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2078-2090-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "15 дополнительных квестов для 2078-2090: лиги, квантовые технологии, реформы. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2078-2090.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-2090-2093-ADDITIONAL.json"
+    status: "ready"
+    version: "2.2.0"
+    checked: "2025-11-06 04:15"
+    checker: "AI Agent"
+    notes: "10 дополнительных квестов для 2090-2093: перезапуск, наследие, финальные решения. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/additional/2090-2093.yaml"
+
+  # Фракционные квесты с глубокими ветвлениями (v3.0.0)
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-NCPD-MAXTAC.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 глубоких квеста NCPD/MaxTac: 12 концовок, 6 критических выборов, детальные NPC. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/ncpd-maxtac.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-ARASAKA.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "Корпо-интриги Arasaka: игра престолов, 6 концовок, выбор CEO. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/arasaka.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-GANGS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 квеста банд: 6th Street раскол, Voodoo Boys за Блэкволлом. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/gangs-p1.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-NOMADS-REGIONS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 квеста: Aldecaldos семья/свобода, Война за Pacifica. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/nomads-regions.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-MILITECH-BIOTECHNICA.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 корпо-квеста: операция Феникс (супероружие), человеческие испытания (био-этика). Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/militech-biotech.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-VALENTINOS-MAELSTROM.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 культурных квеста: Valentinos (Día de Muertos), Maelstrom (плоть vs хром). Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/valentinos-maelstrom.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-FIXERS-RIPPERS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 квеста специалистов: Королева Фиксеров (наследие Роуг), Война Гильдий Рипперов. Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/fixers-rippers.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-TRAUMA-NETRUNNERS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 специализированных квеста: Trauma Team (моральная дилемма), Наследие Бартмосса (киберпространство). Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/trauma-netrunners.yaml"
+
+  - path: ".BRAIN/05-technical/mvp-data-json/quests-FACTION-MEDIA-POLITICS.json"
+    status: "ready"
+    version: "3.0.0"
+    checked: "2025-11-06 04:30"
+    checker: "AI Agent"
+    notes: "2 политических квеста: Убийца Правды (журналистика), Выборы в Night City (демократия). Готов к API."
+    issues: []
+    api_target: "api/v1/quests/faction/media-politics.yaml"
+
   # 02-gameplay/combat/ - Боевая система
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     status: "ready"
