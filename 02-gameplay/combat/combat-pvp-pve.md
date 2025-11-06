@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по PvP зонам, условному PvP, безопасным зонам, PvE зонам, сложности AI, типам контента (v1.1.0). TODO только для детализации систем "беспредела", условного PvP и прогрессии AI (не блокируют создание API).
 
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/zones
+
 **Статус:** review - проверка готовности к созданию API задач  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03

@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по типу киберпространства, структуре, тренировочным боям, хабам, глобальным событиям, PvP, PvE контенту, турнирам, доступу (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
 
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/cyberspace
+
 ---
 **API Tasks Status:**
 - Status: created

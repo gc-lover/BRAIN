@@ -4,6 +4,10 @@
 **api-readiness-check-date:** 2025-11-03 19:36  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по сочетанию шутера/MMORPG, стилю стрельбы, TTK, системе урона, движению и стрельбе, покрытию и укрытиям (v1.1.0). TODO только для детализации отдачи и прицеливания (не блокирует создание API).
 
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/combat/shooting
+
 **Статус:** review - проверка готовности к созданию API задач  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
