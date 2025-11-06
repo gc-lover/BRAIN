@@ -185,20 +185,28 @@
 - ✅ loot-tables.md (v1.0.0) - ready
 - ✅ trading-routes-global.md (v1.0.0) - ready
 
-**Технические документы (11 документов):**
+**Технические документы (19 документов!):**
 - ✅ quests-expanded-2020-2030.json (v2.0.0) - ready
 - ✅ quests-json-schema.md (v1.0.0) - ready
-- ✅ global-state-system.md (v1.0.0) - ready ⭐ НОВЫЙ!
-- ✅ session-management-system.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
-- ✅ matchmaking-system.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
-- ✅ chat-system.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
-- ✅ realtime-server-architecture.md (v1.0.0) - ready ⭐ НОВЫЙ! (критический)
-- ✅ authentication-authorization-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
-- ✅ player-character-management.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
-- ✅ inventory-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
-- ✅ loot-system.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (MVP БЛОКЕР!)
+- ✅ global-state-system.md (v1.0.0) - ready ⭐
+- ✅ session-management-system.md (v1.0.0) - ready ⭐ (критический)
+- ✅ matchmaking-system.md (v1.0.0) - ready ⭐ (критический)
+- ✅ chat-system.md (v1.0.0) - ready ⭐ (критический)
+- ✅ realtime-server-architecture.md (v1.0.0) - ready ⭐ (критический)
+- ✅ authentication-authorization-system.md (v1.0.0) - ready ⭐⭐⭐ (MVP БЛОКЕР!)
+- ✅ player-character-management.md (v1.0.0) - ready ⭐⭐⭐ (MVP БЛОКЕР!)
+- ✅ inventory-system.md (v1.0.0) - ready ⭐⭐⭐ (MVP БЛОКЕР!)
+- ✅ loot-system.md (v1.0.0) - ready ⭐⭐⭐ (MVP БЛОКЕР!)
+- ✅ trade-system.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ mail-system.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ notification-system.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ party-system.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ friend-system.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ guild-system-backend.md (v1.0.0) - ready ⭐⭐ НОВЫЙ! (Tier 2)
+- ✅ backend-architecture-overview.md (v1.0.0) - ready ⭐⭐⭐⭐ НОВЫЙ! (КАРТА АРХИТЕКТУРЫ!)
+- ✅ frontend-backend-integration.md (v1.0.0) - ready ⭐⭐⭐ НОВЫЙ! (для веб-версии!)
 
-**Итого готовых к API:** 112 документов (+74 новых!)
+**Итого готовых к API:** 120 документов (+82 новых!)
 
 ---
 
@@ -222,12 +230,13 @@
 
 ## 📊 Статистика готовности к API
 
-- **Готово к API (ready):** 112 документов (+74 новых!)
+- **Готово к API (ready):** 120 документов (+82 новых!)
 - **Требуют доработки (needs-work):** 0 документов с механиками
-- **Не применимо (not-applicable):** Обзорные документы, концептуальные документы, служебные файлы
+- **Не применимо (not-applicable):** Обзорные документы, концептуальные документы, служебные файлы (2 архитектурных overview)
 - **В проверке (in-review):** 0 документов
 
-**Процент готовности игровых механик к API:** 100% (112 готовых из 112 документов с механиками)
+**Процент готовности игровых механик к API:** 100% (118 готовых из 118 документов с механиками)
+**Архитектурных overview документов (not-applicable):** 2 документа
 
 **Новые готовые документы (2025-11-07 05:20):**
 - Боевая система: +20 документов (17 базовых + 3 D&D интеграции)
@@ -236,9 +245,9 @@
 - Квестовая система: +17 документов (quest-system, dnd-checks, 7 EXPANDED side-quests, 8 main quest D&D nodes)
 - Мировые события: +4 документа (global-events, framework, travel-events, world-state-player-impact ⭐)
 - Экономика: +9 документов (7 базовых + loot-tables + trading-routes)
-- Технические: +11 документов (JSON структуры, **global-state** ⭐, **4 критических backend** ⭐⭐, **4 MVP блокера** ⭐⭐⭐)
+- Технические: +19 документов (JSON, **global-state** ⭐, **4 критических backend** ⭐⭐, **4 MVP блокера** ⭐⭐⭐, **6 Tier 2 систем** ⭐⭐, **2 архитектурных overview** ⭐⭐⭐⭐)
 - Лор: +4 документа
-- **ИТОГО: 112 документов готовы к созданию API задач**
+- **ИТОГО: 120 документов (118 готовы к API + 2 overview)**
 
 **⭐⭐⭐ 4 КРИТИЧЕСКИХ BACKEND СИСТЕМЫ (2025-11-06 21:55):**
 1. **Session Management System** - управление игровыми сессиями (login/logout, heartbeat, AFK, reconnection)
@@ -252,6 +261,18 @@
 3. **Inventory System** - система инвентаря (БЕЗ ЭТОГО ИГРА НЕ РАБОТАЕТ!)
 4. **Loot System** - генерация и распределение лута (БЕЗ ЭТОГО НЕТ PROGRESSION!)
 
+**⭐⭐ 6 TIER 2 СИСТЕМ (2025-11-07 05:20):**
+5. **Trade System** - P2P торговля между игроками
+6. **Mail System** - почтовая система (items + gold)
+7. **Notification System** - система уведомлений
+8. **Party System Backend** - техническая архитектура групп
+9. **Friend System** - социальная система друзей
+10. **Guild System Backend** - техническая архитектура гильдий
+
+**⭐⭐⭐⭐ 2 АРХИТЕКТУРНЫХ ДОКУМЕНТА (2025-11-07 05:20):**
+11. **Backend Architecture Overview** - КАРТА всей backend архитектуры (15 систем, integration map)
+12. **Frontend-Backend Integration** - интеграция веб-фронтенда с бекендом
+
 ---
 
 ## Активные обсуждения
@@ -263,6 +284,11 @@
 ## История завершенных задач
 
 **2025-11-07 05:20:**
+- ✅ ПРОВЕДЕН АНАЛИЗ ПРОБЕЛОВ BACKEND АРХИТЕКТУРЫ
+  - Создан документ: `backend-architecture-gaps.md`
+  - Идентифицировано 20+ недостающих систем
+  - Приоритизация по tier (1-5): MVP блокеры → Production features
+  
 - ✅ СОЗДАНЫ 4 MVP БЛОКЕРА (~3400 строк!)
   1. **authentication-authorization-system.md** - Authentication & Authorization (~850 строк)
      - Регистрация (email/password + OAuth: Steam, Google, Discord)
@@ -294,9 +320,54 @@
      - Boss loot (гарантированный + случайный)
      - Auto-loot settings, loot history
      - Структура БД (loot_tables + world_drops + loot_rolls + loot_history)
-- ✅ Создан анализ пробелов: `backend-architecture-gaps.md` (20+ недостающих систем, приоритизация)
-- ✅ Все 4 документа добавлены в readiness-tracker.yaml со статусом `ready`
-- ✅ Обновлена статистика: 112 документов готовы к API (+4 MVP блокера)
+- ✅ Все 4 MVP блокера добавлены в readiness-tracker.yaml со статусом `ready`
+
+- ✅ СОЗДАНЫ 6 TIER 2 СИСТЕМ (~2100 строк!)
+  5. **trade-system.md** - Trade System P2P (~600 строк)
+     - Trade window, offers, dual confirmation, history
+     - Restrictions (bound items), gold + items trade
+     - Distance check (10m), anti-scam protection
+     - Структура БД (trade_sessions + trade_history)
+  6. **mail-system.md** - Mail System (~400 строк)
+     - Send/receive mail, inbox pagination
+     - Item/gold attachments (до 10), COD (cash on delivery)
+     - System mail (награды), expiration (30 дней), return to sender
+     - Структура БД (mail_messages)
+  7. **notification-system.md** - Notification System (~350 строк)
+     - In-game notifications (popup, toast), WebSocket push
+     - Email notifications, multiple types, preferences
+     - History (30 дней), priority levels
+     - Структура БД (notifications)
+  8. **party-system.md** - Party System Backend (~350 строк)
+     - Party creation/dissolution, invites, leader
+     - Loot settings (need/greed/personal/master looter)
+     - Shared quest progress, chat integration
+     - Структура БД (parties)
+  9. **friend-system.md** - Friend System (~300 строк)
+     - Friend list, requests, online status
+     - Ignore/block list, recent players
+     - Структура БД (friendships)
+  10. **guild-system-backend.md** - Guild System Backend (~300 строк)
+     - Guild creation, membership, ranks/permissions
+     - Guild bank, events, progression, wars
+     - Структура БД (guilds + guild_members)
+
+- ✅ СОЗДАНЫ 2 АРХИТЕКТУРНЫХ OVERVIEW (~1200 строк!)
+  11. **backend-architecture-overview.md** (~700 строк) ⭐⭐⭐⭐
+     - ЦЕНТРАЛЬНАЯ КАРТА всей backend архитектуры!
+     - Все 15 систем + взаимосвязи
+     - Layered architecture, service dependencies, integration map
+     - Data flow examples, technology stack, deployment architecture
+     - API structure, WebSocket channels, data storage, event types
+  12. **frontend-backend-integration.md** (~500 строк) ⭐⭐⭐
+     - Интеграция веб-фронтенда (React/Next.js) с бекендом
+     - API communication (REST + WebSocket), auth flow (JWT)
+     - State management (Zustand/Redux), caching (React Query)
+     - Real-time updates, asset delivery (CDN), SSR для SEO
+     - Error handling, optimistic updates, performance optimization
+     
+- ✅ Все 12 новых документов добавлены в readiness-tracker.yaml
+- ✅ Обновлена статистика: 120 документов готовы (118 к API + 2 overview)
 
 **2025-11-06 21:55:**
 - ✅ СОЗДАНЫ 4 КРИТИЧЕСКИХ BACKEND ДОКУМЕНТА (~3000 строк!)
