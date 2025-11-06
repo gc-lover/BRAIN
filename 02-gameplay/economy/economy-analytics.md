@@ -11,6 +11,14 @@
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные механики аналитики и графиков: типы графиков, технические индикаторы, market sentiment, heat maps, portfolio analytics, trade history analysis, alerts, структуру БД, API endpoints. Все необходимые детали для создания API спецификации присутствуют.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-121: api/v1/gameplay/economy/analytics.yaml (2025-11-07)
+- Last Updated: 2025-11-07 06:55
+---
+
+---
 
 ## Краткое описание
 
