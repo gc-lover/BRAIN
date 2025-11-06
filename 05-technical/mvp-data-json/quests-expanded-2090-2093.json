@@ -1,0 +1,21 @@
+{
+  "period": "2090-2093",
+  "version": "2.0.0",
+  "generated": "2025-11-06T03:20:00Z",
+  "quests": [
+    { "id": "dq-2090-001", "title": "Эхо Перезапуска", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 28}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":13,"effect":"stabilize_anchor"}], "alternatives": ["science","ritual"], "lootTables": ["Lab_T3"], "reputation": {"factions": {"Scientists": "+12..+20"}} },
+    { "id": "dq-2090-002", "title": "Датчики Мостов", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"AGI","skill":"Mobility","threshold":11,"effect":"bridge_jump"}], "alternatives": ["drone","parkour"], "lootTables": ["Engineer_T2"], "reputation": {"factions": {"CityServices": "+8..+16"}} },
+    { "id": "dq-2090-003", "title": "Наследные Артефакты", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 27}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":12,"effect":"decode_legacy"}], "alternatives": ["auction","heist"], "lootTables": ["Archivist_T3"], "reputation": {"factions": {"Archivists": "+12..+20"}} },
+    { "id": "dq-2090-004", "title": "Выбор Перезапуска", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 29}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":12,"effect":"lead_council"}], "alternatives": ["unify","split"], "lootTables": ["Council_T3"], "reputation": {"factions": {"Leagues": "+10..+18", "Corpos": "+6..+12"}} },
+    { "id": "dq-2090-005", "title": "Порог Подсказки 2.0", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":11,"effect":"hint_boost"}], "alternatives": ["mentor","machine"], "lootTables": ["Mentor_T2"], "reputation": {"factions": {"Mentors": "+8..+16"}} },
+    { "id": "dq-2090-006", "title": "Сбор Конфессионеров", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"EMP","skill":"Social","threshold":11,"effect":"calm_crowd"}], "alternatives": ["ceremony","security"], "lootTables": ["Clerk_T2"], "reputation": {"factions": {"Communities": "+8..+16"}} },
+    { "id": "dq-2090-007", "title": "Модуляция Барьеров", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":13,"effect":"tune_barrier"}], "alternatives": ["hardware","ai"], "lootTables": ["Netwatch_T3"], "reputation": {"factions": {"Netwatch": "+10..+18"}} },
+    { "id": "dq-2090-008", "title": "Синхронизация Площадей", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":10,"effect":"drone_swarm"}], "alternatives": ["festival","raid"], "lootTables": ["Engineer_T2"], "reputation": {"factions": {"City": "+8..+14"}} },
+    { "id": "dq-2090-009", "title": "Реформа Сертификатов", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":10,"effect":"lobby_law"}], "alternatives": ["legal","shadow"], "lootTables": ["Clerk_T2"], "reputation": {"factions": {"Clinics": "+6..+12"}} },
+    { "id": "dq-2090-010", "title": "Новый Устав Лиг", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 28}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":12,"effect":"draft_advantage"}], "alternatives": ["consensus","coup"], "lootTables": ["Council_T3"], "reputation": {"factions": {"Leagues": "+12..+20"}} },
+    { "id": "dq-2090-011", "title": "Кольца Хранилищ", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":12,"effect":"rotate_keys"}], "alternatives": ["inside","heist"], "lootTables": ["Vault_T3"], "reputation": {"factions": {"Corpos": "+8..+16", "Archivists": "+8..+16"}} },
+    { "id": "dq-2090-012", "title": "Сигнал Возврата", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 29}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":13,"effect":"trace_origin"}], "alternatives": ["science","ritual"], "lootTables": ["Lab_T3"], "reputation": {"factions": {"Scientists": "+12..+20"}} }
+  ]
+}
+
+

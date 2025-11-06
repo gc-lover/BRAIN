@@ -65,3 +65,5 @@ Success: стабилизация; Failure: эвакуация
 Trigger: Undernet, 12%, 6h  
 Checks: Hacking DC 22, Stealth DC 20  
 Success: epic data; Failure: heat +2
+
+

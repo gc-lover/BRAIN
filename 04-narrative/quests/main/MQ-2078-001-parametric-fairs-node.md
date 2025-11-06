@@ -88,3 +88,5 @@ ID: `MQ-2078-001`
   "consequences": {"eraModifiers": {"2090+": {"economyStability": {"A": 0.9, "B": 0.6, "C": 0.85, "D": 0.5}, "volatility": {"D": 0.4}}}}
 }
 ```
+
+

@@ -1,0 +1,21 @@
+{
+  "period": "2045-2060",
+  "version": "2.0.0",
+  "generated": "2025-11-06T03:20:00Z",
+  "quests": [
+    { "id": "dq-2045-001", "title": "Ребра Города", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":10,"effect":"stabilize_rib"}], "alternatives": ["engineer_fix","merc_protect"], "lootTables": ["Engineer_T3","Gang_T3"], "reputation": {"factions": {"CityServices": "+12..+20"}} },
+    { "id": "dq-2045-002", "title": "Стражи Блэкволла", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 28}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":12,"effect":"bypass_guard"}], "alternatives": ["ai_treaty","brute_force"], "lootTables": ["Netwatch_T3"], "reputation": {"factions": {"Netwatch": "+8..+16", "Netrunners": "-6..-2"}} },
+    { "id": "dq-2045-003", "title": "Пакеты Пустоши", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"AGI","skill":"Mobility","threshold":9,"effect":"kite_pack"}], "alternatives": ["lure","trap"], "lootTables": ["Raider_T2"], "reputation": {"factions": {"Nomads": "+8..+14"}} },
+    { "id": "dq-2045-004", "title": "Красные Рынки", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":9,"effect":"best_rates"}], "alternatives": ["auction","muscle"], "lootTables": ["Trader_T2"], "reputation": {"factions": {"Smugglers": "+8..+14", "Police": "-4..-1"}} },
+    { "id": "dq-2045-005", "title": "Теплый Коридор", "tier": 2, "difficulty": "hard", "dialogue": {"nodes": 24}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":10,"effect":"optimize_flow"}], "alternatives": ["grid_upgrade","covert_bypass"], "lootTables": ["Engineer_T2"], "reputation": {"factions": {"CityServices": "+10..+16"}} },
+    { "id": "dq-2045-006", "title": "Гниль Фермы", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":8,"effect":"detox_unit"}], "alternatives": ["farmers_union","night_clean"], "lootTables": ["Farm_T2"], "reputation": {"factions": {"Agricorp": "+6..+12"}} },
+    { "id": "dq-2045-007", "title": "Штормовая Башня", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 25}, "skillChecks": [{"attr":"REF","skill":"Gunplay","threshold":10,"effect":"snipe_core"}], "alternatives": ["assault","stealth"] , "lootTables": ["Mil_T3"], "reputation": {"factions": {"Mercs": "+8..+16"}} },
+    { "id": "dq-2045-008", "title": "Термитный Узел", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":9,"effect":"melt_counter"}], "alternatives": ["inside_job","remote_hack"], "lootTables": ["Net_T2"], "reputation": {"factions": {"Fixers": "+6..+12"}} },
+    { "id": "dq-2045-009", "title": "Помехоустойчивость", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":9,"effect":"calibrate_array"}], "alternatives": ["field_test","lab_sim"], "lootTables": ["Lab_T2"], "reputation": {"factions": {"Scientists": "+8..+14"}} },
+    { "id": "dq-2045-010", "title": "Контракт Карго", "tier": 2, "difficulty": "easy", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":7,"effect":"cheap_insurance"}], "alternatives": ["escort","decoy"], "lootTables": ["Trader_T2"], "reputation": {"factions": {"Logistics": "+6..+10"}} },
+    { "id": "dq-2045-011", "title": "Серые Контейнеры", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"AGI","skill":"Stealth","threshold":9,"effect":"scan_unseen"}], "alternatives": ["ghost","bribe"], "lootTables": ["Port_T2"], "reputation": {"factions": {"Customs": "+6..+12", "Smugglers": "-4..-1"}} },
+    { "id": "dq-2045-012", "title": "Сбор Данных Бури", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":11,"effect":"storm_harvest"}], "alternatives": ["drone","balloon"], "lootTables": ["Engineer_T3"], "reputation": {"factions": {"Academia": "+10..+18"}} }
+  ]
+}
+
+

@@ -93,3 +93,5 @@ ID: `MQ-2045-001`
   "consequences": {"eraModifiers": {"2060-2077": {"networkDC": {"A": -2, "B": -1, "C": +3, "D": -1}}, "2077": {"phantomEventChance": {"B": 0.05, "C": 0.1}}}
 }
 ```
+
+

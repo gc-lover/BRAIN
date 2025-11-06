@@ -66,3 +66,5 @@ Success: предотвратить; Failure: эвакуация, -Citizens 2
 Trigger: DAO hubs, 12%, 6h  
 Checks: Hacking DC 18  
 Success: восстановление, +DAO 2; Failure: голосование сорвано
+
+

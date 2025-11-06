@@ -1,0 +1,21 @@
+{
+  "period": "2060-2077",
+  "version": "2.0.0",
+  "generated": "2025-11-06T03:20:00Z",
+  "quests": [
+    { "id": "dq-2060-001", "title": "Серые Театры", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 28}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":11,"effect":"decode_signal"}], "alternatives": ["insider","sting"], "lootTables": ["Corpo_T3"], "reputation": {"factions": {"Media": "+10..+18"}} },
+    { "id": "dq-2060-002", "title": "Радиомолчание", "tier": 2, "difficulty": "hard", "dialogue": {"nodes": 24}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":11,"effect":"phase_link"}], "alternatives": ["relay_fix","micro_sat"], "lootTables": ["Engineer_T3"], "reputation": {"factions": {"CityServices": "+8..+16"}} },
+    { "id": "dq-2060-003", "title": "Гармонизация Сети", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":12,"effect":"balance_nodes"}], "alternatives": ["root_patch","federated"], "lootTables": ["Netwatch_T3"], "reputation": {"factions": {"Netwatch": "+10..+18"}} },
+    { "id": "dq-2060-004", "title": "Иски Аудитора ИИ", "tier": 3, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":10,"effect":"win_case"}], "alternatives": ["court","settlement"], "lootTables": ["Law_T2"], "reputation": {"factions": {"Courts": "+8..+16", "Corpos": "-6..-2"}} },
+    { "id": "dq-2060-005", "title": "Граница Подсказки", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":9,"effect":"hint_map"}], "alternatives": ["mentor","probe"], "lootTables": ["Fixer_T2"], "reputation": {"factions": {"Mentors": "+6..+12"}} },
+    { "id": "dq-2060-006", "title": "Арена Прокси", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 25}, "skillChecks": [{"attr":"REF","skill":"Gunplay","threshold":11,"effect":"crowd_buff"}], "alternatives": ["duo","squad"], "lootTables": ["Arena_T3"], "reputation": {"factions": {"Leagues": "+12..+20"}} },
+    { "id": "dq-2060-007", "title": "Переучет Теней", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"AGI","skill":"Stealth","threshold":10,"effect":"silent_tag"}], "alternatives": ["night","smoke"], "lootTables": ["Security_T2"], "reputation": {"factions": {"Fixers": "+6..+12"}} },
+    { "id": "dq-2060-008", "title": "Сигнал Лиги", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":9,"effect":"boost_broadcast"}], "alternatives": ["sponsor","underground"], "lootTables": ["Media_T2"], "reputation": {"factions": {"Leagues": "+6..+12"}} },
+    { "id": "dq-2060-009", "title": "Сети Кураторов", "tier": 2, "difficulty": "hard", "dialogue": {"nodes": 24}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":11,"effect":"ghost_route"}], "alternatives": ["inside_key","relay"], "lootTables": ["Archivist_T3"], "reputation": {"factions": {"Archivists": "+10..+18"}} },
+    { "id": "dq-2060-010", "title": "Лицензии на Память", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":9,"effect":"discount_fee"}], "alternatives": ["legal","black"], "lootTables": ["Clerk_T2"], "reputation": {"factions": {"Clinics": "+6..+12"}} },
+    { "id": "dq-2060-011", "title": "Шифр Городских Ребер", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":12,"effect":"decode_grid"}], "alternatives": ["ai_help","manual"], "lootTables": ["Engineer_T3"], "reputation": {"factions": {"CityServices": "+10..+18"}} },
+    { "id": "dq-2060-012", "title": "Коды Поставщиков", "tier": 2, "difficulty": "easy", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":7,"effect":"bulk_discount"}], "alternatives": ["auction","threat"], "lootTables": ["Trader_T2"], "reputation": {"factions": {"Smugglers": "+4..+8"}} }
+  ]
+}
+
+

@@ -55,3 +55,5 @@ Success: редкие данные; Failure: NetWatch heat
 Trigger: Markets, 10%, 6h  
 Checks: Tech DC 20 / Combat DC 22  
 Success: разминирование/защита; Failure: жертвы, -Citizens
+
+

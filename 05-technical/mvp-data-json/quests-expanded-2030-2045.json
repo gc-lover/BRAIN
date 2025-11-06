@@ -1,0 +1,49 @@
+{
+  "period": "2030-2045",
+  "version": "2.0.0",
+  "generated": "2025-11-06T03:20:00Z",
+  "quests": [
+    {
+      "id": "dq-2030-001",
+      "title": "Голос Купола",
+      "tier": 2,
+      "difficulty": "medium",
+      "objectives": ["meet_custodian", "install_sensors", "report_back"],
+      "dialogue": { "nodes": 22 },
+      "skillChecks": [
+        {"attr": "INT", "skill": "Hacking", "threshold": 9, "effect": "shortcut_network"},
+        {"attr": "COOL", "skill": "Social", "threshold": 7, "effect": "skip_fee"}
+      ],
+      "alternatives": ["stealth_route", "combat_route", "dao_vote_route"],
+      "lootTables": ["CorpoGuard_T2", "Gang_T2"],
+      "reputation": {"factions": {"DomeDAO": "+8..+15", "Underworld": "-3..0"}, "classMods": {"Netrunner": "+10%", "Fixer": "+5%"}}
+    },
+    {
+      "id": "dq-2030-002",
+      "title": "Картография Подмира",
+      "tier": 2,
+      "difficulty": "hard",
+      "objectives": ["scan_tunnels", "mark_gateways", "deliver_map"],
+      "dialogue": { "nodes": 24 },
+      "skillChecks": [
+        {"attr": "AGI", "skill": "Mobility", "threshold": 8, "effect": "skip_traps"},
+        {"attr": "INT", "skill": "Tech", "threshold": 8, "effect": "craft_beacons"}
+      ],
+      "alternatives": ["ally_scavs", "bribe_gang", "silent_run"],
+      "lootTables": ["Scav_T2", "HeavyScav_T2"],
+      "reputation": {"factions": {"TunnelRunners": "+10..+18", "CityServices": "+4..+8"}}
+    },
+    { "id": "dq-2030-003", "title": "Нейроэтика 1.0", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"EMP","skill":"Social","threshold":8,"effect":"calm_patient"}], "alternatives": ["legal_route","black_clinic"], "lootTables": ["Ripper_T2"], "reputation": {"factions": {"Clinics": "+6..+12", "Corpos": "-2..0"}} },
+    { "id": "dq-2030-004", "title": "Слой памяти", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 26}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":10,"effect":"deep_extract"}], "alternatives": ["stealth_lab","raid_lab"], "lootTables": ["Netwatch_T3"], "reputation": {"factions": {"Archivists": "+12..+20"}} },
+    { "id": "dq-2030-005", "title": "Рейд Ковчега", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 28}, "skillChecks": [{"attr":"REF","skill":"Gunplay","threshold":9,"effect":"boss_weakspot"}], "alternatives": ["team_assault","hacker_bypass"], "lootTables": ["RaidBoss_T3","Gang_T3"], "reputation": {"factions": {"Raiders": "+10..+18", "City": "-4..-1"}} },
+    { "id": "dq-2030-006", "title": "DAO Печать", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 21}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":9,"effect":"win_vote"}], "alternatives": ["legal","fraud"], "lootTables": ["Clerk_T1"], "reputation": {"factions": {"DomeDAO": "+10..+16"}} },
+    { "id": "dq-2030-007", "title": "Тихий Контур", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"AGI","skill":"Stealth","threshold":8,"effect":"ghost_tag"}], "alternatives": ["stealth","decoy"], "lootTables": ["Security_T2"], "reputation": {"factions": {"Netwatch": "-4..-1", "Fixers": "+4..+8"}} },
+    { "id": "dq-2030-008", "title": "Гильдии Рипперов", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 22}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":9,"effect":"certify_kit"}], "alternatives": ["audit","smuggle"], "lootTables": ["Ripper_T2"], "reputation": {"factions": {"Clinics": "+8..+14", "Gangs": "-2..0"}} },
+    { "id": "dq-2030-009", "title": "Параллельные Сети", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 25}, "skillChecks": [{"attr":"INT","skill":"Hacking","threshold":11,"effect":"merge_routes"}], "alternatives": ["proxy_route","hardware_patch"], "lootTables": ["Netwatch_T3"], "reputation": {"factions": {"Netrunners": "+12..+20"}} },
+    { "id": "dq-2030-010", "title": "Сезонный Контракт: Утечка", "tier": 2, "difficulty": "medium", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":7,"effect":"press_access"}], "alternatives": ["whistleblow","sell_data"], "lootTables": ["CorpoGuard_T2"], "reputation": {"factions": {"Media": "+8..+14", "Corpos": "-6..-2"}} },
+    { "id": "dq-2030-011", "title": "Подкуп Курьеров", "tier": 2, "difficulty": "easy", "dialogue": {"nodes": 20}, "skillChecks": [{"attr":"COOL","skill":"Social","threshold":6,"effect":"cheap_bribe"}], "alternatives": ["steal","trade_up"], "lootTables": ["Smuggler_T2"], "reputation": {"factions": {"Fixers": "+6..+10"}} },
+    { "id": "dq-2030-012", "title": "Геномные Метки", "tier": 3, "difficulty": "hard", "dialogue": {"nodes": 27}, "skillChecks": [{"attr":"INT","skill":"Tech","threshold":10,"effect":"clean_trace"}], "alternatives": ["clinic","black_market"], "lootTables": ["Lab_T3"], "reputation": {"factions": {"Biolabs": "+10..+18", "Police": "-4..-1"}} }
+  ]
+}
+
+

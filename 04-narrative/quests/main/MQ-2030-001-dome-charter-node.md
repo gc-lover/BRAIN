@@ -110,3 +110,5 @@ ID: `MQ-2030-001`
   "consequences": {"eraModifiers": {"2045-2060": {"localEmitters": {"A": 1, "B": 1, "C": 0.5}}, "2060-2077": {"legalMediaDC": -2}}}
 }
 ```
+
+

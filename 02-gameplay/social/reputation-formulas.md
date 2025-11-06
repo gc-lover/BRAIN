@@ -336,3 +336,5 @@ modifiers = (1 + classBonus) * (1 + originBonus) * (1 + questBonus) * (1 + skill
 ```
 
 
+
+

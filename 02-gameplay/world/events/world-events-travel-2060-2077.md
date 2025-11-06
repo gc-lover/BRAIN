@@ -65,3 +65,5 @@ Success: rare data; Failure: blackout
 Trigger: Borders, 12%, 8h  
 Checks: Intimidation DC 22 / Social DC 20  
 Success: de-escalation; Failure: combat
+
+

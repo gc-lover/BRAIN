@@ -65,3 +65,5 @@ Success: narrative; Failure: репутационные потери
 Trigger: Leagues HQ, 10%, 12h  
 Checks: Legal DC 22, Trader DC 22  
 Success: лицензии (loot); Failure: отказ
+
+
