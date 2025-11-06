@@ -1,10 +1,10 @@
 # Архитектура директорий .BRAIN
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 22:40  
+**api-readiness-check-date:** 2025-11-06 23:16  
 **api-readiness-notes:** Служебный файл, описание архитектуры репозитория, не предназначен для создания API
 
-**Последнее обновление:** 2025-11-06 22:40 - Добавлены секции о шаблонах и системах отслеживания (implementation-tracker.yaml)
+**Последнее обновление:** 2025-11-06 23:16 - Добавлена секция об архивации (агент КЛИР) и обновлена структура директорий
 
 ## Предлагаемая структура
 
@@ -241,9 +241,29 @@
 │   ├── active/                        # Активные задания
 │   │   └── TODO.md                    # Список задач
 │   ├── completed/                    # Выполненные задания
+│   ├── archive/                       # Архив завершенных работ (управляется КЛИР)
+│   │   ├── README.md                  # Описание архива
+│   │   ├── INDEX.md                   # Индекс архива
+│   │   ├── completed-features/        # Отчеты о фичах (400-500 строк)
+│   │   │   ├── YYYY-MM/               # Группировка по месяцам
+│   │   │   │   ├── feature-reports-001.md  # Отчеты часть 1
+│   │   │   │   ├── feature-reports-002.md  # Отчеты часть 2
+│   │   │   │   └── README.md          # Индекс месяца
+│   │   │   └── README.md              # Описание структуры
+│   │   ├── completed-trackers/        # Архив трекеров
+│   │   │   ├── implementation-tracker/
+│   │   │   ├── brain-mapping/
+│   │   │   ├── readiness-tracker/
+│   │   │   └── README.md
+│   │   ├── statistics/                # Статистика
+│   │   │   ├── monthly/               # Помесячная
+│   │   │   ├── overall-stats.md       # Общая
+│   │   │   └── README.md
+│   │   ├── completed-todos/           # Архив TODO
+│   │   └── resolved-questions/        # Архив вопросов
 │   ├── config/                        # Конфигурация и трекеры
-│   │   ├── readiness-tracker.yaml    # Трекер готовности документов
-│   │   ├── implementation-tracker.yaml # Трекер реализации backend/frontend
+│   │   ├── readiness-tracker.yaml    # Трекер готовности документов (очищается КЛИР)
+│   │   ├── implementation-tracker.yaml # Трекер реализации backend/frontend (очищается КЛИР)
 │   │   ├── STATUSES-GUIDE.md         # Справочник систем статусов
 │   │   ├── WORKFLOW-DETAILS.md       # Детали воркфлоу агентов
 │   │   └── TEMPLATES-GUIDE.md        # Справочник шаблонов
@@ -354,11 +374,31 @@
 
 **В проекте используется 3 системы отслеживания:**
 
-1. **readiness-tracker.yaml** (`06-tasks/config/`) - готовность документов к созданию API
-2. **brain-mapping.yaml** (`API-SWAGGER/tasks/config/`) - связи .BRAIN → задания API
-3. **implementation-tracker.yaml** (`06-tasks/config/`) - статусы реализации backend/frontend
+1. **readiness-tracker.yaml** (`06-tasks/config/`) - готовность документов к созданию API (очищается КЛИР)
+2. **brain-mapping.yaml** (`API-SWAGGER/tasks/config/`) - связи .BRAIN → задания API (очищается КЛИР)
+3. **implementation-tracker.yaml** (`06-tasks/config/`) - статусы реализации backend/frontend (очищается КЛИР)
 
 **Подробнее:** См. [STATUSES-GUIDE.md](./06-tasks/config/STATUSES-GUIDE.md)
+
+### 8. Архивация завершенных работ
+
+**Управляется агентом:** Clear Agent (КЛИР)
+
+**Директория:** `06-tasks/archive/`
+
+**Что архивируется:**
+- Завершенные фичи (отчеты разбиты по 400-500 строк)
+- Записи из трекеров (группировка по месяцам)
+- Выполненные задачи из TODO.md
+- Решенные вопросы из open-questions.md
+
+**Структура архива:**
+- `completed-features/YYYY-MM/` - отчеты о фичах
+- `completed-trackers/[tracker-name]/YYYY-MM.yaml` - архивы трекеров
+- `statistics/` - статистика и отчеты
+- `INDEX.md` - общий индекс для поиска
+
+**Подробнее:** См. [КЛИР.MD](./КЛИР.MD)
 
 ## Формат документов
 
