@@ -503,3 +503,73 @@ implementations:
     status: "not_started"
     priority: "HIGH"
 
+# === ENGAGEMENT SYSTEMS (2025-11-07 НОВАЯ СЕССИЯ ПРОДОЛЖЕНИЕ) ===
+
+- api_path: "api/v1/progression/achievement-system.yaml"
+  task_id: "API-TASK-146"
+  brain_source: ".BRAIN/05-technical/backend/achievement-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/progression/leaderboard-system.yaml"
+  task_id: "API-TASK-147"
+  brain_source: ".BRAIN/05-technical/backend/leaderboard-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/technical/daily-weekly-reset-system.yaml"
+  task_id: "API-TASK-148"
+  brain_source: ".BRAIN/05-technical/backend/daily-weekly-reset-system.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
+# === ДОПОЛНИТЕЛЬНЫЕ MVP БЛОКЕРЫ (2025-11-07) ===
+
+- api_path: "api/v1/narrative/quest-engine.yaml"
+  task_id: "API-TASK-149"
+  brain_source: ".BRAIN/05-technical/backend/quest-engine-backend.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/gameplay/combat/combat-session.yaml"
+  task_id: "API-TASK-150"
+  brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/progression/progression-backend.yaml"
+  task_id: "API-TASK-151"
+  brain_source: ".BRAIN/05-technical/backend/progression-backend.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
