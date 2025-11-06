@@ -1872,6 +1872,43 @@ documents:
     issues: []
     api_target: "api/v1/realtime.yaml"
 
+  # 05-technical/backend/ - MVP Core Systems (2025-11-07)
+  - path: ".BRAIN/05-technical/backend/authentication-authorization-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Система аутентификации и авторизации. Регистрация (email/password + OAuth), login/logout, JWT tokens (access + refresh), password recovery, 2FA, roles/permissions (player/moderator/admin), account linking (Steam/Google/Discord). Структура БД (accounts + account_roles + password_reset_tokens + email_verification_tokens + login_history). БЕЗ ЭТОГО ИГРА НЕ ЗАПУСТИТСЯ!"
+    issues: []
+    api_target: "api/v1/auth.yaml"
+
+  - path: ".BRAIN/05-technical/backend/player-character-management.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Управление игроками и персонажами. Player profiles, character creation/deletion, character switching, character slots (3 базовых + 2 premium), character data storage (attributes, skills, inventory IDs), appearance customization, naming validation, soft delete + restore (30 дней). Структура БД (players + characters + character_slots + character_stats_snapshot). БЕЗ ЭТОГО ИГРА НЕ ЗАПУСТИТСЯ!"
+    issues: []
+    api_target: "api/v1/characters.yaml"
+
+  - path: ".BRAIN/05-technical/backend/inventory-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Система инвентаря. Inventory slots (50 slots), item stacking, weight/encumbrance system, pickup/drop, use/consume, equipment slots (weapons, armor, implants, cyberware), bank/stash storage (100 slots shared), transfer items (trade/mail/auction), item durability, bind-on-pickup/equip. Структура БД (character_inventory + character_items + item_templates + equipment_slots + bank_storage). БЕЗ ЭТОГО ИГРА НЕ РАБОТАЕТ!"
+    issues: []
+    api_target: "api/v1/inventory.yaml"
+
+  - path: ".BRAIN/05-technical/backend/loot-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 05:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "КРИТИЧЕСКИЙ MVP блокер! Система генерации и распределения лута. Loot generation (из loot tables с весами), drops (NPC death, containers), distribution (solo/party/raid), roll system (need/greed/pass), personal vs shared loot, boss loot (гарантированный + случайный), loot instancing, auto-loot settings, loot history. Структура БД (loot_tables + world_drops + loot_rolls + loot_history). БЕЗ ЭТОГО НЕТ PROGRESSION!"
+    issues: []
+    api_target: "api/v1/loot.yaml"
+
 # Примеры записей:
 #
 # documents:
