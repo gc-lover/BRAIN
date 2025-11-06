@@ -20,6 +20,15 @@
 
 ---
 
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
+  - API-TASK-178: api/v1/gameplay/quests/branching.yaml (2025-11-07)
+- **Last Updated:** 2025-11-07 17:30
+
+---
+
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:55)** - Микрофича 1/2
