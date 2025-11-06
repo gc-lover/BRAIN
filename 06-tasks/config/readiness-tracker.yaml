@@ -1599,6 +1599,61 @@ documents:
     issues: []
     api_target: "api/v1/quests/main/black-barrier-heist-nodes.yaml"
 
+  - path: ".BRAIN/04-narrative/quests/main/021-corporate-wars-choose-side-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. D&D узлы для квеста 2.1 Выбор стороны (Corporate Wars)."
+    issues: []
+    api_target: "api/v1/quests/main/corporate-wars-choose-side-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/022-corporate-wars-operation-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. D&D узлы для квеста 2.2 Корпоративная операция."
+    issues: []
+    api_target: "api/v1/quests/main/corporate-wars-operation-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/031-street-wars-choose-gang-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. D&D узлы для квеста 3.1 Выбор банды (Street Wars)."
+    issues: []
+    api_target: "api/v1/quests/main/street-wars-choose-gang-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/032-street-wars-operation-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. D&D узлы для квеста 3.2 Бандитская операция."
+    issues: []
+    api_target: "api/v1/quests/main/street-wars-operation-nodes.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/main/041-simulation-first-clues-dnd-nodes.md"
+    status: "ready"
+    version: "0.1.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. D&D узлы для квеста 4.1 Первые подсказки (Simulation reveal)."
+    issues: []
+    api_target: "api/v1/quests/main/simulation-first-clues-nodes.yaml"
+
+  # 05-technical/api-structures/ - Технические спецификации
+  - path: ".BRAIN/05-technical/api-structures/quests-json-schema.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 20:41"
+    checker: "AI Agent"
+    notes: "Документ готов к созданию API задач. JSON-схема для квестов с полными полями для skill-checks, диалогов, ветвлений."
+    issues: []
+    api_target: "api/schemas/quest.json"
+
 # Примеры записей:
 #
 # documents:
