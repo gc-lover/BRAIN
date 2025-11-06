@@ -854,6 +854,41 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+# === SPLIT DOCUMENTS & DETAILED SYSTEMS (2025-11-07 BATCH 9) ===
+
+- api_path: "api/v1/technical/ui-systems.yaml"
+  task_id: "API-TASK-178"
+  brain_source: ".BRAIN/05-technical/ui/ (8 split documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/internal/ai-algorithms.yaml"
+  task_id: "API-TASK-179"
+  brain_source: ".BRAIN/05-technical/algorithms/ & ai-systems/ (5 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
+- api_path: "api/v1/lore/lore-database.yaml"
+  task_id: "API-TASK-180"
+  brain_source: ".BRAIN/03-lore/ (51 detailed documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "LOW"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
