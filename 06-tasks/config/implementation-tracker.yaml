@@ -797,6 +797,41 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+# === SOCIAL EXTENDED & NARRATIVE (2025-11-07 BATCH 8) ===
+
+- api_path: "api/v1/gameplay/social/mentorship-extended.yaml"
+  task_id: "API-TASK-173"
+  brain_source: ".BRAIN/02-gameplay/social/mentorship-*.md (6 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/gameplay/social/npc-hiring-extended.yaml"
+  task_id: "API-TASK-174"
+  brain_source: ".BRAIN/02-gameplay/social/npc-hiring-*.md (8 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+- api_path: "api/v1/narrative/narrative-coherence.yaml"
+  task_id: "API-TASK-175"
+  brain_source: ".BRAIN/04-narrative/narrative-coherence/ (3 phase documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "LOW"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
