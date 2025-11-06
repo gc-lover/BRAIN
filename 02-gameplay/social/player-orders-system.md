@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-059: api/v1/gameplay/social/player-orders.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:50
+---
+
+---
 
 ## Карта документов (одна фича — один файл)
 

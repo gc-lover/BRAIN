@@ -11,6 +11,14 @@
 **api-readiness-notes:** Документ готов к созданию API задач. Формализованы модели данных (PersonalNPC, ScenarioBlueprint, ScenarioInstance, Contract, License, Certificate, AuditLog, Ledger), события/сигналы и матрица прав (v1.0.0). TODO только для детализации конкретных сценариев и балансировки (не блокирует создание API).
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-056: api/v1/gameplay/social/personal-npc-tool.yaml (2025-11-07)
+- Last Updated: 2025-11-07 00:35
+---
+
+---
 
 ## Цель
 
