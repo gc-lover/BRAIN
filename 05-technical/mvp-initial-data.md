@@ -6,7 +6,8 @@
 **Последнее обновление:** 2025-11-04  
 **Приоритет:** критический
 
-**api-readiness:** needs-work  
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-06 18:20  
 **api-readiness-check-date:** 2025-11-04 16:35  
 **api-readiness-notes:** Документ определяет минимальный набор данных для MVP, требуется детализация для создания API задач
 

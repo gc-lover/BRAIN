@@ -1,14 +1,14 @@
 # API Endpoints для MVP
 
-**Статус:** draft  
+**Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-04  
-**Последнее обновление:** 2025-11-04  
+**Последнее обновление:** 2025-11-06  
 **Приоритет:** критический
 
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-04 16:40  
-**api-readiness-notes:** Документ определяет API endpoints для MVP, требуется детализация для создания API спецификации
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-06 18:15  
+**api-readiness-notes:** Все API endpoints детально определены (auth, characters, locations, inventory, quests, NPCs, combat, trade). Готово для создания OpenAPI спецификации в API-SWAGGER.
 
 ---
 
