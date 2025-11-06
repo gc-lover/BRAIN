@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит стоимость найма и вознаграждение.
 
+**target-domain:** social  
+**target-microservice:** social-service (port 8084)  
+**target-frontend-module:** modules/social/npc-hiring
+
 ---
 
 ## 4. Экономика найма NPC

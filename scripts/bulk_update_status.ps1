@@ -26,7 +26,13 @@ foreach ($file in $files) {
     $fullPath = $file.Replace("/", "\")
     
     # Skip service files
-    if ($file -match "06-tasks/|BATCH-|VERIFICATION|REPORT|FINAL-|MASTER-|config/|archive/|ARCHITECTURE|МЕНЕДЖЕР") {
+    if ($file -match "06-tasks/|BATCH-|VERIFICATION|REPORT|FINAL-|MASTER-|config/|archive/|ARCHITECTURE") {
+        Write-Host "SKIP (service): $file" -ForegroundColor Gray
+        $skipped++
+        continue
+    }
+    
+    if ($file -match "PROCEDURE|CHECKLIST|EXAMPLES") {
         Write-Host "SKIP (service): $file" -ForegroundColor Gray
         $skipped++
         continue
@@ -53,19 +59,14 @@ foreach ($file in $files) {
             continue
         }
         
-        # Find insertion point (before last section or at end)
-        $statusSection = @"
-
----
-
-## API Tasks Status
-
-- **Status:** created
-- **Tasks:**
-  - ${taskId}: (2025-11-07)
-- **Last Updated:** 2025-11-07 18:30
-
-"@
+        # Build status section
+        $nl = "`r`n"
+        $statusSection = $nl + "---" + $nl + $nl
+        $statusSection += "## API Tasks Status" + $nl + $nl
+        $statusSection += "- **Status:** created" + $nl
+        $statusSection += "- **Tasks:**" + $nl
+        $statusSection += "  - ${taskId}: (2025-11-07)" + $nl
+        $statusSection += "- **Last Updated:** 2025-11-07 18:30" + $nl + $nl
         
         # Try to insert before "## История изменений" or at end
         if ($content -match "(---\s*##\s*История изменений)") {

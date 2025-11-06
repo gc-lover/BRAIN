@@ -129,29 +129,49 @@
 
 ## Все Backend системы (15 систем)
 
+### Распределение по микросервисам
+
+| Система | Микросервис | Порт | Статус |
+|---------|-------------|------|--------|
+| **Authentication & Authorization** | auth-service | 8081 | ✅ Реализовано |
+| **Player & Character Management** | character-service | 8082 | 📋 В планах |
+| **Inventory System** | economy-service | 8085 | 📋 В планах |
+| **Loot System** | economy-service | 8085 | 📋 В планах |
+| **Session Management** | auth-service | 8081 | ✅ Частично |
+| **Matchmaking System** | gameplay-service | 8083 | 📋 В планах |
+| **Chat System** | social-service | 8084 | 📋 В планах |
+| **Real-Time Server Architecture** | world-service | 8086 | 📋 В планах |
+| **Trade System** | economy-service | 8085 | 📋 В планах |
+| **Mail System** | social-service | 8084 | 📋 В планах |
+| **Notification System** | social-service | 8084 | 📋 В планах |
+| **Party System** | social-service | 8084 | 📋 В планах |
+| **Friend System** | social-service | 8084 | 📋 В планах |
+| **Guild System Backend** | social-service | 8084 | 📋 В планах |
+| **Global State System** | world-service | 8086 | 📋 В планах |
+
 ### ⭐⭐⭐ MVP БЛОКЕРЫ (без них игра НЕ запустится)
 
-1. **Authentication & Authorization** → регистрация, login, roles
-2. **Player & Character Management** → профили, персонажи, slots
-3. **Inventory System** → хранение items, equipment, bank
-4. **Loot System** → генерация и распределение лута
+1. **Authentication & Authorization** → auth-service (8081) ✅
+2. **Player & Character Management** → character-service (8082) 📋
+3. **Inventory System** → economy-service (8085) 📋
+4. **Loot System** → economy-service (8085) 📋
 
 ### ⭐⭐ КРИТИЧЕСКИЕ системы (без них нет онлайн геймплея)
 
-5. **Session Management** → heartbeat, AFK, reconnection
-6. **Matchmaking System** → подбор для PvP/PvE/raids
-7. **Chat System** → коммуникация между игроками
-8. **Real-Time Server Architecture** → синхронизация позиций, lag compensation
+5. **Session Management** → auth-service (8081) ✅
+6. **Matchmaking System** → gameplay-service (8083) 📋
+7. **Chat System** → social-service (8084) 📋
+8. **Real-Time Server Architecture** → world-service (8086) 📋
 
 ### ⭐ ВАЖНЫЕ системы (нужны для полноценной игры)
 
-9. **Trade System** → P2P обмен предметами
-10. **Mail System** → отправка items/gold по почте
-11. **Notification System** → уведомления игроков
-12. **Party System** → группы до 5 игроков
-13. **Friend System** → социальный граф
-14. **Guild System Backend** → кланы/гильдии
-15. **Global State System** → состояние мира, events
+9. **Trade System** → economy-service (8085) 📋
+10. **Mail System** → social-service (8084) 📋
+11. **Notification System** → social-service (8084) 📋
+12. **Party System** → social-service (8084) 📋
+13. **Friend System** → social-service (8084) 📋
+14. **Guild System Backend** → social-service (8084) 📋
+15. **Global State System** → world-service (8086) 📋
 
 ---
 

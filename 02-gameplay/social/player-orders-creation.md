@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `player-orders-system.md`. Процесс и параметры создания.
 
+**target-domain:** social  
+**target-microservice:** social-service (port 8084)  
+**target-frontend-module:** modules/social/player-orders
+
 ---
 
 ## Процесс создания заказа

@@ -13,6 +13,10 @@
 **api-readiness-check-date:** 2025-11-03  
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит ограничения и требования для найма.
 
+**target-domain:** social  
+**target-microservice:** social-service (port 8084)  
+**target-frontend-module:** modules/social/npc-hiring
+
 ---
 
 ## 6. Ограничения найма
