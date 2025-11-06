@@ -797,3 +797,27 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+# === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
+
+- api_path: "api/v1/narrative/starter-content.yaml"
+  task_id: "API-TASK-171"
+  brain_source: ".BRAIN/04-narrative/quests/ (24 starter documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/narrative/regional-quests.yaml"
+  task_id: "API-TASK-172"
+  brain_source: ".BRAIN/04-narrative/quests/world-regions/ (9 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
