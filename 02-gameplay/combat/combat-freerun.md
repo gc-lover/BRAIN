@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-080: api/v1/gameplay/combat/freerun.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:35
+---
+
+---
 
 ## Концепция FREERUN
 

@@ -5,6 +5,14 @@
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по хакерству врагов, PvP хакерству, обнаружению хакерства (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-085: api/v1/gameplay/combat/hacking-combat-integration.yaml (2025-11-07)
+- Last Updated: 2025-11-07 03:00
+---
+
+---
 
 ## 4. Интеграция хакерства с боем
 

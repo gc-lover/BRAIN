@@ -4,6 +4,14 @@
 **api-readiness-notes:** D&D система проверок полностью проработана (d20/d100, DC, модификаторы, критические успехи/провалы, 9 атрибутов, навыки, преимущества/помехи). Готово для создания API задач.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-075: api/v1/gameplay/mechanics/dnd-checks.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:10
+---
+
 # D&D — Ядро системы проверок (кубики и DC)
 
 **Статус:** approved  

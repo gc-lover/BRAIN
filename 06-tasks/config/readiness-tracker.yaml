@@ -1744,6 +1744,43 @@ documents:
     issues: []
     api_target: "api/v1/economy/player-market.yaml"
 
+  # 05-technical/backend/ - Backend критические системы (2025-11-06)
+  - path: ".BRAIN/05-technical/backend/session-management-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Критически важная система управления игровыми сессиями. Создание/закрытие сессий, heartbeat механизм, AFK detection, reconnection handling, concurrent sessions control, session state management, timeout management. Полная структура БД (player_sessions + session_audit_log), Redis cache, API endpoints. Готов к реализации!"
+    issues: []
+    api_target: "api/v1/session.yaml"
+
+  - path: ".BRAIN/05-technical/backend/matchmaking-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Критически важная система подбора игроков. Queue system для PvP/PvE/raids, match criteria (level, role, rating), party formation, team balancing, MMR/ELO rating system, role-based matchmaking, cross-server support. Полная структура БД (matchmaking_queues + matches + player_ratings), алгоритмы подбора, балансировки, wait time optimization. API endpoints. Готов к реализации!"
+    issues: []
+    api_target: "api/v1/matchmaking.yaml"
+
+  - path: ".BRAIN/05-technical/backend/chat-system.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Критически важная система внутриигрового чата. Multiple channels (global, local, party, guild, whisper, trade, combat), message persistence, moderation (profanity filter, spam detection, auto-ban), mentions, slash commands, rich formatting, voice chat integration (WebRTC), translation support. Полная структура БД (chat_messages + chat_channels + chat_bans), Redis cache, WebSocket events, API endpoints. Готов к реализации!"
+    issues: []
+    api_target: "api/v1/chat.yaml"
+
+  - path: ".BRAIN/05-technical/backend/realtime-server-architecture.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-06 21:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Критически важная архитектура real-time сервера. Game server instances, zone/instance management, player position synchronization, network protocol (WebSocket/TCP), lag compensation (client prediction, server reconciliation), interest management (AOI), bandwidth optimization (delta compression, priority). Полная структура БД (zones + game_instances + player_positions), Redis spatial index, WebSocket protocol. Game loop, tick rate, performance optimization. Готов к реализации!"
+    issues: []
+    api_target: "api/v1/realtime.yaml"
+
 # Примеры записей:
 #
 # documents:

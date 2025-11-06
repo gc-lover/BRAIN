@@ -8,6 +8,14 @@
 **api-readiness-check-date:** 2025-11-06 19:00  
 **api-readiness-notes:** Сценарий финального эвента конца лиги полностью определён (timeline, NPC, музыканты, речи, визуальные эффекты, механика). Готово для реализации.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-088: api/v1/narrative/events/final-league-concert.yaml (2025-11-07)
+- Last Updated: 2025-11-07 03:15
+---
+
 **Статус:** approved  
 **Приоритет:** critical
 

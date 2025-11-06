@@ -11,6 +11,14 @@
 **api-readiness-notes:** Каркас сущностей для последующей спецификации OpenAPI в `API-SWAGGER`.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-105: api/v1/technical/equipment-entities.yaml (2025-11-07)
+- Last Updated: 2025-11-07 05:15
+---
+
+---
 
 ## Цель
 

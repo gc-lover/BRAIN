@@ -4,6 +4,14 @@
 **api-readiness-notes:** Интеграция D&D с realtime шутером полностью определена (микро-проверки, импланты, способности). Готово для API.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-076: api/v1/gameplay/mechanics/dnd-shooter-integration.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:15
+---
+
 # Интеграция D&D-проверок с шутер-боем и имплантами
 
 **Статус:** approved  

@@ -8,6 +8,14 @@
 **api-readiness-check-date:** 2025-11-06 19:10  
 **api-readiness-notes:** Мета-квест о природе реальности полностью определён (условия, этапы, twist, 4 концовки). Готов для реализации.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-087: api/v1/narrative/meta-quest-blackwall.yaml (2025-11-07)
+- Last Updated: 2025-11-07 03:10
+---
+
 **Статус:** approved  
 **Приоритет:** critical (mega twist игры)
 

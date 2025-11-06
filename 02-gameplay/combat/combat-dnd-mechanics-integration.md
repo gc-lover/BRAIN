@@ -4,6 +4,14 @@
 **api-readiness-notes:** Интеграция D&D проверок в хакерство, крафт, торговлю, социальные механики полностью определена. Готово для API.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-077: api/v1/gameplay/mechanics/dnd-mechanics-integration.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:20
+---
+
 # Применение D&D-проверок в игровых механиках
 
 **Статус:** approved  

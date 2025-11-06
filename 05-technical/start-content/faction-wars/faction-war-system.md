@@ -8,6 +8,14 @@
 **api-readiness-notes:** Системный обзор Faction Wars. 2 войны (Arasaka vs Militech, Valentinos vs Maelstrom), 5 стадий каждая, выбор стороны, массовые конфликты.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-103: api/v1/narrative/faction-wars.yaml (2025-11-07)
+- Last Updated: 2025-11-07 05:05
+---
+
 # FACTION WARS SYSTEM: Полный обзор
 
 ## 1. Концепция системы

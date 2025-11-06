@@ -8,6 +8,14 @@
 **api-readiness-notes:** Системный обзор всех origin stories. Backstories, perks, branching paths для всех классов.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-102: api/v1/narrative/origin-stories.yaml (2025-11-07)
+- Last Updated: 2025-11-07 05:00
+---
+
 # ORIGIN STORIES SYSTEM: Полный обзор
 
 ## 1. Концепция системы

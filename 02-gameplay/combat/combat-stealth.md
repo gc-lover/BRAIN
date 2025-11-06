@@ -9,6 +9,14 @@
 **Дата создания:** 2025-11-03
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-081: api/v1/gameplay/combat/stealth.yaml (2025-11-07)
+- Last Updated: 2025-11-07 02:40
+---
+
+---
 
 ## Концепция STEALTH
 
