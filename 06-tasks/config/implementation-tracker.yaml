@@ -922,14 +922,19 @@ implementations:
 
 - api_path: "api/v1/gameplay/social/romance-system.yaml"
   task_id: "API-TASK-168"
-  brain_source: ".BRAIN/04-narrative/romance/ (23 documents v1.0.0)"
+  brain_source: ".BRAIN/04-narrative/romance/ (23 документов v1.0.0)"
   api_status: "completed"
   backend:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 21:45"
+    completed: "2025-11-07 22:15"
+    agent: "Frontend Agent"
+    commit: "894d9e6"
     priority: "HIGH"
+    notes: "RomanceSystemPage, RomanceNPCCard, RomanceRelationshipCard, RomanceEventCard, RomanceChoiceCard, RomanceSummaryCard, маршрутизация, shared фильтры"
 
 - api_path: "api/v1/gameplay/economy/pricing.yaml"
   task_id: "API-TASK-169"
