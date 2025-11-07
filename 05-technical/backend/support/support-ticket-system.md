@@ -6,6 +6,14 @@
 
 # Support Ticket System - Система тикетов поддержки
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-200: api/v1/admin/support/support-tickets.yaml (2025-11-07 21:50)
+- Last Updated: 2025-11-07 21:50
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:27  
