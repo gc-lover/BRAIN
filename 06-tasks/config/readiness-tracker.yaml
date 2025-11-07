@@ -669,6 +669,24 @@ documents:
     issues: []
     api_target: "api/v1/narrative/cutscenes/helios-countermesh.yaml"
 
+  - path: ".BRAIN/04-narrative/npc-lore/important/npc-kaede-ishikawa.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 00:25"
+    checker: "AI Agent (Brain Manager)"
+    notes: "NPC Каэдэ Исикава: двойной агент Helios/Specter, флаги и интеграции с контрактами."
+    issues: []
+    api_target: "api/v1/narrative/npcs/kaede-ishikawa.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/npc-kaede-ishikawa.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 00:25"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалог Каэдэ Исикавы: ветки Specter/Helios, кризисная миссия и события."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/npc-kaede-ishikawa.yaml"
+
   - path: ".BRAIN/02-gameplay/world/economy-specter-helios-balance.md"
     status: "ready"
     version: "1.0.0"
