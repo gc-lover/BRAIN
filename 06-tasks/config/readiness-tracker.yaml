@@ -1916,6 +1916,15 @@ documents:
     issues: []
     api_target: "api/v1/economy/stock-protection.yaml"
 
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-integration.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Интеграция: описаны мэппинги квестов/событий/фракций, event bus, REST API и связанные системы."
+    issues: []
+    api_target: "api/v1/economy/stock-integration.yaml"
+
   - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
     status: "ready"
     version: "1.1.0"
