@@ -642,6 +642,24 @@ documents:
     issues: []
     api_target: "api/v1/world/city-unrest-escalations.yaml"
 
+  - path: ".BRAIN/05-technical/ui/guild-contract-board.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 23:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Guild Contract Board UI/UX: фронт-потоки, API, телеметрия и интеграции."
+    issues: []
+    api_target: "api/v1/world/specter-hq-contract-board.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/raid/2025-11-07-quest-helios-countermesh-conspiracy.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 23:25"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Цепочка Helios Countermesh Conspiracy: narrative ветви, D&D проверки, события и API."
+    issues: []
+    api_target: "api/v1/narrative/quests/helios-countermesh-conspiracy.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"
