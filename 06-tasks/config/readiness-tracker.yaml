@@ -2450,10 +2450,10 @@ documents:
 
   - path: ".BRAIN/04-narrative/dialogues/npc-rita-moreno.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-07 20:43"
+    version: "1.3.0"
+    checked: "2025-11-07 21:25"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалог Риты Морено добавляет уличные ветки, двойной кросс Maelstrom и информаторские активности; экспорт и метрики готовы."
+    notes: "Версия 1.3.0: новые fiesta/blackout состояния, расширенные пасхалки, YAML/REST и телеметрия street-информанта."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-rita-moreno.yaml"
 

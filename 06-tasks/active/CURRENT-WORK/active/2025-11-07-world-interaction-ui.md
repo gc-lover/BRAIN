@@ -431,9 +431,9 @@ Tooltip:
 └──────────────────────────────────────────────┘
 ```
 
-## 13. Тест-план (manual + automated)
+## 14. Тест-план (manual + automated)
 
-### 13.1 Manual сценарии
+### 14.1 Manual сценарии
 - **MP-01 World Pulse Calm:** загрузка HUD при стабильном мире, проверка отображения модификатора, активных событий, переходов по CTA.
 - **MP-02 World Pulse Crisis:** эмуляция `alertLevel=crisis`, проверка появления баннера, переход в Crisis Hub, возврат в HUD.
 - **ED-01 Фильтры событий:** комбинация фильтров по региону/фракции, проверка серверной пагинации, отсутствие дубликатов.
@@ -445,7 +445,7 @@ Tooltip:
 - **CH-01 Кризисные действия:** запуск эвакуации и экономической меры, проверка таймеров и логов.
 - **OFF-01 Offline fallback:** отключение WebSocket, проверка сообщений деградации и REST-refetch.
 
-### 13.2 Automated (e2e/UI)
+### 14.2 Automated (e2e/UI)
 - **AUT-01 World Pulse Snapshot:** Cypress/Playwright проверяет наличие ключевых элементов в режимах `calm` и `alert`.
 - **AUT-02 Events Pagination:** e2e-скрипт прогоняет фильтры, подтверждая корректность списка и отсутствие пропусков.
 - **AUT-03 Influence Map Tiles:** проверка загрузки тайлов при зумировании, содержимого tooltip.
@@ -454,7 +454,7 @@ Tooltip:
 - **AUT-06 Crisis Hub Actions:** запуск трёх действий, проверка `CrisisActionTimeline`.
 - **AUT-07 Offline Mode:** проверка локального persist и баннера «данные устарели».
 
-### 13.3 Automated (backend API)
+### 14.3 Automated (backend API)
 - **API-01 World State Consistency:** контрактный тест `GET /api/v1/world/state` против схемы.
 - **API-02 Event Update Stream:** проверка `WORLD_EVENT_UPDATE` и payload.
 - **API-03 Territory Metrics:** `GET /territories/{tileId}` с контрольными значениями.
@@ -463,7 +463,7 @@ Tooltip:
 - **API-06 Social Index Nightly:** Cron тест пересчёта trustIndex и события `SOCIAL_INDEX_CHANGED`.
 - **API-07 Crisis Actions Authorization:** проверка RBAC и двойного подтверждения.
 
-### 13.4 Регрессия и нагрузка
+### 14.4 Регрессия и нагрузка
 - **REG-01 Smoke Suite:** запуск основного набора после каждого деплоя world-service и client.
 - **REG-02 Crisis Regression:** еженедельный регресс Crisis Hub (manual + auto).
 - **LOAD-01 Events Storm:** нагрузочный тест 5000 одновременных игроков, latency <200 ms.
@@ -471,13 +471,13 @@ Tooltip:
 - **RESILIENCE-01 Kafka Lag:** lag 10 сек, проверка PagerDuty P1 и отображения деградации.
 - **CHAOS-01 Service Kill:** отключение world-service instance, восстановление ≤60 сек.
 
-## 14. API задачи и мэппинг
+## 15. API задачи и мэппинг
 - **API-TASK-241** `api/v1/world/world-interaction-suite.yaml` — World Pulse, Events Dashboard, Influence Map, Guild Ops, Crisis; статус `queued`.
 - **API-TASK-242** `api/v1/economy/market/stabilizer.yaml` — Market Stabilizer интервенции и аналитика; статус `queued`.
 - **API-TASK-243** `api/v1/social/resonance.yaml` — Social Resonance, кампании доверия и связи; статус `queued`.
 - Обновлены записи в `readiness-tracker.yaml` и `API-SWAGGER/tasks/config/brain-mapping.yaml`.
 
-## 15. Аналитика и telemetry (требования)
+## 16. Аналитика и telemetry (требования)
 - **World Pulse:** метрики `world.stability.index`, `world.modifier`, `world.alert.level`, время реакции UI (custom event `world_pulse_click`).
 - **Events Dashboard:** события `event_filter_applied` (фильтры), `event_subscribed`, `event_history_opened`; метрики latency загрузки и количество подписок.
 - **Influence Map:** heatmap interactions `territory_hover`, `territory_open_orders`, `layer_switch`; измеряем время загрузки тайлов, количество CTA "отдать приказ".

@@ -19,6 +19,173 @@
 ## 1. Назначение
 - Дать каждой крупной фракции/банде своего культового защитника (legendary defender) для открытых событий, рейдов фракций и видимых точек обороны.
 - Обеспечить уникальные механики, завязанные на лор Cyberpunk и прогрессию игрока.
+- Поддержать API-запросы world-service: расписание спавнов, навыки, лут, последствия для world-state.
+
+## 2. Сводная таблица защитников
+| Фракция/Банда | Защитник | Роль | Уникальный навык | Триггер появления |
+| --- | --- | --- | --- | --- |
+| Arasaka Security | `Akari "Iron Lotus" Sato` | Tactical Controller | `Lotus Protocol` — массовая блокировка имплантов | Корпоративное вторжение в Corpo Plaza |
+| Militech | `Commander Saul "Bastion" Mercer` | Heavy Tank | `Aegis Barricade` — развертывание энергетической крепи | Защита транспортных колонн Militech Convoy |
+| NetWatch | `Agent Aya "Firewall" Quinn` | Netrunner Support | `Black ICE Singularity` — нейрошквал на вражеских хакеров | Атаки Rogue AI на узлы NetWatch |
+| Valentinos | `Sister Marisol "La Santa" Cruz` | Faithful Guardian | `Divine Mark` — благословение союзников и кара изменников | Защита святынь Санто-Доминго, романтические ветки |
+| Maelstrom | `Chrome Prophet Kragg` | Berserk Bruiser | `Overdrive Frenzy` — ускорение имплантов | Захват фабрик имплантов, набеги на NCPD |
+| Voodoo Boys | `Loa Whisperer Etienne` | Spiritual Netrunner | `Loa Possession` — захват вражеских дронов | Blackwall breaches, вторжения в дата-центры |
+| Nomad Coalition | `Rally Marshal Juniper` | Mobile Defender | `Duststorm Phalanx` — песчаная буря и броня транспорта | Оборона караванов Badlands |
+| Tiger Claws | `Kuniko "Ghostblade" Ito` | Agile Assassin | `Mirror Veil` — отражение снарядов, контрдэш | Защита клубов Japantown |
+| Moxes | `Doc Lyric` | Support Medic | `Chrome Revival` — массовое восстановление имплантов | Нападения на клубы Lizzie's |
+
+## 3. Детали защитников
+### Arasaka — Akari "Iron Lotus" Sato
+- **Уровень:** Diamond/Mythic. Элитный контроллер. Оснащена Sandevistan Mk.IV и Lotus Protocol.
+- **Навыки:**
+  - `Lotus Protocol` — накладывает `implant_lock` (TECH DC 22). Союзникам даёт `implant_shield` на 20 сек.
+  - `Serpent Blossom` — запуск дронов-лепестков, создающих урон и дебаффы (INT DC 20 для перехвата).
+- **Награды:** Arasaka loyalty bonds, планы корп-оружия, титул "Lotus Ally".
+- **Последствия:** Победа повышает `rep.corp.arasaka`, провал уменьшает `corporate_balance`, активирует контррейд Militech.
+
+### Militech — Commander Saul "Bastion" Mercer
+- **Уровень:** Bronze → Diamond. Танк-крепость.
+- **Навыки:**
+  - `Aegis Barricade` — разворачивает мобильный щит (STR DC 21 для пробития).
+  - `Linked Firegrid` — синхронизирует турели и технику.
+- **Награды:** Militech armor cores, армейский транспорт, `rep.corp.militech` +25.
+- **Последствия:** Победа стабилизирует маршруты Militech Convoy, провал усиливает контент банд в Atoll.
+
+### NetWatch — Agent Aya "Firewall" Quinn
+- **Уровень:** Diamond. Нетрэннер поддержка.
+- **Навыки:**
+  - `Black ICE Singularity` — массовый нет-урон (COOL DC 22).
+  - `Data Purge` — снимает вирусы с союзников.
+- **Награды:** NetWatch clearance, прототипы cyberdeck modules.
+- **Последствия:** Победа снижает шанс Rogue AI events, провал усиливает Blackwall anomalies.
+
+### Valentinos — Sister Marisol "La Santa" Cruz
+- **Уровень:** Silver → Diamond. Святая защитница.
+- **Навыки:**
+  - `Divine Mark` — бафф союзникам, дебафф врагам (WIS DC 18).
+  - `Familia Rally` — призыв патрулей.
+- **Награды:** Valentinos relic gear, романтические ветки.
+- **Последствия:** Победа повышает `rep.street.valentinos`, провал уменьшает безопасность Санто-Доминго.
+
+### Maelstrom — Chrome Prophet Kragg
+- **Уровень:** Gold → Mythic. Киберпсих-боец.
+- **Навыки:**
+  - `Overdrive Frenzy` — надбавка к имплантам (CON DC 19 против перегрева).
+  - `Neural Overclock` — случайные эффекты на игроков с >70% киберизации.
+- **Награды:** Maelstrom neural mods, rare cyber components.
+- **Последствия:** Победа снижает агрессию Maelstrom, провал увеличивает рейды NCPD.
+
+### Voodoo Boys — Loa Whisperer Etienne
+- **Уровень:** Mythic. Техно-шаман.
+- **Навыки:**
+  - `Loa Possession` — захват дронов/турелей (TECH DC 20).
+  - `Ghostwalk` — фаза теней (COOL DC 19).
+- **Награды:** Loa blessings, Blackwall shards.
+- **Последствия:** Победа стабилизирует Blackwall events, провал открывает Rogue AI incursions.
+
+### Nomad Coalition — Rally Marshal Juniper
+- **Уровень:** Gold → Mythic. Мобильный защитник.
+- **Навыки:**
+  - `Duststorm Phalanx` — песчаная буря (REF DC 18).
+  - `Convoy Sync` — синхронизация авто (ENG role, TECH DC 19).
+- **Награды:** Nomad convoy mods, репутация кланов.
+- **Последствия:** Победа повышает `rep.nomad`, даёт скидки на транспорт.
+
+### Tiger Claws — Kuniko "Ghostblade" Ito
+- **Уровень:** Platinum. Ассассин.
+- **Навыки:**
+  - `Mirror Veil` — отражение снарядов (DEX DC 21).
+  - `Kaiken Blink` — мгновенный дэш + bleed.
+- **Награды:** Ghostblade katana, Tiger Claws cosmetics.
+- **Последствия:** Победа стабилизирует Japantown, провал запускает криминальные events.
+
+### Moxes — Doc Lyric
+- **Уровень:** Silver → Gold. Медик поддержки.
+- **Навыки:**
+  - `Chrome Revival` — массовое восстановление имплантов.
+  - `Glitch Ward` — защита от дебаффов (TECH DC 17).
+- **Награды:** Moxes implants, social perks.
+- **Последствия:** Победа повышает `rep.moxes`, активирует романтические сцены.
+
+## 4. Механики события
+- **Сложность:** Bronze → Mythic+, подобно мировым боссам.
+- **Композиция:** защитник + элита + турели/дроны.
+- **World-state:** исходы меняют `faction_influence`, `district_security`, `blackwall_stability`.
+- **Взаимодействия:** победы открывают рейды/контракты, поражения вызывают фракционные ответки.
+
+## 5. REST/WS контуры (world-service)
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/world/factions/defenders` | `GET` | Каталог защитников с фильтрами |
+| `/world/factions/defenders/{id}` | `GET` | Детали защитника |
+| `/world/factions/defenders/{id}/schedule` | `GET` | Расписание спавнов |
+| `/world/factions/defenders/{id}/spawn` | `POST` | Принудительный запуск события |
+| `/world/factions/defenders/{id}/outcome` | `POST` | Результат, награды, world flags |
+
+**WebSocket:** `wss://world-service/factions/{defenderId}` — `Spawn`, `Phase`, `AbilityCast`, `PlayerDown`, `Outcome`, `AftermathApplied`.
+
+## 6. Схемы данных
+```sql
+CREATE TABLE faction_defenders (
+    defender_id VARCHAR(64) PRIMARY KEY,
+    faction_code VARCHAR(64) NOT NULL,
+    defender_name VARCHAR(120) NOT NULL,
+    role VARCHAR(32) NOT NULL,
+    base_difficulty VARCHAR(16) NOT NULL,
+    lore_summary TEXT NOT NULL,
+    spawn_triggers JSONB NOT NULL,
+    rewards JSONB NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE faction_defender_abilities (
+    defender_id VARCHAR(64) REFERENCES faction_defenders(defender_id) ON DELETE CASCADE,
+    ability_code VARCHAR(64) NOT NULL,
+    description TEXT NOT NULL,
+    difficulty_scaling JSONB NOT NULL,
+    dnd_checks JSONB,
+    counters JSONB,
+    PRIMARY KEY (defender_id, ability_code)
+);
+
+CREATE TABLE faction_defender_outcomes (
+    defender_id VARCHAR(64) REFERENCES faction_defenders(defender_id) ON DELETE CASCADE,
+    outcome VARCHAR(16) NOT NULL,
+    world_flag_updates JSONB NOT NULL,
+    reputation_updates JSONB,
+    rewards JSONB,
+    PRIMARY KEY (defender_id, outcome)
+);
+```
+
+## 7. Синергия
+- Связь с `world-bosses-catalog.md`, `dungeon-bosses-catalog.md`, `combat-ai-enemies.md` для спавнов и AI.
+- Social-service использует данные для изменения романов/репутаций.
+- Analytics-service отслеживает `defenderClearTime`, `defenderDndFailRate`, `defenderCounterUsage`.
+
+## 8. Готовность
+- Документ полностью описывает защитников, API и схемы, готов к работе API Task Creator и world-service.
+---
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-07 21:25  
+**Приоритет:** high  
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 21:25  
+**api-readiness-notes:** Каталог культовых защитников фракций/банд: роли, навыки, триггеры появления, REST/WS контракты и схемы данных для world-service.
+---
+
+# Faction Cult Defenders — Культовые защитники фракций
+
+**target-domain:** gameplay-world/factions  
+**target-microservice:** world-service (8086)  
+**target-frontend-module:** modules/world/events  
+**интеграции:** combat-session, social-service (репутация), analytics-service, economy-service (награды)
+
+## 1. Назначение
+- Дать каждой крупной фракции/банде своего культового защитника (legendary defender) для открытых событий, рейдов фракций и видимых точек обороны.
+- Обеспечить уникальные механики, завязанные на лор Cyberpunk и прогрессию игрока.
 - Поддержать API-запросы world-service: расписание спавнов, навыки, лут, последствие для world-state.
 
 ## 2. Сводная таблица защитников
