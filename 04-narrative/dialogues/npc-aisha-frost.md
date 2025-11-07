@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-npc-aisha-frost`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.1.0  
+**Версия:** 1.2.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 18:05  
+**Последнее обновление:** 2025-11-07 18:20  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/aisha-frost.md`, `../quests/side/2025-11-07-quest-neon-ghosts.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-мicroservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/side-quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
-**api-readiness-notes:** Диалог обновлён: добавлен уровень Specter, элитные поручения и реакция на городские беспорядки.
+**api-readiness-check-date:** 2025-11-07 18:20  
+**api-readiness-notes:** Диалог обновлён: добавлены Specter-отряды, баланс city unrest и новые последствия для экономики.
 
 ---
 
@@ -202,6 +202,21 @@
         failure: { effect: "city_unrest_spike", amount: +4 }
         critical-success: { effect: "trigger_event", event: "neon_ghosts_city_support", reputation: { "rep.fixers.neon": +10 } }
         critical-failure: { effect: "spawn_encounter", encounter: "riot-response", penalty: { reputation: { "rep.corp.helios": +5, "rep.fixers.neon": -10 } } }
+    - option-id: deploy-specter-squad
+      text: "Развернуть отряд призраков"
+      requirements:
+        - type: stat-check
+          stat: Tactics
+          dc: 23
+        - type: resource
+          resource: ghost_squad_ticket
+          amount: 1
+      npc-response: "Specter-отряды двигаются без шума. Координируй их как своих теней."
+      outcomes:
+        success: { effect: "spawn_companion", companion: "specter-squad", reputation: { "rep.fixers.neon": +9 } }
+        failure: { effect: "squad_losses", penalty: { reputation: { "rep.fixers.neon": -6 } } }
+        critical-success: { effect: "unlock_reward", reward: "specter-asset-cache", reputation: { "rep.fixers.neon": +12 } }
+        critical-failure: { effect: "call_helios_counterops", alert: "helios", amount: 4 }
 ```
 
 ### 3.3 Таблица проверок D&D
@@ -217,6 +232,7 @@
 | crisis-directives.hold-line | Combat | 21 | `+1` за `ghost-intel` | Encounter с редким лутом | Продление локдауна | Лут `ghost-prototype` | — |
 | specter-directive.ghost-trace | Investigation | 22 | `+2` при `flag.neon.elite` и `rep.fixers.neon ≥ 30` | Доступ к корпоративным узлам, модуль `ghost-trace` | Рост тревоги Helios | Награда `specter-cache` | Blacklist Ghosts |
 | specter-directive.stabilize-city | Leadership | 21 | `+1` при `underlink.stability > 60` | Снижение беспорядков | Рост беспорядков | Событие `neon_ghosts_city_support` | Encounter riot-response |
+| specter-directive.deploy-specter-squad | Tactics | 23 | `+1` при активном `specter-squad-ticket` | Вызывает элитных союзников Ghosts | Потери отряда, -6 репутации | Награда `specter-asset-cache` | Контроперация Helios |
 
 ### 3.4 Реакции на события
 - **Событие:** `world.event.neon_lockdown`
@@ -239,7 +255,7 @@
 ## 4. Награды и последствия
 - **Репутации:** `rep.fixers.neon` ±15, `rep.corp.helios` ±10, `rep.gang.maelstrom` ±12.
 - **Флаги:** `flag.neon.support`, `flag.helios.deal`, `flag.maelstrom.double_agent`, `flag.neon.blacklist`, `flag.neon.elite`.
-- **Предметы:** `ghost-drone`, `ghost-cache`, `ghost-countermeasure`, `ghost-prototype`, `ghost-trace-module`, `specter-cache`.
+- **Предметы:** `ghost-drone`, `ghost-cache`, `ghost-countermeasure`, `ghost-prototype`, `ghost-trace-module`, `specter-cache`, `specter-asset-cache`.
 - **World-state:** модификаторы `underlink.stability`, `city.unrest.level`, события `neon_ghosts_night_run`, `neon_ghosts_city_support`, `helios-crackdown`.
 - **API:** `POST /api/v1/world/events`, `POST /api/v1/social/reputation/batch`, `POST /api/v1/economy/contracts/activate`.
 

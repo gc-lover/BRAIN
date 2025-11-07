@@ -29,6 +29,7 @@
 - **Эффективность нанятых NPC** → `npc-hiring-effectiveness.md`
 - **Ограничения и требования** → `npc-hiring-limits.md`
 - **Продвинутые возможности** → `npc-hiring-advanced.md`
+- **Система найма (детально)** → `npc-hiring-system-детально.md`
 - **Влияние на игровой мир** → `npc-hiring-world-impact.md`
 
 ---
