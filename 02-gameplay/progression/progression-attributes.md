@@ -9,17 +9,19 @@
 
 # Система прокачки — Атрибуты и характеристики персонажа
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 17:14  
-**api-readiness-notes:** Детализированы формулы производных параметров, киберпсихоз, требования к предметам/имплантам, классовые старт-бонусы. Требуется связывание с новым файлом навыков и матрицей атрибутов.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:46  
+**api-readiness-notes:** «Атрибуты связаны с матрицей и навыками: добавлены схема хранения, REST API, механика роста от использования, синхронизация с progression-skills-mapping. Готово к постановке API задач.»
+
+**Статус:** approved  
+**Версия:** 1.1.0  
+**Дата создания:** 2025-11-05  
+**Последнее обновление:** 2025-11-07 16:46  
+**Приоритет:** Высокий
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/progression/attributes
-
-**Статус:** review  
-**Приоритет:** Высокий  
-**Дата создания:** 2025-11-05
 
 ---
 
@@ -516,8 +518,14 @@
 - Количество очков: 1-2 за уровень (зависит от уровня)
 
 **2. Использование навыков:**
-- Использование навыков, связанных с атрибутом, дает небольшой опыт к атрибуту
-- Опыт накапливается медленно, но постоянно
+- Каждое действие, помеченное соответствующим тегом навыка, генерирует `attribute_xp`.
+- Формула базового опыта: `attribute_xp = base_value × activity_modifier × fatigue_multiplier`.
+  - `base_value` (0.5–3) задается для конкретного навыка в `progression-skills-mapping.md`.
+  - `activity_modifier` зависит от сложности события (обычная = 1.0, элитная = 1.5, легендарная = 2.0).
+  - `fatigue_multiplier` снижает отдачу при спаме действий: начинается с 1.0 и падает до 0.2 при > 50 событиях за 30 мин.
+- Порог повышения атрибута через использование: `threshold = 50 × current_attribute_rank` (можно модифицировать перками).
+- После достижения порога атрибут получает +0.1 (накапливается до целой единицы и округляется вверх каждые 1.0).
+- В сутки действует мягкий лимит: не более +2 единиц за счет использования без очков уровня, чтобы сохранить баланс.
 
 **3. Импланты:**
 - Установка имплантов может увеличить атрибуты напрямую
@@ -530,6 +538,69 @@
 **5. Перерождения:**
 - Каждое перерождение дает бонусы к атрибутам (+1 к базовым характеристикам)
 - Детали: См. `progression-rebirth.md`
+
+#### Анти-эксплойт механики
+- Телеметрия фиксирует повторяющиеся действия без прогресса (например, «пустые» удары) и урезает `activity_modifier` до 0.1.
+- Смена активности восстанавливает множители быстрее (через 5 уникальных событий).
+- Гильдейские бонусы не обходят лимиты — применяется большее из личного и гильдейского множителя.
+
+---
+
+## Структура данных
+
+```sql
+CREATE TABLE character_attributes (
+    character_id UUID PRIMARY KEY,
+    str SMALLINT NOT NULL,
+    ref SMALLINT NOT NULL,
+    body SMALLINT NOT NULL,
+    int SMALLINT NOT NULL,
+    tech SMALLINT NOT NULL,
+    cool SMALLINT NOT NULL,
+    agi SMALLINT NOT NULL,
+    emp SMALLINT NOT NULL,
+    will SMALLINT NOT NULL,
+    humanity SMALLINT NOT NULL,
+    last_updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE attribute_growth_events (
+    id UUID PRIMARY KEY,
+    character_id UUID NOT NULL,
+    attribute_code VARCHAR(8) NOT NULL,
+    source_type VARCHAR(24) NOT NULL, -- LEVEL_UP | SKILL_USE | IMPLANT | PERK | REBIRTH
+    delta NUMERIC(4,1) NOT NULL,
+    activity_tag VARCHAR(64),
+    fatigue_multiplier NUMERIC(3,2) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE attribute_modifiers (
+    id UUID PRIMARY KEY,
+    character_id UUID NOT NULL,
+    attribute_code VARCHAR(8) NOT NULL,
+    modifier_type VARCHAR(24) NOT NULL, -- PERK | IMPLANT | TEMP_BUFF | TEMP_DEBUFF
+    value NUMERIC(5,2) NOT NULL,
+    expires_at TIMESTAMP,
+    source_id UUID
+);
+```
+
+Эти таблицы синхронизируются с `progression-attributes-matrix.md` (стартовые значения и капы) и `progression-skills-mapping.md` (activity_tag и коэффициенты).
+
+---
+
+## REST API (gameplay-service)
+
+| Endpoint | Метод | Назначение | Примечания |
+| --- | --- | --- | --- |
+| `/characters/{id}/attributes` | `GET` | Текущие базовые и модифицированные атрибуты | Возвращает breakdown по источникам |
+| `/characters/{id}/attributes/allocate` | `POST` | Распределение очков уровня | Платеж очков, валидация капов |
+| `/characters/{id}/attributes/apply-event` | `POST` | Регистрация события использования | Идempotent по `eventId` для телеметрии |
+| `/characters/{id}/attributes/reset` | `POST` | Сброс через перерождением/ребаланс | Требует валюту/условия лора |
+| `/characters/{id}/attributes/history` | `GET` | История изменений атрибутов | Пагинация по `attribute_growth_events` |
+
+Событийная шина `gameplay.attributes.*` публикует `allocated`, `skill_use_increment`, `modifier_added`, `modifier_removed`, упрощая синхронизацию с UI и аналитикой.
 
 ---
 
@@ -595,7 +666,7 @@
 - [x] Детализация формул производных параметров (добавлено)
 - [x] Балансировка влияния атрибутов на навыки (базовые коэффициенты заданы)
 - [x] Детализация стартовых значений для каждого класса (уточнено, капы/рост добавлены)
-- [ ] Система прокачки атрибутов через использование навыков (детали механики)
+- [x] Система прокачки атрибутов через использование навыков (детали механики)
 - [x] Влияние киберпсихоза на атрибуты (добавлена детализация)
 - [x] Связь атрибутов с экипировкой (базовые требования и штрафы добавлены)
 

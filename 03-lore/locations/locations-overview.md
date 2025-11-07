@@ -223,8 +223,9 @@
 
 ## Связанные документы
 
-- [Города](./cities/) - детальное описание городов
-- [Зоны](./zones/) - детальное описание зон
+- [Мировой каталог городов](./world-cities/WORLD-CITIES-DETAIL-CATALOG-2093.md) - районы, улицы, ключевые NPC мегаполисов
+- [Мастер-индекс мировых городов](./world-cities/WORLD-CITIES-MASTER-INDEX.md)
+- [Мастер-индекс районов Night City](./night-city/NIGHT-CITY-DISTRICTS-MASTER-INDEX.md)
 
 ---
 
