@@ -16,6 +16,14 @@
 **target-frontend-module:** modules/economy/trade  
 **интеграции:** auctions, crafting, logistics, social reputation
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-276: api/v1/gameplay/economy/factions/assets.yaml (2025-11-08 02:05)
+- Last Updated: 2025-11-08 02:05
+---
+
 ## 1. Цели
 - Связать фракционные награды с экономическими подсистемами.
 - Описать новые активы (облигации, моды, ресурсы) и их поток между аукционами и крафтом.
@@ -41,8 +49,10 @@ arrative-token | Коллекционный предмет | Открывает 
 
 ## 4. Налоги и скидки
 - Репутация фракций изменяет налог на сделки (	ax_modifiers).
-- ep.corp.aeon >= 40 → 	rade_tax.orbital = base - 5%.
-- ep.street.ember < -10 → вводится штраф за продажу pyre-mod.
+- 
+ep.corp.aeon >= 40 → 	rade_tax.orbital = base - 5%.
+- 
+ep.street.ember < -10 → вводится штраф за продажу pyre-mod.
 
 ## 5. REST/WS Контуры
 | Endpoint | Метод | Назначение |
