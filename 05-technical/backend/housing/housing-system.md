@@ -6,6 +6,14 @@
 
 # Housing System - Система жилья
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-206: api/v1/gameplay/housing/housing-system.yaml (2025-11-07 23:45)
+- Last Updated: 2025-11-07 23:45
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:34  
