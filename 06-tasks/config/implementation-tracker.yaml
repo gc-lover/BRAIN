@@ -66,9 +66,11 @@ implementations:
       commit: "06b79a9"
       notes: "AuthController - регистрация и создание персонажа"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 00:06"
+      completed: "2025-11-08 00:21"
       agent: "Frontend Agent"
+      commit: "3a0d1e7"
   
   - api_path: "api/v1/characters/status.yaml"
     task_id: "API-TASK-002"
