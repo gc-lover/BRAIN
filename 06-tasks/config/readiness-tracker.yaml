@@ -362,11 +362,11 @@ documents:
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-world-interaction-ui.md"
     status: "ready"
     version: "1.0.0"
-    checked: "2025-11-07 17:45"
+    checked: "2025-11-07 16:53"
     checker: "AI Agent (Brain Manager)"
-    notes: "UX и игровые механики глобальных интерфейсов: World Pulse, Events Dashboard, Influence Map, Guild Operations, Crisis Hub."
+    notes: "UX, механики и операционные требования для World Pulse, Events Dashboard, Influence Map, Guild Ops, Market Stabilizer, Social Resonance и Crisis Hub. Включает UX-флоу, тест-план, SLA, ASCII мокапы."
     issues: []
-    api_target: null
+    api_target: "api/v1/world/world-interaction-suite.yaml"
 
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-dialogue-audit.md"
     status: "ready"
@@ -1695,10 +1695,10 @@ documents:
 
   - path: ".BRAIN/04-narrative/dialogues/npc-aisha-frost.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-07 17:55"
+    version: "1.1.0"
+    checked: "2025-11-07 18:05"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалог координатора Neon Ghosts: доверие Ghosts, корпоративное давление и кризис Underlink."
+    notes: "Диалог координатора Neon Ghosts: добавлен уровень Specter, элитные поручения и реакция на городские беспорядки."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-aisha-frost.yaml"
 
