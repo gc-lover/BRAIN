@@ -666,7 +666,7 @@ implementations:
     status: "not_started"
     priority: "HIGH"
 
-- api_path: "api/v1/gameplay/world/random-events-extended.yaml"
+- api_path: "api/v1/gameplay/world/random-events-extended/random-events.yaml"
   task_id: "API-TASK-154"
   brain_source: ".BRAIN/04-narrative/quests/side/EVENTS-ALL-PERIODS.md v1.0.0"
   api_status: "completed"
@@ -908,8 +908,13 @@ implementations:
     status: "not_started"
     priority: "HIGH"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 21:10"
+    completed: "2025-11-07 21:40"
+    agent: "Frontend Agent"
+    commit: "d00d6e3"
     priority: "HIGH"
+    notes: "MVPContentPage, EndpointsCard, ModelsCard, InitialDataCard, ContentOverviewCard, ContentStatusCard, TextVersionStateCard, MainUIDataCard, MVPHealthCard, маршрутизация"
 
 - api_path: "api/v1/gameplay/social/romance-system.yaml"
   task_id: "API-TASK-168"
