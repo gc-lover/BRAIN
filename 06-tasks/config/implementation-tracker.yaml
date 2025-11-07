@@ -1045,8 +1045,13 @@ implementations:
     status: "not_started"
     priority: "HIGH"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 00:20"
+    completed: "2025-11-08 00:45"
+    agent: "Frontend Agent"
+    commit: "492a378"
     priority: "MEDIUM"
+    notes: "GlobalStateExtendedPage, GlobalStateSummaryCard, StateComponentCard, SyncStatusCard, ConflictResolutionCard, StateSnapshotCard, OperationQueueCard, фильтры"
 
 - api_path: "api/v1/gameplay/social/player-orders-extended.yaml"
   task_id: "API-TASK-177"
