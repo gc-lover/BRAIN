@@ -6,6 +6,14 @@
 
 # Announcement System - Система объявлений
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-205: api/v1/admin/announcements/announcement-system.yaml (2025-11-07 23:25)
+- Last Updated: 2025-11-07 23:25
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:30  
