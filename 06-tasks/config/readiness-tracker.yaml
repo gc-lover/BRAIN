@@ -3036,5 +3036,14 @@ documents:
     status: "draft"
     version: "1.0.0"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/hong-kong-detailed-2020-2093.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-08 00:23"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Документ Pearl Nexus содержит модели, контрактную схему и UX-потоки; готов к созданию API задачи."
+    issues: []
+    api_target: "api/v1/lore/locations/hong-kong.yaml"
+
 # Примеры записей:
 

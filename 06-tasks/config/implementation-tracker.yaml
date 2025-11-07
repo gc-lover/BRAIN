@@ -83,7 +83,9 @@ implementations:
       commit: "06b79a9"
       notes: "CharactersStatusController - управление статусами персонажей"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:24"
+      agent: "Frontend Agent"
   
   # === GAME START & INITIAL STATE ===
   
@@ -416,7 +418,9 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:24"
+    agent: "Backend Agent"
     priority: "CRITICAL"
   frontend:
     status: "not_started"
