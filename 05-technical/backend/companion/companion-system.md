@@ -6,6 +6,14 @@
 
 # Companion System - Система компаньонов
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-202: api/v1/gameplay/companions/companion-system.yaml (2025-11-07 22:25)
+- Last Updated: 2025-11-07 22:25
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:34  
