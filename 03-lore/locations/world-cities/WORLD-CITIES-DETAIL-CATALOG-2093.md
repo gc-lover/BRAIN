@@ -36,6 +36,7 @@
 - **Документы:** `night-city/WATSON...`, `night-city/PACIFICA...`, `night-city/WESTBROOK...`
 
 ### Los Angeles (США, Калифорния)
+- **См.** `./los-angeles-detailed-2020-2093.md`
 - **Районы:** Neo-Hollywood (голографические студии), Santa Monica Arcology (прибрежные купола), Inland Megaburbs (модули среднего класса), Ruined Valley (заброшенные индустриальные зоны).
 - **Ключевые улицы:** Sunset Holo-Strip (VR премьеры), Pacific Magtube (скоростной транспорт вдоль побережья), Flooded Sepulveda Tunnels (контрабанда).
 - **NPC:** Грейс «Stage» Лин (продюсер химерного контента), Рафаэль Круз (лидер банды Chromatic Saints), мэр Нео-ЛА Айлин Джу (корпоративная политик).
@@ -43,6 +44,7 @@
 - **Особенности:** битвы за контроль медиа, braindance турниры, фракции студий воюют за авторские права на живые аватары.
 
 ### New York (США, Северо-Восток)
+- **См.** `./new-york-detailed-2020-2093.md`
 - **Районы:** Manhattan Spire (вертикальный мегакомплекс), Liberty Harbour (плавучие кварталы), Bronx Grid (энергетический хаб), Neo-Brooklyn Commons (кооперативы).
 - **Ключевые улицы:** WallStreet Skywalk, Queens Cargo Loop, Broadway Immersion Lane.
 - **NPC:** Джулиан «Ledger» Фостер (финансовый брокер Militech), Сара Хуа (капитан Liberty Harbour), «Проповедник» Элайджа Бун (религиозный лидер в Bronx Grid).
@@ -50,6 +52,7 @@
 - **Особенности:** глобальный центр финансовых доминаций, PvP-контракты между корпорациями, хакерские рейды NetWatch.
 
 ### Chicago (США, Иллинойс)
+- **См.** `./chicago-detailed-2020-2093.md`
 - **Районы:** Wind Corridor (ветропарки), Loop Reinforced (деловой центр), Sprawl South (индустриальные руины), Crystal Shore (озёрная зона).
 - **Ключевые улицы:** MagRail Canalway, Southside Freight Spine, Neo-Lakefront Walk.
 - **NPC:** Миа «Gale» Риверс (оператор погодных щитов), Донован Кейн (лидер банды Steel Swarm), профессор Игорь Данилов (исследователь климатических ИИ).
@@ -57,6 +60,7 @@
 - **Особенности:** климатические эксперименты, миссии по стабилизации погодных куполов, теневые сделки с Militech.
 
 ### Detroit (США, Мичиган)
+- **См.** `./detroit-detailed-2020-2093.md`
 - **Районы:** Automata Forge (роботизированные заводы), Coppertown (арт-кооперативы), Forgotten Suburbs (пустующие кварталы), Riverfront Renewal (новые жилые блоки).
 - **Ключевые улицы:** Assembly Line Aerialway, Gratiot Data Avenue, Riverfront Promenade.
 - **NPC:** Октавия Кларк (директор имплант-завода), Хоакин «Sparkplug» Моралес (лидер тюнеров), Марлен Лоренц (посредник профсоюзов).
@@ -64,6 +68,7 @@
 - **Особенности:** конкуренция автоматизации и рабочих, квесты по апгрейду транспорта, подпольные гонки дронов.
 
 ### Miami (США, Флорида)
+- **См.** `./miami-detailed-2020-2093.md`
 - **Районы:** Neon Beachfront (туризм и клубы), Coral Fortress (усиленные дамбы), Little Havana 2.0 (культурный центр), Everglades Fringe (биолабы).
 - **Ключевые улицы:** Ocean Pulse Boardwalk, Coral Elevated Highway, Jungletram Route.
 - **NPC:** Валерия «Surge» Мендес (владелица клубной сети), капитан Рики Сандовал (береговая охрана), Доктор Эмма Фару (биоинженер Everglades).
