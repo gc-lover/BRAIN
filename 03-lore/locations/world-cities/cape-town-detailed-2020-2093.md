@@ -73,6 +73,7 @@
 
 - **«Конвой Атлантики»:** Амина ван дер Вестхёйзен → Зола Ндлову → Капитан Роббе → защита торговых линий от мегаштормов.
 - **«Глубинная сеть»:** Доктор Ясин Мкхизе → Tidehacker Cells → независимые кибер-полисмены → вскрытие архивов Atlantic Shield.
+- **«Каравелла связей»:** Амина ван дер Вестхёйзен → Леонора Кошта → Рита Лобату → совместные рейсы `FQ-ATLANTIC-003` между Кейптауном и Лиссабоном.
 
 ---
 
@@ -110,6 +111,8 @@
 
 - `../locations-overview.md`
 - `./WORLD-CITIES-DETAIL-CATALOG-2093.md`
+- `./lisbon-detailed-2020-2093.md`
+- `../../04-narrative/quests/faction-world/atlantic-shield-world-quests.md`
 - `../../factions/gangs/global/narco-kings-medellin-2020-2093.md`
 
 ---
