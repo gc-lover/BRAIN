@@ -21,7 +21,8 @@
   - API-TASK-301: api/v1/gameplay/combat/loadout-kits.yaml (2025-11-08)
   - API-TASK-302: api/v1/gameplay/combat/loadout-profiles.yaml (2025-11-08)
   - API-TASK-303: api/v1/gameplay/combat/loadout-macros.yaml (2025-11-08)
-- Last Updated: 2025-11-08 01:32
+  - API-TASK-304: api/v1/gameplay/combat/loadout-availability.yaml (2025-11-08)
+- Last Updated: 2025-11-08 01:58
 
 ---
 

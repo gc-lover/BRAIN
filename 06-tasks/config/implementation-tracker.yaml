@@ -212,7 +212,11 @@ implementations:
       commit: "06b79a9"
       notes: "AbilitiesController - способности персонажа (VALORANT style)"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 01:30"
+      completed: "2025-11-08 02:20"
+      agent: "Frontend Agent"
+      commit: ""
   
   - api_path: "api/v1/gameplay/combat/cyberpsychosis.yaml"
     task_id: "API-TASK-012"
@@ -225,7 +229,11 @@ implementations:
       commit: "06b79a9"
       notes: "CyberpsychosisController - система киберпсихоза"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 02:20"
+      completed: "2025-11-08 03:10"
+      agent: "Frontend Agent"
+      commit: ""
   
   - api_path: "api/v1/gameplay/combat/implants-limits.yaml"
     task_id: "API-TASK-013"
@@ -238,7 +246,11 @@ implementations:
       commit: "06b79a9"
       notes: "ImplantsLimitsController - лимиты имплантов"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 03:10"
+      completed: "2025-11-08 03:50"
+      agent: "Frontend Agent"
+      commit: ""
   
   # === SOCIAL & NARRATIVE ===
   
@@ -253,7 +265,11 @@ implementations:
       commit: "06b79a9"
       notes: "NPCsController - взаимодействие с NPC"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 04:00"
+      completed: "2025-11-08 04:45"
+      agent: "Frontend Agent"
+      commit: ""
   
   - api_path: "api/v1/quests/quests.yaml"
     task_id: "API-TASK-015"
@@ -266,7 +282,11 @@ implementations:
       commit: "06b79a9"
       notes: "QuestsController - система квестов"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 05:00"
+      completed: "2025-11-08 05:40"
+      agent: "Frontend Agent"
+      commit: ""
   
   - api_path: "api/v1/events/random-events.yaml"
     task_id: "API-TASK-016"
@@ -279,7 +299,11 @@ implementations:
       commit: "06b79a9"
       notes: "EventsController - случайные события"
     frontend:
-      status: "not_started"
+      status: "completed"
+      started: "2025-11-08 05:45"
+      completed: "2025-11-08 06:20"
+      agent: "Frontend Agent"
+      commit: ""
   
   # === CHARACTER SYSTEMS ===
   
