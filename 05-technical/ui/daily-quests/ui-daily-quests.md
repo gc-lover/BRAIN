@@ -16,6 +16,12 @@
 **Размер:** ~390 строк ✅
 
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-210: api/v1/gameplay/daily-quests/daily-quests-ui.yaml (2025-11-08 00:45)
+- Last Updated: 2025-11-08 00:45
+---
 
 ## Краткое описание
 
