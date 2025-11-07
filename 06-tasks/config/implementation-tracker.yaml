@@ -613,8 +613,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 14:05"
+    completed: "2025-11-07 15:35"
+    agent: "Backend Agent"
     priority: "CRITICAL"
+    notes: "Добавлены сущности combat_session_instances/participants/events, сервис GameplayServiceImpl, контроллер GameplayCombatSessionsController и миграция 073 для боевых сессий"
   frontend:
     status: "not_started"
     priority: "CRITICAL"
