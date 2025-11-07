@@ -446,3 +446,19 @@
 - **Фракции:** Steppe Signal Collective, Blue Wolf Nomads, Gobi Sandcrafters, Tengri Sky Riders.
 - **Особенности:** степные купола, песчаные караваны, квесты `ulaanbaatar-steppe-signal-world-quests.md`.
 
+### Jakarta (Индонезия)
+- **См.** `./jakarta-detailed-2020-2093.md`
+- **Районы:** Cakrawala Halo District (климатический центр), Monsoon Bazaar Chain (плавающие рынки), Garuda Skyline Corridor (воздушные трассы), Java Trench Undergrid (подводные тоннели).
+- **Ключевые улицы:** Monsoon Skyway, Sunda Subline, Cakrawala Halo Loop, Java Evac Route.
+- **NPC:** Сити «Tempest Regent» Анжани (директор NTG), Рафли «Storm Broker» Пратама (торговец), Доктор Линда «Coral Medic» Сетауан (рипердок), Индра «Garuda Pulse» Сураяма (логист).
+- **Фракции:** Nusantara Tempest Grid, Monsoon Corsairs, Sunda Data Brokers, Kraken Salvage Union.
+- **Особенности:** штормовые купола, коралловые импланты, квесты `jakarta-tempest-grid-world-quests.md`.
+
+### Warsaw (Польша)
+- **См.** `./warsaw-detailed-2020-2093.md`
+- **Районы:** Vistula Sentinel Bastion (корпоративный центр), Praga Resonance Grid (подпольные студии), Amber Corridor District (культурно-торговый пояс), Iron Hussar Barricades (оборонительные арены).
+- **Ключевые улицы:** Wisła Sentinel Route, Praga Ghost Tram, Mazovian Skyrail, Amber Express.
+- **NPC:** Агнешка «Sentinel Regent» Новак (директор VSD), Марчин «Amber Ledger» Коваль (торговец), Доктор Полина «Praga Pulse» Желиньска (рипердок), Ивона «Ghost Signal» Стажиньска (лидер подполья).
+- **Фракции:** Vistula Sentinel Directorate, Wisła Shadowline, Praga Relay Union, Iron Hussars Collective.
+- **Особенности:** спектровые мосты, янтарные импланты, квесты `warsaw-vistula-sentinel-world-quests.md`.
+

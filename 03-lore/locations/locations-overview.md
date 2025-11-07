@@ -136,6 +136,8 @@
 - **Johor Bahru** (Малайзия) — Hyperwave порт, бионические джунгли, Night Riders.
 - **Kinshasa** (ДР Конго) — Lumina Malebo канопи, Congo River Nexus, каскады Kasai Flux.
 - **Ulaanbaatar** (Монголия) — Sky Steppe Mandala, Steppe Signal Collective, песчаные караваны Tengri.
+- **Jakarta** (Индонезия) — Tempest Grid купола, плавающие рынки Monsoon, Kraken Salvage Union.
+- **Warsaw** (Польша) — Vistula Sentinel, спектровые мосты Aurora Wisła, Iron Hussars.
 
 ---
 

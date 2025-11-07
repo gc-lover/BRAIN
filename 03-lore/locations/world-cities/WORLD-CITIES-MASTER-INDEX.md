@@ -786,6 +786,30 @@
 
 ---
 
+## 58. [ДЖАКАРТА — Штормовой архипелаг и квантовые проливы](./jakarta-detailed-2020-2093.md) 🌩️🇮🇩
+
+**Население:** ~18,9 млн  
+**Доминирует:** Nusantara Tempest Grid  
+**Банды:** Monsoon Corsairs, Sunda Data Brokers, Kraken Salvage Union, Garuda Skyline Riders
+
+**Районы:** Cakrawala Halo District, Monsoon Bazaar Chain, Garuda Skyline Corridor, Java Trench Undergrid
+
+**Тайны:** «Halo Divergence», «Kraken Covenant»
+
+---
+
+## 59. [ВАРШАВА — Вислинские дата-крепости и спектровые мосты](./warsaw-detailed-2020-2093.md) 🌉🇵🇱
+
+**Население:** ~10,8 млн  
+**Доминирует:** Vistula Sentinel Directorate  
+**Банды:** Wisła Shadowline, Praga Relay Union, Amber Couriers, Iron Hussars Collective
+
+**Районы:** Vistula Sentinel Bastion, Praga Resonance Grid, Amber Corridor District, Iron Hussar Barricades
+
+**Тайны:** «Wisła Firewall», «Amber Resurrection»
+
+---
+
 ## Сравнительная таблица
 
 | Город | Население | Доминирует | Уникальность | Опасность |

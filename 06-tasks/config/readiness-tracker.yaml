@@ -3033,5 +3033,41 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/ulaanbaatar-steppe-signal.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/jakarta-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 04:08"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Джакарты: Tempest Grid, плавающие рынки, коралловые импланты."
+    issues: []
+    api_target: "api/v1/lore/locations/jakarta.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/warsaw-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 04:16"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Варшавы: Vistula Sentinel, спектровые мосты, янтарные архивы."
+    issues: []
+    api_target: "api/v1/lore/locations/warsaw.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/jakarta-tempest-grid-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 04:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Nusantara Tempest Grid: Sunda Resonator, Garuda Skyshield, Tempest Ledger, Kraken Covenant."
+    issues: []
+    api_target: "api/v1/narrative/factions/jakarta-tempest-grid.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/warsaw-vistula-sentinel-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 04:24"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Vistula Sentinel Directorate: Wisła Bulwark, Praga Ghostline, Amber Accord, Hussar Vanguard."
+    issues: []
+    api_target: "api/v1/narrative/factions/warsaw-vistula-sentinel.yaml"
+
 # Примеры записей:
 
