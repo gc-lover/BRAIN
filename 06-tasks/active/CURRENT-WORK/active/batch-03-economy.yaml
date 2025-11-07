@@ -1,0 +1,48 @@
+batch_id: batch-03-economy
+title: "Batch 03 - Economy & Monetization"
+created_at: "2025-11-07 20:07"
+status: pending
+documents:
+  - path: "05-technical/backend/inventory-system/part1-core-system.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/inventory/core"
+  - path: "05-technical/backend/inventory-system/part2-advanced-features.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/inventory/advanced"
+  - path: "05-technical/backend/loot-system/part1-loot-generation.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/loot/generation"
+  - path: "05-technical/backend/loot-system/part2-advanced-loot.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/loot/advanced"
+  - path: "05-technical/backend/trade-system.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/trade"
+  - path: "05-technical/backend/battle-pass/part1-core-progression.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/progression/battle-pass"
+  - path: "05-technical/backend/battle-pass/part2-rewards-challenges.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/progression/battle-pass/rewards"
+  - path: "05-technical/backend/cosmetic/cosmetic-system.md"
+    microservice: economy-service
+    readiness: ready
+    api_hint: "api/v1/economy/cosmetics"
+  - path: "05-technical/backend/daily-weekly-reset-system.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/progression/reset"
+  - path: "05-technical/backend/mail-system.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/mail"
+notes: |
+  Экономические документы требуют проверки лимитов и анти-абьюз механизмов. После генерации задач уведомить economy команду.
+

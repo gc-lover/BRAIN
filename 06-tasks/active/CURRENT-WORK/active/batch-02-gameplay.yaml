@@ -1,0 +1,48 @@
+batch_id: batch-02-gameplay
+title: "Batch 02 - Gameplay & Social"
+created_at: "2025-11-07 20:07"
+status: pending
+documents:
+  - path: "05-technical/backend/matchmaking/matchmaking-algorithm.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/matchmaking/search"
+  - path: "05-technical/backend/matchmaking/matchmaking-queue.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/matchmaking/queue"
+  - path: "05-technical/backend/matchmaking/matchmaking-rating.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/matchmaking/rating"
+  - path: "05-technical/backend/party-system.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/party"
+  - path: "05-technical/backend/guild-system-backend.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/guilds"
+  - path: "05-technical/backend/clan-war/clan-war-system.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/clan-wars"
+  - path: "05-technical/backend/housing/housing-system.md"
+    microservice: world-service
+    readiness: ready
+    api_hint: "api/v1/world/housing"
+  - path: "05-technical/backend/chat/chat-channels.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/chat/channels"
+  - path: "05-technical/backend/chat/chat-features.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/chat/features"
+  - path: "05-technical/backend/chat/chat-moderation.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/chat/moderation"
+notes: |
+  При запуске партии убедиться, что Voice Lobby и Announcement системы готовы к ссылкам. После генерации задач обновить brain-mapping.yaml.
+

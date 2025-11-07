@@ -1,0 +1,44 @@
+batch_id: batch-04-state
+title: "Batch 04 - Sessions, Realtime & Player State"
+created_at: "2025-11-07 20:07"
+status: pending
+documents:
+  - path: "05-technical/backend/player-character-mgmt/part1-creation-deletion.md"
+    microservice: character-service
+    readiness: ready
+    api_hint: "api/v1/characters"
+  - path: "05-technical/backend/player-character-mgmt/part2-switching-management.md"
+    microservice: character-service
+    readiness: ready
+    api_hint: "api/v1/characters/switch"
+  - path: "05-technical/backend/session/session-lifecycle-heartbeat.md"
+    microservice: auth-service
+    readiness: ready
+    api_hint: "api/v1/session/heartbeat"
+  - path: "05-technical/backend/session/session-reconnection-monitoring.md"
+    microservice: auth-service
+    readiness: ready
+    api_hint: "api/v1/session/reconnect"
+  - path: "05-technical/backend/realtime-server/part1-architecture-zones.md"
+    microservice: world-service
+    readiness: ready
+    api_hint: "api/v1/realtime/zones"
+  - path: "05-technical/backend/realtime-server/part2-protocol-optimization.md"
+    microservice: world-service
+    readiness: ready
+    api_hint: "api/v1/realtime/protocol"
+  - path: "05-technical/backend/quest-engine-backend.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/quests/engine"
+  - path: "05-technical/backend/progression-backend.md"
+    microservice: gameplay-service
+    readiness: ready
+    api_hint: "api/v1/progression"
+  - path: "05-technical/backend/friend-system.md"
+    microservice: social-service
+    readiness: ready
+    api_hint: "api/v1/social/friends"
+notes: |
+  Требует синхронизации с readiness-tracker.yaml (sessions). При создании задач убедиться в наличии схем БД.
+

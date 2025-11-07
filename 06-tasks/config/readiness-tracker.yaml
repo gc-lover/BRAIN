@@ -1247,11 +1247,11 @@ documents:
   - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies.md"
     status: "ready"
     version: "1.0.0"
-    checked: "2025-11-06 05:00"
-    checker: "AI Agent"
-    notes: "15+ типов врагов, 10+ AI тактик, adaptive learning AI, emotion/morale system, 6+ boss fights (Adam Smasher, Blackwall Guardian, etc). Готов к API."
+    checked: "2025-11-07 20:17"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Матрица AI по слоям: street, tactical, mythic, raid. Уникальные навыки по уровням сложности, Kafka топики, YAML-профиль, SQL схемы, REST/WS контракты, сюжета привязка к Blackwall и корпоративным войнам."
     issues: []
-    api_target: "api/v1/enemies/catalog.yaml"
+    api_target: "api/v1/combat/ai-matrix.yaml"
 
   - path: ".BRAIN/02-gameplay/combat/COMBAT-SYSTEM-EXPANSION-SUMMARY.md"
     status: "not-applicable"
@@ -1692,6 +1692,15 @@ documents:
     notes: "Диалог агента Хироши: clearance уровни, подозрения, протокол Arasaka Lockdown. Флаги и последствия синхронизированы с корпоративными системами."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-hiroshi-tanaka.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/npc-aisha-frost.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 17:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалог координатора Neon Ghosts: доверие Ghosts, корпоративное давление и кризис Underlink."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/npc-aisha-frost.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/npc-jose-tiger-ramirez.md"
     status: "ready"
