@@ -90,6 +90,8 @@
 - Расчёт индекса: репутация 40%, романтика 20%, социальные события 40%.
 - Запуск кампаний через `POST /api/v1/social/campaigns`, UI показывает влияние и стоимость.
 - Компоненты: `shared/ui/ResonanceMeter`, `shared/ui/RelationshipGrid`.
+- Specter overlay показывает панель «Underlink Specter» при флаге `flag.neon.elite == true`, отражает поручения Ghosts и статус курьеров.
+- Индикатор `city.unrest.level` визуализирует рост беспорядков, при превышении порога активирует CTA «Сдержать протесты».
 
 ### 2.7 Кризисный центр (Crisis Control Hub)
 - Активируется при `alertLevel=crisis`.
@@ -250,6 +252,7 @@
 | Social Resonance | REST | `POST /api/v1/social/campaigns` | social-service | on-demand | запускает кампанию |
 | Crisis Hub | REST | `POST /api/v1/world/crisis/actions` | world-service | on-demand | требует двойного подтверждения |
 | Crisis Hub | WS | `CRISIS_STATE_UPDATE` | world-service | ≤3 сек | обновляет таймеры и уровень смягчения |
+| City Unrest Monitor | WS | `CITY_UNREST_UPDATE` | world-service | ≤3 сек | транслирует модификатор `city.unrest.level` для Specter overlay |
 
 | Событие | Источник | Подписчики | Payload (ключевые поля) |
 |---------|----------|------------|-------------------------|
@@ -260,6 +263,7 @@
 | `MARKET_INTERVENTION_STATUS` | economy-service | Market Stabilizer, World Pulse | `interventionId`, `status`, `effect` |
 | `SOCIAL_INDEX_CHANGED` | social-service | Social Resonance, World Pulse | `trustIndex`, `delta`, `reason` |
 | `CRISIS_STATE_UPDATE` | world-service | Crisis Hub, Notifications | `phase`, `actions`, `mitigationLevel`, `eta` |
+| `CITY_UNREST_UPDATE` | world-service | Social Resonance, Specter overlay | `unrestLevel`, `trend`, `affectedDistricts` |
 
 ## 7. SLA и операционные параметры
 
@@ -269,6 +273,7 @@
 - Guild Operations: подтверждение приказа ≤ 10 сек; audit trail сохраняется 180 дней; все операции требуют idempotency key.
 - Market Stabilizer: интервенция должна получить статус `executing` ≤ 15 сек; при превышении — автроолбек.
 - Social Resonance: nightly пересчёт индекса (02:00 UTC); realtime изменения (кампании/романтика) применяются ≤ 30 сек.
+- City Unrest Monitor: `CITY_UNREST_UPDATE` распространяется ≤ 3 сек; при уровне >60 активируется CTA Specter и предупреждение в World Pulse.
 - Crisis Control Hub: SLA на новые действия ≤ 5 сек; митигирующие отчёты доступны ≤ 2 мин после окончания crisis-фазы.
 - Monitoring & Alerts: `world.sync.lag` > 5 сек → PagerDuty P1; `events.active.count` > 50 или `world.state.stability` < 35 → P2.
 - QA Simulations: nightly build длится ≤ 45 мин; визуальные снапшоты сравниваются в автоматическом режиме, порог diff ≤ 2%.
