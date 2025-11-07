@@ -6,6 +6,14 @@
 
 # Clan War System - Система клановых войн
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-204: api/v1/gameplay/clans/clan-war-system.yaml (2025-11-07 23:05)
+- Last Updated: 2025-11-07 23:05
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:34  
