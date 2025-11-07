@@ -765,6 +765,22 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+- api_path: "api/v1/gameplay/economy/player-market-core.yaml"
+  task_id: "API-TASK-095"
+  brain_source: ".BRAIN/02-gameplay/economy/player-market/player-market-core.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "completed"
+    started: "2025-11-07 15:20"
+    completed: "2025-11-07 15:58"
+    agent: "Frontend Agent"
+    commit: "efb7284"
+    priority: "MEDIUM"
+    notes: "PlayerMarketCorePage, OrderBookCard, PlayerOrderCard, маршрутизация"
+
 # === INFRASTRUCTURE & ADMIN (2025-11-07 BATCH 4) ===
 
 - api_path: "api/v1/admin/anti-cheat.yaml"
@@ -1160,6 +1176,33 @@ implementations:
   - api_path: "api/v1/notifications/notifications.yaml"
     task_id: "API-TASK-230"
     brain_source: ".BRAIN/05-technical/backend/notification-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/party/party-system.yaml"
+    task_id: "API-TASK-231"
+    brain_source: ".BRAIN/05-technical/backend/party-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/inventory/inventory-core.yaml"
+    task_id: "API-TASK-234"
+    brain_source: ".BRAIN/05-technical/backend/inventory-system/part1-core-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/mail/mail-system.yaml"
+    task_id: "API-TASK-232"
+    brain_source: ".BRAIN/05-technical/backend/mail-system.md"
     api_status: "completed"
     backend:
       status: "not_started"

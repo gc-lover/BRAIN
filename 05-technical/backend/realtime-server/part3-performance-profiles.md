@@ -8,10 +8,12 @@
 - Last Updated: 2025-11-07 11:13
 ---
 
-**Статус:** draft  
-**Версия:** 0.1.0  
-**Дата:** 2025-11-07 11:13  
-**api-readiness:** draft
+**Статус:** review  
+**Версия:** 0.2.0  
+**Дата:** 2025-11-07 16:03  
+**api-readiness:** in-review  
+**api-readiness-check-date:** 2025-11-07 16:03  
+**api-readiness-notes:** "Расширен раздел производительности: добавлены адаптивная синхронизация, edge-ноды, гибридный AI, ML-античит, chaos-тесты, live-migration и dev-инструменты; требуется финальное согласование инфраструктурой."
 
 [← Part 2](./part2-protocol-optimization.md) | [Навигация](./README.md)
 

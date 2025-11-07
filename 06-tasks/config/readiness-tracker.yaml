@@ -2011,6 +2011,17 @@ documents:
     issues: []
     api_target: "api/v1/reset-jobs.yaml"
 
+  # 05-technical/backend/realtime-server/ - Performance Profiles (2025-11-07)
+  - path: ".BRAIN/05-technical/backend/realtime-server/part3-performance-profiles.md"
+    status: "in-review"
+    version: "0.2.0"
+    checked: "2025-11-07 16:03"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Performance profiles дополнены адаптивной синхронизацией, архитектурой edge-нод, гибридным AI, ML-античитом и live-migration; требуется подтверждение инфраструктурной команды."
+    issues:
+      - "Ожидается согласование параметров edge-нод и механизма live-migration с инфраструктурой."
+    api_target: null
+
   # 05-technical/infrastructure/ - Production Infrastructure (2025-11-07)
   - path: ".BRAIN/05-technical/infrastructure/anti-cheat-system.md"
     status: "ready"
