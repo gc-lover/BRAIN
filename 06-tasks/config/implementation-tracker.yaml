@@ -688,7 +688,11 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 21:20"
+    completed: "2025-11-07 22:05"
+    agent: "Backend Agent"
+    notes: "CurrencyExchangeServiceImpl, контроллер, сущности, репозитории и миграции 080-082 для валютной биржи"
     priority: "MEDIUM"
   frontend:
     status: "not_started"
@@ -1009,8 +1013,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 23:25"
+    completed: "2025-11-07 23:50"
+    agent: "Frontend Agent"
+    commit: "f421d08"
     priority: "MEDIUM"
+    notes: "NPCHiringExtendedPage, HireableNPCExtendedCard (tiers/legendary), HiringContractCard, MissionAssignmentCard, SupportAssetCard, LoyaltyProgramCard, HiringSummaryCard, фильтры"
 
 - api_path: "api/v1/narrative/narrative-coherence.yaml"
   task_id: "API-TASK-175"
