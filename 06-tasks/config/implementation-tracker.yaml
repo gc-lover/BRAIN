@@ -1388,6 +1388,7 @@ implementations:
 
   - api_path: "api/v1/loot/loot-generation.yaml"
     task_id: "API-TASK-235"
+    brain_source: ".BRAIN/05-technical/backend/loot-system/part1-loot-generation.md"
     api_status: "completed"
     backend:
       status: "not_started"
