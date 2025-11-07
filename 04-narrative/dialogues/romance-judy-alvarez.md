@@ -312,8 +312,27 @@ nodes:
 
 ### 3.4 Реакции на события
 
+| Этап | Триггер | Статистика | DC | Модификаторы | Бафф/Эффект | Штраф/Пенальти | Сцена | Описание |
+|------|----------|-----------|----|--------------|--------------|---------------|--------|----------|
+| Stage1 | studio-intro | Empathy | 15 | `+1` `flag.moxx.support` | Флаг stage0 | −4 | Сцена «Studio intro» | Эмоциональный откат |
+| Stage1 | trust-share | Empathy | 18 | `+2` `item.romance-judy-tip` | Флаг truth | +6 | Сцена «Truth or Dare» | Усиление доверия |
+| Stage1 | bd-demo | Technical | 17 | `+1` класс Netrunner | Флаг bd | +5 | Сцена «BD demo» | Успех в брайндансе |
+| Stage1 | branch-decision | — | — | — | — | — | Сцена «Branch decision» | Выбор пути |
+| Stage2 | town-entry | Empathy | 19 | `+1` `flag.romance.judy.path_trust` | Флаг stage1-complete | +5 | Сцена «Laguna sunrise» | Успех в погружении |
+| Stage2 | memory-sync | Hacking | 20 | `+1` класс Netrunner, `+1` `flag.romance.judy.humor` | Флаг sync, баф sync-awareness | +7 | Сцена «Laguna sunrise» | Успех в синхронизации |
+| Stage2 | memory-sync.focus-emotions | Insight | 18 | `+1` при `path_slow` | Флаг sync | −3 | Сцена «Laguna sunrise» | Эмоциональный откат |
+| Stage3 | underground-lab.stabilize-sync | Hacking | 21 | `+2` класс Netrunner | Баф sync-harmony | Статус glitch | Доп. баф «Deep Sync» | Netwatch маяк |
+| Stage3 | underground-lab.comfort-judy | Empathy | 19 | `+1` `flag.romance.judy.path_comfort` | Флаг bd_sync | -3 | Сцена «Heartbeat Duo» | Разрыв связи |
+| Stage3 | sync-handoff.record-bd | Performance | 18 | `+1` `flag.romance.judy.humor` | Активность BD | -4 | Пасхалка «BrainDance Idol» | — |
+| Stage3 | sync-handoff.negotiate-release | Negotiation | 19 | `+1` `rep.moxx ≥ 25` | Репутация Мокси | -3 | Контракт «BD Liberation» | Отказ продюсеров |
+| Stage3 | future-blueprint.vow-public | Performance | 19 | `+1` `flag.romance.judy.bd_manifest` | Публичный путь | -5 | Запись «Public Anthem» | Засада хейтеров |
+| Stage3 | future-blueprint.vow-private | Willpower | 18 | `+1` `flag.romance.judy.path_private` | Приватный путь | -4 | — | — |
+| Stage3 | future-blueprint.vow-rebuild | Negotiation | 20 | `+1` `flag.romance.judy.bd_release` | Контракт safehouse | -5 | Ускоренный билд | Арест подрядчика |
+
 - **`world.event.maelstrom_underlink_raid`:** +1 DC к проверкам Stage2, реплика Джуди «Maelstrom снова тестит наши границы».
 - **`world.event.corporate_war_escalation`:** включает дополнительную реплику о давлении корпораций и даёт бонусные награды для выбора `plan-future`.
+- **`world.event.metro_shutdown`:** снижает DC Performance/Negotiation на Stage3 на 1 (фокус на восстановлении инфраструктуры) и добавляет пасхалку `hyperloop-relief`.
+- **`event.netwatch-survey`:** при провале Stage3 запускает побочный квест `netwatch-cleanup` и снижает `rep.corp.arasaka` на 2.
 
 ## 4. Экспорт (YAML)
 
@@ -512,6 +531,118 @@ conversation:
               romance_judy: 9
 ```
 
+```yaml
+conversation:
+  id: romance-judy-stage3
+  entryNodes: [underground-lab]
+  states:
+    underground-lab:
+      requirements:
+        flag.romance.judy.stage2-complete: true
+    sync-handoff:
+      requirements:
+        flag.romance.judy.bd_sync: true
+    future-blueprint:
+      requirements:
+        flag.romance.judy.bd_sync: true
+  nodes:
+    underground-lab:
+      options:
+        - id: stabilize-sync
+          checks:
+            - stat: Hacking
+              dc: 21
+          success:
+            setFlags: [flag.romance.judy.bd_sync]
+            rewards: [buff.sync-harmony]
+            reputation:
+              romance_judy: 7
+          failure:
+            penalties: [signal_glitch]
+            reputation:
+              romance_judy: -4
+        - id: comfort-judy
+          checks:
+            - stat: Empathy
+              dc: 19
+          success:
+            setFlags: [flag.romance.judy.bd_sync]
+            reputation:
+              romance_judy: 6
+          failure:
+            reputation:
+              romance_judy: -3
+    sync-handoff:
+      options:
+        - id: record-bd
+          checks:
+            - stat: Performance
+              dc: 18
+          success:
+            setFlags: [flag.romance.judy.bd_manifest]
+            activities: [moxx-bd-revolution]
+            reputation:
+              romance_judy: 6
+          failure:
+            penalties: [bd_overload]
+            reputation:
+              romance_judy: -4
+        - id: negotiate-release
+          checks:
+            - stat: Negotiation
+              dc: 19
+          success:
+            setFlags: [flag.romance.judy.bd_release]
+            reputation:
+              romance_judy: 5
+              rep.moxx: 4
+          failure:
+            penalties: [producer_pushback]
+            reputation:
+              romance_judy: -3
+    future-blueprint:
+      options:
+        - id: vow-public
+          checks:
+            - stat: Performance
+              dc: 19
+          success:
+            setFlags: [flag.romance.judy.stage3-public, flag.romance.judy.stage3-decision]
+            reputation:
+              romance_judy: 9
+              rep.moxx: 6
+          failure:
+            penalties: [public-backlash]
+            reputation:
+              romance_judy: -5
+        - id: vow-private
+          checks:
+            - stat: Willpower
+              dc: 18
+          success:
+            setFlags: [flag.romance.judy.stage3-private, flag.romance.judy.stage3-decision]
+            reputation:
+              romance_judy: 8
+          failure:
+            penalties: [doubt_private]
+            reputation:
+              romance_judy: -4
+        - id: vow-rebuild
+          checks:
+            - stat: Negotiation
+              dc: 20
+          success:
+            setFlags: [flag.romance.judy.stage3-rebuild, flag.romance.judy.stage3-decision]
+            contracts: [moxx-archive-hub]
+            reputation:
+              romance_judy: 10
+              rep.moxx: 5
+          failure:
+            penalties: [construction_delays]
+            reputation:
+              romance_judy: -5
+```
+
 ## 5. REST / GraphQL API
 
 | Endpoint | Метод | Назначение |
@@ -522,22 +653,25 @@ conversation:
 | `/romance/dialogues/judy/stage2` | `GET` | Вернуть AR-сцену Laguna Bend |
 | `/romance/dialogues/judy/stage2/run-check` | `POST` | Обработать проверки Empathy/Performance/Hacking/Insight |
 | `/romance/dialogues/judy/stage2/state` | `POST` | Сохранить флаги `stage1-complete`, `sync`, `path_*`, контракты |
+| `/romance/dialogues/judy/stage3` | `GET` | Получить сцену подземной VR лаборатории |
+| `/romance/dialogues/judy/stage3/run-check` | `POST` | Проверки Hacking/Empathy/Performance/Negotiation/Willpower |
+| `/romance/dialogues/judy/stage3/state` | `POST` | Сохранить флаги `bd_sync`, `stage3-decision`, контракты и активности |
 | `/romance/dialogues/judy/telemetry` | `POST` | Сводная телеметрия по обоим этапам |
 
-GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `RomanceDialogueNode` с `romanceContext`, `stageMetrics` и активными бафами.
+GraphQL `romanceDialogue(id: ID!, stage: Int)` возвращает `RomanceDialogueNode` с `studioContext`, `lagunaContext`, `undergroundContext`, `stageMetrics`, активными бафами и списком выданных контрактов.
 
 ## 6. Валидация и телеметрия
 
 - `scripts/validate-romance-flags.ps1` сверяет `flag.romance.judy.*`, `flag.moxx.*`, контракты и события.
 - `scripts/dialogue-simulator.ps1 -Scenario romance-judy` прогоняет пути `path_trust`, `path_comfort`, `path_slow`, а также финальные варианты `path_public`, `path_private`, `path_future`.
-- Метрики: `romance-judy-stage1-success-rate` (цель ≥70%), `romance-judy-stage2-sync-rate` (цель ≥60%), `romance-judy-public-vs-private` (баланс решений). Два провала Stage2 подряд → старт миссии `support-moxx-2078`.
+- Метрики: `romance-judy-stage1-success-rate` (цель ≥70%), `romance-judy-stage2-sync-rate` (цель ≥60%), `romance-judy-stage3-public-private-rebuild`, `romance-judy-bd-revolution-uptake`. Два провала Stage3 подряд → миссия `support-moxx-2078`.
 
 ## 7. Награды и последствия
 
-- **Репутация:** `rep.romance.judy` до +35 за два этапа, бонус к `rep.moxx` при выборе `share-with-moxx`.
-- **Бафы:** `sync-awareness`, `laguna-overdrive` (крит. успех `dive-deep`).
-- **Контракты:** `moxx-safehouse-upgrade` для social-service.
-- **Флаги:** `flag.romance.judy.stage0`, `flag.romance.judy.path_*`, `flag.romance.judy.stage1-complete`, `flag.romance.judy.sync`, `flag.romance.judy.path_public`, `flag.romance.judy.path_private`, `flag.romance.judy.path_future`.
+- **Репутация:** `rep.romance.judy` до +48, бонус к `rep.moxx` при публичных и rebuild решениях.
+- **Бафы:** `sync-awareness`, `laguna-overdrive`, `sync-harmony` (Stage3 Stabilize).
+- **Контракты/активности:** `moxx-safehouse-upgrade`, `moxx-archive-hub`, `moxx-bd-revolution` (активность).
+- **Флаги:** `flag.romance.judy.stage0`, `flag.romance.judy.path_*`, `flag.romance.judy.stage1-complete`, `flag.romance.judy.sync`, `flag.romance.judy.stage2-complete`, `flag.romance.judy.bd_*`, `flag.romance.judy.stage3-{public|private|rebuild}`, `flag.romance.judy.stage3-decision`.
 
 ## 8. Связанные материалы
 
@@ -549,6 +683,7 @@ GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `Ro
 
 ## 9. История изменений
 
+- 2025-11-07 21:35 — Версия 1.3.0: добавлен этап 3 (подземная VR лаборатория), новые проверки, YAML/REST/телеметрия.
 - 2025-11-07 19:26 — Добавлен этап 2, обновлены API и метрики.
 - 2025-11-07 18:32 — Расширен экспорт, REST/GraphQL блок и метрики этапа 1.
 - 2025-11-07 17:13 — Создана романтическая сцена Judy (этап 1).

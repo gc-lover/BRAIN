@@ -725,8 +725,13 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/world/events/ (5 documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 09:40"
+    completed: "2025-11-08 13:05"
+    agent: "Backend Agent"
+    commit: "pending"
     priority: "MEDIUM"
+    notes: "WorldEventsServiceImpl, EraMechanicsServiceImpl, EventGenerationServiceImpl, контроллеры, сущности world events, миграции 089-090"
   frontend:
     status: "not_started"
     priority: "LOW"

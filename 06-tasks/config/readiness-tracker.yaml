@@ -615,6 +615,15 @@ documents:
     issues: []
     api_target: "api/v1/world/raids/specter-surge-loot.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/specter-hq.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Specter HQ: координатор, магазин, апгрейды и контракты, API карта для world/economy/social/narrative."
+    issues: []
+    api_target: "api/v1/world/specter-hq.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"
@@ -2504,10 +2513,10 @@ documents:
 
   - path: ".BRAIN/04-narrative/dialogues/romance-judy-alvarez.md"
     status: "ready"
-    version: "1.2.0"
-    checked: "2025-11-07 20:43"
+    version: "1.3.0"
+    checked: "2025-11-07 21:35"
     checker: "AI Agent (Brain Manager)"
-    notes: "Роман Джуди этапы 1-2: студия Lizzie's и Laguna Bend AR, Empathy/Performance/Hacking проверки, экспорт и метрики завершены."
+    notes: "Роман Judy обновлён до этапа 3 (подземная VR лаборатория): новые проверки, braindance синхронизация, YAML/REST и телеметрия."
     issues: []
     api_target: "api/v1/narrative/dialogues/romance-judy-alvarez.yaml"
 
