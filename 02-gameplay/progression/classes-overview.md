@@ -30,6 +30,7 @@
 - **Основные классы из лора Cyberpunk** → `classes-canon.md`
 - **Авторские классы** → `classes-authored.md`
 - **Система классовых способностей** → `classes-abilities.md`
+- **Расширенные системы уникальности** → `classes-advanced-systems.md`
 - **Связь с системой прокачки** → `classes-progression-link.md`
 - **Общие навыки** → `classes-general-skills.md`
 - **Система перков** → `progression-perks.md`
