@@ -15,6 +15,13 @@
 
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-283: api/v1/gameplay/quests/branching-database.yaml (2025-11-08 04:00)
+- Last Updated: 2025-11-08 04:00
+---
+
 ## Анализ текущего состояния
 
 ### ✅ Что есть
