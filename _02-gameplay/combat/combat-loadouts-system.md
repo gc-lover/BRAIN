@@ -14,6 +14,14 @@
 
 ---
 
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-299: api/v1/gameplay/combat/loadouts.yaml (2025-11-07)
+- Last Updated: 2025-11-07 23:05
+
+---
+
 ## Цели системы Loadouts
 
 - Давать игроку до 10 преднастроенных боевых конфигураций, чтобы быстро переключаться между ролями, режимами и сценариями.
