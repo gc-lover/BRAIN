@@ -9,6 +9,13 @@
 **api-readiness-notes:** Фракционные цепочки квестов: задания, подрядчики, условия вступления, репутационные развилки и REST/WS контракты для world-service/social-service.
 ---
 
+# API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-272: api/v1/gameplay/world/factions/quest-chains.yaml (2025-11-08 01:25)
+- **Last Updated:** 2025-11-08 01:25
+
 # Faction Quest Chains — Контракты и ветвления
 
 **target-domain:** gameplay-world/factions  
@@ -24,20 +31,24 @@
 ## 2. Структура цепочек
 | Фракция | Цепочка | Стартовый NPC | Требование вступления | Ключевые ветви |
 | --- | --- | --- | --- | --- |
-| Aeon Dynasty Systems | orbital-supply-crusade | Liang  Celestial Wen | ep.corp.aeon >= 20, доступ к орбитальному доку | Выбор между защитой грузов и саботажем конкурентов |
+| Aeon Dynasty Systems | orbital-supply-crusade | Liang  Celestial Wen | 
+ep.corp.aeon >= 20, доступ к орбитальному доку | Выбор между защитой грузов и саботажем конкурентов |
 | Crescent Energy Union | desert-grid-reclamation | Amira Al-Faris | Завершить эвенты Helix Reclaimers, иметь Nomad союз | Решение: стабилизировать энергосеть или перенаправить мощность Nomad |
 | Mnemosyne Archives | memory-echo-accord | Dr. Sofia Arvidsson | legacy_rep.hist-urban-scribes >= 15, выполнения архивных квестов | Ветвление: восстановить личность или стереть данные |
-| Ember Saints | inferno-covenant | Mother Pyra | Провести Harbor Broadcast, ep.street.ember >= 10 | Пощадить врагов → бонус защите района, уничтожить → усиленные моды |
+| Ember Saints | inferno-covenant | Mother Pyra | Провести Harbor Broadcast, 
+ep.street.ember >= 10 | Пощадить врагов → бонус защите района, уничтожить → усиленные моды |
 | Void Sirens | zero-g-privateer | Captain Nyla Kalu | Репутация Aeon >=10 или Maelstrom >=5, наличие космокорабля | Ветвь между контрабандой корпоратов или спасением колонистов |
 | Basilisk Sons | asilisk-hunt | Marshal Vega | Контракт с Nomad Coalition, транспорт с броней | Ветка: найм мехов или сбор данных для Militech |
-| Quantum Fable Collective | story-heist-legacies | Lyra Voss | ep.media.indie >= 12, участие в Urban Scribes событиях | Развилка: публиковать архивы или монетизировать их |
+| Quantum Fable Collective | story-heist-legacies | Lyra Voss | 
+ep.media.indie >= 12, участие в Urban Scribes событиях | Развилка: публиковать архивы или монетизировать их |
 | Echo Dominion | metanet-tribunal | Echo Arbiter Z3N | Завершённые квесты Voodoo Boys, legacy_rep.hist-echo-dominion >= 10 | Выбор ИИ-кандидатов, влияющих на world flags |
 
 ## 3. Шаги цепочки (пример Aeon Dynasty)
 1. **Briefing:** Liang Wen поясняет угрозу конкурентных рейдов, активируется GET /world/contracts/aed/orbital-supply-crusade.
 2. **Mission Fork:** игрок выбирает Escort или Sabotage через POST /world/contracts/aed/orbital-supply-crusade/choose.
 3. **Dynamic Events:** world-service вызывает Escort → события на орбитальных трассах; Sabotage → атаки на логистику конкурентов.
-4. **Outcome:** POST /world/contracts/aed/orbital-supply-crusade/outcome фиксирует успех/провал, обновляет ep.corp.aeon и world flags.
+4. **Outcome:** POST /world/contracts/aed/orbital-supply-crusade/outcome фиксирует успех/провал, обновляет 
+ep.corp.aeon и world flags.
 5. **Legacy Hook:** social-service отправляет ContractConclusion и активирует доступ к рейду orbital-lockdown.
 
 ## 4. Ветвления репутации
