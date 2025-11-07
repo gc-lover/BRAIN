@@ -1649,13 +1649,13 @@ documents:
     api_target: null
 
   - path: ".BRAIN/04-narrative/dialogues/npc-marco-fix-sanchez.md"
-    status: "in-review"
-    version: "0.1.0"
-    checked: "2025-11-07 16:42"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 17:32"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги фикcера Марко Санчеса: состояния base/trusted/hostile, ветки Blackwall и репутационные проверки. Требуется сверка флагов с gameplay-service."
+    notes: "Диалог фикса Марко содержит готовые ветки, YAML-экспорт и REST/GraphQL контракт. Флаги репутации сверены с gameplay документами."
     issues: []
-    api_target: "api/v1/narrative/dialogues/npc-marco-sanchez.yaml"
+    api_target: "api/v1/narrative/dialogues/npc-marco-fix-sanchez.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/npc-hiroshi-tanaka.md"
     status: "in-review"
@@ -1676,22 +1676,31 @@ documents:
     api_target: "api/v1/narrative/dialogues/npc-jose-ramirez.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/npc-sara-miller.md"
-    status: "in-review"
-    version: "0.1.0"
-    checked: "2025-11-07 16:42"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 17:05"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги офицера NCPD: собеседование, патрули, дисциплинарные слушания, режим чрезвычайной ситуации. Необходима проверка расчёта инфракций."
+    notes: "Диалог NCPD оформлен с полным набором состояний, экспортом и REST/GraphQL контрактом. Инфракции и emergency синхронизированы с gameplay."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-sara-miller.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/npc-james-iron-reed.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 17:18"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалог Militech включает экспорт, REST/GraphQL контракт и автоматизированную валидацию корпоративных флагов."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/npc-james-iron-reed.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/npc-royce.md"
     status: "in-review"
     version: "1.0.0"
-    checked: "2025-11-07 16:58"
+    checked: "2025-11-07 17:04"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги Militech: intake, операции Iron Dawn, реакции на корпоративную войну. Требуется валидация флагов с gameplay-service."
+    notes: "Диалоги Ройса: приём, импланты, подозрение, рейд Maelstrom. Нужна проверка связей с gang-service."
     issues: []
-    api_target: "api/v1/narrative/dialogues/npc-james-reed.yaml"
+    api_target: "api/v1/narrative/dialogues/npc-royce.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/quest-faction-arasaka-001-tokyo.md"
     status: "in-review"
@@ -1701,6 +1710,15 @@ documents:
     notes: "Диалоговая схема миссии Arasaka-001: выбор лояльности, предательство, двойная игра. Нужен мэппинг с системами событий."
     issues: []
     api_target: "api/v1/narrative/dialogues/quest-fq-arasaka-001.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/quest-side-maelstrom-double-cross.md"
+    status: "in-review"
+    version: "1.0.0"
+    checked: "2025-11-07 17:04"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалоги побочного квеста Maelstrom: сделки с Militech, тройной агент, последствия. Требуется привязка к quest-service."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/quest-side-maelstrom-double-cross.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/quest-main-001-first-steps.md"
     status: "in-review"
