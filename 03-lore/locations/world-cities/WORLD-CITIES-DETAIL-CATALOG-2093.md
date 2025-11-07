@@ -121,6 +121,14 @@
 - **Фракции:** Lux Consortium (дом моды), Meccano Union (цех имплант-мастеров), Sacred Glass Brotherhood (культурные хранители).
 - **Особенности:** синтез моды и кибернетики, PvE-рейды на фабриках, моральные дилеммы между искусством и коммерцией.
 
+### Istanbul (Турция)
+- **См.** `./istanbul-detailed-2020-2093.md`
+- **Районы:** Galata Prism District (финансово-культурный центр), Bosphorus Bridge Nexus (мостовые маглевы), Golden Horn Bazaar (фрактальный рынок), Anatolian Vault Network (катакомбы).
+- **Ключевые улицы:** Prism Walkway, Golden Horn Spiral, Anatolian Line, Corsair Channel.
+- **NPC:** Айше Йылдырым (директор мостов), Озан «Fractal» Демир (архитектор базара), Доктор Лейла Кара (рипердок), «Corsair» Мехмет Акын (лидер Corsairs).
+- **Фракции:** Bosphorus Nexus Directorate, Fractal Dervishes, Golden Horn Cartel, Black Sea Corsairs.
+- **Особенности:** динамические базары, мостовые кризисы, ИИ-наследие византийских проектов.
+
 ### Madrid (Испания)
 - **См.** `./madrid-detailed-2020-2093.md`
 - **Районы:** Solaris Crown District (энергетический центр), Plaza del Sol Arena (корпоративные корриды), Arroyo Market Belt (ночные рынки), SubSol Tunnels (катакомбы сопротивления).
@@ -252,6 +260,14 @@
 - **NPC:** Саид аль-Хаддад (директор солнечных ферм), Нура Абдельлатиф (археолог-хакер), генерал Халед Фарадж (командующий пустынными войсками).
 - **Фракции:** Solar Scarab Cooperative (энергетика), Antiquity Netkeepers (археологическая сеть), Desert Guard Legion (военные гарнизоны).
 - **Особенности:** раскопки под пирамидами, солнечные штормы, задания по защите караванов через Сахару.
+
+### Dubai (ОАЭ)
+- **См.** `./dubai-detailed-2020-2093.md`
+- **Районы:** Helios Crescent District (корпоративное ядро), Sky Souq Nexus (данные и рынки), Mirage Caravan Hub (караванные логистические платформы), Sub-Sand Vaults (подземные архивы).
+- **Ключевые улицы:** Solar Spine, Mirage Way, Oasis Loop, Sub-Sand Rail.
+- **NPC:** Латифа аль-Мансур (директор энергии), Камиль «Data Dune» Хаддад (торговец данными), Доктор Наджиб Сольх (пустынный рипердок), Зайна «Mirage Queen» Рашид (лидер караванов).
+- **Фракции:** Helios Crescent Authority, Sand Seraphs, Data Souq Brokers, Mirage Riders.
+- **Особенности:** песчаные шторма, воздушные караваны, конфликты за воду и энергию.
 
 ### Sydney (Австралия)
 - **См.** `./sydney-detailed-2020-2093.md`

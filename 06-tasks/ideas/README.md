@@ -38,7 +38,6 @@
 
 #### Мир (world)
 - [Брейншторм возможных эвентов](./2025-11-03-IDEA-events-brainstorm.md)
-
 - [Иммерсивные пасхалки и чиз-сценарии](./2025-11-07-IDEA-immersive-media-cheese.md)
 #### Повествование (narrative)
 - [Гибридные отсылки к культовым сериалам и блокбастерам](./2025-11-07-IDEA-hybrid-media-references.md) *(completed)*
@@ -46,6 +45,7 @@
 - [Новые скрытые коллаборации и пасхалки](./2025-11-07-IDEA-subtle-media-collabs.md)
 - [Пассивные медиа-пасхалки и коллаб-атмосферы](./2025-11-07-IDEA-passive-media-easter-eggs.md)
 - [Иммерсивные пасхалки и чиз-сценарии](./2025-11-07-IDEA-immersive-media-cheese.md)
+- [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md)
 
 #### Техническое (technical)
 - [Список технических идей]
@@ -66,13 +66,14 @@
 | 2025-11-07 | [Новые скрытые коллаборации и пасхалки](./2025-11-07-IDEA-subtle-media-collabs.md) | narrative | recorded | medium |
 | 2025-11-07 | [Пассивные медиа-пасхалки и коллаб-атмосферы](./2025-11-07-IDEA-passive-media-easter-eggs.md) | narrative | recorded | medium |
 | 2025-11-07 | [Иммерсивные пасхалки и чиз-сценарии](./2025-11-07-IDEA-immersive-media-cheese.md) | narrative | recorded | medium |
+| 2025-11-07 | [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md) | narrative | recorded | medium |
 
 ---
 
 ## Статистика
 
-- **Всего идей:** 7
-- **В разработке:** 4
+- **Всего идей:** 8
+- **В разработке:** 5
 - **Завершено:** 1
 - **Отклонено:** 0
 
