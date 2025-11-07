@@ -1350,9 +1350,7 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/voice-chat/voice-chat-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
-      started: "2025-11-08 00:41"
-      agent: "Backend Agent"
+      status: "not_started"
     frontend:
       status: "completed"
       started: "2025-11-08 06:30"
@@ -1646,6 +1644,10 @@ implementations:
       status: "in_progress"
       started: "2025-11-08 00:30"
       agent: "Backend Agent"
+    frontend:
+      status: "not_started"
+
+
     frontend:
       status: "not_started"
 
