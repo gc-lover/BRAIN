@@ -1158,8 +1158,13 @@ implementations:
     status: "not_started"
     priority: "HIGH"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 03:30"
+    completed: "2025-11-08 03:55"
+    agent: "Frontend Agent"
+    commit: "6846c1f"
     priority: "HIGH"
+    notes: "StarterContentPage, OriginStoryCard, ClassQuestCard, MainStoryQuestCard, StarterProgressionCard, RecommendedContentCard, filters"
 
 - api_path: "api/v1/narrative/regional-quests.yaml"
   task_id: "API-TASK-172"
