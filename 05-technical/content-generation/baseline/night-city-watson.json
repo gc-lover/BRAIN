@@ -1,0 +1,65 @@
+{
+  "cityId": "night-city",
+  "districtId": "watson",
+  "populationTarget": 420000,
+  "profile": "industrial",
+  "metrics": {
+    "density": 0.72,
+    "wealth": 0.35,
+    "crime": 0.82,
+    "tech": 0.65,
+    "culture": 0.44,
+    "faction": 0.70
+  },
+  "factions": {
+    "maelstrom": 0.35,
+    "arasaka": 0.20,
+    "valentinos": 0.10,
+    "ncpd": 0.08
+  },
+  "culturalNotes": [
+    "постиндустриальные кварталы",
+    "уличный техно",
+    "черный рынок имплантов"
+  ],
+  "keyEvents": [
+    "black-market-weekend",
+    "maelstrom-block-party"
+  ],
+  "restrictedContent": [
+    "корпоративные VIP-ивенты"
+  ]
+}
+{
+  "cityId": "night-city",
+  "districtId": "watson",
+  "populationTarget": 420000,
+  "profile": "industrial",
+  "metrics": {
+    "density": 0.72,
+    "wealth": 0.35,
+    "crime": 0.82,
+    "tech": 0.65,
+    "culture": 0.44,
+    "faction": 0.70
+  },
+  "factions": {
+    "maelstrom": 0.35,
+    "arasaka": 0.20,
+    "valentinos": 0.10,
+    "ncpd": 0.08
+  },
+  "culturalNotes": [
+    "постиндустриальные кварталы",
+    "уличный техно",
+    "черный рынок имплантов"
+  ],
+  "keyEvents": [
+    "black-market-weekend",
+    "maelstrom-block-party"
+  ],
+  "restrictedContent": [
+    "корпоративные VIP-ивенты"
+  ]
+}
+

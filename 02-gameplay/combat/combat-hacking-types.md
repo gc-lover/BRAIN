@@ -1,4 +1,4 @@
-# Боевая система — Хакерство: Типы и применение
+﻿# Боевая система — Хакерство: Типы и применение
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/hacking
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-082: api/v1/gameplay/combat/hacking-types.yaml (2025-11-07)
-- Last Updated: 2025-11-07 02:45
+- **Last Updated:** 2025-11-07 02:45
 ---
 
 ---

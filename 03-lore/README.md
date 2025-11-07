@@ -71,4 +71,5 @@
 
 ### Visual Guides (Визуальные гиды)
 - `visual-guides/visual-style-assets.md` - Визуальные описания персонажей, оружия, экипировки и предметов
+- `visual-guides/visual-style-locations.md` - Визуальные описания городов, районов, рейдов и социальных пространств
 

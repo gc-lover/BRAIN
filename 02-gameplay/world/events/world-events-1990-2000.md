@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-06 22:15  
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные мировые события эпохи 1990-2000: DC-скейлинг, AI-слайдеры фракций, экономика, технологии, D&D генератор событий (d100), квестовые хуки. Все необходимые детали для создания API спецификации присутствуют.
@@ -8,11 +8,13 @@
 **target-frontend-module:** modules/world/events
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-160: api/v1/world/events/events-1990-2000.yaml (2025-11-07 11:24)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

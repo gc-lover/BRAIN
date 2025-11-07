@@ -1,4 +1,4 @@
-# Система найма NPC — Обзор
+﻿# Система найма NPC — Обзор
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-057: api/v1/gameplay/social/npc-hiring.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:40
+- **Last Updated:** 2025-11-07 00:40
 ---
 
 ---

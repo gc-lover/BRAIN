@@ -1,4 +1,4 @@
-# Боевая система - Стрельба и основы боя
+﻿# Боевая система - Стрельба и основы боя
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -13,11 +13,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-037: api/v1/gameplay/combat/shooting.yaml (2025-11-06)
-- Last Updated: 2025-11-06 23:00
+- **Last Updated:** 2025-11-06 23:00
 ---
 
 

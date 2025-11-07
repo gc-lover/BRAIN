@@ -1,4 +1,4 @@
-# Система прокачки — Перки
+﻿# Система прокачки — Перки
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:35  
@@ -13,11 +13,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-054: api/v1/gameplay/progression/perks.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:25
+- **Last Updated:** 2025-11-07 00:25
 ---
 
 

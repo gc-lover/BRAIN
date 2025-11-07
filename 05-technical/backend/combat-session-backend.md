@@ -1,14 +1,16 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 05:30  
 **api-readiness-notes:** Combat Session backend - инстансы боя, turn order, damage calculation. Микрофича (~400 строк). MVP блокер!
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-227: api/v1/combat/combat-session.yaml (2025-11-08 04:24)
-- Last Updated: 2025-11-08 04:24
+- **Last Updated:** 2025-11-08 04:24
 ---
 
 

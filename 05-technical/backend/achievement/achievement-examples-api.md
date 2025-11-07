@@ -1,14 +1,15 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 01:59  
 **api-readiness-notes:** Achievement System Examples & API. Примеры достижений, API endpoints, rewards. ~350 строк.
 ---
 
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-220: api/v1/achievements/examples/examples-api.yaml (2025-11-08 03:05)
-- Last Updated: 2025-11-08 03:05
+- **Last Updated:** 2025-11-08 03:05
 ---
 
 # Achievement System - Examples & API

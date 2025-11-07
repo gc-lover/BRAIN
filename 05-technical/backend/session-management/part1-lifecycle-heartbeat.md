@@ -1,11 +1,13 @@
-# Session Management - Part 1: Lifecycle & Heartbeat
+﻿# Session Management - Part 1: Lifecycle & Heartbeat
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-198: api/v1/technical/session-management/lifecycle.yaml (2025-11-07 21:05)
-- Last Updated: 2025-11-07 21:05
+- **Last Updated:** 2025-11-07 21:05
 ---
 
 **Статус:** approved  

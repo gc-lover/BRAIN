@@ -1,4 +1,4 @@
-# Система Комбо и Синергий
+﻿# Система Комбо и Синергий
 
 **Версия:** 1.0.0  
 **Дата:** 2025-11-06  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/combos
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-041: api/v1/gameplay/combat/combos-synergies.yaml (2025-11-06)
-- Last Updated: 2025-11-06 23:20
+- **Last Updated:** 2025-11-06 23:20
 ---
 
 ---

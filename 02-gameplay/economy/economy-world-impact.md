@@ -1,4 +1,4 @@
-# Экономическая система - Влияние на игровой мир
+﻿# Экономическая система - Влияние на игровой мир
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/economy/world-impact
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-100: api/v1/gameplay/economy/economy-world-impact.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:50
+- **Last Updated:** 2025-11-07 04:50
 ---
 
 **Статус:** Завершен первый брейншторм - решения определены  

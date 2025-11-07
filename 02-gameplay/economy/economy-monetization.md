@@ -1,4 +1,4 @@
-# Экономическая система - Монетизация и создание контента
+﻿# Экономическая система - Монетизация и создание контента
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/economy/monetization
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-099: api/v1/gameplay/economy/monetization.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:45
+- **Last Updated:** 2025-11-07 04:45
 ---
 
 **Статус:** Завершен первый брейншторм - базовые решения определены  

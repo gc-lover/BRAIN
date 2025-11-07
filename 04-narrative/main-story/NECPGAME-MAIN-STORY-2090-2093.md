@@ -1,4 +1,4 @@
-# NECPGAME: Главный сюжет 2090-2093 — "Последний выбор человечества"
+﻿# NECPGAME: Главный сюжет 2090-2093 — "Последний выбор человечества"
 
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -8,11 +8,13 @@
 **api-readiness-check-date:** 2025-11-06 18:00
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-086: api/v1/narrative/main-story.yaml (2025-11-07)
-- Last Updated: 2025-11-07 03:05
+- **Last Updated:** 2025-11-07 03:05
 ---
 
 **Категория:** Main Story (главная сюжетная линия)  

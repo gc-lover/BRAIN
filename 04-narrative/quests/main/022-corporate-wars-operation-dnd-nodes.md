@@ -1,14 +1,16 @@
----
+﻿---
 **api-readiness:** in-review  
 **api-readiness-check-date:** 2025-11-05 17:09  
 **api-readiness-notes:** Узлы проверок для квеста 2.2. Включает серию проверок (операция).
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-143: api/v1/narrative/main-quests/022-corporate-wars-operation.yaml (2025-11-07 10:47)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

@@ -1,4 +1,4 @@
-# Система прокачки — Перерождения
+﻿# Система прокачки — Перерождения
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:35  
@@ -13,11 +13,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-055: api/v1/gameplay/progression/rebirth.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:30
+- **Last Updated:** 2025-11-07 00:30
 ---
 
 

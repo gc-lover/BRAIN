@@ -1,14 +1,16 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 05:20  
 **api-readiness-notes:** Система друзей. Friend list, requests, online status, ignore list, recent players.
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-228: api/v1/social/friends/friend-system.yaml (2025-11-08 04:40)
-- Last Updated: 2025-11-08 04:40
+- **Last Updated:** 2025-11-08 04:40
 ---
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 **Статус:** review  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -9,11 +9,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-102: api/v1/narrative/origin-stories.yaml (2025-11-07)
-- Last Updated: 2025-11-07 05:00
+- **Last Updated:** 2025-11-07 05:00
 ---
 
 # ORIGIN STORIES SYSTEM: Полный обзор

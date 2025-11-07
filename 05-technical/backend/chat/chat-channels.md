@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 05:30  
 **api-readiness-notes:** Chat Channels микрофича. Типы каналов (global, local, party, guild, whisper), permissions, cooldowns, message limits. ~380 строк.
@@ -18,13 +18,11 @@
 
 ---
 
+## API Tasks Status
 
-**API Tasks Status:**
-- 🚫 Документ отмечен как OBSOLETE (устаревшая split версия)
-- 📝 Причина: Consolidated into unified document
-- 🔄 Статус: not-applicable
-- ⚠️ Этот документ является split версией, которая была объединена в consolidated документ
-
+- **Status:** created
+- **Tasks:**
+- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## Краткое описание

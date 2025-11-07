@@ -1,4 +1,4 @@
-# Экономическая система - Торговля
+﻿# Экономическая система - Торговля
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -14,11 +14,13 @@
 **Последнее обновление:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-067: api/v1/gameplay/economy/trading.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:30
+- **Last Updated:** 2025-11-07 01:30
 ---
 
 

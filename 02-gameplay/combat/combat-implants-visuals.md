@@ -1,4 +1,4 @@
-# Боевая система — Импланты: Визуальное проявление
+﻿# Боевая система — Импланты: Визуальное проявление
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/implants
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-091: api/v1/gameplay/combat/implants-visuals.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:05
+- **Last Updated:** 2025-11-07 04:05
 ---
 
 ---

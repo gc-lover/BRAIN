@@ -1,13 +1,15 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 01:59  
 **api-readiness-notes:** Admin Tools System. Инструменты администрирования - player management, moderation, analytics. ~380 строк.
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-222: api/v1/admin/tools/admin-tools.yaml (2025-11-08 03:27)
-- Last Updated: 2025-11-08 03:27
+- **Last Updated:** 2025-11-08 03:27
 ---
 # Admin Tools System - Core System
 **Статус:** approved  

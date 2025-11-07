@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-05 19:35  
 **api-readiness-notes:** Репутационные формулы: расчёт репутации фракций, влияние на DC, доступы, бонусы, штрафы, heat.
@@ -9,11 +9,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-062: api/v1/gameplay/social/reputation-formulas.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:05
+- **Last Updated:** 2025-11-07 01:05
 ---
 
 # Репутационные формулы NECPGAME

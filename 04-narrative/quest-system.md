@@ -1,4 +1,4 @@
-# Система квестов NECPGAME
+﻿# Система квестов NECPGAME
 
 **Статус:** approved  
 **Версия:** 1.0.0  
@@ -15,11 +15,13 @@
 **target-frontend-module:** modules/narrative/quests
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-072: api/v1/narrative/quest-system.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:55
+- **Last Updated:** 2025-11-07 01:55
 ---
 
 ---

@@ -1,4 +1,4 @@
-# Система навыков — Активные и пассивные навыки
+﻿# Система навыков — Активные и пассивные навыки
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-06 18:20  
@@ -13,11 +13,13 @@
 **Дата создания:** 2025-11-05
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-053: api/v1/gameplay/progression/skills.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:20
+- **Last Updated:** 2025-11-07 00:20
 ---
 
 ---

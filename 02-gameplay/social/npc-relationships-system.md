@@ -1,4 +1,4 @@
-# Система отношений с NPC — Обзор
+﻿# Система отношений с NPC — Обзор
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-078: api/v1/gameplay/social/npc-relationships.yaml (2025-11-07)
-- Last Updated: 2025-11-07 02:25
+- **Last Updated:** 2025-11-07 02:25
 ---
 
 ---

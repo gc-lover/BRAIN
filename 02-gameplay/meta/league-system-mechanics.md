@@ -1,4 +1,4 @@
-# Система Лиг — Игровая механика сезонов
+﻿# Система Лиг — Игровая механика сезонов
 
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -12,11 +12,13 @@
 **Приоритет:** critical
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-071: api/v1/meta/league-system.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:50
+- **Last Updated:** 2025-11-07 01:50
 ---
 
 ---

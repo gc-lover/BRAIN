@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:27  
 **api-readiness-notes:** Support Ticket System. Тикеты поддержки, категории, приоритеты, статусы. ~390 строк.
@@ -7,11 +7,13 @@
 # Support Ticket System - Система тикетов поддержки
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-200: api/v1/admin/support/support-tickets.yaml (2025-11-07 21:50)
-- Last Updated: 2025-11-07 21:50
+- **Last Updated:** 2025-11-07 21:50
 ---
 
 **Статус:** approved  

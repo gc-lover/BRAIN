@@ -1,13 +1,15 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:34  
 **api-readiness-notes:** Clan War System. Войны кланов, территории, siege mechanics, rewards. ~390 строк.
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-223: api/v1/gameplay/clans/clan-war-system.yaml (2025-11-08 03:38)
-- Last Updated: 2025-11-08 03:38
+- **Last Updated:** 2025-11-08 03:38
 ---
 # Clan War System - Система клановых войн
 

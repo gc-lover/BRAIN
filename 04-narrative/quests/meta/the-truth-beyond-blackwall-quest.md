@@ -1,4 +1,4 @@
-# Квест: "Правда за Чёрным Заслоном" (Лига 7+)
+﻿# Квест: "Правда за Чёрным Заслоном" (Лига 7+)
 
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -9,11 +9,13 @@
 **api-readiness-notes:** Мета-квест о природе реальности полностью определён (условия, этапы, twist, 4 концовки). Готов для реализации.
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-087: api/v1/narrative/meta-quest-blackwall.yaml (2025-11-07)
-- Last Updated: 2025-11-07 03:10
+- **Last Updated:** 2025-11-07 03:10
 ---
 
 **Статус:** approved  

@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:18  
 **api-readiness-notes:** UI для Leaderboard System. Рейтинги, фильтры, позиция игрока. ~370 строк.
@@ -16,11 +16,13 @@
 **Размер:** ~370 строк ✅
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-211: api/v1/world/leaderboards/leaderboards-ui.yaml (2025-11-08 00:59)
-- Last Updated: 2025-11-08 00:59
+- **Last Updated:** 2025-11-08 00:59
 ---
 
 ## Краткое описание

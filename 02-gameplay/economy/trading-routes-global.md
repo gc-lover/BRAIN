@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready
 **api-readiness-check-date:** 2025-11-06
 
@@ -8,11 +8,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-089: api/v1/gameplay/economy/trading-routes.yaml (2025-11-07)
-- Last Updated: 2025-11-07 03:35
+- **Last Updated:** 2025-11-07 03:35
 ---
 
 # Глобальные торговые маршруты

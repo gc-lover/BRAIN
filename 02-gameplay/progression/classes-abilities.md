@@ -1,4 +1,4 @@
-# Классы персонажей — Система классовых способностей
+﻿# Классы персонажей — Система классовых способностей
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/progression/classes
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-050: api/v1/gameplay/progression/class-abilities.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:05
+- **Last Updated:** 2025-11-07 00:05
 ---
 
 ## Система классов и подклассов

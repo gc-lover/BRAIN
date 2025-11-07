@@ -1,4 +1,4 @@
-# Каталог Ресурсов и Материалов
+﻿# Каталог Ресурсов и Материалов
 
 **Версия:** 2.0.0  
 **Дата:** 2025-11-06  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/economy/resources
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-096: api/v1/gameplay/economy/resources-catalog.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:30
+- **Last Updated:** 2025-11-07 04:30
 ---
 
 ---

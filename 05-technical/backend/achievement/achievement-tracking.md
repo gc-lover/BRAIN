@@ -1,14 +1,15 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 01:59  
 **api-readiness-notes:** Achievement System Tracking. Event tracking, прогресс calculation, уведомления. ~380 строк.
 ---
 
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-219: api/v1/achievements/achievement-tracking.yaml (2025-11-08 02:52)
-- Last Updated: 2025-11-08 02:52
+- **Last Updated:** 2025-11-08 02:52
 ---
 
 # Achievement System - Tracking & Notifications

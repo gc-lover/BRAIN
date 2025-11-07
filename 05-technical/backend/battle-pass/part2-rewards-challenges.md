@@ -1,4 +1,4 @@
-# Battle Pass - Part 2: Rewards & Challenges
+﻿# Battle Pass - Part 2: Rewards & Challenges
 
 **Статус:** approved  
 **Версия:** 1.0.1  
@@ -6,11 +6,13 @@
 **api-readiness:** ready
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-208: api/v1/gameplay/battle-pass/battle-pass-rewards.yaml (2025-11-08 00:12)
-- Last Updated: 2025-11-08 00:12
+- **Last Updated:** 2025-11-08 00:12
 ---
 
 [← Part 1](./part1-core-progression.md) | [Навигация](./README.md)

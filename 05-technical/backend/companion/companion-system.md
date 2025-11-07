@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:34  
 **api-readiness-notes:** Companion System. Pets, drones, AI companions, abilities. ~390 строк.
@@ -7,11 +7,13 @@
 # Companion System - Система компаньонов
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-202: api/v1/gameplay/companions/companion-system.yaml (2025-11-07 22:25)
-- Last Updated: 2025-11-07 22:25
+- **Last Updated:** 2025-11-07 22:25
 ---
 
 **Статус:** approved  

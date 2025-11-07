@@ -1,27 +1,15 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 01:59  
 **api-readiness-notes:** Leaderboard System. Глобальные и локальные рейтинги, различные категории, сезонность. ~400 строк.
 ---
 
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-237: api/v1/leaderboards/leaderboard-core.yaml (2025-11-08 06:45)
-- Last Updated: 2025-11-08 06:45
-
-
-# Leaderboard System - Core System
-
-**Статус:** approved  
-**Версия:** 1.0.0  
-**Дата создания:** 2025-11-07 01:59  
-**Приоритет:** HIGH  
-**Автор:** AI Brain Manager
-
-**Микрофича:** Leaderboard core mechanics  
-**Размер:** ~400 строк ✅
-
+- **Last Updated:** 2025-11-08 06:45
 ---
 
 ## Краткое описание

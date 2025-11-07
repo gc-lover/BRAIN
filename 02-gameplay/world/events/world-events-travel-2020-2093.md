@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-05 19:25  
 **api-readiness-notes:** World events для перемещений между локациями: 10-15 событий на эпоху, с skill-checks, лутом, репутацией.
@@ -8,11 +8,13 @@
 **target-frontend-module:** modules/world/events
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-160: api/v1/world/events/events-travel-all.yaml (2025-11-07 11:24)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

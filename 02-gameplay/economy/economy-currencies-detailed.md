@@ -1,4 +1,4 @@
-# Детальная Система Валют
+﻿# Детальная Система Валют
 
 **Версия:** 2.0.0  
 **Дата:** 2025-11-06  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/economy/currencies
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-068: api/v1/gameplay/economy/currencies.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:35
+- **Last Updated:** 2025-11-07 01:35
 ---
 
 ---

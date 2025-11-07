@@ -1,9 +1,11 @@
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+﻿---
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-193: api/v1/social/voice/voice-lobbies.yaml (2025-11-07 15:45)
-- Last Updated: 2025-11-07 15:45
+- **Last Updated:** 2025-11-07 15:45
 ---
 
 ---

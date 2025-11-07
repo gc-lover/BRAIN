@@ -1,4 +1,4 @@
-# Battle Pass - Part 1: Core & Progression
+﻿# Battle Pass - Part 1: Core & Progression
 
 **Статус:** approved  
 **Версия:** 1.0.1  
@@ -6,11 +6,13 @@
 **api-readiness:** ready
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-207: api/v1/gameplay/battle-pass/battle-pass-core.yaml (2025-11-07 23:58)
-- Last Updated: 2025-11-07 23:58
+- **Last Updated:** 2025-11-07 23:58
 ---
 
 [Навигация](./README.md) | [Part 2 →](./part2-rewards-challenges.md)

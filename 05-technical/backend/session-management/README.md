@@ -1,14 +1,16 @@
-# Session Management System - Навигация
+﻿# Session Management System - Навигация
 
 **Версия:** 1.0.2  
 **Дата:** 2025-11-07  
 **Статус:** approved
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-221: docs/session-management/session-api-readme.md (2025-11-08 03:16)
-- Last Updated: 2025-11-08 03:16
+- **Last Updated:** 2025-11-08 03:16
 ---
 ## Микросервисная архитектура
 

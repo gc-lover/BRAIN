@@ -1,4 +1,4 @@
-# Player Character Management - Part 1: Creation & Deletion
+﻿# Player Character Management - Part 1: Creation & Deletion
 
 **Статус:** approved  
 **Версия:** 1.0.1  
@@ -8,11 +8,13 @@
 [Навигация](./README.md) | [Part 2 →](./part2-switching-management.md)
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-217: api/v1/players/character-management.yaml (2025-11-08 02:24)
-- Last Updated: 2025-11-08 02:24
+- **Last Updated:** 2025-11-08 02:24
 ---
 
 ## Краткое описание

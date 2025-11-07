@@ -1,4 +1,4 @@
-# Боевая система — Импланты: Ограничения и энергетика
+﻿# Боевая система — Импланты: Ограничения и энергетика
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/implants
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-044: api/v1/gameplay/combat/implants-limits.yaml (2025-11-06)
-- Last Updated: 2025-11-06 23:35
+- **Last Updated:** 2025-11-06 23:35
 ---
 
 ---

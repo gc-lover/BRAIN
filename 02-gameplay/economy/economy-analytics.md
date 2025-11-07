@@ -1,4 +1,4 @@
-# Экономика - Аналитика и графики (Analytics & Charts)
+﻿# Экономика - Аналитика и графики (Analytics & Charts)
 
 **Статус:** approved  
 **Версия:** 1.0.0  
@@ -15,11 +15,13 @@
 **target-frontend-module:** modules/economy/analytics
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-121: api/v1/gameplay/economy/analytics.yaml (2025-11-07)
-- Last Updated: 2025-11-07 06:55
+- **Last Updated:** 2025-11-07 06:55
 ---
 
 ---

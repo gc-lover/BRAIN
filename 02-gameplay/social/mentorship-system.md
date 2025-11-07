@@ -1,4 +1,4 @@
-# Система наставничества — Обзор
+﻿# Система наставничества — Обзор
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-058: api/v1/gameplay/social/mentorship.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:45
+- **Last Updated:** 2025-11-07 00:45
 ---
 
 ---

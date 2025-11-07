@@ -1,4 +1,4 @@
-# Loot System - Part 2: Advanced Loot
+﻿# Loot System - Part 2: Advanced Loot
 
 **Статус:** approved  
 **Версия:** 1.0.1  
@@ -8,11 +8,13 @@
 [← Part 1](./part1-loot-generation.md) | [Навигация](./README.md)
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-215: api/v1/loot/loot-advanced.yaml (2025-11-08 01:52)
-- Last Updated: 2025-11-08 01:52
+- **Last Updated:** 2025-11-08 01:52
 ---
 
 ## Loot Roll System (продолжение)

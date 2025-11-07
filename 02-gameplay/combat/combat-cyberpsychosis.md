@@ -1,4 +1,4 @@
-# Боевая система — Киберпсихоз
+﻿# Боевая система — Киберпсихоз
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/cyberpsychosis
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-045: api/v1/gameplay/combat/cyberpsychosis.yaml (2025-11-06)
-- Last Updated: 2025-11-06 23:40
+- **Last Updated:** 2025-11-06 23:40
 ---
 
 ---

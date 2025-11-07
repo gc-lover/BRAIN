@@ -1,4 +1,4 @@
-# Player Character Management - Part 2: Switching & Management
+﻿# Player Character Management - Part 2: Switching & Management
 
 **Статус:** approved  
 **Версия:** 1.0.1  
@@ -8,11 +8,13 @@
 [← Part 1](./part1-creation-deletion.md) | [Навигация](./README.md)
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-216: api/v1/players/character-switching.yaml (2025-11-08 02:08)
-- Last Updated: 2025-11-08 02:08
+- **Last Updated:** 2025-11-08 02:08
 ---
 
 ## Character Switching

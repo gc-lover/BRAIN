@@ -1,65 +1,115 @@
 ---
+**Статус:** approved  
+**Версия:** 1.2.0  
+**Дата создания:** 2025-11-07 02:45  
+**Обновлено:** 2025-11-07 20:07  
+**Приоритет:** критический  
+**Автор:** AI Brain Manager
+
+---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
-**api-readiness-notes:** План партии API спецификаций: мир, социальные рейтинги, рейд и квестовое ветвление готовы к генерации задач.
+**api-readiness-check-date:** 2025-11-07 20:07  
+**api-readiness-notes:** Обновлённый план партионной генерации OpenAPI. Добавлены арены, лут-хант, подземелья, лайв-эвенты и лор-справочники.
 ---
 
-**Статус:** approved  
-**Версия:** 1.0.0  
-**Дата создания:** 2025-11-07  
-**Дата обновления:** 2025-11-07 16:14  
-**Приоритет:** high  
-**Ответственный:** Brain Manager  
-**Связанные документы:** `2025-11-07-hybrid-media-references-expansion.md`, `2025-11-07-hybrid-media-legal-package.md`, `quest-branching-database/part1-analysis-core.md`, `quest-branching-database/part2-advanced-examples.md`, `quest-system-tech-questions-compact.md`
+# План подготовки партий для ДУАПИТАСК (API спецификации)
 
-# План партии API спецификаций — 2025-11-08
+## Цель
 
-## 1. Контекст
+Разбить микрофичи на партии для передачи в ДУАПИТАСК (API Task Creator). Каждая партия: 9–12 документов, сгруппированных по домену. Все документы имеют `api-readiness: ready`.
 
-- Цель: сформировать очередь задач для API-SWAGGER по готовым документам `.BRAIN` (world, social, gameplay, economy).
-- Фокус: гибридные события (`Throne of Sand`, `Neon Popularity Reset`, `Quantum Reef Siege`) и система ветвящихся квестов.
-- Все исходные документы имеют `api-readiness: ready` (проверка 2025-11-07 16:14).
+## Сводка статусов
 
-## 2. Область партии
+| Batch | Тематика | Кол-во docs | Статус |
+|-------|----------|-------------|--------|
+| 01 | Core & Infrastructure | 11 | готов к запуску |
+| 02 | Gameplay & Social | 10 | готов |
+| 03 | Economy & Monetization | 10 | готов |
+| 04 | Sessions & World State | 9 | готов |
+| 05 | Competitive & Events | 8 | готов (новые документы) |
+| 06 | Lore Support | 2 | not-applicable (справочники) |
 
-| № | Документ (.BRAIN) | Микросервис | Планируемый API-файл | Зависимости | Статус |
-|---|-------------------|-------------|----------------------|-------------|--------|
-| 1 | `2025-11-07-hybrid-media-references-expansion.md` (разд. 1 «Throne of Sand») | `world-service (8086)` | `api/v1/world/events/throne-of-sand.yaml` | `world/events` ready, нет блокеров | ready |
-| 2 | `2025-11-07-hybrid-media-references-expansion.md` (разд. 2 «Neon Popularity Reset») + `2025-11-07-hybrid-media-legal-package.md` | `social-service (8084)` | `api/v1/social/events/neon-popularity-reset.yaml` | Требует уведомлений UI (`shared/ui/Toast`) — специфицированы | ready |
-| 3 | `2025-11-07-hybrid-media-references-expansion.md` (разд. 3 «Quantum Reef Siege`) | `gameplay-service (8083)` | `api/v1/gameplay/raids/quantum-reef-siege.yaml` | Данные обучения пилотов → `auth-service` credential schema | ready |
-| 4 | `quest-branching-database/part1-analysis-core.md` + `part2-advanced-examples.md` | `gameplay-service (8083)` + `social-service (8084)` | `api/v1/gameplay/quests/branching-database.yaml` | Требует согласования с `quest-system-tech-questions-compact.md` | ready |
-| 5 | `quest-system-tech-questions-compact.md` (ответы по синхронизации world/social) | `world-service` + `economy-service` | `api/v1/world/state/quest-sync.yaml` | Использует таблицы world_state, quest_consequences | ready |
+---
 
-## 3. Подготовка входных данных
+## Batch 01 - Core & Infrastructure (11 docs)
+1. `05-technical/backend/achievement/achievement-core.md`
+2. `05-technical/backend/achievement/achievement-tracking.md`
+3. `05-technical/backend/achievement/achievement-examples-api.md`
+4. `05-technical/backend/leaderboard/leaderboard-core.md`
+5. `05-technical/backend/daily-reset/daily-reset-compact.md`
+6. `05-technical/backend/maintenance/maintenance-mode-system.md`
+7. `05-technical/backend/support/support-ticket-system.md`
+8. `05-technical/backend/announcement/announcement-system.md`
+9. `05-technical/backend/voice-chat/voice-chat-system.md`
+10. `05-technical/backend/referral/referral-system.md`
+11. `05-technical/backend/companion/companion-system.md`
 
-- Проверены ссылки на moodboard/audio: `mood/throne-v1`, `mood/neon-v1`, `mood/reef-v1`, `audio/throne-anemo`, `audio/neon-loop`, `audio/reef-res`.
-- SQL схемы для квестовой БД адаптированы к PostgreSQL (`uuid_generate_v4`, индексы GIN).
-- Требования к UI-компонентам задокументированы (варианты `CyberpunkButton`, `SyncMeter`).
-- Legal пакет подготовлен: `../../config/legal-approvals-template.md` заполнен, риски учтены.
+## Batch 02 - Gameplay & Social (10 docs)
+1. `05-technical/backend/matchmaking/matchmaking-algorithm.md`
+2. `05-technical/backend/matchmaking/matchmaking-queue.md`
+3. `05-technical/backend/matchmaking/matchmaking-rating.md`
+4. `05-technical/backend/party-system.md`
+5. `05-technical/backend/guild-system-backend.md`
+6. `05-technical/backend/clan-war/clan-war-system.md`
+7. `05-technical/backend/housing/housing-system.md`
+8. `05-technical/backend/chat/chat-channels.md`
+9. `05-technical/backend/chat/chat-features.md`
+10. `05-technical/backend/chat/chat-moderation.md`
 
-## 4. Таймлайн партии
+## Batch 03 - Economy & Monetization (10 docs)
+1. `05-technical/backend/inventory-system/part1-core-system.md`
+2. `05-technical/backend/inventory-system/part2-advanced-features.md`
+3. `05-technical/backend/loot-system/part1-loot-generation.md`
+4. `05-technical/backend/loot-system/part2-advanced-loot.md`
+5. `05-technical/backend/trade-system.md`
+6. `05-technical/backend/battle-pass/part1-core-progression.md`
+7. `05-technical/backend/battle-pass/part2-rewards-challenges.md`
+8. `05-technical/backend/cosmetic/cosmetic-system.md`
+9. `05-technical/backend/daily-weekly-reset-system.md`
+10. `05-technical/backend/mail-system.md`
 
-| Этап | Дата/время | Действие | Ответственный | Выход |
-|------|-------------|----------|---------------|-------|
-| Prep | 2025-11-07 18:00 | Проверка readiness + обновление трекера | Brain Manager | Обновлённый `readiness-tracker.yaml` |
-| Task Creation | 2025-11-08 10:00 | Генерация задач для API Task Creator | Brain Manager → `ДУАПИТАСК` | 5 задач в `API-SWAGGER/tasks/active/queue` |
-| Review | 2025-11-08 14:00 | Внутренний review задач | API Task Creator | Комментарии, при необходимости корректировка | 
-| Handoff | 2025-11-08 16:00 | Передача в `АПИТАСК` | API Task Creator | Подтверждение получения |
+## Batch 04 - Sessions, Realtime & Player State (9 docs)
+1. `05-technical/backend/player-character-mgmt/part1-creation-deletion.md`
+2. `05-technical/backend/player-character-mgmt/part2-switching-management.md`
+3. `05-technical/backend/session/session-lifecycle-heartbeat.md`
+4. `05-technical/backend/session/session-reconnection-monitoring.md`
+5. `05-technical/backend/realtime-server/part1-architecture-zones.md`
+6. `05-technical/backend/realtime-server/part2-protocol-optimization.md`
+7. `05-technical/backend/quest-engine-backend.md`
+8. `05-technical/backend/progression-backend.md`
+9. `05-technical/backend/friend-system.md`
 
-## 5. Риски и меры
+## Batch 05 - Competitive & Events (8 docs)
+1. `02-gameplay/combat/arena-system.md`
+2. `02-gameplay/combat/loot-hunt-system.md`
+3. `02-gameplay/world/dungeons/dungeon-scenarios-catalog.md`
+4. `02-gameplay/world/events/live-events-system.md`
+5. `05-technical/backend/voice-lobby/voice-lobby-system.md`
+6. `05-technical/backend/leaderboard/leaderboard-core.md`
+7. `05-technical/backend/announcement/announcement-system.md`
+8. `05-technical/backend/anti-cheat/anti-cheat-core.md`
 
-- **Пересечение с существующими API:** сверка с `API-SWAGGER/api/v1/world` и `social` — дубликатов не обнаружено; при конфликте использовать суффикс `-v2`.
-- **Нагрузка на микросервисы:** рейдовые endpoints требуют проверок производительности → отметить в задачах необходимость нагрузочного теста.
-- **Согласование артистики:** moodboard/аудио уже утверждены legal-пакетом, претензий не ожидается.
-- **Квестовая БД:** убедиться, что `uuid-ossp` расширение включено в миграции (зафиксировать в задаче).
+## Batch 06 - Lore Support (Reference)
+1. `03-lore/activities/activities-lore-compendium.md`
+2. `03-lore/characters/activity-npc-roster.md`
 
-## 6. Инструкции для API Task Creator
+> Batch 06 передаётся Brain Readiness Checker как справочная коллекция, без постановки API задач.
 
-1. Для каждой строки таблицы (раздел 2) создать задачу в `API-SWAGGER/tasks/active/queue/` с шаблоном `api-generation-task-template.md`.
-2. Указать `source_documents` и `planned_api` из таблицы, добавить примечание по зависимостям.
-3. После генерации задач обновить `brain-mapping.yaml` (связать документы `.BRAIN` с задачами API).
-4. Сообщить Brain Manager об окончании через `CURRENT-WORK/current-status.md`.
+---
 
-## 7. Логи
+## Следующие шаги
 
-- 2025-11-07 16:14 — План партии создан, подтверждена готовность 5 документов, назначен таймлайн 2025-11-08.
+1. Запустить ДУАПИТАСК для Batch 01 (core) → далее Batch 02–05
+2. Создать YAML файлы: `batch-01-core.yaml`, `batch-02-gameplay.yaml`, `batch-03-economy.yaml`, `batch-04-state.yaml`, `batch-05-competitive.yaml`
+3. Обновить `brain-mapping.yaml` после генерации API задач
+4. Вести лог прогресса в `CURRENT-WORK/current-status.md`
+5. Подготовить Batch 07 (economy live ops, housing expansions) после сдачи Batch 05
+
+---
+
+## Лог работ
+
+- 2025-11-07 02:45 — создан базовый план
+- 2025-11-07 20:07 — добавлены Competitive & Events + Lore Support
+
+

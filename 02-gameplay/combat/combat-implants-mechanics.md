@@ -1,4 +1,4 @@
-# Боевая система — Импланты: Дополнительные механики
+﻿# Боевая система — Импланты: Дополнительные механики
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/implants
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-092: api/v1/gameplay/combat/implants-mechanics.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:10
+- **Last Updated:** 2025-11-07 04:10
 ---
 
 ---

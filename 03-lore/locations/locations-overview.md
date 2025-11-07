@@ -1,9 +1,11 @@
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+﻿---
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-162: api/v1/lore/locations.yaml (2025-11-07 11:28)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

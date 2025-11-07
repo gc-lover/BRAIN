@@ -1,4 +1,4 @@
----
+﻿---
 **Статус:** review  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -9,11 +9,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-120: api/v1/narrative/raids/raid-corpo-tower.yaml (2025-11-07)
-- Last Updated: 2025-11-07 06:45
+- **Last Updated:** 2025-11-07 06:45
 ---
 
 # ENDGAME RAID: Corpo Tower Assault

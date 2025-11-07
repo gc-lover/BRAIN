@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 06:00  
 **api-readiness-notes:** Global State Management микрофича. Event processing pipeline, State Manager implementation, Time Travel. ~430 строк.
@@ -19,14 +19,11 @@
 
 ---
 
+## API Tasks Status
 
-**API Tasks Status:**
-- ✅ Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
-- 📅 Дата создания задачи: 2025-11-07
-- 🔄 Статус: queued (ожидает выполнения АПИТАСК агентом)
-- 📝 Категория: GLOBAL_STATE_SPLIT
-- 🔗 Следующий шаг: АПИТАСК агент создаст OpenAPI спецификацию
-
+- **Status:** created
+- **Tasks:**
+- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## Краткое описание

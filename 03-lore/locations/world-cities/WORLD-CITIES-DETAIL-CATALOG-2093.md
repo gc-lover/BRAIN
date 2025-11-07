@@ -1,13 +1,13 @@
-# Каталог мегаполисов мира: районы, улицы, NPC (2093)
+﻿# Каталог мегаполисов мира: районы, улицы, NPC (2093)
 
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:47  
+**Последнее обновление:** 2025-11-07 20:06  
 **Статус:** draft  
 **Приоритет:** высокий
 
 **api-readiness:** draft  
-**api-readiness-check-date:** 2025-11-07 16:47
+**api-readiness-check-date:** 2025-11-07 20:06
 
 ---
 
@@ -67,6 +67,14 @@
 - **Фракции:** ForgeWorks Conglomerate (корпорация производства), Spark Crew (тюнеры подполья), Riverfront Cooperative (жильцы-реконструкторы).
 - **Особенности:** конкуренция автоматизации и рабочих, квесты по апгрейду транспорта, подпольные гонки дронов.
 
+### Denver (США, Колорадо)
+- **См.** `./denver-detailed-2020-2093.md`
+- **Районы:** Capitol Hex District (корпоративный купол), Aurora Skybelt (парящие платформы), Canyon Strip Yards (индустриальные мастерские и гонки), Frost Hollow Tunnels (подземные убежища).
+- **Ключевые улицы:** Summit Spine, Canyon Rush, Thermal Loop, MagRail Rockies.
+- **NPC:** Лина «Summit» Морено (архитектор климат-щитов), Бакари Слоун (караванный брокер), Доктор Айви Каган (полевой рипердок), «Coach» Маркус Хэйл (лидер Chrome Broncos).
+- **Фракции:** RockyGrid Alliance, Altitude Syndicate, Chrome Broncos, Frostbiters.
+- **Особенности:** климатические кризисы, ховер-гонки, дилеммы между элитой платформ и выживальщиками Frost Hollow.
+
 ### Miami (США, Флорида)
 - **См.** `./miami-detailed-2020-2093.md`
 - **Районы:** Neon Beachfront (туризм и клубы), Coral Fortress (усиленные дамбы), Little Havana 2.0 (культурный центр), Everglades Fringe (биолабы).
@@ -105,6 +113,14 @@
 - **Фракции:** Lux Consortium (дом моды), Meccano Union (цех имплант-мастеров), Sacred Glass Brotherhood (культурные хранители).
 - **Особенности:** синтез моды и кибернетики, PvE-рейды на фабриках, моральные дилеммы между искусством и коммерцией.
 
+### Madrid (Испания)
+- **См.** `./madrid-detailed-2020-2093.md`
+- **Районы:** Solaris Crown District (энергетический центр), Plaza del Sol Arena (корпоративные корриды), Arroyo Market Belt (ночные рынки), SubSol Tunnels (катакомбы сопротивления).
+- **Ключевые улицы:** Avenida Prismática, Railcat Circuit, Corrida Lattice, SubSol Spiral.
+- **NPC:** Гонсало Лазаро (директор распределения энергии), Лусия «Mariposa» Эскудеро (торговка артефактами), Доктор Томас Рохо (радиолог-рипердок), «Toro» Эрнесто Хименес (лидер Corrida Circuit).
+- **Фракции:** Solaris Matador Holdings, Las Mariposas, Corrida Circuit, SubSol Cartel.
+- **Особенности:** энергетические кризисы, боевые корриды с дронами, противостояние элиты и подполья.
+
 ### Moscow (Евразийский блок)
 - **См.** `moscow-detailed-2020-2093.md`
 - **Кратко:** купола SovOil, метро Red Winters, катакомбы, Kryo Dogs.
@@ -126,6 +142,14 @@
 - **NPC:** Линь «Azure» Чжао (директор Kang Tao Asia), капитан Цзян Лэй (портовая охрана), монахиня Юй Лян (хранительница храмов).
 - **Фракции:** Kang Tao Asia (корпорация вооружений), Pearl Syndicate (торговая мафия), Jade Lotus Order (религиозное братство).
 - **Особенности:** конкуренция Kang Tao и местных триад, квесты по защите дата-караванов, переплетение традиций и ультрамодерна.
+
+### Hong Kong (Китай)
+- **См.** `./hong-kong-detailed-2020-2093.md`
+- **Районы:** Pearl Exchange Quarter (финансовый узел), Neon Sampan Bazaar (плавучий рынок данных), Sky Garden Belt (висячие сады), Tidal Fringe (доки подполья).
+- **Ключевые улицы:** Pearl Spine Corridor, Sampan Network, Skyline Loop, Undergrid Tram.
+- **NPC:** Лянь Хуэй Мин (финансовый архитектор), Кассандра «Sampan Silk» Чоу (торговка данными), Доктор Вэй Чжэнь (рипердок адаптаций), Лидер Тсу Эн (командор Red Tide Triads).
+- **Фракции:** Pearl Exchange Holdings, Data Jackals, Red Tide Triads, Skyline Corsairs.
+- **Особенности:** биржевые войны, пиратские налёты через гавань, мистические расследования в Tidal Catacombs.
 
 ### Seoul (Южная Корея)
 - **См.** `./seoul-detailed-2020-2093.md`
@@ -204,6 +228,14 @@
 - **NPC:** Адаобе Нвеке (куратор Silicon Island), капитан «Wavebreaker» Джиде (лидер морской милиции), жрица Оламаиде (совет старейшин).
 - **Фракции:** Harbour Authority (портовый синдикат), Makoko Armada (водные общины), Silicon Collective (стартап-кластеры).
 - **Особенности:** штормовые PvE-события, экономические войны за грузовые маршруты, мистические квесты с традиционными культами.
+
+### Cape Town (ЮАР)
+- **См.** `./cape-town-detailed-2020-2093.md`
+- **Районы:** Table Hex Citadel (стратегический центр), BioRidge Gardens (аэрофермы), Neon Waterfront (ночные рынки), Dockside Rifts (подводные тоннели).
+- **Ключевые улицы:** Table Skywalk, Neon Strand, Rift Trenches, MagRail Karoo.
+- **NPC:** Амина ван дер Вестхёйзен (глава безопасности Atlantic Shield), Зола «Reef Trader» Ндлову (торговка биоматериалами), Доктор Ясин Мкхизе (рипердок адаптаций), капитан Иман Роббе (лидер Cape Phantoms).
+- **Фракции:** Atlantic Shield Consortium, Cape Phantoms, Tidehacker Cells, Table Mountain Nomads.
+- **Особенности:** защита морских конвоев, биолюминесцентные экспедиции, конфликты между корпорацией и пиратами.
 
 ### Cairo (Египет)
 - **См.** `./cairo-detailed-2020-2093.md`

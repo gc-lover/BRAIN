@@ -1,4 +1,4 @@
-# Классы персонажей — Авторские классы
+﻿# Классы персонажей — Авторские классы
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/progression/classes
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-051: api/v1/gameplay/progression/classes-authored.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:10
+- **Last Updated:** 2025-11-07 00:10
 ---
 
 ## Авторские классы

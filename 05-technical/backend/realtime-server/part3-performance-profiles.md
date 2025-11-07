@@ -1,11 +1,13 @@
-# Realtime Server - Part 3: Performance Profiles
+﻿# Realtime Server - Part 3: Performance Profiles
 
 ---
-**API Tasks Status:**
-- Status: not_created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** not_created
+- **Tasks:**
   - N/A
-- Last Updated: 2025-11-07 11:13
+- **Last Updated:** 2025-11-07 11:13
 ---
 
 **Статус:** review  

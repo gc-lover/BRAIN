@@ -1,4 +1,4 @@
-# Классы персонажей — Общие навыки
+﻿# Классы персонажей — Общие навыки
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/progression/skills
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-052: api/v1/gameplay/progression/general-skills.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:15
+- **Last Updated:** 2025-11-07 00:15
 ---
 
 ## Общие навыки

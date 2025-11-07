@@ -1,4 +1,4 @@
-# Боевая система — Импланты: Получение и улучшение
+﻿# Боевая система — Импланты: Получение и улучшение
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/implants
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-093: api/v1/gameplay/combat/implants-acquisition.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:15
+- **Last Updated:** 2025-11-07 04:15
 ---
 
 ---

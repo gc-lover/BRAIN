@@ -1,4 +1,4 @@
----
+﻿---
 **Статус:** review  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-06  
@@ -9,11 +9,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-119: api/v1/narrative/raids/raid-blackwall.yaml (2025-11-07)
-- Last Updated: 2025-11-07 06:40
+- **Last Updated:** 2025-11-07 06:40
 ---
 
 # ENDGAME RAID: Blackwall Expedition

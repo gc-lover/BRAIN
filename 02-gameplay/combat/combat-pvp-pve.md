@@ -1,4 +1,4 @@
-# Боевая система - PvP vs PvE баланс
+﻿# Боевая система - PvP vs PvE баланс
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -13,11 +13,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-090: api/v1/gameplay/combat/pvp-pve-balance.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:00
+- **Last Updated:** 2025-11-07 04:00
 ---
 
 

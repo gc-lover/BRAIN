@@ -1,4 +1,4 @@
-# Детальные Боевые Роли
+﻿# Детальные Боевые Роли
 
 **Версия:** 1.0.0  
 **Дата:** 2025-11-06  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/combat/roles
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-040: api/v1/gameplay/combat/roles.yaml (2025-11-06)
-- Last Updated: 2025-11-06 23:15
+- **Last Updated:** 2025-11-06 23:15
 ---
 
 ---

@@ -1,4 +1,4 @@
-# Система семейных отношений с NPC
+﻿# Система семейных отношений с NPC
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 01:55  
@@ -9,11 +9,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-079: api/v1/gameplay/social/family-relationships.yaml (2025-11-07)
-- Last Updated: 2025-11-07 02:30
+- **Last Updated:** 2025-11-07 02:30
 ---
 
 ---

@@ -1,4 +1,4 @@
-# Система отношений и репутации
+﻿# Система отношений и репутации
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 01:55  
@@ -9,11 +9,13 @@
 **Дата создания:** 2025-11-03
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-060: api/v1/gameplay/social/relationships.yaml (2025-11-07)
-- Last Updated: 2025-11-07 00:55
+- **Last Updated:** 2025-11-07 00:55
 ---
 
 

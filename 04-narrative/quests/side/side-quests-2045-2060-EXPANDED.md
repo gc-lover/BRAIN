@@ -1,9 +1,11 @@
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+﻿---
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-144: api/v1/narrative/side-quests/side-quests-2045-2060.yaml (2025-11-07 10:50)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

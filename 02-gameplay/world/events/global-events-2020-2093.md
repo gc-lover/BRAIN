@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready
 **api-readiness-check-date:** 2025-11-06
 
@@ -8,11 +8,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-073: api/v1/gameplay/world/global-events.yaml (2025-11-07)
-- Last Updated: 2025-11-07 02:00
+- **Last Updated:** 2025-11-07 02:00
 ---
 
 # Глобальные события (2020-2093)

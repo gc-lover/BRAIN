@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:30  
 **api-readiness-notes:** Cosmetic System. Skins, emotes, персонализация, cosmetic shop. ~380 строк.
@@ -7,11 +7,13 @@
 # Cosmetic System - Система косметики
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-203: api/v1/gameplay/cosmetics/cosmetic-system.yaml (2025-11-07 22:45)
-- Last Updated: 2025-11-07 22:45
+- **Last Updated:** 2025-11-07 22:45
 ---
 
 **Статус:** approved  

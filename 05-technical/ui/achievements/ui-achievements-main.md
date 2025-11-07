@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:18  
 **api-readiness-notes:** UI для Achievement System. Список достижений, прогресс, categories, filters. ~390 строк.
@@ -16,11 +16,13 @@
 **Размер:** ~390 строк ✅
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-209: api/v1/gameplay/achievements/achievements-ui.yaml (2025-11-08 00:28)
-- Last Updated: 2025-11-08 00:28
+- **Last Updated:** 2025-11-08 00:28
 ---
 
 ## Краткое описание

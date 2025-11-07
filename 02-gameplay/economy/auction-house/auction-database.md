@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 06:15  
 **api-readiness-notes:** Auction House Database. БД schema, UI/UX, примеры использования. ~280 строк.
@@ -17,14 +17,11 @@
 
 ---
 
+## API Tasks Status
 
-**API Tasks Status:**
-- ✅ Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
-- 📅 Дата создания задачи: 2025-11-07
-- 🔄 Статус: queued (ожидает выполнения АПИТАСК агентом)
-- 📝 Категория: AUCTION_SPLIT
-- 🔗 Следующий шаг: АПИТАСК агент создаст OpenAPI спецификацию
-
+- **Status:** created
+- **Tasks:**
+- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## Database Schema

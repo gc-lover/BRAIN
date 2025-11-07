@@ -1,4 +1,4 @@
-# Экономическая система - Валюты и ресурсы
+﻿# Экономическая система - Валюты и ресурсы
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-03 19:36  
@@ -9,11 +9,13 @@
 **target-frontend-module:** modules/economy/currencies
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-098: api/v1/gameplay/economy/currencies-resources.yaml (2025-11-07)
-- Last Updated: 2025-11-07 04:40
+- **Last Updated:** 2025-11-07 04:40
 ---
 
 **Статус:** Завершен первый брейншторм - решения определены  

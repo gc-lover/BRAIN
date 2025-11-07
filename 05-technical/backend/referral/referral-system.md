@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 02:40  
 **api-readiness-notes:** Referral System. Реферальная программа, invite rewards, milestone bonuses. ~370 строк.
@@ -7,11 +7,13 @@
 # Referral System - Реферальная программа
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-201: api/v1/social/referrals/referral-system.yaml (2025-11-07 22:05)
-- Last Updated: 2025-11-07 22:05
+- **Last Updated:** 2025-11-07 22:05
 ---
 
 **Статус:** approved  

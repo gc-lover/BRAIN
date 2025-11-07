@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-05 19:30  
 **api-readiness-notes:** Полные лут-таблицы для всех типов квестов, событий, врагов. Формулы вероятностей, редкость, модификаторы.
@@ -9,11 +9,13 @@
 ---
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** created
+- **Tasks:**
   - API-TASK-069: api/v1/gameplay/economy/loot-tables.yaml (2025-11-07)
-- Last Updated: 2025-11-07 01:40
+- **Last Updated:** 2025-11-07 01:40
 ---
 
 # Лут-таблицы NECPGAME

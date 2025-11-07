@@ -1,9 +1,11 @@
----
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+﻿---
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-195: api/v1/social/voice/voice-chat.yaml (2025-11-07 16:20)
-- Last Updated: 2025-11-07 16:20
+- **Last Updated:** 2025-11-07 16:20
 ---
 
 ---

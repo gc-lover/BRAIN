@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-06 22:15  
 **api-readiness-notes:** Документ готов к созданию API задач. Фреймворк мировых событий определяет унифицированную логику событий по всем эпохам: DC-скейлинг, AI-слайдеры фракций, экономические множители, технологические доступы, генераторы событий (d100 таблицы), квестовые хуки. Все необходимые детали для создания API спецификации присутствуют.
@@ -8,11 +8,13 @@
 **target-frontend-module:** modules/world/events
 ---
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-160: api/v1/world/events/events-framework.yaml (2025-11-07 11:24)
-- Last Updated: 2025-11-07 00:18
+- **Last Updated:** 2025-11-07 00:18
 ---
 
 

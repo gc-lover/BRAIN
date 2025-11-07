@@ -1,4 +1,4 @@
----
+﻿---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 01:46  
 **api-readiness-notes:** Session Management - Lifecycle & Heartbeat. Жизненный цикл сессий, heartbeat, AFK detection. ~480 строк.
@@ -7,11 +7,13 @@
 # Session Management - Part 1: Lifecycle & Heartbeat
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
+
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
   - API-TASK-198: api/v1/technical/session-management/lifecycle.yaml (2025-11-07 21:05)
-- Last Updated: 2025-11-07 21:35
+- **Last Updated:** 2025-11-07 21:35
 ---
 
 **Статус:** approved  
