@@ -517,10 +517,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/progression/progression-skills-mapping.md"
     status: "ready"
-    version: "1.1.0"
-    checked: "2025-11-07 16:46"
+    version: "1.2.0"
+    checked: "2025-11-08 00:14"
     checker: "AI Agent (Brain Manager)"
-    notes: "Навыки ↔ предметы/импланты: расширенные таблицы, структура данных, REST API и автоматическая валидация синхронизированы с equipment/implants."
+    notes: "Навыки ↔ предметы/импланты: добавлены профили лодаутов и теги для PvE экспедиций, расширены таблицы и REST API."
     issues: []
     api_target: "api/v1/progression/skills-mapping.yaml"
 
