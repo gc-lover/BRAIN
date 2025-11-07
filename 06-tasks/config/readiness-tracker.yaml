@@ -1801,10 +1801,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
     checker: "AI Agent (Brain Manager)"
-    notes: "Контракты между игроками: 4 типа контрактов (exchange/service/courier/auction), escrow system, collateral, репутационная система, арбитраж/dispute resolution, структура БД (2 таблицы), API endpoints (5 REST)."
+    notes: "Контракты: описан полный lifecycle (draft → active → dispute), state machine, REST + events, валидации, лимиты, интеграции с escrow/wallet/reputation/logistics. Готово к API реализации."
     issues: []
     api_target: "api/v1/economy/contracts.yaml"
 
