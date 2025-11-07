@@ -1912,6 +1912,24 @@ documents:
     issues: []
     api_target: "api/v1/world/dungeons.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/dungeons/dungeon-bosses-abilities.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:37"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Матрица способностей боссов подземелий: таблицы навыков, режимы сложности, контр-стратегии, REST/SQL для abilities и counters."
+    issues: []
+    api_target: "api/v1/world/dungeons/bosses/abilities.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/faction-cult-defenders.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 21:25"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Культовые защитники фракций: роли, навыки, триггеры, REST/WS контракты и SQL схемы для world-service."
+    issues: []
+    api_target: "api/v1/world/factions/defenders.yaml"
+
   # 04-narrative/quests/main/ - Детальные узлы основных квестов
   - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
     status: "ready"
