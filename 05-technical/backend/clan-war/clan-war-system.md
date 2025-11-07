@@ -3,16 +3,13 @@
 **api-readiness-check-date:** 2025-11-07 02:34  
 **api-readiness-notes:** Clan War System. Войны кланов, территории, siege mechanics, rewards. ~390 строк.
 ---
-
-# Clan War System - Система клановых войн
-
----
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-204: api/v1/gameplay/clans/clan-war-system.yaml (2025-11-07 23:05)
-- Last Updated: 2025-11-07 23:05
+  - API-TASK-223: api/v1/gameplay/clans/clan-war-system.yaml (2025-11-08 03:38)
+- Last Updated: 2025-11-08 03:38
 ---
+# Clan War System - Система клановых войн
 
 **Статус:** approved  
 **Версия:** 1.0.0  
@@ -412,25 +409,4 @@ private void distributeWarRewards(ClanWar war) {
 
 ## API Endpoints
 
-**POST `/api/v1/clan-wars/declare`** - объявить войну
-
-**GET `/api/v1/clan-wars/active`** - активные войны
-
-**GET `/api/v1/clan-wars/{id}`** - детали войны
-
-**POST `/api/v1/clan-wars/{id}/recruit-ally`** - призвать союзника
-
-**GET `/api/v1/clan-wars/{id}/battles`** - битвы в войне
-
-**GET `/api/v1/territories`** - список территорий
-
-**GET `/api/v1/territories/{id}`** - детали территории
-
----
-
-## Связанные документы
-
-- [Guild System](../guild-system-backend.md)
-- [PvP System](../../gameplay/pvp/pvp-core.md)
-- [Territory System](../../world/territory-control.md)
-
+**POST `/api/v1/clan-wars/declare`
