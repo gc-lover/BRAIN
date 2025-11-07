@@ -32,6 +32,7 @@
 ### Content Generation (Контент и симуляции) → world-service, social-service, economy-service
 - `content-generation/CONTENT-TEAM-GUIDE.md` - Руководство по массовой генерации контента ✅ ready
 - `content-generation/city-life-population-algorithm.md` - Алгоритм наполнения городов NPC и инфраструктурой ⚠️ needs-work
+- `content-generation/baseline/*.json` - Baseline пакеты городов (Watson, Westbrook, Shinjuku, Kreuzberg) для симуляций
 
 ### API Requirements (Требования к API)
 - `api-requirements/mvp-endpoints.md` - Endpoints для MVP ✅ ready

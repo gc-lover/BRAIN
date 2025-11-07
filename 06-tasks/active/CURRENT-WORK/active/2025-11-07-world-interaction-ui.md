@@ -1,13 +1,13 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:53  
-**api-readiness-notes:** Консолидирован UX мира: World Pulse, события, карта влияния, гильдейские приказы, стабилизация рынка, социальный резонанс и кризисный режим. Готово к API постановке (`world-service`, `economy-service`, `social-service`).
+**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-notes:** UX мира обновлён Specter overlay и монитором городских беспорядков; World Pulse, Events Dashboard, Influence Map, Guild Ops и Crisis Hub готовы к API постановке (`world-service`, `economy-service`, `social-service`).
 ---
 
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 16:39  
-**Дата обновления:** 2025-11-07 16:53  
+**Дата обновления:** 2025-11-07 18:05  
 **Приоритет:** high  
 **Связанные документы:** `05-technical/ui/main-game/ui-hud-core.md`, `05-technical/ui/main-game/ui-features.md`, `02-gameplay/world/world-state/player-impact-mechanics.md`, `05-technical/global-state/global-state-operations.md`
 
@@ -90,6 +90,8 @@
 - Расчёт индекса: репутация 40%, романтика 20%, социальные события 40%.
 - Запуск кампаний через `POST /api/v1/social/campaigns`, UI показывает влияние и стоимость.
 - Компоненты: `shared/ui/ResonanceMeter`, `shared/ui/RelationshipGrid`.
+- Specter overlay отображает панель «Underlink Specter» при `flag.neon.elite == true`, содержит текущие поручения Ghosts и статус курьеров.
+- Индикатор `city.unrest.level` связывается с world-service и подсвечивает рост беспорядков, предлагая CTA «Сдержать протесты» при превышении порога.
 - Specter overlay показывает панель «Underlink Specter» при флаге `flag.neon.elite == true`, отражает поручения Ghosts и статус курьеров.
 - Индикатор `city.unrest.level` визуализирует рост беспорядков, при превышении порога активирует CTA «Сдержать протесты».
 
