@@ -751,8 +751,13 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-logistics.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 20:05"
+    completed: "2025-11-07 22:44"
+    agent: "Backend Agent"
+    commit: "ab5436c"
     priority: "MEDIUM"
+    notes: "Logistics backend: shipments, routes, insurance, convoy services, миграции 091-092"
   frontend:
     status: "completed"
     started: "2025-11-07 18:10"
@@ -760,7 +765,7 @@ implementations:
     agent: "Frontend Agent"
     commit: "f512932"
     priority: "MEDIUM"
-    notes: "LogisticsPage на shared GameLayout, ShipmentCard, RoutesCard, VehicleStatsCard, InsurancePlansCard, RiskMatrixCard, ConvoyStatusCard"
+    notes: "LogisticsPage — shared GameLayout, ShipmentCard, RoutesCard, VehicleStatsCard, InsurancePlansCard, RiskMatrixCard, ConvoyStatusCard"
 
 - api_path: "api/v1/lore/lore-reference.yaml"
   task_id: "API-TASK-160"
