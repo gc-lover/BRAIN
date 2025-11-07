@@ -5,6 +5,14 @@
 **Дата:** 2025-11-07 02:41  
 **api-readiness:** ready
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-208: api/v1/gameplay/battle-pass/battle-pass-rewards.yaml (2025-11-08 00:12)
+- Last Updated: 2025-11-08 00:12
+---
+
 [← Part 1](./part1-core-progression.md) | [Навигация](./README.md)
 
 ---

@@ -566,10 +566,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/leaderboard-system.md"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-07 09:40"
+    completed: "2025-11-07 10:09"
     agent: "Backend Agent"
     priority: "MEDIUM"
+    notes: "Добавлены сущности и репозитории лидербордов, реализация ProgressionService для глобальных/дружеских/сезонных/гильдейских рейтингов, миграция 070"
   frontend:
     status: "not_started"
     priority: "MEDIUM"
