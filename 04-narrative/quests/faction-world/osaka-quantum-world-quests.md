@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-OSAKA-QUANTUM-001`.
 - Взаимосвязи: `osaka-detailed-2020-2093.md`, `tokyo-detailed-2020-2093.md`, `singapore-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

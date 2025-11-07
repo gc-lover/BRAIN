@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-MAGHREB-SOLAR-001`.
 - Учитывать зависимости с `casablanca-detailed-2020-2093.md`, `madrid-detailed-2020-2093.md`, `lisbon-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`, `karachi-detailed-2020-2093.md`.
 - Баланс наград и экономику согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-DOHA-SOLAR-VEIL-001`.
 - Взаимосвязи: `doha-detailed-2020-2093.md`, `dubai-detailed-2020-2093.md`, `geneva-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

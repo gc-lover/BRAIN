@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-KINSHASA-RIVER-NEXUS-001`.
 - Взаимосвязи: `kinshasa-detailed-2020-2093.md`, `lagos-detailed-2020-2093.md`, `lisbon-detailed-2020-2093.md`, `geneva-detailed-2020-2093.md`, `johor-bahru-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

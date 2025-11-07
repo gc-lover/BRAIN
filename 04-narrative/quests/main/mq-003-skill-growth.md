@@ -146,3 +146,4 @@ version: 0.1.0
 - `04-narrative/npc-lore/important/hanako-arasaka.md`
 - `04-narrative/npc-lore/important/padre-ibarra.md`
 - `04-narrative/npc-lore/important/royce.md`
+

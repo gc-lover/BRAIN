@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-CHENGDU-SYNTHA-001`.
 - Взаимосвязи: `chengdu-detailed-2020-2093.md`, `shanghai-detailed-2020-2093.md`, `singapore-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`, `night-city` документы.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

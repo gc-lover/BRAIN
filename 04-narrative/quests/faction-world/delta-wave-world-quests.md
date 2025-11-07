@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-DELTA-WAVE-001` с экспортом в YAML.
 - Учитывать зависимость с документами `karachi-detailed-2020-2093.md`, `dubai-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md` и `cape-town-detailed-2020-2093.md`.
 - Согласовать награды с балансом `02-gameplay/economy/rewards/` (в разработке).
+

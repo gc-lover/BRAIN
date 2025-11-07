@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-WARSAW-VISTULA-SENTINEL-001`.
 - Взаимосвязи: `warsaw-detailed-2020-2093.md`, `berlin-detailed-2020-2093.md`, `kyiv-detailed-2020-2093.md`, `gdansk-detailed-2020-2093.md` (создать), `geneva-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

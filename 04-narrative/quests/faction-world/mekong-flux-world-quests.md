@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-MEKONG-FLUX-001`.
 - Взаимосвязи: `ho-chi-minh-city-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `singapore-detailed-2020-2093.md`, `karachi-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`.
 - Согласовать награды с `02-gameplay/economy/rewards/` (в разработке).
+

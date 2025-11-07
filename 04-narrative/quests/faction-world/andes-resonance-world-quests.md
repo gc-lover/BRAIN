@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-ANDES-RESONANCE-001`.
 - Взаимосвязи: `santiago-detailed-2020-2093.md`, `buenos-aires-detailed-2020-2093.md`, `sao-paulo-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

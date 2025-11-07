@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-ZARATHUSTRA-001`.
 - Взаимосвязи: `tehran-detailed-2020-2093.md`, `dubai-detailed-2020-2093.md`, `riyadh-detailed-2020-2093.md`, `athens-detailed-2020-2093.md`, `karachi-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

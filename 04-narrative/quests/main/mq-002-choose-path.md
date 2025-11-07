@@ -152,3 +152,4 @@ version: 0.1.0
 - `04-narrative/npc-lore/important/padre-ibarra.md`
 - `04-narrative/npc-lore/important/royce.md`
 - `02-gameplay/social/player-orders-system.md`
+

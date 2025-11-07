@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-ULAANBAATAR-STEPPE-SIGNAL-001`.
 - Взаимосвязи: `ulaanbaatar-detailed-2020-2093.md`, `almaty-detailed-2020-2093.md`, `bangkok-detailed-2020-2093.md`, `reykjavik-detailed-2020-2093.md`, `sydney-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

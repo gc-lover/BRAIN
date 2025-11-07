@@ -42,3 +42,5 @@ documents:
 notes: |
   Требует синхронизации с readiness-tracker.yaml (sessions). При создании задач убедиться в наличии схем БД.
 
+
+

@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-MUMBAI-NEUROSTAGE-001`.
 - Взаимосвязи: `mumbai-detailed-2020-2093.md`, `delhi-detailed-2020-2093.md`, `singapore-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`, `night-city` документы.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

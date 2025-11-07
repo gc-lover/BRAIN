@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-HAVANA-DATA-REEF-001`.
 - Взаимосвязи: `havana-detailed-2020-2093.md`, `miami-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `los-angeles-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

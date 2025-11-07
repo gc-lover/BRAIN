@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-QUEBEC-CHRONO-001`.
 - Взаимосвязи: `quebec-city-detailed-2020-2093.md`, `toronto-detailed-2020-2093.md`, `geneva-detailed-2020-2093.md`, `london-detailed-2020-2093.md`, `cape-town-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

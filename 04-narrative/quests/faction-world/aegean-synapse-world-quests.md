@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-AEGEAN-SYNAPSE-001`.
 - Учитывать зависимости с `athens-detailed-2020-2093.md`, `istanbul-detailed-2020-2093.md`, `cairo-detailed-2020-2093.md`, `lisbon-detailed-2020-2093.md`, `singapore-detailed-2020-2093.md`.
 - Настроить баланс наград в `02-gameplay/economy/rewards/` (в разработке).
+

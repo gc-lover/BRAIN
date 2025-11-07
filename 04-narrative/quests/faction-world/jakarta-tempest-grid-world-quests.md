@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-JAKARTA-TEMPEST-GRID-001`.
 - Взаимосвязи: `jakarta-detailed-2020-2093.md`, `ho-chi-minh-city-detailed-2020-2093.md`, `johor-bahru-detailed-2020-2093.md`, `manila-detailed-2020-2093.md`, `kolkata-detailed-2020-2093.md` (создать).
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+

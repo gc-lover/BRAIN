@@ -59,3 +59,4 @@
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-GENEVA-ARBITRATION-001`.
 - Взаимосвязи: `geneva-detailed-2020-2093.md`, `paris-detailed-2020-2093.md`, `milan-detailed-2020-2093.md`, `london-detailed-2020-2093.md`, `nairobi-detailed-2020-2093.md`.
 - Баланс наград согласовать с `02-gameplay/economy/rewards/` (в разработке).
+
