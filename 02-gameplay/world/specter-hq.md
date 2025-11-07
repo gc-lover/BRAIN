@@ -16,6 +16,14 @@
 **api-readiness-notes:** Описаны NPC Specter HQ, магазин, апгрейды и связка с рейдовыми валютами; готово для постановки API задач.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-267: api/v1/gameplay/world/specter-hq.yaml (2025-11-08 00:48)
+- **Last Updated:** 2025-11-08 00:48
+
+---
 
 ## 1. Контекст и цели
 - **Specter HQ** — подземный командный центр Ghosts, где игроки тратят `specter-favor`, берут поручения и апгрейды.

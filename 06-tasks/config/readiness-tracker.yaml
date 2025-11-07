@@ -2601,40 +2601,113 @@ documents:
     issues: []
     api_target: "api/v1/narrative/dialogues/romance-judy-alvarez.yaml"
 
-# Примеры записей:
-#
-# documents:
-#   - path: ".BRAIN/02-gameplay/combat/shooter-mechanics.md"
-#     status: "ready"
-#     version: "1.0.0"
-#     checked: "2025-11-02 15:30"
-#     checker: "AI Agent"
-#     notes: "Документ готов, содержит все необходимые детали для создания API"
-#     issues: []
-#     api_target: "api/v1/gameplay/combat/shooting.yaml"
-#
-#   - path: ".BRAIN/03-lore/factions/factions-overview.md"
-#     status: "needs-work"
-#     version: "1.0.0"
-#     checked: "2025-11-02 15:30"
-#     checker: "AI Agent"
-#     notes: "Есть TODO блоки, нужна детализация конкретных фракций"
-#     issues:
-#       - "TODO: Список конкретных корпораций будет проработан позже"
-#       - "TODO: Список конкретных банд будет проработан позже"
-#     api_target: null
-#
-#   - path: ".BRAIN/01-concepts/vision.md"
-#     status: "not-applicable"
-#     version: "1.0.0"
-#     checked: "2025-11-02 15:30"
-#     checker: "AI Agent"
-#     notes: "Документ слишком концептуальный, не содержит механик для API"
-#     issues: []
-#     api_target: null
+  - path: ".BRAIN/03-lore/locations/world-cities/karachi-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:10"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Карачи: вертикальные уровни, NPC, контактные цепочки, квестовые ссылки DeltaWave."
+    issues: []
+    api_target: "api/v1/lore/locations/karachi.yaml"
 
-# Примечания:
-# - Файл обновляется автоматически при проверке документов
-# - При изменении статуса документа нужно обновить этот файл
-# - Связан с brain-mapping.yaml в API-SWAGGER для отслеживания созданных задач
+  - path: ".BRAIN/03-lore/locations/world-cities/athens-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:12"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Афин: солнечная синархия Helios, NPC сетки, связки с Aegean Synapse."
+    issues: []
+    api_target: "api/v1/lore/locations/athens.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/casablanca-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:14"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Касабланки: Solar Zellij, пустынные караваны, NPC и квестовые узлы."
+    issues: []
+    api_target: "api/v1/lore/locations/casablanca.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/delta-wave-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:18"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты DeltaWave: 4 миссии, штормовые конвои, связки Карачи-Дубай-Манила."
+    issues: []
+    api_target: "api/v1/narrative/factions/delta-wave.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/aegean-synapse-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Aegean Synapse: солнечная дипломатия, Katabasis протоколы, 4 задания."
+    issues: []
+    api_target: "api/v1/narrative/factions/aegean-synapse.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/maghreb-solar-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:22"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Maghreb Solar Cooperative: караваны, солнечные зеркала, связи с Лиссабоном и Карачи."
+    issues: []
+    api_target: "api/v1/narrative/factions/maghreb-solar.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/specter-helios-proxy-war.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:08"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Specter vs Helios Proxy War: фазы, активности, мемы и API для world/narrative/social."
+    issues: []
+    api_target: "api/v1/world/proxy-war/specter-vs-helios.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/factions/faction-quest-chains.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:04"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Фракционные цепочки квестов: задания, подрядчики, условия, репутационные ветки, REST/WS и SQL схемы."
+    issues: []
+    api_target: "api/v1/world/factions/quest-chains.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/raids/faction-raid-scenarios.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:04"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Рейдовые и осадные сценарии фракций: фазы, сигнальные миссии, экономика наград, REST/WS и SQL схемы."
+    issues: []
+    api_target: "api/v1/world/factions/raid-scenarios.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/faction-social-lines.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Социальные и романтические линии лидеров фракций: мотивация, условия, диалоговые ветки, REST/WS и SQL схемы."
+    issues: []
+    api_target: "api/v1/social/factions/dialogues.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/factions/faction-economy-integration.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Экономическая интеграция фракций: активы, аукционы, крафт, REST/WS и SQL схемы."
+    issues: []
+    api_target: "api/v1/economy/factions/assets.yaml"
+
+  - path: ".BRAIN/05-technical/analytics/faction-analytics-balance.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:10"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Метрики и авто-тюнинг фракционных систем: аналитика, REST/WS и SQL схемы."
+    issues: []
+    api_target: "api/v1/analytics/factions/metrics.yaml"
+
+# Примеры записей:
 

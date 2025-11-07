@@ -16,6 +16,14 @@
 **api-readiness-notes:** Определены формулы и API для баланса Specter/Helios контрактов и беспорядков; готово к реализации.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-266: api/v1/gameplay/economy/specter-helios-balance.yaml (2025-11-08 00:40)
+- **Last Updated:** 2025-11-08 00:40
+
+---
 
 ## 1. Цель
 - Регламентировать денежные потоки и влияние контрактов Specter/Helios и City Unrest на экономику.

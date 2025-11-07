@@ -16,6 +16,14 @@
 **api-readiness-notes:** Описаны контр-операции Helios: сценарии, боссы, экономика, API и телеметрия; готово к постановке задач.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-265: api/v1/gameplay/world/helios-ops.yaml (2025-11-08 00:32)
+- **Last Updated:** 2025-11-08 00:32
+
+---
 
 ## 1. Контекст и цели
 - Helios запускает программу `Countermesh Ops`, пытаясь вернуть контроль над Underlink и нейтрализовать Ghosts.

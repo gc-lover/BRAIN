@@ -16,6 +16,14 @@
 **api-readiness-notes:** Подготовлены сценарии эскалации City Unrest с триггерами, фазами, API и телеметрией; готово к постановке задач.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-264: api/v1/gameplay/world/city-unrest.yaml (2025-11-08 00:25)
+- **Last Updated:** 2025-11-08 00:25
+
+---
 
 ## 1. Контекст и цели
 - City Unrest отражает реакцию города на успех/провал Specter и Helios операций.
