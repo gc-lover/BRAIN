@@ -1781,6 +1781,15 @@ documents:
     issues: []
     api_target: "api/v1/economy/stock-exchange.yaml"
 
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-exchange-overview.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Обзор биржи: архитектура сервисов, API поверхности, риск-контроль, мониторинг, интеграции."
+    issues: []
+    api_target: "api/v1/economy/stock-exchange.yaml"
+
   - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
     status: "ready"
     version: "1.1.0"
@@ -1792,10 +1801,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
     checker: "AI Agent (Brain Manager)"
-    notes: "Торговые гильдии: создание/типы, структура ролей, общий капитал, распределение прибыли, торговые квоты, эксклюзивные маршруты, уровни гильдий (1-5), Guild Hall, совместные операции, структура БД (3 таблицы), API endpoints (6 REST)."
+    notes: "Торговые гильдии: расширены БД (банк, маршруты, политики), описан lifecycle, REST API, кворумы и аудит, интеграции с auction/logistics/contracts."
     issues: []
     api_target: "api/v1/economy/trading-guilds.yaml"
 
@@ -1819,10 +1828,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-investments.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
     checker: "AI Agent (Brain Manager)"
-    notes: "Инвестиции: 5 типов (corporate/faction/regional/real estate/production chains), portfolio management, диверсификация, risk analysis, ROI расчёты, структура БД (2 таблицы), API endpoints (4 REST)."
+    notes: "Инвестиции: расширены продукты/позиции/транзакции, lifecycle, REST API, риск-контроль (margin/KYC), аналитика и интеграции со stock/events/housing/guild системами."
     issues: []
     api_target: "api/v1/economy/investments.yaml"
 

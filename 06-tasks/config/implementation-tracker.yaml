@@ -801,6 +801,22 @@ implementations:
     priority: "MEDIUM"
     notes: "PlayerMarketOrdersPage, MarketOrderCard, OrderHistoryCard, тесты, маршрутизация"
 
+- api_path: "api/v1/gameplay/economy/player-market-execution.yaml"
+  task_id: "API-TASK-095"
+  brain_source: ".BRAIN/02-gameplay/economy/player-market/player-market-api.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "completed"
+    started: "2025-11-07 16:20"
+    completed: "2025-11-07 16:45"
+    agent: "Frontend Agent"
+    commit: "3367699"
+    priority: "MEDIUM"
+    notes: "PlayerMarketExecutionPage, ExecutionResultCard, TradeDetailsCard, маршруты"
+
 # === INFRASTRUCTURE & ADMIN (2025-11-07 BATCH 4) ===
 
 - api_path: "api/v1/admin/anti-cheat.yaml"

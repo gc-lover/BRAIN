@@ -1,7 +1,14 @@
+---
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-notes:** Advanced слой квестовой БД: прогресс, флаги, world-state, последствия и SQL-примеры.
+---
+
 # Quest Branching DB - Part 2: Advanced Tables & Examples
 
-**Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:17  
+**Версия:** 1.1.0  
+**Дата обновления:** 2025-11-07 16:14  
+**Дата создания:** 2025-11-07 02:17  
 **Часть:** 2 из 2
 
 [← Part 1](./part1-analysis-core.md) | [Навигация](./README.md)
