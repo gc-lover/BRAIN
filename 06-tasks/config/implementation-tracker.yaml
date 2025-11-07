@@ -993,8 +993,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 22:55"
+    completed: "2025-11-07 23:20"
+    agent: "Frontend Agent"
+    commit: "49cb2f0"
     priority: "MEDIUM"
+    notes: "MentorshipExtendedPage, MentorExtendedCard (legendary), MentorshipRelationshipCard, MentorshipLessonCard, MentorshipAbilityCard, GraduationStatusCard, MentorshipSummaryCard, фильтры"
 
 - api_path: "api/v1/gameplay/social/npc-hiring-extended.yaml"
   task_id: "API-TASK-174"
