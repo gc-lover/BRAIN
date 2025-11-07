@@ -460,15 +460,16 @@ GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `Ro
 
 ## 6. Валидация и телеметрия
 
-- `scripts/validate-romance-flags.ps1` сверяет `flag.romance.hanako.*`, корпоративные флаги и контракты.
-- `scripts/dialogue-simulator.ps1 -Scenario romance-hanako` прогоняет пути `path_loyal`, `path_equal`, `path_respect`, финальные `path_guardian`, `path_alliance`, `path_liberation`.
-- Метрики: `romance-hanako-stage1-success-rate` (цель ≥75%), `romance-hanako-stage2-oath-distribution`, `romance-hanako-liberation-uptake`. При провале двух проверок Stage2 подряд запускается миссия `arasaka-loyalty-check`.
+- `scripts/validate-romance-flags.ps1` сверяет `flag.romance.hanako.*`, корпоративные флаги, контракты и финальные решения Stage3.
+- `scripts/dialogue-simulator.ps1 -Scenario romance-hanako` прогоняет пути `path_loyal`, `path_equal`, `path_respect`, Stage3 ветки `guardian/alliance/liberation`, проверяет выдачу наград и world-state.
+- Метрики: `romance-hanako-stage1-success-rate` (цель ≥75%), `romance-hanako-stage2-oath-distribution`, `romance-hanako-stage3-archive-outcome`, `romance-hanako-liberation-uptake`. При провале двух проверок Stage3 подряд запускается миссия `arasaka-loyalty-check`.
 
 ## 7. Награды и последствия
 
-- **Репутация:** `rep.romance.hanako` до +36, бонус к `rep.corp.arasaka` при `oath-arasaka`.
-- **Контракты:** `arasaka-liberation-pact` (для narrative-service и gameplay-service).
-- **Флаги:** `flag.romance.hanako.stage0`, `flag.romance.hanako.ceremony`, `flag.romance.hanako.path_*`, `flag.romance.hanako.stage1-complete`, `flag.romance.hanako.memories`, `flag.romance.hanako.path_guardian`, `flag.romance.hanako.path_alliance`, `flag.romance.hanako.path_liberation`.
+- **Репутация:** `rep.romance.hanako` до +48, бонус к `rep.corp.arasaka` при `oath-arasaka` и `vow-guardian`.
+- **Контракты/активности:** `arasaka-liberation-pact`, `contract.hanako-shared-future`, `arasaka-archive-leak`, `archivist side-activity` (по флагу stage3-guardian).
+- **Предметы/бафы:** `archive.data-shard`, `buff.guardian-aegis`, `program.lagrange-signal`, `contract.hanako-shared-future` (передача) и `lagrange-signal` баф на Blackwall сопротивление.
+- **Флаги:** `flag.romance.hanako.stage0`, `flag.romance.hanako.ceremony`, `flag.romance.hanako.path_*`, `flag.romance.hanako.stage1-complete`, `flag.romance.hanako.stage2-complete`, `flag.romance.hanako.stage3-unlocked`, `flag.romance.hanako.blackwall_*`, `flag.romance.hanako.stage3-decision`, `flag.romance.hanako.stage3-{guardian|alliance|liberation}`.
 
 ## 8. Связанные материалы
 
@@ -480,6 +481,7 @@ GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `Ro
 
 ## 9. История изменений
 
+- 2025-11-07 21:29 — Версия 1.3.0: добавлен этап 3 (подземный архив), новые проверки, YAML/REST и телеметрия.
 - 2025-11-07 19:24 — Добавлен этап 2 (небесный сад), обновлены API и метрики.
 - 2025-11-07 18:20 — Подтверждён экспорт и API этапа 1.
 - 2025-11-07 17:12 — Создана романтическая сцена Hanako (этап 1).

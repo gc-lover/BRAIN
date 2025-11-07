@@ -19,6 +19,8 @@
 **target-microservice:** social-service (port 8084)  
 **target-frontend-module:** modules/social/player-orders
 
+**Детально:** `player-orders-creation-детально.md`
+
 ---
 
 ## Процесс создания заказа
