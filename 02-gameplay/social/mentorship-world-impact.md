@@ -18,7 +18,8 @@
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  
 **target-frontend-module:** modules/social/mentorship
-
+ 
+**Детально:** `mentorship-world-impact-детально.md`
 ---
 
 ## 7. Социальное влияние наставничества

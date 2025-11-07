@@ -162,3 +162,15 @@ CREATE TABLE dungeon_boss_difficulties (
 - REST/WS контракты дополнены эндпоинтом `aftermath`, схемы данных актуальны.
 - Документ готов к передаче в API Task Creator и синхронизирован с `world-bosses-catalog.md` и `dungeon-scenarios-catalog.md`.
 
+## 12. План ротации инстансов
+| Неделя | Подземелье | Босс | Бонусный модификатор |
+| --- | --- | --- | --- |
+| 1 | Blackwall Echo | `db-echo-guardian` | +10% NetWatch репутация |
+| 2 | Neon Trials | `db-void-maestro` | +15% Arena Fame |
+| 3 | Substructure 77 | `db-bio-harvester` | Удвоенные био-компоненты |
+| 4 | Data Reliquary | `db-specter-warden` | Эксклюзивные Arasaka чертежи |
+| 5 | Ghost Freight | `db-rail-tyrant` | Двойные Nomad Tokens |
+| 6 | Aurora Vault | `db-glass-reaper` | +20% Wave Cult Favor |
+| 7 | Reactor Depths | `db-cinder-archon` | +10% Petrochem Credits |
+| 8 | Ротация повторяется, Hard/Apex получают +1 уровень аффиксов |
+

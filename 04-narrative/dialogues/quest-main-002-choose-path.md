@@ -300,6 +300,9 @@ conversation:
     freelance-track:
       requirements:
         flag.main002.freelance: true
+    media-flash:
+      requirements:
+        flag.main002.media_flash: true
     wrap:
       requirements:
         anyOf:
@@ -322,6 +325,9 @@ conversation:
         - id: choose-freelance
           success:
             setFlags: [flag.main002.freelance]
+        - id: choose-hold
+          success:
+            tutorial: council.take-a-breath
     corp-track:
       options:
         - id: corp-persuade
@@ -331,10 +337,13 @@ conversation:
               modifiers:
                 - source: credential.corporate
                   value: 2
+                - source: flag.main001.target_marked
+                  value: 1
           success:
             setFlags: [flag.arasaka.clearanceA]
             reputation:
               rep.corp.arasaka: 10
+            contracts: [contract.arasaka-entry]
           failure:
             contracts: [contract.corp-basic]
             reputation:
@@ -343,10 +352,19 @@ conversation:
             contracts: [contract.arasaka-serenity]
             reputation:
               rep.corp.arasaka: 14
+            items: [item.corp.access-pass]
           critFailure:
             setFlags: [flag.arasaka.watchlist]
+            debuffs: [corp_clearance_delay:1800]
             reputation:
               rep.corp.arasaka: -8
+        - id: corp-hack
+          success:
+            reputation:
+              rep.corp.arasaka: -1
+        - id: corp-ask
+          success:
+            codex: arasaka.benefits
     gang-track:
       options:
         - id: gang-intimidate
@@ -356,10 +374,13 @@ conversation:
               modifiers:
                 - source: tattoo.valentinos
                   value: 1
+                - source: flag.main001.stealth_clear
+                  value: 1
           success:
             setFlags: [flag.valentinos.oath]
             reputation:
               rep.gang.valentinos: 10
+            activities: [activity.valentinos-caper]
           failure:
             contracts: [contract.valentinos-trial]
             reputation:
@@ -372,28 +393,49 @@ conversation:
             setFlags: [flag.valentinos.suspect]
             reputation:
               rep.gang.valentinos: -8
+            spawns: [valentinos.shadow-tail]
+        - id: gang-loyalty
+          success:
+            contracts: [contract.valentinos-family]
+            reputation:
+              rep.gang.valentinos: 6
+        - id: gang-ask
+          success:
+            codex: valentinos.rules
     law-track:
       options:
         - id: law-honesty
           checks:
             - stat: Persuasion
               dc: 18
+              modifiers:
+                - source: flag.main001.tech_open
+                  value: 1
           success:
             setFlags: [flag.ncpd.badge]
             reputation:
               rep.law.ncpd: 10
+            contracts: [contract.ncpd-intro]
           failure:
             contracts: [contract.ncpd-patrol]
             reputation:
               rep.law.ncpd: 3
           critSuccess:
             contracts: [contract.ncpd-cybercrime-taskforce]
+            items: [item.ncpd.data-key]
             reputation:
               rep.law.ncpd: 14
           critFailure:
             setFlags: [flag.ncpd.review]
+            debuffs: [bureaucracy_hold:1200]
             reputation:
               rep.law.ncpd: -6
+        - id: law-protocols
+          success:
+            codex: ncpd.protocols
+        - id: law-meme
+          success:
+            items: [item.ncpd.copilot-sticker]
     freelance-track:
       options:
         - id: freelance-commit
@@ -403,20 +445,48 @@ conversation:
               class-bonus:
                 netrunner: 2
                 techie: 2
+                solo: 1
           success:
             setFlags: [flag.freelance.contract]
             reputation:
               rep.freelance.global: 8
+            activities: [activity.nomad-convoy]
           failure:
             contracts: [contract.freelance-training]
             reputation:
               rep.freelance.global: 2
+          critSuccess:
+            setFlags: [flag.freelance.priority]
+            items: [item.nomad-pass]
+            reputation:
+              rep.freelance.global: 12
+        - id: freelance-map
+          success:
+            codex: nomad.safe-stops
+        - id: freelance-warning
+          success:
+            hint: convoy.drone-counter
+    media-flash:
+      options:
+        - id: media-wave
+          success:
+            reputation:
+              rep.social.media: 2
+        - id: media-ignore
+          success:
+            hint: media.notifications-muted
     wrap:
       options:
         - id: wrap-affirm
           success:
             finalize: main002
             updateWorld: true
+            setFlags: [flag.main002.media_flash]
+        - id: wrap-joke
+          success:
+            finalize: main002
+            updateWorld: true
+            setFlags: [flag.main002.media_flash]
 ```
 
 > Экспорт формируется `scripts/export-dialogues.ps1` и сохраняется в `api/v1/narrative/dialogues/quest-main-002.yaml`.
@@ -427,10 +497,11 @@ conversation:
 
 | Endpoint | Метод | Назначение |
 | --- | --- | --- |
-| `/narrative/dialogues/quest-main-002` | `GET` | Получить структуру выбора пути и активные ветки |
+| `/narrative/dialogues/quest-main-002` | `GET` | Вернуть структуру выбора пути и активные ветки |
 | `/narrative/dialogues/quest-main-002/state` | `POST` | Сохранить прогресс (`flag.main002.*`, репутации, выданные контракты) |
-| `/narrative/dialogues/quest-main-002/run-check` | `POST` | Выполнить проверку (Persuasion/Intimidation/ClassChoice) |
-| `/narrative/dialogues/quest-main-002/telemetry` | `POST` | Отправить телеметрию распределения фракций и исходов |
+| `/narrative/dialogues/quest-main-002/run-check` | `POST` | Выполнить проверку (Persuasion/Intimidation/ClassChoice) и вернуть исход |
+| `/narrative/dialogues/quest-main-002/media` | `POST` | Записать реакцию игрока в HUD-истории (`flag.main002.media_flash`, `rep.social.media`) |
+| `/narrative/dialogues/quest-main-002/telemetry` | `POST` | Отправить телеметрию распределения фракций, критических провалов и медиапокрытия |
 
 GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNode` с `factionContext` (репутации, активные флаги, доступные миссии) и сообщает рекомендованные квесты следующей цепочки.
 
@@ -438,9 +509,10 @@ GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNod
 
 ## 6. Валидация и телеметрия
 
-- `validate-faction-choice.ps1` сверяет флаги `flag.main002.*`, фракционные бонусы и контракты с документами NPC и социальным сервисом.
-- `dialogue-simulator.ps1` прогоняет ветки corp/gang/law/freelance, проверяя выдачу контрактов и финализацию квеста.
-- Метрики: `faction-choice-distribution`, `faction-check-success`, `faction-watchlist-rate`. При превышении blacklist/watchlist >10% создаётся тикет для gang-service и corp-service.
+- `validate-faction-choice.ps1` сверяет флаги `flag.main002.*`, фракционные бонусы, контракты и наличие HUD-сцены `media-flash`.
+- `dialogue-simulator.ps1 -Scenario choose-path` прогоняет ветки corp/gang/law/freelance, проверяет выдачу предметов, штрафов и регистрацию watch-list.
+- Метрики: `faction-choice-distribution`, `faction-check-success`, `faction-watchlist-rate`, `media-flash-engagement` (ожидаем ≥60% реакции). При превышении watchlist >10% формируется тикет для corp-service и law-service.
+- Интеграция с social-service — сохраняет контент AR-историй для дальнейших ивентов, активирует push при критических провалах.
 
 ---
 
@@ -466,6 +538,7 @@ GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNod
 
 ## 9. История изменений
 
+- 2025-11-07 20:50 — Расширен выбор пути: добавлены пасхалки, HUD media-flash, экспорт YAML и телеметрия; статус `ready`, версия 1.2.0.
 - 2025-11-07 19:18 — Добавлены экспорт, REST/GraphQL блок и метрики. Статус `ready`, версия 1.1.0.
 - 2025-11-07 16:42 — добавлен диалоговый сценарий для квеста 1.2.
 

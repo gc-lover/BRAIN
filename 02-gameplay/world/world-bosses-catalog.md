@@ -194,3 +194,12 @@ CREATE TABLE world_boss_schedules (
 }
 ```
 
+## 13. Пример ротации (world-service schedule)
+| Лига | День цикла | Босс | Особенность |
+| --- | --- | --- | --- |
+| Bronze | Пн/Чт | `wb-nomad-leviathan` | Активирует караваны Nomad Coalition |
+| Silver | Вт/Пт | `wb-valentinos-saint` | Открывает romance-провокации |
+| Gold | Ср/Сб | `wb-neon-titan` | Усиливает корпоративные рейды |
+| Platinum | Вс | `wb-hivemind-behemoth` | Запускает Maelstrom нейро-шкалу |
+| Mythic | Каждые две недели | `wb-eclipse-seraph` / `wb-blackwall-wraith` | Переключается в зависимости от world.flag.blackwall_integrity |
+
