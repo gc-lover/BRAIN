@@ -895,8 +895,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 16:45"
+    completed: "2025-11-07 17:05"
+    agent: "Frontend Agent"
+    commit: "0502c55"
     priority: "LOW"
+    notes: "PricingPage, ItemPriceCard, PriceBreakdownCard, MarketDataCard, ModifiersCard, маршрутизация"
 
 - api_path: "api/v1/gameplay/progression/progression-detailed.yaml"
   task_id: "API-TASK-170"
