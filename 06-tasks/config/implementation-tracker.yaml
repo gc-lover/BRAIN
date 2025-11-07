@@ -731,8 +731,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 18:10"
+    completed: "2025-11-07 18:40"
+    agent: "Frontend Agent"
+    commit: "f512932"
     priority: "MEDIUM"
+    notes: "LogisticsPage на shared GameLayout, ShipmentCard, RoutesCard, VehicleStatsCard, InsurancePlansCard, RiskMatrixCard, ConvoyStatusCard"
 
 - api_path: "api/v1/lore/lore-reference.yaml"
   task_id: "API-TASK-160"

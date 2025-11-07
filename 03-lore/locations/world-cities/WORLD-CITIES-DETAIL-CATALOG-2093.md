@@ -120,6 +120,7 @@
 - **Фракции:** Arasaka (империя корпорации), Neon Ronin (элитный клан самураев), Tyger Claws (городские банды).
 
 ### Shanghai (Китай)
+- **См.** `./shanghai-detailed-2020-2093.md`
 - **Районы:** Pudong Apex (корпоративные шпили), Old Bund Sanctum (историческая зона), Pearl Undergrid (подземные рынки), Changjiang Dock (мегапорт).
 - **Ключевые улицы:** Huangpu Magline, Bund Skyway, Pearl Circuit.
 - **NPC:** Линь «Azure» Чжао (директор Kang Tao Asia), капитан Цзян Лэй (портовая охрана), монахиня Юй Лян (хранительница храмов).
@@ -127,6 +128,7 @@
 - **Особенности:** конкуренция Kang Tao и местных триад, квесты по защите дата-караванов, переплетение традиций и ультрамодерна.
 
 ### Seoul (Южная Корея)
+- **См.** `./seoul-detailed-2020-2093.md`
 - **Районы:** Neon Gangnam (корпорации и айдолы), DMZ Skywall (военный пояс), Bukchon Memory Grid (культурное ядро), Cyber Lotte Hive (торговые уровни).
 - **Ключевые улицы:** K-Pulse Highway, Han River Hoverway, Memory Alley.
 - **NPC:** Пак Джи-Сон (продюсер виртуальных айдолов), майор Ким Тэ-ён (командир Skywall), хакерка «Gumi» Мин (лидер NET-коллектива).
@@ -134,6 +136,7 @@
 - **Особенности:** музыкальные PvP-ивенты, боевые симуляции на DMZ, сетевые войны фан-сообществ.
 
 ### Singapore (Сингапур)
+- **См.** `./singapore-detailed-2020-2093.md`
 - **Районы:** Marina Quantum Hub (финансы), Forest Arcology (зеленые купола), Port Leviathan (логистика), Chinatown Archives (исторический рынок).
 - **Ключевые улицы:** Helix Data Bridge, Orchard Nexus, Port Leviathan Spine.
 - **NPC:** премьер Таан Чжун (архитектор умного государства), Лайра Вонг (капитан корпоративной безопасности), братство «Twin Merlions» (контрабандисты).
@@ -141,6 +144,7 @@
 - **Особенности:** ультра-контроль государства, высокоставочные экономические события, шпионские миссии.
 
 ### Bangkok (Таиланд)
+- **См.** `./bangkok-detailed-2020-2093.md`
 - **Районы:** Chao Phraya Platforms (плавучие кварталы), Cyber-Sukhumvit (ночная жизнь), Temple Heights (вертикальные храмы), Delta Slums (индустриальные трущобы).
 - **Ключевые улицы:** SkySukhumvit Rail, Lotus Canalways, Golden Recluse Steps.
 - **NPC:** Прахан «Lotus» Сурия (лидер банды River Serpents), настоятель Вирапат (хранитель кибер-храмов), корпоративный представитель AIS-Tech Мэй Ву.
