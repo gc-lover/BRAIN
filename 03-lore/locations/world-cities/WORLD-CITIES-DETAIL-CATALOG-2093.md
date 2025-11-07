@@ -75,23 +75,27 @@
 - **Кратко:** дамбы, плавающие кварталы, Fog Razors, Order of Clockwork, Skywalk Terraces.
 - **Ключевые улицы:** Skyline Loop, Thames Flowway, Royal Causeway.
 - **NPC:** Элоиза Прайс, Маркус Шарп, Арджун Кханна.
+- **Фракции:** Fog Razors (пираты Восточного Лондона), EBM Security (корпоративная армия), Order of Clockwork (техно-орден инженеров).
 
 ### Berlin (Германия)
 - **См.** `berlin-detailed-2020-2093.md`
 - **Кратко:** коммунары, EuroDyne, FreeGrid, Unter-Net.
 - **Ключевые улицы:** DataRing Autobahn, Spreeboard Promenade, WallLine Loop.
 - **NPC:** Элизабет Вайс, Tarik Юлмаз, Хельмут Краус.
+- **Фракции:** EuroDyne Core (корпорация нейросетей), Flux Kollektiv (кибер-коммуна), Stahlfist (частная армия).
 
 ### Paris (Франция)
 - **Районы:** Lumière Dome (центр моды), Seine SkyArc (плавучие мосты), Banlieue Forge (промышленные окраины), Catacombs Noir (подземный квартал).
 - **Ключевые улицы:** Champs-Élysées HoloRun, Seine Glideway, Montmartre Spiral.
 - **NPC:** Клара Дюбуа (дизайнер аватаров), Люсьен «Spectre» Фавр (куратор катакомб), коммандер Антуан Блан (гвардия Синдиката).
+- **Фракции:** Haute Lumière (модный консорциум), Catacomb Brotherhood (подземные хранители), République Sécuritaire (городская жандармерия).
 - **Особенности:** войны брендов, конкурсы на лучшую голографическую коллекцию, подпольные дуэли художников.
 
 ### Milan (Италия)
 - **Районы:** Quadrilatero Lux (мода), BioDomo Navigli (агро-купола), Industria Vecchia (ретрофабрики), Porta Cybersica (лаборатории имплантов).
 - **Ключевые улицы:** Via Neone, Navigli Skywalk, Corso Meccano.
 - **NPC:** Виола Россини (глава модного консорциума), Дарио Ферреро (хирург имплантов), Сестра Лукреция (лидер братства хранителей искусства).
+- **Фракции:** Lux Consortium (дом моды), Meccano Union (цех имплант-мастеров), Sacred Glass Brotherhood (культурные хранители).
 - **Особенности:** синтез моды и кибернетики, PvE-рейды на фабриках, моральные дилеммы между искусством и коммерцией.
 
 ### Moscow (Евразийский блок)
@@ -99,89 +103,104 @@
 - **Кратко:** купола SovOil, метро Red Winters, катакомбы, Kryo Dogs.
 - **Ключевые улицы:** МКАД 2.0, Неоновый Арбат, метро «Казаковская».
 - **NPC:** Анастасия Орлова, Лев Чернов, Сергей Вяземский.
+- **Фракции:** SovOil Eurasia (корпоративное правительство), Red Winters (подземная банда), Kryo Dogs (контрабанда имплантов).
 
 ### Tokyo (Япония)
 - **См.** `tokyo-detailed-2020-2093.md`
 - **Кратко:** пять уровней, Arasaka Tower, Neon Ronin, Project Immortal.
 - **Ключевые улицы:** Shibuya Crossing, Akihabara Backline, Roppongi Skydeck.
 - **NPC:** Saburo Arasaka (через советников), Кендзи «Blade» Танака, жрицы Senso-ji.
+- **Фракции:** Arasaka (империя корпорации), Neon Ronin (элитный клан самураев), Tyger Claws (городские банды).
 
 ### Shanghai (Китай)
 - **Районы:** Pudong Apex (корпоративные шпили), Old Bund Sanctum (историческая зона), Pearl Undergrid (подземные рынки), Changjiang Dock (мегапорт).
 - **Ключевые улицы:** Huangpu Magline, Bund Skyway, Pearl Circuit.
 - **NPC:** Линь «Azure» Чжао (директор Kang Tao Asia), капитан Цзян Лэй (портовая охрана), монахиня Юй Лян (хранительница храмов).
+- **Фракции:** Kang Tao Asia (корпорация вооружений), Pearl Syndicate (торговая мафия), Jade Lotus Order (религиозное братство).
 - **Особенности:** конкуренция Kang Tao и местных триад, квесты по защите дата-караванов, переплетение традиций и ультрамодерна.
 
 ### Seoul (Южная Корея)
 - **Районы:** Neon Gangnam (корпорации и айдолы), DMZ Skywall (военный пояс), Bukchon Memory Grid (культурное ядро), Cyber Lotte Hive (торговые уровни).
 - **Ключевые улицы:** K-Pulse Highway, Han River Hoverway, Memory Alley.
 - **NPC:** Пак Джи-Сон (продюсер виртуальных айдолов), майор Ким Тэ-ён (командир Skywall), хакерка «Gumi» Мин (лидер NET-коллектива).
+- **Фракции:** K-Pulse Entertainment (медиа-конгломерат), Skywall Defense Corps (военные гарнизоны), Memory Weavers (культурное подполье).
 - **Особенности:** музыкальные PvP-ивенты, боевые симуляции на DMZ, сетевые войны фан-сообществ.
 
 ### Singapore (Сингапур)
 - **Районы:** Marina Quantum Hub (финансы), Forest Arcology (зеленые купола), Port Leviathan (логистика), Chinatown Archives (исторический рынок).
 - **Ключевые улицы:** Helix Data Bridge, Orchard Nexus, Port Leviathan Spine.
 - **NPC:** премьер Таан Чжун (архитектор умного государства), Лайра Вонг (капитан корпоративной безопасности), братство «Twin Merlions» (контрабандисты).
+- **Фракции:** SmartNation Council (госуправление), Leviathan Port Authority (портовая структура), Twin Merlions (тень рынка).
 - **Особенности:** ультра-контроль государства, высокоставочные экономические события, шпионские миссии.
 
 ### Bangkok (Таиланд)
 - **Районы:** Chao Phraya Platforms (плавучие кварталы), Cyber-Sukhumvit (ночная жизнь), Temple Heights (вертикальные храмы), Delta Slums (индустриальные трущобы).
 - **Ключевые улицы:** SkySukhumvit Rail, Lotus Canalways, Golden Recluse Steps.
 - **NPC:** Прахан «Lotus» Сурия (лидер банды River Serpents), настоятель Вирапат (хранитель кибер-храмов), корпоративный представитель AIS-Tech Мэй Ву.
+- **Фракции:** River Serpents (водные рейдеры), Siam Temple Network (кибер-буддийский орден), AIS-Tech Security (корпоративная охрана).
 - **Особенности:** сочетание буддийской эстетики и подпольных рынков, миссии на плавучих аренах, духовные квесты с AR-тестами.
 
 ### Saint Petersburg (СНГ)
 - **Районы:** Nevsky Holo-Avenue (элитный центр), Kronstadt Bastion (военный порт), Underground Hermitage (коллекция подземных артефактов), Petrogradka Loft (арт-кластеры).
 - **Ключевые улицы:** Aurora Glacial Line, Winter Canal Run, Admiralty Skywalk.
 - **NPC:** Мария «Tsarina» Волкова (куратор искусств), капитан Илья Пастухов (флот Балтики), хакер Артём «Fabergé» Молчанов.
+- **Фракции:** Aurora Curators (арт-альянс), Baltic Shield Fleet (военный флот), Fabergé Circuit (элитное хакерское сообщество).
 - **Особенности:** культурные фестивали, ледовые PvE-события, конфликты между художниками и военными.
 
 ### Almaty (Казахстан)
 - **Районы:** Steppe Nexus (логистический узел), Medeu Cryo-Town (горнолыжные купола), Techmarket Green Bazaar (рынки), Ridge Vaults (подземные склады).
 - **Ключевые улицы:** Silk Data Road, Medeu Climbs, Steppe Magline.
 - **NPC:** Алия Хан (директор кластера Steppe Nexus), Мурат «Nomad» Сарыбаев (лидер караванов), Зара «Frostbite» Темирова (спортсменка-киборг).
+- **Фракции:** Steppe Nexus Consortium (логистика), Caravan Nomads (бродячие кланы), Medeu Cryo League (кибер-спортсмены).
 - **Особенности:** караванные рейды через степи, кибер-спорт на высоте, контрабанда редких минералов.
 
 ### Kyiv (Украина)
 - **Районы:** Dnipro SkyTerraces (верхние уровни), Pechersk Vault (бункеры), Troieshchyna Grid (технопосёлки), Podil Craft Quarter (ремесленные мастерские).
 - **Ключевые улицы:** Hreschatyk Neo-Boulevard, Dnipro Flyway, Golden Gate Spine.
 - **NPC:** Оксана «Beacon» Левченко (лидер волонтёрского движения), Андрей Швидкий (оператор энергетической сети), отец Никита Пилипенко (смотритель лавры и крипто-архива).
+- **Фракции:** SkyTerrace Council (городское управление), Dnipro Guardians (энергетическая охрана), Crypt-Lavra Order (духовное братство).
 - **Особенности:** восстановление города после войн, миссии по защите энергосети, духовные квесты в катакомбах.
 
 ### Mexico City (Мексика)
 - **Районы:** Templo Fusion (культурный центр), Arcology Reforma (вертикальный город), Xochimilco Floating Sector (плавучие фермы), Volcano Shield (защитные структуры у Попокатепетля).
 - **Ключевые улицы:** Reforma Spine, Xochimilco Flow, Volcano Evac Loop.
 - **NPC:** Алехандра «Cenzontle» Марин (журналист-революционер), генерал Мигель Ортиз (командир национальной гвардии), инженер Рената Чапульте (архитектор дамб).
+- **Фракции:** National Guard Shield (госбезопасность), Xochimilco Collective (аграрные коммуны), Volcano Vigil (сейсмологи-ополчение).
 - **Особенности:** землетрясения и вулканические ивенты, подпольные СМИ, борьба за воду.
 
 ### São Paulo (Бразилия)
 - **Районы:** Megasampa Core (деловой центр), Favela Aurora (вертикальные фавелы), BioAmazon Hub (биотехнологии), Paulista SkyGrid (торговля).
 - **Ключевые улицы:** Paulista SkyGrid, Tietê Skyway, Favela Aurora Lattice.
 - **NPC:** Тиаго «Pulse» Феррейра (лидер Favela Aurora), доктор Ана Бранко (биотех консорциум), комиссар Рафаэла Сантос (антикоррупционный отдел).
+- **Фракции:** BioAmazon Consortium (биотех корпорация), Aurora Collective (фавелы-сообщества), Justiça Nova (антимонополистический департамент).
 - **Особенности:** социальные контрасты, биотех-рейды, PvP на крышах фавел.
 
 ### Buenos Aires (Аргентина)
 - **Районы:** Neo-Puerto Madero (порт), Tango Vault (культурный центр), Pampas Logistics (агрорынки), Subsoil Sanctum (подземные виноградники).
 - **Ключевые улицы:** Libertador Prism, Tango Avenue, Pampas Rail.
 - **NPC:** Лусия «Arrabal» Мартинес (танцовщица и информатор), Эмилио Браво (глава логистической сети), священник Педро Сантьяго (лидер сообщества автономистов).
+- **Фракции:** Tango Collective (культурный союз), Pampas Logistics Guild (торговцы), Sanctum Clergy (подземное братство).
 - **Особенности:** музыкальные войны на площадях, контрабанда биотоплива, социальные миссии в трущобах.
 
 ### Lagos (Нигерия)
 - **Районы:** Atlantic Mega-Harbour (порт), Floating Makoko (плавучие кварталы), Silicon Island (технопарк), Redemption Shield (противоштормовые стены).
 - **Ключевые улицы:** Lekki Skyway, Makoko Drift, Harbour Spine.
 - **NPC:** Адаобе Нвеке (куратор Silicon Island), капитан «Wavebreaker» Джиде (лидер морской милиции), жрица Оламаиде (совет старейшин).
+- **Фракции:** Harbour Authority (портовый синдикат), Makoko Armada (водные общины), Silicon Collective (стартап-кластеры).
 - **Особенности:** штормовые PvE-события, экономические войны за грузовые маршруты, мистические квесты с традиционными культами.
 
 ### Cairo (Египет)
 - **Районы:** Nile Databanks (финансовый центр), Giza Solar Scarab (солнечные фермы), Old City Sanctum (историческая зона), Desert Oasis Sprawl (новые поселения).
 - **Ключевые улицы:** Nile Skyrail, Pyramid Approach, Oasis Flowline.
 - **NPC:** Саид аль-Хаддад (директор солнечных ферм), Нура Абдельлатиф (археолог-хакер), генерал Халед Фарадж (командующий пустынными войсками).
+- **Фракции:** Solar Scarab Cooperative (энергетика), Antiquity Netkeepers (археологическая сеть), Desert Guard Legion (военные гарнизоны).
 - **Особенности:** раскопки под пирамидами, солнечные штормы, задания по защите караванов через Сахару.
 
 ### Sydney (Австралия)
 - **Районы:** Harbour Shield (укреплённая гавань), Pacific Stack (вертикальные жилые блоки), Outback Gateway (логистика пустыни), BioReef Park (искусственные кораллы).
 - **Ключевые улицы:** Harbour Skyway, Pacific Ring, Outback MagRail.
 - **NPC:** Капитан Сиан Маккензи (береговая служба), доктор Арун Пател (био-рифы), «Boomerang» Джей Танба (лидер аборигенных кланов-рейнджеров).
+- **Фракции:** Harbour Guard (военно-морская структура), BioReef Collective (экологический синдикат), Outback Rangers (аборигенное братство).
 - **Особенности:** морские рейды на пиратов, экологические миссии, охота за редкими биоматериалами.
 
 ### Auckland (Новая Зеландия)
