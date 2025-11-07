@@ -7,8 +7,8 @@
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-133: api/v1/party/party-system.yaml (2025-11-07 10:26)
-- Last Updated: 2025-11-07 00:18
+  - API-TASK-231: api/v1/party/party-system.yaml (2025-11-08 05:25)
+- Last Updated: 2025-11-08 05:25
 ---
 
 

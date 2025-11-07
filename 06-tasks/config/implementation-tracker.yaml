@@ -1121,3 +1121,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/gameplay/battle-pass/battle-pass-core.yaml"
+    task_id: "API-TASK-207"
+    brain_source: ".BRAIN/05-technical/backend/battle-pass/part1-core-progression.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
