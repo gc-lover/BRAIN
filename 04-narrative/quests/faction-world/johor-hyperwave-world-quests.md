@@ -54,6 +54,16 @@
 
 ---
 
+## FQ-JOHOR-005: «Lotus Bridge»
+**Локация:** Джохор-Бару / Осака / Хельсинки | **Репутация:** +60 | **Уровень:** 32-36 | **DC:** 26  
+**Ключевые NPC:** Мэй «Lotus Signal» Чун, Нагиса «Harbor Regent» Катаока, Айно «Harmony Regent» Лехто  
+**Кратко:** Hyperwave, Osaka Quantum и Aurora Harmony строят гибридный контейнерный мост. Игрок решает, кто получит контроль над расписанием.
+- Этапы: Настроить Lotus Bridge Interface (Tech DC 26) → Защитить маглев от Night Riders (Combat DC 26) → Заключить культурное соглашение (Social DC 25)
+- Варианты: Передать управление Osaka Quantum (+35 Osaka Quantum) или сохранить Hyperwave (+35 Hyperwave)
+- Награды: 4800 ed, +35 Hyperwave Straits Authority, мод «Lotus Bridge Array»
+
+---
+
 ## Прогресс и дальнейшие шаги
 
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-JOHOR-HYPERWAVE-001`.

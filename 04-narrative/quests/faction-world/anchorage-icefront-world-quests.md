@@ -54,6 +54,16 @@
 
 ---
 
+## FQ-ANCHORAGE-005: «Seal Drift Exchange»
+**Локация:** Анкоридж / Джохор-Бару / Хельсинки | **Репутация:** +60 | **Уровень:** 32-36 | **DC:** 26  
+**Ключевые NPC:** Майя «Seal Whisper» Неру, Луми «Aurora DJ» Мякинен, Хазира «Wave Director» Юсуф  
+**Кратко:** Icefront, Aurora Harmony и Hyperwave синхронизируют культурный альянс. Игрок решает, кто получит приоритет транспортов.
+- Этапы: Настроить Seal Drift Corridor (Tech DC 26) → Провести фестиваль северного света (Performance DC 25) → Договориться о распределении грузов (Social DC 25)
+- Варианты: Укрепить Hyperwave (+35 Hyperwave) или Harmony (+35 Aurora Harmony)
+- Награды: 4800 ed, +35 Anchorage Icefront Authority, мод «Seal Drift Resonator»
+
+---
+
 ## Прогресс и дальнейшие шаги
 
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-ANCHORAGE-ICEFRONT-001`.

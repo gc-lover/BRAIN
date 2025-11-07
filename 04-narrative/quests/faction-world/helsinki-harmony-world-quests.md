@@ -54,6 +54,16 @@
 
 ---
 
+## FQ-HELSINKI-005: «Aurora Frequency»
+**Локация:** Хельсинки / Джохор-Бару / Night City | **Репутация:** +60 | **Уровень:** 32-36 | **DC:** 26  
+**Ключевые NPC:** Луми «Aurora DJ» Мякинен, Прия «Prism Star» Капур, Хазира «Wave Director» Юсуф  
+**Кратко:** Harmony, NeuroStage и Hyperwave создают глобальный фестиваль. Игрок решает, кому передать права трансляции.
+- Этапы: Подготовить Aurora Festival Network (Tech DC 26) → Поставить AR-шоу в Night City (Performance DC 25) → Переговоры о распределении прибыли (Social DC 25)
+- Варианты: Передать права Dreamwave Studios (+35 Dreamwave) или сохранить за Harmony (+35 Aurora Harmony)
+- Награды: 4800 ed, +35 Aurora Harmony Consortium, мод «Aurora Frequency Amplifier»
+
+---
+
 ## Прогресс и дальнейшие шаги
 
 - После перевода в статус ready требуется сформировать API-задачу `API-TASK-HELSINKI-HARMONY-001`.
