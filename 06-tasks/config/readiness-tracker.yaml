@@ -2997,5 +2997,41 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/johor-hyperwave.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/kinshasa-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 03:10"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Киншасы: Lumina Malebo, Kasai Flux, династийные архивы."
+    issues: []
+    api_target: "api/v1/lore/locations/kinshasa.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/ulaanbaatar-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 03:22"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Улан-Батора: Sky Mandala, песчаные караваны, техно-монастыри."
+    issues: []
+    api_target: "api/v1/lore/locations/ulaanbaatar.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/kinshasa-river-nexus-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 03:28"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Congo River Nexus: Lumina Relay, Kasai Ledger, Delta Heirloom, Floodgate."
+    issues: []
+    api_target: "api/v1/narrative/factions/kinshasa-river-nexus.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/ulaanbaatar-steppe-signal-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 03:33"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Steppe Signal Collective: Sky Mandala Run, Gobi Stormbridge, Khansgate Echo, Blue Wolf Accord."
+    issues: []
+    api_target: "api/v1/narrative/factions/ulaanbaatar-steppe-signal.yaml"
+
 # Примеры записей:
 

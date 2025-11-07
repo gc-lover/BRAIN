@@ -1195,6 +1195,15 @@ implementations:
   frontend:
     status: "not_started"
 
+- api_path: "api/v1/gameplay/world/events/seasonal-schedule.yaml"
+  task_id: "API-TASK-273"
+  brain_source: ".BRAIN/02-gameplay/world/seasonal-events-2020-2093.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+  frontend:
+    status: "not_started"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
