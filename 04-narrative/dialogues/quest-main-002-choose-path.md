@@ -444,12 +444,17 @@ GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNod
 
 ---
 
-## 7. Награды и последствия
+## 4. Награды и последствия
 
-- **Репутация:** +10 к выбранной фракции (убывает у конкурирующих). Независимый путь повышает `rep.freelance.global`, снижает `rep.corp.arasaka` и `rep.gang.valentinos`.
-- **Предметы:** Корпоративный пропуск, медальон Valentinos, значок NCPD или маршруты Nomad.
-- **Флаги:** `flag.main002.corp|gang|law|freelance`, а также `flag.arasaka.clearanceA`, `flag.valentinos.oath`, `flag.ncpd.badge`, `flag.freelance.contract`.
-- **World-state:** Активируются цепочки `arasaka-world-quests`, `heywood-valentinos-chain`, `ncpd-patrol-chain`, `freelance-network`.
+- **Репутация:**
+  - Корпоративный путь: `rep.corp.arasaka +10` (до +14 при критическом успехе), `rep.street -2`, `rep.freelance -1`.
+  - Уличный путь: `rep.gang.valentinos +10` (+14 при медальоне), `rep.corp.arasaka -3`, `rep.law.ncpd -1`.
+  - Закон и порядок: `rep.law.ncpd +10` (+14 при taskforce), `rep.gang.valentinos -2`, `rep.freelance -1`.
+  - Фриланс: `rep.freelance.global +8` (+12 при Priority Pass), небольшие штрафы к корп/ганг (-1).
+- **Предметы/контракты:** корпоративный пропуск, медальон Valentinos, значок NCPD, Priority Pass Nomad, а также тематические активности (`activity.valentinos-caper`, `activity.nomad-convoy`, `contract.arasaka-entry`, `contract.ncpd-intro`).
+- **HUD/соц-метрики:** `media-flash` повышает `rep.social.media`, открывает AR-историю в social-service.
+- **Флаги:** `flag.main002.{corp|gang|law|freelance}`, а также `flag.arasaka.clearanceA`, `flag.valentinos.oath`, `flag.ncpd.badge`, `flag.freelance.contract`, `flag.main002.media_flash`.
+- **World-state:** активируются цепочки `arasaka-world-quests`, `heywood-valentinos-chain`, `ncpd-patrol-chain`, `freelance-network`; обновляется карта влияния в `world-service`.
 
 ## 8. Связанные материалы
 
