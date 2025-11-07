@@ -8,6 +8,12 @@
 [← Part 1](./part1-dashboard-moderation.md) | [Навигация](./README.md)
 
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-213: api/v1/admin/panel/admin-panel-analytics-ui.yaml (2025-11-08 01:26)
+- Last Updated: 2025-11-08 01:26
+---
 
 ## Analytics Dashboard
 
