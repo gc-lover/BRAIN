@@ -703,8 +703,13 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-crafting-recipes.md v2.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 20:40"
+    completed: "2025-11-07 23:10"
+    agent: "Backend Agent"
+    commit: "pending"
     priority: "HIGH"
+    notes: "CraftingSystemServiceImpl, CraftingSystemController, CraftingStationRepository, миграция 086"
   frontend:
     status: "not_started"
     priority: "HIGH"
@@ -714,8 +719,13 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 23:20"
+    completed: "2025-11-08 02:30"
+    agent: "Backend Agent"
+    commit: "pending"
     priority: "MEDIUM"
+    notes: "TradingGuildsServiceImpl, GuildTreasuryServiceImpl, GuildTradingServiceImpl, контроллеры, миграции 087-088"
   frontend:
     status: "not_started"
     priority: "MEDIUM"

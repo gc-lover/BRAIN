@@ -624,6 +624,15 @@ documents:
     issues: []
     api_target: "api/v1/world/specter-hq.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/helios-countermesh-ops.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:25"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Helios Countermesh Ops: PvE/PvPvE ответные операции, экономика, репутации и API." 
+    issues: []
+    api_target: "api/v1/world/helios-countermesh-ops.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"
