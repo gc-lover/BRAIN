@@ -102,7 +102,9 @@ implementations:
       commit: "06b79a9"
       notes: "GameStartController - старт игры"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 01:02"
+      agent: "Frontend Agent"
   
   - api_path: "api/v1/game/initial-state.yaml"
     task_id: "API-TASK-004"
