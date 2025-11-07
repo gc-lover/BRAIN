@@ -1032,3 +1032,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/technical/session-management/lifecycle.yaml"
+    task_id: "API-TASK-198"
+    brain_source: ".BRAIN/05-technical/backend/session-management/part1-lifecycle-heartbeat.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
