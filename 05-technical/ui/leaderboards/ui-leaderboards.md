@@ -16,6 +16,12 @@
 **Размер:** ~370 строк ✅
 
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-211: api/v1/world/leaderboards/leaderboards-ui.yaml (2025-11-08 00:59)
+- Last Updated: 2025-11-08 00:59
+---
 
 ## Краткое описание
 
