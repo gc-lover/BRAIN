@@ -1094,3 +1094,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/gameplay/clans/clan-war-system.yaml"
+    task_id: "API-TASK-204"
+    brain_source: ".BRAIN/05-technical/backend/clan-war/clan-war-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
