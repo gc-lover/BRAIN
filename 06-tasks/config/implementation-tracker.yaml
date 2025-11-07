@@ -1130,6 +1130,20 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/battle-pass/part1-core-progression.md"
     api_status: "completed"
     backend:
+      status: "completed"
+      started: "2025-11-07 15:10"
+      completed: "2025-11-07 16:55"
+      agent: "Backend Agent"
+      priority: "CRITICAL"
+      notes: "Реализованы таблицы character_progression/skill_experience/progression_milestones, сервис ProgressionBackendServiceImpl с логикой опыта, атрибутов и навыков, контроллер ProgressionBackendController"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/battle-pass/battle-pass-rewards.yaml"
+    task_id: "API-TASK-208"
+    brain_source: ".BRAIN/05-technical/backend/battle-pass/part2-rewards-challenges.md"
+    api_status: "completed"
+    backend:
       status: "not_started"
     frontend:
       status: "not_started"

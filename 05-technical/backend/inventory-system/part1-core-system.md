@@ -1,3 +1,9 @@
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-234: api/v1/inventory/inventory-core.yaml (2025-11-08 06:10)
+- Last Updated: 2025-11-08 06:10
+
 # Inventory System - Part 1: Core System
 
 **Статус:** approved  
