@@ -133,12 +133,17 @@
 │   │       └── organizations-list.md   # Список организаций
 │   ├── locations/                     # Локации
 │   │   ├── README.md                  # Обзор локаций
-│   │   ├── cities/                    # Города
-│   │   │   ├── README.md              # Обзор городов
-│   │   │   └── cities-list.md         # Список городов
-│   │   └── zones/                     # Зоны и районы
-│   │       ├── README.md              # Обзор зон
-│   │       └── zones-list.md          # Список зон
+│   │   ├── locations-overview.md      # Обзор локаций
+│   │   ├── night-city/                # Детализация Найт-Сити по районам
+│   │   │   ├── NIGHT-CITY-DISTRICTS-MASTER-INDEX.md
+│   │   │   ├── pacifica-detailed-2020-2093.md
+│   │   │   ├── watson-detailed-2020-2093.md
+│   │   │   └── westbrook-detailed-2020-2093.md
+│   │   ├── world-cities/              # Города мира, структура по регионам
+│   │   │   ├── WORLD-CITIES-MASTER-INDEX.md
+│   │   │   ├── tokyo-detailed-2020-2093.md
+│   │   │   └── CITY-DETAIL-TEMPLATE.md # Шаблон детального описания города
+│   │   └── zones/                     # Зоны и районы (в разработке)
 │   └── characters/                    # Персонажи
 │       ├── README.md                  # Обзор персонажей
 │       ├── npcs/                      # NPC

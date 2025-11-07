@@ -69,3 +69,6 @@
 - `npcs/` - Детальное описание NPC (TODO)
 - `protagonists/` - Создание персонажа игрока (TODO)
 
+### Visual Guides (Визуальные гиды)
+- `visual-guides/visual-style-assets.md` - Визуальные описания персонажей, оружия, экипировки и предметов
+
