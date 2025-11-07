@@ -31,6 +31,7 @@
 - **Районы:** City Center (корпоративное ядро), Watson (трущобы хаков), Westbrook (элита и клубы), Pacifica (заброшенный курорт), Heywood и Santo Domingo (рабочие и индустриальные зоны).
 - **Ключевые улицы:** Небесная магистраль Arasaka Skyway, рынок Kabuki, аллея North Oak Boulevard.
 - **NPC:** Виктор Вектор (ripperdoc), Mr. Hands (фиксер), Wakako Okada (Tyger Claws координатор).
+- **Фракции:** Arasaka (корпоративный контроль), Militech (секретные операции), Voodoo Boys (сетевая защита Pacifica), Tyger Claws (развлекательные кварталы).
 - **Особенности:** идеальная база для корпоративных интриг, экстракт-зоны в Pacifica, сетевые вторжения Voodoo Boys.
 - **Документы:** `night-city/WATSON...`, `night-city/PACIFICA...`, `night-city/WESTBROOK...`
 
@@ -38,30 +39,35 @@
 - **Районы:** Neo-Hollywood (голографические студии), Santa Monica Arcology (прибрежные купола), Inland Megaburbs (модули среднего класса), Ruined Valley (заброшенные индустриальные зоны).
 - **Ключевые улицы:** Sunset Holo-Strip (VR премьеры), Pacific Magtube (скоростной транспорт вдоль побережья), Flooded Sepulveda Tunnels (контрабанда).
 - **NPC:** Грейс «Stage» Лин (продюсер химерного контента), Рафаэль Круз (лидер банды Chromatic Saints), мэр Нео-ЛА Айлин Джу (корпоративная политик).
+- **Фракции:** Chromatic Saints (уличные артисты), Dreamwave Studios (корпорация развлечений), Pacific Wardens (береговая охрана мегаполиса).
 - **Особенности:** битвы за контроль медиа, braindance турниры, фракции студий воюют за авторские права на живые аватары.
 
 ### New York (США, Северо-Восток)
 - **Районы:** Manhattan Spire (вертикальный мегакомплекс), Liberty Harbour (плавучие кварталы), Bronx Grid (энергетический хаб), Neo-Brooklyn Commons (кооперативы).
 - **Ключевые улицы:** WallStreet Skywalk, Queens Cargo Loop, Broadway Immersion Lane.
 - **NPC:** Джулиан «Ledger» Фостер (финансовый брокер Militech), Сара Хуа (капитан Liberty Harbour), «Проповедник» Элайджа Бун (религиозный лидер в Bronx Grid).
+- **Фракции:** Militech Finance Desk (корпоративные брокеры), Liberty Mariners (морская гвардия), Cathedral of Echo (кибер-церковь).
 - **Особенности:** глобальный центр финансовых доминаций, PvP-контракты между корпорациями, хакерские рейды NetWatch.
 
 ### Chicago (США, Иллинойс)
 - **Районы:** Wind Corridor (ветропарки), Loop Reinforced (деловой центр), Sprawl South (индустриальные руины), Crystal Shore (озёрная зона).
 - **Ключевые улицы:** MagRail Canalway, Southside Freight Spine, Neo-Lakefront Walk.
 - **NPC:** Миа «Gale» Риверс (оператор погодных щитов), Донован Кейн (лидер банды Steel Swarm), профессор Игорь Данилов (исследователь климатических ИИ).
+- **Фракции:** Steel Swarm (индустриальные рейдеры), WeatherWorks (корпорация климат-контроля), Lakeside Union (рабочие профсоюзы).
 - **Особенности:** климатические эксперименты, миссии по стабилизации погодных куполов, теневые сделки с Militech.
 
 ### Detroit (США, Мичиган)
 - **Районы:** Automata Forge (роботизированные заводы), Coppertown (арт-кооперативы), Forgotten Suburbs (пустующие кварталы), Riverfront Renewal (новые жилые блоки).
 - **Ключевые улицы:** Assembly Line Aerialway, Gratiot Data Avenue, Riverfront Promenade.
 - **NPC:** Октавия Кларк (директор имплант-завода), Хоакин «Sparkplug» Моралес (лидер тюнеров), Марлен Лоренц (посредник профсоюзов).
+- **Фракции:** ForgeWorks Conglomerate (корпорация производства), Spark Crew (тюнеры подполья), Riverfront Cooperative (жильцы-реконструкторы).
 - **Особенности:** конкуренция автоматизации и рабочих, квесты по апгрейду транспорта, подпольные гонки дронов.
 
 ### Miami (США, Флорида)
 - **Районы:** Neon Beachfront (туризм и клубы), Coral Fortress (усиленные дамбы), Little Havana 2.0 (культурный центр), Everglades Fringe (биолабы).
 - **Ключевые улицы:** Ocean Pulse Boardwalk, Coral Elevated Highway, Jungletram Route.
 - **NPC:** Валерия «Surge» Мендес (владелица клубной сети), капитан Рики Сандовал (береговая охрана), Доктор Эмма Фару (биоинженер Everglades).
+- **Фракции:** Coral Shield Authority (структура дамб), Everglades Collective (эко-активисты), Havana Syndicate (ночные развлечения).
 - **Особенности:** штормовые события, контрабанда по воде, биохакерские фестивали.
 
 ### London (Великобритания)

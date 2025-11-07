@@ -51,12 +51,109 @@
 
 ---
 
+## Таксономия тегов
+
+- `skillTag`: gunplay, melee, stealth, hacking, crafting, support, trade, driving и т.д.
+- `equipmentTag`: smartLock, recoilStability, lowNoise, shieldBonus, marketInfluence.
+- `synergyTag`: aura, mobility+, emp, vehicleHandling — используется рекомендательной системой UI.
+
+Полный список тегов и их локализации расположен в `progression-skill-tags.yaml`. Проверка корректности — через `scripts/validate-skill-tags.ps1`.
+
+---
+
 ## Примеры требований для продвинутых навыков
 
 - «Контроль дыхания»: прицел T2 (mod: sight), weapon: sniper_rifle, REF ≥ 12
 - «Нейрошок»: Cyberdeck T2+, ioBandwidth ≥ X, INT ≥ 14, WILL ≥ 10
 - «Кошачий прыжок»: mobility-имплант (Reinforced Tendons), AGI ≥ 10
 - «Тихий шаг»: armor legs c `noiseDamp ≥ 10%`, Lynx Paws
+
+---
+
+## Структура данных (gameplay-service)
+
+```sql
+CREATE TABLE skill_item_mapping (
+    skill_code VARCHAR(64) NOT NULL,
+    item_category VARCHAR(64) NOT NULL,
+    item_subcategory VARCHAR(64),
+    required_stats JSONB,
+    PRIMARY KEY (skill_code, item_category, COALESCE(item_subcategory, ''))
+);
+
+CREATE TABLE skill_implant_mapping (
+    skill_code VARCHAR(64) NOT NULL,
+    implant_slot VARCHAR(32) NOT NULL,
+    required_tier SMALLINT,
+    PRIMARY KEY (skill_code, implant_slot)
+);
+
+CREATE TABLE skill_synergy_tags (
+    skill_code VARCHAR(64) NOT NULL,
+    tag_type VARCHAR(16) NOT NULL, -- equipment | implant | synergy
+    tag_value VARCHAR(64) NOT NULL,
+    weight NUMERIC(4,2) DEFAULT 1.0,
+    PRIMARY KEY (skill_code, tag_type, tag_value)
+);
+
+CREATE TABLE skill_unlock_requirements (
+    skill_code VARCHAR(64) PRIMARY KEY,
+    attributes JSONB,
+    reputation JSONB,
+    quest_ref VARCHAR(64)
+);
+```
+
+---
+
+## YAML экспорт
+
+```yaml
+skills:
+  precise_shot:
+    tags: [gunplay, sniper]
+    items:
+      - category: weapon
+        subcategory: sniper_rifle
+        required_stats:
+          StatsCore.accuracy: ">=0.75"
+          WeaponStats.adsBonus: ">=0.10"
+    implants:
+      - slot: combat
+        required_tier: 2
+      - slot: tactical
+        required_tier: 1
+    synergy_tags:
+      smartLock: 1.2
+      brand.Tsunami: 1.1
+    unlock_requirements:
+      attributes: { ref: ">=12" }
+      quest_ref: "corpo-wars-sniper"
+```
+
+Экспорт размещается в `api/v1/progression/skills-mapping.yaml` и употребляется для генерации OpenAPI/клиентских моделей.
+
+---
+
+## REST API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/progression/skills/mapping` | `GET` | Возвращает маппинг навыков к предметам/имплантам |
+| `/progression/skills/mapping/{skillCode}` | `GET` | Детали по конкретному навыку |
+| `/progression/skills/mapping/{skillCode}` | `PUT` | Обновление соответствий (админ) |
+| `/progression/skills/tags` | `GET` | Список доступных тегов |
+| `/progression/skills/validators/run` | `POST` | Запуск валидации соответствий |
+
+События `progression.skills_mapping.*` (`updated`, `validator_failed`, `validator_passed`) позволяют синхронизировать данные с UI/аналитикой.
+
+---
+
+## Автоматическая валидация
+
+1. Любое изменение YAML инициирует скрипт `validate-skill-mapping` в CI.
+2. Скрипт проверяет существование предметов/имплантов, корректность тегов и кросс-ссылок.
+3. Итоговый отчёт публикуется в `06-tasks/reports/skill-mapping-validation.md`; критические ошибки помечаются как блокирующие.
 
 ---
 
