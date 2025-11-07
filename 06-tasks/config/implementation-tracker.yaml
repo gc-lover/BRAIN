@@ -1112,3 +1112,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/gameplay/housing/housing-system.yaml"
+    task_id: "API-TASK-206"
+    brain_source: ".BRAIN/05-technical/backend/housing/housing-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
