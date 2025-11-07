@@ -3,25 +3,28 @@
 **ID диалога:** `dialogue-npc-royce`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.3.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 17:04  
+**Последнее обновление:** 2025-11-07 21:13  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/royce.md`, `../quests/side/SQ-maelstrom-double-cross.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:04  
-**api-readiness-notes:** Диалоги Ройса покрывают приём, доверие, подозрение и режим рейда. Подготовлено к API задачам.
+**api-readiness-check-date:** 2025-11-07 21:13  
+**api-readiness-notes:** «Версия 1.3.0: добавлены blackwall-alert, mech-bargain, пасхалки и расширенный YAML/REST/телеметрия Maelstrom.»
 
 ---
 
 ## 1. Контекст и цели
 
-- **NPC:** Ройс — лидер боевого крыла Maelstrom в Watson.
-- **Цель:** проверить новичка, вовлечь в рискованные технологии, отследить возможное предательство или сотрудничество с корпорациями.
-- **Интеграции:** репутация Maelstrom (`rep.gang.maelstrom`), метрики киберимплантов, события `maelstrom-underlink-raid` и глобальные корпоративные войны.
+- **Локации:** склад Maelstrom в Норсайде, серверная Blackwall-лаборатории и клуб «Totentanz»; сцены реагируют на глобальные события (корп. войны, Blackwall).
+- **Образ:** Ройс — киберкульт лидер, поклоняющийся хаосу технологии; ломает границы между имплантом и душой, обожает вездесущие мемы про Ever Given и GameStop, но только если в них сталь и кровь.
+- **Конфликт:** Maelstrom балансирует между работой на Militech, грабежами корпораций и полным погружением в Blackwall; игрок решает — стать мясом, двойным агентом или предложить Ройсу новый хаос.
+- **Отсылки:** всплывают детали о киберпротестах TikTok 2020, черном рынке микрочипов пандемии 2020, бойкотах Boston Dynamics, слухах о Darknet 2040 (наследие Anonymous) и мемах про Ever Given.
+- **Роли игрока:** пройти инициацию, получить экспериментальный имплант, участвовать в рейдах Underlink, договориться о double-cross с Militech или NCPD, балансировать между техно-пасхалками и кровавыми активностями.
+- **Интеграции:** квест `SQ-maelstrom-double-cross`, NPC `npc-jose-tiger-ramirez`, событие `world.event.blackwall_breach`, телеметрия `maelstrom-underlink-raid`, модуль economy (рейдовый лут), social-service (репутация фракций).
 
 ## 2. Состояния и условия
 
