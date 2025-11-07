@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Добавлены расписания, API, DRIP, налоги, мониторинг. Готово к реализации.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-256: api/v1/gameplay/economy/stock-exchange-dividends.yaml (2025-11-07 22:55)
+- **Last Updated:** 2025-11-07 22:55
+
+---
 
 ## Краткое описание
 

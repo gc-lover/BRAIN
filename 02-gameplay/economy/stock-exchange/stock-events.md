@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Добавлены формулы воздействия, пайплайн, API и мониторинг влияния событий.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-257: api/v1/gameplay/economy/stock-exchange-events.yaml (2025-11-07 23:05)
+- **Last Updated:** 2025-11-07 23:05
+
+---
 
 ## Краткое описание
 
