@@ -785,6 +785,22 @@ implementations:
     priority: "MEDIUM"
     notes: "PlayerMarketCorePage, OrderBookCard, PlayerOrderCard, маршрутизация"
 
+- api_path: "api/v1/gameplay/economy/player-market-orders.yaml"
+  task_id: "API-TASK-095"
+  brain_source: ".BRAIN/02-gameplay/economy/player-market/player-market-api.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "completed"
+    started: "2025-11-07 15:58"
+    completed: "2025-11-07 16:20"
+    agent: "Frontend Agent"
+    commit: "f34d51a"
+    priority: "MEDIUM"
+    notes: "PlayerMarketOrdersPage, MarketOrderCard, OrderHistoryCard, тесты, маршрутизация"
+
 # === INFRASTRUCTURE & ADMIN (2025-11-07 BATCH 4) ===
 
 - api_path: "api/v1/admin/anti-cheat.yaml"
@@ -999,6 +1015,239 @@ implementations:
   task_id: "API-TASK-171"
   brain_source: ".BRAIN/04-narrative/quests/ (24 starter documents)"
   api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "HIGH"
+  frontend:
+    status: "not_started"
+    priority: "HIGH"
+
+- api_path: "api/v1/narrative/regional-quests.yaml"
+  task_id: "API-TASK-172"
+  brain_source: ".BRAIN/04-narrative/quests/world-regions/ (9 documents)"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+    priority: "MEDIUM"
+  frontend:
+    status: "not_started"
+    priority: "MEDIUM"
+
+  # === RELIABILITY & CONFIGURATION (2025-11-07 20:10) ===
+
+  - api_path: "api/v1/technical/disaster-recovery.yaml"
+    task_id: "API-TASK-191"
+    brain_source: ".BRAIN/05-technical/global-state/global-state-operations.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/configuration-management.yaml"
+    task_id: "API-TASK-192"
+    brain_source: ".BRAIN/05-technical/infrastructure/README.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/incident-response.yaml"
+    task_id: "API-TASK-194"
+    brain_source: ".BRAIN/05-technical/infrastructure/error-handling-logging.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/voice/voice-chat.yaml"
+    task_id: "API-TASK-195"
+    brain_source: ".BRAIN/05-technical/backend/voice-chat/voice-chat-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/realtime/server-zones.yaml"
+    task_id: "API-TASK-196"
+    brain_source: ".BRAIN/05-technical/backend/realtime-server/part1-architecture-zones.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/session-management/lifecycle.yaml"
+    task_id: "API-TASK-198"
+    brain_source: ".BRAIN/05-technical/backend/session-management/part1-lifecycle-heartbeat.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/session-management/reconnection-monitoring.yaml"
+    task_id: "API-TASK-199"
+    brain_source: ".BRAIN/05-technical/backend/session-management/part2-reconnection-monitoring.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/admin/support/support-tickets.yaml"
+    task_id: "API-TASK-200"
+    brain_source: ".BRAIN/05-technical/backend/support/support-ticket-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/referrals/referral-system.yaml"
+    task_id: "API-TASK-201"
+    brain_source: ".BRAIN/05-technical/backend/referral/referral-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/companions/companion-system.yaml"
+    task_id: "API-TASK-202"
+    brain_source: ".BRAIN/05-technical/backend/companion/companion-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/cosmetics/cosmetic-system.yaml"
+    task_id: "API-TASK-203"
+    brain_source: ".BRAIN/05-technical/backend/cosmetic/cosmetic-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/clans/clan-war-system.yaml"
+    task_id: "API-TASK-204"
+    brain_source: ".BRAIN/05-technical/backend/clan-war/clan-war-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/admin/announcements/announcement-system.yaml"
+    task_id: "API-TASK-205"
+    brain_source: ".BRAIN/05-technical/backend/announcement/announcement-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/housing/housing-system.yaml"
+    task_id: "API-TASK-206"
+    brain_source: ".BRAIN/05-technical/backend/housing/housing-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/battle-pass/battle-pass-core.yaml"
+    task_id: "API-TASK-207"
+    brain_source: ".BRAIN/05-technical/backend/battle-pass/part1-core-progression.md"
+    api_status: "completed"
+    backend:
+      status: "completed"
+      started: "2025-11-07 15:10"
+      completed: "2025-11-07 16:55"
+      agent: "Backend Agent"
+      priority: "CRITICAL"
+      notes: "Реализованы таблицы character_progression/skill_experience/progression_milestones, сервис ProgressionBackendServiceImpl с логикой опыта, атрибутов и навыков, контроллер ProgressionBackendController"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/battle-pass/battle-pass-rewards.yaml"
+    task_id: "API-TASK-208"
+    brain_source: ".BRAIN/05-technical/backend/battle-pass/part2-rewards-challenges.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/guilds/guild-system.yaml"
+    task_id: "API-TASK-229"
+    brain_source: ".BRAIN/05-technical/backend/guild-system-backend.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/notifications/notifications.yaml"
+    task_id: "API-TASK-230"
+    brain_source: ".BRAIN/05-technical/backend/notification-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/party/party-system.yaml"
+    task_id: "API-TASK-231"
+    brain_source: ".BRAIN/05-technical/backend/party-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/inventory/inventory-core.yaml"
+    task_id: "API-TASK-234"
+    brain_source: ".BRAIN/05-technical/backend/inventory-system/part1-core-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/mail/mail-system.yaml"
+    task_id: "API-TASK-232"
+    brain_source: ".BRAIN/05-technical/backend/mail-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/social/friends/friend-system.yaml"
+    task_id: "API-TASK-228"
+    brain_source: ".BRAIN/05-technical/backend/friend-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/combat/combat-session.yaml"
+    task_id: "API-TASK-227"
+    brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+
   backend:
     status: "not_started"
     priority: "HIGH"

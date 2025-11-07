@@ -169,7 +169,7 @@
 **Статус:** in_progress  
 **Контекст:** `CURRENT-WORK/active/2025-11-07-hybrid-media-references-expansion.md`
 
--### Прогресс
+### Прогресс
 - [x] Периодичность и вес «Neon Popularity Reset» зафиксированы (`2025-11-07-hybrid-media-references-expansion.md`).
 - [x] Романтические ветки кампании интегрированы (`social-service` привязки).
 - [x] Тренировочный режим и сертификация пилотов определены (`Skyframe Academy`, T2/T3).

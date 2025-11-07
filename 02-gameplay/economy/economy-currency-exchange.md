@@ -9,15 +9,15 @@
 
 # Экономика - Валютная биржа (Currency Exchange)
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 22:00  
+**Последнее обновление:** 2025-11-07 16:14  
 **Приоритет:** высокий (Post-MVP)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 22:00  
-**api-readiness-notes:** Готов к review перед созданием API задач
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-notes:** «Биржа описана полностью: пары, matching engine, тарифы, API, антифрод, события. Блокирующих TODO нет.»
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
