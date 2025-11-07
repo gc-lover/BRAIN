@@ -282,10 +282,82 @@ documents:
     status: "ready"
     version: "1.1.0"
     checked: "2025-11-07 16:14"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Гибридные медиа-отсылки: кампания Throne of Sand, эвент Neon Popularity Reset, рейд Quantum Reef Siege, UX анти-абьюз и юридический пакет подготовлены."
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Гибридные медиа-отсылки: Throne of Sand, Neon Popularity Reset, Quantum Reef Siege. Ветки решений, NPC, UX-антиабьюз, юридический пакет. Планируется связка с API: world events, social ratings, raid."
     issues: []
     api_target: null
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-hybrid-media-legal-package.md"
+    status: "ready"
+    version: "1.0.1"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Юридический пакет гибридных отсылок: таблица вдохновения, уникальные элементы, риски, план коммуникации и сопроводительное письмо. Готово к отправке юристам."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-api-spec-batch-plan.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "План очередной партии API спецификаций (Throne of Sand, Neon Reset, Quantum Reef, Quest DB). Содержит таблицу источников, таймлайн, риски и инструкции для API Task Creator."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/quest-branching-database/README.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Навигация по пакету ветвящейся квестовой БД. Ссылки на core и advanced схемы, указаны зависимости и PostgreSQL требования."
+    issues: []
+    api_target: "api/v1/gameplay/quests/branching-database.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/quest-branching-database/part1-analysis-core.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Core таблицы: quests, quest_branches, dialogue_nodes, dialogue_choices, skill_checks. Приведены индексы и ограничения."
+    issues: []
+    api_target: "api/v1/gameplay/quests/branching-database.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/quest-branching-database/part2-advanced-examples.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Advanced таблицы: quest_progress, player_quest_choices, player_flags, world_state, quest_consequences + SQL-примеры и economy hooks."
+    issues: []
+    api_target: "api/v1/gameplay/quests/branching-database.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/quest-system-tech-questions-compact.md"
+    status: "ready"
+    version: "2.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Сводные ответы по архитектуре квестов: branching logic, world-state sync, мультиплеер, последствия, наблюдаемость."
+    issues: []
+    api_target: "api/v1/world/state/quest-sync.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/backend-audit-compact.md"
+    status: "ready"
+    version: "2.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Компактный аудит backend: статус микросервисов, тестовое покрытие, риски и следующие шаги для API партии."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-05-dnd-combat-system.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "D&D skill checks: типы кубиков, интеграция в бой, квесты, сюжет и механики. Использовать при создании API для combat skill-checks."
+    issues: []
+    api_target: "api/v1/gameplay/combat/dnd-skill-checks.yaml"
 
   # Служебные файлы
   - path: ".BRAIN/МЕНЕДЖЕР.MD"
@@ -1789,6 +1861,60 @@ documents:
     notes: "Обзор биржи: архитектура сервисов, API поверхности, риск-контроль, мониторинг, интеграции."
     issues: []
     api_target: "api/v1/economy/stock-exchange.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-dividends.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Дивиденды: lifecycle, REST API, DRIP, налоговый учет, аналитика, расширенные таблицы schedule/payments."
+    issues: []
+    api_target: "api/v1/economy/stock-dividends.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-indices.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Индексы: описаны БД (indices/constituents/history), ребаланс, REST API и интеграции с аналитикой/инвестициями/событиями."
+    issues: []
+    api_target: "api/v1/economy/stock-indices.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-events.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "События: расширены формулы, пайплайн, таблицы impact/modifiers, REST API, мониторинг и интеграции." 
+    issues: []
+    api_target: "api/v1/economy/stock-events.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-analytics.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Аналитика: охвачены графики, индикаторы, источники данных (OHLC/indicator cache), REST/WS API, дашборды и интеграции."
+    issues: []
+    api_target: "api/v1/economy/stock-analytics.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-advanced.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Продвинутые механики: short/margin/options/futures, структуры данных, REST API, риск-контроль и интеграции."
+    issues: []
+    api_target: "api/v1/economy/stock-advanced.yaml"
+
+  - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-protection.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Защита: circuit breakers, price limits, insider detection, структуры данных для алертов, REST API и мониторинг."
+    issues: []
+    api_target: "api/v1/economy/stock-protection.yaml"
 
   - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
     status: "ready"

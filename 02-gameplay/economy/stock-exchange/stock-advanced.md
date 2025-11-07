@@ -1,13 +1,14 @@
 # Биржа акций - Продвинутые механики
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 21:45  
+**Последнее обновление:** 2025-11-07 16:19  
 **Приоритет:** низкий (Expansion)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 21:45
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-notes:** «Продвинутые механики описаны: short/margin/options/futures с API и контролем рисков."
 
 ---
 
@@ -146,6 +147,109 @@ Options:
 
 ---
 
+## 📝 Options (Call / Put)
+
+- **Call Option:** право купить акцию по strike цене до expiration.
+- **Put Option:** право продать по strike цене.
+
+| Параметр | Значение |
+| --- | --- |
+| Contract size | 100 shares |
+| Expirations | еженедельно (4 недели вперёд) |
+| Strikes | ±5%, ±10%, ±20% от текущей цены |
+
+**Pricing:** Black-Scholes c волатильностью из 30-дневного исторического σ.
+
+**Example:**
+```
+Call: ARSK 1100C expiring Friday (strike 1,100)
+Premium: 25 eddies/contract
+
+If price → 1,200 → intrinsic value 100 → profit 75 (minus premium)
+If price ≤ 1,100 → option expires worthless → lose premium
+```
+
+---
+
+## 📦 Futures Contracts
+
+- Разрешены на CORP100 и ключевые товары (energy, cyber parts).
+- Размер контракта: 10,000 EDDY notion.
+- Маржа: initial 15%, maintenance 10% (динамическая).
+- Settlement: cash-settled по средней цене за день истечения.
+
+---
+
+## 🗄️ Структура данных
+
+```sql
+CREATE TABLE margin_accounts (
+    player_id UUID PRIMARY KEY,
+    credit_limit DECIMAL(14,2) NOT NULL,
+    maintenance_margin_percent DECIMAL(5,2) NOT NULL DEFAULT 30,
+    current_debt DECIMAL(14,2) NOT NULL DEFAULT 0,
+    last_margin_call_at TIMESTAMP
+);
+
+CREATE TABLE derivatives_contracts (
+    id UUID PRIMARY KEY,
+    contract_type VARCHAR(10) NOT NULL, -- OPTION | FUTURE
+    underlying VARCHAR(32) NOT NULL, -- ticker or index
+    strike_price DECIMAL(12,2),
+    expiration TIMESTAMP NOT NULL,
+    premium DECIMAL(12,2),
+    contract_size INTEGER NOT NULL,
+    metadata JSONB
+);
+
+CREATE TABLE derivatives_positions (
+    id UUID PRIMARY KEY,
+    player_id UUID NOT NULL,
+    contract_id UUID NOT NULL REFERENCES derivatives_contracts(id),
+    side VARCHAR(10) NOT NULL, -- LONG | SHORT
+    quantity INTEGER NOT NULL,
+    entry_price DECIMAL(12,2) NOT NULL,
+    opened_at TIMESTAMP NOT NULL,
+    closed_at TIMESTAMP,
+    pnl DECIMAL(14,2)
+);
+```
+
+---
+
+## 🌐 API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/stocks/margin/accounts` | `GET` | Статус маржинального счёта |
+| `/stocks/margin/borrow` | `POST` | Установить/изменить плечо |
+| `/stocks/margin/repay` | `POST` | Погасить долг |
+| `/stocks/derivatives/contracts` | `GET` | Доступные опционы/фьючерсы |
+| `/stocks/derivatives/positions` | `POST` | Открыть позицию |
+| `/stocks/derivatives/positions/{id}` | `PATCH` | Закрыть / частично закрыть |
+
+**Event bus (`economy.stocks.derivatives.*`):** `margin_call_triggered`, `option_exercised`, `future_settled`, `position_liquidated`.
+
+---
+
+## 🛡️ Контроль рисков
+
+- Margin health мониторится каждые 5 секунд; liquidation bot закрывает позиции ниже maintenance.
+- Short interest cap: max 30% free float доступно для short (по тикеру).
+- Волатильность > 80% → временное отключение новых short и high-leverage маржи.
+- Options ограничены для игроков без опыта: требуется пройти обучение + ≥ 10 успешных сделок.
+
+---
+
+## 🔄 Интеграции
+
+- `economy-events`: влияет на margin requirements (кризис → повышаются).
+- `tax-service`: отчёты по прибыль/убыток деривативов.
+- `notification-service`: предупреждения о margin call, expiry.
+- `analytics-service`: греки (delta/gamma) и волатильность.
+
+---
+
 ## 🔗 Связанные документы
 
 - `stock-trading.md` - Базовая торговля
@@ -154,5 +258,6 @@ Options:
 
 ## История изменений
 
+- v1.1.0 (2025-11-07 16:19) - Добавлены опционы, фьючерсы, структуры данных, REST API и контроль рисков
 - v1.0.0 (2025-11-06 21:45) - Создание документа о продвинутых механиках
 

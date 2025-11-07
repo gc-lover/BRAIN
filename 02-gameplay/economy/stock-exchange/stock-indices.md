@@ -1,13 +1,14 @@
 # Биржа акций - Фондовые индексы
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 21:45  
+**Последнее обновление:** 2025-11-07 16:19  
 **Приоритет:** средний (Post-MVP)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 21:45
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-notes:** «Добавлены расчёты, ребаланс, API и интеграции для индексов. Готово к реализации.»
 
 ---
 
@@ -144,6 +145,72 @@ Invest 100,000 eddies in CORP100 Fund
 
 ---
 
+## 🗄️ Структура данных
+
+```sql
+CREATE TABLE stock_indices (
+    id UUID PRIMARY KEY,
+    code VARCHAR(16) UNIQUE NOT NULL, -- CORP100, NC50, ASIA25
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    weighting_method VARCHAR(32) NOT NULL, -- MARKET_CAP, EQUAL, SECTOR
+    divisor DECIMAL(18,8) NOT NULL,
+    last_rebalanced_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE stock_index_constituents (
+    index_id UUID NOT NULL REFERENCES stock_indices(id) ON DELETE CASCADE,
+    corporation_id VARCHAR(100) NOT NULL REFERENCES stock_corporations(id) ON DELETE CASCADE,
+    weight_percent DECIMAL(6,4) NOT NULL,
+    shares_included DECIMAL(18,4) NOT NULL,
+    PRIMARY KEY (index_id, corporation_id)
+);
+
+CREATE TABLE stock_index_history (
+    id SERIAL PRIMARY KEY,
+    index_id UUID NOT NULL REFERENCES stock_indices(id) ON DELETE CASCADE,
+    value DECIMAL(18,4) NOT NULL,
+    change_percent DECIMAL(7,4) NOT NULL,
+    recorded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+## 🔁 Ребалансировка
+
+- **Расписание:** квартально (`cron: 0 0 3 1 */3`), экстренно при IPO/delisting.
+- **Алгоритм:** пересчёт веса = `market_cap / total_market_cap`; ограничение веса ≤ 10%.
+- **Divisor adjustment:** поддержание непрерывности индекса при сплитах/замене компаний.
+- **Репорты:** сохраняются в `stock_index_history`, публикуется changelog.
+
+---
+
+## 🌐 API индексов
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/stocks/indices` | `GET` | Список индексов, текущие значения |
+| `/stocks/indices/{code}` | `GET` | Структура, веса, история |
+| `/stocks/indices/{code}/history` | `GET` | Свечные данные, интервал (1d/1h/5m) |
+| `/stocks/indices/{code}/constituents` | `GET` | Состав с весами |
+| `/stocks/admin/indices/rebalance` | `POST` | Форсировать ребаланс (админ) |
+| `/stocks/admin/indices/{code}/constituents` | `PATCH` | Обновить состав (IPO/delisting) |
+
+**Event bus (`economy.indices.*`):** `rebalance_started`, `rebalance_completed`, `constituent_added`, `constituent_removed`, `divisor_adjusted`.
+
+---
+
+## 🔄 Интеграции
+
+- `stock-analytics`: графики индексов, сравнения.
+- `economy-events`: массовые события меняют веса/значения.
+- `economy-investments`: индексные фонды используют этот сервис.
+- `guild-system`: гильдейские отчёты по секторам.
+
+---
+
 ## 🔗 Связанные документы
 
 - `stock-exchange-overview.md`
@@ -153,5 +220,6 @@ Invest 100,000 eddies in CORP100 Fund
 
 ## История изменений
 
+- v1.1.0 (2025-11-07 16:19) - Добавлены БД, ребаланс, REST API и интеграции
 - v1.0.0 (2025-11-06 21:45) - Создание документа об индексах
 

@@ -29,6 +29,10 @@
 - `game-start-by-faction.md` - Старты по фракциям (Arasaka, Militech, Valentinos, Maelstrom, NCPD) ✅ ready
 - `game-start-by-class.md` - Старты по классам (Solo, Netrunner, Techie) ✅ ready
 
+### Content Generation (Контент и симуляции) → world-service, social-service, economy-service
+- `content-generation/CONTENT-TEAM-GUIDE.md` - Руководство по массовой генерации контента ✅ ready
+- `content-generation/city-life-population-algorithm.md` - Алгоритм наполнения городов NPC и инфраструктурой ⚠️ needs-work
+
 ### API Requirements (Требования к API)
 - `api-requirements/mvp-endpoints.md` - Endpoints для MVP ✅ ready
 - `api-requirements/mvp-data-models.md` - Модели данных для MVP ✅ ready

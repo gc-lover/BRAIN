@@ -1,7 +1,7 @@
 # Equipment Matrix - Навигация
 
-**Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:27
+**Версия:** 1.1.0  
+**Дата:** 2025-11-07 16:34
 
 ---
 
@@ -9,12 +9,15 @@
 
 Матрица всей экипировки: Weapons, Armor, Cyberware, Mods.
 
-**Файл:** [equipment-matrix.md](./equipment-matrix.md) - Compact (< 500)
+**Файлы:**
+- [equipment-matrix.md](./equipment-matrix.md) - Compact (< 500)
+- [procedural-equipment-library.md](./procedural-equipment-library.md) - Полный лор + генерация
 
 ---
 
 ## История изменений
 
+- v1.1.0 (2025-11-07 16:34) - Добавлена процедура библиотека
 - v1.0.1 (2025-11-07 02:27) - Compact
 - v1.0.0 (2025-11-06) - Создан (557 строк)
 
