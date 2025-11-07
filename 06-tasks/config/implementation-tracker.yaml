@@ -1103,3 +1103,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/admin/announcements/announcement-system.yaml"
+    task_id: "API-TASK-205"
+    brain_source: ".BRAIN/05-technical/backend/announcement/announcement-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
