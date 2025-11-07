@@ -2889,5 +2889,59 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/geneva-arbitration.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/doha-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:40"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Дохи: солнечные щиты, Falcon Riders, Sandglass цепочки."
+    issues: []
+    api_target: "api/v1/lore/locations/doha.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/mumbai-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:44"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Мумбаи: Monsoon Prism, Dabbawala Flux, Dharavi подполье."
+    issues: []
+    api_target: "api/v1/lore/locations/mumbai.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/quebec-city-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:48"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Квебека: Chrono Accord, ледяные арбитражи, курьерские сети."
+    issues: []
+    api_target: "api/v1/lore/locations/quebec-city.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/doha-solar-veil-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:42"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Doha Solar Veil: солнечные щиты, спасение Falcon, арбитражи Helvetic."
+    issues: []
+    api_target: "api/v1/narrative/factions/doha-solar-veil.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/mumbai-neurostage-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:46"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Bollywood NeuroStage: нейро-премьеры, гуманитарные доставки, климатические щиты."
+    issues: []
+    api_target: "api/v1/narrative/factions/mumbai-neurostage.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/quebec-chrono-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:50"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Chrono Accord: временные арбитражи, защита свидетелей, ледяные конвои."
+    issues: []
+    api_target: "api/v1/narrative/factions/quebec-chrono.yaml"
+
 # Примеры записей:
 

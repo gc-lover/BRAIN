@@ -128,6 +128,9 @@
 - **Havana** (Куба) — Malecón дата-рифы, гонки Tidecutters, Cohiba вкусовые моды.
 - **Chengdu** (Китай) — Hotpot Halo, Jinlong Syntha, Panda Flux Couriers.
 - **Geneva** (Швейцария) — Helvetic Quantum Tribunal, нейтральные арбитражи, Watchmaker Syndicate.
+- **Doha** (Катар) — Solar Veil щиты, Falcon Riders, Sandglass фильтры воды.
+- **Mumbai** (Индия) — Monsoon Prism, Dabbawala Flux, Dharavi Data Reclaimers.
+- **Quebec City** (Канада) — Chrono Accord, ледяные арбитражи, St-Laurent Couriers.
 
 ---
 

@@ -23,6 +23,9 @@
 - [Havana Data Reef Syndicate](./havana-data-reef-world-quests.md) — 4 квеста, карибские дата-рифы и сигарные моды
 - [Jinlong Syntha Collective](./chengdu-syntha-world-quests.md) — 4 квеста, гастрономические операции и ароматические импланты
 - [Helvetic Quantum Tribunal](./geneva-arbitration-world-quests.md) — 4 квеста, нейтральные арбитражи и ледяные суды
+- [Doha Solar Veil Authority](./doha-solar-veil-world-quests.md) — 4 квеста, солнечные щиты и соколиные миссии
+- [Bollywood NeuroStage Consortium](./mumbai-neurostage-world-quests.md) — 4 квеста, нейро-мюзиклы и монсунные операции
+- [Chrono Accord Authority](./quebec-chrono-world-quests.md) — 4 квеста, ледяные арбитражи и курьерские сети
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов

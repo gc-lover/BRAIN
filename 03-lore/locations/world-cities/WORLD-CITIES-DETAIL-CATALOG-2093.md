@@ -382,3 +382,27 @@
 - **Фракции:** Helvetic Quantum Tribunal, Watchmaker Syndicate, Alpine Mediators, Glacier Shadow Unit.
 - **Особенности:** нейтральные суды, ледяные арбитражи, квесты `geneva-arbitration-world-quests.md`.
 
+### Doha (Катар)
+- **См.** `./doha-detailed-2020-2093.md`
+- **Районы:** Solar Veil Plaza (климат-контроль), Lusail Data Promenade (техно-набережная), Sandglass Flux Bazaars (подземные рынки), Falcon Skyfields (гонки дронов).
+- **Ключевые улицы:** Corniche Solar Loop, Lusail Quantum Rail, Sandglass Passage, Veil Falcon Corridor.
+- **NPC:** Амаль «Veil Regent» Аль-Тани (директор Helios Veil), Фарук «Falcon Ace» Аль-Джасим (лидер Falcon Riders), Доктор Наима «Sandglass» Халед (рипердок), Лейла «Pearl Mirage» Бенали (торговка данными).
+- **Фракции:** Qatari Helios Veil Authority, Veil Falcon Riders, Sandglass Syndicate, Pearl Mirage Cooperative.
+- **Особенности:** солнечные щиты, воздушные гонки, квесты `doha-solar-veil-world-quests.md`.
+
+### Mumbai (Индия)
+- **См.** `./mumbai-detailed-2020-2093.md`
+- **Районы:** Bollywood Prism District (нейро-шоу), Dabbawala Flux Network (курьерская сеть), Dharavi Data Maze (подпольные дата-центры), Ganesh Rain Gardens (культурные кварталы).
+- **Ключевые улицы:** Monsoon Skyway, Dabbawala Loop, Dharavi Ghost Line, Marine Drive Flux.
+- **NPC:** Прия «Prism Star» Капур (продюсер), Аджай «Dabba King» Джоши (лидер курьеров), Доктор Рави «Rain Surgeon» Айер (климат-рипердок), Ниша «Data Devi» Патель (ИИ-защитник).
+- **Фракции:** Bollywood NeuroStage Consortium, Dabbawala Flux Network, Monsoon Wardens, Dharavi Data Reclaimers.
+- **Особенности:** монсунные мегаструктуры, медиа-индустрия, квесты `mumbai-neurostage-world-quests.md`.
+
+### Quebec City (Канада)
+- **См.** `./quebec-city-detailed-2020-2093.md`
+- **Районы:** Chrono Fort Plaza (временные арбитражи), Citadel Sky District (ледяные мосты), Fleur Archive Vaults (подземные архивы), Boreal Fenix Gardens (культурные фестивали).
+- **Ключевые улицы:** St-Laurent Skyway, Citadel Spiral, Fleur Underpass, Boreal River Walk.
+- **NPC:** Мари «Chrono Jury» Лавуа (судья времени), Жюль «Sky Courier» Шартье (лидер курьеров), Доктор Элоиза «Cryo Fleur» Руссо (рипердок свидетелей), Леон «Boreal Bard» Дюмон (ИИ-культурист).
+- **Фракции:** Chrono Accord Authority, St-Laurent Couriers, Fleur-de-Neige Mediators, Boreal Fenix Collective.
+- **Особенности:** ледяные форты, нейтральные арбитражи, квесты `quebec-chrono-world-quests.md`.
+
