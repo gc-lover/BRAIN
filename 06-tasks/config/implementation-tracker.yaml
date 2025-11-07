@@ -874,8 +874,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 20:40"
+    completed: "2025-11-07 21:05"
+    agent: "Frontend Agent"
+    commit: "5943023"
     priority: "LOW"
+    notes: "EconomyEventsPage, EconomyEventCard, EconomyImpactCard, EventHistoryCard, EventPredictionsCard, маршруты"
 
 - api_path: "api/v1/gameplay/economy/production-chains.yaml"
   task_id: "API-TASK-166"
