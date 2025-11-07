@@ -20,6 +20,9 @@
 - [Abyssinia Skyrail](./abyssinia-skyrail-world-quests.md) — 4 квеста, воздушные монастыри и гуманитарные мосты
 - [Andes Resonance Cooperative](./andes-resonance-world-quests.md) — 4 квеста, буревые мосты и резонансные аркологии Анд
 - [Osaka Quantum Dock Authority](./osaka-quantum-world-quests.md) — 4 квеста, квантовые порты и синто-спирали
+- [Havana Data Reef Syndicate](./havana-data-reef-world-quests.md) — 4 квеста, карибские дата-рифы и сигарные моды
+- [Jinlong Syntha Collective](./chengdu-syntha-world-quests.md) — 4 квеста, гастрономические операции и ароматические импланты
+- [Helvetic Quantum Tribunal](./geneva-arbitration-world-quests.md) — 4 квеста, нейтральные арбитражи и ледяные суды
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов

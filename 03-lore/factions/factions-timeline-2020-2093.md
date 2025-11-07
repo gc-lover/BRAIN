@@ -16,6 +16,14 @@
 **target-frontend-module:** modules/world/history  
 **интеграции:** world timeline, reputation progression, seasonal events
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-279: api/v1/world/factions/history-timeline.yaml (2025-11-08 02:45)
+- Last Updated: 2025-11-08 02:45
+---
+
 ## 1. Обзор
 - Хронологическая лента авторских фракций, действовавших с 2020 по 2093 год.
 - Каждая эпоха раскрывает лор, ключевые события, игровые механики и влияния на мир.

@@ -125,6 +125,9 @@
 - **Addis Ababa** (Эфиопия) — Skyrail плато, Rail Monks, Blue Nile архивация.
 - **Santiago** (Чили) — Condor Halo климатика, MapuTech резонанс, Valparaiso Corsairs.
 - **Osaka** (Япония) — Kusanagi Quantum Harbor, Kansai Flux Couriers, Shin-Ikko Vanguard.
+- **Havana** (Куба) — Malecón дата-рифы, гонки Tidecutters, Cohiba вкусовые моды.
+- **Chengdu** (Китай) — Hotpot Halo, Jinlong Syntha, Panda Flux Couriers.
+- **Geneva** (Швейцария) — Helvetic Quantum Tribunal, нейтральные арбитражи, Watchmaker Syndicate.
 
 ---
 

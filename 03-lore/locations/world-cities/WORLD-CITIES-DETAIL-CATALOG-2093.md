@@ -358,3 +358,27 @@
 - **Фракции:** Osaka Quantum Dock Authority, Kansai Flux Couriers, Shin-Ikko Vanguard, Harbor Kitsune Collective.
 - **Особенности:** квантовые ворота, синто-спирали, квесты `osaka-quantum-world-quests.md`.
 
+### Havana (Куба)
+- **См.** `./havana-detailed-2020-2093.md`
+- **Районы:** La Perla Plaza (центр Syndicate), Malecón Sound Strip (ночные гонки), Cohiba Data Reef (ароматические лаборатории), Buena Vista Vaults (подпольные клубы).
+- **Ключевые улицы:** Malecón Flux Route, Cohiba Spiral, Buena Vista Tunnel, Taino Subline.
+- **NPC:** Эстела «La Perla» Рон (директор Syndicate), Рауль «Tidecut» Мендоса (лидер Tidecutters), Доктор Исабель «Cohiba» Фигероа (рипердок вкусов), Матео «Fox Beat» Ортега (ИИ-диджей).
+- **Фракции:** Caribe Data Syndicate, Malecón Tidecutters, Cohiba Signal Cartel, Buena Vista Foxes.
+- **Особенности:** дата-рифы, сигарные моды, квесты `havana-data-reef-world-quests.md`.
+
+### Chengdu (Китай)
+- **См.** `./chengdu-detailed-2020-2093.md`
+- **Районы:** Hotpot Halo Plaza (ароматическая дипломатия), Pepper Hive Markets (спайс-базары), Ghost Kitchen Maze (подпольные кухни), Panda Flux Ranch (биофермы).
+- **Ключевые улицы:** Spice Vein Highway, Panda Flux Rail, Ghost Kitchen Passage, Jinlong Data Stream.
+- **NPC:** Лян «Syntha Empress» Мэй (глава Jinlong), Бао «Panda Flux» Цзя (лидер курьеров), Доктор Сяо «Ghost Taste» Лин (рипердок вкусов), Юэ «Orchestra Loop» Чэнь (ИИ-композитор).
+- **Фракции:** Jinlong Syntha Collective, Panda Flux Couriers, Pepper Hive Guild, Sichuan Ghost Kitchen.
+- **Особенности:** синт-кухни, музыкальные концерты, квесты `chengdu-syntha-world-quests.md`.
+
+### Geneva (Швейцария)
+- **См.** `./geneva-detailed-2020-2093.md`
+- **Районы:** CERN Arbitration Plaza (квантовые суды), Rhone Commerce Ring (нейтральные финансы), Alpine Mediator Quarter (переговоры), Glacier Shadow Vaults (защита свидетелей).
+- **Ключевые улицы:** Rhone Neutral Way, Alpine Sky Link, Glacier Underpass, CERN Data Conduit.
+- **NPC:** София «Prism Judge» Дюран (главный арбитр), Лео «Watchmaker» Мюллер (лидер Syndicate), Доктор Надя «Cryo Pulse» Бек (рипердок свидетелей), Мира «Mediator Bells» Адамс (ИИ медиатора).
+- **Фракции:** Helvetic Quantum Tribunal, Watchmaker Syndicate, Alpine Mediators, Glacier Shadow Unit.
+- **Особенности:** нейтральные суды, ледяные арбитражи, квесты `geneva-arbitration-world-quests.md`.
+
