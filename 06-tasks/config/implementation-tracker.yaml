@@ -656,7 +656,9 @@ implementations:
     priority: "CRITICAL"
     notes: "Добавлены сущности combat_session_instances/participants/events, сервис GameplayServiceImpl, контроллер GameplayCombatSessionsController и миграция 073 для боевых сессий"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "CRITICAL"
 
 - api_path: "api/v1/progression/progression-backend.yaml"
@@ -671,7 +673,9 @@ implementations:
     priority: "CRITICAL"
     notes: "Реализованы таблицы character_progression/skill_experience/progression_milestones, сервис ProgressionBackendServiceImpl с логикой опыта, атрибутов и навыков, контроллер ProgressionBackendController"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "CRITICAL"
 
 # === NARRATIVE CONTENT APIS (2025-11-07 СЕССИЯ 3) ===
@@ -688,7 +692,9 @@ implementations:
     priority: "HIGH"
     notes: "Доработаны NarrativeServiceImpl: current_branch и achieved_endings, обновлены репозитории и спецификации Faction Quests"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "HIGH"
 
 - api_path: "api/v1/narrative/quest-catalog.yaml"
@@ -714,7 +720,9 @@ implementations:
     notes: "Реализованы GameplayWorldRandomEventsServiceImpl и контроллер, миграции 077-079, обновлены сущности/репозитории для расширенной системы случайных событий"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 # === ECONOMY SYSTEMS (2025-11-07 СЕССИЯ 3 ПРОДОЛЖЕНИЕ) ===
@@ -731,7 +739,9 @@ implementations:
     notes: "CurrencyExchangeServiceImpl, контроллер, сущности, репозитории и миграции 080-082 для валютной биржи"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/gameplay/economy/crafting-system.yaml"
@@ -747,7 +757,9 @@ implementations:
     priority: "HIGH"
     notes: "CraftingSystemServiceImpl, CraftingSystemController, CraftingStationRepository, миграция 086"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "HIGH"
 
 - api_path: "api/v1/gameplay/economy/trading-guilds.yaml"
@@ -763,7 +775,9 @@ implementations:
     priority: "MEDIUM"
     notes: "TradingGuildsServiceImpl, GuildTreasuryServiceImpl, GuildTradingServiceImpl, контроллеры, миграции 087-088"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/gameplay/world/world-events-framework.yaml"
@@ -778,8 +792,11 @@ implementations:
     commit: "pending"
     priority: "MEDIUM"
     notes: "WorldEventsServiceImpl, EraMechanicsServiceImpl, EventGenerationServiceImpl, контроллеры, сущности world events, миграции 089-090"
+    priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:35"
+    agent: "Frontend Agent"
     priority: "LOW"
 
 - api_path: "api/v1/gameplay/economy/logistics.yaml"
@@ -1478,7 +1495,10 @@ implementations:
       priority: "CRITICAL"
       notes: "Реализованы таблицы character_progression/skill_experience/progression_milestones, сервис ProgressionBackendServiceImpl с логикой опыта, атрибутов и навыков, контроллер ProgressionBackendController"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:35"
+      agent: "Frontend Agent"
+      priority: "CRITICAL"
 
   - api_path: "api/v1/gameplay/battle-pass/battle-pass-rewards.yaml"
     task_id: "API-TASK-208"
