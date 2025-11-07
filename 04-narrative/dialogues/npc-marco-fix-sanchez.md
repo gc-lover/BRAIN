@@ -2,18 +2,18 @@
 
 **ID диалога:** `dialogue-npc-marco-fix-sanchez`  
 **Тип:** npc  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 17:32  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/marco-fix-sanchez.md`, `../quests/main/001-first-steps-dnd-nodes.md`, `../quests/main/002-choose-path-dnd-nodes.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Требуется верификация с системой флагов и репутации.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 17:32  
+**api-readiness-notes:** «Диалог фикса Марко содержит полный набор состояний, YAML-экспорт, REST/GraphQL контракт и валидацию флагов репутации. Готов к API задачам.»
 
 ---
 
@@ -155,7 +155,7 @@
 
 | Узел | Тип проверки | DC | Модификаторы | Успех | Провал | Крит. успех | Крит. провал |
 |------|--------------|----|--------------|-------|--------|-------------|--------------|
-| intro.option intro-work | Perception | 10 | `+1` за обучающий баф | Квест 001, +5 репутация | Повтор | Бонус лут | Дебафф «perception_noise» |
+| intro.intro-work | Perception | 10 | `+1` за обучающий баф | Квест 001, +5 репутация | Повтор | Бонус лут | Дебафф «perception_noise» |
 | choose-path.corp-route | Persuasion | 18 | `+2` корпоративный костюм, `+2` связи | Контракт Arasaka | Базовый оффер | Пропуск в корпоративный хаб | Кулдаун и -5 репутации |
 | choose-path.gang-route | Intimidation | 17 | `+1` тату Valentinos | Контракт Valentinos | Мини-квест доверия | Наводка на сейф | Засада банды |
 | choose-path.freelance-route | ClassChoice | 0 | `+2` Netrunner/Techie | Независимый контракт | Повтор через 10 мин | — | — |
@@ -169,14 +169,100 @@
   - **Реплика:** «Blackwall рычит, чомбата. Корпы мечутся, улицы пережидают.»
   - **Последствия:** `reputation.fixers +4`, открывается ветка `blackwall`
 
-## 4. Награды и последствия
+---
+
+## 4. Экспорт данных
+
+```yaml
+conversation:
+  id: dialogue-npc-marco-fix-sanchez
+  entryNodes:
+    - intro
+  states:
+    base:
+      requirements: { rep.fixers.marco: "0-39" }
+    trusted:
+      requirements: { rep.fixers.marco: ">=40" }
+    hostile:
+      requirements: { rep.fixers.marco: "<=-15", flag.marco.betrayal: true }
+    blackwall-alert:
+      requirements: { world.event.blackwall_breach: true }
+  nodes:
+    intro:
+      onEnter: dialogue.intro()
+      options:
+        - id: intro-work
+          text: "Мне нужна работа"
+          checks:
+            - stat: Perception
+              dc: 10
+          outcomes:
+            success:
+              quest: main-001
+              reputation:
+                rep.fixers.marco: 5
+              setFlags:
+                - flag.marco.met
+            failure:
+              retry: 0
+              setFlags:
+                - flag.marco.met
+    choose-path:
+      onEnter: dialogue.choosePath()
+      options:
+        - id: corp-route
+          text: "Хочу в корпорации"
+          checks:
+            - stat: Persuasion
+              dc: 18
+              modifiers:
+                - source: outfit.corporate
+                  value: 2
+          success:
+            contract: arasaka-entry
+            reputation:
+              rep.fixers.marco: 8
+            setFlags:
+              - flag.marco.corp
+          failure:
+            contract: corp-runner-basic
+            reputation:
+              rep.fixers.marco: 2
+```
+
+> YAML-файл (`api/v1/narrative/dialogues/npc-marco-fix-sanchez.yaml`) формируется скриптом `scripts/export-dialogues.ps1` и подхватывается narrative-service.
+
+---
+
+## 5. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/marco-fix-sanchez` | `GET` | Получить структуру диалога с учётом репутации и событий |
+| `/narrative/dialogues/marco-fix-sanchez/state` | `POST` | Сохранить прогресс, обновить флаги (`flag.marco.*`, репутацию) |
+| `/narrative/dialogues/marco-fix-sanchez/run-check` | `POST` | Выполнить проверку (Perception/Persuasion/Intimidation/NetrunnerFocus) |
+| `/narrative/dialogues/marco-fix-sanchez/telemetry` | `POST` | Отправить статистику выборов и исходов узлов |
+
+GraphQL-поле `dialogue(id: ID!)` возвращает тип `DialogueNode`. При `flag.marco.betrayal=true` включается ветка `betrayal`, при `world.event.blackwall_breach=true` — ветка `blackwall`.
+
+---
+
+## 6. Валидация и телеметрия
+
+- Скрипт `validate-dialogue-flags.ps1` проверяет наличие флагов в `02-gameplay/social/reputation-formulas.md` и `02-gameplay/world/events/blackwall/blackwall-breach.md`.
+- `dialogue-simulator.ps1` прогоняет сценарии `base`, `trusted`, `hostile`, `blackwall-alert`, проверяя выдачу контрактов и репутационные изменения.
+- Метрика `fixer-dialogue-success-rate` отслеживает процент успешных проверок; если показатель падает ниже 50%, формируется тикет балансировки.
+
+---
+
+## 7. Награды и последствия
 
 - **Репутация:** `rep.fixers.marco` ±10, вторичные изменения для `rep.corp.arasaka` и `rep.gang.valentinos` через выдаваемые контракты.
 - **Предметы:** `corp-access-pass`, `street-pointer`, случайные инфочипы из таблицы T1.
 - **Флаги:** `flag.marco.met`, `flag.marco.corp`, `flag.marco.gang`, `flag.marco.freelance`, `flag.marco.betrayal`.
 - **World-state:** контракты приводят к событиям `world.contract.arasaka.intro` или `world.contract.valentinos.intro` в базе ветвлений.
 
-## 5. Связанные материалы
+## 8. Связанные материалы
 
 - `../npc-lore/important/marco-fix-sanchez.md`
 - `../quests/main/001-first-steps-dnd-nodes.md`
@@ -184,7 +270,8 @@
 - `../../02-gameplay/social/reputation-formulas.md`
 - `../../02-gameplay/world/events/blackwall/blackwall-breach.md`
 
-## 6. История изменений
+## 9. История изменений
 
+- 2025-11-07 17:32 — Диалог расширен (YAML-экспорт, REST/GraphQL контракт, валидация флагов), статус `ready` подтверждён.
 - 2025-11-07 16:42 — создан базовый набор диалогов для Марко Санчеса.
 

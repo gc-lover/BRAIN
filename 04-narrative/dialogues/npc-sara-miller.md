@@ -2,18 +2,18 @@
 
 **ID диалога:** `dialogue-npc-sara-miller`  
 **Тип:** npc  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 17:05  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/sara-miller.md`, `../quests/main/002-choose-path-dnd-nodes.md`, `../quests/side/ncpd-patrol-chain.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Нужна интеграция с флагами NCPD и проверками на законопослушность.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 17:05  
+**api-readiness-notes:** «Диалог NCPD оформлен с состояниями, проверками, экспортом и REST/GraphQL контрактом. Инфракции синхронизированы с gameplay.»
 
 ---
 
@@ -160,14 +160,85 @@
   - **Реплика:** «Город живёт благодаря порядку. Выполняем эвакуацию и держим периметр.»
   - **Последствия:** открывается ветка `emergency-command`, выдается баф `ncpd_focus`.
 
-## 4. Награды и последствия
+---
+
+## 4. Экспорт данных
+
+```yaml
+conversation:
+  id: dialogue-npc-sara-miller
+  entryNodes:
+    - interview
+  states:
+    base:
+      requirements: { rep.law.ncpd: "0-29" }
+    trusted:
+      requirements: { rep.law.ncpd: ">=30", flag.ncpd.badge: true }
+    disciplinary:
+      requirements: { flag.ncpd.infraction_points: ">=3" }
+    emergency:
+      requirements: { world.event.city_emergency: true }
+  nodes:
+    interview:
+      onEnter: dialogue.interview()
+      options:
+        - id: interview-ready
+          text: "Я готов"
+          checks:
+            - stat: Persuasion
+              dc: 18
+              modifiers:
+                - source: credential.ncpd
+                  value: 2
+          success:
+            grantFlag: flag.ncpd.badge
+            reputation:
+              rep.law.ncpd: 8
+          failure:
+            cooldown: 1800
+          critSuccess:
+            contract: ncpd-fast-track
+            reputation:
+              rep.law.ncpd: 12
+          critFailure:
+            addInfractions: 1
+            reputation:
+              rep.law.ncpd: -5
+```
+
+> YAML-файл (`api/v1/narrative/dialogues/npc-sara-miller.yaml`) генерируется скриптом `scripts/export-dialogues.ps1` и используется narrative-service.
+
+---
+
+## 5. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/sara-miller` | `GET` | Получить предзагруженный диалог и текущие узлы |
+| `/narrative/dialogues/sara-miller/state` | `POST` | Сохранить прогресс игрока (активные флаги, следующая нода) |
+| `/narrative/dialogues/sara-miller/run-check` | `POST` | Выполнить проверку (Persuasion/Deception и т.п.) с расчётом исхода |
+| `/narrative/dialogues/sara-miller/telemetry` | `POST` | Отправить телеметрию выбора игрока |
+
+GraphQL-тип `DialogueNode` (поле `dialogue(id: ID!)`) отдаёт структуру узлов, проверок и возможных исходов для фронтенда. При `world.event.city_emergency=true` API возвращает дополнительные ветки `emergency-command`.
+
+---
+
+## 6. Валидация и телеметрия
+
+- Валидация флагов выполняется скриптом `validate-dialogue-flags.ps1`, сверяющим наличие флагов в `02-gameplay/social/reputation-formulas.md` и `02-gameplay/world/events/world-events-framework.md`.
+- Телеметрия (`ncpd-dialogue-usage`) отслеживает процент успехов/провалов по проверкам; при <40% успехов автоматически формируется тикет балансировки.
+- Каждое изменение диалога запускает snapshot тесты: `dialogue-runner` прогоняет сценарии `base`, `trusted`, `disciplinary`, `emergency` и сверяет ожидаемые флаги.
+
+---
+
+## 7. Награды и последствия
 
 - **Репутация:** `rep.law.ncpd` ±15, влияет на доступ к юридическим бонусам; снижение `rep.gang.valentinos` при высоких успехах полиции.
 - **Предметы:** `ncpd-smart-drone`, доступ к базе данных расследований.
 - **Флаги:** `flag.ncpd.badge`, `flag.ncpd.infraction_points`, `flag.ncpd.suspension`.
 - **World-state:** события `ncpd-patrol-dt12`, `ncpd-emergency-response`, кейсы `ncpd-cybercrime-taskforce`.
 
-## 5. Связанные материалы
+## 8. Связанные материалы
 
 - `../npc-lore/important/sara-miller.md`
 - `../quests/main/002-choose-path-dnd-nodes.md`
@@ -175,7 +246,8 @@
 - `../../02-gameplay/social/reputation-formulas.md`
 - `../../02-gameplay/world/events/world-events-framework.md`
 
-## 6. История изменений
+## 9. История изменений
 
+- 2025-11-07 17:05 — Диалог расширен: добавлены экспортные структуры, REST/GraphQL контракт и валидация флагов. Статус `ready`.
 - 2025-11-07 16:42 — создан базовый набор диалогов для Сары Миллер.
 

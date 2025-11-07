@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-npc-james-iron-reed`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:58  
+**Последнее обновление:** 2025-11-07 17:18  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/james-iron-reed.md`, `../quests/main/002-choose-path-dnd-nodes.md`, `../quests/faction-world/arasaka-world-quests.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:58  
-**api-readiness-notes:** Диалоги Militech офицера оформлены с состояниями, проверками и событиями корпоративной войны. Готово для API задач.
+**api-readiness-check-date:** 2025-11-07 17:18  
+**api-readiness-notes:** «Диалог Militech расширен: динамические состояния, YAML-экспорт, REST/GraphQL контракт, проверка флагов корпоративной войны. Готово для API задач.»
 
 ---
 
@@ -168,14 +168,85 @@
   - **Реплика:** «Blackwall пробит. Инженеры уже горят. Поддержи сетевиков или потеряем фронт.»
   - **Последствия:** выдаётся побочная линия `militech-net-defence`, модификатор `+2` к техническим проверкам в node `war-plan` при активном участии.
 
-## 4. Награды и последствия
+---
 
-- **Репутация:** `rep.corp.militech` ±15, снижение `rep.corp.arasaka` при агрессивных действиях, влияние на `rep.freelance.global` при выборе независимых решений.
-- **Предметы:** `militech-garrison-AR`, `militech-exo-frame`, аналитические брифы.
+## 4. Экспорт данных
+
+```yaml
+conversation:
+  id: dialogue-npc-james-iron-reed
+  entryNodes:
+    - intake
+  states:
+    base:
+      requirements: { rep.corp.militech: "0-39" }
+    loyal:
+      requirements: { rep.corp.militech: ">=40", flag.militech.clearanceA: true }
+    rival-suspect:
+      requirements: { flag.militech.arasaka_contact: true }
+    war-alert:
+      requirements: { world.event.corporate_war_escalation: true }
+  nodes:
+    loyal-brief:
+      onEnter: dialogue.loyalBrief()
+      options:
+        - id: loyal-strike
+          text: "Приступаю"
+          checks:
+            - stat: Strategy
+              dc: 20
+          success:
+            contract: militech-iron-dawn
+            reputation:
+              rep.corp.militech: 10
+          failure:
+            contract: militech-support-wing
+            reputation:
+              rep.corp.militech: 3
+          critSuccess:
+            item: militech-garrison-AR
+            reputation:
+              rep.corp.militech: 14
+          critFailure:
+            flags:
+              - flag.militech.scrutiny
+            reputation:
+              rep.corp.militech: -8
+```
+
+> YAML-файл (`api/v1/narrative/dialogues/npc-james-iron-reed.yaml`) генерируется скриптом `scripts/export-dialogues.ps1` и используется narrative-service.
+
+---
+
+## 5. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/james-iron-reed` | `GET` | Вернуть текущую структуру диалога и активные ветки |
+| `/narrative/dialogues/james-iron-reed/state` | `POST` | Зафиксировать прогресс игрока и обновить флаги Militech |
+| `/narrative/dialogues/james-iron-reed/run-check` | `POST` | Выполнить проверку (Strategy/Deception/Intimidation) и вернуть исход |
+| `/narrative/dialogues/james-iron-reed/telemetry` | `POST` | Отправить данные выборов и частоту срабатывания корпоративных событий |
+
+GraphQL-поле `dialogue(id: ID!)` возвращает тип `DialogueNode`, содержащий состояния, проверки и исходы. При `world.event.corporate_war_escalation=true` API добавляет ветку `war-order`; при наличии `flag.militech.arasaka_contact` возвращается ветка `rival-hearing`.
+
+---
+
+## 6. Валидация и телеметрия
+
+- Скрипт `validate-dialogue-flags.ps1` сверяет использование флагов Militech с `02-gameplay/social/reputation-formulas.md` и `02-gameplay/world/events/global-events-2020-2093.md`.
+- При экспорте запускается `dialogue-simulator.ps1`, выполняющий сценарии `base`, `loyal`, `rival-suspect`, `war-alert` и проверяющий корректность выданных контрактов.
+- Метрика `militech-dialogue-success-rate` отслеживает процент успешных проверок; при падении ниже 45% формируется тикет на балансировку.
+
+---
+
+## 7. Награды и последствия
+
+- **Репутация:** `rep.corp.militech` ±15, снижение `rep.corp.arasaka` при агрессивных решениях, влияние на `rep.freelance.global` при нейтральных исходах.
+- **Предметы:** `militech-garrison-AR`, `militech-exo-frame`, аналитические брифы Militech.
 - **Флаги:** `flag.militech.intake_completed`, `flag.militech.clearanceA`, `flag.militech.scrutiny`, `flag.militech.blacklist`, `flag.militech.arasaka_contact`.
-- **World-state:** запускает события `militech-iron-dawn`, `militech-warfront-berlin`, контрразведывательные задачи.
+- **World-state:** активируются события `militech-iron-dawn`, `militech-warfront-berlin`, контрразведывательные задачи `militech-counterintel`.
 
-## 5. Связанные материалы
+## 8. Связанные материалы
 
 - `../npc-lore/important/james-iron-reed.md`
 - `../quests/main/002-choose-path-dnd-nodes.md`
@@ -183,7 +254,7 @@
 - `../../02-gameplay/social/reputation-formulas.md`
 - `../../02-gameplay/world/events/global-events-2020-2093.md`
 
-## 6. История изменений
+## 9. История изменений
 
+- 2025-11-07 17:18 — Добавлены экспортные структуры, REST/GraphQL контракт, проверки телеметрии. Версия 1.1.0, статус `ready` подтверждён.
 - 2025-11-07 16:58 — Диалог утверждён, добавлены состояния Militech и реакции на корпоративную войну.
-
