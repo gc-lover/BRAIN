@@ -550,10 +550,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/achievement-system.md"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-07 05:05"
+    completed: "2025-11-07 09:34"
     agent: "Backend Agent"
+    commit: "pending"
     priority: "MEDIUM"
+    notes: "ProgressionApi controller/service implemented, AchievementEntity, PlayerAchievementEntity, PlayerTitleEntity, repositories, ProgressionServiceImpl, migration 069"
   frontend:
     status: "not_started"
     priority: "MEDIUM"
