@@ -1,13 +1,13 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:45  
+**api-readiness-check-date:** 2025-11-07 16:53  
 **api-readiness-notes:** Консолидирован UX мира: World Pulse, события, карта влияния, гильдейские приказы, стабилизация рынка, социальный резонанс и кризисный режим. Готово к API постановке (`world-service`, `economy-service`, `social-service`).
 ---
 
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 16:39  
-**Дата обновления:** 2025-11-07 17:45  
+**Дата обновления:** 2025-11-07 16:53  
 **Приоритет:** high  
 **Связанные документы:** `05-technical/ui/main-game/ui-hud-core.md`, `05-technical/ui/main-game/ui-features.md`, `02-gameplay/world/world-state/player-impact-mechanics.md`, `05-technical/global-state/global-state-operations.md`
 

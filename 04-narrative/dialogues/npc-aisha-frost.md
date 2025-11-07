@@ -31,6 +31,7 @@
 | corporate | Игрок сотрудничает с Helios Throne | `flag.helios.deal == true` | `flag.helios.deal`, `rep.corp.helios` |
 | exposed | Айша узнала о связях с Maelstrom | `flag.maelstrom.double_agent == true` | `flag.maelstrom.double_agent` |
 | crisis | Underlink в режиме блокировки | `world.event.neon_lockdown == true` | `world.event.neon_lockdown` |
+| specter | Элитный статус «Specter» | `flag.neon.elite == true` | `flag.neon.elite`, `rep.fixers.neon` |
 
 - **Репутации:** `rep.fixers.neon`, `rep.corp.helios`, `rep.gang.maelstrom`.
 - **Связанные проверки:** узлы `intel-briefing`, `ghost-confrontation`, `resolution` из квеста `Neon Ghosts`.
@@ -171,6 +172,35 @@
       outcomes:
         success: { effect: "spawn_encounter", encounter: "neon-ice-squad", reward: { item: "ghost-countermeasure" } }
         failure: { effect: "lockdown_extend", duration: 600 }
+
+- node-id: specter-directive
+  label: Элитные поручения Specter
+  entry-condition: state == "specter"
+  player-options:
+    - option-id: ghost-trace
+      text: "Отследить корпоративный маяк"
+      requirements:
+        - type: stat-check
+          stat: Investigation
+          dc: 22
+      npc-response: "Specter обязан видеть то, что скрыто. Действуй тихо и без свидетелей."
+      outcomes:
+        success: { effect: "reveal_node", node: "corporate-ultimatum", reward: { item: "ghost-trace-module" } }
+        failure: { effect: "raise_alert", alert: "helios", amount: 3 }
+        critical-success: { effect: "unlock_reward", reward: "specter-cache", reputation: { "rep.fixers.neon": +8 } }
+        critical-failure: { effect: "apply_flag", flag: "flag.neon.blacklist", reputation: { "rep.fixers.neon": -12 } }
+    - option-id: stabilize-city
+      text: "Сдержать городские беспорядки"
+      requirements:
+        - type: stat-check
+          stat: Leadership
+          dc: 21
+      npc-response: "Specter держит город под контролем. Возьми на себя кварталы северного ринга."
+      outcomes:
+        success: { effect: "grant_modifier", modifier: "city.unrest.level", value: -6 }
+        failure: { effect: "city_unrest_spike", amount: +4 }
+        critical-success: { effect: "trigger_event", event: "neon_ghosts_city_support", reputation: { "rep.fixers.neon": +10 } }
+        critical-failure: { effect: "spawn_encounter", encounter: "riot-response", penalty: { reputation: { "rep.corp.helios": +5, "rep.fixers.neon": -10 } } }
 ```
 
 ### 3.3 Таблица проверок
@@ -184,6 +214,8 @@
 | corporate-ultimatum.resist | Resolve | 19 | `+1` за активный мод `anti-ice` | Запускает событие сопротивления | Повышает тревогу Helios | Массовая поддержка (+10 репутации) | Корпоративный рейд (событие `helios-crackdown`) |
 | crisis-directives.evacuation | Leadership | 20 | `+2` за `world.event.neon_lockdown` progress < 50% | Повышение стабильности Underlink | Отчёт о потерях | Сокращает кризис на 300 сек | Тяжёлые потери, падение репутации -12 |
 | crisis-directives.hold-line | Combat | 21 | `+1` за активный бафф `ghost-intel` | Спавн encounter с лутом | Увеличение времени локдауна | Доп. лут `ghost-prototype` | — |
+| specter-directive.ghost-trace | Investigation | 22 | `+2` при `flag.neon.elite` и `rep.fixers.neon ≥ 30` | Открывает корпоративные узлы, даёт модуль | Рост тревоги Helios | Награда `specter-cache` | Blacklist Ghosts |
+| specter-directive.stabilize-city | Leadership | 21 | `+1` при `underlink.stability > 60` | Снижение беспорядков | Рост беспорядков | Событие `neon_ghosts_city_support` | Encounter riot-response |
 
 ### 3.4 Реакции на события
 - **Событие:** `world.event.neon_lockdown`
