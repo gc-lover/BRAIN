@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-quest-side-maelstrom-double-cross`  
 **Тип:** quest  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 17:04  
+**Последнее обновление:** 2025-11-07 19:46  
 **Приоритет:** высокий  
 **Связанные документы:** `../quests/side/SQ-maelstrom-double-cross.md`, `../dialogues/npc-royce.md`, `../dialogues/npc-james-iron-reed.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:04  
-**api-readiness-notes:** Сцены квеста фиксируют варианты лояльности Maelstrom, двойную игру и сотрудничество с Militech/NCPD.
+**api-readiness-check-date:** 2025-11-07 19:46  
+**api-readiness-notes:** «Квест синхронизирован с фракционными сервисами, добавлены экспорт, REST/GraphQL и валидация двойной игры. Готов для API.»
 
 ---
 
@@ -176,14 +176,182 @@ nodes:
 | betrayal.betray-maelstrom | Deception | 20 | `+2` при `flag.marco.corp` | Победа Militech | Пойман | — | — |
 | fallout.fallout-double | Insight | 20 | `+1` при `flag.sqmdl.steal` | Тройной агент | Расследование NCPD | — | — |
 
-## 5. Реакции и последствия
+---
 
-- **Maelstrom Loyalty:** `flag.sqmdl.success` → `rep.gang.maelstrom +15`, доступ к рейду `maelstrom-underlink-raid`.
+## 5. Экспорт данных
+
+```yaml
+conversation:
+  id: dialogue-quest-side-maelstrom-double-cross
+  entryNodes: [briefing]
+  states:
+    briefing:
+      requirements:
+        quest.side.maelstrom.double: "started"
+    meet-corp:
+      requirements:
+        flag.sqmdl.briefing: true
+    temptation:
+      requirements:
+        flag.sqmdl.meet_corp: true
+    betrayal:
+      requirements:
+        flag.sqmdl.meet_corp: true
+    fallout:
+      requirements:
+        anyOf:
+          - { flag.sqmdl.betrayal: true }
+          - { flag.sqmdl.corp_win: true }
+          - { flag.sqmdl.double_agent: true }
+  nodes:
+    briefing:
+      options:
+        - id: brief-accept
+          checks:
+            - stat: Intimidation
+              dc: 17
+          success:
+            setFlags: [flag.sqmdl.briefing]
+            rewards: [credchip.400]
+            reputation:
+              rep.gang.maelstrom: 5
+          failure:
+            penalties: [hp_damage]
+            reputation:
+              rep.gang.maelstrom: -3
+    meet-corp:
+      options:
+        - id: corp-intimidate
+          checks:
+            - stat: Negotiation
+              dc: 19
+          success:
+            setFlags: [flag.sqmdl.meet_corp]
+            rewards: [eddies.1200]
+            reputation:
+              rep.corp.militech: 8
+          failure:
+            reputation:
+              rep.corp.militech: -5
+        - id: corp-double
+          success:
+            setFlags: [flag.sqmdl.double_agent]
+    temptation:
+      options:
+        - id: temp-open
+          checks:
+            - stat: Hacking
+              dc: 20
+          success:
+            setFlags: [flag.sqmdl.steal]
+            rewards: [blueprint.copy]
+            reputation:
+              rep.corp.militech: 5
+          failure:
+            penalties: [stun]
+            reputation:
+              rep.corp.militech: -6
+        - id: temp-resist
+          success:
+            reputation:
+              rep.gang.maelstrom: 5
+    betrayal:
+      options:
+        - id: betray-corp
+          checks:
+            - stat: Deception
+              dc: 21
+          success:
+            setFlags: [flag.sqmdl.betrayal]
+            reputation:
+              rep.gang.maelstrom: 10
+              rep.corp.militech: -20
+          failure:
+            setFlags: [flag.sqmdl.blacklist]
+            reputation:
+              rep.gang.maelstrom: -15
+        - id: betray-maelstrom
+          checks:
+            - stat: Deception
+              dc: 20
+          success:
+            setFlags: [flag.sqmdl.corp_win]
+            reputation:
+              rep.corp.militech: 12
+              rep.gang.maelstrom: -20
+          failure:
+            reputation:
+              rep.gang.maelstrom: -12
+    fallout:
+      options:
+        - id: fallout-loyal
+          conditions:
+            - flag.sqmdl.betrayal: true
+          success:
+            setFlags: [flag.sqmdl.success]
+            rewards: [maelstrom-ripper-chip]
+            reputation:
+              rep.gang.maelstrom: 15
+        - id: fallout-corp
+          conditions:
+            - flag.sqmdl.corp_win: true
+          success:
+            setFlags: [flag.sqmdl.exiled]
+            rewards: [eddies.2000]
+            reputation:
+              rep.corp.militech: 15
+              rep.gang.maelstrom: -25
+        - id: fallout-double
+          conditions:
+            - flag.sqmdl.double_agent: true
+          checks:
+            - stat: Insight
+              dc: 20
+          success:
+            setFlags: [flag.sqmdl.triple]
+            reputation:
+              rep.law.ncpd: 10
+              rep.gang.maelstrom: 5
+              rep.corp.militech: 5
+          failure:
+            triggers: [ncpd.investigation]
+            reputation:
+              rep.law.ncpd: -8
+```
+
+> Экспорт генерируется `scripts/export-dialogues.ps1` в `api/v1/narrative/dialogues/quest-side-maelstrom-double-cross.yaml`.
+
+---
+
+## 6. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/quest-side-maelstrom-double-cross` | `GET` | Получить ветки лояльности/предательства и активные проверки |
+| `/narrative/dialogues/quest-side-maelstrom-double-cross/state` | `POST` | Сохранить флаги (`flag.sqmdl.*`), выданные награды, репутации |
+| `/narrative/dialogues/quest-side-maelstrom-double-cross/run-check` | `POST` | Выполнить проверку (Intimidation/Negotiation/Hacking/Deception/Insight) |
+| `/narrative/dialogues/quest-side-maelstrom-double-cross/telemetry` | `POST` | Передать телеметрию решений (loyal/corp/double/triple) |
+
+GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNode` c `maelstromContext` (reputation, blacklist, double-agent) и подсказывает последующие миссии по выбранному пути.
+
+---
+
+## 7. Валидация и телеметрия
+
+- `validate-maelstrom-double.ps1` сверяет флаги `flag.sqmdl.*`, репутацию и контракты с `npc-royce.md`, `npc-james-iron-reed.md` и social-сервисом.
+- `dialogue-simulator.ps1` прогоняет сценарии лояльности, корпораций и тройного агента, сравнивая ожидания по наградам и штрафам.
+- Метрики: `maelstrom-loyalty-rate`, `militech-deal-rate`, `maelstrom-triple-agent-rate`, `maelstrom-blacklist-rate`. При росте blacklist >20% создаётся тикет на балансировку Maelstrom.
+
+---
+
+## 8. Реакции и последствия
+
+- **Maelstrom Loyalty:** `flag.sqmdl.success` → `rep.gang.maelstrom +15`, доступ к `maelstrom-underlink-raid`.
 - **Militech Deal:** `flag.sqmdl.corp_win` → `rep.corp.militech +15`, Maelstrom blacklist.
-- **Triple Agent:** `flag.sqmdl.triple` открывает цепочки NCPD и Militech, удерживая доступ к Maelstrom через скрытый канал.
-- **Санкции:** `flag.sqmdl.exiled` блокирует Maelstrom квесты до выполнения особого задания искупления.
+- **Triple Agent:** `flag.sqmdl.triple` открывает цепочки NCPD и Militech, сохраняя канал с Maelstrom.
+- **Санкции:** `flag.sqmdl.exiled` блокирует Maelstrom-квесты до прохождения искупительной миссии.
 
-## 6. Связанные материалы
+## 9. Связанные материалы
 
 - `../quests/side/SQ-maelstrom-double-cross.md`
 - `../dialogues/npc-royce.md`
@@ -191,7 +359,8 @@ nodes:
 - `../../02-gameplay/social/reputation-formulas.md`
 - `../../02-gameplay/world/events/world-events-framework.md`
 
-## 7. История изменений
+## 10. История изменений
 
+- 2025-11-07 19:46 — Добавлены экспорт, REST/GraphQL и метрики. Статус `ready`, версия 1.1.0.
 - 2025-11-07 17:04 — Добавлены диалоги квеста «Maelstrom Double-Cross» с ветвями лояльности, корпоратов и тройного агента.
 

@@ -671,7 +671,11 @@ implementations:
   brain_source: ".BRAIN/04-narrative/quests/side/EVENTS-ALL-PERIODS.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 19:45"
+    completed: "2025-11-07 21:10"
+    agent: "Backend Agent"
+    notes: "Реализованы GameplayWorldRandomEventsServiceImpl и контроллер, миграции 077-079, обновлены сущности/репозитории для расширенной системы случайных событий"
     priority: "MEDIUM"
   frontend:
     status: "not_started"

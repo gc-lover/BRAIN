@@ -180,14 +180,174 @@ nodes:
 | betrayal.betrayal-accept | Negotiation | 20 | `+1` при флаге `flag.militech.clearanceA` | Сделка с Militech | Статус двойного агента | — | — |
 | extraction.extract-cover | Deception | 22 | `+2` при `flag.marco.corp` | Двойной агент | Разоблачение | — | Флаг blacklist |
 
-## 5. Реакции и последствия
+---
 
-- **Лояльность:** `flag.fqara001.success` → `rep.corp.arasaka +15`, доступ к миссии FQ-ARASAKA-002.
-- **Предательство:** `flag.fqara001.betray` → `rep.corp.militech +12`, `rep.corp.arasaka -20`, открывает версию Militech задания.
+## 5. Экспорт данных
+
+```yaml
+conversation:
+  id: dialogue-quest-fq-arasaka-001
+  entryNodes: [briefing]
+  states:
+    briefing:
+      requirements:
+        quest.fq.arasaka.001: "started"
+    security-gate:
+      requirements:
+        flag.fqara001.briefing: true
+    temptation:
+      requirements:
+        flag.fqara001.transit: true
+    betrayal:
+      requirements:
+        flag.fqara001.opened: true
+    extraction:
+      requirements:
+        flag.fqara001.transit: true
+  nodes:
+    briefing:
+      options:
+        - id: brief-affirm
+          checks:
+            - stat: Persuasion
+              dc: 18
+          success:
+            setFlags: [flag.fqara001.briefing]
+            rewards: [credchip.500]
+            reputation:
+              rep.corp.arasaka: 5
+          failure:
+            cooldown: 600
+          critSuccess:
+            rewards: [arasaka-vip-pass]
+            reputation:
+              rep.corp.arasaka: 8
+    security-gate:
+      options:
+        - id: gate-stealth
+          checks:
+            - stat: Stealth
+              dc: 18
+              modifiers:
+                - source: flag.fqara001.safehouse
+                  value: 2
+          success:
+            setFlags: [flag.fqara001.transit]
+            reputation:
+              rep.corp.arasaka: 3
+          failure:
+            penalties: [tracking_beacon]
+        - id: gate-hack
+          checks:
+            - stat: Hacking
+              dc: 20
+          success:
+            setFlags: [flag.fqara001.safehouse]
+          failure:
+            triggers: [arasaka.alarm.minor]
+            reputation:
+              rep.corp.arasaka: -4
+    temptation:
+      options:
+        - id: temp-resist
+          checks:
+            - stat: Willpower
+              dc: 19
+          success:
+            setFlags: [flag.fqara001.loyalty]
+            reputation:
+              rep.corp.arasaka: 10
+          failure:
+            setFlags: [flag.fqara001.opened]
+        - id: temp-open
+          success:
+            setFlags: [flag.fqara001.opened]
+            triggers: [arasaka.alert]
+    betrayal:
+      options:
+        - id: betrayal-accept
+          checks:
+            - stat: Negotiation
+              dc: 20
+          success:
+            setFlags: [flag.fqara001.betray]
+            reputation:
+              rep.corp.militech: 12
+              rep.corp.arasaka: -20
+          failure:
+            setFlags: [flag.fqara001.double]
+        - id: betrayal-reject
+          success:
+            reputation:
+              rep.corp.arasaka: -10
+            setFlags: [flag.fqara001.damaged]
+    extraction:
+      options:
+        - id: extract-report
+          conditions:
+            - flag.fqara001.loyalty: true
+          success:
+            setFlags: [flag.fqara001.success]
+            rewards: [eddies.1000]
+            reputation:
+              rep.corp.arasaka: 15
+        - id: extract-cover
+          conditions:
+            - flag.fqara001.betray: true
+          checks:
+            - stat: Deception
+              dc: 22
+          success:
+            setFlags: [flag.fqara001.double_agent]
+            reputation:
+              rep.corp.arasaka: 5
+              rep.corp.militech: 10
+          failure:
+            setFlags: [flag.fqara001.blacklist]
+            reputation:
+              rep.corp.arasaka: -25
+        - id: extract-confess
+          conditions:
+            - flag.fqara001.opened: true
+          success:
+            penalties: [fine.2000]
+            reputation:
+              rep.corp.arasaka: -15
+```
+
+> Экспорт собирается `scripts/export-dialogues.ps1` в `api/v1/narrative/dialogues/quest-fq-arasaka-001.yaml` и используется narrative-service.
+
+---
+
+## 6. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/quest-fq-arasaka-001` | `GET` | Получить структуру миссии с активными ветками |
+| `/narrative/dialogues/quest-fq-arasaka-001/state` | `POST` | Сохранить прогресс (флаги лояльности/предательства, safehouse) |
+| `/narrative/dialogues/quest-fq-arasaka-001/run-check` | `POST` | Выполнить проверку (Persuasion/Stealth/Hacking/Willpower/Negotiation/Deception) |
+| `/narrative/dialogues/quest-fq-arasaka-001/telemetry` | `POST` | Отправить телеметрию решений (loyal/betray/double) |
+
+GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNode` и `corporateContext` (репутации, активные контракты, blacklist). При `world.event.corporate_war_escalation=true` API повышает DC и добавляет предупреждение охраны.
+
+---
+
+## 7. Валидация и телеметрия
+
+- `validate-arasaka-mission.ps1` сверяет флаги `flag.fqara001.*`, репутацию и контракты с `npc-hiroshi-tanaka.md`, `npc-james-iron-reed.md` и сервисом фракций.
+- `dialogue-simulator.ps1` прогоняет ветки лояльности, предательства и двойной игры, сравнивая ожидаемые флаги и награды.
+- Метрики: `arasaka-loyalty-rate`, `arasaka-betrayal-rate`, `arasaka-double-agent-rate`, `arasaka-blacklist-rate`. При росте blacklist >8% создаётся тикет безопасности.
+
+---
+
+## 8. Реакции и последствия
+
+- **Лояльность:** `flag.fqara001.success` → `rep.corp.arasaka +15`, доступ к FQ-ARASAKA-002.
+- **Предательство:** `flag.fqara001.betray` → `rep.corp.militech +12`, `rep.corp.arasaka -20`, открывает версию миссии Militech.
 - **Двойная игра:** `flag.fqara001.double_agent` активирует скрытые ветки в следующих миссиях обеих корпораций.
-- **Наказание:** `flag.fqara001.blacklist` блокирует доступ к контрактам Arasaka до прохождения очистительных заданий.
+- **Наказание:** `flag.fqara001.blacklist` блокирует контракты Arasaka до выполнения очистительных задач.
 
-## 6. Связанные материалы
+## 9. Связанные материалы
 
 - `../quests/faction-world/arasaka-world-quests.md`
 - `../dialogues/npc-hiroshi-tanaka.md`
@@ -195,7 +355,8 @@ nodes:
 - `../../02-gameplay/social/reputation-formulas.md`
 - `../../02-gameplay/world/events/world-events-framework.md`
 
-## 7. История изменений
+## 10. История изменений
 
+- 2025-11-07 19:32 — Добавлены экспорт, REST/GraphQL и метрики. Статус `ready`, версия 1.1.0.
 - 2025-11-07 16:58 — Добавлена диалоговая схема миссии «Токийская штаб-квартира» с ветками лояльности и предательства.
 
