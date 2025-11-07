@@ -1869,19 +1869,19 @@ documents:
 
   - path: ".BRAIN/02-gameplay/world/world-bosses-catalog.md"
     status: "ready"
-    version: "1.0.0"
+    version: "1.1.0"
     checked: "2025-11-07 20:37"
     checker: "AI Agent (Brain Manager)"
-    notes: "Каталог мировых боссов: фазы, уникальные навыки по лигам, сюжетные триггеры и REST/WebSocket контракты world-service."
+    notes: "Каталог мировых боссов v1.1.0: добавлены Eclipse Seraph и Hivemind Behemoth, таблица последствий, эндпоинт aftermath, обновлённые REST/WebSocket контракты."
     issues: []
     api_target: "api/v1/world/bosses.yaml"
 
   - path: ".BRAIN/02-gameplay/world/dungeons/dungeon-bosses-catalog.md"
     status: "ready"
-    version: "1.0.0"
+    version: "1.1.0"
     checked: "2025-11-07 20:37"
     checker: "AI Agent (Brain Manager)"
-    notes: "Каталог боссов подземелий: фазы, D&D проверки, уникальные навыки Normal/Hard/Apex, REST/WS контуры и схему данных для world-service."
+    notes: "Каталог боссов подземелий v1.1.0: добавлены Glass Reaper и Cinder Archon, режим Apex+, эндпоинт aftermath и аналитические метрики."
     issues: []
     api_target: "api/v1/world/dungeons/bosses.yaml"
 
