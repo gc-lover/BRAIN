@@ -628,8 +628,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/progression-backend.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 15:10"
+    completed: "2025-11-07 16:55"
+    agent: "Backend Agent"
     priority: "CRITICAL"
+    notes: "Реализованы таблицы character_progression/skill_experience/progression_milestones, сервис ProgressionBackendServiceImpl с логикой опыта, атрибутов и навыков, контроллер ProgressionBackendController"
   frontend:
     status: "not_started"
     priority: "CRITICAL"
