@@ -1,4 +1,12 @@
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-249: api/v1/gameplay/world/world-bosses.yaml (2025-11-07 22:35)
+- Last Updated: 2025-11-07 22:35
+---
+
+---
 **Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  

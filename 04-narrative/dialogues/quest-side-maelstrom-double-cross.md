@@ -161,9 +161,11 @@ nodes:
 
 ### 3.2. Примечания
 
-- Ветка `fallout` требует хотя бы одного флага результатов (`betrayal`, `corp_win`, `double_agent`).
-- При активном `world.event.corporate_war_escalation` DC в `meet-corp` и `betrayal` увеличивается на +2.
-- `flag.sqmdl.steal` открывает дополнительные опционы в последующих квестах Militech/NCPD.
+- Линейка: `briefing → prep-lair → meet-corp → (undernet-heist) → temptation → betrayal → (double-agent) → fallout → media-flash`.
+- `undernet-heist` активируется при успешном взломе подготовки; добавляет бонус к копированию и отношениям с Rita.
+- `double-agent` требует успешного прохода ветки Insight; без него игрок не получает доступ к NCPD.
+- `media-flash` запускается, если игрок просматривает социальные сети в ангаре или проваливает обман Militech/NCPD.
+- `world.event.corporate_war_escalation` повышает DC всех сцен с Militech и NCPD на +2, добавляет охранные дроны и новые реплики.
 
 ## 4. Таблица проверок
 

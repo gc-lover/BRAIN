@@ -255,7 +255,6 @@
 | Crisis Hub | REST | `POST /api/v1/world/crisis/actions` | world-service | on-demand | требует двойного подтверждения |
 | Crisis Hub | WS | `CRISIS_STATE_UPDATE` | world-service | ≤3 сек | обновляет таймеры и уровень смягчения |
 | City Unrest Monitor | WS | `CITY_UNREST_UPDATE` | world-service | ≤3 сек | транслирует `city.unrest.level` для Specter overlay |
-| City Unrest Monitor | WS | `CITY_UNREST_UPDATE` | world-service | ≤3 сек | транслирует модификатор `city.unrest.level` для Specter overlay |
 
 | Событие | Источник | Подписчики | Payload (ключевые поля) |
 |---------|----------|------------|-------------------------|
