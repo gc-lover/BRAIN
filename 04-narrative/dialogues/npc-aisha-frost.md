@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-npc-aisha-frost`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 17:55  
+**Последнее обновление:** 2025-11-07 18:05  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/aisha-frost.md`, `../quests/side/2025-11-07-quest-neon-ghosts.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/side-quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:55  
-**api-readiness-notes:** Диалог курьерского лидера Neon Ghosts: состояния доверия, ветки решений, интеграция с Underlink и мировыми модификаторами.
+**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-notes:** Диалог обновлён: добавлен уровень Specter, элитные поручения и реакция на городские беспорядки.
 
 ---
 

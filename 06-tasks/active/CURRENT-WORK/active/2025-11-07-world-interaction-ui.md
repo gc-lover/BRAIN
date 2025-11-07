@@ -301,8 +301,167 @@
 3. Какой формат реплея мировых событий предпочтителен (видео/текст/графика)?
 
 ## 11. История изменений
-- 2025-11-07 18:05 — Добавлен Specter overlay, монитор городских беспорядков и обновлён SLA.
-- 2025-11-07 17:45 — Финализированы UX-флоу, таблицы API/событий и планы команд, подтверждён статус ready.
-- 2025-11-07 16:53 — Добавлены сводные таблицы и SLA, подготовлены действия команд.
+- 2025-11-07 16:53 — Добавлены ASCII-мокапы, расширенный тест-план, сформированы API задачи и обновлены SLA.
+- 2025-11-07 16:45 — Финализированы UX-флоу, таблицы API/событий и планы команд, подтверждён статус ready.
 - 2025-11-07 16:39 — Создан черновик.
+
+## 12. ASCII мокапы ключевых интерфейсов
+
+### 12.1 World Pulse Widget
+```
+┌──────────────────────────────┐
+│ WORLD PULSE       [Calm 🌐 ] │
+├──────────────────────────────┤
+│ Stability: 82%   Modifier: +2│
+│ Active Events: 3 (VIEW)      │
+│ Trend: ▲ Stable              │
+├──────────────────────────────┤
+│ [Open Dashboard] [Forecast]  │
+└──────────────────────────────┘
+```
+
+### 12.2 Events Dashboard Card
+```
+┌──────────────────────────────────────────────┐
+│ EVENT: Blackwall Breach      🏙️ City Center │
+├──────────────────────────────────────────────┤
+│ State: Active  | Players: 126 | Time: 12:34 │
+│ Difficulty: High | Rewards: Legendary Loot  │
+├──────────────────────────────────────────────┤
+│ Objectives:                                      │
+│ 1. Secure data node                              │
+│ 2. Defeat corp response                          │
+├──────────────────────────────────────────────┤
+│ [View History] [Subscribe] [Open Map]          │
+└──────────────────────────────────────────────┘
+```
+
+### 12.3 Influence Map Overlay
+```
+┌──────────────────────────────────────────────┐
+│ LAYER: CONTROL  | Region: Watson             │
+├────┬────┬────┬────┬────┬────┬────┬────┬────┤
+│R45 │R46 │R47 │R48 │R49 │R50 │R51 │R52 │…  │
+├────┼────┼────┼────┼────┼────┼────┼────┼────┤
+│75% │62% │40% │12% │18% │54% │88% │67% │    │
+└────┴────┴────┴────┴────┴────┴────┴────┴────┘
+Tooltip:
+┌─────────────────────────────────┐
+│ Territory: Docklands            │
+│ Controller: Night Runners (75%) │
+│ Bonuses: +10% Supply, -5% Tax   │
+│ Pending Event: Corp Raid (T-02h)│
+│ [Open Orders] [View Mission]    │
+└─────────────────────────────────┘
+```
+
+### 12.4 Guild Operations Timeline
+```
+┌───────────────────────────────┐
+│ ORDER: Defend Docklands       │
+├────────┬────────┬────────────┤
+│ Draft  │ Review │ Active     │
+│(Leader)│(Strateg│(Live Ops)  │
+├────────┴────────┴────────────┤
+│ Resources: 250k ed, 20 squads │
+│ KPI: Hold control ≥60%        │
+├───────────────────────────────┤
+│ [Approve] [Adjust] [Close]    │
+└───────────────────────────────┘
+```
+
+### 12.5 Market Stabilizer Console
+```
+┌──────────────────────────────────────────────┐
+│ MARKET STABILIZER       Risk: Medium         │
+├──────────────┬──────────────────────────────┤
+│ Price Watch   │ Interventions                │
+│ Cyberware 18k │ ● Freeze Prices (24h)        │
+│ Components 5k │ ○ Strategic Reserve (48h)    │
+│ Medicine 9k   │ ○ Tax Incentive (72h)        │
+├──────────────┴──────────────────────────────┤
+│ Est. Impact: -12% volatility                 │
+│ Cost: 120k ed | Cooldown: 8h                 │
+│ [Simulate] [Confirm (MFA)]                   │
+└──────────────────────────────────────────────┘
+```
+
+### 12.6 Social Resonance Panel
+```
+┌──────────────────────────────────────────────┐
+│ SOCIAL RESONANCE        Trust Index: 64 ⭐   │
+├──────────────┬──────────────────────────────┤
+│ Campaigns    │ Effects                       │
+│ ● HarmonyFest│ +5 Trust (Economy)            │
+│ ○ Night Patrol│ +3 Trust (Security)          │
+│ ○ Media Blitz │ +4 Trust (Reputation)        │
+├──────────────┴──────────────────────────────┤
+│ Relationships:                               │
+│ - NetRunner99 (Romantic T2) +2 Trust         │
+│ - NeonGuild (Alliance T1) -1 Trust           │
+│ [Launch] [Review Network]                    │
+└──────────────────────────────────────────────┘
+```
+
+### 12.7 Crisis Control Hub
+```
+┌──────────────────────────────────────────────┐
+│ CRISIS HUB – Phase: RESPONSE  ETA 00:12:45   │
+├──────────────┬──────────────┬───────────────┤
+│ Evacuation   │ Militarization│ Economy       │
+│ ● Deploy TT  │ ○ Drone Patrol │ ● Price Freeze│
+│ ○ Safe Tunnels│ ● Blockades   │ ○ Subsidies   │
+├──────────────┴──────────────┴───────────────┤
+│ Active: Deploy TT (Cooldown 05:32)           │
+│ Effect: Price Freeze +15% Stability          │
+├──────────────────────────────────────────────┤
+│ [Trigger Action] [View Logs] [Escalate]      │
+└──────────────────────────────────────────────┘
+```
+
+## 13. Тест-план (manual + automated)
+
+### 13.1 Manual сценарии
+- **MP-01 World Pulse Calm:** загрузка HUD при стабильном мире, проверка отображения модификатора, активных событий, переходов по CTA.
+- **MP-02 World Pulse Crisis:** эмуляция `alertLevel=crisis`, проверка появления баннера, переход в Crisis Hub, возврат в HUD.
+- **ED-01 Фильтры событий:** комбинация фильтров по региону/фракции, проверка серверной пагинации, отсутствие дубликатов.
+- **ED-02 История влияния:** открытие карточки события, сверка данных с `world/history`, проверка подписки на уведомления.
+- **IM-01 Слои Influence Map:** переключение между `control/population/economy/security/events`, проверка легенд и подсказок.
+- **GO-01 Workflow приказа:** создание → ревью → активация → завершение, проверка уведомлений и таймлайна.
+- **MS-01 Интервенция рынка:** симуляция интервенции с успешным завершением, проверка обновления World Pulse.
+- **SR-01 Кампания доверия:** запуск кампании, проверка изменения индекса и отображения в World Pulse.
+- **CH-01 Кризисные действия:** запуск эвакуации и экономической меры, проверка таймеров и логов.
+- **OFF-01 Offline fallback:** отключение WebSocket, проверка сообщений деградации и REST-refetch.
+
+### 13.2 Automated (e2e/UI)
+- **AUT-01 World Pulse Snapshot:** Cypress/Playwright проверяет наличие ключевых элементов в режимах `calm` и `alert`.
+- **AUT-02 Events Pagination:** e2e-скрипт прогоняет фильтры, подтверждая корректность списка и отсутствие пропусков.
+- **AUT-03 Influence Map Tiles:** проверка загрузки тайлов при зумировании, содержимого tooltip.
+- **AUT-04 Guild Orders Flow:** эмуляция ролей, проверка переходов статусов и уведомлений.
+- **AUT-05 Market Intervention Polling:** смена статусов `pending→executing→completed`.
+- **AUT-06 Crisis Hub Actions:** запуск трёх действий, проверка `CrisisActionTimeline`.
+- **AUT-07 Offline Mode:** проверка локального persist и баннера «данные устарели».
+
+### 13.3 Automated (backend API)
+- **API-01 World State Consistency:** контрактный тест `GET /api/v1/world/state` против схемы.
+- **API-02 Event Update Stream:** проверка `WORLD_EVENT_UPDATE` и payload.
+- **API-03 Territory Metrics:** `GET /territories/{tileId}` с контрольными значениями.
+- **API-04 Orders Idempotency:** повторный `POST /world/orders` с одинаковым idempotency key.
+- **API-05 Market Intervention Rollback:** автооткат при истечении тайм-аута `executing`.
+- **API-06 Social Index Nightly:** Cron тест пересчёта trustIndex и события `SOCIAL_INDEX_CHANGED`.
+- **API-07 Crisis Actions Authorization:** проверка RBAC и двойного подтверждения.
+
+### 13.4 Регрессия и нагрузка
+- **REG-01 Smoke Suite:** запуск основного набора после каждого деплоя world-service и client.
+- **REG-02 Crisis Regression:** еженедельный регресс Crisis Hub (manual + auto).
+- **LOAD-01 Events Storm:** нагрузочный тест 5000 одновременных игроков, latency <200 ms.
+- **LOAD-02 Map Streaming:** 200 req/s по тайлам, CPU <70%, latency <150 ms.
+- **RESILIENCE-01 Kafka Lag:** lag 10 сек, проверка PagerDuty P1 и отображения деградации.
+- **CHAOS-01 Service Kill:** отключение world-service instance, восстановление ≤60 сек.
+
+## 14. API задачи и мэппинг
+- **API-TASK-241** `api/v1/world/world-interaction-suite.yaml` — World Pulse, Events Dashboard, Influence Map, Guild Ops, Crisis; статус `queued`.
+- **API-TASK-242** `api/v1/economy/market/stabilizer.yaml` — Market Stabilizer интервенции и аналитика; статус `queued`.
+- **API-TASK-243** `api/v1/social/resonance.yaml` — Social Resonance, кампании доверия и связи; статус `queued`.
+- Обновлены записи в `readiness-tracker.yaml` и `API-SWAGGER/tasks/config/brain-mapping.yaml`.
 

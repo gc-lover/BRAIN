@@ -41,6 +41,7 @@
 
 #### Повествование (narrative)
 - [Гибридные отсылки к культовым сериалам и блокбастерам](./2025-11-07-IDEA-hybrid-media-references.md) *(completed)*
+- [Скрытые медиа-пасхалки и чизы](./2025-11-07-IDEA-hidden-media-easter-eggs.md)
 
 #### Техническое (technical)
 - [Список технических идей]
@@ -57,13 +58,14 @@
 | 2025-11-03 | [Процедурная матрица снаряжения (оружие/импланты) как в Borderlands](./2025-11-03-IDEA-procedural-equipment-matrix.md) | combat | recorded | high |
 | 2025-11-03 | [Брейншторм возможных эвентов](./2025-11-03-IDEA-events-brainstorm.md) | world | recorded | high |
 | 2025-11-07 | [Гибридные отсылки к культовым сериалам и блокбастерам](./2025-11-07-IDEA-hybrid-media-references.md) | narrative | completed | medium |
+| 2025-11-07 | [Скрытые медиа-пасхалки и чизы](./2025-11-07-IDEA-hidden-media-easter-eggs.md) | narrative | recorded | high |
 
 ---
 
 ## Статистика
 
-- **Всего идей:** 3
-- **В разработке:** 0
+- **Всего идей:** 4
+- **В разработке:** 1
 - **Завершено:** 1
 - **Отклонено:** 0
 
