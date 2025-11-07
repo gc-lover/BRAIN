@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Аналитика дополнена API, метриками и источниками данных. Готово к реализации.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-258: api/v1/gameplay/economy/stock-exchange-analytics.yaml (2025-11-07 23:15)
+- **Last Updated:** 2025-11-07 23:15
+
+---
 
 ## Краткое описание
 

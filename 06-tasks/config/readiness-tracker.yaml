@@ -669,6 +669,15 @@ documents:
     issues: []
     api_target: "api/v1/narrative/cutscenes/helios-countermesh.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/economy-specter-helios-balance.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 00:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Экономический баланс Specter/Helios: формулы, модификаторы, API и телеметрия."
+    issues: []
+    api_target: "api/v1/world/economy/specter-helios-balance.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"

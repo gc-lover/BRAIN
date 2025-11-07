@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Система защиты описана: circuit breakers, детекция инсайдов, структура данных и API. Готово к реализации.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-259: api/v1/gameplay/economy/stock-exchange-protection.yaml (2025-11-07 23:25)
+- **Last Updated:** 2025-11-07 23:25
+
+---
 
 ## Краткое описание
 
