@@ -310,3 +310,27 @@
 
 - v1.0.0 (2025-11-07 16:47) — Создан каталог мегаполисов с ключевыми районами, улицами и NPC
 
+### Karachi (Пакистан)
+- **См.** `./karachi-detailed-2020-2093.md`
+- **Районы:** Delta Veil Plaza (штормовой контроль), Indus Free Corridor (свободные доки), Sufi Mesh Gardens (духовные алгоритмы), Chromed Chawl District (мастерские адаптаций).
+- **Ключевые улицы:** Veil Ascension Rail, Tidebreaker Causeway, Karachi Drift Channels, Sufi Resonance Walk.
+- **NPC:** Зара «Slipstream» Рехман (директор потоков), Камил «Dockside» Рубани (торговец контейнерами), Доктор Самия Надар (рипердок штормовых имплантов), Лейла Хашми (наследница Mesh Choir).
+- **Фракции:** DeltaWave Logistics Consortium, Indus Tidebreakers, Claymore Couriers, Sufi Mesh Choir.
+- **Особенности:** квантовые штормовые барьеры, гуманитарные конвои, квесты `delta-wave-world-quests.md`.
+
+### Athens (Греция)
+- **См.** `./athens-detailed-2020-2093.md`
+- **Районы:** Helios Crown District (солнечная синархия), Agora Flux Market (дата-торговля), Trireme Drydock (амфибийные дроны), Katabasis Labyrinth (архивы Shadows).
+- **Ключевые улицы:** Solar Iliad Skyway, Agora Debate Promenade, Trireme Tide Corridor, Katabasis Thread.
+- **NPC:** Евгения «Helios» Пападиму (архонт синархии), Никос «Agora» Хадзис (торговец данными), Доктор Ирини «Daedalus» Кириаку (рипердок амфибий), Калипсо Метаксас (лидер Pnyx Shadows).
+- **Фракции:** Helios Agora Directorate, Agora Netweavers, Daedalus Guild, Pnyx Shadows.
+- **Особенности:** солнечная дипломатия, trireme-конвои, квесты `aegean-synapse-world-quests.md`.
+
+### Casablanca (Марокко)
+- **См.** `./casablanca-detailed-2020-2093.md`
+- **Районы:** Mirage Pillar Plaza (солнечный центр), Atlantic Caravan Docks (доки караванов), Rif Signal Markets (подземные базары), Sahara Resonant Vaults (архивы Nomad Pact).
+- **Ключевые улицы:** Sunlace Boulevard, Caravan Airstream, Rif Resonance Path, Sahara Pulse Rail.
+- **NPC:** Лейла «Zellij» Беншериф (координатор Solar Zellij), Юсуф «Caravan» Рафи (брокер караванов), Доктор Набилла Харруши (рипердок песчаных фильтров), Хасан «Nomad» Эль-Кади (ИИ-лидер караванов).
+- **Фракции:** Solar Zellij Cooperative, Mirage Caravan Guild, Rif Signalers, Atlantic Nomad Pact.
+- **Особенности:** пустынно-атлантические караваны, солнечные зеркала, квесты `maghreb-solar-world-quests.md`.
+

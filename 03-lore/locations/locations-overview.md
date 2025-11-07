@@ -112,6 +112,16 @@
 - **Istanbul** (Турция) — фрактальные базары, мостовые маглевы, наследие византийских ИИ.
 - **Johannesburg** (ЮАР) — GeoForge шахты, биосаванны, конфликты Chrome Miners Union и NeoZulu.
 - **Toronto** (Канада) — ледяные дата-озёра Maple Data, Harbor Runners, голографические кварталы.
+- **Delhi** (Индия) — Hilal Fusion реакторы, купола Yamuna Arc, гибрид AR-ритуалов и технопарков.
+- **Riyadh** (Саудовская Аравия) — Hilal Prime купола, Crescent Energy Grid, Sand Falcon Syndicate.
+- **Melbourne** (Австралия) — Oceania CleverGrid, синтез биоферм и шторма Бассова пролива.
+- **Vancouver** (Канада) — Fogline Halo купола, Cascadia Synapse Network, туманные коридоры.
+- **Lisbon** (Португалия) — Атлантические кластеры, квантовые каравеллы, приливные турбины.
+- **Nairobi** (Кения) — Kilimanjaro BioMesh, техно-племена, климатические купола саванны.
+- **Manila** (Филиппины) — Typhoon Shield купола, плавучие города, архипелаг курьеров.
+- **Karachi** (Пакистан) — DeltaWave штормовые барьеры, свободный порт Indus, каввали-алгоритмы.
+- **Athens** (Греция) — Helios Crown синархия, дата-агоры, трирем-дроны.
+- **Casablanca** (Марокко) — Solar Zellij зеркала, Mirage караваны, пустынные резонаторы.
 
 ---
 

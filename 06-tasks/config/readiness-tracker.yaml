@@ -680,10 +680,10 @@ documents:
 
   - path: ".BRAIN/04-narrative/dialogues/npc-kaede-ishikawa.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-08 00:25"
+    version: "1.3.0"
+    checked: "2025-11-07 22:04"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалог Каэдэ Исикавы: ветки Specter/Helios, кризисная миссия и события."
+    notes: "Kaede Ishikawa v1.3.0: ветки Specter/Helios/Balanced, пасхалки NotPetya/SolarWinds, активности mediator/raid."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-kaede-ishikawa.yaml"
 
