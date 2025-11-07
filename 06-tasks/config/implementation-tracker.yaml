@@ -842,8 +842,13 @@ implementations:
     status: "not_started"
     priority: "HIGH"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 19:45"
+    completed: "2025-11-07 20:10"
+    agent: "Frontend Agent"
+    commit: "fb9c97d"
     priority: "LOW"
+    notes: "AntiCheatPage, ReportSummaryCard, BanOverviewCard, AppealsQueueCard, DetectionStatsCard, маршрутизация"
 
 - api_path: "api/v1/admin/moderation.yaml"
   task_id: "API-TASK-164"
