@@ -196,100 +196,221 @@ conversation:
     briefing:
       requirements:
         quest.side.maelstrom.double: "started"
-    meet-corp:
+    prep-lair:
       requirements:
         flag.sqmdl.briefing: true
+    meet-corp:
+      requirements:
+        flag.sqmdl.prep: true
+    undernet-heist:
+      requirements:
+        flag.sqmdl.undernet: true
     temptation:
       requirements:
         flag.sqmdl.meet_corp: true
     betrayal:
       requirements:
         flag.sqmdl.meet_corp: true
+    double-agent:
+      requirements:
+        flag.sqmdl.triple_path: true
     fallout:
       requirements:
-        anyOf:
-          - { flag.sqmdl.betrayal: true }
-          - { flag.sqmdl.corp_win: true }
-          - { flag.sqmdl.double_agent: true }
+        flag.sqmdl.fallout: true
+    media-flash:
+      requirements:
+        flag.sqmdl.media_flash: true
   nodes:
     briefing:
       options:
         - id: brief-accept
           checks:
             - stat: Intimidation
-              dc: 17
+              dc: 18
+              modifiers:
+                - source: gear.cyberware-brutal
+                  value: 1
           success:
             setFlags: [flag.sqmdl.briefing]
-            rewards: [credchip.400]
+            rewards: [credchip.600]
             reputation:
-              rep.gang.maelstrom: 5
+              rep.gang.maelstrom: 6
           failure:
             penalties: [hp_damage]
             reputation:
-              rep.gang.maelstrom: -3
+              rep.gang.maelstrom: -4
+          critSuccess:
+            rewards: [maelstrom.implant-booster]
+            reputation:
+              rep.gang.maelstrom: 10
+    prep-lair:
+      options:
+        - id: prep-scan
+          checks:
+            - stat: Perception
+              dc: 16
+          success:
+            setFlags: [flag.sqmdl.prep]
+            rewards: [intel.angarmap]
+          failure:
+            debuffs: [awareness_drop:90]
+        - id: prep-hack
+          checks:
+            - stat: Hacking
+              dc: 18
+          success:
+            setFlags: [flag.sqmdl.prep, flag.sqmdl.undernet]
+            rewards: [program.black-ice]
+          failure:
+            penalties: [shock]
+            reputation:
+              rep.gang.maelstrom: -2
+        - id: prep-boost
+          success:
+            setFlags: [flag.sqmdl.prep]
+            buffs: [streetwise_boost:1]
     meet-corp:
       options:
-        - id: corp-intimidate
+        - id: corp-negotiation
           checks:
             - stat: Negotiation
               dc: 19
+              modifiers:
+                - source: buff.streetwise_boost
+                  value: 1
           success:
             setFlags: [flag.sqmdl.meet_corp]
-            rewards: [eddies.1200]
+            rewards: [eddies.1500]
             reputation:
-              rep.corp.militech: 8
+              rep.corp.militech: 9
           failure:
+            setFlags: [flag.sqmdl.meet_corp]
+            penalties: [militech.suspicion]
             reputation:
-              rep.corp.militech: -5
+              rep.corp.militech: -6
+        - id: corp-threat
+          checks:
+            - stat: Intimidation
+              dc: 18
+          success:
+            setFlags: [flag.sqmdl.meet_corp]
+            reputation:
+              rep.gang.maelstrom: 4
+          failure:
+            debuffs: [targeted_tracking]
         - id: corp-double
           success:
             setFlags: [flag.sqmdl.double_agent]
+    undernet-heist:
+      options:
+        - id: undernet-siphon
+          checks:
+            - stat: Hacking
+              dc: 20
+          success:
+            setFlags: [flag.sqmdl.temptation]
+            rewards: [data.payload]
+            reputation:
+              rep.corp.militech: 5
+          failure:
+            penalties: [brain_burn:120]
+        - id: undernet-reroute
+          success:
+            setFlags: [flag.sqmdl.tunnel_favor]
+            reputation:
+              rep.informants.rita: 4
     temptation:
       options:
         - id: temp-open
           checks:
             - stat: Hacking
               dc: 20
+              modifiers:
+                - source: flag.sqmdl.tunnel_favor
+                  value: 1
           success:
-            setFlags: [flag.sqmdl.steal]
+            setFlags: [flag.sqmdl.copy]
             rewards: [blueprint.copy]
             reputation:
-              rep.corp.militech: 5
+              rep.corp.militech: 6
           failure:
             penalties: [stun]
+            triggers: [militech.overheat]
             reputation:
-              rep.corp.militech: -6
+              rep.corp.militech: -8
         - id: temp-resist
           success:
             reputation:
-              rep.gang.maelstrom: 5
+              rep.gang.maelstrom: 6
     betrayal:
       options:
         - id: betray-corp
           checks:
             - stat: Deception
               dc: 21
+              modifiers:
+                - source: flag.sqmdl.prep
+                  value: 1
           success:
-            setFlags: [flag.sqmdl.betrayal]
+            setFlags: [flag.sqmdl.betrayal, flag.sqmdl.fallout]
+            grants: [activity.maelstrom-heist]
             reputation:
-              rep.gang.maelstrom: 10
-              rep.corp.militech: -20
+              rep.gang.maelstrom: 12
+              rep.corp.militech: -18
           failure:
-            setFlags: [flag.sqmdl.blacklist]
+            setFlags: [flag.sqmdl.blacklist, flag.sqmdl.fallout]
             reputation:
-              rep.gang.maelstrom: -15
+              rep.gang.maelstrom: -14
         - id: betray-maelstrom
           checks:
             - stat: Deception
               dc: 20
+              modifiers:
+                - source: flag.sqmdl.copy
+                  value: 1
           success:
-            setFlags: [flag.sqmdl.corp_win]
+            setFlags: [flag.sqmdl.corp_win, flag.sqmdl.fallout]
+            grants: [contract.militech-blackops]
             reputation:
-              rep.corp.militech: 12
-              rep.gang.maelstrom: -20
+              rep.corp.militech: 14
+              rep.gang.maelstrom: -22
           failure:
+            penalties: [maelstrom.hitlist]
             reputation:
               rep.gang.maelstrom: -12
+        - id: betray-double
+          checks:
+            - stat: Insight
+              dc: 19
+          success:
+            setFlags: [flag.sqmdl.triple_path, flag.sqmdl.fallout]
+            reputation:
+              rep.law.ncpd: 6
+              rep.gang.maelstrom: 4
+              rep.corp.militech: 4
+          failure:
+            triggers: [ncpd.probe]
+            reputation:
+              rep.law.ncpd: -6
+    double-agent:
+      options:
+        - id: ncpd-deal
+          checks:
+            - stat: Hacking
+              dc: 18
+          success:
+            setFlags: [flag.sqmdl.triple]
+            rewards: [eddies.800]
+            reputation:
+              rep.law.ncpd: 12
+          failure:
+            penalties: [ncpd.investigation]
+            reputation:
+              rep.law.ncpd: -10
+        - id: ncpd-bounce
+          success:
+            reputation:
+              rep.law.ncpd: -4
     fallout:
       options:
         - id: fallout-loyal
@@ -299,76 +420,84 @@ conversation:
             setFlags: [flag.sqmdl.success]
             rewards: [maelstrom-ripper-chip]
             reputation:
-              rep.gang.maelstrom: 15
+              rep.gang.maelstrom: 18
         - id: fallout-corp
           conditions:
             - flag.sqmdl.corp_win: true
           success:
             setFlags: [flag.sqmdl.exiled]
-            rewards: [eddies.2000]
+            rewards: [eddies.2500]
             reputation:
-              rep.corp.militech: 15
+              rep.corp.militech: 16
               rep.gang.maelstrom: -25
-        - id: fallout-double
+        - id: fallout-triple
           conditions:
-            - flag.sqmdl.double_agent: true
+            - flag.sqmdl.triple: true
           checks:
             - stat: Insight
               dc: 20
+              modifiers:
+                - source: buff.cover_story
+                  value: 2
           success:
-            setFlags: [flag.sqmdl.triple]
+            setFlags: [flag.sqmdl.triple_agent]
+            rewards: [activity.triple-weave]
             reputation:
-              rep.law.ncpd: 10
-              rep.gang.maelstrom: 5
-              rep.corp.militech: 5
+              rep.law.ncpd: 12
+              rep.gang.maelstrom: 6
+              rep.corp.militech: 6
           failure:
-            triggers: [ncpd.investigation]
+            triggers: [ncpd.audit]
             reputation:
-              rep.law.ncpd: -8
+              rep.law.ncpd: -9
+        - id: fallout-personal
+          conditions:
+            - flag.sqmdl.copy: true
+          success:
+            setFlags: [flag.sqmdl.personal]
+            rewards: [blueprint.black-market]
+    media-flash:
+      options:
+        - id: media-loyal
+          success:
+            reputation:
+              rep.gang.maelstrom: 2
+        - id: media-corp
+          success:
+            reputation:
+              rep.corp.militech: 2
+              rep.social.media: 1
+        - id: media-meme
+          success:
+            reputation:
+              rep.corp.militech: -3
+              rep.social.media: 4
+            codex: social.evergiven-meme
+  activities:
+    - id: activity.maelstrom-heist
+      unlockedBy: flag.sqmdl.betrayal
+      description: "Серия налётов Maelstrom на склады Militech"
+    - id: contract.militech-blackops
+      unlockedBy: flag.sqmdl.corp_win
+      description: "Тайные операции Militech против Maelstrom"
+    - id: activity.triple-weave
+      unlockedBy: flag.sqmdl.triple_agent
+      description: "Задачи NCPD по манипуляции корпов и банд"
 ```
 
-> Экспорт генерируется `scripts/export-dialogues.ps1` в `api/v1/narrative/dialogues/quest-side-maelstrom-double-cross.yaml`.
-
----
-
-## 6. REST / GraphQL API
-
-| Endpoint | Метод | Назначение |
-| --- | --- | --- |
-| `/narrative/dialogues/quest-side-maelstrom-double-cross` | `GET` | Получить ветки лояльности/предательства и активные проверки |
-| `/narrative/dialogues/quest-side-maelstrom-double-cross/state` | `POST` | Сохранить флаги (`flag.sqmdl.*`), выданные награды, репутации |
-| `/narrative/dialogues/quest-side-maelstrom-double-cross/run-check` | `POST` | Выполнить проверку (Intimidation/Negotiation/Hacking/Deception/Insight) |
-| `/narrative/dialogues/quest-side-maelstrom-double-cross/telemetry` | `POST` | Передать телеметрию решений (loyal/corp/double/triple) |
-
-GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNode` c `maelstromContext` (reputation, blacklist, double-agent) и подсказывает последующие миссии по выбранному пути.
-
----
+> Экспорт генерируется `
 
 ## 7. Валидация и телеметрия
 
-- `validate-maelstrom-double.ps1` сверяет флаги `flag.sqmdl.*`, репутацию и контракты с `npc-royce.md`, `npc-james-iron-reed.md` и social-сервисом.
-- `dialogue-simulator.ps1` прогоняет сценарии лояльности, корпораций и тройного агента, сравнивая ожидания по наградам и штрафам.
-- Метрики: `maelstrom-loyalty-rate`, `militech-deal-rate`, `maelstrom-triple-agent-rate`, `maelstrom-blacklist-rate`. При росте blacklist >20% создаётся тикет на балансировку Maelstrom.
-
----
+- `validate-maelstrom-double.ps1` сверяет поток флагов (`briefing → prep → meet → temptation → betrayal → fallout`), активность undernet, статусы blacklist/exiled и выдачу активностей.
+- `dialogue-simulator.ps1 -Scenario maelstrom-double-cross` прогоняет ветки loyal/corp/double/triple/personal, проверяет выдачу предметов, штрафов и медийных эффектов.
+- Метрики: `maelstrom-loyalty-rate`, `militech-deal-rate`, `maelstrom-triple-agent-rate`, `maelstrom-personal-hoard-rate`, `maelstrom-meme-rate`, `blacklist-rate`. При meme-rate >40% social-service запускает контент-фильтр, при blacklist-rate >20% создаётся тикет балансировки.
+- Интеграции: social-service сохраняет `media-flash` истории, economy-service отслеживает продажу `blueprint.black-market`, law-service реагирует на `ncpd.audit` события.
 
 ## 8. Реакции и последствия
 
-- **Maelstrom Loyalty:** `flag.sqmdl.success` → `rep.gang.maelstrom +15`, доступ к `maelstrom-underlink-raid`.
-- **Militech Deal:** `flag.sqmdl.corp_win` → `rep.corp.militech +15`, Maelstrom blacklist.
-- **Triple Agent:** `flag.sqmdl.triple` открывает цепочки NCPD и Militech, сохраняя канал с Maelstrom.
-- **Санкции:** `flag.sqmdl.exiled` блокирует Maelstrom-квесты до прохождения искупительной миссии.
-
-## 9. Связанные материалы
-
-- `../quests/side/SQ-maelstrom-double-cross.md`
-- `../dialogues/npc-royce.md`
-- `../dialogues/npc-james-iron-reed.md`
-- `../../02-gameplay/social/reputation-formulas.md`
-- `../../02-gameplay/world/events/world-events-framework.md`
-
-## 10. История изменений
-
-- 2025-11-07 19:46 — Добавлены экспорт, REST/GraphQL и метрики. Статус `ready`, версия 1.1.0.
-- 2025-11-07 17:04 — Добавлены диалоги квеста «Maelstrom Double-Cross» с ветвями лояльности, корпоратов и тройного агента.
-
+- **Maelstrom Loyalty:** `flag.sqmdl.success` → `rep.gang.maelstrom +18`, активируется `activity.maelstrom-heist`, повышается шанс участия в `maelstrom_underlink_raid`.
+- **Militech Deal:** `flag.sqmdl.corp_win` → `rep.corp.militech +16`, Maelstrom заносит игрока в `flag.sqmdl.exiled`, появляется цепочка Militech Black Ops.
+- **Triple Agent:** `flag.sqmdl.triple_agent` даёт доступ к `activity.triple-weave`, открывает совместные операции NCPD/Militech с пасхалками на расследования 2020-х.
+- **Personal Hoard:** `flag.sqmdl.personal` активирует чёрный рынок имплантов, повышает риск `ncpd.audit`, но даёт уникальные моды для имплантов.
+- **Blacklist:** `flag.sqmdl.blacklist` и `flag.sqmdl.exiled` блокируют Maelstrom-квесты до прохождения реставрационной миссии; social-service снижает `rep.social.media` при частых мемах против Militech.
