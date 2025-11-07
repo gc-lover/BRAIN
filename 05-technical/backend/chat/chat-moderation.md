@@ -20,9 +20,10 @@
 
 ## API Tasks Status
 
-- **Status:** created
+- **Status:** completed
 - **Tasks:**
-- **Last Updated:** 2025-11-07 20:16
+  - 2025-11-08 23:10 — API-TASK-255 — Chat Moderation API (completed)
+- **Last Updated:** 2025-11-08 23:10
 ---
 
 ## Краткое описание
