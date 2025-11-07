@@ -645,8 +645,12 @@ implementations:
   brain_source: "9 faction quest JSON files v3.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 17:05"
+    completed: "2025-11-07 17:55"
+    agent: "Backend Agent"
     priority: "HIGH"
+    notes: "Доработаны NarrativeServiceImpl: current_branch и achieved_endings, обновлены репозитории и спецификации Faction Quests"
   frontend:
     status: "not_started"
     priority: "HIGH"
@@ -1212,6 +1216,15 @@ implementations:
   - api_path: "api/v1/social/friends/friend-system.yaml"
     task_id: "API-TASK-228"
     brain_source: ".BRAIN/05-technical/backend/friend-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/combat/combat-session.yaml"
+    task_id: "API-TASK-227"
+    brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
     api_status: "completed"
     backend:
       status: "not_started"
