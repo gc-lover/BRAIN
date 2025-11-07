@@ -316,7 +316,9 @@ implementations:
     task_id: "API-TASK-126"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -324,7 +326,9 @@ implementations:
     task_id: "API-TASK-127"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -332,7 +336,9 @@ implementations:
     task_id: "API-TASK-128"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -340,7 +346,9 @@ implementations:
     task_id: "API-TASK-129"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -350,7 +358,9 @@ implementations:
     task_id: "API-TASK-130"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -793,7 +803,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-contracts.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -909,7 +921,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-events.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -925,7 +939,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-production-chains.md v2.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -959,7 +975,9 @@ implementations:
   brain_source: ".BRAIN/04-narrative/romance/ (23 документов v1.0.0)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -975,7 +993,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-pricing-detailed.md v2.0.0"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1006,7 +1026,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/progression/ (4 documents v1.0.0)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1088,7 +1110,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/social/player-orders-*.md (8 documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1106,7 +1130,9 @@ implementations:
   brain_source: ".BRAIN/05-technical/ui/ (8 split documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1122,7 +1148,9 @@ implementations:
   brain_source: ".BRAIN/05-technical/algorithms/ & ai-systems/ (5 documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1158,7 +1186,9 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/world/events/ (8 travel documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:27"
+    agent: "Backend Agent"
     priority: "MEDIUM"
   frontend:
     status: "completed"
@@ -1412,9 +1442,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/housing/housing-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1437,9 +1469,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/battle-pass/part2-rewards-challenges.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1448,9 +1482,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/guild-system-backend.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1459,9 +1495,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/notification-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1470,9 +1508,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/party-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1481,9 +1521,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/inventory-system/part1-core-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1492,9 +1534,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/mail-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1503,9 +1547,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/friend-system.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1514,9 +1560,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1525,9 +1573,11 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/loot-system/part1-loot-generation.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "failed"
       started: "2025-11-08 00:27"
+      completed: "2025-11-08 00:31"
       agent: "Backend Agent"
+      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
     frontend:
       status: "not_started"
 
@@ -1536,7 +1586,9 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/maintenance/maintenance-mode-system.md"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
