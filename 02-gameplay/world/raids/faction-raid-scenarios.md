@@ -1,63 +1,63 @@
----
-**Статус:** approved  
-**Версия:** 1.0.0  
-**Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 22:04  
-**Приоритет:** high  
+п»ї---
+**РЎС‚Р°С‚СѓСЃ:** approved  
+**Р’РµСЂСЃРёСЏ:** 1.0.0  
+**Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ:** 2025-11-07  
+**РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ:** 2025-11-07 22:04  
+**РџСЂРёРѕСЂРёС‚РµС‚:** high  
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 22:04  
-**api-readiness-notes:** Рейдовые и осадные сценарии фракций: эскалация от защитников к рейдам, фазы, сигнальные миссии, экономика наград.
+**api-readiness-notes:** Р РµР№РґРѕРІС‹Рµ Рё РѕСЃР°РґРЅС‹Рµ СЃС†РµРЅР°СЂРёРё С„СЂР°РєС†РёР№: СЌСЃРєР°Р»Р°С†РёСЏ РѕС‚ Р·Р°С‰РёС‚РЅРёРєРѕРІ Рє СЂРµР№РґР°Рј, С„Р°Р·С‹, СЃРёРіРЅР°Р»СЊРЅС‹Рµ РјРёСЃСЃРёРё, СЌРєРѕРЅРѕРјРёРєР° РЅР°РіСЂР°Рґ.
 ---
 
-# Faction Raid Scenarios — Эскалация и осады
+# Faction Raid Scenarios вЂ” Р­СЃРєР°Р»Р°С†РёСЏ Рё РѕСЃР°РґС‹
 
 **target-domain:** gameplay-world/raids  
 **target-microservice:** world-service (8086)  
 **target-frontend-module:** modules/world/raids  
-**интеграции:** combat-session, economy-service, analytics-service
+**РёРЅС‚РµРіСЂР°С†РёРё:** combat-session, economy-service, analytics-service
 
-## 1. Концепция
-- Культовые защитники являются триггерами для рейдов/осад фракций.
-- Эскалация строится на сигнальных миссиях, собранных ресурсах и репутации.
-- Каждый рейд имеет 3 фазы, уникальные механики, экономику и последствия world flags.
+## 1. РљРѕРЅС†РµРїС†РёСЏ
+- РљСѓР»СЊС‚РѕРІС‹Рµ Р·Р°С‰РёС‚РЅРёРєРё СЏРІР»СЏСЋС‚СЃСЏ С‚СЂРёРіРіРµСЂР°РјРё РґР»СЏ СЂРµР№РґРѕРІ/РѕСЃР°Рґ С„СЂР°РєС†РёР№.
+- Р­СЃРєР°Р»Р°С†РёСЏ СЃС‚СЂРѕРёС‚СЃСЏ РЅР° СЃРёРіРЅР°Р»СЊРЅС‹С… РјРёСЃСЃРёСЏС…, СЃРѕР±СЂР°РЅРЅС‹С… СЂРµСЃСѓСЂСЃР°С… Рё СЂРµРїСѓС‚Р°С†РёРё.
+- РљР°Р¶РґС‹Р№ СЂРµР№Рґ РёРјРµРµС‚ 3 С„Р°Р·С‹, СѓРЅРёРєР°Р»СЊРЅС‹Рµ РјРµС…Р°РЅРёРєРё, СЌРєРѕРЅРѕРјРёРєСѓ Рё РїРѕСЃР»РµРґСЃС‚РІРёСЏ world flags.
 
-## 2. Таблица рейдов
-| Фракция | Рейд | Триггер | Сигнальные миссии | Фазы |
+## 2. РўР°Р±Р»РёС†Р° СЂРµР№РґРѕРІ
+| Р¤СЂР°РєС†РёСЏ | Р РµР№Рґ | РўСЂРёРіРіРµСЂ | РЎРёРіРЅР°Р»СЊРЅС‹Рµ РјРёСЃСЃРёРё | Р¤Р°Р·С‹ |
 | --- | --- | --- | --- | --- |
-| Aeon Dynasty | orbital-lockdown | Победа в Aeon контракте | Escort Drones, Sabotage Rival Dock | Orbital Entry > Dock Clash > Core Stabilization |
-| Crescent Energy | solar-surge | Завершён Desert Grid | Grid Repair, Nomad Alliance | Sandstorm Screen > Reactor Sync > Covenant Negotiation |
-| Ember Saints | purge-litany | Выполнен Inferno Covenant | Firebrand Supply, Civic Evac | District Siege > Pyre Trials > Redemption Vote |
-| Basilisk Sons | mech-rampart | Пройден Basilisk Hunt | Armor Fabrication, Nomad Rally | Convoy Ambush > Hangar Breach > Basilisk Duel |
-| Echo Dominion | metanet-dominion | Tribunal ветка | AI Candidate Review, Firewall Prep | Node Infiltration > Metanet Arbitration > Sovereignty Decision |
+| Aeon Dynasty | orbital-lockdown | РџРѕР±РµРґР° РІ Aeon РєРѕРЅС‚СЂР°РєС‚Рµ | Escort Drones, Sabotage Rival Dock | Orbital Entry в†’ Dock Clash в†’ Core Stabilization |
+| Crescent Energy | solar-surge | Р—Р°РІРµСЂС€С‘РЅ Desert Grid | Grid Repair, Nomad Alliance | Sandstorm Screen в†’ Reactor Sync в†’ Covenant Negotiation |
+| Ember Saints | purge-litany | Р’С‹РїРѕР»РЅРµРЅ Inferno Covenant | Firebrand Supply, Civic Evac | District Siege в†’ Pyre Trials в†’ Redemption Vote |
+| Basilisk Sons | mech-rampart | РџСЂРѕР№РґРµРЅ Basilisk Hunt | Armor Fabrication, Nomad Rally | Convoy Ambush в†’ Hangar Breach в†’ Basilisk Duel |
+| Echo Dominion | metanet-dominion | Tribunal РІРµС‚РєР° | AI Candidate Review, Firewall Prep | Node Infiltration в†’ Metanet Arbitration в†’ Sovereignty Decision |
 
-## 3. Пример рейда: orbital-lockdown
-- **Фаза 1 Orbital Entry:** пилотирование дроп-подов, DEX/TECH проверки, StageStart событие.
-- **Фаза 2 Dock Clash:** бой с защитными дронами, усиления через Lotus Protocol Aeon защитника.
-- **Фаза 3 Core Stabilization:** командный таймер, игроки решают оставить/захватить ядро > влияет на corporate_balance.
-- **Награды:** орбитальные модули, аккредитации Aeon, лут с коэффициентом по сложности (Bronze > Mythic+).
+## 3. РџСЂРёРјРµСЂ СЂРµР№РґР°: orbital-lockdown
+- **Р¤Р°Р·Р° 1 Orbital Entry:** РїРёР»РѕС‚РёСЂРѕРІР°РЅРёРµ РґСЂРѕРї-РїРѕРґРѕРІ, DEX/TECH РїСЂРѕРІРµСЂРєРё, StageStart СЃРѕР±С‹С‚РёРµ.
+- **Р¤Р°Р·Р° 2 Dock Clash:** Р±РѕР№ СЃ Р·Р°С‰РёС‚РЅС‹РјРё РґСЂРѕРЅР°РјРё, СѓСЃРёР»РµРЅРёСЏ С‡РµСЂРµР· Lotus Protocol Aeon Р·Р°С‰РёС‚РЅРёРєР°.
+- **Р¤Р°Р·Р° 3 Core Stabilization:** РєРѕРјР°РЅРґРЅС‹Р№ С‚Р°Р№РјРµСЂ, РёРіСЂРѕРєРё СЂРµС€Р°СЋС‚ РѕСЃС‚Р°РІРёС‚СЊ/Р·Р°С…РІР°С‚РёС‚СЊ СЏРґСЂРѕ в†’ РІР»РёСЏРµС‚ РЅР° corporate_balance.
+- **РќР°РіСЂР°РґС‹:** РѕСЂР±РёС‚Р°Р»СЊРЅС‹Рµ РјРѕРґСѓР»Рё, Р°РєРєСЂРµРґРёС‚Р°С†РёРё Aeon, Р»СѓС‚ СЃ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРј РїРѕ СЃР»РѕР¶РЅРѕСЃС‚Рё (Bronze в†’ Mythic+).
 
-## 4. Сигнальные миссии
-- Escort Drones: кооперативная миссия по доставке ресурсов (overworld event).
-- Sabotage Rival Dock: stealth-инфильтрация, INT/COOL проверки.
-- Каждая успешная миссия добавляет aid_charge в world_state.faction.aeon.
+## 4. РЎРёРіРЅР°Р»СЊРЅС‹Рµ РјРёСЃСЃРёРё
+- Escort Drones: РєРѕРѕРїРµСЂР°С‚РёРІРЅР°СЏ РјРёСЃСЃРёСЏ РїРѕ РґРѕСЃС‚Р°РІРєРµ СЂРµСЃСѓСЂСЃРѕРІ (overworld event).
+- Sabotage Rival Dock: stealth-РёРЅС„РёР»СЊС‚СЂР°С†РёСЏ, INT/COOL РїСЂРѕРІРµСЂРєРё.
+- РљР°Р¶РґР°СЏ СѓСЃРїРµС€РЅР°СЏ РјРёСЃСЃРёСЏ РґРѕР±Р°РІР»СЏРµС‚ aid_charge РІ world_state.faction.aeon.
 
-## 5. Экономика наград
-- BaseLoot: фракционный лут, onusLoot: редкие чертежи.
-- Кредиты распределяются через economy-service (POST /economy/rewards), учитывают выбранную ветку outcome.
-- Raid Bonds: фракционные облигации, торгуемые на аукционе; влияют на цены имплантов/транспорта.
+## 5. Р­РєРѕРЅРѕРјРёРєР° РЅР°РіСЂР°Рґ
+- BaseLoot: С„СЂР°РєС†РёРѕРЅРЅС‹Р№ Р»СѓС‚, onusLoot: СЂРµРґРєРёРµ С‡РµСЂС‚РµР¶Рё.
+- РљСЂРµРґРёС‚С‹ СЂР°СЃРїСЂРµРґРµР»СЏСЋС‚СЃСЏ С‡РµСЂРµР· economy-service (POST /economy/rewards), СѓС‡РёС‚С‹РІР°СЋС‚ РІС‹Р±СЂР°РЅРЅСѓСЋ РІРµС‚РєСѓ outcome.
+- Raid Bonds: С„СЂР°РєС†РёРѕРЅРЅС‹Рµ РѕР±Р»РёРіР°С†РёРё, С‚РѕСЂРіСѓРµРјС‹Рµ РЅР° Р°СѓРєС†РёРѕРЅРµ; РІР»РёСЏСЋС‚ РЅР° С†РµРЅС‹ РёРјРїР»Р°РЅС‚РѕРІ/С‚СЂР°РЅСЃРїРѕСЂС‚Р°.
 
 ## 6. REST/WS
-| Endpoint | Метод | Назначение |
+| Endpoint | РњРµС‚РѕРґ | РќР°Р·РЅР°С‡РµРЅРёРµ |
 | --- | --- | --- |
-| /world/raids | GET | Список фракционных рейдов, состояние зарядки |
-| /world/raids/{raidId} | GET | Фазы, требования, награды |
-| /world/raids/{raidId}/signal | POST | Регистрация сигнальной миссии |
-| /world/raids/{raidId}/start | POST | Запуск рейда (GM или auto-trigger) |
-| /world/raids/{raidId}/outcome | POST | Результат фазы/рейда, награды, world flags |
+| /world/raids | GET | РЎРїРёСЃРѕРє С„СЂР°РєС†РёРѕРЅРЅС‹С… СЂРµР№РґРѕРІ, СЃРѕСЃС‚РѕСЏРЅРёРµ Р·Р°СЂСЏРґРєРё |
+| /world/raids/{raidId} | GET | Р¤Р°Р·С‹, С‚СЂРµР±РѕРІР°РЅРёСЏ, РЅР°РіСЂР°РґС‹ |
+| /world/raids/{raidId}/signal | POST | Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРёРіРЅР°Р»СЊРЅРѕР№ РјРёСЃСЃРёРё |
+| /world/raids/{raidId}/start | POST | Р—Р°РїСѓСЃРє СЂРµР№РґР° (GM РёР»Рё auto-trigger) |
+| /world/raids/{raidId}/outcome | POST | Р РµР·СѓР»СЊС‚Р°С‚ С„Р°Р·С‹/СЂРµР№РґР°, РЅР°РіСЂР°РґС‹, world flags |
 
-**WebSocket:** wss://world-service/raids/{raidId} — PhaseStart, MechanicTrigger, OutcomeApplied, LootDistributed.
+**WebSocket:** wss://world-service/raids/{raidId} вЂ” PhaseStart, MechanicTrigger, OutcomeApplied, LootDistributed.
 
-## 7. Схемы данных
+## 7. РЎС…РµРјС‹ РґР°РЅРЅС‹С…
 `sql
 CREATE TABLE faction_raids (
     raid_id VARCHAR(64) PRIMARY KEY,
@@ -80,6 +80,6 @@ CREATE TABLE faction_raid_signals (
 );
 `
 
-## 8. Готовность
-- Рейдовые сценарии описаны, сигнальные миссии и экономика наград связаны с существующими системами.
-- Готово для API Task Creator и world-service реализации.
+## 8. Р“РѕС‚РѕРІРЅРѕСЃС‚СЊ
+- Р РµР№РґРѕРІС‹Рµ СЃС†РµРЅР°СЂРёРё РѕРїРёСЃР°РЅС‹, СЃРёРіРЅР°Р»СЊРЅС‹Рµ РјРёСЃСЃРёРё Рё СЌРєРѕРЅРѕРјРёРєР° РЅР°РіСЂР°Рґ СЃРІСЏР·Р°РЅС‹ СЃ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРјРё СЃРёСЃС‚РµРјР°РјРё.
+- Р“РѕС‚РѕРІРѕ РґР»СЏ API Task Creator Рё world-service СЂРµР°Р»РёР·Р°С†РёРё.

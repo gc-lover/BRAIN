@@ -2709,5 +2709,23 @@ documents:
     issues: []
     api_target: "api/v1/analytics/factions/metrics.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/global-research-2020-2093.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:15"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Глобальные исследования 2020–2093: ветки технологий, условия, эффекты, API и телеметрия."
+    issues: []
+    api_target: "api/v1/world/research/global-2020-2093.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/seasonal-events-2020-2093.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:17"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Регулярные и уникальные события 2020–2093: календарь, условия, награды, API и телеметрия."
+    issues: []
+    api_target: "api/v1/world/events/seasonal-2020-2093.yaml"
+
 # Примеры записей:
 

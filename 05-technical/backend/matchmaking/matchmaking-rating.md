@@ -20,9 +20,10 @@
 
 ## API Tasks Status
 
-- **Status:** created
+- **Status:** completed
 - **Tasks:**
-- **Last Updated:** 2025-11-07 20:16
+  - 2025-11-08 22:25 — API-TASK-252 — Matchmaking Rating API (completed)
+- **Last Updated:** 2025-11-08 22:25
 ---
 
 ## Краткое описание
