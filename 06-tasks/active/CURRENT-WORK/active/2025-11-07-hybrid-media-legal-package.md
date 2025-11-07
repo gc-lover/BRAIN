@@ -11,6 +11,14 @@
 **Приоритет:** high  
 **Связанные документы:** `2025-11-07-hybrid-media-references-expansion.md`, `../ideas/2025-11-07-IDEA-hybrid-media-references.md`, `../../config/legal-approvals-template.md`
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-296: api/v1/admin/legal/hybrid-media-references.yaml (2025-11-07)
+- Last Updated: 2025-11-07 22:05
+---
+
 # Гибридные отсылки — юридический пакет (черновик)
 
 ## 1. Обзор вдохновения
