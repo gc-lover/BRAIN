@@ -29,6 +29,7 @@
 - **Экономика заказов** → `player-orders-economy.md`
 - **Репутация и рейтинг** → `player-orders-reputation.md`
 - **Специальные механики** → `player-orders-advanced.md`
+- **Система заказов (детально)** → `player-orders-system-детально.md`
 - **Влияние на игровой мир** → `player-orders-world-impact.md`
 
 ---

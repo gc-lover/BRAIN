@@ -362,9 +362,9 @@ documents:
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-world-interaction-ui.md"
     status: "ready"
     version: "1.0.0"
-    checked: "2025-11-07 16:53"
+    checked: "2025-11-07 18:20"
     checker: "AI Agent (Brain Manager)"
-    notes: "UX, механики и операционные требования для World Pulse, Events Dashboard, Influence Map, Guild Ops, Market Stabilizer, Social Resonance и Crisis Hub. Включает UX-флоу, тест-план, SLA, ASCII мокапы."
+    notes: "UX глобальных интерфейсов: World Pulse, Events Dashboard, Influence Map, Guild Ops, Market Stabilizer, Social Resonance, Crisis Hub + Specter overlay, метрики и city unrest orchestration."
     issues: []
     api_target: "api/v1/world/world-interaction-suite.yaml"
 
