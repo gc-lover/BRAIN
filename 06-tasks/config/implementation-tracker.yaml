@@ -598,8 +598,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/quest-engine-backend.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 12:55"
+    completed: "2025-11-07 13:45"
+    agent: "Backend Agent"
     priority: "CRITICAL"
+    notes: "Добавлены сущности QuestInstance/DialogueState/SkillCheckResult, сервис NarrativeServiceImpl, контроллер NarrativeController и миграция 072 для движка квестов"
   frontend:
     status: "not_started"
     priority: "CRITICAL"
@@ -1035,6 +1039,24 @@ implementations:
   - api_path: "api/v1/technical/session-management/lifecycle.yaml"
     task_id: "API-TASK-198"
     brain_source: ".BRAIN/05-technical/backend/session-management/part1-lifecycle-heartbeat.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/session-management/reconnection-monitoring.yaml"
+    task_id: "API-TASK-199"
+    brain_source: ".BRAIN/05-technical/backend/session-management/part2-reconnection-monitoring.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/admin/support/support-tickets.yaml"
+    task_id: "API-TASK-200"
+    brain_source: ".BRAIN/05-technical/backend/support/support-ticket-system.md"
     api_status: "completed"
     backend:
       status: "not_started"
