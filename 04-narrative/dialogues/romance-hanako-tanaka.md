@@ -5,14 +5,14 @@
 **Статус:** approved  
 **Версия:** 1.2.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07  
+**Последнее обновление:** 2025-11-07 20:43  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/hanako-arasaka.md`, `../dialogues/npc-viktor-vektor.md`, `../../02-gameplay/social/romance-system.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/romance  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07 20:43  
 **api-readiness-notes:** «Этапы 1-2 романса с Ханако оформлены: чайная сцена, небесный сад, проверки, YAML и обновлённая API-интеграция.»
 
 ---

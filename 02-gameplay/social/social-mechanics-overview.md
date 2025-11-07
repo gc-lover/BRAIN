@@ -13,6 +13,7 @@
 ## Карта документов (одна фича — один файл)
 
 - **Отношения с NPC (обзор)** → `npc-relationships-system.md`
+- **Отношения с NPC (детально)** → `relationships-system-детально.md`
 - **Наставничество (обзор)** → `mentorship-system.md`
 - **Найм NPC (обзор)** → `npc-hiring-system.md`
 - **Заказы от игроков (обзор)** → `player-orders-system.md`

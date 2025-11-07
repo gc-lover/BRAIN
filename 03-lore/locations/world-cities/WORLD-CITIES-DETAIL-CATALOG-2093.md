@@ -51,6 +51,14 @@
 - **Фракции:** Militech Finance Desk (корпоративные брокеры), Liberty Mariners (морская гвардия), Cathedral of Echo (кибер-церковь).
 - **Особенности:** глобальный центр финансовых доминаций, PvP-контракты между корпорациями, хакерские рейды NetWatch.
 
+### Toronto (Канада)
+- **См.** `./toronto-detailed-2020-2093.md`
+- **Районы:** Prism Financial District (корпорации), Harbor Front Arcology (прибрежные купола), Holo Annex (голографические кварталы), Ice Lake Vault Network (подледные дата-центры).
+- **Ключевые улицы:** Prism Skyway, Harbor Glide, Maple Loop, Ice Vein Tunnels.
+- **NPC:** Клэр «Prism» Нгуен (операционный директор), Итан Уайт (архивариус Ice Lake), доктор Амара Сингх (рипердок AR), «Glide» Морган Чоу (лидер Harbor Runners).
+- **Фракции:** Maple Data Consortium, Harbor Runners, Frostbyte Collective, CN Tower Spectres.
+- **Особенности:** ледяные дата-озёра, голографические фестивали, дилеммы между корпорацией и подпольем.
+
 ### Chicago (США, Иллинойс)
 - **См.** `./chicago-detailed-2020-2093.md`
 - **Районы:** Wind Corridor (ветропарки), Loop Reinforced (деловой центр), Sprawl South (индустриальные руины), Crystal Shore (озёрная зона).
