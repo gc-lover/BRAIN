@@ -1923,9 +1923,9 @@ documents:
   - path: ".BRAIN/02-gameplay/world/world-state/living-world-kenshi-hybrid.md"
     status: "ready"
     version: "0.2.0"
-    checked: "2025-11-08 00:17"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Содержит финальные коэффициенты Action XP, REST/ Kafka контракты world-service и UX хроники мира; готово к API задачам."
+    checked: "2025-11-08 00:22"
+    checker: "AI Brain Manager"
+    notes: "Содержит финальные коэффициенты Action XP, REST/Kafka/GraphQL контракты world-service и gameplay-service, UX хроники мира и балансные метрики. Готово к созданию API задач."
     issues: []
     api_target: "api/v1/world/living-world-kenshi-hybrid.yaml"
 
