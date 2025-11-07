@@ -16,6 +16,14 @@
 **target-frontend-module:** modules/world/raids  
 **интеграции:** combat-session, economy-service, analytics-service
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-277: api/v1/gameplay/world/factions/raid-scenarios.yaml (2025-11-08 02:15)
+- Last Updated: 2025-11-08 02:15
+---
+
 ## 1. Концепция
 - Культовые защитники являются триггерами для рейдов/осад фракций.
 - Эскалация строится на сигнальных миссиях, собранных ресурсах и репутации.
@@ -39,7 +47,8 @@
 ## 4. Сигнальные миссии
 - Escort Drones: кооперативная миссия по доставке ресурсов (overworld event).
 - Sabotage Rival Dock: stealth-инфильтрация, INT/COOL проверки.
-- Каждая успешная миссия добавляет aid_charge в world_state.faction.aeon.
+- Каждая успешная миссия добавляет 
+aid_charge в world_state.faction.aeon.
 
 ## 5. Экономика наград
 - BaseLoot: фракционный лут, onusLoot: редкие чертежи.
