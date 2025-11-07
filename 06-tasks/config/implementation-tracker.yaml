@@ -581,10 +581,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/daily-weekly-reset-system.md"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-07 10:15"
+    completed: "2025-11-07 10:42"
     agent: "Backend Agent"
     priority: "MEDIUM"
+    notes: "Реализованы reset-сервисы, репозитории и миграция 071, обновлён TechnicalApi"
   frontend:
     status: "not_started"
     priority: "LOW"
