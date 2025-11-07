@@ -858,8 +858,13 @@ implementations:
     status: "not_started"
     priority: "HIGH"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 20:15"
+    completed: "2025-11-07 20:35"
+    agent: "Frontend Agent"
+    commit: "083360b"
     priority: "MEDIUM"
+    notes: "ModerationPage, ModerationQueueCard, SanctionStatsCard, ModeratorPerformanceCard, маршруты"
 
 - api_path: "api/v1/gameplay/economy/economy-events.yaml"
   task_id: "API-TASK-165"
