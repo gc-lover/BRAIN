@@ -2835,5 +2835,59 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/osaka-quantum.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/havana-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:20"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Гаваны: дата-рифы, сигарные моды, квестовые цепочки Syndicate."
+    issues: []
+    api_target: "api/v1/lore/locations/havana.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/chengdu-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:24"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Чэнду: Syntha Collective, Panda Flux, гастро-сцена." 
+    issues: []
+    api_target: "api/v1/lore/locations/chengdu.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/geneva-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:28"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Женевы: Helvetic Tribunal, нейтральные арбитражи, защитные цепочки."
+    issues: []
+    api_target: "api/v1/lore/locations/geneva.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/havana-data-reef-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:31"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Havana Data Reef: карибские конвои, гонки и сигарные моды."
+    issues: []
+    api_target: "api/v1/narrative/factions/havana-data-reef.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/chengdu-syntha-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:33"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Jinlong Syntha: гастрономические поставки, музыкальные концерты, гуманитарные миссии."
+    issues: []
+    api_target: "api/v1/narrative/factions/chengdu-syntha.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/geneva-arbitration-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:35"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Helvetic Quantum Tribunal: нейтральные арбитражи и защита свидетелей."
+    issues: []
+    api_target: "api/v1/narrative/factions/geneva-arbitration.yaml"
+
 # Примеры записей:
 

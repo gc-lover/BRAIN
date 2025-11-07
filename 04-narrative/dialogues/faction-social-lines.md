@@ -16,6 +16,14 @@
 **target-frontend-module:** modules/social/interactions  
 **интеграции:** reputation, romance, contract outcomes
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-280: api/v1/social/factions/faction-social-dialogues.yaml (2025-11-08 03:00)
+- Last Updated: 2025-11-08 03:00
+---
+
 ## 1. Обзор
 - Для ключевых фракций описаны лидеры, их мотивация, условия доступа и ветви общения.
 - Каждая линия привязана к репутации, веткам контрактов и историческим событиям.
@@ -24,12 +32,16 @@
 ## 2. Таблица лидеров
 | Фракция | Лидер | Тип связи | Условие доступа | Ключевые темы |
 | --- | --- | --- | --- | --- |
-| Aeon Dynasty | Liang  Celestial Wen | Прагматичный союз | ep.corp.aeon >= 25, успех escort ветки | Корпорат стратегия, будущее орбиталей |
-| Crescent Energy | Amira Al-Faris | Романтическая/деловая | Завершён Nomad альянс, ep.corp.crescent >= 20 | Пустынные реформы, баланс Nomad |
+| Aeon Dynasty | Liang  Celestial Wen | Прагматичный союз | 
+ep.corp.aeon >= 25, успех escort ветки | Корпорат стратегия, будущее орбиталей |
+| Crescent Energy | Amira Al-Faris | Романтическая/деловая | Завершён Nomad альянс, 
+ep.corp.crescent >= 20 | Пустынные реформы, баланс Nomad |
 | Mnemosyne Archives | Dr. Sofia Arvidsson | Платонический/научный | legacy_rep.hist-urban-scribes >= 20 | Этика памяти, выбор идентичности |
-| Ember Saints | Mother Pyra | Интенсивная приверженность | ep.street.ember >= 15, освобождение района | Искупление, огненные ритуалы |
+| Ember Saints | Mother Pyra | Интенсивная приверженность | 
+ep.street.ember >= 15, освобождение района | Искупление, огненные ритуалы |
 | Void Sirens | Captain Nyla Kalu | Приключенческий роман | Космический корабль, спасение колонистов | Свобода в нулевой гравитации |
-| Basilisk Sons | Marshal Vega | Боевое братство | Победа в Mech Rampart, ep.nomad >= 20 | Защита караванов, кодекс мехов |
+| Basilisk Sons | Marshal Vega | Боевое братство | Победа в Mech Rampart, 
+ep.nomad >= 20 | Защита караванов, кодекс мехов |
 | Quantum Fable | Lyra Voss | Творческая связь | Успешный story-heist-legacies | Нарративные войны, правда vs коммерция |
 | Echo Dominion | Echo Arbiter Z3N | Философский диалог | Выбранный ИИ в Tribunal | Сосуществование ИИ и людей |
 
