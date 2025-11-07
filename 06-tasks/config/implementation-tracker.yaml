@@ -516,10 +516,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/guild-system.md"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-07 03:14"
+    completed: "2025-11-07 03:24"
     agent: "Backend Agent"
+    commit: "9b57a3d"
     priority: "HIGH"
+    notes: "SocialApi guild endpoints, SocialService guild methods, guild entities/repos, migration 067"
   frontend:
     status: "not_started"
     priority: "HIGH"
