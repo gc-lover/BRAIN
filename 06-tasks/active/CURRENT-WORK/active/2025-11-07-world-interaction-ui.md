@@ -91,9 +91,7 @@
 - Запуск кампаний через `POST /api/v1/social/campaigns`, UI показывает влияние и стоимость.
 - Компоненты: `shared/ui/ResonanceMeter`, `shared/ui/RelationshipGrid`.
 - Specter overlay отображает панель «Underlink Specter» при `flag.neon.elite == true`, содержит текущие поручения Ghosts и статус курьеров.
-- Индикатор `city.unrest.level` связывается с world-service и подсвечивает рост беспорядков, предлагая CTA «Сдержать протесты» при превышении порога.
-- Specter overlay показывает панель «Underlink Specter» при флаге `flag.neon.elite == true`, отражает поручения Ghosts и статус курьеров.
-- Индикатор `city.unrest.level` визуализирует рост беспорядков, при превышении порога активирует CTA «Сдержать протесты».
+- Индикатор `city.unrest.level` подсвечивает рост беспорядков (данные world-service) и активирует CTA «Сдержать протесты» при превышении порога.
 
 ### 2.7 Кризисный центр (Crisis Control Hub)
 - Активируется при `alertLevel=crisis`.

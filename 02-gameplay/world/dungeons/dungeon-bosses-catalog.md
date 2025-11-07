@@ -1,12 +1,12 @@
 ---
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
 **Последнее обновление:** 2025-11-07 20:37  
 **Приоритет:** high  
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 20:37  
-**api-readiness-notes:** Каталог боссов подземелий: фазы, уникальные навыки по уровням сложности, таблицы данных и API world-service.
+**api-readiness-notes:** Каталог боссов подземелий: фазы, уникальные навыки по уровням сложности, таблицы данных и API world-service. Обновление v1.1.0 добавляет два новых боссов, модификаторы Apex+ и аналитические метрики.
 ---
 
 # Dungeon Bosses Catalog — Инстансовые лидеры
@@ -29,6 +29,8 @@
 | `db-bio-harvester` | Substructure 77 | Overrun | Gold | Hydra Biotechnica |
 | `db-specter-warden` | Data Reliquary | Heist | Platinum | Arasaka Shadow Ops |
 | `db-rail-tyrant` | Ghost Freight | Escort | Gold | Nomad renegade |
+| `db-glass-reaper` | Aurora Vault | Heist | Platinum → Diamond | Cult of the Wave |
+| `db-cinder-archon` | Reactor Depths | Gauntlet | Mythic | Petrochem Black Ops |
 
 ## 3. Подробности боссов
 ### `db-echo-guardian`
@@ -66,12 +68,27 @@
 - **Hard Mode:** добавлена `Nomad Betrayal` — случайные NPC-дезертиры.
 - **Loot:** `Nomad Railgun`, `Convoy Route Access`, `Legendary Vehicle Mod`.
 
+### `db-glass-reaper`
+- **Фаза 1 — Prism Vault:** `Light Fracture` — зеркала рассеивают урон, требуется позиционирование (INT DC 19).
+- **Фаза 2 — Mirror Assassins:** босс создает зеркальные тени, активирует `Spectral Execution` (COOL DC 20).
+- **Фаза 3 — Wave Resonance:** `Aurora Collapse` — синхронный взлом четырёх кристаллов (TECH DC 21).
+- **Apex Mode:** добавлен `Reality Fade` — игроки временно оказываются в теневом мире (WIS DC 21).
+- **Loot:** `Prism Blade`, `Wave Cult Reputation`, `Aurora Keycard`.
+
+### `db-cinder-archon`
+- **Фаза 1 — Ignition Matrix:** `Thermal Lance` — прожигает пол, игроки переходят на верхние платформы.
+- **Фаза 2 — Reactor Shields:** `Cinder Reflector` — требует танкование и синхронный сброс энергии (STR DC 20 + TECH DC 20).
+- **Фаза 3 — Archon Verdict:** `Inferno Protocol` — 90 секунд на уничтожение ядерного ядра.
+- **Apex Mode:** добавлен `Ash Storm` — постепенное заполнение арены, каждую минуту CON DC +2.
+- **Loot:** `Archon Reactor Core`, `Petrochem Favors`, `Mythic Blueprint`.
+
 ## 4. Уровни сложности и уникальные навыки
 | Mode | Особенности | Уникальные навыки |
 | --- | --- | --- |
-| Normal | Базовые механики, минимальные проверки | `Mirror Pulse`, `Rhythm Strike`, `Biohazard Cloud`, `Specter Mark`, `Electro Volley` |
-| Hard | Усложнённые проверки, новые адды | `Glitch Cascade`, `Backstage Ambush`, `Adaptive Mutation`, `Zero Trace`, `Hijack Maneuver` |
-| Apex | Постоянные дебаффы, таймеры | `Singularity Anchor`, `Neon Crescendo`, `Harvest Protocol`, `Silent Collapse`, `Overclock Crash` |
+| Normal | Базовые механики, минимальные проверки | `Mirror Pulse`, `Rhythm Strike`, `Biohazard Cloud`, `Specter Mark`, `Electro Volley`, `Light Fracture`, `Thermal Lance` |
+| Hard | Усложнённые проверки, новые адды | `Glitch Cascade`, `Backstage Ambush`, `Adaptive Mutation`, `Zero Trace`, `Hijack Maneuver`, `Spectral Execution`, `Cinder Reflector` |
+| Apex | Постоянные дебаффы, таймеры | `Singularity Anchor`, `Neon Crescendo`, `Harvest Protocol`, `Silent Collapse`, `Overclock Crash`, `Aurora Collapse`, `Inferno Protocol` |
+| Apex+ | Перманентные DoT, двойные таймеры | `Reality Fade`, `Ash Storm` |
 
 ## 5. REST API (world-service)
 | Endpoint | Метод | Назначение |
@@ -81,6 +98,7 @@
 | `/world/dungeons/bosses/{bossId}/checkpoint` | `POST` | Фиксация прогресса фазы |
 | `/world/dungeons/bosses/{bossId}/difficulty` | `PUT` | Смена сложности (Normal/Hard/Apex) |
 | `/world/dungeons/bosses/{bossId}/rewards` | `POST` | Распределение наград |
+| `/world/dungeons/bosses/{bossId}/aftermath` | `POST` | Применение world flags и репутаций после победы/поражения |
 
 ## 6. WebSocket и телеметрия
 - `wss://world-service/dungeons/{instanceId}/boss` — события `PhaseStart`, `AbilityTrigger`, `DndCheck`, `Failure`, `Success`.
@@ -121,15 +139,26 @@ CREATE TABLE dungeon_boss_difficulties (
 - Loot распределяется через economy-service, таблица `dungeon_boss_loot`.
 - Прогрессия: progression-service выдаёт навыки/таланты (например, `Neon Crescendo Resist`).
 - Battle Pass: каждая победа даёт `Dungeon Badge`.
-- Reputation: social-service обновляет очки (`rep.underground`, `rep.corp.arasaka`, `rep.nomad`).
+- Reputation: social-service обновляет очки (`rep.underground`, `rep.corp.arasaka`, `rep.nomad`, `rep.wave_cult`, `rep.petrochem`).
+- Таблица последствий:
+  - Победа над `db-glass-reaper` открывает миссии `Wave Cult Shadow Contracts`.
+  - Победа над `db-cinder-archon` снижает риск событий Petrochem в Badlands.
+  - Провал `db-rail-tyrant` усиливает налеты marauders (world flag `nomad_routes` -10).
 
 ## 9. Связь с Dungeon Scenarios
 - Соотнесён с `dungeon-scenarios-catalog.md` (идентификаторы совпадают).
 - Готовые данные для API-SWAGGER: `api/v1/gameplay/world/dungeons.yaml` получает блок `bosses`.
 - Контент синхронизирован с `combat-ai-enemies.md` (уникальные навыки и уровни сложности).
+- `wb-hivemind-behemoth` и `db-bio-harvester` делят общие компоненты лута и влияют на одни и те же события экономики.
 
-## 10. Готовность
-- Каталог боссов завершён, навыки и фазы описаны.
-- REST/WS контракты и таблицы данных готовы для генерации API.
-- Документ можно передавать в API Task Creator.
+## 10. Аналитика
+- Метрика `dungeonBossClearRate` — процент успешных проходов по сложности и составу группы.
+- Метрика `dungeonBossDndFailRate` — частота провалов D&D проверок, используется для балансировки DC.
+- Метрика `dungeonBossTimeToKill` — среднее время убийства.
+- Логи: `phase_transition`, `ability_trigger`, `modifier_active`, `aftermath_applied`.
+
+## 11. Готовность
+- Каталог расширен до v1.1.0 (новые боссы, Apex+ мод и последствия).
+- REST/WS контракты дополнены эндпоинтом `aftermath`, схемы данных актуальны.
+- Документ готов к передаче в API Task Creator и синхронизирован с `world-bosses-catalog.md` и `dungeon-scenarios-catalog.md`.
 

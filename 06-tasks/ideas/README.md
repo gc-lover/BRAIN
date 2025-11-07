@@ -47,6 +47,7 @@
 - [Иммерсивные пасхалки и чиз-сценарии](./2025-11-07-IDEA-immersive-media-cheese.md)
 - [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md)
 - [Динамические медиа-кроссоверы и чиз-сцены](./2025-11-07-IDEA-dynamic-media-crossovers.md)
+- [Городские легенды и пасхальные маршруты](./2025-11-07-IDEA-urban-legend-easter-eggs.md)
 - [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md)
 
 #### Техническое (technical)
@@ -70,13 +71,14 @@
 | 2025-11-07 | [Иммерсивные пасхалки и чиз-сценарии](./2025-11-07-IDEA-immersive-media-cheese.md) | narrative | recorded | medium |
 | 2025-11-07 | [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md) | narrative | recorded | medium |
 | 2025-11-07 | [Динамические медиа-кроссоверы и чиз-сцены](./2025-11-07-IDEA-dynamic-media-crossovers.md) | narrative | recorded | medium |
+| 2025-11-07 | [Городские легенды и пасхальные маршруты](./2025-11-07-IDEA-urban-legend-easter-eggs.md) | narrative | recorded | medium |
 
 ---
 
 ## Статистика
 
-- **Всего идей:** 9
-- **В разработке:** 6
+- **Всего идей:** 10
+- **В разработке:** 7
 - **Завершено:** 1
 - **Отклонено:** 0
 

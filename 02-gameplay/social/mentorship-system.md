@@ -27,6 +27,7 @@
 - **Уникальные способности Teacher класса** → `mentorship-abilities.md`
 - **Отношения наставник-ученик** → `mentorship-relationships.md`
 - **Особые механики** → `mentorship-special.md`
+- **Система наставничества (детально)** → `mentorship-system-детально.md`
 - **Влияние на игровой мир** → `mentorship-world-impact.md`
 
 ---
