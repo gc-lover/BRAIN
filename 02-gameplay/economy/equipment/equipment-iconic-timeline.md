@@ -1,5 +1,121 @@
 # Iconic Equipment Timeline (2020-2093)
 
+**Версия:** 0.1.2  
+**Дата:** 2025-11-07 21:06  
+**Статус:** draft  
+
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/equipment  
+**sources:** procedural-equipment-library.md, equipment-catalog-manual.md
+
+---
+
+## 📆 Этапы развития
+
+| Период | Ключевые события | Культовые предметы | Доступность |
+|--------|------------------|--------------------|-------------|
+| 2020-2029 • Legacy Roots | Ретро-флэшбеки, война корпораций | Falcon Sandevistan Mk.V, Sovereign Twins, Arasaka Kage Cloak (Prototype) | Уникальные миссии, коллекции ветеранов |
+| 2030-2039 • Black Ice Rising | Войны Blackwall, становление NetWatch | NetWatch Ægis (Beta), Ghost Sparrow Mk.I, Militech Ronin EX-L (Testbed) | Спецоперации корпораций |
+| 2040-2049 • Night City Reforged | Перестройка Найт-Сити | Malorian Arms 3516b, Hannya-57, Trauma Guardian Mk4 | Основная кампания, ранние рейды |
+| 2050-2059 • Chrome Frontiers | Экспансия пустошей, экстракт-шутеры | Synwave Bow, Toxin Weave, Bulwark Auto-Turret Mk.II | Региональные войны, кланы |
+| 2060-2069 • Neon Ascension | Социальные и хакерские фракции | Mox Bloom Dress, Vector Null (Prototype), Echo Beacon | Социальные арки, турниры |
+| 2070-2079 • Digital Renaissance | Возвращение легенд Afterlife | Rogue's Gambit, Arasaka Kage Cloak (Production), NetWatch Ægis (Release) | Endgame PvE/PvP |
+| 2080-2089 • Post-Wall Horizon | Легализация продвинутых имплантов | Synapse Deck Prime, Seastorm-12, Nanite Forge Core | Контракты кланов, глобальные события |
+| 2090-2093 • Quantum Edge | Квантовые технологии, финал кампании | NeurON Synwave Suite, Phase Arrow Upgrade, Siege Sync Vanguard | Мировые кризисы |
+
+---
+
+## 🧭 Детальный таймлайн по десятилетиям
+
+### Legacy Roots (2020-2029)
+- **Falcon Sandevistan Mk.V** — доступен в flashback-квестах Cyberpunk 2020, полноценный выпуск в 2045.
+- **Sovereign Twins** — коллекционный набор Tyger Claws, возвращается в ивенте 2072.
+- **Arasaka Kage Cloak (Prototype)** — единственный прототип 2029 года, выдаётся в скрытой миссии.
+
+### Black Ice Rising (2030-2039)
+- **NetWatch Ægis (Beta)** — ограниченный релиз во времена Blackwall War, доступ элитным нетраннерам.
+- **Ghost Sparrow Drone Mk.I** — ранний recon-дрон Zetatech, усиливает скрытность.
+- **Militech Ronin EX-L (Testbed)** — experimental railgun, игрок получает временный доступ.
+
+### Night City Reforged (2040-2049)
+- **Malorian Arms 3516b** — легендарный пистолет Джонни (квест «Пепел и Хром»).
+- **Hannya-57** — штурмовая винтовка Arasaka, появляется в рейдах 2046.
+- **Trauma Guardian Mk4** — броня Trauma Team, вводит улучшенные revive-механики.
+
+### Chrome Frontiers (2050-2059)
+- **Synwave Bow** — эксперимент NeurON Forge для рейдеров пустошей.
+- **Toxin Weave** — дермальная броня Biotechnica, защищает от нанитов.
+- **Bulwark Auto-Turret Mk.II** — оборонительный deployable Militech.
+
+### Neon Ascension (2060-2069)
+- **Mox Bloom Dress** — культовый сет Mox, требует социальные арки.
+- **Vector Null (Prototype)** — smart-снайперка Zetatech, доступна высокоуровневым нетраннерам.
+- **Echo Beacon** — инструмент толпы, массовый контроль.
+
+### Digital Renaissance (2070-2079)
+- **Rogue's Gambit** — артефакт Afterlife, финал ветки Rogue.
+- **Arasaka Kage Cloak (Production)** — серийная версия, награда PvP-сезона.
+- **NetWatch Ægis (Release)** — полноценная дека с Countertrace.
+
+### Post-Wall Horizon (2080-2089)
+- **Synapse Deck Prime** — мультивзлом Zetatech, контракт NetWatch.
+- **Seastorm-12** — шоковое оружие Tsunami Defense.
+- **Nanite Forge Core** — модуль Biotechnica, открывает адаптивную регенерацию.
+
+### Quantum Edge (2090-2093)
+- **NeurON Synwave Suite** — финальный гибридный сет.
+- **Phase Arrow Upgrade** — артефактный мод, открывает квантовые стрелы.
+- **Siege Sync Vanguard** — заключительный экзоскелет Militech.
+
+---
+
+## 📒 Таблица доступности
+
+| Название | Категория | Корпорация | Год | Unlock | Примечание |
+|----------|-----------|------------|-----|--------|------------|
+| Falcon Sandevistan Mk.V | Cyberware | Falcon Ops | 2023 | Flashback Quest | В основной игре после 2045 |
+| Sovereign Twins | Weapon | Tyger Claws | 2028 | Legacy Heist | Возвращается в ивенте 2072 |
+| Arasaka Kage Cloak (Prototype) | Armor | Arasaka | 2029 | Stealth Trial | Единственный экземпляр |
+| NetWatch Ægis (Beta) | Cyberware | NetWatch/Zetatech | 2034 | Ops Campaign | Доступ элитным нетраннерам |
+| Ghost Sparrow Drone Mk.I | Support | Zetatech | 2037 | Recon Ops | Эволюция в Mk.II (2055) |
+| Militech Ronin EX-L (Testbed) | Weapon | Militech | 2038 | Corporate War | Финальная версия 2048 |
+| Malorian Arms 3516b | Weapon | Malorian | 2044 | Story Arc | Поддержка апгрейдов 2060 |
+| Hannya-57 | Weapon | Arasaka | 2046 | Raid Drop | Data Spike синергия |
+| Trauma Guardian Mk4 | Armor | Trauma Team | 2047 | Coop Raid | Усиленный revive |
+| Synwave Bow | Weapon | NeurON Forge | 2051 | Frontier Campaign | Основа для Phase Arrow |
+| Toxin Weave | Armor | Biotechnica | 2055 | Biohazard Chain | Резисты к нанитам |
+| Bulwark Auto-Turret Mk.II | Support | Militech | 2058 | Defense Event | Shield Wall |
+| Mox Bloom Dress | Armor | Mox Syndicate | 2062 | Social Arc | Crowd control |
+| Vector Null (Prototype) | Weapon | Zetatech | 2065 | Netrunner Rank | Прототип smart-снайперки |
+| Echo Beacon | Support | Mox Syndicate | 2068 | Club Influence | Массовое влияние |
+| Rogue's Gambit | Weapon | Afterlife Relic | 2071 | Endgame Quest | Фазовый урон |
+| Arasaka Kage Cloak (Production) | Armor | Arasaka | 2073 | PvP Season | Серийная версия |
+| NetWatch Ægis (Release) | Cyberware | NetWatch/Zetatech | 2076 | PvP Championship | Countertrace |
+| Synapse Deck Prime | Cyberware | Zetatech | 2082 | Contract Rank | Мультивзлом |
+| Seastorm-12 | Weapon | Tsunami Defense | 2084 | Coastal Campaign | Шоковое оружие |
+| Nanite Forge Core | Cyberware | Biotechnica | 2087 | Bioforge Contract | Адаптивная реген |
+| NeurON Synwave Suite | Armor+Weapon Set | NeurON Forge | 2090 | Quantum Edge | Финальный сет |
+| Phase Arrow Upgrade | Mod | NeurON Forge | 2091 | Quantum Edge | Квантовые стрелы |
+| Siege Sync Vanguard | Armor | Militech | 2093 | Global Event | Завершающий экзоскелет |
+
+---
+
+## 🔧 Метрики для API
+
+- `release_year`, `sunset_year`, `unlock_condition`, `faction_requirement`, `tier`.
+- `legacy_only` для ранних прототипов — исключает из базового лута.
+- `season_rotation` фиксирует возвращение предметов в live-ops.
+
+---
+
+## 📌 Следующие шаги
+
+- Актуализировать season schedule и связать с economy-service.
+- Согласовать с narrative командой сюжетные окна появления 2060+.
+- Подготовить маршрут API `GET /equipment/iconic/{id}` с историческими полями.
+# Iconic Equipment Timeline (2020-2093)
+
 **Версия:** 0.1.1  
 **Дата:** 2025-11-07 20:32  
 **Статус:** draft  

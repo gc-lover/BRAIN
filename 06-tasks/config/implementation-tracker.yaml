@@ -1386,3 +1386,11 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/loot/loot-generation.yaml"
+    task_id: "API-TASK-235"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+

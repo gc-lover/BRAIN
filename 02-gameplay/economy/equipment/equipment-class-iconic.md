@@ -1,5 +1,142 @@
 # Class Iconic Equipment Catalog
 
+**Версия:** 0.2.1  
+**Дата:** 2025-11-07 21:06  
+**Статус:** draft  
+
+**target-domain:** economy  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/progression/classes  
+**sources:** procedural-equipment-library.md, equipment-iconic-timeline.md, progression-classes.md
+
+---
+
+## 📋 Обзор классовых сетов
+
+| Класс | Оружие | Броня/экипировка | Имплант | Дебют |
+|-------|--------|------------------|---------|-------|
+| Netrunner | «Blackwire Seeker» smart SMG | «Ghostlink Cloak» | «Neural Overclock Matrix» | 2065 |
+| Solo | «Ironheart Gauss» rail rifle | «Titanfall Carapace» | «Reflex Apex Node» | 2048 |
+| Techie | «Forge Wrench MK-0» тактический молот | «Patchwork Utility Rig» | «Drone Conductor Spine» | 2056 |
+| Nomad Pathfinder | «Dustwind Longbow» | «Stormrunner Duster» | «Sandstream Adrenal Mesh» | 2052 |
+| Medtech | «Pulse Vitae Pistol» | «Aegis Care Shell» | «Bioharmonic Field Core» | 2060 |
+| Rocker Vanguard | «Resonance Shredder Guitar» | «Stagebreaker Armor» | «Echo Sync Larynx» | 2074 |
+| Fixer Ghostbroker | «Silent Ledger» integrator pistol | «Wiretap Suit» | «Contract Weave Cortex» | 2058 |
+| Corpo Handler | «Executive Verdict» flechette SMG | «Boardroom Bulwark» | «Compliance Spine» | 2066 |
+| Edge Priest | «Ritual Dawn» netblade | «Chorus of Wires» | «Eclipse Psalm Node» | 2078 |
+
+Разработка классовых предметов ориентирована на позднюю среднюю прогрессию: культовые предметы открываются после уникальных цепочек миссий и синхронизируются с season schedule.
+
+---
+
+## 🧠 Netrunner (2065)
+
+- **Blackwire Seeker** — smart-SMG, самонаведение по линиям ICE, увеличивает крит при взломе.
+- **Ghostlink Cloak** — фазовое затенение при запуске демона, снижает заметность.
+- **Neural Overclock Matrix** — удваивает пропускную способность кибердеки, открывает протокол «Quad Branch».
+- **Цепочка выдачи:** «Ghost Trace» → «Daemon Waltz» → финал «Four Ports Protocol» (NetWatch Seasonal Assault).
+
+## ⚔️ Solo (2048)
+
+- **Ironheart Gauss** — кинетическая винтовка Militech, наращивает DPS при непрерывном огне.
+- **Titanfall Carapace** — экзоскелет, разворачивается в укрытие и даёт «Siege Sync».
+- **Reflex Apex Node** — нейромоторный имплант, добавляет откат для боевых навыков.
+- **Цепочка выдачи:** «Firewall Breach» → «Blood Oath» → «Siege of Hollow Pier».
+
+## 🔧 Techie (2056)
+
+- **Forge Wrench MK-0** — гибрид melee/repair-инструмента, накладывает «Circuit Jam».
+- **Patchwork Utility Rig** — броня с дрон-слотами, ускоряет ремонт.
+- **Drone Conductor Spine** — имплант, управляет двумя доп. дронами.
+- **Цепочка выдачи:** «Broken Circuits» → «Assembly Line Blues» → «Masterpiece Protocol».
+
+## 🏜️ Nomad Pathfinder (2052)
+
+- **Dustwind Longbow** — технолук, каждая третья стрела вызывает песчаный шторм.
+- **Stormrunner Duster** — плащ, защищающий от климатических аномалий.
+- **Sandstream Adrenal Mesh** — имплант, аккумулирующий энергию движения.
+- **Цепочка выдачи:** «Desert Echoes» → «Stormcaller» → «Pathfinder Rite».
+
+## 🩺 Medtech (2060)
+
+- **Pulse Vitae Pistol** — капсулы нанитов (лечение/обезвреживание).
+- **Aegis Care Shell** — броня с автоподдержкой жизненных показателей группы.
+- **Bioharmonic Field Core** — биополе, снижает humanity load при лечении.
+- **Цепочка выдачи:** «First Do No Harm» → «Emergency Frequency» → «Heartbeat of Night City».
+
+## 🎸 Rocker Vanguard (2074)
+
+- **Resonance Shredder Guitar** — звук-оружие, разрушает кибероборону и баффит союзников.
+- **Stagebreaker Armor** — динамическая броня, вызывает «Fan Shield».
+- **Echo Sync Larynx** — голосовой имплант, накладывающий дебаффы через музыку.
+- **Цепочка выдачи:** «Encore of Liberty» → «Soundcheck Revolution» → «Afterlife Anthem».
+
+## 🕵️ Fixer Ghostbroker (2058)
+
+- **Silent Ledger** — пистолет-интегратор, стреляющий контрактными маркерами.
+- **Wiretap Suit** — костюм с голографическими идентификаторами.
+- **Contract Weave Cortex** — имплант, заключающий «живые» контракты, усиливающие союзников.
+- **Цепочка выдачи:** «Brokered Shadows» → «Double Bind» → «Ghostbroker Accord».
+
+## 🏢 Corpo Handler (2066)
+
+- **Executive Verdict** — flechette SMG, подавляющее врагов и повышающее корпоративную репутацию.
+- **Boardroom Bulwark** — броня-экзоскелет для командования, снижает урон союзникам.
+- **Compliance Spine** — имплант для управления подразделениями и дронами.
+- **Цепочка выдачи:** «Corporate Schism» → «Hostile Negotiations» → «Executive Summit».
+
+## ✝️ Edge Priest (2078)
+
+- **Ritual Dawn** — netblade, накладывающий цифровые проклятия и снимающий баффы.
+- **Chorus of Wires** — обрядовый доспех с резонансными защитными полями.
+- **Eclipse Psalm Node** — имплант, усиливающий группу в киберпространстве.
+- **Цепочка выдачи:** «Litany of Sparks» → «Midnight Vigil» → «Eclipse Mass».
+
+---
+
+## 🌌 Артефактные эволюции (2080+)
+
+| Класс | Артефактная версия | Год | Требования | Эффект |
+|-------|--------------------|-----|------------|--------|
+| Netrunner | «Blackwire Seeker // Liminal» | 2084 | Завершить сезон «Digital Renaissance» | +1 слот демона, мгновенный взлом узлов |
+| Solo | «Ironheart Gauss // Titanfall Apex» | 2082 | Репутация Militech ≥ 80, рейд «Siege Reborn» | Пробивает экзоскелеты, Shield Wall для группы |
+| Techie | «Forge Wrench MK-Ω» | 2085 | Цепочка «Mechanist Ascension» | Мгновенный deploy Artifact-турелей |
+| Nomad Pathfinder | «Dustwind Longbow // Tempest» | 2083 | Победа в событии «Stormline Run» | Песчаный шторм наносит электрический урон |
+| Medtech | «Pulse Vitae // Phoenix» | 2086 | Спасти 200 игроков в Trauma League | Resurrect с половиной HP и снятием дебаффов |
+| Rocker Vanguard | «Resonance Shredder // Riot Anthem» | 2088 | Концерт в трёх мегаполисах | АОЕ-бафф +30% урон, -20% морали врагов |
+| Fixer Ghostbroker | «Silent Ledger // Syndicate Zero» | 2085 | Контроль 3 рынков, миссия «Obsidian Auction» | Контракты дублируют бонусы союзникам |
+| Corpo Handler | «Executive Verdict // Overrule» | 2089 | Возглавить корпорацию в экономике | Flechette-поле снижает урон врагов |
+| Edge Priest | «Ritual Dawn // Eclipse Prime» | 2091 | Завершить «Eclipse Mass» без провала | Защита от Blackwall-коррапции |
+
+`evolution_path` фиксируется в economy-service; артефактные версии входят в таблицу `artifact_unlocks` и зависят от season schedule.
+
+---
+
+## 🎬 Сюжетные акты выдачи
+
+- **Act 1 (2050-)** — Solo, Techie, Nomad: боевые и пустошные кампании.
+- **Act 2 (2060-)** — Medtech, Fixer, Corpo Handler: городские и корпоративные сюжеты.
+- **Act 3 (2070-)** — Netrunner, Rocker Vanguard, Edge Priest: кибервойны и культурные конфликты.
+- Каждый финал включает кооперативный сценарий, после которого открывается путь к артефактной эволюции.
+
+---
+
+## 📊 Метрики для экономики
+
+- **class-tag:** `netrunner`, `solo`, `techie`, `nomad`, `medtech`, `rocker`, `fixer`, `corpo`, `edgepriest`.
+- Поля `class_unlock_level`, `story_arc`, `faction_requirement`, `release_year`, `evolution_path`.
+- Все предметы стартуют как Legendary, эволюционируют в Artifact в эпохах 2080+ при выполнении условий.
+- Trade-флаг `non-tradable` вне соответствующей фракции поддерживает уникальность билдов.
+
+---
+
+## 🔜 Следующие шаги
+
+- Синхронизировать с progression-деревом классов.
+- Подготовить детальные сценарии миссий в `04-narrative`.
+- Спроектировать API `/equipment/class-iconic` и таблицу `artifact_unlocks` для экономики.
+# Class Iconic Equipment Catalog
+
 **Версия:** 0.2.0  
 **Дата:** 2025-11-07 21:04  
 **Статус:** draft  

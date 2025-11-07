@@ -19,9 +19,10 @@
 
 ## API Tasks Status
 
-- **Status:** created
+- **Status:** queued
 - **Tasks:**
-- **Last Updated:** 2025-11-07 20:16
+  - API-TASK-173: api/v1/technical/split-systems.yaml (2025-11-07 12:50)
+- **Last Updated:** 2025-11-07 22:45
 ---
 
 ## Integration Points

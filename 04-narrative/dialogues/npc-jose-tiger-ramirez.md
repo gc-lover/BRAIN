@@ -2,35 +2,40 @@
 
 **ID диалога:** `dialogue-npc-jose-tiger-ramirez`  
 **Тип:** npc  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.2.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 21:08  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/jose-tiger-ramirez.md`, `../quests/main/002-choose-path-dnd-nodes.md`, `../quests/side/heywood-valentinos-chain.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Проверить связку с репутацией Valentinos и событиями turf-war.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 21:08  
+**api-readiness-notes:** «Версия 1.2.0: расширенные состояния, пасхалки, проверки D&D, YAML/REST экспорт и телеметрия Valentinos/Heywood.»
 
 ---
 
 ## 1. Контекст и цели
 
-- **NPC:** Хосе «Тигр» Рамирес, лидер Valentinos в Heywood.
-- **Стадии:** знакомство с кандидатом, проверка преданности, ответ на конфликты с Maelstrom.
-- **Синопсис:** Хосе говорит о чести и семье, награждает верных, карает предателей, активно реагирует на уличные войны.
+- **Локация:** Heywood, баррио Vista del Rey. Базируется в кафе «La Última Nota» — бывшая студия, где ещё в 2020-х писали реггетон и записывали стримы против корпораций.
+- **Тон:** смесь семейной теплоты и кровавой мести. Хосе балансирует между уважением к корням и хардкорным киберпанком — семейные традиции, mariachis с синт-струнами, AR-муралы.
+- **Конфликт:** Valentinos воюют с Maelstrom за контроль над поставками имплантов, параллельно пытаясь не попасть под зачистки NCPD. Maelstrom пытается продавить район через Militech логистику.
+- **Отсылки:** референсы к событиям GameStop 2021, кибертюнингу lowrider'ов, празднику Día de los Muertos (AR-офренда), инфлюенсерам TikTok 2075, мемам про Ever Given и транспортный кризис 2021.
+- **Цели взаимодействия:** провести ритуал клятвы, выполнять семейные поручения, отрабатывать turf-war сценки, запускать double-cross сценарии, открывать побочные активности (AR-офренда, кавер-фиесты, street race).
+- **Интеграции:** репутация Valentinos, квесты `heywood-valentinos-chain`, персонажи `npc-rita-moreno`, `npc-royce`, события `world.event.heywood_turf_war`, `world.event.metro_shutdown`, модуль `modules/social/informants`.
 
 ## 2. Состояния и условия
 
 | Состояние | Описание | Триггеры | Используемые флаги |
 |-----------|----------|----------|---------------------|
-| base | Нейтральное отношение к новичку | `rep.gang.valentinos` от 0 до 29 | `rep.gang.valentinos` |
+| base | Нейтральное отношение к новичку | `rep.gang.valentinos` 0–29 | `rep.gang.valentinos` |
 | familia | Принятый член семьи | `rep.gang.valentinos ≥ 30` и `flag.valentinos.oath == true` | `rep.gang.valentinos`, `flag.valentinos.oath` |
-| mistrust | Подозрение на связь с Maelstrom или NCPD | `flag.valentinos.maelstrom_contact == true` или `flag.valentinos.ncpd_informer == true` | соответствующие флаги |
+| mistrust | Подозрение на связь с Maelstrom/NCPD | `flag.valentinos.maelstrom_contact == true` или `flag.valentinos.ncpd_informer == true` | соответствующие флаги |
 | turf-war | Активная война за квартал | `world.event.heywood_turf_war == true` | `world.heywood_turf_war` |
+| fiesta | Праздничное состояние (Día de los Muertos/семейный праздник) | `world.event.dia_de_los_muertos == true` | `world.event.dia_de_los_muertos` |
+| memorial | Коммеморация павших (Maelstrom напал) | `flag.valentinos.memorial == true` | `flag.valentinos.memorial` |
 
 - **Репутация:** бот Valentinos из `02-gameplay/social/reputation-formulas.md`.
 - **Проверки D&D:** Используются узлы N-11 (gang check) и тактические проверки из `side/heywood-valentinos-chain.md`.
