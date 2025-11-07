@@ -6,6 +6,14 @@
 
 # Referral System - Реферальная программа
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-201: api/v1/social/referrals/referral-system.yaml (2025-11-07 22:05)
+- Last Updated: 2025-11-07 22:05
+---
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 02:40  
