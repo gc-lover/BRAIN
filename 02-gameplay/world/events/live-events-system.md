@@ -2,8 +2,8 @@
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-197: api/v1/gameplay/world/live-events.yaml (2025-11-07 20:07)
-- Last Updated: 2025-11-07 20:33
+  - API-TASK-246: api/v1/gameplay/world/live-events.yaml (2025-11-07 21:50)
+- Last Updated: 2025-11-07 21:50
 ---
 
 ---

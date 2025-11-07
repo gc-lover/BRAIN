@@ -2,18 +2,18 @@
 
 **ID диалога:** `dialogue-quest-main-002-choose-path`  
 **Тип:** quest  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.2.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 20:50  
 **Приоритет:** высокий  
 **Связанные документы:** `../quests/main/002-choose-path-dnd-nodes.md`, `../dialogues/npc-hiroshi-tanaka.md`, `../dialogues/npc-jose-tiger-ramirez.md`, `../dialogues/npc-sara-miller.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Проверить синхронизацию репутационных модификаторов и доступов фракций.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 20:50  
+**api-readiness-notes:** «Диалог выбора пути разветвлён: сцены для корпораций, улиц, закона и фриланса с проверками, пасхалками и полным экспортом YAML/REST.»
 
 ---
 

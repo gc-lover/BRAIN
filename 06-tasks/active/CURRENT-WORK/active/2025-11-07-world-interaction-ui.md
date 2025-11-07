@@ -1,13 +1,13 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
-**api-readiness-notes:** UX мира обновлён Specter overlay и монитором городских беспорядков; World Pulse, Events Dashboard, Influence Map, Guild Ops и Crisis Hub готовы к API постановке (`world-service`, `economy-service`, `social-service`).
+**api-readiness-check-date:** 2025-11-07 18:20  
+**api-readiness-notes:** UX мира дополнен Specter overlay metrics, city unrest orchestration и событиями Specter squad; World Pulse, Events Dashboard, Influence Map, Guild Ops и Crisis Hub готовы к API постановке (`world-service`, `economy-service`, `social-service`).
 ---
 
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07 16:39  
-**Дата обновления:** 2025-11-07 18:05  
+**Дата обновления:** 2025-11-07 18:20  
 **Приоритет:** high  
 **Связанные документы:** `05-technical/ui/main-game/ui-hud-core.md`, `05-technical/ui/main-game/ui-features.md`, `02-gameplay/world/world-state/player-impact-mechanics.md`, `05-technical/global-state/global-state-operations.md`
 

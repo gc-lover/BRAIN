@@ -170,3 +170,27 @@ CREATE TABLE world_boss_schedules (
 - REST/WS контракты дополнены эндпоинтом `aftermath`, схемы данных актуальны.
 - Документ готов к передаче в API Task Creator и связан с `dungeon-bosses-catalog.md` и `combat-ai-enemies.md`.
 
+## 12. Пример payload (analytics-service)
+```json
+{
+  "eventId": "wb-eclipse-seraph",
+  "league": "MYTHIC",
+  "phase": 3,
+  "ability": "Ablation Protocol",
+  "dndCheck": {
+    "attribute": "TECH",
+    "dc": 22,
+    "successRate": 0.64
+  },
+  "clearTimeSeconds": 982,
+  "aftermath": {
+    "worldFlag": "world.flag.orbital_shield",
+    "value": "stable",
+    "reputation": {
+      "rep.corp.arasaka": 12,
+      "rep.law.ncpd": 5
+    }
+  }
+}
+```
+

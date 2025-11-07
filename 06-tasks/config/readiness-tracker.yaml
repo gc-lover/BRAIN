@@ -1695,10 +1695,10 @@ documents:
 
   - path: ".BRAIN/04-narrative/dialogues/npc-aisha-frost.md"
     status: "ready"
-    version: "1.1.0"
-    checked: "2025-11-07 18:05"
+    version: "1.2.0"
+    checked: "2025-11-07 18:20"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалог координатора Neon Ghosts: добавлен уровень Specter, элитные поручения и реакция на городские беспорядки."
+    notes: "Диалог координатора Neon Ghosts: добавлены Specter-отряды, баланс city unrest и новые тактические последствия."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-aisha-frost.yaml"
 

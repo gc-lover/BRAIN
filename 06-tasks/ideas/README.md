@@ -49,6 +49,7 @@
 - [Динамические медиа-кроссоверы и чиз-сцены](./2025-11-07-IDEA-dynamic-media-crossovers.md)
 - [Городские легенды и пасхальные маршруты](./2025-11-07-IDEA-urban-legend-easter-eggs.md)
 - [Киберпространственные пасхалки и чизи-ткани](./2025-11-07-IDEA-cyberspace-easter-weaves.md)
+- [Кросс-культурный атлас пасхалок](./2025-11-07-IDEA-crossculture-easter-atlas.md)
 - [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md)
 
 #### Техническое (technical)
@@ -74,13 +75,14 @@
 | 2025-11-07 | [Динамические медиа-кроссоверы и чиз-сцены](./2025-11-07-IDEA-dynamic-media-crossovers.md) | narrative | recorded | medium |
 | 2025-11-07 | [Городские легенды и пасхальные маршруты](./2025-11-07-IDEA-urban-legend-easter-eggs.md) | narrative | recorded | medium |
 | 2025-11-07 | [Киберпространственные пасхалки и чизи-ткани](./2025-11-07-IDEA-cyberspace-easter-weaves.md) | narrative | recorded | medium |
+| 2025-11-07 | [Кросс-культурный атлас пасхалок](./2025-11-07-IDEA-crossculture-easter-atlas.md) | narrative | recorded | medium |
 
 ---
 
 ## Статистика
 
-- **Всего идей:** 11
-- **В разработке:** 8
+- **Всего идей:** 12
+- **В разработке:** 9
 - **Завершено:** 1
 - **Отклонено:** 0
 
