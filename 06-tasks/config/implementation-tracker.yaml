@@ -102,9 +102,11 @@ implementations:
       commit: "06b79a9"
       notes: "GameStartController - старт игры"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 01:02"
+      completed: "2025-11-08 01:27"
       agent: "Frontend Agent"
+      commit: "7aaa55d"
   
   - api_path: "api/v1/game/initial-state.yaml"
     task_id: "API-TASK-004"
@@ -462,7 +464,9 @@ implementations:
     agent: "Backend Agent"
     commit: "3e72d2d"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 07:55"
+    agent: "Frontend Agent"
     priority: "CRITICAL"
 
 - api_path: "api/v1/inventory/inventory-management.yaml"
@@ -470,8 +474,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/inventory-system.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 01:26"
+    completed: "2025-11-08 02:03"
+    agent: "Backend Agent"
     priority: "CRITICAL"
+    commit: "56981e3"
   frontend:
     status: "in_progress"
     started: "2025-11-08 07:15"
@@ -856,8 +864,12 @@ implementations:
   brain_source: ".BRAIN/03-lore/ (4 documents v1.1.0-v1.2.0)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 02:45"
+    completed: "2025-11-08 04:20"
+    agent: "Backend Agent"
     priority: "LOW"
+    notes: "Implemented LoreController and LoreService with DB-backed queries"
   frontend:
     status: "not_started"
     priority: "MEDIUM"
@@ -887,10 +899,12 @@ implementations:
   brain_source: ".BRAIN/02-gameplay/economy/economy-investments.md v1.0.0"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-08 00:26"
+    completed: "2025-11-08 02:10"
     agent: "Backend Agent"
     priority: "MEDIUM"
+    notes: "Investment entities, service layer, controller, migrations"
   frontend:
     status: "completed"
     started: "2025-11-07 19:15"
@@ -1025,7 +1039,9 @@ implementations:
   brain_source: ".BRAIN/05-technical/api-requirements/ (6 MVP documents)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 02:11"
+    agent: "Backend Agent"
     priority: "HIGH"
   frontend:
     status: "completed"
@@ -1270,7 +1286,11 @@ implementations:
   brain_source: ".BRAIN/04-narrative/ (split + generators)"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-08 04:35"
+    completed: "2025-11-08 02:35"
+    agent: "Backend Agent"
+    commit: "f11533d"
     priority: "LOW"
   frontend:
     status: "not_started"
