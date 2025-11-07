@@ -3,35 +3,39 @@
 **ID диалога:** `dialogue-npc-rita-moreno`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.3.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 20:43  
+**Последнее обновление:** 2025-11-07 21:25  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/common/traders/rita-moreno.md`, `../quests/side/maelstrom-double-cross.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/social/informants  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:43  
-**api-readiness-notes:** «Диалоги Риты Морено включают уличные состояния, пасхалки, активности и экспорт в YAML. Готово к автоматизации API.»
+**api-readiness-check-date:** 2025-11-07 21:25  
+**api-readiness-notes:** «Версия 1.3.0: расширены состояния (market/fiesta/blackwall), пасхалки, YAML/REST и телеметрия street-информанта.»
 
 ---
 
 ## 1. Контекст и цели
 
-- **NPC:** Рита Морено — подпольная торговка и информатор на Watson Market.
-- **Сцены:** знакомство, обмен секретами, уличные сделки, режим чрезвычайного положения Maelstrom.
-- **Пасхалки:** отсылки к протестам 2077 в Heywood, легендам о Reddit WallStreetBets 2021, слухам о сетевом сериале «NUSA Idol».
-- **Интеграции:** `rep.traders.rita`, `rep.gang.valentinos`, `flag.maelstrom.double_cross`, события `world.event.maelstrom_pipeline`, `world.event.nusa_idol_live`.
+- **Локация:** Watson Market и соседние аллеи, мобильная лавочка Риты между street food и подпольным рынком имплантов.
+- **Образ:** Смесь уличного барда и информатора. Воспоминания о WallStreetBets 2021, стримах TikTok 2040-х, lowrider-парадах Valentinos, сетевых мемах про Ever Given.
+- **Фазы:** знакомство, инсайдерский доступ, Valentinos льготы, Maelstrom тревога, праздничные фиесты, Blackwall слухи.
+- **Отсылки:** протесты Heywood 2077, шоу NUSA Idol, крипто-бумы 2033, «stonks» мемы, легенды о Hidden City Radio.
+- **Цели игрока:** получить товары, открыть уникальные слухи, участвовать в доставках, решать double-cross с Maelstrom и NCPD, влиять на social feed.
+- **Интеграции:** `npc-jose-tiger-ramirez`, `quest-side-maelstrom-double-cross`, `world.event.heywood_turf_war`, `world.event.blackwall_breach`, economy-service (торговля), social-service (стримы и мемы).
 
 ## 2. Состояния и условия
 
 | Состояние | Описание | Триггеры | Используемые флаги |
 |-----------|----------|----------|---------------------|
-| street-entry | Первое знакомство, базовая торговля | `rep.traders.rita` от 0 до 24 | `flag.rita.met`, `rep.traders.rita` |
+| street-entry | Первое знакомство, базовая торговля | `rep.traders.rita` 0–24 | `flag.rita.met`, `rep.traders.rita` |
 | insider-loop | Доступ к скрытым слухам | `rep.traders.rita ≥ 25` и `flag.rita.met` | `flag.rita.insider`, `rep.traders.rita` |
 | valentinos-favor | Особые услуги для друзей Valentinos | `rep.gang.valentinos ≥ 20` | `flag.rita.valentinos`, `rep.gang.valentinos` |
 | maelstrom-alert | ЧП с Maelstrom, двойная игра | `flag.maelstrom.double_cross == true` или `world.event.maelstrom_pipeline == true` | `flag.rita.alert`, `world.event.maelstrom_pipeline` |
+| fiesta-mode | Праздничное состояние (Día de los Muertos, NUSA Idol live) | `world.event.dia_de_los_muertos == true` или `world.event.nusa_idol_live == true` | `flag.rita.fiesta`, `world.event.dia_de_los_muertos` |
+| blackout-rumor | Слухи о Blackwall и Netwatch | `world.event.blackwall_breach == true` или `flag.rita.blackwall_tip == true` | `flag.rita.blackwall_tip` |
 
 - **Репутация:** `rep.traders.rita`, `rep.gang.valentinos`, вторичные `rep.maelstrom`.
 - **Проверки:** Streetwise, Deception, Empathy, Hacking, Perception.
