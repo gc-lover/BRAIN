@@ -1975,6 +1975,15 @@ documents:
     issues: []
     api_target: "api/v1/world/factions/original-catalog.yaml"
 
+  - path: ".BRAIN/03-lore/factions/factions-timeline-2020-2093.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 21:46"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Хронология авторских фракций 2020-2093: лор, ключевые события, механики, API-контуры для world-service/social-service."
+    issues: []
+    api_target: "api/v1/world/factions/history-2020-2093.yaml"
+
   # 04-narrative/quests/main/ - Детальные узлы основных квестов
   - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
     status: "ready"
