@@ -19,6 +19,8 @@
 **target-microservice:** social-service (port 8084)  
 **target-frontend-module:** modules/social/npc-hiring
 
+**Детально:** `npc-hiring-world-impact-детально.md`
+
 ---
 
 ## 8. Социальное и экономическое влияние

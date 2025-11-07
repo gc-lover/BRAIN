@@ -90,6 +90,8 @@
 - Расчёт индекса: репутация 40%, романтика 20%, социальные события 40%.
 - Запуск кампаний через `POST /api/v1/social/campaigns`, UI показывает влияние и стоимость.
 - Компоненты: `shared/ui/ResonanceMeter`, `shared/ui/RelationshipGrid`.
+- Specter overlay отображает панель «Underlink Specter» при `flag.neon.elite == true`, содержит поручения Ghosts и статус курьеров.
+- Индикатор `city.unrest.level` подсвечивает рост беспорядков (данные `CITY_UNREST_UPDATE`) и активирует CTA «Сдержать протесты».
 - Specter overlay отображает панель «Underlink Specter» при `flag.neon.elite == true`, содержит текущие поручения Ghosts и статус курьеров.
 - Индикатор `city.unrest.level` подсвечивает рост беспорядков (данные world-service) и активирует CTA «Сдержать протесты» при превышении порога.
 
@@ -252,6 +254,7 @@
 | Social Resonance | REST | `POST /api/v1/social/campaigns` | social-service | on-demand | запускает кампанию |
 | Crisis Hub | REST | `POST /api/v1/world/crisis/actions` | world-service | on-demand | требует двойного подтверждения |
 | Crisis Hub | WS | `CRISIS_STATE_UPDATE` | world-service | ≤3 сек | обновляет таймеры и уровень смягчения |
+| City Unrest Monitor | WS | `CITY_UNREST_UPDATE` | world-service | ≤3 сек | транслирует `city.unrest.level` для Specter overlay |
 | City Unrest Monitor | WS | `CITY_UNREST_UPDATE` | world-service | ≤3 сек | транслирует модификатор `city.unrest.level` для Specter overlay |
 
 | Событие | Источник | Подписчики | Payload (ключевые поля) |
@@ -263,6 +266,7 @@
 | `MARKET_INTERVENTION_STATUS` | economy-service | Market Stabilizer, World Pulse | `interventionId`, `status`, `effect` |
 | `SOCIAL_INDEX_CHANGED` | social-service | Social Resonance, World Pulse | `trustIndex`, `delta`, `reason` |
 | `CRISIS_STATE_UPDATE` | world-service | Crisis Hub, Notifications | `phase`, `actions`, `mitigationLevel`, `eta` |
+| `CITY_UNREST_UPDATE` | world-service | Social Resonance, Specter overlay | `unrestLevel`, `trend`, `affectedDistricts` |
 | `CITY_UNREST_UPDATE` | world-service | Social Resonance, Specter overlay | `unrestLevel`, `trend`, `affectedDistricts` |
 
 ## 7. SLA и операционные параметры
