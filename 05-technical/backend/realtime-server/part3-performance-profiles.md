@@ -170,12 +170,12 @@
 
 ## Мониторинг и SLO
 
-- **Основные метрики:** TickDuration p95, NetworkLatency p95, PacketLoss %, ActiveConnections, AOIEntities.
+- **Основные метрики:** TickDuration p95, NetworkLatency p95, PacketLoss %, ActiveConnections, AOIEntities, StateRecoveryTime p95, ChaosTestPassRate.
 - **SLO по профилям:**
-  - Esports Arena: TickDuration p95 ≤ 8.5 мс, NetworkLatency p95 ≤ 35 мс.
-  - Competitive Siege: TickDuration p95 ≤ 11 мс, NetworkLatency p95 ≤ 45 мс.
-  - Extraction Ops: TickDuration p95 ≤ 14 мс, PacketLoss ≤ 1.5%.
-  - PvE Raids: TickDuration p95 ≤ 18 мс, AI Budget Utilization ≤ 85%.
+  - Esports Arena: TickDuration p95 ≤ 8.5 мс, NetworkLatency p95 ≤ 35 мс, StateRecoveryTime ≤ 5 с.
+  - Competitive Siege: TickDuration p95 ≤ 11 мс, NetworkLatency p95 ≤ 45 мс, ChaosTestPassRate ≥ 0.95.
+  - Extraction Ops: TickDuration p95 ≤ 14 мс, PacketLoss ≤ 1.5%, StateRecoveryTime ≤ 8 с.
+  - PvE Raids: TickDuration p95 ≤ 18 мс, AI Budget Utilization ≤ 85%, StateRecoveryTime ≤ 12 с.
 - **Alerting:** PagerDuty инцидент при превышении SLO двух интервалов подряд; автоматическое масштабирование до диагностики.
 
 ---
