@@ -51,6 +51,7 @@
 - [Киберпространственные пасхалки и чизи-ткани](./2025-11-07-IDEA-cyberspace-easter-weaves.md)
 - [Кросс-культурный атлас пасхалок](./2025-11-07-IDEA-crossculture-easter-atlas.md)
 - [Аномальные пасхальные сценарии](./2025-11-07-IDEA-anomalous-easter-scenarios.md)
+- [Сублиминальная сеть пасхалок](./2025-11-07-IDEA-subliminal-easter-network.md)
 - [Реактивные пасхалки и медиа-головоломки](./2025-11-07-IDEA-reactive-media-puzzles.md)
 
 #### Техническое (technical)
@@ -78,13 +79,14 @@
 | 2025-11-07 | [Киберпространственные пасхалки и чизи-ткани](./2025-11-07-IDEA-cyberspace-easter-weaves.md) | narrative | recorded | medium |
 | 2025-11-07 | [Кросс-культурный атлас пасхалок](./2025-11-07-IDEA-crossculture-easter-atlas.md) | narrative | recorded | medium |
 | 2025-11-07 | [Аномальные пасхальные сценарии](./2025-11-07-IDEA-anomalous-easter-scenarios.md) | narrative | recorded | medium |
+| 2025-11-07 | [Сублиминальная сеть пасхалок](./2025-11-07-IDEA-subliminal-easter-network.md) | narrative | recorded | medium |
 
 ---
 
 ## Статистика
 
-- **Всего идей:** 13
-- **В разработке:** 10
+- **Всего идей:** 14
+- **В разработке:** 11
 - **Завершено:** 1
 - **Отклонено:** 0
 
