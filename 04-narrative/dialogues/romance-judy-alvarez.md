@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-romance-judy`  
 **Тип:** romance  
 **Статус:** approved  
-**Версия:** 1.2.0  
+**Версия:** 1.3.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 20:43  
+**Последнее обновление:** 2025-11-07 21:35  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/judy-alvarez.md`, `../dialogues/npc-viktor-vektor.md`, `../../02-gameplay/social/romance-system.md`, `../../02-gameplay/social/reputation-formulas.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/romance  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:43  
-**api-readiness-notes:** «Этапы 1-2 романса с Джуди оформлены: новые сцены, проверки, экспорт в YAML и обновлённые метрики. Готово к API задачам.»
+**api-readiness-check-date:** 2025-11-07 21:35  
+**api-readiness-notes:** «Версия 1.3.0: добавлен этап 3 с Braindance синхронизацией, пасхалками и обновлённым YAML/REST/телеметрией.»
 
 ---
 
@@ -21,7 +21,8 @@
 
 - **Этап 1:** Ночная студия брейндансов Lizzie's Bar после совместной защиты Мокси.
 - **Этап 2:** AR-прогулка по затопленной Laguna Bend с живым аудиомиксом от Джуди и трансляцией через social-service.
-- **Цели:** Укрепить доверие, показать уязвимость Джуди, дать игроку выбор между личными чувствами и активизмом Мокси.
+- **Этап 3:** Подземный VR-архив в старом техцентре Мокси (бывшая станция hyperloop) — глубинная брайнданс-синхронизация и проект нового safehouse.
+- **Цели:** Укрепить доверие, показать уязвимость Джуди, дать игроку выбор между личными чувствами, активизмом Мокси и демо-революцией брейндансов.
 - **Интеграции:** `rep.romance.judy`, `flag.romance.judy.stage*`, `flag.moxx.support`, `world.event.maelstrom_underlink_raid`, `world.event.corporate_war_escalation`.
 
 ## 2. Состояния и условия
@@ -35,8 +36,11 @@
 | Stage2 | town-entry | Подготовка к погружению | `flag.romance.judy.path_*` | `flag.romance.judy.stage1-complete` |
 | Stage2 | memory-sync | Синхронизация воспоминаний | После `town-entry` | `flag.romance.judy.sync` |
 | Stage2 | rooftop-epilogue | Решение после погружения | После `memory-sync` | `flag.romance.judy.choice2` |
+| Stage3 | underground-lab | Спуск в VR-лабораторию Мокси | `flag.romance.judy.path_*` и `flag.romance.judy.stage1-complete` | `flag.romance.judy.stage2-complete` |
+| Stage3 | sync-handoff | Braindance-синхронизация активистов | После `underground-lab` | `flag.romance.judy.bd_sync` |
+| Stage3 | future-blueprint | План нового safehouse и брайнданс-революции | После `sync-handoff` | `flag.romance.judy.stage3-decision` |
 
-- **Проверки:** Stage1 — Empathy, Deception, Technical; Stage2 — Empathy, Performance, Hacking, Insight.
+- **Проверки:** Stage1 — Empathy, Deception, Technical; Stage2 — Empathy, Performance, Hacking, Insight; Stage3 — Hacking, Empathy, Performance, Negotiation, Willpower.
 - **Пасхалки:** Отсылки к Laguna Bend из 2020-х, мем про «Hyperloop karaoke 2072», архив BrainDance Idol.
 
 ## 3. Структура диалога
@@ -218,17 +222,93 @@ nodes:
                 default: { set-flag: "flag.romance.judy.path_future", reputation: { romance_judy: +9 }, grant_contract: "moxx-safehouse-upgrade" }
 ```
 
-### 3.3 Таблица проверок
+### 3.3 Этап 3 — Подземная VR лаборатория Мокси
 
-| Этап | Узел | Тип проверки | DC | Модификаторы | Успех | Провал | Крит. успех | Крит. провал |
-|------|------|--------------|----|--------------|-------|--------|-------------|--------------|
-| Stage1 | trust-share.honest | Empathy | 18 | `+2` при `item.romance-judy-tip` | +6 реп., флаг truth | −3 реп. | Флаг `flag.romance.judy.deep_truth` | Доп. миссия искупления |
-| Stage1 | trust-share.deflect | Deception | 20 | — | Флаг hide, +2 | −6 | Ветка «Undercover» | Кулдаун 12 ч |
-| Stage1 | bd-demo.bd-experience | Technical | 17 | `+1` при классе Netrunner | +5 реп., флаг BD | −2 | Баф «clear signal» | Тошнота, блок BD |
-| Stage2 | town-entry.promise-support | Empathy | 19 | `+1` при `path_trust` | Флаг stage1-complete | −4 | Автофлаг `path_public` | Досрочное окончание сцены |
-| Stage2 | town-entry.lighten-mood | Performance | 17 | `+1` при `flag.romance.judy.path_comfort` | Флаг humor | −2 | Пасхалка «Hyperloop karaoke» | Потеря 2 репутации |
-| Stage2 | memory-sync.dive-deep | Hacking | 20 | `+1` Netrunner, `+1` humor | Флаг sync, баф | −5 | Баф «laguna-overdrive» | Прорыв Blackwall |
-| Stage2 | memory-sync.focus-emotions | Insight | 18 | `+1` при `path_slow` | Флаг sync | −3 | Сцена «Laguna sunrise» | Эмоциональный откат |
+```
+- node-id: underground-lab
+  label: «Техцентр под Lizzie’s»
+  entry-condition: flag.romance.judy.stage2-complete == true
+  speaker-order: ["Judy", "Player", "Moxx Tech"]
+  player-options:
+    - option-id: stabilize-sync
+      text: "Стабилизировать сетевой канал"
+      requirements:
+        - type: stat-check
+          stat: Hacking
+          dc: 21
+          modifiers:
+            - source: class.netrunner
+              value: +2
+      outcomes:
+        success: { set-flag: "flag.romance.judy.bd_sync", reputation: { romance_judy: +7 }, reward: "buff.sync-harmony" }
+        failure: { effect: "signal_glitch", penalty: "stun:5", reputation: { romance_judy: -4 } }
+    - option-id: comfort-judy
+      text: "Поддержать её голосом"
+      requirements:
+        - type: stat-check
+          stat: Empathy
+          dc: 19
+      outcomes:
+        success: { set-flag: "flag.romance.judy.bd_sync", reputation: { romance_judy: +6 } }
+        failure: { effect: "emotional_miss", reputation: { romance_judy: -3 } }
+
+- node-id: sync-handoff
+  label: «Передача манифеста»
+  entry-condition: flag.romance.judy.bd_sync == true
+  speaker-order: ["Judy", "Player", "Moxx Recorder"]
+  player-options:
+    - option-id: record-bd
+      text: "Записать новую брайнданс сессию"
+      requirements:
+        - type: stat-check
+          stat: Performance
+          dc: 18
+      outcomes:
+        success: { set-flag: "flag.romance.judy.bd_manifest", reputation: { romance_judy: +6 }, grantActivity: "moxx-bd-revolution" }
+        failure: { effect: "bd_overload", reputation: { romance_judy: -4 } }
+    - option-id: negotiate-release
+      text: "Договориться о выпуске"
+      requirements:
+        - type: stat-check
+          stat: Negotiation
+          dc: 19
+      outcomes:
+        success: { set-flag: "flag.romance.judy.bd_release", reputation: { romance_judy: +5 }, reputationBonus: { rep.moxx: +4 } }
+        failure: { effect: "producer_pushback", reputation: { romance_judy: -3 } }
+
+- node-id: future-blueprint
+  label: «Схема будущего»
+  entry-condition: flag.romance.judy.bd_sync == true
+  speaker-order: ["Judy", "Player"]
+  player-options:
+    - option-id: vow-public
+      text: "Пусть эта сессия вдохновит всех"
+      requirements:
+        - type: stat-check
+          stat: Performance
+          dc: 19
+      outcomes:
+        success: { set-flag: "flag.romance.judy.stage3-public", reputation: { romance_judy: +9 }, reputationBonus: { rep.moxx: +6 }, add-flags: ["flag.romance.judy.stage3-decision"] }
+        failure: { effect: "public-backlash", reputation: { romance_judy: -5 } }
+    - option-id: vow-private
+      text: "Сохраним это только для нас"
+      requirements:
+        - type: stat-check
+          stat: Willpower
+          dc: 18
+      outcomes:
+        success: { set-flag: "flag.romance.judy.stage3-private", reputation: { romance_judy: +8 }, add-flags: ["flag.romance.judy.stage3-decision"] }
+        failure: { effect: "doubt_private", reputation: { romance_judy: -4 } }
+    - option-id: vow-rebuild
+      text: "Поможем Мокси построить новый safehouse"
+      requirements:
+        - type: stat-check
+          stat: Negotiation
+          dc: 20
+      outcomes:
+        success: { set-flag: "flag.romance.judy.stage3-rebuild", grantContract: "moxx-archive-hub", add-flags: ["flag.romance.judy.stage3-decision"], reputation: { romance_judy: +10 }, reputationBonus: { rep.moxx: +5 } }
+        failure: { effect: "construction_delays", reputation: { romance_judy: -5 } }
+```
 
 ### 3.4 Реакции на события
 

@@ -606,6 +606,15 @@ documents:
     issues: []
     api_target: "api/v1/world/raids/specter-surge.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/raids/specter-surge-loot.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 21:45"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Лут и прогрессия рейда Specter Surge: фазовые награды, недельные ротации, экономика и REST/Kafka контуры." 
+    issues: []
+    api_target: "api/v1/world/raids/specter-surge-loot.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"
@@ -1929,6 +1938,15 @@ documents:
     notes: "Культовые защитники фракций: роли, навыки, триггеры, REST/WS контракты и SQL схемы для world-service."
     issues: []
     api_target: "api/v1/world/factions/defenders.yaml"
+
+  - path: ".BRAIN/03-lore/factions/factions-original-catalog.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 21:35"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Каталог авторских корпораций/банд: лор, история, механики, API-контуры и SQL схемы для world/social-service."
+    issues: []
+    api_target: "api/v1/world/factions/original-catalog.yaml"
 
   # 04-narrative/quests/main/ - Детальные узлы основных квестов
   - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
