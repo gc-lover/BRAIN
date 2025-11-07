@@ -633,6 +633,15 @@ documents:
     issues: []
     api_target: "api/v1/world/helios-countermesh-ops.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/city-unrest-escalations.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 22:45"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Эскалации City Unrest: уровни, события, экономика, API и телеметрия." 
+    issues: []
+    api_target: "api/v1/world/city-unrest-escalations.yaml"
+
   - path: ".BRAIN/04-narrative/quests/side/side-quests-2020-2030.md"
     status: "not-applicable"
     version: "0.1.0"
