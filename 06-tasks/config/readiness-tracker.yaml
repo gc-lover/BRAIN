@@ -1911,6 +1911,18 @@ documents:
     issues: []
     api_target: "api/v1/world/state.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/world-state/living-world-kenshi-hybrid.md"
+    status: "needs-work"
+    version: "0.1.0"
+    checked: "2025-11-08 00:14"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Черновик гибридной системы живого мира и прокачки, вдохновленной Kenshi. Требуется детализация Action XP коэффициентов, API контрактов world-service/gameplay-service и UX хроники мира."
+    issues:
+      - "Требуются численные параметры Action XP и усталости"
+      - "Не описаны payload API для новых событий world-service"
+      - "Нужен UX флоу для хроники мира на фронтенде"
+    api_target: null
+
   - path: ".BRAIN/02-gameplay/world/world-bosses-catalog.md"
     status: "ready"
     version: "1.1.0"

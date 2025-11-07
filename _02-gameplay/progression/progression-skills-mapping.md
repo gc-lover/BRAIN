@@ -12,17 +12,17 @@
 # Навыки — соответствия предметам и имплантам
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46  
-**api-readiness-notes:** «Маппинг навыков расширен: полные таблицы соответствий, структура данных, REST API и валидация с equipment/implants. Готово для API задач.»
+**api-readiness-check-date:** 2025-11-08 00:14  
+**api-readiness-notes:** «Добавлена синхронизация с боевыми лодаутами и PvE профилями, расширены структуры данных и API. Документ остаётся готов к задачам.»
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/progression/skills
 
 **Статус:** approved  
-**Версия:** 1.1.0  
+**Версия:** 1.2.0  
 **Дата создания:** 2025-11-05  
-**Последнее обновление:** 2025-11-07 16:46  
+**Последнее обновление:** 2025-11-08 00:14  
 **Приоритет:** Высокий
 
 ---
@@ -60,6 +60,15 @@
 - `synergyTag`: aura, mobility+, emp, vehicleHandling — используется рекомендательной системой UI.
 
 Полный список тегов и их локализации расположен в `progression-skill-tags.yaml`. Проверка корректности — через `scripts/validate-skill-tags.ps1`.
+
+---
+
+## Связь с боевыми лодаутами и PvE профилями
+
+- Каждая запись навыка содержит `loadoutProfiles` (stormbreaker, safebearer, scout, stormrunner), что позволяет рекомендовать навыки для PvE экспедиций (`combat-loadouts-system.md`).
+- Новый тег `extraction-support` используется для навыков, усиливающих перенос тяжёлых грузов и сенсорное сканирование в ARC Raiders-подобных миссиях.
+- Навыки с тегом `event-reactive` получают модификаторы от событий (`world/events/live-events-system.md`) и синхронизируются с `threatAdaptationProfile`.
+- Маппинг хранится в таблице `skill_loadout_profile` и в YAML-экспорте раздела `profiles`.
 
 ---
 
@@ -104,6 +113,13 @@ CREATE TABLE skill_unlock_requirements (
     reputation JSONB,
     quest_ref VARCHAR(64)
 );
+
+CREATE TABLE skill_loadout_profile (
+    skill_code VARCHAR(64) NOT NULL,
+    loadout_profile VARCHAR(32) NOT NULL, -- stormbreaker | safebearer | scout | stormrunner
+    weight NUMERIC(4,2) DEFAULT 1.0,
+    PRIMARY KEY (skill_code, loadout_profile)
+);
 ```
 
 ---
@@ -131,6 +147,9 @@ skills:
     unlock_requirements:
       attributes: { ref: ">=12" }
       quest_ref: "corpo-wars-sniper"
+    loadout_profiles:
+      stormbreaker: 1.0
+      scout: 0.8
 ```
 
 Экспорт размещается в `api/v1/progression/skills-mapping.yaml` и употребляется для генерации OpenAPI/клиентских моделей.
@@ -146,6 +165,7 @@ skills:
 | `/progression/skills/mapping/{skillCode}` | `PUT` | Обновление соответствий (админ) |
 | `/progression/skills/tags` | `GET` | Список доступных тегов |
 | `/progression/skills/validators/run` | `POST` | Запуск валидации соответствий |
+| `/progression/skills/profiles` | `GET` | Выгрузка навыков по `loadoutProfile` и `eventCode` |
 
 События `progression.skills_mapping.*` (`updated`, `validator_failed`, `validator_passed`) позволяют синхронизировать данные с UI/аналитикой.
 
@@ -164,9 +184,11 @@ skills:
 - `progression-attributes-matrix.md` — требования и штрафы
 - `economy/equipment-matrix.md` — типы предметов и статы
 - `combat-implants-types.md` — типы имплантов и OS
+- `combat-loadouts-system.md` — потребители маппинга в боевых лодаутах
 
 ---
 
 ## История изменений
+- v1.2.0 (2025-11-08 00:14) — Добавлены профили лодаутов и теги для PvE экспедиций, расширены таблицы и API.
 - v1.1.0 (2025-11-07 16:46) — Расширены таблицы соответствий, добавлены структуры данных, REST API и автоматическая валидация
 - v1.0.0 (2025-11-05) — Создана базовая таблица соответствий навыков предметам и имплантам
