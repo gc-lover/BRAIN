@@ -465,3 +465,14 @@ Tooltip:
 - **API-TASK-243** `api/v1/social/resonance.yaml` — Social Resonance, кампании доверия и связи; статус `queued`.
 - Обновлены записи в `readiness-tracker.yaml` и `API-SWAGGER/tasks/config/brain-mapping.yaml`.
 
+## 15. Аналитика и telemetry (требования)
+- **World Pulse:** метрики `world.stability.index`, `world.modifier`, `world.alert.level`, время реакции UI (custom event `world_pulse_click`).
+- **Events Dashboard:** события `event_filter_applied` (фильтры), `event_subscribed`, `event_history_opened`; метрики latency загрузки и количество подписок.
+- **Influence Map:** heatmap interactions `territory_hover`, `territory_open_orders`, `layer_switch`; измеряем время загрузки тайлов, количество CTA "отдать приказ".
+- **Guild Operations:** `order_created`, `order_approved`, `order_failed`, `order_completed`, `order_kpi_recorded`; логируем задержку между стадиями.
+- **Market Stabilizer:** `intervention_simulated`, `intervention_submitted`, `intervention_mfa_failed`, `intervention_completed`; отслеживаем `risk_index` и `volatility_delta`.
+- **Social Resonance:** `campaign_launched`, `campaign_cancelled`, `relationship_updated`; метрика `trust_index_delta`, `mood_state`.
+- **Crisis Hub:** `crisis_action_triggered`, `crisis_action_failed`, `crisis_phase_changed`; latency выполнения, эффективность (`mitigation_level_delta`).
+- **Telemetry pipeline:** события отправляются в Kafka topics `analytics.world-ui.*`, агрегируются в ClickHouse; дашборды Grafana: World Live Ops, Economy Interventions, Social Resonance.
+- **Алёрты:** автоматические предупреждения при SLA нарушениях (см. секцию 7), уведомление команд через PagerDuty/Slack.
+

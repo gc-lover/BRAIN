@@ -231,11 +231,16 @@
   - **Реплика:** «Helios думает, что купил тебя. Давай посмотрим, кого ты выберешь, когда загорятся реальные туннели.»
   - **Последствия:** доступ к ветке `corporate-ultimatum`.
 
+- **Событие:** `world.event.city_unrest`
+  - **Условие:** `city.unrest.level` > 50% и `flag.neon.elite == true`.
+  - **Реплика:** «Улицы кипят. Specter, держи толпу, пока мы вывозим остатки груза.»
+  - **Последствия:** доступ к ветке `specter-directive`, успех снижает `city.unrest.level`, провал усиливает беспорядки.
+
 ## 4. Награды и последствия
 - **Репутации:** `rep.fixers.neon` ±15, `rep.corp.helios` ±10, `rep.gang.maelstrom` ±12.
-- **Флаги:** `flag.neon.support`, `flag.helios.deal`, `flag.maelstrom.double_agent`, `flag.neon.blacklist`.
-- **Предметы:** `ghost-drone`, `ghost-cache`, `ghost-countermeasure`, `ghost-prototype`.
-- **World-state:** модификатор `underlink.stability`, триггер событий `neon_ghosts_night_run`, `helios-crackdown`.
+- **Флаги:** `flag.neon.support`, `flag.helios.deal`, `flag.maelstrom.double_agent`, `flag.neon.blacklist`, `flag.neon.elite`.
+- **Предметы:** `ghost-drone`, `ghost-cache`, `ghost-countermeasure`, `ghost-prototype`, `ghost-trace-module`, `specter-cache`.
+- **World-state:** модификаторы `underlink.stability`, `city.unrest.level`, события `neon_ghosts_night_run`, `neon_ghosts_city_support`, `helios-crackdown`.
 - **События API:** `POST /api/v1/world/events` (запуск), `POST /api/v1/social/reputation/batch`, `POST /api/v1/economy/contracts/activate` (корпоративная ветка).
 
 ## 5. Связанные материалы
