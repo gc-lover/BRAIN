@@ -6,6 +6,7 @@
 
 ### Корпорации
 - [Arasaka](./arasaka-world-quests.md) — 10 квестов по миру
+- [Crescent Energy Grid](./crescent-energy-world-quests.md) — 4 квеста, лунные купола и энергетические сети
 - [Militech](./militech-world-quests.md) — 10 квестов по миру
 - [NetWatch](./netwatch-world-quests.md) — 8 квестов
 - [Biotechnica](./biotechnica-world-quests.md) — 6 квестов

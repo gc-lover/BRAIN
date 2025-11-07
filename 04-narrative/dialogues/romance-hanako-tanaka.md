@@ -451,9 +451,12 @@ conversation:
 | `/romance/dialogues/hanako/stage2` | `GET` | Получить сцену небесного сада |
 | `/romance/dialogues/hanako/stage2/run-check` | `POST` | Проверки Etiquette/Willpower/Strategy/Insight |
 | `/romance/dialogues/hanako/stage2/state` | `POST` | Сохранить флаги `stage1-complete`, `memories`, `path_*`, контракты |
+| `/romance/dialogues/hanako/stage3` | `GET` | Получить сцену подземного архива |
+| `/romance/dialogues/hanako/stage3/run-check` | `POST` | Проверки Technical/Etiquette/Empathy/Willpower/Hacking/Negotiation |
+| `/romance/dialogues/hanako/stage3/state` | `POST` | Сохранить флаги `stage3-unlocked`, `blackwall_*`, `stage3-decision`, выданные награды |
 | `/romance/dialogues/hanako/telemetry` | `POST` | Сводная телеметрия по двум этапам |
 
-GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `RomanceDialogueNode` с `corporateHooks`, `gardenStatus`, `oathSummary`.
+GraphQL поле `romanceDialogue(id: ID!, stage: Int)` возвращает `RomanceDialogueNode` с `corporateHooks`, `gardenStatus`, `archiveStatus`, `oathSummary`.
 
 ## 6. Валидация и телеметрия
 

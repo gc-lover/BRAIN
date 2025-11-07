@@ -128,7 +128,7 @@
 
 - `../locations-overview.md`
 - `./WORLD-CITIES-DETAIL-CATALOG-2093.md`
-- `../../04-narrative/questlines/quest-faction-crescent-energy-001.md`
+- `../../04-narrative/quests/faction-world/crescent-energy-world-quests.md`
 - `../../05-technical/backend/maintenance/energy-grid-sync.md`
 
 ---
