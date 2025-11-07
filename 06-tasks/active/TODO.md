@@ -21,6 +21,12 @@
 - ✅ 2 документа economy: `in-review` → `ready`
 - ✅ 4 README файла: `needs-work` → `not-applicable`
 
+**Последнее обновление (2025-11-07 20:07):**
+- ✅ Добавлены микрофичи Competitive & Events: `arena-system`, `loot-hunt-system`, `dungeon-scenarios-catalog`, `live-events-system`
+- ✅ Подготовлены лор-справочники: `activities-lore-compendium`, `activity-npc-roster`
+- ✅ Обновлён план `2025-11-07-api-spec-batch-plan.md` (Batch 05 + Batch 06)
+- ✅ Сформированы YAML-файлы батчей `batch-01-core.yaml`…`batch-05-competitive.yaml`
+
 **Вывод:** Репозиторий .BRAIN полностью готов к созданию API задач! 🚀
 
 ---

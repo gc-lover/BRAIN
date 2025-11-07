@@ -1867,6 +1867,33 @@ documents:
     issues: []
     api_target: "api/v1/world/state.yaml"
 
+  - path: ".BRAIN/02-gameplay/world/world-bosses-catalog.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:37"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Каталог мировых боссов: фазы, уникальные навыки по лигам, сюжетные триггеры и REST/WebSocket контракты world-service."
+    issues: []
+    api_target: "api/v1/world/bosses.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/dungeons/dungeon-bosses-catalog.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:37"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Каталог боссов подземелий: фазы, D&D проверки, уникальные навыки Normal/Hard/Apex, REST/WS контуры и схему данных для world-service."
+    issues: []
+    api_target: "api/v1/world/dungeons/bosses.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/dungeons/dungeon-scenarios-catalog.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:33"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Каталог подземельных сценариев: типы, фазы, модификаторы, интеграции и REST API world-service."
+    issues: []
+    api_target: "api/v1/world/dungeons.yaml"
+
   # 04-narrative/quests/main/ - Детальные узлы основных квестов
   - path: ".BRAIN/04-narrative/quests/main/001-first-steps-dnd-nodes.md"
     status: "ready"
