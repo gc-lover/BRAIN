@@ -1209,3 +1209,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/social/friends/friend-system.yaml"
+    task_id: "API-TASK-228"
+    brain_source: ".BRAIN/05-technical/backend/friend-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
