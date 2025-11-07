@@ -3054,5 +3054,14 @@ documents:
     issues: []
     api_target: "api/v1/lore/locations/madrid.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/denver-detailed-2020-2093.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-08 00:34"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Денвер содержит модели климат-щитовой сети, REST/GraphQL/Kafka контракты и UX-потоки; готов к API задачам."
+    issues: []
+    api_target: "api/v1/lore/locations/denver.yaml"
+
 # Примеры записей:
 
