@@ -169,14 +169,20 @@ nodes:
 
 ## 4. Таблица проверок
 
-| Узел | Тип проверки | DC | Модификаторы | Успех | Провал | Крит. успех | Крит. провал |
-|------|--------------|----|--------------|-------|--------|-------------|--------------|
-| briefing.brief-accept | Intimidation | 17 | `+1` при `flag.maelstrom.implant_sync` | Принятие задания, +5 репутация | Урон от импланта | — | — |
-| meet-corp.corp-intimidate | Negotiation | 19 | `+2` при `flag.maelstrom.double_agent` | Бонус деньги, +8 к Милитеху | Подозрение | — | — |
-| temptation.temp-open | Hacking | 20 | `+2` Netrunner | Копия чертежа | Оглушение | — | — |
-| betrayal.betray-corp | Deception | 21 | `+1` при `rep.gang.maelstrom ≥ 40` | Лояльность Maelstrom | Blacklist | — | — |
-| betrayal.betray-maelstrom | Deception | 20 | `+2` при `flag.marco.corp` | Победа Militech | Пойман | — | — |
-| fallout.fallout-double | Insight | 20 | `+1` при `flag.sqmdl.steal` | Тройной агент | Расследование NCPD | — | — |
+| Узел | Проверка | DC | Модификаторы | Успех | Провал | Крит. успех | Крит. провал |
+|------|----------|----|--------------|-------|--------|-------------|--------------|
+| briefing.brief-accept | Intimidation | 18 | `+1` gear.cyberware-brutal | Допуск, кредчип | Урон импланта, -репутация | Имплант-бустер, +10 репутация | — |
+| prep-lair.prep-scan | Perception | 16 | `+1` gear.smart-goggles | Карта ангара | Потеря внимательности | — | — |
+| prep-lair.prep-hack | Hacking | 18 | `+2` класс Netrunner | Доступ к undernet | Шок, -репутация | — | — |
+| meet-corp.corp-negotiation | Negotiation | 19 | `+1` buff.streetwise_boost | +1500, репутация | Подозрение Militech | — | — |
+| meet-corp.corp-threat | Intimidation | 18 | `+1` rep.gang.maelstrom ≥ 40 | Репутация Maelstrom | Слежка | — | — |
+| undernet-heist.undernet-siphon | Hacking | 20 | `+1` program.black-ice | Payload данные | Brain burn | — | — |
+| temptation.temp-open | Hacking | 20 | `+1` flag.sqmdl.tunnel_favor | Копия Kraken | Перегрев | — | — |
+| betrayal.betray-corp | Deception | 21 | `+1` flag.sqmdl.prep | Maelstrom +12 | Blacklist | — | — |
+| betrayal.betray-maelstrom | Deception | 20 | `+1` flag.sqmdl.copy | Militech +14 | Hitlist | — | — |
+| betrayal.betray-double | Insight | 19 | `+1` rep.law.ncpd ≥ 20 | Тройной путь | Проба NCPD | — | — |
+| double-agent.ncpd-deal | Hacking | 18 | `+1` netrunner class | Статус triple | Расследование | — | — |
+| fallout.fallout-triple | Insight | 20 | `+2` buff.cover_story | Тройной агент | Аудит | — | — |
 
 ---
 
