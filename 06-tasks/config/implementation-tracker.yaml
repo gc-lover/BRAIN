@@ -1186,6 +1186,15 @@ implementations:
   frontend:
     status: "not_started"
 
+- api_path: "api/v1/gameplay/world/factions/quest-chains.yaml"
+  task_id: "API-TASK-272"
+  brain_source: ".BRAIN/02-gameplay/world/factions/faction-quest-chains.md"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+  frontend:
+    status: "not_started"
+
 # === CONTENT SYSTEMS EXTENDED (2025-11-07 BATCH 7) ===
 
 - api_path: "api/v1/narrative/starter-content.yaml"
