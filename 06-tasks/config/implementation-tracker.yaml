@@ -479,8 +479,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/party-system.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 03:00"
+    completed: "2025-11-07 03:15"
+    agent: "Backend Agent"
+    commit: "427f20a"
     priority: "HIGH"
+    notes: "SocialApi + SocialService + SocialController + SocialServiceImpl stubs, PartyEntity, PartyRepository, migration 064"
   frontend:
     status: "not_started"
     priority: "HIGH"
@@ -490,8 +495,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/friend-system.md"
   api_status: "completed"
   backend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 03:15"
+    completed: "2025-11-07 04:45"
+    agent: "Backend Agent"
+    commit: "804ddeb"
     priority: "MEDIUM"
+    notes: "SocialApi merged friends endpoints, SocialController delegates, SocialServiceImpl returns stub responses, FriendshipEntity + repository + migration 065"
   frontend:
     status: "not_started"
     priority: "MEDIUM"
