@@ -16,6 +16,14 @@
 **api-readiness-notes:** «Версия 1.3.0: расширены состояния (market/fiesta/blackwall), пасхалки, YAML/REST и телеметрия street-информанта.»
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-291: api/v1/narrative/dialogues/npc-rita-moreno.yaml (2025-11-08 06:05)
+- Last Updated: 2025-11-08 06:05
+---
+
+---
 
 ## 1. Контекст и цели
 

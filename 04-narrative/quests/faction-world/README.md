@@ -29,6 +29,8 @@
 - [Anchorage Icefront Authority](./anchorage-icefront-world-quests.md) — 4 квеста, арктические конвои и крио-операции
 - [Aurora Harmony Consortium](./helsinki-harmony-world-quests.md) — 4 квеста, музыка AI и климатические мосты
 - [Hyperwave Straits Authority](./johor-hyperwave-world-quests.md) — 4 квеста, гибридные порты и ночные гонки
+- [Congo River Nexus](./kinshasa-river-nexus-world-quests.md) — 4 квеста, речные канопи и Lumina Malebo
+- [Steppe Signal Collective](./ulaanbaatar-steppe-signal-world-quests.md) — 4 квеста, Sky Mandala и небесные караваны
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов
