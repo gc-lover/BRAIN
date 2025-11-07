@@ -2,8 +2,8 @@
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-195: api/v1/gameplay/combat/loot-hunt.yaml (2025-11-07 20:07)
-- Last Updated: 2025-11-07 20:39
+  - API-TASK-247: api/v1/gameplay/combat/loot-hunt.yaml (2025-11-07 22:05)
+- Last Updated: 2025-11-07 22:05
 ---
 
 ---
@@ -162,8 +162,8 @@ Calculate Reward = base + heat_modifier + streak_bonus
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-195: api/v1/gameplay/combat/loot-hunt.yaml (2025-11-07 20:07)
-- Last Updated: 2025-11-07 20:28
+  - API-TASK-247: api/v1/gameplay/combat/loot-hunt.yaml (2025-11-07 22:05)
+- Last Updated: 2025-11-07 22:05
 ---
 
 ---

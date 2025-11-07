@@ -300,7 +300,15 @@
 2. Требуется ли companion-приложение для гильдейских приказов (roadmap 2026)?
 3. Какой формат реплея мировых событий предпочтителен (видео/текст/графика)?
 
-## 11. История изменений
+## 11. Метрики Specter overlay
+- `specter.overlay.activePlayers` — количество активных Specter; world-service обновляет каждые 60 секунд.
+- `specter.overlay.unrestMitigated` — снижение `city.unrest.level` за последний час.
+- `specter.overlay.squadDeployments` — активные отряды Ghosts; источник `CITY_UNREST_UPDATE`.
+- `specter.overlay.alertLevel` — сводный индекс city unrest и корпоративного давления Helios.
+- Grafana дашборд `specter-operations` доступен world-ops и narrative-team.
+
+## 12. История изменений
+- 2025-11-07 18:20 — Добавлены метрики Specter overlay, обновлены SLA city unrest.
 - 2025-11-07 18:05 — Добавлены Specter overlay, монитор городских беспорядков и SLA `CITY_UNREST_UPDATE`.
 - 2025-11-07 16:53 — Добавлены ASCII-мокапы, расширенный тест-план, сформированы API задачи и обновлены SLA.
 - 2025-11-07 16:45 — Финализированы UX-флоу, таблицы API/событий и планы команд, подтверждён статус ready.
