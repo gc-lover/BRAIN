@@ -20,6 +20,12 @@
 - ✅ World State Control
 
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-212: api/v1/admin/panel/admin-panel-ui.yaml (2025-11-08 01:12)
+- Last Updated: 2025-11-08 01:12
+---
 
 ## Главный Dashboard
 

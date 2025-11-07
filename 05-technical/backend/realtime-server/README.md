@@ -35,11 +35,16 @@ WebSocket server для real-time updates: Game events, Chat, Combat, World stat
 
 ## 📑 Структура
 
-### Part 1: Architecture & WebSocket
-**Файл:** [part1-architecture-websocket.md](./part1-architecture-websocket.md)
+### Part 1: Architecture & Zones
+**Файл:** [part1-architecture-zones.md](./part1-architecture-zones.md)
 
-### Part 2: Messaging & Scalability  
-**Файл:** [part2-messaging-scalability.md](./part2-messaging-scalability.md)
+### Part 2: Protocol & Optimization  
+**Файл:** [part2-protocol-optimization.md](./part2-protocol-optimization.md)
+
+### Part 3: Performance Profiles  
+**Файл:** [part3-performance-profiles.md](./part3-performance-profiles.md)
+  
+**Связь с инфраструктурой:** профили используют параметры из `../../infrastructure/caching-strategy.md`, `../../infrastructure/anti-cheat-system.md` и глобальные SLO из `../../infrastructure/error-handling-logging.md`.
 
 ---
 
