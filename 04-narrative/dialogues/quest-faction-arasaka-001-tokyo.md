@@ -3,17 +3,17 @@
 **ID диалога:** `dialogue-quest-fq-arasaka-001`  
 **Тип:** quest  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:58  
+**Последнее обновление:** 2025-11-07 19:32  
 **Приоритет:** высокий  
 **Связанные документы:** `../quests/faction-world/arasaka-world-quests.md`, `../dialogues/npc-hiroshi-tanaka.md`, `../dialogues/npc-james-iron-reed.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:58  
-**api-readiness-notes:** Диалоговый сценарий миссии Arasaka-001 оформлен по узлам, проверкам и последствиям (лояльность, предательство, двойная игра).
+**api-readiness-check-date:** 2025-11-07 19:32  
+**api-readiness-notes:** «Миссия перенесена в 1.1.0: добавлены экспорт, REST/GraphQL контракт и валидация фракционных флагов. Готово для API.»
 
 ---
 

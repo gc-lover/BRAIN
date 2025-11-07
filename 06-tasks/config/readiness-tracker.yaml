@@ -1730,11 +1730,11 @@ documents:
     api_target: "api/v1/narrative/dialogues/quest-main-001.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/quest-main-002-choose-path.md"
-    status: "in-review"
-    version: "0.1.0"
-    checked: "2025-11-07 16:42"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 19:18"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги квеста 1.2: выбор корпорации, банды, NCPD или независимости, проверки N-10..N-12, установка ветвевых флагов."
+    notes: "Квест 1.2 синхронизирован с фракционными репутациями, добавлены экспорт, REST/GraphQL и метрики." 
     issues: []
     api_target: "api/v1/narrative/dialogues/quest-main-002.yaml"
 

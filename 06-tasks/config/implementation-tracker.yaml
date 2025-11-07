@@ -760,8 +760,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 18:45"
+    completed: "2025-11-07 19:10"
+    agent: "Frontend Agent"
+    commit: "60b36e2"
     priority: "MEDIUM"
+    notes: "ContractsPage, ContractCard, ContractTemplateCard, EscrowStatusCard, DisputeCard, маршрутизация"
 
 - api_path: "api/v1/gameplay/economy/investments.yaml"
   task_id: "API-TASK-162"
@@ -771,8 +776,13 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
   frontend:
-    status: "not_started"
+    status: "completed"
+    started: "2025-11-07 19:15"
+    completed: "2025-11-07 19:40"
+    agent: "Frontend Agent"
+    commit: "75e24e8"
     priority: "MEDIUM"
+    notes: "InvestmentsPage, InvestmentCard, PortfolioOverviewCard, RiskDistributionCard, DividendScheduleCard"
 
 - api_path: "api/v1/gameplay/economy/player-market-core.yaml"
   task_id: "API-TASK-095"

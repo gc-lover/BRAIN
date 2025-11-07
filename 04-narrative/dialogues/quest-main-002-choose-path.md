@@ -205,14 +205,182 @@ nodes:
 - После завершения выбранной ветки устанавливается соответствующий флаг и квест завершает сценой `wrap`.
 - Репутационные изменения передаются в системы социального сервиса.
 
-## 4. Награды и последствия
+---
 
-- **Репутация:** +10 к выбранной фракции (убывает у конкурирующих: Arasaka vs Militech, Valentinos vs NCPD). Независимый путь увеличивает `rep.freelance.global` и слегка снижает `rep.corp.arasaka` и `rep.gang.valentinos`.
-- **Предметы:** Зависит от ветки (корпоративный пропуск, медальон Valentinos, значок NCPD, маршруты Nomad).
-- **Флаги:** `flag.main002.corp|gang|law|freelance`, плюс ветвевые флаги (`flag.arasaka.clearanceA`, `flag.valentinos.oath`, `flag.ncpd.badge`, `flag.freelance.contract`).
-- **World-state:** Активируются соответствующие квестовые цепочки (`arasaka-world-quests`, `heywood-valentinos-chain`, `ncpd-patrol-chain`, `freelance-network`).
+## 4. Экспорт данных
 
-## 5. Связанные материалы
+```yaml
+conversation:
+  id: dialogue-quest-main-002-choose-path
+  entryNodes: [council]
+  states:
+    council:
+      requirements:
+        quest.main.001: "completed"
+    corp-track:
+      requirements:
+        flag.main002.corp: true
+    gang-track:
+      requirements:
+        flag.main002.gang: true
+    law-track:
+      requirements:
+        flag.main002.law: true
+    freelance-track:
+      requirements:
+        flag.main002.freelance: true
+    wrap:
+      requirements:
+        anyOf:
+          - { flag.main002.corp: true }
+          - { flag.main002.gang: true }
+          - { flag.main002.law: true }
+          - { flag.main002.freelance: true }
+  nodes:
+    council:
+      options:
+        - id: choose-corp
+          success:
+            setFlags: [flag.main002.corp]
+        - id: choose-gang
+          success:
+            setFlags: [flag.main002.gang]
+        - id: choose-law
+          success:
+            setFlags: [flag.main002.law]
+        - id: choose-freelance
+          success:
+            setFlags: [flag.main002.freelance]
+    corp-track:
+      options:
+        - id: corp-persuade
+          checks:
+            - stat: Persuasion
+              dc: 18
+              modifiers:
+                - source: credential.corporate
+                  value: 2
+          success:
+            setFlags: [flag.arasaka.clearanceA]
+            reputation:
+              rep.corp.arasaka: 10
+          failure:
+            contracts: [contract.corp-basic]
+            reputation:
+              rep.corp.arasaka: 2
+          critSuccess:
+            contracts: [contract.arasaka-serenity]
+            reputation:
+              rep.corp.arasaka: 14
+          critFailure:
+            setFlags: [flag.arasaka.watchlist]
+            reputation:
+              rep.corp.arasaka: -8
+    gang-track:
+      options:
+        - id: gang-intimidate
+          checks:
+            - stat: Intimidation
+              dc: 17
+              modifiers:
+                - source: tattoo.valentinos
+                  value: 1
+          success:
+            setFlags: [flag.valentinos.oath]
+            reputation:
+              rep.gang.valentinos: 10
+          failure:
+            contracts: [contract.valentinos-trial]
+            reputation:
+              rep.gang.valentinos: 3
+          critSuccess:
+            items: [item.valentinos-medallion]
+            reputation:
+              rep.gang.valentinos: 14
+          critFailure:
+            setFlags: [flag.valentinos.suspect]
+            reputation:
+              rep.gang.valentinos: -8
+    law-track:
+      options:
+        - id: law-honesty
+          checks:
+            - stat: Persuasion
+              dc: 18
+          success:
+            setFlags: [flag.ncpd.badge]
+            reputation:
+              rep.law.ncpd: 10
+          failure:
+            contracts: [contract.ncpd-patrol]
+            reputation:
+              rep.law.ncpd: 3
+          critSuccess:
+            contracts: [contract.ncpd-cybercrime-taskforce]
+            reputation:
+              rep.law.ncpd: 14
+          critFailure:
+            setFlags: [flag.ncpd.review]
+            reputation:
+              rep.law.ncpd: -6
+    freelance-track:
+      options:
+        - id: freelance-commit
+          checks:
+            - stat: ClassChoice
+              dc: 0
+              class-bonus:
+                netrunner: 2
+                techie: 2
+          success:
+            setFlags: [flag.freelance.contract]
+            reputation:
+              rep.freelance.global: 8
+          failure:
+            contracts: [contract.freelance-training]
+            reputation:
+              rep.freelance.global: 2
+    wrap:
+      options:
+        - id: wrap-affirm
+          success:
+            finalize: main002
+            updateWorld: true
+```
+
+> Экспорт формируется `scripts/export-dialogues.ps1` и сохраняется в `api/v1/narrative/dialogues/quest-main-002.yaml`.
+
+---
+
+## 5. REST / GraphQL API
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/narrative/dialogues/quest-main-002` | `GET` | Получить структуру выбора пути и активные ветки |
+| `/narrative/dialogues/quest-main-002/state` | `POST` | Сохранить прогресс (`flag.main002.*`, репутации, выданные контракты) |
+| `/narrative/dialogues/quest-main-002/run-check` | `POST` | Выполнить проверку (Persuasion/Intimidation/ClassChoice) |
+| `/narrative/dialogues/quest-main-002/telemetry` | `POST` | Отправить телеметрию распределения фракций и исходов |
+
+GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNode` с `factionContext` (репутации, активные флаги, доступные миссии) и сообщает рекомендованные квесты следующей цепочки.
+
+---
+
+## 6. Валидация и телеметрия
+
+- `validate-faction-choice.ps1` сверяет флаги `flag.main002.*`, фракционные бонусы и контракты с документами NPC и социальным сервисом.
+- `dialogue-simulator.ps1` прогоняет ветки corp/gang/law/freelance, проверяя выдачу контрактов и финализацию квеста.
+- Метрики: `faction-choice-distribution`, `faction-check-success`, `faction-watchlist-rate`. При превышении blacklist/watchlist >10% создаётся тикет для gang-service и corp-service.
+
+---
+
+## 7. Награды и последствия
+
+- **Репутация:** +10 к выбранной фракции (убывает у конкурирующих). Независимый путь повышает `rep.freelance.global`, снижает `rep.corp.arasaka` и `rep.gang.valentinos`.
+- **Предметы:** Корпоративный пропуск, медальон Valentinos, значок NCPD или маршруты Nomad.
+- **Флаги:** `flag.main002.corp|gang|law|freelance`, а также `flag.arasaka.clearanceA`, `flag.valentinos.oath`, `flag.ncpd.badge`, `flag.freelance.contract`.
+- **World-state:** Активируются цепочки `arasaka-world-quests`, `heywood-valentinos-chain`, `ncpd-patrol-chain`, `freelance-network`.
+
+## 8. Связанные материалы
 
 - `../quests/main/002-choose-path-dnd-nodes.md`
 - `../dialogues/npc-hiroshi-tanaka.md`
@@ -220,7 +388,8 @@ nodes:
 - `../dialogues/npc-sara-miller.md`
 - `../../02-gameplay/social/reputation-formulas.md`
 
-## 6. История изменений
+## 9. История изменений
 
+- 2025-11-07 19:18 — Добавлены экспорт, REST/GraphQL блок и метрики. Статус `ready`, версия 1.1.0.
 - 2025-11-07 16:42 — добавлен диалоговый сценарий для квеста 1.2.
 
