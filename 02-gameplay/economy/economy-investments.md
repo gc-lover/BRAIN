@@ -9,14 +9,15 @@
 
 # Экономика - Инвестиции
 
-**Статус:** draft  
-**Версия:** 1.0.0  
+**Статус:** approved  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-06 22:00  
+**Последнее обновление:** 2025-11-07 16:19  
 **Приоритет:** средний (Post-MVP)
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 22:00
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-notes:** «Добавлены lifecycle, портфель, API, отчётность и интеграции. Инвестиционный модуль готов к API.»
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
@@ -135,17 +136,48 @@ Expected return: 8-12%/year
 ## 🗄️ Структура БД
 
 ```sql
-CREATE TABLE player_investments (
+CREATE TABLE investment_products (
+    id UUID PRIMARY KEY,
+    product_type VARCHAR(32) NOT NULL, -- STOCK | BOND | REAL_ESTATE | PRODUCTION | COMMODITY_FUND
+    reference_id UUID, -- ссылка на корпорацию, регион, недвижимость
+    name VARCHAR(200) NOT NULL,
+    risk_level VARCHAR(16) NOT NULL,
+    base_return_percent DECIMAL(5,2) NOT NULL,
+    currency VARCHAR(8) DEFAULT 'EDDY',
+    metadata JSONB -- индивидуальные параметры (капитализация, collateral и т.д.)
+);
+
+CREATE TABLE player_investment_positions (
     id UUID PRIMARY KEY,
     player_id UUID NOT NULL,
-    
-    investment_type VARCHAR(50) NOT NULL,
-    amount DECIMAL(12,2) NOT NULL,
-    
-    expected_return_percent DECIMAL(5,2),
-    
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    matures_at TIMESTAMP
+    product_id UUID NOT NULL REFERENCES investment_products(id),
+    purchase_amount DECIMAL(14,2) NOT NULL,
+    quantity DECIMAL(12,4) NOT NULL,
+    avg_price DECIMAL(12,4) NOT NULL,
+    leverage_ratio DECIMAL(4,2) DEFAULT 1.0,
+    opened_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    closes_at TIMESTAMP,
+    status VARCHAR(16) NOT NULL DEFAULT 'OPEN'
+);
+
+CREATE TABLE investment_transactions (
+    id UUID PRIMARY KEY,
+    position_id UUID NOT NULL REFERENCES player_investment_positions(id),
+    transaction_type VARCHAR(16) NOT NULL, -- BUY | SELL | DIVIDEND | INTEREST | RENTAL
+    amount DECIMAL(14,2) NOT NULL,
+    currency VARCHAR(8) DEFAULT 'EDDY',
+    occurred_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    metadata JSONB
+);
+
+CREATE TABLE investment_portfolio_snapshots (
+    id UUID PRIMARY KEY,
+    player_id UUID NOT NULL,
+    total_value DECIMAL(16,2) NOT NULL,
+    cash_balance DECIMAL(14,2) NOT NULL,
+    risk_score DECIMAL(5,2) NOT NULL,
+    diversification_index DECIMAL(5,2) NOT NULL,
+    recorded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ```
 

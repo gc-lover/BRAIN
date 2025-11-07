@@ -1,7 +1,14 @@
+---
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-notes:** Core схема ветвящейся квестовой системы: таблицы, индексы, связи и примеры для API задач.
+---
+
 # Quest Branching DB - Part 1: Analysis & Core Tables
 
-**Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:16  
+**Версия:** 1.1.0  
+**Дата обновления:** 2025-11-07 16:14  
+**Дата создания:** 2025-11-07 02:16  
 **Часть:** 1 из 2
 
 [Навигация](./README.md) | [Part 2 →](./part2-advanced-examples.md)

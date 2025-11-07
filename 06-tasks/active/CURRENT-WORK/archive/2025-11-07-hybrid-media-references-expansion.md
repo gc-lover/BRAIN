@@ -59,7 +59,7 @@
 
 - Moodboard `mood/throne-v1` расширен блоками: «Council Atrium» (песчаные купола + голографические диаграммы), «Spice/Data Bazaar» (неоновые рынки), «Balance Charter Hall» (симметричные треугольные арки).
 - Аудио ID `audio/throne-anemo` дополнен треками «Diplomacy Drift» (сцены совета) и «Storm Verdict» (финальные переговоры).
-- UI компоненты: вариации `CyberpunkButton` — `variant="sand-faction"`, `variant="sand-rebel"`, `variant="sand-neutral"`; опции и цвета фиксируются в разделе 9 (схема передачи в FRONT-WEB `shared/ui`).
+- UI компоненты: вариации `CyberpunkButton` — `variant="sand-faction"`, `variant="sand-rebel"`, `variant="sand-neutral"`, задокументированы в `shared/ui/variants.md` (создана запись).
 
 ## 2. Сезонный эвент «Neon Popularity Reset»
 
@@ -207,7 +207,7 @@
   - В профиле появляется предупреждение, HUD показывает таймер разблокировки.
   - Если >30% гильдии под санкциями, гильд-лидер получает отчёт и ссылку на обучающий симулятор `Reputation Clinic` (режим `world-service`).
 - **Аудит:** все события фиксируются в `social-service.rating_events` (тип, actor, timestamp, источник). Предусмотрен экспорт CSV для legal.
-- **UI артефакты:** готов комплект из 5 экранов (`ux/neon-anticheat-screen1..5`): уведомление, опрос, апелляция, штраф, отчёт гильдии; ссылки включены в пакет для legal.
+- **UI артефакты:** подготовить 5 экранов (`ux/neon-anticheat-screen1..5`) до 2025-11-09: уведомление, опрос, апелляция, штраф, отчёт гильдии.
 
 ## Решённые вопросы
 

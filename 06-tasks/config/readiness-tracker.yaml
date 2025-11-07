@@ -278,6 +278,15 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/archive/2025-11-07-hybrid-media-references-expansion.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Гибридные медиа-отсылки: кампания Throne of Sand, эвент Neon Popularity Reset, рейд Quantum Reef Siege, UX анти-абьюз и юридический пакет подготовлены."
+    issues: []
+    api_target: null
+
   # Служебные файлы
   - path: ".BRAIN/МЕНЕДЖЕР.MD"
     status: "not-applicable"
@@ -1774,10 +1783,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:14"
     checker: "AI Agent (Brain Manager)"
-    notes: "Валютная биржа: 12 региональных валют, валютные пары (major/minor/exotic), спреды/комиссии, арбитраж (региональный/triangular), hedging, carry trade, leverage trading, структура БД (3 таблицы), API endpoints (4 REST + 1 WebSocket)."
+    notes: "Валютная биржа: обновлён lifecycle ордеров, REST/WS API, event bus, risk & compliance (AML, market halt), matching engine, интеграции c wallet/tax/event/analytics."
     issues: []
     api_target: "api/v1/economy/currency-exchange.yaml"
 
@@ -1792,10 +1801,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-logistics.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
     checker: "AI Agent (Brain Manager)"
-    notes: "Логистика: транспортные средства (5 типов), маршруты (локальные/региональные/глобальные), риски транспортировки (4 типа), страхование груза (3 плана), конвои/эскорт, скорость доставки, cargo management, структура БД (2 таблицы), API endpoints (4 REST)."
+    notes: "Логистика: обновлён lifecycle перевозок, REST/WS API, risk engine и SLA, интеграции с insurance/inventory/contracts/world-events."
     issues: []
     api_target: "api/v1/economy/logistics.yaml"
 
@@ -1819,10 +1828,10 @@ documents:
 
   - path: ".BRAIN/02-gameplay/economy/economy-events.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 22:23"
+    version: "1.1.0"
+    checked: "2025-11-07 16:19"
     checker: "AI Agent (Brain Manager)"
-    notes: "Экономические события: 4 основных типа (crisis/inflation/recession/boom), торговые войны/санкции, корпоративные события (scandals/M&A/breakthroughs), commodity events, структура БД (2 таблицы), API endpoints (3 REST)."
+    notes: "Экономические события: описан lifecycle, планировщик, REST/WS API, мониторинг, уведомления, интеграции с pricing/stock/currency/quest сервисами."
     issues: []
     api_target: "api/v1/economy/events.yaml"
 
