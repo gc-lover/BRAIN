@@ -9,17 +9,19 @@
 
 # Навыки — классовые и подклассовые различия, эксклюзивы
 
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:08  
-**api-readiness-notes:** Базовые модификаторы по классам, примеры подклассовых бонусов и эксклюзивных навыков. Требуется балансировка величин и полная раскладка по всем подклассам.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 16:46  
+**api-readiness-notes:** «Классовые навыки: расписаны матрицы модификаторов, ранги разблокировки, структура данных и REST API. Связь с progression-skills-mapping синхронизирована.»
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/progression/skills
 
-**Статус:** review  
-**Приоритет:** Высокий  
-**Дата создания:** 2025-11-05
+**Статус:** approved  
+**Версия:** 1.1.0  
+**Дата создания:** 2025-11-05  
+**Последнее обновление:** 2025-11-07 16:46  
+**Приоритет:** Высокий
 
 ---
 
@@ -107,8 +109,138 @@
 
 ---
 
+## Матрица «класс → ядро навыков»
+
+| Класс | Основные навыки | Вторичные навыки | Заблокированные навыки |
+| --- | --- | --- | --- |
+| Solo | gunplay, melee, endurance | stealth, survival | advanced hacking (до Tier 3) |
+| Netrunner | hacking, cyberspace, analysis | stealth, engineering | heavy weapons |
+| Techie | crafting, repair, implants | gunplay, analysis | psi/charisma (требует перка) |
+| Nomad | driving, parkour, survival | gunplay, scavenging | corporate negotiation |
+| Fixer | negotiation, bribery, trade | analysis, stealth | heavy combat (без перка) |
+| Medtech | healing, support, biochem | analysis, crafting | assault rifle mastery |
+
+Эта таблица определяет доступность веток в UI (серые навыки до разблокировки).
+
+---
+
+## Ранги разблокировки и требования
+
+| Tier | Уровень персонажа | Обязательные атрибуты | Дополнительные условия |
+| --- | --- | --- | --- |
+| 0 | 1 | — | Базовые навыки класса |
+| 1 | 10 | профильный атрибут ≥ 10 | Квест «Вступление в класс» |
+| 2 | 20 | профильный атрибут ≥ 14, вторичный ≥ 12 | Приобретён соответствующий перк |
+| 3 | 35 | два профильных атрибута ≥ 16 | Сюжетный прогресс (Act II) |
+| 4 | 50 | суммарный рейтинг атрибутов ≥ 150 | Репутация фракции ≥ 70, уникальный предмет |
+
+Перки `Cross-Class` и `Guild Mentor` позволяют открывать соседние ветки, но с коэффициентом эффективности 0.75.
+
+---
+
+## JSON/YAML структура для экспорта в API
+
+```yaml
+class_skill_matrix:
+  solo:
+    baseline:
+      gunplay:
+        attribute: REF
+        bonus: 0.005
+      melee:
+        attribute: STR
+        bonus: 0.005
+    subclasses:
+      assault:
+        modifiers:
+          assault_rifles: { attribute: REF, bonus: 0.005 }
+          suppression: { attribute: WILL, bonus: 0.003 }
+        exclusives:
+          - skill: adrenaline_storm
+            unlock_tier: 2
+            cost: { stamina: 40, cooldown: 120 }
+    unlocks:
+      tier1: { level: 10, requirements: { ref: ">=10" } }
+      tier2: { level: 20, requirements: { ref: ">=14", str: ">=12" }, perk: solo_blades_mastery }
+      tier3: { level: 35, quest: corpo_wars_act2 }
+```
+
+Файл генерации располагается в `api/v1/progression/skills-classes.yaml` и синхронизируется в CI.
+
+---
+
+## Структура данных (gameplay-service)
+
+```sql
+CREATE TABLE class_skill_modifiers (
+    class_code VARCHAR(16) NOT NULL,
+    skill_code VARCHAR(64) NOT NULL,
+    attribute_code VARCHAR(8) NOT NULL,
+    bonus NUMERIC(4,3) NOT NULL,
+    PRIMARY KEY (class_code, skill_code)
+);
+
+CREATE TABLE subclass_skill_modifiers (
+    class_code VARCHAR(16) NOT NULL,
+    subclass_code VARCHAR(16) NOT NULL,
+    skill_code VARCHAR(64) NOT NULL,
+    attribute_code VARCHAR(8) NOT NULL,
+    bonus NUMERIC(4,3) NOT NULL,
+    PRIMARY KEY (class_code, subclass_code, skill_code)
+);
+
+CREATE TABLE class_skill_unlocks (
+    class_code VARCHAR(16) NOT NULL,
+    tier SMALLINT NOT NULL,
+    min_level SMALLINT NOT NULL,
+    requirements JSONB NOT NULL,
+    PRIMARY KEY (class_code, tier)
+);
+
+CREATE TABLE exclusive_skills (
+    skill_code VARCHAR(64) PRIMARY KEY,
+    class_code VARCHAR(16) NOT NULL,
+    subclass_code VARCHAR(16),
+    unlock_tier SMALLINT NOT NULL,
+    resource_cost JSONB,
+    cooldown_seconds INTEGER,
+    description TEXT
+);
+```
+
+---
+
+## REST API (gameplay-service)
+
+| Endpoint | Метод | Назначение |
+| --- | --- | --- |
+| `/progression/classes` | `GET` | Список классов, модификаторы и доступные подклассы |
+| `/progression/classes/{classCode}` | `GET` | Полная информация по классу, включая unlock tiers |
+| `/progression/classes/{classCode}/subclasses/{subClass}` | `GET` | Детали подкласса, бонусы и эксклюзивы |
+| `/progression/classes/{classCode}/unlock` | `POST` | Применить разблокировку навыка (проверка условий) |
+| `/progression/classes/{classCode}/metrics` | `GET` | Телеметрия использования навыков/модификаторов |
+
+События шины `progression.classes.*` (unlock_attempted, unlock_success, modifier_applied, balance_override_applied) позволяют реагировать аналитике и UI.
+
+---
+
+## Баланс и телеметрия
+
+- `class_skill_usage` агрегирует данные из боёв/миссий и сравнивает с матрицей.
+- Автоматические алерты создаются при `usage_share > 65%` или `win_rate_delta > 10%`.
+- Дизайнерские настройки (`balance_overrides.yaml`) могут временно менять бонусы; изменения логируются.
+
+---
+
 ## Связанные документы
 
 - `progression-skills.md` — базовые формулы, категории, ранги/прогресс
 - `classes-abilities.md` — конкретные классовые способности
 - `progression-attributes.md` — атрибуты и влияние на навыки
+
+---
+
+## История изменений
+
+- v1.1.0 (2025-11-07 16:46) — Добавлены матрицы модификаторов, структура данных, REST API и процессы балансировки
+- v1.0.0 (2025-11-05) — Стартовая версия

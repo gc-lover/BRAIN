@@ -2,18 +2,18 @@
 
 **ID диалога:** `dialogue-npc-hiroshi-tanaka`  
 **Тип:** npc  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 17:45  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/hiroshi-tanaka.md`, `../quests/main/002-choose-path-dnd-nodes.md`, `../quests/faction-world/arasaka-world-quests.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Требуется связать с корпоративными флагами и таблицами доверия Arasaka.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 17:45  
+**api-readiness-notes:** Диалог структурирован по состояниям, проверкам и событиям Arasaka. Готов для API задач narrative-service.
 
 ---
 
@@ -171,5 +171,6 @@
 
 ## 6. История изменений
 
-- 2025-11-07 16:42 — создан базовый набор диалогов для Хироши Танаки.
+- 2025-11-07 17:45 — Диалог переведён в статус ready, добавлены проверки и последствия.
+- 2025-11-07 16:42 — Создан базовый набор диалогов.
 

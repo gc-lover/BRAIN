@@ -1,3 +1,99 @@
+---
+title: "Диалоговый файл — шаблон"
+version: "1.0.0"
+status: "approved"
+updated: "2025-11-07"
+author: "Brain Manager"
+api-readiness: "ready"
+api-readiness-check-date: "2025-11-07 17:45"
+api-readiness-notes: "Шаблон диалогов NPC/квестов с состояниями, узлами, проверками и метаданными."
+target-domain: "narrative"
+---
+
+# {{display-name}}
+
+**ID диалога:** `dialogue-{{slug}}`  
+**Тип:** npc | quest | ambient  
+**Статус:** draft | review | approved  
+**Версия:** 1.0.0  
+**Дата создания:** YYYY-MM-DD  
+**Последнее обновление:** YYYY-MM-DD  
+**Приоритет:** medium  
+**Связанные документы:** `../npc-lore/...`, `../quests/...`  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/{{module}}  
+**api-readiness:** in-review  
+**api-readiness-check-date:** YYYY-MM-DD HH:mm  
+**api-readiness-notes:** Краткое пояснение статуса проверки.
+
+---
+
+## 1. Контекст и цели
+- NPC / квест / событие, основная роль.
+- Ключевые сюжетные моменты и желаемый эмоциональный тон.
+- Интеграции с системами (репутация, события, мир).
+
+## 2. Состояния и условия
+
+| Состояние | Описание | Триггеры | Используемые флаги |
+|-----------|----------|----------|---------------------|
+| base | Базовое состояние | пример | `rep.corp.example` |
+| ... | ... | ... | ... |
+
+- Сопутствующие флаги/репутации.
+- D&D проверки и связанные квестовые узлы.
+- Внешние события, влияющие на диалог.
+
+## 3. Структура диалога
+
+### 3.1 Приветствия/entry точки
+
+| Состояние | Реплика NPC | Условия | Ответы игрока |
+|-----------|-------------|---------|---------------|
+| base | «...», — {{npc}} | default | `["Ответ1", "Ответ2"]` |
+
+### 3.2 Узлы
+
+```yaml
+- node-id: example
+  label: Описание узла
+  entry-condition: state == "base"
+  player-options:
+    - option-id: sample
+      text: "Команда игрока"
+      requirements:
+        - type: stat-check
+          stat: Persuasion
+          dc: 18
+      npc-response: "..."
+      outcomes:
+        success: { effect: "grant_flag", flag: "flag.example" }
+        failure: { effect: "apply_penalty", reputation: -3 }
+```
+
+### 3.3 Таблица проверок D&D
+
+| Узел | Тип проверки | DC | Модификаторы | Успех | Провал | Крит. успех | Крит. провал |
+|------|--------------|----|--------------|-------|--------|-------------|--------------|
+
+### 3.4 Реакции на события
+- **Событие:** `world.event.example`
+  - **Условие:** ...
+  - **Реплика:** ...
+  - **Последствия:** ...
+
+## 4. Награды и последствия
+- Репутация/флаги.
+- Предметы/контракты.
+- Связь с world-state/quest-branching.
+
+## 5. Связанные материалы
+- `../npc-lore/...`
+- `../quests/...`
+- `../../02-gameplay/...`
+
+## 6. История изменений
+- YYYY-MM-DD — описание апдейта.
 # Шаблон диалогового файла
 
 **ID диалога:** `dialogue-[npc-or-quest-id]`  

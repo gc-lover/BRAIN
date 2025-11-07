@@ -481,19 +481,19 @@ documents:
 
   - path: ".BRAIN/02-gameplay/progression/progression-attributes-matrix.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 20:41"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Определены стартовые бонусы по классам, рост/капы и базовые требования к предметам/имплантам. Сверка с equipment-matrix - неблокирующая задача."
+    version: "1.1.0"
+    checked: "2025-11-07 16:46"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Матрица атрибутов: добавлены таблицы хранения, REST API, расширенные требования и процедуры валидации с equipment/implants."
     issues: []
     api_target: "api/v1/progression/attributes-matrix.yaml"
 
   - path: ".BRAIN/02-gameplay/progression/progression-skills-classes.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 20:41"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Классовые и подклассовые модификаторы, примеры эксклюзивных навыков. Балансировка - неблокирующая задача."
+    version: "1.1.0"
+    checked: "2025-11-07 16:46"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Классовые навыки: матрицы модификаторов, ранги разблокировки, структура данных и REST API синхронизированы с progression-skills-mapping."
     issues: []
     api_target: "api/v1/progression/skills-classes.yaml"
 
