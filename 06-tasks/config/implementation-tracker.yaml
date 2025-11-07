@@ -1479,11 +1479,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/housing/housing-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1509,11 +1508,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/battle-pass/part2-rewards-challenges.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1522,11 +1520,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/guild-system-backend.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1535,11 +1532,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/notification-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1548,11 +1544,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/party-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1561,11 +1556,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/inventory-system/part1-core-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1574,11 +1568,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/mail-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1587,11 +1580,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/friend-system.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1600,11 +1592,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/combat-session-backend.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
@@ -1613,11 +1604,10 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/loot-system/part1-loot-generation.md"
     api_status: "completed"
     backend:
-      status: "failed"
-      started: "2025-11-08 00:27"
-      completed: "2025-11-08 00:31"
+      status: "in_progress"
+      started: "2025-11-08 00:56"
       agent: "Backend Agent"
-      notes: "OpenAPI generator не парсит спецификацию: SnakeYAML падает на description"
+      notes: "OpenAPI спецификация исправлена, контракты сгенерированы"
     frontend:
       status: "not_started"
 
