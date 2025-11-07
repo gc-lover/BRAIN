@@ -1023,3 +1023,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/technical/realtime/server-zones.yaml"
+    task_id: "API-TASK-196"
+    brain_source: ".BRAIN/05-technical/backend/realtime-server/part1-architecture-zones.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
