@@ -494,7 +494,9 @@ implementations:
     priority: "HIGH"
     notes: "MailApi, MailService, MailServiceImpl, MailController, MailMessageEntity, MailMessageRepository, migration 066"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/social/party-system.yaml"
@@ -510,7 +512,9 @@ implementations:
     priority: "HIGH"
     notes: "SocialApi + SocialService + SocialController + SocialServiceImpl stubs, PartyEntity, PartyRepository, migration 064"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "HIGH"
 
 - api_path: "api/v1/social/friend-system.yaml"
@@ -526,7 +530,9 @@ implementations:
     priority: "MEDIUM"
     notes: "SocialApi merged friends endpoints, SocialController delegates, SocialServiceImpl returns stub responses, FriendshipEntity + repository + migration 065"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/social/guild-system.yaml"
@@ -542,7 +548,9 @@ implementations:
     priority: "HIGH"
     notes: "SocialApi guild endpoints, SocialService guild methods, guild entities/repos, migration 067"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "HIGH"
 
 - api_path: "api/v1/technical/notification-system.yaml"
@@ -558,7 +566,9 @@ implementations:
     priority: "HIGH"
     notes: "TechnicalApi, TechnicalService, TechnicalServiceImpl, TechnicalController, NotificationEntity/Repository, migration 068"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "HIGH"
 
 # === ENGAGEMENT SYSTEMS (2025-11-07 НОВАЯ СЕССИЯ ПРОДОЛЖЕНИЕ) ===
@@ -576,7 +586,9 @@ implementations:
     priority: "MEDIUM"
     notes: "ProgressionApi controller/service implemented, AchievementEntity, PlayerAchievementEntity, PlayerTitleEntity, repositories, ProgressionServiceImpl, migration 069"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/progression/leaderboard-system.yaml"
@@ -591,7 +603,9 @@ implementations:
     priority: "MEDIUM"
     notes: "Добавлены сущности и репозитории лидербордов, реализация ProgressionService для глобальных/дружеских/сезонных/гильдейских рейтингов, миграция 070"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "MEDIUM"
 
 - api_path: "api/v1/technical/daily-weekly-reset-system.yaml"
@@ -606,7 +620,9 @@ implementations:
     priority: "MEDIUM"
     notes: "Реализованы reset-сервисы, репозитории и миграция 071, обновлён TechnicalApi"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "LOW"
 
 # === ДОПОЛНИТЕЛЬНЫЕ MVP БЛОКЕРЫ (2025-11-07) ===
@@ -623,7 +639,9 @@ implementations:
     priority: "CRITICAL"
     notes: "Добавлены сущности QuestInstance/DialogueState/SkillCheckResult, сервис NarrativeServiceImpl, контроллер NarrativeController и миграция 072 для движка квестов"
   frontend:
-    status: "not_started"
+    status: "in_progress"
+    started: "2025-11-08 00:31"
+    agent: "Frontend Agent"
     priority: "CRITICAL"
 
 - api_path: "api/v1/gameplay/combat/combat-session.yaml"
@@ -1597,7 +1615,9 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/matchmaking/matchmaking-algorithm.md"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "completed"
       started: "2025-11-08 05:00"
@@ -1612,7 +1632,9 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/matchmaking/matchmaking-queue.md"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
@@ -1621,7 +1643,9 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/matchmaking/matchmaking-rating.md"
     api_status: "completed"
     backend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 00:30"
+      agent: "Backend Agent"
     frontend:
       status: "not_started"
 
