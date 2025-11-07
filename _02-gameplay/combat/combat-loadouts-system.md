@@ -23,7 +23,9 @@
   - API-TASK-303: api/v1/gameplay/combat/loadout-macros.yaml (2025-11-08)
   - API-TASK-304: api/v1/gameplay/combat/loadout-availability.yaml (2025-11-08)
   - API-TASK-305: api/v1/analytics/gameplay/loadout-telemetry.yaml (2025-11-08)
-- Last Updated: 2025-11-08 02:12
+  - API-TASK-306: api/v1/admin/combat/loadout-maintenance.yaml (2025-11-08)
+  - API-TASK-307: api/v1/gameplay/economy/loadout-blueprints.yaml (2025-11-08)
+- Last Updated: 2025-11-08 02:42
 
 ---
 
