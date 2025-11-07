@@ -40,163 +40,234 @@
 
 ### 3.1. YAML-структура
 
-```
+```yaml
 nodes:
   - id: council
-    label: «Стол Марко»
-    speaker-order: ["Marco", "Player"]
+    label: "Стол Марко"
+    speaker-order: ["Marco", "Player", "Crowd"]
     dialogue:
       - speaker: Marco
-        text: "Ты сделал первые шаги. Теперь решай, кто ты в Night City."
+        text: "Ты прошёл обучение. Теперь решай, кто ты в Night City: офисный киберсамурай, уличное сердце, значок NCPD или свободный конвой."
+      - speaker: Crowd
+        text: "#WatsonWalk стримит совет в прямом эфире." 
       - speaker: Player
         options:
           - id: choose-corp
-            text: "Хочу в корпорацию"
+            text: "Мне нужен корпоративный лифт"
             response:
               speaker: Marco
-              text: "Тогда пройдёмся в Arasaka Tower."
+              text: "Лифт идёт в Arasaka Tower. Надеюсь, ты не боишься высоты и NDA длиннее Суэцкого канала."
               set-flag: "flag.main002.corp"
           - id: choose-gang
-            text: "Иду к Валентинос"
+            text: "Улицы — моя семья"
             response:
               speaker: Marco
-              text: "Тигр ждёт в Heywood."
+              text: "Тогда готовься к марьячи и клятвам под неоном Heywood."
               set-flag: "flag.main002.gang"
           - id: choose-law
-            text: "Мне нужен официальный статус"
+            text: "Хочу действовать по правилам"
             response:
               speaker: Marco
-              text: "NCPD ищет людей с совестью."
+              text: "NCPD ждет людей с нервами мощнее, чем у дронов NYPD 2023-го."
               set-flag: "flag.main002.law"
           - id: choose-freelance
-            text: "Я останусь независимым"
+            text: "Я независимый Nomad"
             response:
               speaker: Marco
-              text: "Свобода — тяжёлый путь. Nomad диспетчер на линии."
+              text: "Свобода? Ты подпишешь больше документов, чем TikTok подписчиков за час. Nomad диспетчер уже на частоте."
               set-flag: "flag.main002.freelance"
+          - id: choose-hold
+            text: "Дай мне минуту словить вайб"
+            response:
+              speaker: Marco
+              text: "Вдох-выдох. Но город не ставит паузу."
 
   - id: corp-track
     condition: { flag: "flag.main002.corp" }
-    label: «Переговоры с Arasaka»
-    speaker-order: ["Hiroshi", "Player"]
+    label: "Переговоры с Arasaka"
+    speaker-order: ["Hiroshi", "Player", "Assistant AI"]
     dialogue:
       - speaker: Hiroshi
-        text: "Arasaka приветствует амбициозных. Давайте к делу."
+        text: "Arasaka приветствует тех, кто приносит результат и не вспоминает про корпоративные мемы 2021 года."
+      - speaker: Assistant AI
+        text: "Воспроизвожу баржу Ever Given… шутка. Пожалуйста, избегайте мемов." 
       - speaker: Player
         options:
           - id: corp-persuade
-            text: "Я приносил результаты."
+            text: "Мои кейсы закрывались быстрее, чем TikTok банит стримы."
             response:
-              system-check: { node: "N-10", stat: "Persuasion", dc: 18, modifiers: [{ source: "credential.corporate", value: +2 }] }
-              success-line: "Ваш профиль впечатляет. Clearance A одобрен."
-              failure-line: "Ваши данные недостаточны."
-              critical-success-line: "Совет назначил вас на пилотный проект."
-              critical-failure-line: "Вы внесены в список наблюдения."
+              system-check: { node: "N-10", stat: "Persuasion", dc: 18, modifiers: [{ source: "credential.corporate", value: +2 }, { source: "flag.main001.target_marked", value: +1 }] }
+              success-line: "Ваш профиль впечатляет. Clearance A активирован, муст-гос режим."
+              failure-line: "Корпоративный аудит требует ещё доказательств."
+              critical-success-line: "Совет назначает вас на проект 'Kyoto Skyline' — легендарный слот."
+              critical-failure-line: "Система безопасности вносит вас в watch-list вместе с журналистами из 2020-х."
               outcomes:
-                success: { set-flag: "flag.arasaka.clearanceA", reputation: { corp: +10 } }
-                failure: { grant: "contract.corp-basic", reputation: { corp: +2 } }
-                critical-success: { grant: "contract.arasaka-serenity", reputation: { corp: +14 } }
-                critical-failure: { set-flag: "flag.arasaka.watchlist", reputation: { corp: -8 } }
-          - id: corp-ask
-            text: "Что ожидает меня?"
+                success: { set-flag: "flag.arasaka.clearanceA", reputation: { rep.corp.arasaka: 10 }, grant: "contract.arasaka-entry" }
+                failure: { grant: ["contract.corp-basic"], reputation: { rep.corp.arasaka: 2 } }
+                critical-success: { grant: ["contract.arasaka-serenity", "item.corp.access-pass"], reputation: { rep.corp.arasaka: 14 }, codex: "arasaka.innovation-lab" }
+                critical-failure: { set-flag: "flag.arasaka.watchlist", debuff: "corp_clearance_delay:1800", reputation: { rep.corp.arasaka: -8 } }
+          - id: corp-hack
+            text: "Можно ли ускорить процесс через Blackwall?"
             response:
               speaker: Hiroshi
-              text: "Ожидаем результат, дисциплину и ноль компромиссов."
+              text: "Если вы опять скажете слово Blackwall, вам придётся обсудить это с Netwatch."
+              outcomes:
+                default: { codex: "netwatch.protocols", reputation: { rep.corp.arasaka: -1 } }
+          - id: corp-ask
+            text: "Какие бонусы у корпоративного пути?"
+            response:
+              speaker: Hiroshi
+              text: "Доступ к ресурсам, страховка класса Platinum и возможность ошибаться только один раз."
 
   - id: gang-track
     condition: { flag: "flag.main002.gang" }
-    label: «Клятва Valentinos»
-    speaker-order: ["Jose", "Player"]
+    label: "Клятва Valentinos"
+    speaker-order: ["Jose", "Player", "Choir"]
     dialogue:
       - speaker: Jose
-        text: "Семья прежде всего. Докажи свою честь."
+        text: "Valentinos — семья. Мы не забываем ни свадеб, ни похорон, ни мемов про Mariachi NFT."
+      - speaker: Choir
+        text: "Mariachi.wav воспроизводится в 8D."
       - speaker: Player
         options:
           - id: gang-intimidate
-            text: "Я уже пролил кровь за улицы."
+            text: "Я уже пролил кровь за Heywood."
             response:
-              system-check: { node: "N-11", stat: "Intimidation", dc: 17, modifiers: [{ source: "tattoo.valentinos", value: +1 }] }
-              success-line: "Понимаю. Ты свой."
-              failure-line: "Слова дешевы."
-              critical-success-line: "Семья принимает тебя без вопросов."
-              critical-failure-line: "Ты привёл с собой хвост?"
+              system-check: { node: "N-11", stat: "Intimidation", dc: 17, modifiers: [{ source: "tattoo.valentinos", value: +1 }, { source: "flag.main001.stealth_clear", value: +1 }] }
+              success-line: "В твоём голосе улицы. Семья тебя примет."
+              failure-line: "Слова — пустые креды."
+              critical-success-line: "Твоё имя добавляют в список Mariachi 2090."
+              critical-failure-line: "Ты привёл за собой дрона NCPD? Что ж, проверим твою честность."
               outcomes:
-                success: { set-flag: "flag.valentinos.oath", reputation: { gang: +10 } }
-                failure: { grant: "contract.valentinos-trial", reputation: { gang: +3 } }
-                critical-success: { grant: "item.valentinos-medallion", reputation: { gang: +14 } }
-                critical-failure: { set-flag: "flag.valentinos.suspect", reputation: { gang: -8 } }
-          - id: gang-family
-            text: "Я ищу семью, не прибыль."
+                success: { set-flag: "flag.valentinos.oath", reputation: { rep.gang.valentinos: 10 }, grant: "activity.valentinos-caper" }
+                failure: { contracts: ["contract.valentinos-trial"], reputation: { rep.gang.valentinos: 3 } }
+                critical-success: { items: ["item.valentinos-medallion"], reputation: { rep.gang.valentinos: 14 }, codex: "valentinos.history" }
+                critical-failure: { set-flag: "flag.valentinos.suspect", spawn: "valentinos.shadow-tail", reputation: { rep.gang.valentinos: -8 } }
+          - id: gang-loyalty
+            text: "Я ищу семью, а не прибыль."
             response:
               speaker: Jose
-              text: "Тогда семья даст тебе имя, но помни — предателей у нас нет."
+              text: "Тогда получи семейный чат и список тех, кто должен креды."
+              outcomes:
+                default: { grant: "contract.valentinos-family", reputation: { rep.gang.valentinos: 6 } }
+          - id: gang-ask
+            text: "Каковы правила?"
+            response:
+              speaker: Jose
+              text: "Не предавай, не скрывай, не забудь принести pan dulce на собрание." 
 
   - id: law-track
     condition: { flag: "flag.main002.law" }
-    label: «Комиссия NCPD»
-    speaker-order: ["Sara", "Player"]
+    label: "Комиссия NCPD"
+    speaker-order: ["Sara", "Player", "Internal Affairs"]
     dialogue:
       - speaker: Sara
-        text: "NCPD принимает тех, кто держит слово."
+        text: "Добро пожаловать в бюро paperwork. Заполнишь формы быстрее, чем Boston Dynamics выпустит нового пса?"
+      - speaker: Internal Affairs
+        text: "Напоминание: честность — лучшая броня."
       - speaker: Player
         options:
           - id: law-honesty
-            text: "Я хочу защищать город."
+            text: "Я хочу защищать людей, даже когда они не видят."
             response:
-              system-check: { node: "N-10", stat: "Persuasion", dc: 18 }
-              success-line: "Добро пожаловать. Badge к выдаче."
-              failure-line: "Ваши мотивы туманны."
-              critical-success-line: "Вы сразу получаете ускоренное расследование."
-              critical-failure-line: "Мы фиксируем несостыковки."
+              system-check: { node: "N-10", stat: "Persuasion", dc: 18, modifiers: [{ source: "flag.main001.tech_open", value: +1 }] }
+              success-line: "Ваши мотивы звучат убедительно. Badge ждет на стойке."
+              failure-line: "Комиссия сомневается. Вы пойдёте на патруль."
+              critical-success-line: "Вас кидают на горячее дело 'Docklands 2.0'."
+              critical-failure-line: "Система фиксирует несостыковки — вы под наблюдением Internal Affairs."
               outcomes:
-                success: { set-flag: "flag.ncpd.badge", reputation: { law: +10 } }
-                failure: { grant: "contract.ncpd-patrol", reputation: { law: +3 } }
-                critical-success: { grant: "contract.ncpd-cybercrime-taskforce", reputation: { law: +14 } }
-                critical-failure: { set-flag: "flag.ncpd.review", reputation: { law: -6 } }
-          - id: law-ask
-            text: "Каковы правила?"
+                success: { set-flag: "flag.ncpd.badge", reputation: { rep.law.ncpd: 10 }, grant: "contract.ncpd-intro" }
+                failure: { contracts: ["contract.ncpd-patrol"], reputation: { rep.law.ncpd: 3 } }
+                critical-success: { contracts: ["contract.ncpd-cybercrime-taskforce"], items: ["item.ncpd.data-key"], reputation: { rep.law.ncpd: 14 } }
+                critical-failure: { set-flag: "flag.ncpd.review", reputation: { rep.law.ncpd: -6 }, debuff: "bureaucracy_hold:1200" }
+          - id: law-protocols
+            text: "Мне нужны протоколы, пока я не подписал."
             response:
               speaker: Sara
-              text: "Правила просты: отчёты вовремя, сила — только по протоколу."
+              text: "Патрульные камеры пишут всё. Подписывайся — или возвращайся к Марко."
+          - id: law-meme
+            text: "Есть ли дресс-код для робособак?"
+            response:
+              speaker: Sara
+              text: "Вам выдадут стикеры 'Copilot 2075'. Не разбрасывайтесь."
 
   - id: freelance-track
     condition: { flag: "flag.main002.freelance" }
-    label: «Связь с Nomad Convoy»
-    speaker-order: ["Nomad Dispatcher", "Player"]
+    label: "Связь с Nomad Convoy"
+    speaker-order: ["Nomad Dispatcher", "Player", "Convoy AI"]
     dialogue:
       - speaker: Nomad Dispatcher
-        text: "Говорит Convoy 77. Ищешь свободу — держись дороги."
+        text: "Говорит Convoy 77. Дорога свободна, пока корпорации спорят за контейнеры."
+      - speaker: Convoy AI
+        text: "Погода Badlands: солнечно, шанс песчаных бурь 40%." 
       - speaker: Player
         options:
           - id: freelance-commit
-            text: "Мне не нужны цепи"
+            text: "Нет цепей — только дороги"
             response:
-              system-check: { node: "N-12", stat: "ClassChoice", dc: 0, class-bonus: { netrunner: +2, techie: +2 } }
-              success-line: "Тогда получай маршрут и частоты."
-              failure-line: "Без сертификации не выпустим."
+              system-check: { node: "N-12", stat: "ClassChoice", dc: 0, class-bonus: { netrunner: +2, techie: +2, solo: +1 } }
+              success-line: "Мы добавили тебя в список 'Freeway Friends'. Маршрут и частоты у тебя в импланте."
+              failure-line: "Нужны ещё рекомендации. Отправляем тебя на тренировку."
+              critical-success-line: "Получаешь 'Nomad Priority Pass' и грузовик с мемператором 2045."
               outcomes:
-                success: { set-flag: "flag.freelance.contract", reputation: { freelance: +8 } }
-                failure: { grant: "contract.freelance-training", reputation: { freelance: +2 } }
-          - id: freelance-ask
-            text: "Какие риски?"
+                success: { set-flag: "flag.freelance.contract", reputation: { rep.freelance.global: 8 }, grant: "activity.nomad-convoy" }
+                failure: { contracts: ["contract.freelance-training"], reputation: { rep.freelance.global: 2 } }
+                critical-success: { set-flag: "flag.freelance.priority", items: ["item.nomad-pass"], reputation: { rep.freelance.global: 12 } }
+          - id: freelance-map
+            text: "Нужна карта безопасных стоянок"
             response:
               speaker: Nomad Dispatcher
-              text: "Риски — всё. Но дорога помнит своих."
+              text: "Отправляю сводку: кафе 'Vanlife 2045', станция 'Solar Highway', подкаст про кофе."
+          - id: freelance-warning
+            text: "Что делать, если корп дрон начнут преследовать?"
+            response:
+              speaker: Convoy AI
+              text: "Отправить мем с баржей Ever Given и уйти на частоту 77.7."
+
+  - id: media-flash
+    label: "Вспышка медиа"
+    condition: { flag: "flag.main002.media_flash" }
+    speaker-order: ["News Anchor", "Player"]
+    dialogue:
+      - speaker: News Anchor
+        text: "Breaking News! #ChooseYourPath: игрок сделал выбор — {faction}. Сравнение с реальностью 2020-х прилагается."
+      - speaker: Player
+        options:
+          - id: media-wave
+            text: "Поставить реакцию"
+            response:
+              speaker: News Anchor
+              text: "Реакция добавлена. Реклама доставка 15 минут — бесплатно."
+              outcomes:
+                default: { reputation: { rep.social.media: +2 } }
+          - id: media-ignore
+            text: "Выключить уведомления"
+            response:
+              speaker: News Anchor
+              text: "Окей. Но #WatsonWalk всё равно найдёт тебя."
 
   - id: wrap
-    label: «Итог совета»
-    speaker-order: ["Marco", "Player"]
+    label: "Итог совета"
+    speaker-order: ["Marco", "Player", "HUD"]
     dialogue:
       - speaker: Marco
-        text: "Решение принято. Теперь живи с ним, чомбата."
+        text: "Решение принято. Не пытайся нажать Ctrl+Z."
+      - speaker: HUD
+        text: "Репутация обновлена, контракты выданы, телеметрия отправлена."
       - speaker: Player
         options:
           - id: wrap-affirm
             text: "Я готов"
             response:
               speaker: Marco
-              text: "Добро пожаловать в новую жизнь."
-              outcomes: { finalize: "main002", update-world: true }
+              text: "Добро пожаловать в новую реальность."
+              outcomes: { finalize: "main002", update-world: true, set-flag: "flag.main002.media_flash" }
+          - id: wrap-joke
+            text: "Могу ли я поменять решение?"
+            response:
+              speaker: Marco
+              text: "Конечно. В следующей жизни."
+              outcomes: { finalize: "main002", update-world: true, set-flag: "flag.main002.media_flash" }
 ```
 
 ### 3.2. Логика переходов
