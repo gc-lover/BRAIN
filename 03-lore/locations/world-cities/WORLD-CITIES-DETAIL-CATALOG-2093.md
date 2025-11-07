@@ -406,3 +406,27 @@
 - **Фракции:** Chrono Accord Authority, St-Laurent Couriers, Fleur-de-Neige Mediators, Boreal Fenix Collective.
 - **Особенности:** ледяные форты, нейтральные арбитражи, квесты `quebec-chrono-world-quests.md`.
 
+### Anchorage (США)
+- **См.** `./anchorage-detailed-2020-2093.md`
+- **Районы:** Aurora Anchorage Dock (орбитальный порт), Polar Sky Corridor (воздушные трассы), Subglacial Exchange (подземные базы), Kodiak Signal District (культурные фестивали).
+- **Ключевые улицы:** Aurora Polar Route, Subglacial Rail, Kodiak Ice Trail, Borealis Data Conduit.
+- **NPC:** Камила «Aurora Admiral» Хейз (командир Icefront), Натан «Kodiak» Ларсен (курьер), Доктор Айви «Cryo Shift» Линн (рипердок), Саша «Salvage Queen» Инук (ИИ Salvage Crew).
+- **Фракции:** Borealis Icefront Authority, Polar Haul Syndicate, Glacier Nomad Union, Kodiak Signal Riders.
+- **Особенности:** арктическая логистика, крио-защита, квесты `anchorage-icefront-world-quests.md`.
+
+### Helsinki (Финляндия)
+- **См.** `./helsinki-detailed-2020-2093.md`
+- **Районы:** Aurora Dome Plaza (музыка и климат), Sauna Net Quarter (AI-сауны), Icebreaker Harbor (ледоколы), Harmony Undergrid (подземные дата-центры).
+- **Ключевые улицы:** Aurora Bridgeway, Sauna Harmony Path, Icebreaker Line, Undercity Resonance.
+- **NPC:** Айно «Harmony Regent» Лехто (директор Harmony), Тапио «Icebreaker» Салонен (капитан), Доктор Сари «Sauna AI» Пеккала (рипердок), Эйно «Data Song» Мякинен (ИИ-композитор).
+- **Фракции:** Aurora Harmony Consortium, Icebreaker Guild, Sauna Net Collective, Sibelius Data Circle.
+- **Особенности:** музыкальные AI, арктические мосты, квесты `helsinki-harmony-world-quests.md`.
+
+### Johor Bahru (Малайзия)
+- **См.** `./johor-bahru-detailed-2020-2093.md`
+- **Районы:** Hyperwave Nexus (порт), Bio Symphony Gardens (бионические парки), Iskandar Freight Underhub (подземные маглевы), Mangrove Sanctuary (мангровые базы).
+- **Ключевые улицы:** Hyperwave Express, Nusantara Flow, Iskandar Underline, Mangrove Drift.
+- **NPC:** Хазира «Wave Director» Юсуф (директор Hyperwave), Фархан «Night Pulse» Заман (лидер Night Riders), Доктор Лейла «Bio Flux» Рахман (рипердок), Чуи «Freight Ghost» Мин (ИИ логистики).
+- **Фракции:** Hyperwave Straits Authority, Straits Bio Couriers, Nusantara Hackwave, Lotus Freight Collective.
+- **Особенности:** гибридные порты, био-джунгли, квесты `johor-hyperwave-world-quests.md`.
+

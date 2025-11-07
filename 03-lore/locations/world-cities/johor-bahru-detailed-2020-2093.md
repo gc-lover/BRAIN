@@ -80,12 +80,14 @@
 | Фархан «Night Pulse» Заман (р. 2006) | Лидер Night Riders | Iskandar Night Riders | Mangrove Sanctuary | Курирует гонки и спасательные миссии |
 | Доктор Лейла «Bio Flux» Рахман (р. 2013) | Рипердок бионики | Nusantara Hackwave | Bio Symphony Gardens | Создаёт бионические импланты для курьеров |
 | Чуи «Freight Ghost» Мин (р. 1999 – ум. 2083) | Основатель Freight Collective | Lotus Freight Collective | Iskandar Underhub | ИИ-планировщик маршрутов, ученица Мэй продолжает дело |
+| Мэй «Lotus Signal» Чун (р. 2018) | Наследница Freight Collective | Lotus Freight Collective | Iskandar Underhub | Строит бионические контейнеры, поддерживает Hyperwave в связях с Mekong и Osaka |
 
 ### Контактные цепочки
 
 - **«Hyperwave Accord»:** Хазира Юсуф → Премьер Таан Чжун → Аделаида Сантос — портовые соглашения (`FQ-JOHOR-002`).
 - **«Night Drift»:** Фархан Заман → Mekong Flux → Pacific Couriers — ночные спасательные миссии (`FQ-JOHOR-003`).
 - **«Bio Mesh»:** Доктор Лейла → BioMesh Найроби → Ghost Kitchen Чэнду — обмен технологиями (`FQ-JOHOR-004`).
+- **«Lotus Bridge»:** Мэй Чун → Osaka Quantum Dock → Hyperwave Authority — гибридные контейнеры для маглевов и портовых конвоев.
 
 ---
 
@@ -96,6 +98,8 @@
    - Влияет на репутацию с Hyperwave и Night Riders.
 2. **«Генетический шторм»**  
    - 2085: Ghost Kitchen крадёт бионические коды. Игрок решает, делиться ли с BioMesh.
+3. **«Реновация Лотоса»**  
+   - 2091: Мэй Чун предлагает объединить Hyperwave и Osaka Quantum. Игрок решает, передать ли управление новому консорциуму.
 
 ---
 

@@ -2943,5 +2943,59 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/quebec-chrono.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/anchorage-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:02"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Анкориджа: арктические доки, курьерские цепочки, Salvage Crew."
+    issues: []
+    api_target: "api/v1/lore/locations/anchorage.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/helsinki-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:06"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Хельсинки: AI-сауны, Icebreaker Guild, музыкальные Harmony цепочки."
+    issues: []
+    api_target: "api/v1/lore/locations/helsinki.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/johor-bahru-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:10"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Джохор-Бару: Hyperwave порт, Night Riders, био-джунгли."
+    issues: []
+    api_target: "api/v1/lore/locations/johor-bahru.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/anchorage-icefront-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:12"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Anchorage Icefront: арктические конвои, Witness защита, Stormfront."
+    issues: []
+    api_target: "api/v1/narrative/factions/anchorage-icefront.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/helsinki-harmony-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:14"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Aurora Harmony: музыкальные мосты, нейро-сауны, ледокольные операции."
+    issues: []
+    api_target: "api/v1/narrative/factions/helsinki-harmony.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/johor-hyperwave-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 01:16"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Hyperwave Straits: маглевы, ночные гонки, био-обмены."
+    issues: []
+    api_target: "api/v1/narrative/factions/johor-hyperwave.yaml"
+
 # Примеры записей:
 

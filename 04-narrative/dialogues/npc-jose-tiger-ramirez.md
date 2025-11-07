@@ -16,6 +16,14 @@
 **api-readiness-notes:** «Версия 1.2.0: расширенные состояния, пасхалки, проверки D&D, YAML/REST экспорт и телеметрия Valentinos/Heywood.»
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-288: api/v1/narrative/dialogues/npc-jose-tiger-ramirez.yaml (2025-11-08 05:20)
+- Last Updated: 2025-11-08 05:20
+---
+
+---
 
 ## 1. Контекст и цели
 

@@ -80,12 +80,14 @@
 | Тапио «Icebreaker» Салонен (р. 2004) | Лидер Icebreaker Guild | Icebreaker Guild | Icebreaker Harbor | Курирует ледовые конвои, сотрудничает с Borealis Authority |
 | Доктор Сари «Sauna AI» Пеккала (р. 2010) | Рипердок гармонии | Sauna Net Collective | Sauna Net Quarter | Устанавливает импланты тепловой адаптации |
 | Эйно «Data Song» Мякинен (р. 1999 – ум. 2085) | Основатель Sibelius Circle | Sibelius Data Circle | Harmony Undergrid | Его ИИ-композитор создаёт нейро-симфонии, племянница Луми руководит сетью |
+| Луми «Aurora DJ» Мякинен (р. 2020) | Куратор фестивалей северного света | Boreal Fenix Collective | Aurora Dome Plaza | Обновляет нейро-саундтреки, связывает Harmony с Hyperwave и Reykjavik |
 
 ### Контактные цепочки
 
 - **«Aurora Accord»:** Айно Лехто → Ингрид Йонсдоттир → София Дюран — климато-музыкальные соглашения (`FQ-HELSINKI-002`).
 - **«Icebreaker Relay»:** Тапио Салонен → Камила Хейз → Atlantic Shield — арктическая логистика (`FQ-HELSINKI-003`).
 - **«Sauna Witness»:** Доктор Сари → Helvetic Tribunal → Witness Vault — нейро-сауны для защиты свидетелей (`FQ-HELSINKI-004`).
+- **«Aurora Festival»:** Луми Мякинен → Hyperwave Straits → Dreamwave Studios — трансляции фестивалей между севером и Юго-Восточной Азией.
 
 ---
 
@@ -96,6 +98,8 @@
    - Влияет на репутацию с Harmony и NetWatch.
 2. **«Марш ледоколов»**  
    - 2083: Icebreaker Guild сталкивается с корпоративным блоком. Игрок выбирает, спасать ли независимых капитанов.
+3. **«Полярный фестиваль»**  
+   - 2093: Луми Мякинен готовит глобальный AR-фестиваль. Игрок решает, передать ли управление Dreamwave или сохранить за Harmony.
 
 ---
 

@@ -131,6 +131,9 @@
 - **Doha** (Катар) — Solar Veil щиты, Falcon Riders, Sandglass фильтры воды.
 - **Mumbai** (Индия) — Monsoon Prism, Dabbawala Flux, Dharavi Data Reclaimers.
 - **Quebec City** (Канада) — Chrono Accord, ледяные арбитражи, St-Laurent Couriers.
+- **Anchorage** (США) — Borealis Icefront, арктические конвои, Kodiak Signal Riders.
+- **Helsinki** (Финляндия) — Aurora Harmony, AI-сауны, Icebreaker Guild.
+- **Johor Bahru** (Малайзия) — Hyperwave порт, бионические джунгли, Night Riders.
 
 ---
 

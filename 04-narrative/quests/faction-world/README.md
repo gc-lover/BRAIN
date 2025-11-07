@@ -26,6 +26,9 @@
 - [Doha Solar Veil Authority](./doha-solar-veil-world-quests.md) — 4 квеста, солнечные щиты и соколиные миссии
 - [Bollywood NeuroStage Consortium](./mumbai-neurostage-world-quests.md) — 4 квеста, нейро-мюзиклы и монсунные операции
 - [Chrono Accord Authority](./quebec-chrono-world-quests.md) — 4 квеста, ледяные арбитражи и курьерские сети
+- [Anchorage Icefront Authority](./anchorage-icefront-world-quests.md) — 4 квеста, арктические конвои и крио-операции
+- [Aurora Harmony Consortium](./helsinki-harmony-world-quests.md) — 4 квеста, музыка AI и климатические мосты
+- [Hyperwave Straits Authority](./johor-hyperwave-world-quests.md) — 4 квеста, гибридные порты и ночные гонки
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов

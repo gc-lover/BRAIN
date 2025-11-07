@@ -80,12 +80,14 @@
 | Натан «Kodiak» Ларсен (р. 2003) | Лидер курьеров | Kodiak Signal Riders | Polar Sky Corridor | Организует спасательные рейсы, сотрудничает с Typhoon Shield |
 | Доктор Айви «Cryo Shift» Линн (р. 2015) | Рипердок заморозки | Glacier Nomad Union | Subglacial Exchange | Проводит крио-адаптации, помогает Witness Vaults |
 | Саша «Salvage Queen» Инук (р. 1996 – ум. 2084) | Основатель Salvage Crew | Aurora Salvage Crew | Subglacial Exchange | Её ИИ координирует сбор ресурсов, ее сестра Лина ведёт операции |
+| Майя «Seal Whisper» Неру (р. 2011) | Аналитик ледовых маршрутов | Icebreaker Guild | Aurora Anchorage Dock | Шифрует навигационные данные, поддерживает культурные обмены с Boreal Harmony |
 
 ### Контактные цепочки
 
 - **«Aurora Link»:** Камила Хейз → Ингрид Йонсдоттир → Амина ван дер Вестхёйзен — северные логистические миссии (`FQ-ANCHORAGE-002`).
 - **«Kodiak Lifeline»:** Натан Ларсен → Typhoon Shield → Mekong Flux — спасение после штормов (`FQ-ANCHORAGE-003`).
 - **«Glacier Accord»:** Доктор Айви Линн → Helvetic Tribunal → NetWatch — Witness Protection (`FQ-ANCHORAGE-004`).
+- **«Seal Drift»:** Майя Неру → Boreal Fenix Collective → Hyperwave Straits Authority — культурные обмены и ледовые фестивали между Анкориджем и Джохор-Бару.
 
 ---
 
@@ -96,6 +98,9 @@
    - Влияет на репутацию с Icefront и Atlantic Shield.
 2. **«Крио-память»**  
    - 2089: обнаружена крио-капсула с секретами корпораций. Игрок выбирает, кому передать данные.
+3. **«Печать моря»**  
+   - 2092: Майя Неру обнаруживает утерянные маршруты морских народов.  
+   - Игрок решает, сохранить ли маршруты в секретной библиотеке или открыть их Hyperwave Straits.
 
 ---
 
