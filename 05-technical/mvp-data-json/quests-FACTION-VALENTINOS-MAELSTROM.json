@@ -4,6 +4,12 @@
 - Tasks:
   - API-TASK-145: api/v1/narrative/faction-quests/faction-cultural.yaml (2025-11-07 10:52)
 - Last Updated: 2025-11-07 00:18
+- Last Updated: 2025-11-07 00:18
+
+**target-domain:** narrative  
+**target-microservice:** narrative-service (port 8087)  
+**target-frontend-module:** modules/narrative/quests/factions/valentinos-maelstrom
+
 ---
 
 

@@ -974,3 +974,32 @@ implementations:
     status: "not_started"
     priority: "MEDIUM"
 
+  # === RELIABILITY & CONFIGURATION (2025-11-07 20:10) ===
+
+  - api_path: "api/v1/technical/disaster-recovery.yaml"
+    task_id: "API-TASK-191"
+    brain_source: ".BRAIN/05-technical/global-state/global-state-operations.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/configuration-management.yaml"
+    task_id: "API-TASK-192"
+    brain_source: ".BRAIN/05-technical/infrastructure/README.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/technical/incident-response.yaml"
+    task_id: "API-TASK-194"
+    brain_source: ".BRAIN/05-technical/infrastructure/error-handling-logging.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+

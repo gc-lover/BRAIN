@@ -1,5 +1,13 @@
 # Realtime Server - Part 1: Architecture & Zones
 
+---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-196: api/v1/technical/realtime/server-zones.yaml (2025-11-07 17:05)
+- Last Updated: 2025-11-07 17:05
+---
+
 **Статус:** approved  
 **Версия:** 1.0.1  
 **Дата:** 2025-11-07 02:12  
