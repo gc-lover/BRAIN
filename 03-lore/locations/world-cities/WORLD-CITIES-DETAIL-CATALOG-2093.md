@@ -334,3 +334,27 @@
 - **Фракции:** Solar Zellij Cooperative, Mirage Caravan Guild, Rif Signalers, Atlantic Nomad Pact.
 - **Особенности:** пустынно-атлантические караваны, солнечные зеркала, квесты `maghreb-solar-world-quests.md`.
 
+### Addis Ababa (Эфиопия)
+- **См.** `./addis-ababa-detailed-2020-2093.md`
+- **Районы:** Solomon Coil District (управление Skyrail), Blue Nile Arcades (рынки воды), Axum Rail Cloisters (монастырские платформы), Sheba Resonance Vaults (караванные архивы).
+- **Ключевые улицы:** Solomon Skyway, Lalibela Spiral Rail, Blue Nile Caravan Route, Sheba Underline Passage.
+- **NPC:** Мерон «Sky Matriarch» Хайле (директор Skyrail), Аджа «Ledger» Бекеле (торговка водой), Абба Текле (ИИ настоятеля), Доктор Сара «Sheba Code» Гебре (рипердок высоты).
+- **Фракции:** Abyssinia Skyrail Consortium, Axum Rail Monks, Blue Nile Syndicate, Sheba Data Caravans.
+- **Особенности:** воздушные монастыри, гуманитарные мосты, квесты `abyssinia-skyrail-world-quests.md`.
+
+### Santiago (Чили)
+- **См.** `./santiago-detailed-2020-2093.md`
+- **Районы:** Condor Halo Plaza (климатическое ядро), MapuTech Resonance Gardens (культурные сады), Valparaiso Corsair Docks (подземные гавани), Stormrider Highland Fields (тренировки буревиков).
+- **Ключевые улицы:** Condor Halo Highway, Valparaiso Underway, Mapu Resonance Path, Atacama Pulse Rail.
+- **NPC:** Исидора «Condor» Алемани (глава кооператива), Томас «Corsair» Ибарра (лидер Corsairs), Доктор Камила Рохас (рипердок MapuTech), Кайе «Stormwraith» Лютеро (ИИ штурмовиков).
+- **Фракции:** Andes Resonance Cooperative, Cordillera Stormriders, MapuTech Collective, Valparaiso Corsairs.
+- **Особенности:** резонансные аркологии, буревые мосты, квесты `andes-resonance-world-quests.md`.
+
+### Osaka (Япония)
+- **См.** `./osaka-detailed-2020-2093.md`
+- **Районы:** Kusanagi Harbor Core (квантовый порт), Naniwa Data Canopy (медиа-базары), Shin-Ikko Vanguard Dojo (боевые додзё), Harbor Kitsune Gardens (контрабандные каналы).
+- **Ключевые улицы:** Kansai Flux Loop, Naniwa Idol Walk, Shin-Ikko Tunnels, Kitsune Tide Path.
+- **NPC:** Нагиса «Harbor Regent» Катаока (директор портов), Рё «Flux Blade» Мори (лидер курьеров), Доктор Аки «Foxfire» Куросава (рипердок Kitsune), Мико «Ikko Recall» Хаяси (ИИ Vanguard).
+- **Фракции:** Osaka Quantum Dock Authority, Kansai Flux Couriers, Shin-Ikko Vanguard, Harbor Kitsune Collective.
+- **Особенности:** квантовые ворота, синто-спирали, квесты `osaka-quantum-world-quests.md`.
+

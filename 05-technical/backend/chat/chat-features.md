@@ -20,9 +20,10 @@
 
 ## API Tasks Status
 
-- **Status:** created
+- **Status:** completed
 - **Tasks:**
-- **Last Updated:** 2025-11-07 20:16
+  - 2025-11-08 22:55 — API-TASK-254 — Chat Features API (completed)
+- **Last Updated:** 2025-11-08 22:55
 ---
 
 ## Краткое описание

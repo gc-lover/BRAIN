@@ -2781,5 +2781,59 @@ documents:
     issues: []
     api_target: "api/v1/narrative/factions/aurora-geotherm.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/addis-ababa-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:58"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Аддис-Абебы: Skyrail, монастырские цепочки, NPC и квестовые ссылки."
+    issues: []
+    api_target: "api/v1/lore/locations/addis-ababa.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/santiago-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:02"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Сантьяго: резонансные аркологии Анд, Corsairs, MapuTech."
+    issues: []
+    api_target: "api/v1/lore/locations/santiago.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/osaka-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:05"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Осаки: квантовый порт, Shin-Ikko Vanguard, Kitsune цепочки."
+    issues: []
+    api_target: "api/v1/lore/locations/osaka.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/abyssinia-skyrail-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:08"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Abyssinia Skyrail: воздушные гуманитарные мосты и монастырские протоколы."
+    issues: []
+    api_target: "api/v1/narrative/factions/abyssinia-skyrail.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/andes-resonance-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:10"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Andes Resonance: буревые мосты, Condor Halo, MapuTech."
+    issues: []
+    api_target: "api/v1/narrative/factions/andes-resonance.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/osaka-quantum-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-08 00:12"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Osaka Quantum Dock Authority: портовые конвои, Shin-Ikko, Kitsune."
+    issues: []
+    api_target: "api/v1/narrative/factions/osaka-quantum.yaml"
+
 # Примеры записей:
 

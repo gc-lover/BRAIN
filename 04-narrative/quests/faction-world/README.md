@@ -16,6 +16,10 @@
 - [DeltaWave Logistics](./delta-wave-world-quests.md) — 4 квеста, гуманитарные и торговые штормовые маршруты
 - [Aegean Synapse](./aegean-synapse-world-quests.md) — 4 квеста, солнечная синархия и дипломатия полисов
 - [Maghreb Solar Cooperative](./maghreb-solar-world-quests.md) — 4 квеста, пустынно-атлантические караваны и энергетика
+- [Aurora Geotherm Bureau](./aurora-geotherm-world-quests.md) — 4 квеста, полярные геотермальные операции и спасатели
+- [Abyssinia Skyrail](./abyssinia-skyrail-world-quests.md) — 4 квеста, воздушные монастыри и гуманитарные мосты
+- [Andes Resonance Cooperative](./andes-resonance-world-quests.md) — 4 квеста, буревые мосты и резонансные аркологии Анд
+- [Osaka Quantum Dock Authority](./osaka-quantum-world-quests.md) — 4 квеста, квантовые порты и синто-спирали
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов

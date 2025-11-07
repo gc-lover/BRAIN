@@ -122,6 +122,9 @@
 - **Karachi** (Пакистан) — DeltaWave штормовые барьеры, свободный порт Indus, каввали-алгоритмы.
 - **Athens** (Греция) — Helios Crown синархия, дата-агоры, трирем-дроны.
 - **Casablanca** (Марокко) — Solar Zellij зеркала, Mirage караваны, пустынные резонаторы.
+- **Addis Ababa** (Эфиопия) — Skyrail плато, Rail Monks, Blue Nile архивация.
+- **Santiago** (Чили) — Condor Halo климатика, MapuTech резонанс, Valparaiso Corsairs.
+- **Osaka** (Япония) — Kusanagi Quantum Harbor, Kansai Flux Couriers, Shin-Ikko Vanguard.
 
 ---
 
