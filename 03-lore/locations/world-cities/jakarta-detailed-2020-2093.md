@@ -124,7 +124,6 @@
 - `../locations-overview.md`
 - `./WORLD-CITIES-MASTER-INDEX.md`
 - `./WORLD-CITIES-DETAIL-CATALOG-2093.md`
-- `../../04-narrative/quests/faction-world/jakarta-tempest-grid-world-quests.md` (создать)
 - `./manila-detailed-2020-2093.md`
 - `./johor-bahru-detailed-2020-2093.md`
 - `./ho-chi-minh-city-detailed-2020-2093.md`

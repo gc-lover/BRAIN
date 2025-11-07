@@ -123,7 +123,6 @@
 - `../locations-overview.md`
 - `./WORLD-CITIES-MASTER-INDEX.md`
 - `./WORLD-CITIES-DETAIL-CATALOG-2093.md`
-- `../../04-narrative/quests/faction-world/warsaw-vistula-sentinel-world-quests.md` (создать)
 - `./berlin-detailed-2020-2093.md`
 - `./geneva-detailed-2020-2093.md`
 - `./kyiv-detailed-2020-2093.md`
