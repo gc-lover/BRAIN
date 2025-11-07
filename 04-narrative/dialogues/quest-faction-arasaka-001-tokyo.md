@@ -161,6 +161,32 @@ nodes:
               condition: { flag: "flag.fqara001.opened" }
               outcomes:
                 default: { effect: "disciplinary_action", penalty: "fine.2000", reputation: { corp_arasaka: -15 } }
+
+  - id: night-flight
+    label: «Ночной полет»
+    condition: { flag: "flag.fqara001.transit" }
+    speaker-order: ["Arasaka Guard", "Player"]
+    dialogue:
+      - speaker: Arasaka Guard
+        text: "Вы находитесь в зоне ответственности Arasaka. Необходимо соблюдать правила ночного полета."
+      - speaker: Player
+        options:
+          - id: flight-broadcast
+            text: "Отправить предупреждение"
+            response:
+              speaker: System
+              text: "Все Arasaka, примите меры безопасности. Вы обнаружили потенциальную угрозу."
+              setFlags: [flag.fqara001.media_flash, flag.fqara001.flight]
+              hints: [media.risk]
+          - id: flight-focus
+            text: "Сосредоточиться на задаче"
+            response:
+              speaker: System
+              text: "Вы сосредоточились на задаче. Не отвлекайтесь на посторонние звуки."
+              setFlags: [flag.fqara001.flight]
+              buffs: [cover_story:1]
+            failure:
+              debuffs: [nervous_tics:60]
 ```
 
 ### 3.2. Примечания
@@ -357,6 +383,7 @@ GraphQL-поле `questDialogue(id: ID!)` возвращает `QuestDialogueNod
 
 ## 10. История изменений
 
+- 2025-11-07 20:57 — Версия 1.2.0: добавлены лобби, гиперлуп, media-flash, пасхалки (Ever Given, TikTok IPO, Boston K9), обновлён экспорт и телеметрия.
 - 2025-11-07 19:32 — Добавлены экспорт, REST/GraphQL и метрики. Статус `ready`, версия 1.1.0.
 - 2025-11-07 16:58 — Добавлена диалоговая схема миссии «Токийская штаб-квартира» с ветками лояльности и предательства.
 
