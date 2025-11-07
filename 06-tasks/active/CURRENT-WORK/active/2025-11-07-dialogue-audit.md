@@ -1,7 +1,7 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:45  
-**api-readiness-notes:** Аудит диалогов завершён: создан шаблон, определены волны NPC/квестов, подготовлены ссылки на лор и механики. Готово для выдачи задач API Task Creator и Narrative сервиса.
+**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-notes:** Аудит обновлён Specter-веткой: расширены NPC Neon Ghosts и добавлены ссылки на городские беспорядки. Готово для API Task Creator.
 ---
 
 # Диалоговый аудит 2025-11-07
@@ -9,7 +9,7 @@
 **Статус:** approved  
 **Приоритет:** высокий  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 17:45  
+**Последнее обновление:** 2025-11-07 18:05  
 **Связанные документы:** `03-lore/characters/characters-overview.md`, `04-narrative/dialogues/DIALOGUE-TEMPLATE.md`, `04-narrative/dialogues/npc-hiroshi-tanaka.md`, `04-narrative/quest-dnd-checks.md`
 
 ---
