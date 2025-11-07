@@ -16,6 +16,14 @@
 **api-readiness-notes:** Диалог структурирован по состояниям, проверкам и событиям Arasaka. Готов для API задач narrative-service.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-285: api/v1/narrative/dialogues/npc-hiroshi-tanaka.yaml (2025-11-08 04:35)
+- Last Updated: 2025-11-08 04:35
+---
+
+---
 
 ## 1. Контекст и цели
 

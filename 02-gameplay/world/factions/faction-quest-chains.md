@@ -11,10 +11,10 @@
 
 # API Tasks Status
 
-- **Status:** queued
+- **Status:** completed
 - **Tasks:**
-  - API-TASK-272: api/v1/gameplay/world/factions/quest-chains.yaml (2025-11-08 01:25)
-- **Last Updated:** 2025-11-08 01:25
+  - 2025-11-08 23:40 — API-TASK-272 — api/v1/gameplay/world/factions/quest-chains.yaml (completed)
+- **Last Updated:** 2025-11-08 23:40
 
 # Faction Quest Chains — Контракты и ветвления
 
