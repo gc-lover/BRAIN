@@ -2727,5 +2727,59 @@ documents:
     issues: []
     api_target: "api/v1/world/events/seasonal-2020-2093.yaml"
 
+  - path: ".BRAIN/03-lore/locations/world-cities/tehran-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:38"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Тегерана: квантовые купола, NPC Dominion, связки с Zarathustra квестами."
+    issues: []
+    api_target: "api/v1/lore/locations/tehran.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/ho-chi-minh-city-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:42"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Хошимина: Mekong Flux платформы, NPC, амфибийные моды."
+    issues: []
+    api_target: "api/v1/lore/locations/ho-chi-minh-city.yaml"
+
+  - path: ".BRAIN/03-lore/locations/world-cities/reykjavik-detailed-2020-2093.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:46"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Детальное описание Рейкьявика: геотермальные шпили, полярные NPC, спасательные цепочки."
+    issues: []
+    api_target: "api/v1/lore/locations/reykjavik.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/zarathustra-quantum-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:49"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Zarathustra Dominion: плазменные соглашения, Shadowway маршруты."
+    issues: []
+    api_target: "api/v1/narrative/factions/zarathustra-quantum.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/mekong-flux-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:52"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Mekong Flux: дельтовая логистика, связи с Typhoon Shield и DeltaWave."
+    issues: []
+    api_target: "api/v1/narrative/factions/mekong-flux.yaml"
+
+  - path: ".BRAIN/04-narrative/quests/faction-world/aurora-geotherm-world-quests.md"
+    status: "draft"
+    version: "1.0.0"
+    checked: "2025-11-07 23:55"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Мировые квесты Aurora Geotherm: полярные спасатели, геотермальные операции."
+    issues: []
+    api_target: "api/v1/narrative/factions/aurora-geotherm.yaml"
+
 # Примеры записей:
 

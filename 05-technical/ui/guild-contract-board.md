@@ -16,6 +16,14 @@
 **api-readiness-notes:** Определены UX-флоу и API Guild Contract Board; готово к реализации фронтенда и бэкенда.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-271: api/v1/gameplay/guilds/guild-contract-board.yaml (2025-11-08 01:15)
+- **Last Updated:** 2025-11-08 01:15
+
+---
 
 ## 1. Цель и контекст
 - Guild Contract Board — центральный UI для Specter HQ и союзных гильдий.

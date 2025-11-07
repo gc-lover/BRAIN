@@ -9,6 +9,15 @@
 **api-readiness-notes:** Матрица способностей боссов подземелий: режимы сложности, уникальные навыки, проверки и контр-стратегии.
 ---
 
+# API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-268: api/v1/gameplay/world/dungeons/abilities.yaml (2025-11-08 01:00)
+- **Last Updated:** 2025-11-08 01:00
+
+# Dungeon Boss Abilities Matrix
+
 # Dungeon Boss Abilities Matrix
 
 **target-domain:** gameplay-world/dungeons  

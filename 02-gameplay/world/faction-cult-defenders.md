@@ -9,6 +9,13 @@
 **api-readiness-notes:** Каталог культовых защитников фракций/банд: роли, навыки, триггеры появления, REST/WS контракты и схемы данных для world-service.
 ---
 
+# API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-269: api/v1/gameplay/world/factions/defenders.yaml (2025-11-08 01:05)
+- **Last Updated:** 2025-11-08 01:05
+
 # Faction Cult Defenders — Культовые защитники фракций
 
 **target-domain:** gameplay-world/factions  

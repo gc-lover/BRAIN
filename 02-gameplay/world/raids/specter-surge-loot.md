@@ -16,6 +16,14 @@
 **api-readiness-notes:** Подготовлены лут-таблицы, недельные модификаторы и экономические контуры рейда Specter Surge; REST/WS и SQL схемы готовы к постановке API задач.
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-270: api/v1/gameplay/world/raids/specter-surge-loot.yaml (2025-11-08 01:10)
+- **Last Updated:** 2025-11-08 01:10
+
+---
 
 ## 1. Контекст и цели
 - **Цель:** зафиксировать правила выдачи наград, экономику и прогрессию рейда `Specter Surge` для world/economy-service.
