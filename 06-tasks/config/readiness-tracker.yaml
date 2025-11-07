@@ -1667,11 +1667,11 @@ documents:
     api_target: "api/v1/narrative/dialogues/npc-hiroshi-tanaka.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/npc-jose-tiger-ramirez.md"
-    status: "in-review"
-    version: "0.1.0"
-    checked: "2025-11-07 16:42"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-07 17:45"
     checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги лидера Valentinos: клятва, подозрения, реакция на turf war. Требуется связка с репутацией банд и событиями Heywood."
+    notes: "Диалог Valentinos дополнен экспортом, REST/GraphQL контрактом и проверкой флагов turf-war."
     issues: []
     api_target: "api/v1/narrative/dialogues/npc-jose-ramirez.yaml"
 
