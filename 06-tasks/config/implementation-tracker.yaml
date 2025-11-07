@@ -1063,3 +1063,21 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/social/referrals/referral-system.yaml"
+    task_id: "API-TASK-201"
+    brain_source: ".BRAIN/05-technical/backend/referral/referral-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
+  - api_path: "api/v1/gameplay/companions/companion-system.yaml"
+    task_id: "API-TASK-202"
+    brain_source: ".BRAIN/05-technical/backend/companion/companion-system.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+
