@@ -16,6 +16,14 @@
 **api-readiness-notes:** «Диалог выбора пути разветвлён: сцены для корпораций, улиц, закона и фриланса с проверками, пасхалками и полным экспортом YAML/REST.»
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-294: api/v1/narrative/quests/main/quest-main-002-choose-path.yaml (2025-11-08 06:55)
+- Last Updated: 2025-11-08 06:55
+---
+
+---
 
 ## 1. Контекст и цели
 
