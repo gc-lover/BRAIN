@@ -216,7 +216,7 @@ implementations:
       started: "2025-11-08 01:30"
       completed: "2025-11-08 02:20"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   - api_path: "api/v1/gameplay/combat/cyberpsychosis.yaml"
     task_id: "API-TASK-012"
@@ -233,7 +233,7 @@ implementations:
       started: "2025-11-08 02:20"
       completed: "2025-11-08 03:10"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   - api_path: "api/v1/gameplay/combat/implants-limits.yaml"
     task_id: "API-TASK-013"
@@ -250,7 +250,7 @@ implementations:
       started: "2025-11-08 03:10"
       completed: "2025-11-08 03:50"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   # === SOCIAL & NARRATIVE ===
   
@@ -269,7 +269,7 @@ implementations:
       started: "2025-11-08 04:00"
       completed: "2025-11-08 04:45"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   - api_path: "api/v1/quests/quests.yaml"
     task_id: "API-TASK-015"
@@ -286,7 +286,7 @@ implementations:
       started: "2025-11-08 05:00"
       completed: "2025-11-08 05:40"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   - api_path: "api/v1/events/random-events.yaml"
     task_id: "API-TASK-016"
@@ -303,7 +303,7 @@ implementations:
       started: "2025-11-08 05:45"
       completed: "2025-11-08 06:20"
       agent: "Frontend Agent"
-      commit: ""
+      commit: "73cccd4fd6642f43073ba7f60255a67876de8eee"
   
   # === CHARACTER SYSTEMS ===
   
