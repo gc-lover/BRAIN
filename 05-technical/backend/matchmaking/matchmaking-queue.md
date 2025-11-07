@@ -20,9 +20,10 @@
 
 ## API Tasks Status
 
-- **Status:** created
+- **Status:** completed
 - **Tasks:**
-- **Last Updated:** 2025-11-07 20:16
+  - 2025-11-08 22:05 — API-TASK-251 — Matchmaking Queue API (completed)
+- **Last Updated:** 2025-11-08 22:05
 ---
 
 ## Краткое описание

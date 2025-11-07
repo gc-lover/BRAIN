@@ -3,33 +3,37 @@
 **ID диалога:** `dialogue-npc-kaede-ishikawa`  
 **Тип:** npc  
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.3.0  
 **Дата создания:** 2025-11-08  
-**Последнее обновление:** 2025-11-08 00:25  
+**Последнее обновление:** 2025-11-07 22:04  
 **Приоритет:** высокий  
 **Связанные документы:** `../npc-lore/important/npc-kaede-ishikawa.md`, `../quests/raid/2025-11-07-quest-helios-countermesh-conspiracy.md`, `../../02-gameplay/world/specter-hq.md`, `../../02-gameplay/world/helios-countermesh-ops.md`  
 **target-domain:** narrative  
 **target-мicroservice:** narrative-service  
 **target-frontend-module:** modules/narrative/raids  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:25  
-**api-readiness-notes:** Диалог Kaede Ishikawa с ветками Specter/Helios готов к API постановке.
+**api-readiness-check-date:** 2025-11-07 22:04  
+**api-readiness-notes:** Версия 1.3.0: ветки Specter/Helios/Balanced, пасхалки и активные события связаны с рейдом Helios Countermesh.
 
 ---
 
 ## 1. Контекст
-- Каэдэ выступает посредником между Specter и Helios, реагирует на выбор игрока.
-- Состояния зависят от `flag.kaede.loyalty` и результата квеста Helios Conspiracy.
+- Каэдэ — двойной агент Helios/Specter, связующая фигура в рейдах `Helios Countermesh Conspiracy` и `Specter Surge`.
+- Реагирует на флаги `flag.player.helios_support`, `flag.player.specter_loyal`, `flag.helios.network_compromise`.
+- Диалог интегрирован с `city_unrest` и world-events (`HELIOS_SPECTER_PROXY_WAR`, `BLACKWALL_GLITCH_ALERT`).
+- Пасхалки: упоминание «SolarWinds Redux», «NotPetya 2077», шифр из манги «Ghost in the Wires» и референсы к AR-драмам 2050-х.
 
 ## 2. Состояния и условия
 
-| State | Описание | Условия |
-|-------|----------|---------|
-| `neutral` | Каэдэ осторожна, скрывает истинную лояльность | Базовое состояние |
-| `specter` | Поддерживает Specter, раскрывает планы Helios | `flag.kaede.loyalty == specter` |
-| `helios` | Продвигает Helios, требует доказательства двойной игры | `flag.kaede.loyalty == helios` |
-| `balanced` | Исследует путь баланса | `flag.kaede.loyalty == balanced` |
-| `family_crisis` | Просит вывести её семью из зоны риска | `flag.kaede.family-threatened == true` |
+| State | Описание | Условия | Основные переходы |
+|-------|----------|---------|-------------------|
+| `neutral` | Каэдэ скрывает двойную игру, тестирует игрока | Базовое | `request-intel` успех → `specter`; `prove-helios` с успехом → `helios` |
+| `specter` | Активная поддержка Specter HQ, доступ к Underlink | `flag.kaede.loyalty == specter` | `specter-loyalty` финал → `family_crisis` |
+| `helios` | Лояльность Helios, заманивает в CM операции | `flag.kaede.loyalty == helios` | Выполнить `CM-Viper` → `helios-agent` |
+| `balanced` | Стремится к компромиссу, продвигает mediator route | `flag.kaede.loyalty == balanced` | `balanced-contract` выполнен → `underlink-mediator` |
+| `helios-agent` | Каэдэ курирует Helios ячейку в Night City | `flag.kaede.prove_helios == true` | Провал гильдии → `family_crisis` |
+| `underlink-mediator` | Каэдэ запускает совместные операции Specter/Helios | `flag.kaede.network_compromise == true` | Срыв миссии → `family_crisis` |
+| `family_crisis` | Семья Каэдэ под угрозой из-за войны сетей | `flag.kaede.family-threatened == true` | Успешное спасение → `specter` или `balanced`
 
 ## 3. Диалоговые узлы (YAML)
 ```yaml

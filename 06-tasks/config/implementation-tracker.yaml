@@ -1444,3 +1444,12 @@ implementations:
     frontend:
       status: "not_started"
 
+  - api_path: "api/v1/matchmaking/matchmaking-queue.yaml"
+    task_id: "API-TASK-251"
+    brain_source: ".BRAIN/05-technical/backend/matchmaking/matchmaking-queue.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+

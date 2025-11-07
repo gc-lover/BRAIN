@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Добавлены расчёты, ребаланс, API и интеграции для индексов. Готово к реализации.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-262: api/v1/gameplay/economy/stock-exchange-indices.yaml (2025-11-08 00:00)
+- **Last Updated:** 2025-11-08 00:00
+
+---
 
 ## Краткое описание
 

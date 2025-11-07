@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Продвинутые механики описаны: short/margin/options/futures с API и контролем рисков."
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-261: api/v1/gameplay/economy/stock-exchange-advanced.yaml (2025-11-07 23:50)
+- **Last Updated:** 2025-11-07 23:50
+
+---
 
 ## Краткое описание
 

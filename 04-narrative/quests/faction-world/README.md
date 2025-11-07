@@ -6,10 +6,16 @@
 
 ### Корпорации
 - [Arasaka](./arasaka-world-quests.md) — 10 квестов по миру
-- [Crescent Energy Grid](./crescent-energy-world-quests.md) — 4 квеста, лунные купола и энергетические сети
 - [Militech](./militech-world-quests.md) — 10 квестов по миру
 - [NetWatch](./netwatch-world-quests.md) — 8 квестов
 - [Biotechnica](./biotechnica-world-quests.md) — 6 квестов
+- [Crescent Energy Grid](./crescent-energy-world-quests.md) — 5 квестов, лунные купола и энергетические сети
+- [Atlantic Shield](./atlantic-shield-world-quests.md) — 4 квеста, морские конвои и био-рифы
+- [Savanna Horizon](./savanna-horizon-world-quests.md) — 4 квеста, климатические купола и био-сетки
+- [Pacific Couriers](./pacific-couriers-world-quests.md) — 4 квеста, штормовые купола и логистика
+- [DeltaWave Logistics](./delta-wave-world-quests.md) — 4 квеста, гуманитарные и торговые штормовые маршруты
+- [Aegean Synapse](./aegean-synapse-world-quests.md) — 4 квеста, солнечная синархия и дипломатия полисов
+- [Maghreb Solar Cooperative](./maghreb-solar-world-quests.md) — 4 квеста, пустынно-атлантические караваны и энергетика
 
 ### Банды
 - [Valentinos](./valentinos-world-quests.md) — 6 квестов

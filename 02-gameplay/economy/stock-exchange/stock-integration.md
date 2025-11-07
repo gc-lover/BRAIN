@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Интеграция описана через события, квесты, фракции, с API и шинами данных. Готово.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-263: api/v1/gameplay/economy/stock-exchange-integration.yaml (2025-11-08 00:10)
+- **Last Updated:** 2025-11-08 00:10
+
+---
 
 ## Краткое описание
 

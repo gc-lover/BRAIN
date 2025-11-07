@@ -11,6 +11,14 @@
 **api-readiness-notes:** «Обзор включает архитектуру биржи, сервисы, API, события и контроль рисков. Готово к API задачам.»
 
 ---
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-260: api/v1/gameplay/economy/stock-exchange-management.yaml (2025-11-07 23:40)
+- **Last Updated:** 2025-11-07 23:40
+
+---
 
 ## Краткое описание
 
