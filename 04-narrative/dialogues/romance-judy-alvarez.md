@@ -16,6 +16,14 @@
 **api-readiness-notes:** «Версия 1.3.0: добавлен этап 3 с Braindance синхронизацией, пасхалками и обновлённым YAML/REST/телеметрией.»
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-282: api/v1/narrative/romance/romance-judy-alvarez.yaml (2025-11-08 03:40)
+- Last Updated: 2025-11-08 03:40
+---
+
+---
 
 ## 1. Контекст и цели
 
