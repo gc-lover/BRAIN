@@ -430,3 +430,19 @@
 - **Фракции:** Hyperwave Straits Authority, Straits Bio Couriers, Nusantara Hackwave, Lotus Freight Collective.
 - **Особенности:** гибридные порты, био-джунгли, квесты `johor-hyperwave-world-quests.md`.
 
+### Kinshasa (Демократическая Республика Конго)
+- **См.** `./kinshasa-detailed-2020-2093.md`
+- **Районы:** Congo Canopy Cluster (корпоративные канопи), Kasai Flux Warrens (подпольные рынки), Malebo Delta Arc (портово-логистический пояс), Kwilu Memory Spire (архивы династий).
+- **Ключевые улицы:** River Spine Maglev, Kasai Cascade Walkways, Ngobila Undergrid Rail, Congo Orbital Elevator.
+- **NPC:** Зора «River Matriarch» М'Пута (директор CRN), Миру «Orbital Lily» Казади (логист), Доктор Амината «Surgeon Vine» Киала (рипердок), Калеб «Data Kasai» Н'Сау (брокер данных).
+- **Фракции:** Congo River Nexus, Kasai Flux Guild, Basalt Panther Union, Delta Cartographers.
+- **Особенности:** лиановые башни, биосети памяти, квесты `kinshasa-river-nexus-world-quests.md`.
+
+### Ulaanbaatar (Монголия)
+- **См.** `./ulaanbaatar-detailed-2020-2093.md`
+- **Районы:** Sky Mandala Dome (климатический купол), Ger Flux District (модульные юрты), Gobi Rail Corridor (маглев через пустыню), Avalon Tech Monastery (квантовый монастырь).
+- **Ключевые улицы:** Steppe Horizon Maglev, Blue Wolf Skyway, Kharkhorum Deep Loop, Gobi Cloud Elevator.
+- **NPC:** Алтан «Sky Warden» Батсух (координатор SSC), Сайхана «Ger Forge» Эрдене (инженер), Доктор Намжил «Pulse Surgeon» Тумэн (рипердок), Эрдэнэ «Sky Courier» Даваажаргал (курьер-дипломат).
+- **Фракции:** Steppe Signal Collective, Blue Wolf Nomads, Gobi Sandcrafters, Tengri Sky Riders.
+- **Особенности:** степные купола, песчаные караваны, квесты `ulaanbaatar-steppe-signal-world-quests.md`.
+

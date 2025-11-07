@@ -762,6 +762,30 @@
 
 ---
 
+## 56. [КИНШАСА — Речной гипергород и лиановые башни](./kinshasa-detailed-2020-2093.md) 🌿🇨🇩
+
+**Население:** ~14,6 млн  
+**Доминирует:** Congo River Nexus  
+**Банды:** Kasai Flux Guild, Basalt Panther Union, Ngobila Ascendants, Delta Cartographers
+
+**Районы:** Congo Canopy Cluster, Kasai Flux Warrens, Malebo Delta Arc, Kwilu Memory Spire
+
+**Тайны:** «Lumina Severance», «Delta Heirloom»
+
+---
+
+## 57. [УЛАН-БАТОР — Степные купола и небесные караваны](./ulaanbaatar-detailed-2020-2093.md) 🐎🇲🇳
+
+**Население:** ~8,2 млн  
+**Доминирует:** Steppe Signal Collective  
+**Банды:** Blue Wolf Nomads, Gobi Sandcrafters, Kharkhorum Relay Union, Tengri Sky Riders
+
+**Районы:** Sky Mandala Dome, Ger Flux District, Gobi Rail Corridor, Avalon Tech Monastery
+
+**Тайны:** «Echoes of Tengri», «Khansgate Rift»
+
+---
+
 ## Сравнительная таблица
 
 | Город | Население | Доминирует | Уникальность | Опасность |

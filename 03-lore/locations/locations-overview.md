@@ -134,6 +134,8 @@
 - **Anchorage** (США) — Borealis Icefront, арктические конвои, Kodiak Signal Riders.
 - **Helsinki** (Финляндия) — Aurora Harmony, AI-сауны, Icebreaker Guild.
 - **Johor Bahru** (Малайзия) — Hyperwave порт, бионические джунгли, Night Riders.
+- **Kinshasa** (ДР Конго) — Lumina Malebo канопи, Congo River Nexus, каскады Kasai Flux.
+- **Ulaanbaatar** (Монголия) — Sky Steppe Mandala, Steppe Signal Collective, песчаные караваны Tengri.
 
 ---
 
