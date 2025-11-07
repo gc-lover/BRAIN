@@ -28,6 +28,7 @@
 - **Влияние фракции** → `npc-relationships-faction-influence.md`
 - **Дружба** → `npc-relationships-friendship.md`
 - **Романтика** → `npc-relationships-romance.md`
+- **Романтика (детально)** → `npc-relationships-system-детально.md`
 - **Вражда** → `npc-relationships-enmity.md`
 - **Специальные отношения** → `npc-relationships-specials.md`
 - **Игроки как NPC** → `npc-relationships-players-as-npc.md`

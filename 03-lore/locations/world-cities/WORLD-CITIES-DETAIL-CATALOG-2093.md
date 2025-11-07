@@ -245,6 +245,14 @@
 - **Фракции:** Harbour Authority (портовый синдикат), Makoko Armada (водные общины), Silicon Collective (стартап-кластеры).
 - **Особенности:** штормовые PvE-события, экономические войны за грузовые маршруты, мистические квесты с традиционными культами.
 
+### Johannesburg (ЮАР)
+- **См.** `./johannesburg-detailed-2020-2093.md`
+- **Районы:** Aurora Core District (корпоративное ядро), Savannah Biopark (синтетические саванны), Miner Union Hub (шахтёрский союз), Veldt Underground Network (подземные тоннели).
+- **Ключевые улицы:** GeoForge Axis, Savannah Loop, Chrome Rail, Veldt Vein.
+- **NPC:** Номса «Aurora» Мбеки (директор GeoForge), Тако Масунгу (лидер Miners Union), Доктор Кайто Ран (геобиологический рипердок), Амандла «Veldt Shade» Кумало (лидер NeoZulu).
+- **Фракции:** GeoForge Extraction, Chrome Miners Union, NeoZulu Collective, Veldt Phantoms.
+- **Особенности:** автоматизированные шахты, биосаванны, конфликты за редкие ресурсы.
+
 ### Cape Town (ЮАР)
 - **См.** `./cape-town-detailed-2020-2093.md`
 - **Районы:** Table Hex Citadel (стратегический центр), BioRidge Gardens (аэрофермы), Neon Waterfront (ночные рынки), Dockside Rifts (подводные тоннели).

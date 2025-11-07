@@ -2421,6 +2421,42 @@ documents:
     issues: []
     api_target: "api/v1/progression.yaml"
 
+  - path: ".BRAIN/04-narrative/dialogues/npc-jake-archer.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:43"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалог Джейка Арчера покрывает скидки, логистические активности и кризис Blackwall; YAML и REST/GraphQL готовы для economy интеграции."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/npc-jake-archer.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/npc-rita-moreno.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-07 20:43"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Диалог Риты Морено добавляет уличные ветки, двойной кросс Maelstrom и информаторские активности; экспорт и метрики готовы."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/npc-rita-moreno.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/romance-hanako-tanaka.md"
+    status: "ready"
+    version: "1.2.0"
+    checked: "2025-11-07 20:43"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Роман Ханако этапы 1-2: чайная церемония и небесный сад, проверки Willpower/Etiquette/Strategy, экспорт и телеметрия готовы."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/romance-hanako-tanaka.yaml"
+
+  - path: ".BRAIN/04-narrative/dialogues/romance-judy-alvarez.md"
+    status: "ready"
+    version: "1.2.0"
+    checked: "2025-11-07 20:43"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Роман Джуди этапы 1-2: студия Lizzie's и Laguna Bend AR, Empathy/Performance/Hacking проверки, экспорт и метрики завершены."
+    issues: []
+    api_target: "api/v1/narrative/dialogues/romance-judy-alvarez.yaml"
+
 # Примеры записей:
 #
 # documents:

@@ -1,12 +1,12 @@
 ---
 **Статус:** approved  
-**Версия:** 1.0.0  
+**Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
 **Последнее обновление:** 2025-11-07 20:37  
 **Приоритет:** highest  
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 20:37  
-**api-readiness-notes:** Каталог мировых боссов с фазами, уникальными навыками, сюжетными событями и REST/WebSocket контрактами для world-service.
+**api-readiness-notes:** Каталог мировых боссов с фазами, уникальными навыками, сюжетными событиями и REST/WebSocket контрактами world-service. Обновление v1.1.0 добавляет орбитальные и хакерские события, таблицы последствий и расширенную интеграцию.
 ---
 
 # World Bosses Catalog — Открытые столкновения
@@ -29,6 +29,8 @@
 | `wb-valentinos-saint` | Собор Санто-Доминго | 2078 | Platinum | Ветка `Valentinos Blood Oath` |
 | `wb-nomad-leviathan` | Badlands, зона гидротрассы | 2082 | Gold | Миссия `Nomad Convoy Crisis` |
 | `wb-netwatch-sphinx` | Небоскрёб NetWatch | 2087 | Diamond | Выполнение `quest-main-042-black-barrier-heist` |
+| `wb-eclipse-seraph` | Орбитальная платформа "Eclipse Array" | 2085 | Mythic | Событие `Arcology Eclipse Failsafe` |
+| `wb-hivemind-behemoth` | Мега-свалка Pacifica Reclaim | 2075 | Platinum | Квест `Maelstrom Neuro Swarm` |
 
 ## 3. Фазовые сценарии
 ### `wb-neon-titan`
@@ -63,6 +65,20 @@
 - **Фаза 3 — Sphinx Core:** чередует вопросы/ответы (диалоговые проверки) и боевые арены.
 - **Лут:** `Sphinx Cyberdeck`, `NetWatch Clearance`, `Global Event Trigger`.
 
+### `wb-eclipse-seraph`
+- **Фаза 1 — Orbital Lockdown:** `Solar Lance` — линейный луч по спутниковому наведению (DEX DC 21 для уклонения).
+- **Фаза 2 — Gravity Rift:** `Vector Break` — меняет гравитацию, игроки прилипают к стенам (STR DC 20 для удержания пози).
+- **Фаза 3 — Failsafe Override:** `Ablation Protocol` — отключает все щиты и импланты, требуется синхронный взлом (TECH DC 22) + координация с world-service дронами.
+- **Лут:** `Eclipse Thruster`, `Orbital Shield Core`, `League Token x70`.
+- **Сюжет:** успех стабилизирует орбитальный щит Night City, провал вызывает событие `Solar Storm`.
+
+### `wb-hivemind-behemoth`
+- **Фаза 1 — Scrap Swarm:** призывает волны дронов-хламов, навык `Rust Flood` (CON DC 18).
+- **Фаза 2 — Neuro Mesh:** `Hivemind Overclock` — связывает игроков нейронным полем, успех зависит от командных проверок (COOP DC 17).
+- **Фаза 3 — Core Detonation:** `Waste Cascade` — ядовитая буря, требуется активация очистителей (ENGINEER role, TECH DC 19).
+- **Лут:** `Hivemind Neural Lens`, `Maelstrom Reputation +40`, `Rare Cyberware Components`.
+- **Сюжет:** влияет на Maelstrom/NCPD отношения и доступ к подземным аренам Pacifica.
+
 ## 4. Уникальные навыки по лигам
 | Лига | Модификатор | Пример способности |
 | --- | --- | --- |
@@ -78,6 +94,14 @@
 - Kafka topics: `world.boss.spawn`, `world.boss.telemetry`, `world.boss.outcome`.
 - Автотюнинг: analytics-service корректирует HP и урон на основе среднего времени убийства.
 
+### Таблица последствий (post-event)
+| Исход | Мировой флаг | Эффект |
+| --- | --- | --- |
+| Поражение `wb-blackwall-wraith` | `world.flag.blackwall_integrity -10` | Усиление событий за пределами Blackwall, рост агрессии Rogue AI |
+| Победа над `wb-valentinos-saint` (пощадить) | `rep.street.valentinos +35` | Новые ветки романов и скидки в социальном модуле |
+| Победа над `wb-eclipse-seraph` | `world.flag.orbital_shield = stable` | Снижение сложности воздушных рейдов, открытие миссий Aero Division |
+| Провал `wb-hivemind-behemoth` | `rep.law.ncpd -15` | Усиление патрулей NCPD и рост цены на киберимпланты |
+
 ## 6. REST API (world-service)
 | Endpoint | Метод | Назначение |
 | --- | --- | --- |
@@ -86,6 +110,7 @@
 | `/world/bosses/{id}/schedule` | `GET` | Таймслоты появления, привязка к world-state |
 | `/world/bosses/{id}/signup` | `POST` | Запись отряда на событие (до начала) |
 | `/world/bosses/{id}/outcome` | `POST` | Финальный результат, выдача наград |
+| `/world/bosses/{id}/aftermath` | `POST` | Фиксация последствий (world flags, reputation), публикация в analytics-service |
 
 ## 7. Схемы данных
 ```sql
@@ -131,9 +156,17 @@ CREATE TABLE world_boss_schedules (
 - `Fixer Alma "Spark"` — даёт оповещения о `wb-neon-titan`.
 - `Padre Alvarez` — решает исход `wb-valentinos-saint` (влияет на диалоги романсов).
 - `Nomad Charon` — связывает `wb-nomad-leviathan` с кланами Badlands.
+- `Commander Rhea Tesla` — управляет орбитальной платформой `Eclipse Array`, выдаёт weekly рейды.
+- `Maelstrom Handler "Krieg"` — запускает событие `Hivemind Behemoth`, открывает нелегальные магазины.
 
-## 10. Готовность
-- Боссы описаны, фазовые навыки и D&D проверки определены.
-- REST/WS контракты и таблицы данных готовы к передаче в API Task Creator.
-- Документ синхронизирован с `combat-ai-enemies.md` (уровни сложности и навыки).
+## 10. Наблюдаемость и аналитика
+- Метрика `worldBossClearTime` — среднее время убийства по лиге и фракции.
+- Метрика `worldBossDndFailRate` — процент проваленных проверок (чтобы балансировать DC).
+- Метрика `worldBossAftermathImpact` — изменение world flags и репутаций.
+- Логи: `spawn`, `phase_transition`, `ability_cast`, `dnd_check`, `outcome`, `aftermath_applied`.
+
+## 11. Готовность
+- Каталог расширен (v1.1.0), добавлены орбитальные/свалочные события и таблица последствий.
+- REST/WS контракты дополнены эндпоинтом `aftermath`, схемы данных актуальны.
+- Документ готов к передаче в API Task Creator и связан с `dungeon-bosses-catalog.md` и `combat-ai-enemies.md`.
 

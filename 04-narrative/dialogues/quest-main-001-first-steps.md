@@ -2,18 +2,18 @@
 
 **ID диалога:** `dialogue-quest-main-001-first-steps`  
 **Тип:** quest  
-**Статус:** draft  
-**Версия:** 0.1.0  
+**Статус:** approved  
+**Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 16:42  
+**Последнее обновление:** 2025-11-07 20:43  
 **Приоритет:** высокий  
 **Связанные документы:** `../quests/main/001-first-steps-dnd-nodes.md`, `../dialogues/npc-marco-fix-sanchez.md`, `../npc-lore/important/marco-fix-sanchez.md`  
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:42  
-**api-readiness-notes:** Требуется синхронизация с обучающими подсказками и логом бросков.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-07 20:43  
+**api-readiness-notes:** «Диалог квеста 1.1 полностью описан: ветки обучения, пасхалки, экспорт YAML, метрики и синхронизация с обучающими подсказками.»
 
 ---
 
