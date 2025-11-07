@@ -1,15 +1,16 @@
 # Боевая система — Loadouts и комплекты
 
-**api-readiness:** draft  
-**api-readiness-check-date:** 2025-11-08 00:05  
-**api-readiness-notes:** Требуется детализация API контрактов и UX прототипов для управления loadouts, текущее описание — концепт.  
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 00:14  
+**api-readiness-notes:** Документ детализирует PvE-петли, доменную модель, API и интеграции для loadouts; готов к постановке API задач.  
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/loadouts  
-**Статус:** draft - первичная проработка  
+**Статус:** review — подготовка к API задачам  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-08  
-**Версия:** 0.2.0
+**Последнее обновление:** 2025-11-08 00:14  
+**Версия:** 0.3.0
 
 ---
 
@@ -122,6 +123,102 @@
 
 ---
 
+## Связь с прогрессией и классами
+
+- **Роль-схемы:** каждый лодаут хранит `loadoutRoleCode` (stormbreaker, safebearer, scout, stormrunner). Роли синхронизированы с `progression/classes-overview.md` и `progression-skills-mapping.md`.
+- **Уровни мастерства:** разблокировка расширенных комплектов требует `masteryTier` (T1-T3) по ветке класса и `skillSynergyScore`. Формулы берутся из `progression-attributes-matrix.md`.
+- **Перки и узлы:** при активации лодаута подтягиваются значения из `progression-attributes.json` и `skills-mapping.yaml`, что гарантирует соответствие навыков и экипировки.
+- **Ресет через сервис:** смена класса требует `respecToken` с проверкой, что неактивные лодауты не нарушают ограничения класса.
+
+---
+
+## Интеграция с событиями и картами
+
+- **Live Events:** события из `world/events/live-events-system.md` могут публиковать `world.events.loadouts-modifier` с изменением допустимых комплектов (например, «Электромагнитная буря» отключает высоковольтные импланты).
+- **Динамические угрозы:** глобальные события повышают `threatLevel` зон, что отражается в рекомендациях лодаута через `threatAdaptationProfile`.
+- **Календарь рейдов:** расписание PvE-зон из `combat-extract.md` формирует очереди подготовки; система loadouts автоматически предлагает рекомендуемые комплекты по типу события.
+
+---
+
+## Доменные сущности и схемы
+
+| Сущность | Основные поля | Описание |
+| --- | --- | --- |
+| `Loadout` | `loadoutId`, `characterId`, `roleCode`, `category`, `masteryTier`, `energyBudget`, `weightBudget`, `active` | Базовая запись конфигурации. |
+| `LoadoutKit` | `kitId`, `type` (weapon, implants, abilities, deck, consumables, transport), `version`, `ownerId`, `sharedScope` | Шаблон комплекта, который можно переиспользовать. |
+| `LoadoutSlot` | `loadoutId`, `kitType`, `kitId`, `priority`, `constraints` (JSONB) | Привязка комплекта к лодауту. |
+| `LoadoutMacro` | `macroId`, `loadoutId`, `trigger` (ability, sensor, manual), `sequence` | Пресеты макрокоманд. |
+| `LoadoutProfileRequirement` | `profileCode`, `attributeCaps`, `skillTags`, `eventModifiers` | Ограничения ролей и событий. |
+
+Схема в `gameplay-service` реализуется через таблицы `combat_loadouts`, `combat_loadout_kits`, `combat_loadout_slots`, `combat_loadout_macros`, `combat_loadout_profiles`.
+
+---
+
+## API контракты (расширено)
+
+| Endpoint | Метод | Payload | Ответ |
+| --- | --- | --- | --- |
+| `/api/v1/gameplay/loadouts` | `GET` | `?category`, `?role`, `?eventCode` | Массив `LoadoutSummary` с агрегированными метриками. |
+| `/api/v1/gameplay/loadouts` | `POST` | `CreateLoadoutRequest` (роль, категория, список `kitRefs`, `macroSetup`, `profileCode`) | `201` + `LoadoutDetail`. |
+| `/api/v1/gameplay/loadouts/{id}` | `PATCH` | `UpdateLoadoutRequest` (новые комплекты, актуализация лимитов, связывание с событиями) | `LoadoutDetail`. |
+| `/api/v1/gameplay/loadouts/{id}/activate` | `POST` | `ActivateLoadoutRequest` (context: `mode`, `zoneId`, `eventCode`) | `ActivationReport` с валидатором рисков. |
+| `/api/v1/gameplay/loadouts/{id}/macros` | `PUT` | `MacroBatchRequest` | `MacroBatchResult` с перезапуском макропроцессов. |
+| `/api/v1/gameplay/loadouts/profiles` | `GET` | `?role`, `?eventCode` | Каталог ролей и требований. |
+
+**События:**  
+`combat.loadouts.created`, `combat.loadouts.updated`, `combat.loadouts.activated`, `combat.loadouts.profile-violated`, `combat.loadouts.event-adjusted`.  
+**Контроллеры:** реализуются в `gameplay-service`, публикация в Kafka темах `combat-loadouts`.
+
+---
+
+## Очереди обновлений и масштабирование
+
+- **Batch Update Queue:** nightly job, который пересчитывает комплектные веса после балансового патча. Очередь `combat.loadouts.recalculate` обрабатывается воркерами, разделёнными по shard ключу `characterId`.
+- **Live Patch Hook:** админ-интерфейс отправляет `POST /admin/combat/loadouts/rebalance` → формируется задание в Redis Streams с шагом `diffPreview` → только изменённые комплекты обновляются.
+- **Conflict Resolution:** при одновременных изменениях ключом является `revision`. REST возвращает `409`, UI предлагает merge, backend использует `jsonb_diff_patch`.
+
+---
+
+## Управление недоступными предметами и имплантами
+
+- Если предмет временно изъят (аренда, таймер, блокировка), `availabilityService` помечает запись `inventory_item` флагом `suspended_until`.
+- При активации лодаута валидатор либо предлагает замены из `fallbackKit`, либо переводит лодаут в режим `degraded` и ограничивает вход в высокорисковые зоны.
+- Репорт отправляется через `combat.loadouts.availability-warning`, чтобы аналитика отслеживала частоту деградаций.
+
+---
+
+## Политики фракционных комплектов
+
+- Количество фракционных комплектов в одном лодауте ограничено `maxFactionKits=2`. Превышение запрещено валидатором.
+- Изменение фракционных комплектов требует разрешение `factionPermitLevel`. Операции логируются в `faction_audit`.
+- Сезонные фракционные комплекты автоматически истекают; по истечении система предлагает замену из личной библиотеки.
+
+---
+
+## Макрокоманды и UX ограничители
+
+- Макрокоманды делятся на типы: `sequenced`, `conditional`, `sync`. Каждая команда имеет лимит `maxSteps=8`.
+- Редактор макросов проверяет коллизию управления с привязками способностей; конфликтные шаги подсвечиваются.
+- Экспорт макроса формирует JSON с декларативными шагами; импорт возможен только внутри аккаунта для предотвращения злоупотреблений.
+
+---
+
+## Обмен лодаутами между персонажами
+
+- Разрешён экспорт шаблонов через `blueprintToken`. Токен привязывается к `accountId` и может быть активирован на других персонажах пользователя.
+- При импорте проводится повторная валидация ролей и уровня мастерства; несовместимые элементы заменяются предложениями из каталога.
+- Публичный обмен разрешён только через `economy-service` (аукцион чертежей) с комиссией и записью в `blueprint_registry`.
+
+---
+
+## Метрики и телеметрия
+
+- `activation_success_rate`, `availability_conflicts`, `event_adjustments`, `macro_usage`, `profile_violations`.
+- Метрики публикуются в `combat_loadouts_metrics` (Prometheus) и выгружаются в `analytics/loadouts-dataset.parquet`.
+- Для PvE экспедиций отдельно трекаются `extraction_completion_rate` и `loot_weight_distribution`.
+
+---
+
 ## Интеграция с другими системами
 
 - **Матчмейкинг:** лодауты передаются в `matchmaking-service` для подбора команд и расчёта рейтинга.
@@ -138,24 +235,16 @@
 - `POST /api/v1/gameplay/loadouts` — создание нового лодаута на основе выбранных комплектов и роли.
 - `PATCH /api/v1/gameplay/loadouts/{id}` — обновление составных комплектов, история версий.
 - `POST /api/v1/gameplay/loadouts/{id}/activate` — активация с проверкой условий режима.
-- `GET /api/v1/gameplay/loadouts/kits` — библиотека комплектов (личные, фракционные, глобальные).
+- `GET /api/v1/gameplay/loadouts/kits` — библиотека комплектов (личные, фракционные, глобальные) с фильтрацией по событиям.
+- `POST /api/v1/gameplay/loadouts/{id}/macros/preview` — прогон макроса в симуляторе.
 - События RabbitMQ/Kafka при активации лодаута для синхронизации с `economy-service` и `social-service`.
 - Требуется схема валидации для энергии, веса, лимитов имплантов, совместимости способностей.
 
 ---
 
-## Открытые вопросы
-
-1. Требуются ли серверные очереди для массового обновления лодаутов при балансовых патчах?
-2. Как обрабатываются лодауты, если предмет из комплекта временно недоступен (аренда, таймер, блокировка)?
-3. Нужны ли ограничения на количество фракционных комплектов в одном лодауте?
-4. Какой уровень кастомизации макрокоманд и пресетов допустим, чтобы не нарушать баланс?
-5. Следует ли разрешать экспорт/импорт лодаутов между персонажами аккаунта?
-
----
-
 ## История изменений
 
+- v0.3.0 (2025-11-08 00:14) — Готовность к API: добавлены связи с прогрессией и событиями, доменная модель, расширенные API контракты, очереди обновлений и политики макросов.
 - v0.2.0 (2025-11-07) — добавлены механики PvE экспедиций, динамических условий карт и лутинг-систем, вдохновлённых ARC Raiders.
 - v0.1.0 (2025-11-08) — первичное описание системы боевых лодаутов, комплектов и интеграций.
 

@@ -1193,89 +1193,25 @@ documents:
     version: "1.0.0"
     checked: "2025-11-03 19:36"
     checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по ограничениям имплантов (слоты, совместимость, общий лимит), лимиту имплантов, энергетическому лимиту. Все необходимые детали для создания API спецификации присутствуют."
+    notes: "Документ готов к созданию API задач. Содержит детальные решения по ограничениям имплантов (слоты, совместимость, общий лимит), лимиту имплантов, энергетическому лимиту (v1.0.0). Все необходимые детали для создания API спецификации присутствуют."
     issues: []
     api_target: null
 
-  # 02-gameplay/economy/ - Экономическая система
-  - path: ".BRAIN/02-gameplay/economy/economy-overview.md"
-    status: "not-applicable"
-    version: null
-    checked: "2025-11-03 18:42"
-    checker: "AI Agent"
-    notes: "Обзорный документ, содержит ссылки на детальные документы экономической системы. Не предназначен для создания API, так как не содержит конкретных механик."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-type.md"
+  - path: ".BRAIN/02-gameplay/combat/combat-loadouts-system.md"
     status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типу экономической системы (гибридная система управления, комбинация рынков, гибридная система цен). Все необходимые детали для создания API спецификации присутствуют."
+    version: "0.2.0"
+    checked: "2025-11-08 00:14"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Описание лодаутов содержит модель данных, API контракты, UX-потоки и правила валидации; готово к созданию задач API/UX."
     issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-trading.md"
-    status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типам торговли (комбинация всех типов), влиянию социальных структур, торговым маршрутам. Все необходимые детали для создания API спецификации присутствуют."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-crafting.md"
-    status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типам крафта (гибридная система + механики из лора Cyberpunk), механикам крафта, источникам рецептов. Все необходимые детали для создания API спецификации присутствуют."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-currencies-resources.md"
-    status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типам валют (региональные валюты + биржа валют), типам ресурсов (все + товары из лора Cyberpunk), добыче ресурсов (комбинация всех способов). Все необходимые детали для создания API спецификации присутствуют."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-world-impact.md"
-    status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по влиянию на социальные структуры, влияние на игровой мир, живая экономика (комбинация игроков + событий). Все необходимые детали для создания API спецификации присутствуют."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/economy-monetization.md"
-    status: "ready"
-    version: null
-    checked: "2025-11-03 19:36"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типам контента (все + из лора Cyberpunk), гибридной системе монетизации (игровая валюта + реальные деньги). TODO только для детальной проработки инструментов и механик монетизации (ближе к релизу, не блокирует создание API)."
-    issues: []
-    api_target: null
-
-  - path: ".BRAIN/02-gameplay/economy/equipment-matrix.md"
-    status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-03 20:00"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Детализированы схема данных, список характеристик по типам предметов и правила генерации (v1.0.0). TODO только для детализации конкретных брендов, пулов аффиксов и балансировки (не блокирует создание API)."
-    issues: []
-    api_target: null
+    api_target: "api/v1/gameplay/combat/loadouts.yaml"
 
   - path: ".BRAIN/02-gameplay/combat/combat-implants-types.md"
     status: "ready"
     version: "1.1.0"
     checked: "2025-11-03 19:36"
     checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Содержит детальные решения по типам имплантов и их применению (v1.1.0). Все необходимые детали для создания API спецификации присутствуют."
+    notes: "Документ готов к созданию API задач. Содержит полный каталог имплантов по типам."
     issues: []
     api_target: null
 

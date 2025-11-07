@@ -5,6 +5,14 @@
 
 ---
 
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-297: api/v1/admin/anti-cheat/anti-cheat-core.yaml (2025-11-07)
+- Last Updated: 2025-11-07 22:40
+
+---
+
 ## Anti-Cheat Measures
 
 **Core systems:**
