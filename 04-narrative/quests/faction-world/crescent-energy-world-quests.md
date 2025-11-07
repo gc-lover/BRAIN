@@ -1,6 +1,6 @@
 ---
 **api-readiness:** draft
-**api-readiness-check-date:** 2025-11-07 21:45
+**api-readiness-check-date:** 2025-11-07 21:50
 ---
 
 # Crescent Energy Grid: Мировые квесты
