@@ -8,6 +8,12 @@
 [← Part 1](./part1-core-system.md) | [Навигация](./README.md)
 
 ---
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-214: api/v1/inventory/inventory-advanced.yaml (2025-11-08 01:40)
+- Last Updated: 2025-11-08 01:40
+---
 
 ## Weight & Encumbrance
 
