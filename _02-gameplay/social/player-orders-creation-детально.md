@@ -22,9 +22,9 @@
 - **Status:** queued
 - **Tasks:**
   - [API-TASK-317](../../API-SWAGGER/tasks/active/queue/task-317-player-orders-creation-api.md) — `api/v1/social/player-orders.yaml` (создание/публикация) — queued 2025-11-08 12:10.
-  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-budget-api.md) — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — queued 2025-11-08 12:35.
-  - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-validation-api.md) — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — queued 2025-11-08 12:40.
-- **Last Updated:** 2025-11-08 12:45
+  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-budget-api.md) — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — queued 2025-11-08 16:10.
+  - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-validation-api.md) — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — queued 2025-11-08 16:12.
+- **Last Updated:** 2025-11-08 16:12
 
 ---
 

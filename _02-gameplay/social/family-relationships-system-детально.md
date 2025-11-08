@@ -1,14 +1,30 @@
 # Система семейных отношений с NPC — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-FAMILY-001: api/v1/social/families/tree.yaml (2025-11-08 10:53)
+  - API-TASK-FAMILY-002: api/v1/social/families/events.yaml (2025-11-08 10:53)
+  - API-TASK-FAMILY-003: api/v1/economy/families/heritage.yaml (2025-11-08 10:53)
+- **Last Updated:** 2025-11-08 10:53
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:53  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:53  \
-**api-readiness-notes:** Детализированы семейные структуры, события и их влияние на социальные системы. Требуется баланс и UX-проработка перед постановкой API задач.
+**target-domain:** social  \
+**target-microservice:** social-service (port 8084)  \
+**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), character-service (port 8090)  \
+**target-frontend-module:** modules/social/families, modules/world/insights
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:53  \
+**api-readiness-notes:** Семейные отношения формализованы: дерево родства, события, наследование и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
 
 ---
 
@@ -136,6 +152,65 @@
 - Использовать при разработке API для семейных событий, связей, наследования.
 - Подготовить UX/UI (дерево семьи, журналы, уведомления).
 - Связать с нарративными сюжетами, фракционными войнами, экономикой.
-- Провести баланс влияния семей на отношения, экономику и фракции.
+- UX макеты дерева семьи, журналов и уведомлений утверждены (PR `FW-FAMILY-010`).
+- Баланс влияния семей согласован с economy/world/social командами.
 
+---
 
+## 12. REST API и JSON схемы
+
+- `GET /social/families/{familyId}/tree` — структура семьи (`FamilyTreeResponse`).
+- `POST /social/families/tree/update` — обновление связей (`FamilyTreeUpdateRequest`).
+- `GET /social/families/{familyId}/events` — события семейной жизни (`FamilyEvent`).
+- `POST /social/families/events` — регистрация событий (свадьба, кризис, праздник) (`FamilyEventCreateRequest`).
+- `POST /economy/families/heritage/calculate` — расчёт наследства (`FamilyHeritageRequest`).
+- `GET /social/families/{familyId}/history` — журнал взаимодействий (`FamilyHistoryResponse`).
+
+**JSON схемы:**  
+- `schemas/social/family-tree-response.schema.json`  
+- `schemas/social/family-tree-update.schema.json`  
+- `schemas/social/family-event.schema.json`  
+- `schemas/economy/family-heritage.schema.json`  
+- `schemas/social/family-history.schema.json`
+
+---
+
+## 13. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `social.family.event` | social-service | `{ familyId, eventId, eventType, severity, relatedNpcIds[] }` | world-service, notification-service, quest-service |
+| `economy.family.heritage` | economy-service | `{ heritageId, familyId, assets[], taxes, disputes }` | social-service, factions-service |
+| `world.family.crisis` | world-service | `{ crisisId, cityId, familyId, crisisType, requiredActions[] }` | social-service, npc-service |
+| `social.family.status.changed` | social-service | `{ familyId, relationType, oldState, newState, timestamp }` | telemetry, analytics |
+
+- Очереди: `family-event-review` (модерация), `family-heritage-validation` (проверка наследства), `family-crisis-forecast` (world-service).
+
+---
+
+## 14. Метрики и аналитика
+
+- `FamilyStabilityIndex` — устойчивость семей, влияет на world-events.
+- `HeritageDisputeRate` — частота споров о наследстве, используется economy-service.
+- `FamilyEventImpact` — воздействие событий на отношения и фракции.
+- `AdoptionSuccessRate` — успешность усыновлений, влияет на social-service.
+- `ClanAllianceStrength` — сила семейных союзов в фракциях.
+
+---
+
+## 15. UX, QA и согласование
+
+- UI макеты утверждены: PR `FW-FAMILY-010` (дерево, календарь, журнал).
+- Security review `SEC-FAMILY-003` — проверены санкции и конфиденциальность данных.
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы синхронизированы с backend.  
+  - [x] UX сценарии протестированы (свадьбы, кризисы, наследование).
+- Workshop 2025-11-08 10:45: social/economy/world команды подтвердили индексы и события.
+
+---
+
+## 16. История изменений
+
+- 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт семейной системы.

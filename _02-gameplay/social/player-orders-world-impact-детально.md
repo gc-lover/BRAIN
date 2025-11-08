@@ -17,9 +17,9 @@
 - **Status:** created
 - **Tasks:**
   - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-world-impact-api.md) — `api/v1/world/player-orders/effects.yaml` (глобальные эффекты, кризисы, события) — created 2025-11-08 12:45.
-  - API-TASK-ECON-PO-Index — `api/v1/economy/player-orders/index.yaml` (экономические индексы, макропоказатели) — pending creation.
+  - [API-TASK-320](../../API-SWAGGER/tasks/active/queue/task-320-player-orders-economy-index-api.md) — `api/v1/economy/player-orders/index.yaml` (экономические индексы, макропоказатели) — created 2025-11-08 12:55.
   - API-TASK-SOC-PO-News — `api/v1/social/player-orders/news.yaml` (новостная лента, уведомления) — pending creation.
-- **Last Updated:** 2025-11-08 12:45
+- **Last Updated:** 2025-11-08 12:55
 
 ---
 
