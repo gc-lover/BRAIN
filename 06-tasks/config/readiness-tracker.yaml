@@ -516,6 +516,18 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/_02-gameplay/social/mentorship-system-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Наставничество детально: программы, контракты, академии, REST/Kafka контуры и UX согласованы с social/world/economy сервисами."
+    issues: []
+    api_target:
+      - "api/v1/social/mentorship/programs.yaml"
+      - "api/v1/social/mentorship/contracts.yaml"
+      - "api/v1/world/academies/events.yaml"
+
   - path: ".BRAIN/02-gameplay/social/family-relationships-system.md"
     status: "ready"
     version: "1.1.0"

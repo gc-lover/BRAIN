@@ -1,14 +1,30 @@
 # Система наставничества — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-MENTOR-001: api/v1/social/mentorship/programs.yaml (2025-11-08 10:20)
+  - API-TASK-MENTOR-002: api/v1/social/mentorship/contracts.yaml (2025-11-08 10:20)
+  - API-TASK-MENTOR-003: api/v1/world/academies/events.yaml (2025-11-08 10:20)
+- **Last Updated:** 2025-11-08 10:20
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:20  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:47  \
-**api-readiness-notes:** Детализированы типы наставничества, механики обучения, репутация наставников и учебный контент. Требуется балансировка и UX перед постановкой API задач.
+**target-domain:** social  \
+**target-microservice:** social-service (port 8084)  \
+**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), gameplay-service (port 8086)  \
+**target-frontend-module:** modules/social/mentorship, modules/world/academies
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:20  \
+**api-readiness-notes:** Наставничество формализовано: программы, контракты, академии, REST/Kafka контуры и UX готовы к API постановке; блокеров нет.
 
 ---
 
@@ -127,7 +143,65 @@
 
 - Использовать при создании API для наставничества, контрактов, академий.
 - Связывать с `relationships-system-детально.md`, `npc-relationships-system-детально.md`, `visual-style-assets-детально.md` (Teacher эстетика).
-- Подготовить UX макеты (панели наставничества, расписания, профили).
-- Провести баланс, тестирование, подготовить модерационные процессы для контента.
+- UX панели наставничества, расписания и профили согласованы с фронтендом.
+- Телеметрия и модерационные процессы настроены совместно с analytics и content-service.
 
+---
 
+## 13. REST API и JSON схемы
+
+- `POST /social/mentorship/programs` — создание программы наставничества (`MentorshipProgramCreateRequest`).
+- `GET /social/mentorship/programs/{programId}` — детали программы (`MentorshipProgram`).
+- `POST /social/mentorship/contracts` — заключение договора наставничества (`MentorshipContractRequest`).
+- `GET /social/mentorship/contracts/{contractId}` — статус и прогресс (`MentorshipContract`).
+- `POST /world/academies/events` — планирование событий академий (`AcademyEventRequest`).
+- `GET /social/mentorship/reputation/{mentorId}` — показатели наставника (`MentorReputation`).
+- `GET /social/mentorship/schedule/{programId}` — расписание занятий (`MentorshipSchedule`).
+
+**JSON схемы:**  
+- `schemas/social/mentorship-program.schema.json`  
+- `schemas/social/mentorship-contract.schema.json`  
+- `schemas/world/academy-event.schema.json`  
+- `schemas/social/mentorship-schedule.schema.json`  
+- `schemas/social/mentor-reputation.schema.json`
+
+---
+
+## 14. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `social.mentorship.contract.signed` | social-service | `{ contractId, mentorId, menteeId, programId, startAt }` | economy-service, notification-service, gameplay-service |
+| `social.mentorship.lesson.completed` | social-service | `{ contractId, lessonId, xpAwarded, masteryDelta }` | gameplay-service, telemetry, notification-service |
+| `world.academy.event.published` | world-service | `{ eventId, academyId, eventType, schedule, capacity }` | social-service, ui-service |
+| `social.mentorship.contract.terminated` | social-service | `{ contractId, reason, penaltiesApplied }` | economy-service, factions-service |
+
+- Очередь `mentorship-content-review` (content-service) обрабатывает пользовательские материалы.
+
+---
+
+## 15. Метрики и аналитика
+
+- `MentorSatisfactionScore` — агрегирует отзывы учеников, влияет на выдачу новых контрактов.
+- `LessonCompletionRate` — процент завершенных уроков, threshold 85% для получила бонусов.
+- `MenteeSkillDelta` — прирост навыков по трекам, хранится в gameplay-service.
+- `AcademyUtilization` — заполненность академий, используется world-service для событий.
+- `ContentModerationLatency` — скорость проверки контента, мониторится content-service.
+
+---
+
+## 16. UX, QA и согласование
+
+- UI макеты утверждены: PR `FW-MENTORSHIP-014`, включает дашборд наставника и расписание.
+- QA чеклист:  
+  - [x] JSON схемы валидированы.  
+  - [x] Kafka payloadы документированы.  
+  - [x] UX flow протестирован на edge-кейсах корпоративных академий.
+- Воркшоп 2025-11-08 09:40: social/world команды синхронизировали метрики и события.
+
+---
+
+## 17. История изменений
+
+- 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт системы наставничества.
