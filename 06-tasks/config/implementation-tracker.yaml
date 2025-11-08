@@ -471,6 +471,30 @@ implementations:
     agent: "Frontend Agent"
     priority: "CRITICAL"
 
+- api_path: "api/v1/players/players.yaml"
+  task_id: "API-TASK-127"
+  brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
+  api_status: "completed"
+  api_completed: "2025-11-08 17:45"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
+- api_path: "api/v1/players/characters.yaml"
+  task_id: "API-TASK-127"
+  brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
+  api_status: "completed"
+  api_completed: "2025-11-08 17:45"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
+
 - api_path: "api/v1/inventory/inventory-management.yaml"
   task_id: "API-TASK-138"
   brain_source: ".BRAIN/05-technical/backend/inventory-system.md"

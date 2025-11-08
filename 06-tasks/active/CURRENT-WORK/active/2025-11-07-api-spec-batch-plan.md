@@ -1,4 +1,11 @@
 ---
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-372: api/v1/technical/api-generation/batch-plan.yaml (2025-11-08 19:40)
+- **Last Updated:** 2025-11-08 19:40
+---
+---
 **Статус:** approved  
 **Версия:** 1.2.0  
 **Дата создания:** 2025-11-07 02:45  

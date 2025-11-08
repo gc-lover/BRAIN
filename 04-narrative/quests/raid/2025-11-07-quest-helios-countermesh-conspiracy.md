@@ -1,5 +1,11 @@
 # Квест — Helios Countermesh Conspiracy
 
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-376: api/v1/narrative/quests/helios-countermesh-conspiracy.yaml (2025-11-08 20:55)
+- **Last Updated:** 2025-11-08 20:55
+
 **ID квеста:** `quest-helios-countermesh-conspiracy`  
 **Тип:** raid-chain  
 **Статус:** approved  

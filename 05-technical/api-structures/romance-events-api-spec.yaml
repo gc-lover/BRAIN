@@ -1,4 +1,10 @@
 ---
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-373: api/v1/social/romance/events.yaml (2025-11-08 19:55)
+- **Last Updated:** 2025-11-08 19:55
+---
 **api-readiness:** ready
 **api-readiness-check-date:** 2025-11-08 12:20
 **api-readiness-notes:** Production URL и x-microservice обновлены под актуальную микросервисную архитектуру
