@@ -50,6 +50,6 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service).
+  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service).
