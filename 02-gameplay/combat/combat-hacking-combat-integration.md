@@ -1,8 +1,8 @@
-﻿# Боевая система — Интеграция хакерства с боем
+﻿# Боевая система — Интеграция хакерства в бою
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:15
-**api-readiness-notes:** Перепроверено 2025-11-09 01:15. Документ готов к созданию API задач: хакерство врагов, PvP, обнаружение, anti-cheat сценарии (v1.0.0).
+**api-readiness-check-date:** 2025-11-09 01:44
+**api-readiness-notes:** Перепроверено 2025-11-09 01:44. PvP-взаимодействия, обнаружение и ответные меры готовы для планирования API задач (v1.0.0).
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  

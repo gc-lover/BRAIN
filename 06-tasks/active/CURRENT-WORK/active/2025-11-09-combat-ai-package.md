@@ -14,6 +14,7 @@
 - Определены зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
 - Проверено ядро системы проверок `.BRAIN/02-gameplay/combat/combat-dnd-core.md`: подтверждены DC, модификаторы, групповые проверки, добавлено в `ready.md` и `readiness-tracker.yaml`.
 - Актуализированы readiness-записи для `combat-ai-enemies`, `combat-abilities`, `combat-dnd-core`, `combat-dnd-integration-shooter`, `arena-system` — подтверждён статус `ready`, даты проверки освежены (2025-11-09 01:15), уточнены каталоги `api/v1/gameplay/combat/*.yaml` и фронтенд-модули; агрегированная сводка зафиксирована в `2025-11-09-combat-wave-package.md`.
+- 2025-11-09 01:44 — перепроверены `combat-dnd-integration-shooter`, `combat-extract`, `combat-hacking-networks`, `combat-hacking-combat-integration`; readiness и очередь `ready.md` синхронизированы, пакет зависимостей уточнён.
 
 ## Материалы и статусы
 - `combat-ai-enemies.md` — v1.0.0, `ready`, приоритет `highest`, микросервис `gameplay-service`, модуль `modules/combat/ai`.

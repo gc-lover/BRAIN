@@ -42,7 +42,7 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать API задачи на сетевой хакерский слой (gameplay-service, `api/v1/gameplay/combat/hacking/networks.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: подготовить задачи по интеграции хакерства в бою (gameplay-service, api/v1/gameplay/combat/hacking/combat-integration.yaml).
+  **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: подготовить API задачи по интеграции хакерства в бою (gameplay-service, `api/v1/gameplay/combat/hacking/combat-integration.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
