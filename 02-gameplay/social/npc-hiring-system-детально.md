@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-NPC-HIRE-001: api/v1/social/npc-hiring/contracts.yaml (2025-11-08 10:27)
-  - API-TASK-NPC-HIRE-002: api/v1/social/npc-hiring/workforce.yaml (2025-11-08 10:27)
-  - API-TASK-NPC-HIRE-003: api/v1/economy/npc-hiring/payroll.yaml (2025-11-08 10:27)
-- **Last Updated:** 2025-11-08 10:27
+  - API-TASK-349: api/v1/social/npc-hiring/contracts.yaml (2025-11-08 19:40)
+  - API-TASK-350: api/v1/social/npc-hiring/workforce.yaml (2025-11-08 19:40)
+  - API-TASK-351: api/v1/economy/npc-hiring/payroll.yaml (2025-11-08 19:40)
+- **Last Updated:** 2025-11-08 19:40
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:27  \
+**Последнее обновление:** 2025-11-08 19:40  \
 **Приоритет:** высокий
 
 **target-domain:** social  \
