@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:25  
+**api-readiness-check-date:** 2025-11-07 06:25
 **api-readiness-notes:** Player Impact Persistence. БД schema, хранение влияния, API. ~200 строк.
 ---
 

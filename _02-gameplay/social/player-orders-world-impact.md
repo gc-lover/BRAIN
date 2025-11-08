@@ -12,7 +12,7 @@
 # Система заказов — Влияние на игровой мир
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `player-orders-system.md`. Влияние на экономику/социум/фракции.
 
 **target-domain:** social  

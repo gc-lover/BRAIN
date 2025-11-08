@@ -1,7 +1,7 @@
 # Побочные квесты (Side Quests) — Карта по периодам (2020–2093)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:20  
+**api-readiness-check-date:** 2025-11-05 18:20
 **api-readiness-notes:** Наративные документы с дизайном квестов; не для API напрямую
 
 **Статус:** draft  

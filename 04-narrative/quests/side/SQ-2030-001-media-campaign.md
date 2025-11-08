@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2030-001 "Медиа-кампания" — 20 узлов, медиа/соцпроверки, влияние на DAO/активистов.
 ---
 

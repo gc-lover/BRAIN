@@ -7,7 +7,7 @@
 **Команды:** gameplay-service, social-service, economy-service, world-service
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Сформированы REST и Kafka контракты, определены владельцы, зависимости и артефакты для передачи в API-SWAGGER и BACK-JAVA. Документ согласован с gameplay/backend.
 
 ---

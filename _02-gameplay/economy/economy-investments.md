@@ -18,7 +18,7 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Добавлены lifecycle, портфель, API, отчётность и интеграции. Инвестиционный модуль готов к API.»
 
 **target-domain:** economy  

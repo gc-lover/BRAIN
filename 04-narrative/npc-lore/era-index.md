@@ -7,7 +7,7 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:05  
+**api-readiness-check-date:** 2025-11-05 18:05
 **api-readiness-notes:** Служебный индекс для навигации по NPC, не предназначен для API
 
 ---

@@ -12,7 +12,7 @@
 **target-мicroservices:** world-service, combat-service, social-service, economy-service  
 **target-frontend-module:** modules/world, modules/combat, modules/guild/raids  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:55  
+**api-readiness-check-date:** 2025-11-07 20:55
 **api-readiness-notes:** Рейдовая операция Specter Surge: фазы синхронизации пилотов и мехов, D&D проверки, API карта world/combat/social/economy готовая к постановке задач.
 
 ---

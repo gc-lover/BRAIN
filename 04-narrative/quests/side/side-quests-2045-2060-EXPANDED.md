@@ -12,7 +12,7 @@
 # Побочные квесты: 2045–2060 (РАСШИРЕННАЯ ВЕРСИЯ)
 
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 01:30  
+**api-readiness-check-date:** 2025-11-06 01:30
 **api-readiness-notes:** Полноразмерные квесты с диалоговыми деревьями (20-30 узлов), skill-checks, лут-таблицами, событиями перемещений и репутационными формулами
 
 **target-domain:** narrative  

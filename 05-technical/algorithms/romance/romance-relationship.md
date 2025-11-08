@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:35  
+**api-readiness-check-date:** 2025-11-07 06:35
 **api-readiness-notes:** Romance Relationship Calc. Расчет отношений, этапы романтики. ~340 строк.
 ---
 

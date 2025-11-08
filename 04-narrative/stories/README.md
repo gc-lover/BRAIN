@@ -1,7 +1,7 @@
 # Истории и повествования
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 10:41  
+**api-readiness-check-date:** 2025-11-05 10:41
 **api-readiness-notes:** Раздел для литературных историй, не предназначен для создания API
 
 ---

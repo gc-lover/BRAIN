@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/social/informants  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:25  
+**api-readiness-check-date:** 2025-11-07 21:25
 **api-readiness-notes:** «Версия 1.3.0: расширены состояния (market/fiesta/blackwall), пасхалки, YAML/REST и телеметрия street-информанта.»
 
 ---

@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:00  
+**api-readiness-check-date:** 2025-11-07 06:00
 **api-readiness-notes:** Global State Operations микрофича. Query service, projections, monitoring, performance, testing, security, scalability, API. ~480 строк.
 ---
 

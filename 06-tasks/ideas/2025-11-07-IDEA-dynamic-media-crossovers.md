@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 18:31  
+**api-readiness-check-date:** 2025-11-07 18:31
 **api-readiness-notes:** Концептуальный пакет кроссоверных пасхалок, не предназначен для API генерации
 
 # Динамические медиа-кроссоверы и чиз-сцены

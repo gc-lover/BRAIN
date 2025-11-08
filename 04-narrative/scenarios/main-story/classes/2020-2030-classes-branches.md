@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:30  
+**api-readiness-check-date:** 2025-11-05 18:30
 **api-readiness-notes:** Ветки по классам (2020–2030): роли, выбор фракций, D&D‑проверки, последствия, перенос в 2030–2045.
 ---
 

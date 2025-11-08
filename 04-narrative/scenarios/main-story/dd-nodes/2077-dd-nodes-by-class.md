@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:42  
+**api-readiness-check-date:** 2025-11-05 18:42
 **api-readiness-notes:** Подробные D&D-узлы 2077: Dogtown, президентский протокол, кульминация.
 ---
 

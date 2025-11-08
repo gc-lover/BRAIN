@@ -12,7 +12,7 @@
 # Матрица атрибутов — Старт, рост, капы и требования
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46  
+**api-readiness-check-date:** 2025-11-07 16:46
 **api-readiness-notes:** «Матрица синхронизирована с классами и предметами: добавлены таблицы хранения, экспорт для API, валидаторы требований. Готово к постановке задач.»
 
 **target-domain:** gameplay-progression  

@@ -12,7 +12,7 @@
 **target-мicroservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/side-quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:20  
+**api-readiness-check-date:** 2025-11-07 18:20
 **api-readiness-notes:** Диалог обновлён: добавлены Specter-отряды, баланс city unrest и новые последствия для экономики.
 
 ---
@@ -292,7 +292,7 @@
 **target-мicroservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/side-quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:20  
+**api-readiness-check-date:** 2025-11-07 18:20
 **api-readiness-notes:** Диалог обновлён: добавлены Specter-отряды, баланс city unrest и новые последствия для экономики.
 
 ---
@@ -564,7 +564,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/side-quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-check-date:** 2025-11-07 18:05
 **api-readiness-notes:** Диалог обновлён: добавлен уровень Specter, элитные поручения и реакция на городские беспорядки.
 
 ---

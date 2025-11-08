@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:23  
+**api-readiness-check-date:** 2025-11-05 18:23
 **api-readiness-notes:** Основной сюжет 2045–2060: локальные сети, Blackwall, красные рынки, ИИ-культы, коридоры.
 ---
 

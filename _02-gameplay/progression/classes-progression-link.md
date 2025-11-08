@@ -1,7 +1,7 @@
 ﻿# Классы персонажей — Связь с системой прокачки
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит связь классов с прокачкой.
 
 **target-domain:** gameplay-progression  

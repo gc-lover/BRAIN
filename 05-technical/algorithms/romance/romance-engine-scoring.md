@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:46  
+**api-readiness-check-date:** 2025-11-07 01:46
 **api-readiness-notes:** Romance Event Engine - Scoring & Selection. Оценка и выбор событий, адаптация к культуре. ~350 строк.
 ---
 

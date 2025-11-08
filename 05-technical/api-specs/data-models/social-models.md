@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:30  
+**api-readiness-check-date:** 2025-11-07 06:30
 **api-readiness-notes:** API Social Models. Party, Guild, Friends, NPC models. ~200 строк.
 ---
 

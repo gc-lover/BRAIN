@@ -7,7 +7,7 @@
 **Приоритет:** низкий (Expansion)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Продвинутые механики описаны: short/margin/options/futures с API и контролем рисков."
 
 ---

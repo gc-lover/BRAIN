@@ -12,7 +12,7 @@
 # Система наставничества — Механика обучения
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит процесс обучения и прокачку навыков.
 
 **target-domain:** social  

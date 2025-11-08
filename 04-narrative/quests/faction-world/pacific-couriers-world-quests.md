@@ -1,6 +1,6 @@
 ---
-**api-readiness:** draft
-**api-readiness-check-date:** 2025-11-07 22:27
+**api-readiness:** ready
+**api-readiness-check-date:** 2025-11-08 09:20
 ---
 
 # Pacific Couriers Network: Мировые квесты

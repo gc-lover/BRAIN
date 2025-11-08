@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:39  
+**api-readiness-check-date:** 2025-11-05 18:39
 **api-readiness-notes:** Подробные D&D-узлы (2020–2030) по актам×классам: DC, преимущества/помехи, крит‑последствия, перенос.
 ---
 

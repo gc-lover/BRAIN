@@ -6,7 +6,7 @@
 **Ответственный:** AI Brain Manager
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 21:32  
+**api-readiness-check-date:** 2025-11-07 21:32
 **api-readiness-notes:** Аналитический отчёт о пробелах контента для планирования дальнейших работ. Не предназначен для постановки API задач напрямую.
 
 ---

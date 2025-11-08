@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:00  
+**api-readiness-check-date:** 2025-11-07 06:00
 **api-readiness-notes:** Global State Events микрофича. Типы событий (10 категорий), структура событий, примеры. ~390 строк.
 ---
 

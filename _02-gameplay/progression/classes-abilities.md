@@ -1,7 +1,7 @@
 ﻿# Классы персонажей — Система классовых способностей
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит систему классовых способностей и "Свой путь".
 
 **target-domain:** gameplay-progression  

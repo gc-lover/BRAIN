@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** 12 travel world events для 2060–2077: конкордаты, серые театры, учения, медиа-эскалации.
 ---
 

@@ -6,7 +6,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05  
+**api-readiness-check-date:** 2025-11-05
 **api-readiness-notes:** Готово для генерации Swagger/JSON. Указаны цели, награды, связи с лором восстановления (2023+).
 
 ---

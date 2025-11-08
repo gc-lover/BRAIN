@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:40  
+**api-readiness-check-date:** 2025-11-07 02:40
 **api-readiness-notes:** Referral System. Реферальная программа, invite rewards, milestone bonuses. ~370 строк.
 ---
 

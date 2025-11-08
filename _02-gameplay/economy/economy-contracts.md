@@ -18,7 +18,7 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** «Документ содержит полное описание контрактов (lifecycle, состояния, API, валидации, лимиты, события). Блокирующих TODO нет. Готов к постановке API задач.»
 
 **target-domain:** economy  

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:31  
+**api-readiness-check-date:** 2025-11-05 18:31
 **api-readiness-notes:** Ветки по классам (2030–2045): купола/DAO, нейроэтика, кризисы каналов/памяти, приватные войны.
 ---
 

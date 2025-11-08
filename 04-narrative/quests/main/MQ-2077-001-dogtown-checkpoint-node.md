@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** MQ-2077-001 "Dogtown Checkpoint" — 21 узел, проверка конкордатов, боевые/социально-правовые проверки, последствия в 2077-актах.
 ---
 

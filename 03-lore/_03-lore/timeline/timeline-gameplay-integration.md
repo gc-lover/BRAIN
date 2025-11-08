@@ -1,7 +1,7 @@
 # Хронология → Геймплей: карта интеграции
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:12  
+**api-readiness-check-date:** 2025-11-05 18:12
 **api-readiness-notes:** Справочная карта соответствий событий лора игровым системам
 
 **Статус:** completed  

@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:08  
+**api-readiness-check-date:** 2025-11-07 21:08
 **api-readiness-notes:** «Версия 1.2.0: расширенные состояния, пасхалки, проверки D&D, YAML/REST экспорт и телеметрия Valentinos/Heywood.»
 
 ---

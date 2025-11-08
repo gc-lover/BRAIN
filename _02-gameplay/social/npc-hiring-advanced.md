@@ -12,7 +12,7 @@
 # Система найма NPC — Продвинутые возможности
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит продвинутые механики найма.
 
 **target-domain:** social  

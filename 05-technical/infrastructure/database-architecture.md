@@ -18,7 +18,7 @@
 **Приоритет:** критический (Production)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Database architecture. PostgreSQL sharding (по player_id), replication (read replicas), partitioning (time-based для logs), backup/restore, connection pooling. Production critical!
 
 ---

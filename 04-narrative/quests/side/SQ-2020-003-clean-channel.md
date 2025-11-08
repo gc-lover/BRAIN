@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2020-003 "Чистый канал" — 20 узлов, Netrunner/Tech проверки, NetWatch/Blackwall влияние.
 ---
 

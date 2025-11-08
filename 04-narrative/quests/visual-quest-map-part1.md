@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:55  
+**api-readiness-check-date:** 2025-11-07 06:55
 **api-readiness-notes:** Visual Quest Map Part 1. ~254 строк.
 ---
 

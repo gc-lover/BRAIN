@@ -7,7 +7,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37  
+**api-readiness-check-date:** 2025-11-07 20:37
 **api-readiness-notes:** Полный список NPC кураторов активностей с биографиями и связями.
 ---
 
@@ -124,7 +124,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:34  
+**api-readiness-check-date:** 2025-11-07 20:34
 **api-readiness-notes:** Полный список NPC кураторов активностей с биографиями и связями.
 ---
 

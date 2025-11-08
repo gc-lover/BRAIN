@@ -1,7 +1,7 @@
 # Authentication & Authorization System - Навигация
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Система аутентификации, реализована в auth-service
 
 **Версия:** 1.0.1  

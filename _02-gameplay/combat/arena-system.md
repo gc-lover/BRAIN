@@ -8,7 +8,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:28  
+**api-readiness-check-date:** 2025-11-07 20:28
 **api-readiness-notes:** Полная спецификация арен: режимы, карты, рейтинги, награды, интеграции с лидербордами и голосовыми лобби.
 ---
 

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Advanced слой квестовой БД: прогресс, флаги, world-state, последствия и SQL-примеры.
 ---
 

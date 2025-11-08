@@ -12,7 +12,7 @@
 # Система найма NPC — Ограничения и требования
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит ограничения и требования для найма.
 
 **target-domain:** social  

@@ -1,7 +1,7 @@
 # Быстрое руководство по правилам Cursor
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-03 00:04  
+**api-readiness-check-date:** 2025-11-03 00:04
 **api-readiness-notes:** Служебный конфигурационный файл, описание правил Cursor, не предназначен для создания API
 
 ## Структура правил

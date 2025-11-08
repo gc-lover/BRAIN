@@ -1,6 +1,6 @@
 ---
-**api-readiness:** draft
-**api-readiness-check-date:** 2025-11-08 01:12
+**api-readiness:** ready
+**api-readiness-check-date:** 2025-11-08 09:20
 ---
 
 # Anchorage Icefront Authority: Мировые квесты

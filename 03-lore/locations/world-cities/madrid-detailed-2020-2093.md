@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:26  
+**api-readiness-check-date:** 2025-11-08 00:26
 **api-readiness-notes:** Добавлены структуры данных, REST/GraphQL/Kafka контракты и UX-флоу; документ готов к постановке API задач.
 
 **API Tasks Status:**  

@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05 19:25  
+**api-readiness-check-date:** 2025-11-05 19:25
 **api-readiness-notes:** World events для перемещений между локациями: 10-15 событий на эпоху, с skill-checks, лутом, репутацией.
 
 **target-domain:** world  

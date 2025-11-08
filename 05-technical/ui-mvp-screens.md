@@ -7,7 +7,7 @@
 **Связанные документы:** `ui-registration.md`, `ui-character-creation.md`, `ui-game-start.md`, `ui-main-game.md`
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Все экраны MVP имеют описанные данные, состояния и события. Готово для постановки задач во `FRONT-WEB` и `BACK-JAVA`.
 
 ---

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 19:02  
+**api-readiness-check-date:** 2025-11-05 19:02
 **api-readiness-notes:** NetWatch и Voodoo Boys: конфликт философий, Blackwall, детальные сценарии 2020–2093.
 ---
 

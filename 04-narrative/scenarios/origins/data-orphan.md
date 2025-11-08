@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:38  
+**api-readiness-check-date:** 2025-11-05 18:38
 **api-readiness-notes:** Origin Data Orphan: аномальные сетевые следы, Blackwall‑шумы, мета‑подсказки.
 ---
 

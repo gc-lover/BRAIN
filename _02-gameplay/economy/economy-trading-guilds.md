@@ -18,7 +18,7 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Гильдии описаны: создание, капитал, lifecycle, управление, API, аудит, интеграции. Документ готов.»
 
 **target-domain:** economy  

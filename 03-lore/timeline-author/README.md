@@ -1,7 +1,7 @@
 # Авторская хронология событий (NECPGAME Canon)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:26  
+**api-readiness-check-date:** 2025-11-05 18:26
 **api-readiness-notes:** Авторские события, созданные на основе концепций NECPGAME и вдохновлённые лором Cyberpunk. Для лора игры, не для API.
 
 **Статус:** completed  

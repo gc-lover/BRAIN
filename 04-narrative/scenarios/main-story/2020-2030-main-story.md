@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:22  
+**api-readiness-check-date:** 2025-11-05 18:22
 **api-readiness-notes:** Основной сюжет 2020–2030: DataKrash/Blackwall, ранние конфликты, ввод фракций. Каркас с D&D узлами и зависимостями.
 ---
 

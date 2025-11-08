@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:59  
+**api-readiness-check-date:** 2025-11-07 01:59
 **api-readiness-notes:** Leaderboard System. Глобальные и локальные рейтинги, различные категории, сезонность. ~400 строк.
 ---
 

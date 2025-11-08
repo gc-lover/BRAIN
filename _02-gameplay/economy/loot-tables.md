@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05 19:30  
+**api-readiness-check-date:** 2025-11-05 19:30
 **api-readiness-notes:** Полные лут-таблицы для всех типов квестов, событий, врагов. Формулы вероятностей, редкость, модификаторы.
 
 **target-domain:** economy  

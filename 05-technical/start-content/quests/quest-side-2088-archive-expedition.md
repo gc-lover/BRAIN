@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:50  
+**api-readiness-check-date:** 2025-11-06 20:50
 **api-readiness-notes:** Полная спецификация квеста 2088 «Экспедиция за заслон» с 27 узлами диалогов. Соответствует `quest-side-2088-archive-expedition`.
 ---
 

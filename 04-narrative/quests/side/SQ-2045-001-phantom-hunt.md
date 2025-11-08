@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2045-001 "Охота на фантомов" — 20 узлов, сетевые/боевые проверки, Blackwall-риски.
 ---
 

@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:10  
+**api-readiness-check-date:** 2025-11-07 06:10
 **api-readiness-notes:** Player Market API. API endpoints, примеры использования, интеграция, безопасность. ~230 строк.
 ---
 

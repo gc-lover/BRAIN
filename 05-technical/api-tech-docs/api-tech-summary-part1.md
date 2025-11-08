@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:55  
+**api-readiness-check-date:** 2025-11-07 06:55
 **api-readiness-notes:** API Tech Summary Part 1. ~253 строк.
 ---
 

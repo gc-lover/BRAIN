@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 19:10  
+**api-readiness-check-date:** 2025-11-05 19:10
 **api-readiness-notes:** Полный список квестов для всех эпох 2020-2093 с категориями, D&D узлами, репутацией и лутом.
 ---
 

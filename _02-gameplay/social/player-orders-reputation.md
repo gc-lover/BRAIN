@@ -12,7 +12,7 @@
 # Система заказов — Репутация и рейтинг
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `player-orders-system.md`. Рейтинг заказчиков/исполнителей.
 
 **target-domain:** social  

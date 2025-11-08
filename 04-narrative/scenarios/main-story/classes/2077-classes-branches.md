@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:34  
+**api-readiness-check-date:** 2025-11-05 18:34
 **api-readiness-notes:** Ветки по классам (2077): Dogtown, президентский протокол, кульминация.
 ---
 

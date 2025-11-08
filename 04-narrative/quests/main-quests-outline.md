@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 10:55  
+**api-readiness-check-date:** 2025-11-05 10:55
 **api-readiness-notes:** Литературный документ, план квестов, не предназначен для создания API
 
 ---

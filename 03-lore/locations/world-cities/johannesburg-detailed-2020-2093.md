@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:21  
+**api-readiness-check-date:** 2025-11-08 00:21
 **api-readiness-notes:** Добавлены модели данных, REST/Kafka контракты world-service и UX-флоу хроники города; документ готов для постановки API задач.
 
 **API Tasks Status:**  

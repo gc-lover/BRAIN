@@ -12,7 +12,7 @@
 # Навыки — классовые и подклассовые различия, эксклюзивы
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46  
+**api-readiness-check-date:** 2025-11-07 16:46
 **api-readiness-notes:** «Классовые навыки: расписаны матрицы модификаторов, ранги разблокировки, структура данных и REST API. Связь с progression-skills-mapping синхронизирована.»
 
 **target-domain:** gameplay-progression  

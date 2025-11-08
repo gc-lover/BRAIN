@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** MQ-2060-001 "Купольные конкордаты" — 22 узла, сетевые договоры, правовой бой, D&D проверки, последствия для 2077.
 ---
 

@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:50  
+**api-readiness-check-date:** 2025-11-07 20:50
 **api-readiness-notes:** «Диалог выбора пути разветвлён: сцены для корпораций, улиц, закона и фриланса с проверками, пасхалками и полным экспортом YAML/REST.»
 
 ---

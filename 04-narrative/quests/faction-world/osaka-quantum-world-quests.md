@@ -1,6 +1,6 @@
 ---
-**api-readiness:** draft
-**api-readiness-check-date:** 2025-11-08 00:12
+**api-readiness:** ready
+**api-readiness-check-date:** 2025-11-08 09:20
 ---
 
 # Osaka Quantum Dock Authority: Мировые квесты

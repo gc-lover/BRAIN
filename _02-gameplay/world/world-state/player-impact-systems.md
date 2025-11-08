@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:25  
+**api-readiness-check-date:** 2025-11-07 06:25
 **api-readiness-notes:** Player Impact Systems. Integration с квестами, экономикой, боем. ~420 строк.
 ---
 

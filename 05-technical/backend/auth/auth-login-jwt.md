@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:46  
+**api-readiness-check-date:** 2025-11-07 01:46
 **api-readiness-notes:** Authentication System - Login & JWT. Login flow, JWT tokens, password recovery, 2FA. ~380 строк.
 ---
 

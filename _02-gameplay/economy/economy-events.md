@@ -18,7 +18,7 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Лifecycle событий, API, планировщики, интеграции и мониторинг описаны полностью. Готово к API задачам.»
 
 **target-domain:** economy  

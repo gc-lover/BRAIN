@@ -12,7 +12,7 @@
 # Система найма NPC — Эффективность нанятых NPC
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит факторы эффективности.
 
 **target-domain:** social  

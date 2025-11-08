@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:34  
+**api-readiness-check-date:** 2025-11-07 02:34
 **api-readiness-notes:** Clan War System. Войны кланов, территории, siege mechanics, rewards. ~390 строк.
 ---
 

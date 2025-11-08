@@ -5,7 +5,7 @@
 **Последнее обновление:** 2025-11-07 21:35  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:35  
+**api-readiness-check-date:** 2025-11-07 21:35
 **api-readiness-notes:** Каталог авторских корпораций/банд: лор, история, механики, особенности, интеграция с world-service и social-service.
 ---
 

@@ -1,7 +1,7 @@
 # Архитектура директорий .BRAIN
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 23:16  
+**api-readiness-check-date:** 2025-11-06 23:16
 **api-readiness-notes:** Служебный файл, описание архитектуры репозитория, не предназначен для создания API
 
 **Последнее обновление:** 2025-11-07 - Добавлены секции о микросервисной архитектуре бэкенда, модульной архитектуре фронтенда и библиотеке UI компонентов
@@ -429,7 +429,7 @@
 **Приоритет:** низкий | средний | высокий | критический
 
 **api-readiness:** ready | needs-work | blocked | in-review | not-applicable  
-**api-readiness-check-date:** YYYY-MM-DD HH:MM  
+**api-readiness-check-date:** YYYY-MM-DD HH:MM
 **api-readiness-notes:** Заметки о готовности/проблемах (опционально)
 
 ---

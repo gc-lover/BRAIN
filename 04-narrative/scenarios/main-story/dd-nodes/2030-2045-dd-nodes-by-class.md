@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:40  
+**api-readiness-check-date:** 2025-11-05 18:40
 **api-readiness-notes:** Подробные D&D-узлы 2030–2045: купола/нейроэтика/кризисы/приватные войны.
 ---
 

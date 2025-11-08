@@ -1,7 +1,7 @@
 # Побочные квесты: 2060–2077
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:23  
+**api-readiness-check-date:** 2025-11-05 18:23
 **api-readiness-notes:** Наративные квесты периода неокорпоративного порядка
 
 **Статус:** draft  

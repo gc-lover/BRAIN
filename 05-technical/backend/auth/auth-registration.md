@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30  
+**api-readiness-check-date:** 2025-11-07 05:30
 **api-readiness-notes:** Auth Registration микрофича. Регистрация email/password, OAuth, email verification. ~380 строк.
 ---
 

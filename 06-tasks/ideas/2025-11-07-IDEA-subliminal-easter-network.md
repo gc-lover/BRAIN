@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 20:05  
+**api-readiness-check-date:** 2025-11-07 20:05
 **api-readiness-notes:** Концептуальный пакет пасхалок-сигналов, не предназначен для API генерации
 
 # Сублиминальная сеть пасхалок

@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:20  
+**api-readiness-check-date:** 2025-11-07 06:20
 **api-readiness-notes:** UI Main Game HUD. Главный экран, меню действий, инвентарь, экипировка. ~350 строк.
 ---
 

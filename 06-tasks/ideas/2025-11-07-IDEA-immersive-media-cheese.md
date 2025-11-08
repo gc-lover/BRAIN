@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 17:48  
+**api-readiness-check-date:** 2025-11-07 17:48
 **api-readiness-notes:** Концептуальный набор иммерсивных пасхалок, не предназначен для API генерации
 
 # Иммерсивные пасхалки и чиз-сценарии

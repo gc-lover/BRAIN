@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:35  
+**api-readiness-check-date:** 2025-11-05 18:35
 **api-readiness-notes:** Ветки по классам (2078–2093): параметрические ярмарки, конституции, Blackwall‑экспедиции, выбор перезапуска.
 ---
 

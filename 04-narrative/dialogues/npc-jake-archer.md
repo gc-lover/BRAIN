@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/economy/trade  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:43  
+**api-readiness-check-date:** 2025-11-07 20:43
 **api-readiness-notes:** «Файл диалогов Джейка Арчера содержит состояния, проверки, YAML-экспорт и интеграцию с торговыми активностями. Готов к постановке API-задачи.»
 
 ---
@@ -362,7 +362,7 @@ GraphQL поле `traderDialogue(id: ID!)` возвращает `TraderDialogueN
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/economy/trade  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:43  
+**api-readiness-check-date:** 2025-11-07 20:43
 **api-readiness-notes:** «Файл диалогов Джейка Арчера содержит состояния, проверки, YAML-экспорт и интеграцию с торговыми активностями. Готов к постановке API-задачи.»
 
 ---

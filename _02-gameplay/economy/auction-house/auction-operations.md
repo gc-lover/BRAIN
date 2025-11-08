@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:15  
+**api-readiness-check-date:** 2025-11-07 06:15
 **api-readiness-notes:** Auction House Operations. API endpoints, безопасность, метрики, roadmap. ~220 строк.
 ---
 

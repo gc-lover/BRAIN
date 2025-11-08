@@ -7,7 +7,7 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Интеграция описана через события, квесты, фракции, с API и шинами данных. Готово.»
 
 ---

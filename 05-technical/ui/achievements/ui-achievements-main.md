@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:18  
+**api-readiness-check-date:** 2025-11-07 02:18
 **api-readiness-notes:** UI для Achievement System. Список достижений, прогресс, categories, filters. ~390 строк.
 ---
 

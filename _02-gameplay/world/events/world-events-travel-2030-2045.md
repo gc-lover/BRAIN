@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** 12 travel world events для 2030–2045: DAO голосования, кризисы каналов, купольные протесты, тех-арбитраж, лут-таблицы.
 ---
 

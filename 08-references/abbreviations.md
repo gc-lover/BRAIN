@@ -1,7 +1,7 @@
 # Сокращения
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-02 23:12  
+**api-readiness-check-date:** 2025-11-02 23:12
 **api-readiness-notes:** Справочный документ, список сокращений, не предназначен для создания API
 
 **Последнее обновление:** 2025-11-02

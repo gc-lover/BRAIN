@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:50  
+**api-readiness-check-date:** 2025-11-06 21:50
 **api-readiness-notes:** Полная origin story для Solo «Military Veteran». 3 квеста, 18 узлов диалогов. Соответствует `quest-origin-solo-01` через `03`.
 ---
 

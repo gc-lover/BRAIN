@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:46  
+**api-readiness-check-date:** 2025-11-07 01:46
 **api-readiness-notes:** Romance Event Engine - Filtering & Weighting. Фильтрация и взвешивание романтических событий. ~360 строк.
 ---
 

@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:34  
+**api-readiness-check-date:** 2025-11-08 00:34
 **api-readiness-notes:** Определены модели климат-щитовой сети, REST/Kafka/GraphQL контракты и UX-флоу; готово к постановке API задач.
 
 **API Tasks Status:**  

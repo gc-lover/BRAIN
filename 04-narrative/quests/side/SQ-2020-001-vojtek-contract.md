@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2020-001 "Контракт Войтека" — 20 узлов, боевые/социальные проверки, репутация Fixer/Gangs, лут.
 ---
 

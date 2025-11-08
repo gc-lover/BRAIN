@@ -1,7 +1,7 @@
 # Авторские события: 2060–2077
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:06  
+**api-readiness-check-date:** 2025-11-05 18:06
 **api-readiness-notes:** Авторские события периода 2060–2077, фокус на неокорпоративном порядке и предвестниках раскрытия
 
 **Статус:** draft  

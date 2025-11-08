@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Core схема ветвящейся квестовой системы: таблицы, индексы, связи и примеры для API задач.
 ---
 

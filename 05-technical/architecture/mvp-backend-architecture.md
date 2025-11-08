@@ -7,7 +7,7 @@
 **Связанные документы:** `mvp-frontend-architecture.md`, `2025-11-08-gameplay-backend-sync.md`, `database/schema.md`
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Определены сервисы, интерфейсы, интеграции. Готово к передаче в BACK-JAVA.
 
 ---

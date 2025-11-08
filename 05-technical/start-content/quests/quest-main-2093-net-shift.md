@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05 18:27  
+**api-readiness-check-date:** 2025-11-05 18:27
 **api-readiness-notes:** Спецификация высокого уровня: цели, ветвление (соц/бой), UX, боевые и сетевые проверки, маппинг API и тесты. Готово для Swagger.
 
 ---

@@ -7,7 +7,7 @@
 **Связанные документы:** `schema.md`, `migrations.md`, `mvp-text-version-plan.md`
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Определён обязательный набор данных для начальной загрузки MVP. Готово к переносу в Liquibase `V1_4__seed_reference_data.sql`.
 
 ---

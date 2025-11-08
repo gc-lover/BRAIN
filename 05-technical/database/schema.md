@@ -7,7 +7,7 @@
 **Связанные документы:** `migrations.md`, `mvp-initial-data.md`, `gameplay-service` ERD
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Определены сущности, связи и индексы для MVP. Готово к генерации миграций и реализации в BACK-JAVA.
 
 ---

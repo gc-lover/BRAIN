@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:20  
+**api-readiness-check-date:** 2025-11-07 05:20
 **api-readiness-notes:** Система друзей. Friend list, requests, online status, ignore list, recent players.
 ---
 ---

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2020-002 "Контракт Trauma Team" — 20 узлов, мед/боевые/соц проверки, репутация Trauma Team/гильдий рипдоков.
 ---
 

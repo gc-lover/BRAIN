@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 18:49  
+**api-readiness-check-date:** 2025-11-07 18:49
 **api-readiness-notes:** Концептуальный набор пасхалок по городским легендам, не предназначен для API генерации
 
 # Городские легенды и пасхальные маршруты

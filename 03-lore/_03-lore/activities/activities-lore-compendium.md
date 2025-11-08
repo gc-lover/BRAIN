@@ -7,7 +7,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37  
+**api-readiness-check-date:** 2025-11-07 20:37
 **api-readiness-notes:** Завершённый лор-компендиум по активностям для синхронизации геймдизайна и нарратива.
 ---
 
@@ -93,7 +93,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:34  
+**api-readiness-check-date:** 2025-11-07 20:34
 **api-readiness-notes:** Завершённый лор-компендиум по активностям для синхронизации геймдизайна и нарратива.
 ---
 

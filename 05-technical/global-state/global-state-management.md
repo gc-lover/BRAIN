@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:00  
+**api-readiness-check-date:** 2025-11-07 06:00
 **api-readiness-notes:** Global State Management микрофича. Event processing pipeline, State Manager implementation, Time Travel. ~430 строк.
 ---
 

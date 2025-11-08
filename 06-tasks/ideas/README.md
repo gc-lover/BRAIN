@@ -1,7 +1,7 @@
 # Идеи для проработки
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-03 00:04  
+**api-readiness-check-date:** 2025-11-03 00:04
 **api-readiness-notes:** Служебный файл, индекс идей, не предназначен для создания API
 
 **Цель:** Хранить идеи, которые нужно проработать в будущем.

@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30  
+**api-readiness-check-date:** 2025-11-07 05:30
 **api-readiness-notes:** Matchmaking Rating микрофича. MMR/ELO system, rating tiers, anti-smurf. ~340 строк.
 ---
 

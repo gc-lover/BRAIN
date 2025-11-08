@@ -1,7 +1,7 @@
 # Лос-Анджелес: авторские события 2020–2093
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:26  
+**api-readiness-check-date:** 2025-11-05 18:26
 **api-readiness-notes:** Локальные события Лос-Анджелеса, совместимые с Америкой
 
 **Статус:** draft  

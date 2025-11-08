@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 18:10  
+**api-readiness-check-date:** 2025-11-07 18:10
 **api-readiness-notes:** Концептуальный пакет пасхалок-головоломок, не предназначен для API генерации
 
 # Реактивные пасхалки и медиа-головоломки

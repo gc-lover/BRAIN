@@ -8,7 +8,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:33  
+**api-readiness-check-date:** 2025-11-07 20:33
 **api-readiness-notes:** Каталог подземелий: сценарии, фазы, модификаторы, связь с лором и системой прогрессии.
 ---
 

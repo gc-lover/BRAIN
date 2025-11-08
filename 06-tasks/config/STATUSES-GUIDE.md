@@ -5,7 +5,7 @@
 **Версия:** 1.0.0
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 22:42  
+**api-readiness-check-date:** 2025-11-06 22:42
 **api-readiness-notes:** Служебный справочный документ, описывает системы статусов для агентов, не предназначен для создания API
 
 ---

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:36  
+**api-readiness-check-date:** 2025-11-05 18:36
 **api-readiness-notes:** Origin Street Kid: завязка, траектория по эпохам, D&D‑узлы, фракции, детальная история.
 ---
 

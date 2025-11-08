@@ -7,7 +7,7 @@
 **Приоритет:** критический
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 18:20  
+**api-readiness-check-date:** 2025-11-06 18:20
 **api-readiness-notes:** MVP требования полностью определены (auth, персонажи, локации, квесты, инвентарь, NPC, бой, торговля). Готово для создания API задач в API-SWAGGER.
 
 ---

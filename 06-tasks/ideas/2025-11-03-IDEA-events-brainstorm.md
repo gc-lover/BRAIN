@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-03 21:10  
+**api-readiness-check-date:** 2025-11-03 21:10
 **api-readiness-notes:** Идея для проработки, концептуальный документ, не предназначен для создания API
 
 # Брейншторм возможных эвентов для NECPGAME

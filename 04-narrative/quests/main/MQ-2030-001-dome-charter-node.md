@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** MQ-2030-001 "Устав Световых Куполов" — 25 узлов, D&D проверки, репутация DAO/корпы, лут и последствия.
 ---
 

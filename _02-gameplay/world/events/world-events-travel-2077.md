@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** 10 travel world events для 2077: Dogtown, NUSA, Barghest, протесты, blackout.
 ---
 

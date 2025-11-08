@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:21  
+**api-readiness-check-date:** 2025-11-07 21:21
 **api-readiness-notes:** «Цепочка Valentinos против Maelstrom: сцены turf-war, переговоры, пасхалки и экспорт YAML/REST. Готово для API.»
 
 ---

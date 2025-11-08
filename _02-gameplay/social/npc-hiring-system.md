@@ -1,7 +1,7 @@
 ﻿# Система найма NPC — Обзор
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Обзорный документ. Детализация вынесена в файлы-фичи.
 
 **Статус:** Обзор  

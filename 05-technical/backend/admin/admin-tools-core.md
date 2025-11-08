@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:59  
+**api-readiness-check-date:** 2025-11-07 01:59
 **api-readiness-notes:** Admin Tools System. Инструменты администрирования - player management, moderation, analytics. ~380 строк.
 ---
 

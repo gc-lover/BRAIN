@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:41  
+**api-readiness-check-date:** 2025-11-05 18:41
 **api-readiness-notes:** Подробные D&D-узлы 2045–2060: Blackwall, коридоры, рынки, культы.
 ---
 

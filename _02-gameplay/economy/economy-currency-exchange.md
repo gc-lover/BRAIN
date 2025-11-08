@@ -18,7 +18,7 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** «Биржа описана полностью: пары, matching engine, тарифы, API, антифрод, события. Блокирующих TODO нет.»
 
 **target-domain:** economy  

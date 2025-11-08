@@ -7,7 +7,7 @@
 **Связанные документы:** `../main-quests-outline.md`, `../QUEST-TEMPLATE-DND.md`, `../../npc-lore/NPC-TEMPLATE.md`
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** План подготовки нарратива. Используется для менеджмента готовности.
 
 ---

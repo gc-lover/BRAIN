@@ -4,7 +4,7 @@
 **Последнее обновление:** 2025-11-06 23:16
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 23:16  
+**api-readiness-check-date:** 2025-11-06 23:16
 **api-readiness-notes:** Директория со статистикой, не предназначена для создания API
 
 ---

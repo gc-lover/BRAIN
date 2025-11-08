@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/romance  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:43  
+**api-readiness-check-date:** 2025-11-07 20:43
 **api-readiness-notes:** «Этапы 1-2 романса с Ханако оформлены: чайная сцена, небесный сад, проверки, YAML и обновлённая API-интеграция.»
 
 ---

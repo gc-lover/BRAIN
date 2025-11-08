@@ -7,7 +7,7 @@
 **Приоритет:** [high|medium|low]
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** YYYY-MM-DD HH:MM  
+**api-readiness-check-date:** YYYY-MM-DD HH:MM
 **api-readiness-notes:** Литературный документ, описание NPC, не предназначен для создания API
 
 **Категория:** [important|common]  

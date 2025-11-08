@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:45  
+**api-readiness-check-date:** 2025-11-06 20:45
 **api-readiness-notes:** Полная спецификация квеста 2082 «Параметрическая ярмарка» с 24 узлами диалогов. Соответствует `quest-main-2082-parameter-fair`.
 ---
 

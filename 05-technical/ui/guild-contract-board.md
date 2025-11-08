@@ -12,7 +12,7 @@
 **target-мicroservices:** world-service, economy-service, social-service  
 **target-frontend-модули:** modules/guild/raids, modules/events, modules/social  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 23:05  
+**api-readiness-check-date:** 2025-11-07 23:05
 **api-readiness-notes:** Определены UX-флоу и API Guild Contract Board; готово к реализации фронтенда и бэкенда.
 
 ---

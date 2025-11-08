@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 19:46  
+**api-readiness-check-date:** 2025-11-07 19:46
 **api-readiness-notes:** Концептуальный пакет аномальных пасхалок, не предназначен для API генерации
 
 # Аномальные пасхальные сценарии

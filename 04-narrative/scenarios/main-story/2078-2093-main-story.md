@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:24  
+**api-readiness-check-date:** 2025-11-05 18:24
 **api-readiness-notes:** Основной сюжет 2078–2093: мета‑эвенты симуляции, перезапуск лиги, наследие.
 ---
 

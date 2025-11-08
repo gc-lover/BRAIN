@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2078-001 "Войны лицензий" — 20 узлов, эконом/юрид/медиа проверки, экспорт.
 ---
 

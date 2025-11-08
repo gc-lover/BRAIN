@@ -2,7 +2,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Сводные ответы по архитектуре квестовой системы: ветвления, синхронизация, мультиплеер и последствия.
 ---
 

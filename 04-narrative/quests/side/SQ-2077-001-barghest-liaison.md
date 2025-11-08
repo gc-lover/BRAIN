@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2077-001 "Связной Barghest" — 20 узлов, Dogtown, Barghest/NUSA, боевые/социальные проверки.
 ---
 

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:33  
+**api-readiness-check-date:** 2025-11-05 18:33
 **api-readiness-notes:** Ветки по классам (2060–2077): купольные конкордаты, прокси‑войны, оффлайн‑рейды, мета‑суды.
 ---
 

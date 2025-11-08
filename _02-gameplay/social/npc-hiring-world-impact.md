@@ -12,7 +12,7 @@
 # Система найма NPC — Влияние на игровой мир
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит влияние на мир и экономику.
 
 **target-domain:** social  

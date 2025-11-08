@@ -7,7 +7,7 @@
 **Приоритет:** low
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 08:00  
+**api-readiness-check-date:** 2025-11-06 08:00
 **api-readiness-notes:** Литературный документ, описание NPC
 
 **Категория:** common  

@@ -12,7 +12,7 @@
 **target-мicroservices:** narrative-service, world-service, economy-service, social-service  
 **target-frontend-модули:** modules/narrative/raids, modules/world/events  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:45  
+**api-readiness-check-date:** 2025-11-08 00:45
 **api-readiness-notes:** Квест спасения семьи Каэдэ с фазами, проверками и влиянием на сезонные события готов к постановке API задач.
 
 ---

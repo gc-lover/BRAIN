@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-check-date:** 2025-11-07 18:05
 **api-readiness-notes:** «Диалог риппердока дополнен расширенным YAML-экспортом, REST/GraphQL контрактом и валидацией медицинских флагов. Готов к API задачам.»
 
 ---
@@ -332,7 +332,7 @@ GraphQL-поле `dialogue(id: ID!)` возвращает `DialogueNode` вме�
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-check-date:** 2025-11-07 18:05
 **api-readiness-notes:** «Диалог риппердока дополнен расширенным YAML-экспортом, REST/GraphQL контрактом и валидацией медицинских флагов. Готов к API задачам.»
 
 ---

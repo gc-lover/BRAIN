@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** критический  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 19:12  
+**api-readiness-check-date:** 2025-11-06 19:12
 **api-readiness-notes:** Финальный квест 2093. Полная спецификация с 28 узлами диалогов, боями, проверками и ключевым раскрытием сюжета. Соответствует `quest-main-2093-simulation-reveal` из `mvp-data-json/quests.json`.
 ---
 

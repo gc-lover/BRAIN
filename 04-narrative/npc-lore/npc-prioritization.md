@@ -7,7 +7,7 @@
 **Связанные документы:** `important-npcs-list.md`, `NPC-TEMPLATE.md`, `../quests/main/main-quests-template-plan.md`
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Управленческий документ для нарратива.
 
 ---

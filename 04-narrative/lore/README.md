@@ -1,7 +1,7 @@
 # Лор игры
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 10:41  
+**api-readiness-check-date:** 2025-11-05 10:41
 **api-readiness-notes:** Раздел для лора игры, не предназначен для создания API
 
 ---

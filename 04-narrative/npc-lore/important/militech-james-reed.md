@@ -7,7 +7,7 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 22:34  
+**api-readiness-check-date:** 2025-11-07 22:34
 **api-readiness-notes:** Новый нарративный NPC Militech, готов для корпоративной и боевой веток.
 
 **Категория:** important  

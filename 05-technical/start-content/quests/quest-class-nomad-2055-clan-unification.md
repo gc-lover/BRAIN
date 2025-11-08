@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:05  
+**api-readiness-check-date:** 2025-11-06 21:05
 **api-readiness-notes:** Полная спецификация Nomad квеста 2055 «Объединение кланов» с 26 узлами диалогов. Соответствует `quest-class-nomad-2055-clan-unification`.
 ---
 

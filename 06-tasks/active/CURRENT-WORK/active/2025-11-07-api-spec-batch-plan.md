@@ -8,7 +8,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:07  
+**api-readiness-check-date:** 2025-11-07 20:07
 **api-readiness-notes:** Обновлённый план партионной генерации OpenAPI. Добавлены арены, лут-хант, подземелья, лайв-эвенты и лор-справочники.
 ---
 

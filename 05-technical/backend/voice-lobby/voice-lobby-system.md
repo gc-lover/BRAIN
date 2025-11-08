@@ -10,7 +10,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:50  
+**api-readiness-check-date:** 2025-11-07 02:50
 **api-readiness-notes:** Voice Lobby & Party Finder. Расширение voice chat: лобби, подбор команд, управление подканалами. ~380 строк.
 ---
 

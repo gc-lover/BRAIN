@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:30  
+**api-readiness-check-date:** 2025-11-06 21:30
 **api-readiness-notes:** Полная спецификация endgame raid «Blackwall Expedition». 10-15 игроков, 3 фазы, hardcore механики.
 ---
 

@@ -18,7 +18,7 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19  
+**api-readiness-check-date:** 2025-11-07 16:19
 **api-readiness-notes:** «Логистика описана: транспорт, риски, страхование, lifecycle, API, мониторинг. Блокирующих TODO нет.»
 
 **target-domain:** economy  

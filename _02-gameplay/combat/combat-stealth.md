@@ -1,7 +1,7 @@
 ﻿# Боевая система - STEALTH (Скрытность)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:36  
+**api-readiness-check-date:** 2025-11-03 19:36
 **api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по системе обнаружения (каналы, профили врагов, импланты, сети) (v1.1.0). TODO только для балансировки (не блокирует создание API).
 
 **target-domain:** gameplay-combat  

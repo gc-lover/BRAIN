@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:32  
+**api-readiness-check-date:** 2025-11-05 18:32
 **api-readiness-notes:** Ветки по классам (2045–2060): локальные сети/валюты, Blackwall‑рейды, ИИ‑культы, «тёплые коридоры», красные рынки.
 ---
 

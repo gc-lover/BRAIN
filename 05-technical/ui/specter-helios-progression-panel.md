@@ -12,7 +12,7 @@
 **target-мicroservices:** world-service, economy-service, social-service, narrative-service  
 **target-frontend-модули:** modules/world, modules/guild/raids, modules/events  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 01:05  
+**api-readiness-check-date:** 2025-11-08 01:05
 **api-readiness-notes:** Панель прогрессии, сезонные активности и API контуры подготовлены для реализации.
 
 ---

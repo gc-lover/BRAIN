@@ -1,7 +1,7 @@
 # SID — Story Impact & Divergence (Система множественных концовок)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** Литературный дизайн-документ, описание системы сюжетных ветвлений и концовок, не предназначен для создания API
 
 **Статус:** draft  

@@ -1,7 +1,7 @@
 ﻿# Классы персонажей — Общие навыки
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит полный список общих навыков для всех классов.
 
 **target-domain:** gameplay-progression  

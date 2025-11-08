@@ -1,7 +1,7 @@
 # Задания для AI агентов
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-02 23:12  
+**api-readiness-check-date:** 2025-11-02 23:12
 **api-readiness-notes:** Служебный файл, обзор раздела задач, не предназначен для создания API
 
 Этот раздел содержит задания и задачи для AI агентов Cursor.

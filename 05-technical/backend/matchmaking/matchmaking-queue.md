@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30  
+**api-readiness-check-date:** 2025-11-07 05:30
 **api-readiness-notes:** Matchmaking Queue микрофича. Queue system, wait time optimization, priority boost. ~400 строк.
 ---
 

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Комплект решений по D&D-проверкам: типы кубиков, интеграция в квесты, сюжет и игровые механики.
 ---
 

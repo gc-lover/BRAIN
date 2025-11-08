@@ -8,7 +8,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:39  
+**api-readiness-check-date:** 2025-11-07 20:39
 **api-readiness-notes:** Расширенный лутингшутер-цикл: генерация лута, эвенты, риск/награда, связь с экономикой и экстрактом.
 ---
 
@@ -168,7 +168,7 @@ Calculate Reward = base + heat_modifier + streak_bonus
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:28  
+**api-readiness-check-date:** 2025-11-07 20:28
 **api-readiness-notes:** Расширенный лутингшутер-цикл: генерация лута, эвенты, риск/награда, связь с экономикой и экстрактом.
 ---
 

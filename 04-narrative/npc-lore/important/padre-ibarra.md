@@ -7,7 +7,7 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 22:34  
+**api-readiness-check-date:** 2025-11-07 22:34
 **api-readiness-notes:** Нарративный NPC с проработанными квестовыми крючками для уличной ветки.
 
 **Категория:** important  

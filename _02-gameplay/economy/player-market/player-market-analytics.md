@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:10  
+**api-readiness-check-date:** 2025-11-07 06:10
 **api-readiness-notes:** Player Market Analytics. Метрики, roadmap, интеграция с геймплеем, стратегии. ~180 строк.
 ---
 

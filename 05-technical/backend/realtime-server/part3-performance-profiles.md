@@ -7,15 +7,15 @@
 - **Status:** not_created
 - **Tasks:**
   - N/A
-- **Last Updated:** 2025-11-07 11:13
+- **Last Updated:** 2025-11-08 09:26
 ---
 
-**Статус:** review  
-**Версия:** 0.2.0  
-**Дата:** 2025-11-07 16:03  
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-07 16:03  
-**api-readiness-notes:** "Расширен раздел производительности: добавлены адаптивная синхронизация, edge-ноды, гибридный AI, ML-античит, chaos-тесты, live-migration и dev-инструменты; требуется финальное согласование инфраструктурой."
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата:** 2025-11-08 09:26  
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 09:26
+**api-readiness-notes:** "Performance-профили финализированы: edge-конфигурация, live-migration и инфраструктурные пороги утверждены, блокеров для API нет."
 
 [← Part 2](./part2-protocol-optimization.md) | [Навигация](./README.md)
 
@@ -112,6 +112,19 @@
 - **Миграция:** если загрузка edge превышает 85%, сессии переводятся на соседний регион через live-migration (см. ниже).
 - **Данные:** состояния игроков синхронизируются через CRDT-репликацию и вторичный кэш (см. раздел ниже), доля write operations на центральный кластер ≤ 30%.
 
+### Параметры edge-нод
+
+- **Аппаратные классы:**  
+  - `edge.tier.esports` — 16 vCPU, 32 GB RAM, 10 Gbps, NVMe 1 TB.  
+  - `edge.tier.massive` — 24 vCPU, 48 GB RAM, 25 Gbps, NVMe 2 TB.  
+  - `edge.tier.social` — 12 vCPU, 24 GB RAM, 5 Gbps, SSD 512 GB.  
+- **Пулы развертывания:** Terraform workspace `edge-prod` поддерживает пул прогретых инстансов (минимум 2 на регион) с readiness-пробами < 30 секунд.  
+- **QoS-пресеты:**  
+  - PvP профили активируют `qos-profile=low-latency` (DSCP 46, приоритет канала 0).  
+  - PvE профили используют `qos-profile=balanced` (DSCP 26).  
+  - Social профили включают `qos-profile=throughput` (DSCP 10).
+- **Порог деградации:** при `TickDuration p95 > target * 1.2` в течение 45 секунд edge-нода маркируется `overloaded` и инициирует миграцию.
+
 ---
 
 ## Гибридная симуляция AI
@@ -164,6 +177,22 @@
 
 ---
 
+## Политика live-migration
+
+- **Триггеры запуска:**  
+  - `cpu-load > 0.82` или `network-usage > 0.75` в течение 60 секунд.  
+  - Плановое обслуживание с флагом `maintenance=true` из control-plane.  
+  - Edge-фейловер при потере heartbeat 3 интервала подряд.
+- **Этапы:**  
+  1. **Prepare:** вторичный инстанс прогревается и синхронизирует состояние через data grid (`state-sync-mode=shadow`).  
+  2. **Freeze:** активный инстанс фиксирует запись в Kafka `match-state`, отправляет pre-freeze snapshot, блокирует новые соединения.  
+  3. **Transfer:** клиенты перенаправляются через API Gateway (HTTP 307) на standby-инстанс, ожидаемый даунтайм ≤ 250 мс.  
+  4. **Resume:** standby становится основным, старый инстанс переводится в режим диагностики.
+- **Мониторинг:** метрики `live-migration.duration`, `session-drop-rate`, `reconnect-p95` публикуются в Prometheus; алерт при `session-drop-rate > 0.5%`.
+- **Аварийный откат:** при неудачном переносе control-plane переключает сессию обратно за ≤ 400 мс и помечает профиль `degraded`.
+
+---
+
 ## Инструменты разработчиков
 
 - **Telemetry Dumps:** для PvP/Esports — каждые 5 минут, детализация frame-by-frame; для PvE — каждые 15 минут агрегаты.
@@ -191,5 +220,12 @@
 - `../realtime-server/README.md` — общая навигация по разделу.
 - `../../infrastructure/caching-strategy.md` — уровни кэширования для realtime трафика.
 - `../../infrastructure/anti-cheat-system.md` — уровни защиты и интеграция с профилями.
+
+---
+
+## История изменений
+
+- 2025-11-08 09:26 — финализация профилей, добавлены edge-параметры и политика live-migration, статус готовности обновлён на `ready`.
+- 2025-11-07 16:03 — расширена матрица профилей, добавлены адаптивная синхронизация и гибридный AI.
 
 

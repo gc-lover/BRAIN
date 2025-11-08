@@ -7,7 +7,7 @@
 **Связанные документы:** `schema.md`, `mvp-initial-data.md`, `API-SWAGGER` gameplay/economy/social пакеты
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Сформирован набор миграций для MVP. Готово к генерации SQL и применению в BACK-JAVA.
 
 ---

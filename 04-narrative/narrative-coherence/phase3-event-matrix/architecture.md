@@ -6,7 +6,7 @@
 **Последнее обновление:** 2025-11-06 23:29
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 23:29  
+**api-readiness-check-date:** 2025-11-06 23:29
 **api-readiness-notes:** Архитектура для backend реализации графа событий
 
 ---

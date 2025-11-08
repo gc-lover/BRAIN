@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05 18:27  
+**api-readiness-check-date:** 2025-11-05 18:27
 **api-readiness-notes:** Включает цели, ветвление (соц/бой), UX, влияния на репутацию, маппинг API и тест-кейсы. Готово для Swagger.
 
 ---

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:05  
+**api-readiness-check-date:** 2025-11-07 18:05
 **api-readiness-notes:** Аудит обновлён Specter-веткой: расширены NPC Neon Ghosts и добавлены ссылки на городские беспорядки. Готово для API Task Creator.
 ---
 

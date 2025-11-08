@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 16:48  
+**api-readiness-check-date:** 2025-11-07 16:48
 **api-readiness-notes:** Концептуальная идея пасхалок, не предназначена для прямой генерации API
 
 # Скрытые медиа-пасхалки и чизы
@@ -105,7 +105,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 16:48  
+**api-readiness-check-date:** 2025-11-07 16:48
 **api-readiness-notes:** Концептуальная идея пасхалок, не предназначена для прямой генерации API
 
 # Скрытые медиа-пасхалки и чизы

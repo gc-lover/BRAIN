@@ -7,7 +7,7 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 07:56  
+**api-readiness-check-date:** 2025-11-06 07:56
 **api-readiness-notes:** Литературный документ, описание NPC
 
 **Категория:** important  

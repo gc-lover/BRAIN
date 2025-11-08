@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30  
+**api-readiness-check-date:** 2025-11-07 05:30
 **api-readiness-notes:** Chat Channels микрофича. Типы каналов (global, local, party, guild, whisper), permissions, cooldowns, message limits. ~380 строк.
 ---
 

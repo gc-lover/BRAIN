@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:05  
+**api-readiness-check-date:** 2025-11-07 06:05
 **api-readiness-notes:** MVP Auth Endpoints. Register, login, logout, refresh, /me. ~200 строк.
 ---
 

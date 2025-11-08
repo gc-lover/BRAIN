@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 19:07  
+**api-readiness-check-date:** 2025-11-07 19:07
 **api-readiness-notes:** Концептуальный пакет пасхалок для киберпространства, не предназначен для API генерации
 
 # Киберпространственные пасхалки и чизи-ткани

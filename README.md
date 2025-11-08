@@ -1,7 +1,7 @@
 # .BRAIN
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-02 23:12  
+**api-readiness-check-date:** 2025-11-02 23:12
 **api-readiness-notes:** Служебный файл, описание репозитория, не предназначен для создания API
 
 Репозиторий для хранения идей, концепций и документов по проекту NECPGAME.

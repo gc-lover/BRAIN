@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 22:10  
+**api-readiness-check-date:** 2025-11-06 22:10
 **api-readiness-notes:** Полный обзор контента игры 2020-2093. Квесты, системы, raids, romance, origins. Ready for API-SWAGGER.
 ---
 

@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:30  
+**api-readiness-check-date:** 2025-11-06 20:30
 **api-readiness-notes:** Полная спецификация квеста 2055 «Брешь в Blackwall» с 26 узлами диалогов. Соответствует `quest-faction-arasaka-2055-blackwall-breach`.
 ---
 

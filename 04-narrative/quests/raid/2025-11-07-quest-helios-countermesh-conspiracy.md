@@ -12,7 +12,7 @@
 **target-мicroservices:** narrative-service, world-service, combat-service, economy-service  
 **target-frontend-модули:** modules/narrative/raids, modules/world, modules/social  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 22:00  
+**api-readiness-check-date:** 2025-11-07 22:00
 **api-readiness-notes:** «Версия 1.3.0: полный диалог рейда с ветками Specter/Helios, пасхалками, YAML/REST и телеметрией.»
 
 ---

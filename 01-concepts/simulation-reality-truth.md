@@ -5,7 +5,7 @@
 **Последнее обновление:** 2025-11-06 18:40
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 18:40  
+**api-readiness-check-date:** 2025-11-06 18:40
 **api-readiness-notes:** Концептуальный документ о мета-структуре игры (симуляция, лиги, админ). Не содержит игровых механик для API.
 
 **Статус:** approved  

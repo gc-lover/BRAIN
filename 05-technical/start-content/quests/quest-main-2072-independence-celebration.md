@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:10  
+**api-readiness-check-date:** 2025-11-06 20:10
 **api-readiness-notes:** Полная спецификация квеста 2072 «Празднование независимости» с 24 узлами диалогов, ветками соц/расследование/бой. Соответствует `quest-main-2072-independence-celebration`.
 ---
 

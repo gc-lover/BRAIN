@@ -7,7 +7,7 @@
 **Связанные документы:** `visual-style-locations-детально.md`, `visual-style-assets-детально.md`, `../content-generation/city-life-simulation-plan.md`, `../content-generation/city-life-population-algorithm.md`
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** План по закрытию меток `needs-work`.
 
 ---

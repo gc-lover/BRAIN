@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:22  
+**api-readiness-check-date:** 2025-11-05 18:22
 **api-readiness-notes:** Основной сюжет 2030–2045: купола, нейроэтика, кризисы каналов/памяти, дата‑убежища.
 ---
 

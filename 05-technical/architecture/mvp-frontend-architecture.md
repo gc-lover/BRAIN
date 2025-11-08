@@ -7,7 +7,7 @@
 **Связанные документы:** `ui-mvp-screens.md`, `frontend-architecture-compact.md`, `2025-11-08-gameplay-backend-sync.md`
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08  
+**api-readiness-check-date:** 2025-11-08
 **api-readiness-notes:** Определены модули, состояния, интеграции. Готово к разработке `FRONT-WEB`.
 
 ---

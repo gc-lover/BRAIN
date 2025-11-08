@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:00  
+**api-readiness-check-date:** 2025-11-07 06:00
 **api-readiness-notes:** Global State Core микрофича. Архитектура системы, Event Sourcing паттерн, Event Store schema. ~400 строк.
 ---
 

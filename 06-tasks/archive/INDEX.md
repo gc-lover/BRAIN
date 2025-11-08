@@ -4,7 +4,7 @@
 **Управляется агентом:** Clear Agent (КЛИР)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 23:16  
+**api-readiness-check-date:** 2025-11-06 23:16
 **api-readiness-notes:** Индекс архива, не предназначен для создания API
 
 ---

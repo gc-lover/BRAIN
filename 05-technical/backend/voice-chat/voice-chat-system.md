@@ -10,7 +10,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:40  
+**api-readiness-check-date:** 2025-11-07 02:40
 **api-readiness-notes:** Voice Chat System. Голосовое общение, каналы, proximity chat, quality settings. ~380 строк.
 ---
 

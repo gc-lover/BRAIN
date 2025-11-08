@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:34  
+**api-readiness-check-date:** 2025-11-07 02:34
 **api-readiness-notes:** Housing System. Личные квартиры, кастомизация, furniture, декор. ~390 строк.
 ---
 

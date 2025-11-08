@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 18:25  
+**api-readiness-check-date:** 2025-11-06 18:25
 **api-readiness-notes:** Интеграция D&D с realtime шутером полностью определена (микро-проверки, импланты, способности). Готово для API.
 
 **target-domain:** gameplay-combat  

@@ -1,7 +1,7 @@
 # Backend Systems - Обзор бэкенд систем
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Навигационный файл, описывает распределение систем по микросервисам
 
 **Дата создания:** 2025-11-07  

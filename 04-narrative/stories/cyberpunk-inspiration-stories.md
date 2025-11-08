@@ -7,7 +7,7 @@
 **Приоритет:** средний
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 10:58  
+**api-readiness-check-date:** 2025-11-05 10:58
 **api-readiness-notes:** Литературный документ, описание историй, не предназначен для создания API
 
 ---

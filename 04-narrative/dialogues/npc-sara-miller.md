@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:05  
+**api-readiness-check-date:** 2025-11-07 17:05
 **api-readiness-notes:** «Диалог NCPD оформлен с состояниями, проверками, экспортом и REST/GraphQL контрактом. Инфракции синхронизированы с gameplay.»
 
 ---

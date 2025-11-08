@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:23  
+**api-readiness-check-date:** 2025-11-08 00:23
 **api-readiness-notes:** Определены городские модели, REST/GraphQL/Kafka контракты и UX-потоки для Pearl Nexus; документ готов для постановки API задач.
 
 **API Tasks Status:**  

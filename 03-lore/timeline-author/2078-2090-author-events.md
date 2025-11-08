@@ -1,7 +1,7 @@
 # Авторские события: 2078–2090
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:06  
+**api-readiness-check-date:** 2025-11-05 18:06
 **api-readiness-notes:** Авторские события периода 2078–2090, мета-эвенты симуляции и подготовка к перезапуску
 
 **Статус:** draft  

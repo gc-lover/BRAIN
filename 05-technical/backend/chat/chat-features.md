@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30  
+**api-readiness-check-date:** 2025-11-07 05:30
 **api-readiness-notes:** Chat Features микрофича. Slash commands, rich formatting, voice chat, translation, message history. ~370 строк.
 ---
 

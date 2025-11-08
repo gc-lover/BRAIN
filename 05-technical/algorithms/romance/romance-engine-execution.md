@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:46  
+**api-readiness-check-date:** 2025-11-07 01:46
 **api-readiness-notes:** Romance Event Engine - Execution & Memory. Выполнение событий и система памяти. ~320 строк.
 ---
 

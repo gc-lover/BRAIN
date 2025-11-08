@@ -1,7 +1,7 @@
 # Побочные квесты: 2090–2093 (Эпилог)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:24  
+**api-readiness-check-date:** 2025-11-05 18:24
 **api-readiness-notes:** Наративные квесты эпилога — последствия перезапуска
 
 **Статус:** draft  

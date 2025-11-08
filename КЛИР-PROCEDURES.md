@@ -5,7 +5,7 @@
 **Версия:** 1.0.0
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 23:16  
+**api-readiness-check-date:** 2025-11-06 23:16
 **api-readiness-notes:** Служебный документ с процедурами для агента КЛИР, не предназначен для создания API
 
 **Назначение:** Детальное описание процедур архивации для Clear Agent

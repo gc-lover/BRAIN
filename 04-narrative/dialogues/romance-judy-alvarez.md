@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/romance  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:35  
+**api-readiness-check-date:** 2025-11-07 21:35
 **api-readiness-notes:** «Версия 1.3.0: добавлен этап 3 с Braindance синхронизацией, пасхалками и обновлённым YAML/REST/телеметрией.»
 
 ---

@@ -37,7 +37,7 @@
    - Добавить в начало каждого проверенного документа:
      ```markdown
      **api-readiness:** ready | needs-work | blocked | in-review | not-applicable
-     **api-readiness-check-date:** YYYY-MM-DD HH:MM
+**api-readiness-check-date:** YYYY-MM-DD HH:MM
      **api-readiness-notes:** Заметки о готовности/проблемах (опционально)
      ```
 

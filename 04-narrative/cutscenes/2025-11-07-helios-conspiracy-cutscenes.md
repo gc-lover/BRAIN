@@ -12,7 +12,7 @@
 **target-мicroservices:** narrative-service, world-service, social-service  
 **target-frontend-модули:** modules/narrative/raids, modules/world  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 23:45  
+**api-readiness-check-date:** 2025-11-07 23:45
 **api-readiness-notes:** Кат-сцены (Kaori/Dr. Lysander), диалоговые ветви и события готовы к реализации через narrative-service.
 
 ---

@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** MQ-2078-001 "Параметрические ярмарки" — 20 узлов, экономические/социальные проверки, лут-экономика, кросс-эпохи.
 ---
 

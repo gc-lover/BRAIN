@@ -12,7 +12,7 @@
 **target-мicroservice:** narrative-service  
 **target-frontend-module:** modules/narrative/raids  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 22:04  
+**api-readiness-check-date:** 2025-11-07 22:04
 **api-readiness-notes:** Версия 1.3.0: ветки Specter/Helios/Balanced, пасхалки и активные события связаны с рейдом Helios Countermesh.
 
 ---

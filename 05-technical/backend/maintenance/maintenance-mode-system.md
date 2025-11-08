@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:27  
+**api-readiness-check-date:** 2025-11-07 02:27
 **api-readiness-notes:** Maintenance Mode System. Управление обслуживанием сервера, плановые остановки, уведомления. ~380 строк.
 ---
 

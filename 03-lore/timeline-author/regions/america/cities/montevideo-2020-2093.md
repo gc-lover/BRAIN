@@ -1,7 +1,7 @@
 # Монтевидео: авторские события 2020–2093
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** Локальные события Монтевидео
 
 **Статус:** draft  

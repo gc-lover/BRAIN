@@ -8,7 +8,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:14  
+**api-readiness-check-date:** 2025-11-08 00:14
 **api-readiness-notes:** Добавлены модификаторы для боевых лодаутов и PvE экспедиций, расширены интеграции. Документ готов к ДУАПИТАСК.
 ---
 

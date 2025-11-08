@@ -1,6 +1,6 @@
 ---
 **api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-07 20:35  
+**api-readiness-check-date:** 2025-11-07 20:35
 **api-readiness-notes:** Алгоритм наполнения городов с ER-схемами, Kafka payload и baseline. Требуется оформить swagger-задачи и интеграцию в API-SWAGGER.
 ---
 

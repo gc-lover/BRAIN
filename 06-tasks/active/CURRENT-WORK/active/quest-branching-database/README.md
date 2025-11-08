@@ -2,7 +2,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Комплект SQL-схем для ветвящихся квестов: core + advanced структуры, запросы и зависимости для API задач.
 ---
 

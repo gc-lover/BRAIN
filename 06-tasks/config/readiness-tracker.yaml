@@ -1801,11 +1801,11 @@ documents:
     api_target: "api/v1/narrative/dialogues/quest-side-maelstrom-double-cross.yaml"
 
   - path: ".BRAIN/04-narrative/dialogues/quest-main-001-first-steps.md"
-    status: "in-review"
-    version: "0.1.0"
-    checked: "2025-11-07 16:42"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Диалоги квеста 1.1: обучение Perception/Parkour/Stealth/Tech, выбор будущей ветки, синхронизация с узлами N-1..N-5."
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:26"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Квест 1.1 подтверждён: ветки обучения, HUD-подсказки, телеметрия и экспорт YAML синхронизированы с narrative-service и UI модулем."
     issues: []
     api_target: "api/v1/narrative/dialogues/quest-main-001.yaml"
 
@@ -2427,13 +2427,12 @@ documents:
 
   # 05-technical/backend/realtime-server/ - Performance Profiles (2025-11-07)
   - path: ".BRAIN/05-technical/backend/realtime-server/part3-performance-profiles.md"
-    status: "in-review"
-    version: "0.2.0"
-    checked: "2025-11-07 16:03"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Performance profiles дополнены адаптивной синхронизацией, архитектурой edge-нод, гибридным AI, ML-античитом и live-migration; требуется подтверждение инфраструктурной команды."
-    issues:
-      - "Ожидается согласование параметров edge-нод и механизма live-migration с инфраструктурой."
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:26"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Performance профили утверждены: edge-аппаратные классы, QoS пресеты и политика live-migration формализованы, инфраструктурные пороги согласованы."
+    issues: []
     api_target: null
 
   # 05-technical/infrastructure/ - Production Infrastructure (2025-11-07)

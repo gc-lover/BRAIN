@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 01:59  
+**api-readiness-check-date:** 2025-11-07 01:59
 **api-readiness-notes:** Achievement System Core. Система достижений - типы, категории, прогресс, rewards. ~400 строк.
 ---
 

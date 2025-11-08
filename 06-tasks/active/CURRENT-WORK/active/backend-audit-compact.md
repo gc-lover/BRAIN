@@ -2,7 +2,7 @@
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:14  
+**api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Сводка состояния микросервисов backend после аудита 2025-11-07. Используется для планирования API и релизов.
 ---
 

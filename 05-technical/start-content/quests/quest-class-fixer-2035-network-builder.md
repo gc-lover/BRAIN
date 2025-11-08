@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:00  
+**api-readiness-check-date:** 2025-11-06 21:00
 **api-readiness-notes:** Полная спецификация Fixer квеста 2035 «Строитель сети» с 24 узлами диалогов. Соответствует `quest-class-fixer-2035-network-builder`.
 ---
 

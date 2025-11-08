@@ -12,7 +12,7 @@
 # Навыки — соответствия предметам и имплантам
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:14  
+**api-readiness-check-date:** 2025-11-08 00:14
 **api-readiness-notes:** «Добавлена синхронизация с боевыми лодаутами и PvE профилями, расширены структуры данных и API. Документ остаётся готов к задачам.»
 
 **target-domain:** gameplay-progression  

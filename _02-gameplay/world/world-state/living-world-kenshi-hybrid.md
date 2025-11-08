@@ -1,6 +1,6 @@
 ---
 api-readiness: ready
-api-readiness-check-date: 2025-11-08 00:22
+**api-readiness-check-date:** 2025-11-08 00:22
 api-readiness-notes: Полностью описаны численные коэффициенты Action XP, контракт world-service/gameplay-service и UX-потоки хроники мира; документ готов к постановке API задач.
 ---
 

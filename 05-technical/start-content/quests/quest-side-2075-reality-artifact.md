@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:40  
+**api-readiness-check-date:** 2025-11-06 20:40
 **api-readiness-notes:** Полная спецификация квеста 2075 «Артефакт реальности» с 23 узлами диалогов. Соответствует `quest-side-2075-reality-artifact`.
 ---
 

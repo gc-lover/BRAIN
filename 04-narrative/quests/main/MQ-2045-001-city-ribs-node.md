@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** MQ-2045-001 "Рёбра города" — 22 узла, локальные сети/эмитенты, D&D проверки, последствия для Blackwall/локальной экономики.
 ---
 

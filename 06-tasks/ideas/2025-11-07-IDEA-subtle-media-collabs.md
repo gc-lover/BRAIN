@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 17:02  
+**api-readiness-check-date:** 2025-11-07 17:02
 **api-readiness-notes:** Концептуальная идея пасхалок и коллабораций, не предназначена для прямой генерации API
 
 # Новые скрытые коллаборации и пасхалки

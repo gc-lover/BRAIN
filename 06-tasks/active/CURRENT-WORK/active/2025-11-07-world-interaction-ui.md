@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 18:20  
+**api-readiness-check-date:** 2025-11-07 18:20
 **api-readiness-notes:** UX мира дополнен Specter overlay metrics, city unrest orchestration и событиями Specter squad; World Pulse, Events Dashboard, Influence Map, Guild Ops и Crisis Hub готовы к API постановке (`world-service`, `economy-service`, `social-service`).
 ---
 

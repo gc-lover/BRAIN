@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 17:09  
+**api-readiness-check-date:** 2025-11-05 17:09
 **api-readiness-notes:** Узлы проверок для квеста 3.2. Тактическая операция банды.
 ---
 ---

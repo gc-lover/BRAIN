@@ -1,6 +1,6 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:30  
+**api-readiness-check-date:** 2025-11-07 02:30
 **api-readiness-notes:** Cosmetic System. Skins, emotes, персонализация, cosmetic shop. ~380 строк.
 ---
 

@@ -12,7 +12,7 @@
 **target-мicroservices:** narrative-service, world-service, social-service  
 **target-frontend-модули:** modules/narrative/raids, modules/world  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:25  
+**api-readiness-check-date:** 2025-11-08 00:25
 **api-readiness-notes:** Биография, мотивации и связи Каэдэ Исикавы подготовлены для narrative API.
 
 ---

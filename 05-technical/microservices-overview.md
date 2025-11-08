@@ -1,7 +1,7 @@
 # Микросервисная архитектура - Детальный обзор
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Техническая документация, описывает архитектуру, не для создания API
 
 **Статус:** approved  

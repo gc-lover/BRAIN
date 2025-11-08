@@ -12,7 +12,7 @@
 **target-мicroservices:** world-service, narrative-service, social-service, economy-service  
 **target-frontend-модули:** modules/world/history, modules/narrative/timeline, modules/social/feeds  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 22:11  
+**api-readiness-check-date:** 2025-11-07 22:11
 **api-readiness-notes:** Хронология конфликтов 2020–2093: ключевые войны, участники, флаги и интеграции с world/narrative системой.
 
 ---

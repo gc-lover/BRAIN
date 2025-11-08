@@ -1,7 +1,7 @@
 ﻿# Классы персонажей — Авторские классы
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `classes-overview.md`. Содержит 3 авторских класса: Politician, Trader, Teacher.
 
 **target-domain:** gameplay-progression  

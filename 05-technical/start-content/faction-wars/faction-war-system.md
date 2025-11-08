@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 22:05  
+**api-readiness-check-date:** 2025-11-06 22:05
 **api-readiness-notes:** Системный обзор Faction Wars. 2 войны (Arasaka vs Militech, Valentinos vs Maelstrom), 5 стадий каждая, выбор стороны, массовые конфликты.
 ---
 

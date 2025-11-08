@@ -12,7 +12,7 @@
 # Система заказов — Создание заказа
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Выделено из `player-orders-system.md`. Процесс и параметры создания.
 
 **target-domain:** social  

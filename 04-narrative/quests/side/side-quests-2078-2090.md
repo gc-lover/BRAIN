@@ -1,7 +1,7 @@
 # Побочные квесты: 2078–2090
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:24  
+**api-readiness-check-date:** 2025-11-05 18:24
 **api-readiness-notes:** Наративные квесты периода поздней лиги
 
 **Статус:** draft  

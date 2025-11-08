@@ -12,7 +12,7 @@
 # Система прокачки — Атрибуты и характеристики персонажа
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46  
+**api-readiness-check-date:** 2025-11-07 16:46
 **api-readiness-notes:** «Атрибуты связаны с матрицей и навыками: добавлены схема хранения, REST API, механика роста от использования, синхронизация с progression-skills-mapping. Готово к постановке API задач.»
 
 **Статус:** approved  

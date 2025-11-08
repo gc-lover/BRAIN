@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 19:38  
+**api-readiness-check-date:** 2025-11-06 19:38
 **api-readiness-notes:** Полная спецификация квеста 2085 с 25+ узлами диалогов, боевой и нетран-ветками, угрозами Blackwall, API-маппингом, логами и тестами. Соответствует `quest-main-2085-blackwall-expansion`.
 ---
 

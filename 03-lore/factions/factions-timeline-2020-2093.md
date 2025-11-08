@@ -5,7 +5,7 @@
 **Последнее обновление:** 2025-11-07 21:53  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:53  
+**api-readiness-check-date:** 2025-11-07 21:53
 **api-readiness-notes:** Хронология авторских фракций 2020-2093: лор, ключевые события, механики, региональные ветки и API-контуры для world-service/social-service.
 ---
 

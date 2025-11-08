@@ -5,7 +5,7 @@ status: "approved"
 updated: "2025-11-07"
 author: "Brain Manager"
 api-readiness: "ready"
-api-readiness-check-date: "2025-11-07 17:45"
+**api-readiness-check-date:** "2025-11-07 17:45"
 api-readiness-notes: "Шаблон диалогов NPC/квестов с состояниями, узлами, проверками и метаданными."
 target-domain: "narrative"
 ---
@@ -23,7 +23,7 @@ target-domain: "narrative"
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/{{module}}  
 **api-readiness:** in-review  
-**api-readiness-check-date:** YYYY-MM-DD HH:mm  
+**api-readiness-check-date:** YYYY-MM-DD HH:mm
 **api-readiness-notes:** Краткое пояснение статуса проверки.
 
 ---
@@ -108,7 +108,7 @@ target-domain: "narrative"
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** in-review  
-**api-readiness-check-date:** YYYY-MM-DD HH:MM  
+**api-readiness-check-date:** YYYY-MM-DD HH:MM
 **api-readiness-notes:** Краткое описание состояния готовности
 
 ---

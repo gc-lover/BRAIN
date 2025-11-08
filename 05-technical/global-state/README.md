@@ -1,7 +1,7 @@
 # Global State System - Навигация
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07  
+**api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Система глобального состояния мира, реализуется в world-service
 
 **Версия:** 1.0.1  

@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 19:27  
+**api-readiness-check-date:** 2025-11-07 19:27
 **api-readiness-notes:** Концептуальный пакет пасхалок с кросс-культурными мотивами, не предназначен для API генерации
 
 # Кросс-культурный атлас пасхалок

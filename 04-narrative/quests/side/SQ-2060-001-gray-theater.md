@@ -1,6 +1,6 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06  
+**api-readiness-check-date:** 2025-11-06
 **api-readiness-notes:** SQ-2060-001 "Серый театр" — 20 узлов, полит/медиа/юридические проверки, конкордатные последствия.
 ---
 

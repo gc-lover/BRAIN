@@ -8,7 +8,7 @@ author: "User"
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 17:25  
+**api-readiness-check-date:** 2025-11-07 17:25
 **api-readiness-notes:** Идея пасхалок и атмосферных сцен, не предназначена для прямой генерации API
 
 # Пассивные медиа-пасхалки и коллаб-атмосферы

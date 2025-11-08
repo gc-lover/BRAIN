@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:20  
+**api-readiness-check-date:** 2025-11-05 18:20
 **api-readiness-notes:** Каркас основного сюжета: акты/ветвления/правила переходов между эпохами и матрицей классов/фракций/origins.
 ---
 

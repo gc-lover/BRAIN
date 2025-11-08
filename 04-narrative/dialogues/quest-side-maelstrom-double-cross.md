@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 19:46  
+**api-readiness-check-date:** 2025-11-07 19:46
 **api-readiness-notes:** «Квест синхронизирован с фракционными сервисами, добавлены экспорт, REST/GraphQL и валидация двойной игры. Готов для API.»
 
 ---

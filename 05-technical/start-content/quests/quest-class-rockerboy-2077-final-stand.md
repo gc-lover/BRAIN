@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:10  
+**api-readiness-check-date:** 2025-11-06 21:10
 **api-readiness-notes:** Полная спецификация Rockerboy квеста 2077 «Последний концерт» с 28 узлами диалогов. Соответствует `quest-class-rockerboy-2077-final-stand`.
 ---
 

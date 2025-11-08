@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:24  
+**api-readiness-check-date:** 2025-11-05 18:24
 **api-readiness-notes:** Основной сюжет 2077: Dogtown, президентский протокол, сетевой заслон, кульминация заговора. Каркас с D&D узлами.
 ---
 

@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:25  
+**api-readiness-check-date:** 2025-11-06 20:25
 **api-readiness-notes:** Полная спецификация квеста 2027 «Протокол восстановления» с 22 узлами диалогов. Соответствует `quest-main-2027-rebuild-protocol`.
 ---
 

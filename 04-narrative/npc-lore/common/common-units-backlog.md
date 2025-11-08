@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 17:25  
+**api-readiness-check-date:** 2025-11-05 17:25
 **api-readiness-notes:** Служебный индекс бэклога common NPC, не предназначен для API
 
 ---

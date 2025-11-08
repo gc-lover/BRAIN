@@ -6,8 +6,8 @@
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 18:20  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-06 18:20
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Каркас сущностей для последующей спецификации OpenAPI в `API-SWAGGER`.
 
 ---

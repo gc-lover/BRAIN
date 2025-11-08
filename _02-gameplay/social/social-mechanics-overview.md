@@ -1,7 +1,7 @@
 # Социальные механики — Обзор
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-03  
+**api-readiness-check-date:** 2025-11-03
 **api-readiness-notes:** Обзорный документ. Детализация вынесена в специализированные документы.
 
 **Статус:** Обзор  

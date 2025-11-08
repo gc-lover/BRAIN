@@ -5,7 +5,7 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 21:45  
+**api-readiness-check-date:** 2025-11-06 21:45
 **api-readiness-notes:** Индекс документов биржи акций, содержит ссылки на микрофичи
 
 ---

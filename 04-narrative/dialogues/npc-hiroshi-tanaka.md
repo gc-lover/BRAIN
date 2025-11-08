@@ -12,7 +12,7 @@
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 17:45  
+**api-readiness-check-date:** 2025-11-07 17:45
 **api-readiness-notes:** Диалог структурирован по состояниям, проверкам и событиям Arasaka. Готов для API задач narrative-service.
 
 ---

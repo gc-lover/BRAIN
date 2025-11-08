@@ -1,6 +1,6 @@
 ---
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 18:37  
+**api-readiness-check-date:** 2025-11-05 18:37
 **api-readiness-notes:** Origin Nomad: логистика, межгород, коридоры.
 ---
 

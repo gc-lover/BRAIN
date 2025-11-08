@@ -1,7 +1,7 @@
 # Побочные квесты: 2020–2030
 
 **api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-06 00:00  
+**api-readiness-check-date:** 2025-11-06 00:00
 **api-readiness-notes:** Расширенные квесты с диалоговыми деревьями (20-30 узлов), skill-checks, лут-таблицами и событиями перемещений
 
 **Статус:** expanded  

@@ -4,7 +4,7 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:55  
+**api-readiness-check-date:** 2025-11-06 21:55
 **api-readiness-notes:** Системный обзор всех origin stories. Backstories, perks, branching paths для всех классов.
 ---
 

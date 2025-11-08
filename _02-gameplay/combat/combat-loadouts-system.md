@@ -1,7 +1,7 @@
 # Боевая система — Loadouts и комплекты
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:14  
+**api-readiness-check-date:** 2025-11-08 00:14
 **api-readiness-notes:** Документ детализирует PvE-петли, доменную модель, API и интеграции для loadouts; готов к постановке API задач.  
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  

@@ -5,7 +5,7 @@
 **Версия:** 1.0.0
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 22:42  
+**api-readiness-check-date:** 2025-11-06 22:42
 **api-readiness-notes:** Служебный документ с чеклистами для агента, не предназначен для создания API
 
 **Назначение:** Чеклисты для проверки завершения работы Brain Manager Agent

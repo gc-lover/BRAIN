@@ -16,7 +16,7 @@ target-frontend-modules:
   - modules/world
   - modules/social
 api-readiness: "ready"
-api-readiness-check-date: "2025-11-07 17:45"
+**api-readiness-check-date:** "2025-11-07 17:45"
 api-readiness-notes: "Побочный квест о ночных курьерах в неоновой изнанке. Описаны узлы, проверки, награды, мировые последствия и API точки. Готов к постановке задач."
 ---
 
