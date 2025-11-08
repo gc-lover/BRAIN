@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-VIS-ASSET-DET-001: api/v1/character/visuals/archetypes-detailed.yaml (2025-11-08 11:18)
-  - API-TASK-VIS-ASSET-DET-002: api/v1/gameplay/visuals/equipment-detailed.yaml (2025-11-08 11:18)
-  - API-TASK-VIS-ASSET-DET-003: api/v1/character/visuals/romance-states.yaml (2025-11-08 11:18)
-- **Last Updated:** 2025-11-08 11:18
+  - API-TASK-325: api/v1/character/visuals/archetypes-detailed.yaml (2025-11-08 16:55)
+  - API-TASK-326: api/v1/gameplay/visuals/equipment-detailed.yaml (2025-11-08 16:57)
+  - API-TASK-327: api/v1/character/visuals/romance-states.yaml (2025-11-08 16:59)
+- **Last Updated:** 2025-11-08 16:59
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 11:18  \
+**Последнее обновление:** 2025-11-08 16:59  \
 **Приоритет:** высокий
 
 **target-domain:** world  \

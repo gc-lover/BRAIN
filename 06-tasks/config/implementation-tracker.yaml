@@ -119,7 +119,9 @@ implementations:
       commit: "06b79a9"
       notes: "GameInitialStateController - начальное состояние игры"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 11:01"
+      agent: "Frontend Agent"
   
   # === GAMEPLAY SYSTEMS ===
   
