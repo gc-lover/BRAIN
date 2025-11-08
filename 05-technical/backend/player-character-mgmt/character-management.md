@@ -5,8 +5,8 @@
 **Дата:** 2025-11-09  
 **Приоритет:** критический  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:14  
-**api-readiness-notes:** Сводный пакет Part 1/Part 2. Готов к постановке API задачи для character-service.
+**api-readiness-check-date:** 2025-11-09 02:47  
+**api-readiness-notes:** Перепроверено 2025-11-09 02:47: CRUD персонажей, переключение, восстановление и события `Character*` подтверждены; документ готов к постановке задач для character-service.
 
 ---
 

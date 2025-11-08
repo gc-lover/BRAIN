@@ -4,25 +4,48 @@
 **Статус:** in_progress  
 **Ответственный:** Brain Manager  
 **Старт:** 2025-11-09 00:57  
-**Связанные документы:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md
+**Связанные документы:**
+- `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`
+- `.BRAIN/02-gameplay/combat/combat-dnd-core.md`
+- `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md`
+- `.BRAIN/02-gameplay/combat/combat-implants-types.md`
+- `.BRAIN/02-gameplay/combat/combat-combos-synergies.md`
+- `.BRAIN/02-gameplay/combat/combat-extract.md`
+- `.BRAIN/02-gameplay/combat/combat-hacking-networks.md`
+- `.BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md`
+- `.BRAIN/02-gameplay/combat/combat-cyberspace.md`
+- `.BRAIN/02-gameplay/combat/combat-shooting.md`
+- `.BRAIN/02-gameplay/combat/combat-stealth.md`
+- `.BRAIN/02-gameplay/combat/combat-abilities.md`
+- `.BRAIN/02-gameplay/combat/arena-system.md`
+- `.BRAIN/05-technical/backend/combat-session-backend.md`
 
 ---
 
 ## Прогресс
-- Перепроверены метаданные `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`: статус `approved`, `api-readiness: ready`, актуализирован приоритет `highest`.
-- Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты для дальнейшего разбиения на задачи ДУАПИТАСК.
-- Определены зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
-- Проверено ядро системы проверок `.BRAIN/02-gameplay/combat/combat-dnd-core.md`: подтверждены DC, модификаторы, групповые проверки, добавлено в `ready.md` и `readiness-tracker.yaml`.
-- Актуализированы readiness-записи для `combat-ai-enemies`, `combat-abilities`, `combat-dnd-core`, `combat-dnd-integration-shooter`, `arena-system` — подтверждён статус `ready`, даты проверки освежены (2025-11-09 01:15), уточнены каталоги `api/v1/gameplay/combat/*.yaml` и фронтенд-модули; агрегированная сводка зафиксирована в `2025-11-09-combat-wave-package.md`.
-- 2025-11-09 01:44 — перепроверены `combat-dnd-integration-shooter`, `combat-extract`, `combat-hacking-networks`, `combat-hacking-combat-integration`; readiness и очередь `ready.md` синхронизированы, пакет зависимостей уточнён.
+- Перепроверены метаданные `combat-ai-enemies`: статус `approved`, `api-readiness: ready`, актуализирован приоритет `highest`.
+- Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты, Kafka-потоки (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
+- Подтверждено ядро D&D (`combat-dnd-core`): DC, модификаторы, групповые/кооперативные проверки; документ добавлен в `ready.md` и `readiness-tracker.yaml`.
+- Синхронизированы записи в `ready.md` и `readiness-tracker.yaml` для combat-комплекта (AI, D&D core, D&D shooter integration, arenas, combat session, implants, combos, extraction, hacking).
+- Выявлены зависимости между документами (combat session, hacking, extraction, implants) — все находятся в статусе `ready` и перечислены в пакете.
 
-## Материалы и статусы
-- `combat-ai-enemies.md` — v1.0.0, `ready`, приоритет `highest`, микросервис `gameplay-service`, модуль `modules/combat/ai`.
-- `combat-dnd-core.md` — v1.0.0, `ready`, покрывает DC, модификаторы, преимущества/помехи, целевой каталог `api/v1/gameplay/combat/dnd-core.yaml`.
-- `combat-abilities.md` — v1.2.0, `ready`, описывает источники/типы способностей, ограничения, влияние на киберпсихоз; целевой каталог `api/v1/gameplay/combat/abilities.yaml`, модуль `modules/combat/abilities`.
-- `combat-stealth.md` — v1.1.0, `ready`, фиксирует каналы обнаружения, импланты, социальную инженерию; целевой каталог `api/v1/gameplay/combat/stealth.yaml`, модуль `modules/combat/stealth`.
-- `combat-freerun.md` — v1.1.0, `ready`, определяет паркур и боевые манёвры; целевой каталог `api/v1/gameplay/combat/freerun.yaml`, модуль `modules/combat/movement`.
-- Дополнительные зависимости: `combat-combos-synergies.md`, `combat-extract.md`, `combat-hacking-networks.md`, `combat-hacking-combat-integration.md`, `combat-session-backend.md` — все имеют статус `ready` и учтены в очереди.
+## Сводка документов для пакета
+| Документ | Версия | Каталог API | Следующий шаг |
+| --- | --- | --- | --- |
+| combat-ai-enemies.md | 1.0.0 | `api/v1/gameplay/combat/ai-enemies.yaml` | Подготовить задания ДУАПИТАСК по REST/WS/Kafka и D&D проверкам |
+| combat-dnd-core.md | 1.0.0 | `api/v1/gameplay/combat/dnd-core.yaml` | Описать контракты для проверки атрибутов, групповых ролей |
+| combat-dnd-integration-shooter.md | 1.0.0 | `api/v1/gameplay/combat/dnd-integration-shooter.yaml` | Сформировать задачи по интеграции проверок в шутерный бой |
+| combat-session-backend.md | 1.0.0 | `api/v1/gameplay/combat/combat-session.yaml` | Разделить по lifecycle, damage loop, событиям |
+| combat-implants-types.md | 1.1.0 | `api/v1/gameplay/combat/implants.yaml` | Согласовать задания по имплантам и модификаторам |
+| combat-combos-synergies.md | 1.0.0 | `api/v1/gameplay/combat/combos-synergies.yaml` | Вторая волна задач по синергиям |
+| combat-extract.md | 1.3.0 | `api/v1/gameplay/combat/extraction.yaml` | План задач для экстрактшутер механик |
+| combat-hacking-networks.md | 1.0.0 | `api/v1/gameplay/combat/hacking/networks.yaml` | Задания по сетевому хакерству |
+| combat-hacking-combat-integration.md | 1.0.0 | `api/v1/gameplay/combat/hacking/combat-integration.yaml` | Интеграция хакерства в бою |
+| combat-cyberspace.md | 1.0.0 | `api/v1/gameplay/combat/hacking/cyberspace.yaml` | Контракты по cyberspace режимам |
+| combat-shooting.md | 1.1.0 | `api/v1/gameplay/combat/shooting.yaml` | Подготовить задания по TTK/отдаче |
+| combat-stealth.md | 1.1.0 | `api/v1/gameplay/combat/stealth.yaml` | Описать задачи по скрытности и обнаружению |
+| combat-abilities.md | 1.2.0 | `api/v1/gameplay/combat/abilities.yaml` | План задач по активным способностям |
+| arena-system.md | 1.0.0 | `api/v1/gameplay/combat/arena-system.yaml` | Задания по аренам и рейтинговым циклам |
 
 ## Блокеры
 - Действует запрет на создание задач в `API-SWAGGER` до отдельного разрешения.
@@ -34,6 +57,31 @@
 - **D&D проверки:** Street REF 15 / TECH 14, Tactical INT 18 / WIS 17, Mythic WIS 20 / TECH 19, Raid INT 22 / STR 21.
 - **Схемы БД:** `enemy_ai_profiles`, `enemy_ai_abilities`, `raid_boss_phases` (JSONB поля для поведений и механик).
 - **Зависимости:** материалы `combat-extract`, `combat-hacking`, `combat-combos`, `combat-implants`, `combat-session` (все в статусе ready) — обеспечивают связность навыков и телеметрии.
+
+## Бриф для ДУАПИТАСК — Combat Systems Wave 1
+- **Приоритет:** критический (подготовка боевого ядра для gameplay-service).
+- **Оценка объёма:** 5-6 задач (REST 3, WebSocket 1, Kafka 1, вспомогательные справочники 1).
+- **Готовые документы:** combat-ai-enemies, combat-dnd-core, combat-dnd-integration-shooter, combat-abilities, combat-stealth, combat-freerun, combat-combos-synergies, combat-extract, combat-hacking-networks, combat-hacking-combat-integration, combat-session-backend, arena-system.
+
+### Рекомендуемое разбиение задач
+- `combat-ai-profiles-api` — CRUD профилей AI, фильтры, связанные телеметрии (REST).
+- `combat-raid-lifecycle-api` — REST для фаз рейда и интеграция с WebSocket.
+- `combat-ai-telemetry-socket` — WebSocket поток `wss://api.necp.game/v1/gameplay/raid/{raidId}` с событиями Phase/Mechanics/Checks.
+- `combat-ai-kafka-streams` — контракты Kafka `combat.ai.state`, `world.events.trigger`, `raid.telemetry` (+ схемы payload).
+- `combat-dd-core-reference` — вспомогательные справочники DC, модификаторов, групповых проверок (REST read-only + JSON схемы).
+- `combat-abilities-metadata` — REST для источников и ограничений способностей ( CRUD + фильтры ), завязан на импланты/экипировку.
+
+### Зависимости и интеграции
+- **Gameplay-service:** основной исполнитель; требует обновления модулей combat/ai, combat/abilities, combat/stealth, combat/movement.
+- **World-service:** получение событий `world.events.trigger` для рейдов и world-state.
+- **Economy-service:** выдача наград и санкций (`combat.ai.state` потребляется для экономических штрафов).
+- **Analytics-service:** потребитель `raid.telemetry`, расчёты баланса и автотюнинг.
+- **Frontend:** модули `modules/combat/ai`, `modules/combat/abilities`, `modules/combat/stealth`, `modules/combat/movement`, `modules/combat/hacking` готовы к генерации API.
+
+### Checks перед передачей
+- Уточнить конечные SLA для WebSocket событий (частота, размер payload).
+- Согласовать список обязательных D&D проверок с narrative (перекрестная ссылка на combat-dnd-core).
+- Подготовить сводную таблицу маппинга способностей ↔ имплантов/экипировки для задачи `combat-abilities-metadata`.
 
 ## Следующие действия
 1. Оформить бриф ДУАПИТАСК (использовать резюме выше, добавить уровни приоритета и оценки трудозатрат).

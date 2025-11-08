@@ -5,18 +5,17 @@
 
 ```markdown
 - **Документ:** .BRAIN/05-technical/backend/auth/README.md (v1.0.1)  
-  **Проверено:** 2025-11-08 23:56 — Brain Manager  
-  **Следующий шаг:** Создать API задачу для auth-service (ДУАПИТАСК).
+  **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: дождаться одобрения на постановку задач для auth-service.
 ```
 
 - При изменении статуса переместите запись в соответствующий файл (`needs-work.md`, `blocked.md`, и т.д.) и обновите дату.
 
 - **Документ:** .BRAIN/05-technical/backend/auth/README.md (v1.0.1)  
-  **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: дождаться одобрения на постановку задач для auth-service.
+  **Проверено:** 2025-11-09 02:47 — Brain Manager | Следующий шаг: подготовить пакет REST `/api/v1/auth/*`, событий auth-service и OAuth потоков для ДУАПИТАСК.
 - **Документ:** .BRAIN/05-technical/backend/player-character-mgmt/character-management.md (v1.1.0)  
-  **Проверено:** 2025-11-09 00:14 — Brain Manager | Следующий шаг: подготовить задачу для character-service после подтверждения.
+  **Проверено:** 2025-11-09 02:47 — Brain Manager | Следующий шаг: оформить REST/Events по CRUD, переключению и восстановлению персонажей (`api/v1/characters/players.yaml`) для character-service.
 - **Документ:** .BRAIN/05-technical/backend/progression-backend.md (v1.0.0)  
-  **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить API задачу для progression core.
+  **Проверено:** 2025-11-09 02:47 — Brain Manager | Следующий шаг: сформировать пакет задач по EXP/level progression (`api/v1/gameplay/progression/progression-core.yaml`) для gameplay-service.
 - **Документ:** .BRAIN/05-technical/backend/inventory-system/part1-core-system.md (v1.0.1)  
   **Проверено:** 2025-11-09 01:30 — Brain Manager | Следующий шаг: подготовить пакет REST/Events по инвентарю (`api/v1/inventory/inventory-core.yaml`, economy-service).
 - **Документ:** .BRAIN/05-technical/backend/combat-session-backend.md (v1.0.0)  
@@ -28,7 +27,7 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:47 — Brain Manager | Следующий шаг: сформировать API задачи по боевым имплантам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2, api/v1/gameplay/combat/combos-synergies.yaml).
+  **Проверено:** 2025-11-09 02:48 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2, `api/v1/gameplay/combat/combos-synergies.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: подготовить пакет API задач по AI и WebSocket потокам (gameplay-service, `api/v1/gameplay/combat/ai-enemies.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  

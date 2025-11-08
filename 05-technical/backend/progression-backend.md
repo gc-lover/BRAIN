@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 23:39
-**api-readiness-notes:** Подробная прокачка: экспа, level-up, события, схема БД — можно генерировать API.
+**api-readiness-check-date:** 2025-11-09 02:47
+**api-readiness-notes:** Перепроверено 2025-11-09 02:47: REST `/api/v1/gameplay/progression/*`, события `character:level-up`/`skill-leveled`, схемы БД и расчёт EXP подтверждены; готово к постановке задач gameplay-service.
 ---
 
 # Progression System Backend - Backend системы прогрессии

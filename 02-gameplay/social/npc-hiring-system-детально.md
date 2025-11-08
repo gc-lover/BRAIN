@@ -1,15 +1,19 @@
 # Система найма NPC — детальная версия
 
-- **Status:** queued
-- **Last Updated:** 2025-11-08 19:40
----
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-09 01:28  
+**Приоритет:** высокий
 
+**target-domain:** social  
+**target-microservice:** social-service (8084)  
+**target-microservice-secondary:** economy-service (8089), world-service (8092), npc-service (8088)  
+**target-frontend-module:** modules/social/npc-hiring, modules/world/insights
 
-**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 19:40  \\n**Приоритет:** высокий
-
-**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), npc-service (port 8088)  \\n**target-frontend-module:** modules/social/npc-hiring, modules/world/insights
-
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:27  \\n**api-readiness-notes:** Контракты, управление и экономика найма NPC согласованы: REST/Kafka контуры, UX сценарии и метрики готовы к постановке API задач.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 01:28  
+**api-readiness-notes:** Контракты, управление и экономика найма NPC перепроверены 2025-11-09 01:28: REST/Kafka контуры, UX-сценарии и метрики готовы к постановке API задач.
 
 ---
 

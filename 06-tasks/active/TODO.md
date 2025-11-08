@@ -1,6 +1,6 @@
 # TODO — Brain Manager
 
-**Обновлено:** 2025-11-09 02:20  
+**Обновлено:** 2025-11-09 02:48  
 **Ответственный:** Brain Manager
 
 ---
@@ -17,6 +17,7 @@
 - [~] Combat Stealth — подготовить материалы `.BRAIN/02-gameplay/combat/combat-stealth.md` (каналы обнаружения, импланты) для передачи в ДУАПИТАСК (2025-11-09 01:39).
 - [~] Combat Abilities — подготовить материалы `.BRAIN/02-gameplay/combat/combat-abilities.md` (источники, ранги, ограничения) для передачи в ДУАПИТАСК (2025-11-09 01:42).
 - [~] Combat D&D Core — подготовить материалы `.BRAIN/02-gameplay/combat/combat-dnd-core.md` (DC, модификаторы, групповые проверки) для передачи в ДУАПИТАСК (2025-11-09 01:44).
+- [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 02:48).
 - [ ] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 01:22).
 ## Low
 - *(пусто)*

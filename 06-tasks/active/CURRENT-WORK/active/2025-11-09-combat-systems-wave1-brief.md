@@ -1,0 +1,69 @@
+# Combat Systems Wave 1 — Brief для ДУАПИТАСК
+
+**Статус:** ready-to-hand-off  
+**Версия:** 1.0.0  
+**Подготовлено:** 2025-11-09 01:10  
+**Ответственный:** Brain Manager
+
+---
+
+## 1. Общее описание
+- Волна охватывает боевые подсистемы gameplay-service: AI врагов, D&D проверки, импланты, комбо, экстракцию, хакерство, арену, стрельбу, скрытность, способности и сессию боя.
+- Все документы отмечены `api-readiness: ready`, синхронизированы в `readiness-tracker.yaml` и очереди `ready.md`.
+- Таргет: `gameplay-service` с каталогами `api/v1/gameplay/combat/...` (полный перечень ниже).
+
+---
+
+## 2. Документы и каталоги API
+| Путь документа | Версия | Каталог OpenAPI | Фронтенд модуль | Примечание |
+| --- | --- | --- | --- | --- |
+| `02-gameplay/combat/combat-ai-enemies.md` | 1.0.0 | `api/v1/gameplay/combat/ai-enemies.yaml` | `modules/combat/ai` | REST/WS контракты, Kafka-топики, матрица сложностей |
+| `02-gameplay/combat/combat-dnd-core.md` | 1.0.0 | `api/v1/gameplay/combat/dnd-core.yaml` | `modules/combat/mechanics` | Базовые проверки, DC, модификаторы, групповые кейсы |
+| `02-gameplay/combat/combat-dnd-integration-shooter.md` | 1.0.0 | `api/v1/gameplay/combat/dnd-integration-shooter.yaml` | `modules/combat/mechanics` | Интеграция проверок в шутерный бой |
+| `05-technical/backend/combat-session-backend.md` | 1.0.0 | `api/v1/gameplay/combat/combat-session.yaml` | `modules/combat` | Lifecycle сессии, события, damage loop |
+| `02-gameplay/combat/combat-implants-types.md` | 1.1.0 | `api/v1/gameplay/combat/implants.yaml` | `modules/combat/implants` | Типы имплантов, модификаторы |
+| `02-gameplay/combat/combat-combos-synergies.md` | 1.0.0 | `api/v1/gameplay/combat/combos-synergies.yaml` | `modules/combat/combos` | Волна 2, синергии и цепочки |
+| `02-gameplay/combat/combat-extract.md` | 1.3.0 | `api/v1/gameplay/combat/extraction.yaml` | `modules/combat/extraction` | Экстрактшутер механики |
+| `02-gameplay/combat/combat-hacking-networks.md` | 1.0.0 | `api/v1/gameplay/combat/hacking/networks.yaml` | `modules/combat/hacking` | Сетевой слой хакерства |
+| `02-gameplay/combat/combat-hacking-combat-integration.md` | 1.0.0 | `api/v1/gameplay/combat/hacking/combat-integration.yaml` | `modules/combat/hacking` | Интеграция хакерства в бою |
+| `02-gameplay/combat/combat-cyberspace.md` | 1.0.0 | `api/v1/gameplay/combat/hacking/cyberspace.yaml` | `modules/combat/cyberspace` | Режимы киберпространства |
+| `02-gameplay/combat/combat-shooting.md` | 1.1.0 | `api/v1/gameplay/combat/shooting.yaml` | `modules/combat/shooting` | TTK, отдача, имплант-модификаторы |
+| `02-gameplay/combat/combat-stealth.md` | 1.1.0 | `api/v1/gameplay/combat/stealth.yaml` | `modules/combat/stealth` | Скрытность, обнаружение, импланты |
+| `02-gameplay/combat/combat-abilities.md` | 1.2.0 | `api/v1/gameplay/combat/abilities.yaml` | `modules/combat/abilities` | Активные способности и синергии |
+| `02-gameplay/combat/arena-system.md` | 1.0.0 | `api/v1/gameplay/combat/arena-system.yaml` | `modules/combat/arenas` | Рейтинги, режимы, voice-lobby |
+
+---
+
+## 3. Ключевые контракты
+- **REST:** `/combat/ai/profiles`, `/combat/ai/profiles/{id}`, `/combat/ai/profiles/{id}/telemetry`, `/combat/raids/{raidId}/phase`, `/combat/ai/encounter`, `/combat/skills/abilities`, `/combat/implants`, `/combat/extract/operations`, `/combat/hacking/networks`, `/combat/hacking/encounter`, `/combat/arenas/*`.
+- **WebSocket:** `wss://api.necp.game/v1/gameplay/raid/{raidId}` — события `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
+- **Kafka:** `combat.ai.state`, `world.events.trigger`, `raid.telemetry`, `combat.session.events`, `combat.hacking.alerts`, `combat.arena.results`.
+- **DB:** таблицы и JSONB структуры для AI профилей, способностей, фаз рейдов, combat session state, arena rankings (см. документы).
+- **D&D проверки:** пороги Street (REF 15 / TECH 14), Tactical (INT 18 / WIS 17), Mythic (WIS 20 / TECH 19), Raid (INT 22 / STR 21) + система преимуществ/помех, групповые проверки (`Cooperative`, `Team`, `Role`).
+
+---
+
+## 4. Зависимости и связки
+- **Сервисы:** `world-service` (ивенты, контроль зон), `social-service` (репутация), `economy-service` (награды/штрафы), `analytics-service` (телеметрия).
+- **Синхронизация:** combat session ↔ combat AI ↔ arena ↔ hacking ↔ extraction.
+- **Фронтенд:** модули `modules/combat/*` готовы к потреблению контрактов после генерации.
+- **Связанные документы:** `combat-extract`, `combat-hacking*`, `combat-abilities`, `combat-session`, `combat-dnd-*` — все в статусе `ready`.
+
+---
+
+## 5. Рекомендованный порядок задач
+1. **Core AI & D&D** — спецификации `ai-enemies`, `dnd-core`, `dnd-integration-shooter`.
+2. **Combat Session & Telemetry** — `combat-session`, WebSocket/Kafka потоки.
+3. **Support Systems** — импланты, стрельба, скрытность, способности.
+4. **Hacking & Extraction** — `combat-hacking-*`, `combat-extract`, `combat-cyberspace`.
+5. **Arena System** — рейтинги, голосовые лобби, matchmaking.
+
+---
+
+## 6. Чеклист для передачи
+- [x] Все документы в `ready.md` и `readiness-tracker.yaml`.
+- [x] В `current-status.md` и `TODO.md` отмечено активное направление.
+- [ ] Получить разрешение на постановку задач в `API-SWAGGER`.
+- [ ] Передать brief агенту ДУАПИТАСК после снятия ограничений.
+- [ ] Обновить `implementation-tracker.yaml` после старта работ backend/frontend.
+

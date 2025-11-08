@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:28
-**api-readiness-notes:** Combat Session backend перепроверен 2025-11-09 01:28: инстансы боя, turn order, damage calculation готовы к постановке API задач (MVP блокер).
+**api-readiness-check-date:** 2025-11-09 02:47
+**api-readiness-notes:** Combat Session backend перепроверен 2025-11-09 02:47: lifecycle, события, WebSocket/Kafka контуры и anti-cheat хуки подтверждены для планирования API задач (MVP блокер).
 ---
 ---
 
@@ -10,7 +10,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-09 01:28  
+**Последнее обновление:** 2025-11-09 02:47  
 **Приоритет:** КРИТИЧЕСКИЙ (MVP блокер!)  
 **Автор:** AI Brain Manager
 
