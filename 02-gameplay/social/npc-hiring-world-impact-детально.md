@@ -4,16 +4,16 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-NPC-WORLD-001: api/v1/world/npc-hiring/effects.yaml (2025-11-08 10:12)
-  - API-TASK-NPC-ECON-001: api/v1/economy/npc-hiring/index.yaml (2025-11-08 10:12)
-- **Last Updated:** 2025-11-08 10:12
+  - API-TASK-358: api/v1/world/npc-hiring/effects.yaml (2025-11-08 20:22)
+  - API-TASK-359: api/v1/economy/npc-hiring/index.yaml (2025-11-08 20:22)
+- **Last Updated:** 2025-11-08 20:22
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:12  \
+**Последнее обновление:** 2025-11-08 20:22  \
 **Приоритет:** высокий
 
 **target-domain:** world  \
