@@ -1,13 +1,13 @@
 # Текущий статус активных направлений
 
-**Обновлено:** 2025-11-09 01:30  
+**Обновлено:** 2025-11-09 01:22  
 **Ответственный:** Brain Manager
 
 ---
 
 ## Active
-- Combat Systems Wave 1 — документы по combat-session, combat-ai-enemies, combat-implants-types, combat-dnd-core, combat-dnd-integration-shooter, combat-abilities, combat-shooting, combat-combos-synergies, combat-extract, combat-freerun, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace и arena-system имеют статус ready; перепроверены 2025-11-09 01:24 (ai, dnd-core, dnd-integration, abilities, combos, shooting, extract, freerun, stealth, hacking-networks, hacking-combat, arena) и выровнены каталоги `api/v1/gameplay/combat/*.yaml`; готовим единый пакет (`current note: 2025-11-09-combat-ai-package.md`, `2025-11-09-combat-wave-package.md`) для передачи в ДУАПИТАСК.
-- Economy Core Refresh — trade-system и inventory-system/part1-core-system перепроверены 2025-11-09 01:30 (черновик `2025-11-09-economy-core-package.md`); каталог `api/v1/trade/trade-system.yaml` и `api/v1/inventory/inventory-core.yaml` подтверждены, готовим пакет требований для economy-service.
+- Combat Systems Wave 1 — документы по combat-session, combat-ai-enemies, combat-implants-types, combat-dnd-core, combat-dnd-integration-shooter, combat-abilities, combat-shooting, combat-combos-synergies, combat-extract, combat-freerun, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace и arena-system имеют статус ready; перепроверены 2025-11-09 01:22 (combat-ai-enemies, combat-dnd-core, combat-abilities, combat-stealth, combat-freerun, arena-system) и выровнены каталоги `api/v1/gameplay/combat/*.yaml`; готовим единый пакет (`current note: 2025-11-09-combat-ai-package.md`, `2025-11-09-combat-wave-package.md`) для передачи в ДУАПИТАСК.
+- Economy Core Refresh — trade-system и inventory-system/part1-core-system остаются в приоритете high, необходимо синхронизировать постановку задач с economy-service без запуска в API-SWAGGER самостоятельно.
 - Quest Engine Package — материал `.BRAIN/05-technical/backend/quest-engine-backend.md` (ready) увязан с `combat-dnd-core.md` и `quest-system.md`; детализация REST/WS/EventBus вынесена в `2025-11-09-quest-engine-package.md`, требуется финальная нарезка задач перед ДУАПИТАСК.
 ## Pending
 - Auth/Characters/Progression — ждём слот ДУАПИТАСК для задач по auth README, character-management и progression-backend.
