@@ -1,8 +1,19 @@
 # Система заказов от игроков — детальная версия
 
-**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 09:51  \\n**Приоритет:** высокий
+**Статус:** approved  \
+**Версия:** 1.0.0  \
+**Дата создания:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:51  \
+**Приоритет:** высокий
 
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 09:51  \\n**api-readiness-notes:** Система заказов финализирована: добавлены API контракты, JSON схемы, интеграция с economy/social/world сервисами и UX требования; блокеров нет.
+**target-domain:** social  \
+**target-microservice:** social-service (8084)  \
+**target-microservice-secondary:** economy-service (8085), world-service (8086), gameplay-service (8083)  \
+**target-frontend-module:** modules/social/player-orders
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-09 02:50  \
+**api-readiness-notes:** Перепроверено 2025-11-09 02:50: ядро системы заказов, REST/JSON контуры и интеграции social/economy/world подтверждены, блокеров для постановки задач нет.
 
 ---
 

@@ -1,15 +1,19 @@
 # Система отношений и репутации — детальная версия
 
-- **Status:** queued
-- **Last Updated:** 2025-11-08 18:55
----
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-09 01:28  
+**Приоритет:** высокий
 
+**target-domain:** social  
+**target-microservice:** social-service (8084)  
+**target-microservice-secondary:** world-service (8092), economy-service (8089), gameplay-service (8086)  
+**target-frontend-module:** modules/social/relationships, modules/world/diplomacy
 
-**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 18:55  \\n**Приоритет:** высокий
-
-**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), gameplay-service (port 8086)  \\n**target-frontend-module:** modules/social/relationships, modules/world/diplomacy
-
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:40  \\n**api-readiness-notes:** Система отношений синхронизирована: шкалы, договоры, события и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 01:28  
+**api-readiness-notes:** Шкалы репутации, договоры и события перепроверены 2025-11-09 01:28; REST/Kafka контуры согласованы с social/world/economy сервисами, блокеров нет.
 
 ---
 

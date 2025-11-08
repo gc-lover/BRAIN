@@ -1,3 +1,33 @@
+# Подготовка пакета для Economy Core
+
+**Приоритет:** high  
+**Статус:** in_progress  
+**Ответственный:** Brain Manager  
+**Старт:** 2025-11-09 01:35  
+**Связанные документы:**  
+- `.BRAIN/05-technical/backend/trade-system.md`  
+- `.BRAIN/05-technical/backend/inventory-system/part1-core-system.md`
+
+---
+
+## Прогресс
+- Перепроверены `trade-system.md` и `inventory-system/part1-core-system.md` — подтверждён статус `ready`, указаны каталоги `api/v1/economy/trade/trade-system.yaml` и `api/v1/inventory/inventory-core.yaml`, фронтенд модули `modules/economy/trade` и `modules/economy/inventory`.
+- Уточнены зависимости: взаимодействие economy-service с inventory-service, character-service, world-service и аналитикой; события `trade:started/completed/cancelled`, интеграция с transfer предметов.
+- Сверены записи в `ready.md` и `readiness-tracker.yaml` — приоритет high, актуализирована дата проверки 2025-11-09 01:30.
+
+## Задачи для брифа
+- REST-контракты P2P трейда: создание/обновление trade session, подтверждение, отмена, аудит.
+- REST-контракты инвентаря: CRUD по слотам, перенос предметов, проверка веса/лимитов, банк/стэш.
+- Event Bus контракты и antifraud: события трейда, проверки расстояния, блокировка предметов.
+- Справочники ограничений (bind rules, категории предметов) и связь с имплантами/квестами.
+
+## Блокеры
+- Требуется согласование окна для economy-service перед передачей ДУАПИТАСК; до подтверждения API-SWAGGER не трогаем.
+
+## Следующие действия
+1. Сформировать бриф ДУАПИТАСК: оценка трудозатрат, разбиение задач (trade REST, inventory REST, events/antifraud, справочники).
+2. Подготовить список связанных документов (Part 2 inventory, mail/auction зависимости) и отметить их статус (при необходимости — `needs-work`).
+3. Обновить `current-status.md` и `TODO.md`, синхронизировать `readiness-tracker.yaml` при появлении новых зависимостей.
 # Подготовка пакета для economy core (inventory + trade)
 
 **Приоритет:** high  
