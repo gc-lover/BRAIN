@@ -169,7 +169,9 @@ implementations:
       commit: "06b79a9"
       notes: "CitiesController - справочные данные городов"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 11:17"
+      agent: "Frontend Agent"
   
   - api_path: "api/v1/trading/trading.yaml"
     task_id: "API-TASK-008"
