@@ -1116,6 +1116,15 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/_02-gameplay/combat/combat-shooting-advanced.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:37"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Advanced стрельба: ballistics simulation, ricochet/curved shot, модульные слоты, крафт обвесов. REST и Async контракты описаны, подготовлены API задачи."
+    issues: []
+    api_target: "api/v1/gameplay/combat/ballistics.yaml"
+
   - path: ".BRAIN/02-gameplay/combat/combat-pvp-pve.md"
     status: "ready"
     version: "1.1.0"

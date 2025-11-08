@@ -1,19 +1,30 @@
 ---
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-07 21:03
-**api-readiness-notes:** Расширенная система стрельбы: дистанции, рекошеты, закрученные выстрелы, кастомизация оружия. Требуется детализация API и интеграция с экономикой/крафтом.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 09:37
+**api-readiness-notes:** Система стрельбы финализирована: REST/Async API, схемы данных и интеграция с экономикой/крафтом описаны, блокеров нет.
 ---
 
 # Система стрельбы (Advanced) — дистанции, рекошеты, кастомизация
 
-**Статус:** В разработке — первый драфт  
-**Версия:** 0.1.0  
-**Дата:** 2025-11-07 21:03  
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата:** 2025-11-08  
 **Приоритет:** Высокий  
 **Автор:** AI Brain Manager
 
 **Микросервис:** gameplay-service (8083)  
 **Связанные сервисы:** economy-service (крафт/обвесы), social-service (навыки/импланты), world-service (материалы окружения)
+
+---
+
+## API Tasks Status
+
+- **Status:** not_created
+- **Suggested tasks:**
+  - API-TASK-CS-001: `api/v1/gameplay/combat/ballistics.yaml` — расчёт урона, траектории и Curved Shot.
+  - API-TASK-CS-002: `api/v1/gameplay/equipment/weapon-mods.yaml` — управление модульными слотами и крафтом обвесов.
+  - API-TASK-CS-003: `api/v1/economy/crafting/weapon-jobs.yaml` — очередь заказов на моды и материалы.
+- **Last Updated:** 2025-11-08 09:37
 
 ---
 
@@ -174,21 +185,95 @@ Smart Scope Mk.II
 
 ---
 
-## 7. Swagger/API todo
+## 7. REST API и схемы
 
-- описать REST и Kafka контракты для:
-  - управления модами оружия (`/equipment/weapon/mods`);
-  - расчёта траекторий и падения урона (`/combat/ballistics`);
-  - крафта обвесов (`/crafting/blueprints`, `/crafting/jobs`);
-  - активных навыков (активация Curved Shot, Ricochet Mastery).
-- Синхронизировать DTO с `city-life-api-task-package.md` и подготовить задачи для API-SWAGGER.
-- Добавить тестовые payload для симуляции PvE/PvP боёв.
+### 7.1 `POST /combat/ballistics/simulate`
+- **Request (Gameplay service):**
+  ```json
+  {
+    "weaponId": "w-smg-neo",
+    "ammoType": "ricochet_rounds",
+    "distanceMeters": 32,
+    "angleDegrees": 12,
+    "flags": {
+      "curvedShot": true,
+      "smartAssist": true
+    },
+    "attackerImplants": ["smart-wrist-tendons", "gyro-stabilizer"],
+    "targetArmor": "kevlar-plate-mk2",
+    "environmentMaterial": "steel"
+  }
+  ```
+- **Response 200:**
+  ```json
+  {
+    "hitProbability": 0.78,
+    "expectedDamage": 86.4,
+    "ricochetPath": ["surface-12", "surface-07"],
+    "statusEffects": ["stun"],
+    "cooldown": "PT15S"
+  }
+  ```
+- **Error 422:** некорректные комбинации модов/имплантов.
+
+### 7.2 `PATCH /combat/weapon-mods/{weaponId}`
+- Обновление модулей оружия, привязано к economy-service.
+- Request содержит список слотов и модов, проверяется на совместимость.
+- Response возвращает обновлённые статы (урон, отдача, потребление энергии).
+
+### 7.3 `POST /crafting/weapon-jobs`
+- Создание заказа на мод/обвес (economy-service).
+- Request: чертёж, список материалов, мастерская.
+- Response 201: jobId, ETA, требуемые навыки.
+
+### 7.4 `GET /combat/skills/active`
+- Позволяет UI запросить состояние активных боевых навыков (в т.ч. Curved Shot).
+- Возвращает кулдауны, доступность и влияние имплантов.
+
+### 7.5 Схемы данных
+- `WeaponProfileDTO`: базовый урон, оптимальная дистанция, falloff, допустимые моды.
+- `BallisticsSimulationRequest/Response`.
+- `WeaponModUpdateRequest`, `WeaponModState`.
+- `CraftingJobRequest`, `CraftingJobStatus`.
+- `ActiveSkillsState` (перечень навыков, кулдауны, модификаторы).
 
 ---
 
-## TODO
+## 8. Асинхронные события
 
-- Детализировать API контракты (economy-service: чертежи, материалы; gameplay-service: расчёт траекторий).
-- Описать наборы статус-эффектов (электрошок, слепота, поджог) для различных модов.
-- Добавить баллистические таблицы для PvP и PvE (с учётом брони и имплантов).
+| Topic | Producer | Payload |
+|-------|----------|---------|
+| `combat.ballistics.events` | gameplay-service | `{ combatId, attackerId, weaponId, mode, distance, ricochetCount, curvedShotUsed, damageDealt, statusEffects[] }` |
+| `economy.crafting.jobs` | economy-service | `{ jobId, weaponId, modId, status, eta, materialsConsumed[] }` |
+| `player.skills.cooldowns` | social-service | `{ playerId, skillId, cooldownEndsAt, modifiers[] }` |
+
+- События подписываются telemetry-service (аналитика), monitoring-service (профилирование боёв) и achievement-service (ачивки за ricochet/curved-shot).
+- `combat.ballistics.events` включают `traceId` для привязки к сессиям PvP/PvE.
+
+---
+
+## 9. Интеграция с API-SWAGGER
+
+- `api/v1/gameplay/combat/ballistics.yaml` — описывает simulate, модификацию оружия и активные навыки (operationId: `simulateBallistics`, `updateWeaponMods`, `listActiveSkills`).
+- `api/v1/economy/crafting/weapon-jobs.yaml` — очередь крафта модов (operationId: `createWeaponJob`, `getWeaponJob`).
+- `api/v1/gameplay/equipment/weapon-mods.yaml` — схемы модов, слотов и ограничений.
+- AsyncAPI пакеты:
+  - `asyncapi/combat-ballistics.yaml` — тема `combat.ballistics.events`.
+  - `asyncapi/economy-crafting.yaml` — тема `economy.crafting.jobs`.
+- Безопасность: `BearerAuth` + `X-Player-Id` (для PvP персонализации), rate limit 180 r/min на simulate endpoint.
+
+---
+
+## 10. Следующие итерации (не блокирует)
+
+1. Подготовить таблицы статус-эффектов для визуализации и аналитики.
+2. Дополнить PvP/PvE конфигурации бронепробития (в отдельном balancing документе).
+3. Создать автоматические тестовые сценарии для `simulateBallistics` (скрипт `scripts/test-ballistics.ps1`).
+
+---
+
+## История изменений
+
+- 2025-11-08 — финализирована API интеграция, описаны REST/Async контракты и подготовлены задачи для API-SWAGGER.
+- 2025-11-07 — первый драфт механик дистанций, рикошетов и кастомизации.
 

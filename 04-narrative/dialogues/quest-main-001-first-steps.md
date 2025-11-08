@@ -18,10 +18,10 @@
 ---
 
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-312: api/v1/narrative/dialogues/quests/main-001-first-steps.yaml (2025-11-08)
-- Last Updated: 2025-11-08 09:35
+  - API-TASK-312: api/v1/narrative/dialogues/quests/main-001-first-steps.yaml (2025-11-08, +components)
+- Last Updated: 2025-11-08 09:48
 
 ---
 
