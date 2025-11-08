@@ -12,6 +12,7 @@
 - Auth/Characters/Progression — ждём слот ДУАПИТАСК для задач по auth README, character-management и progression-backend.
 - gameplay-service/arena-system — подтвердить приоритет и окно ДУАПИТАСК для `.BRAIN/02-gameplay/combat/arena-system.md` (ready, рейтинговые циклы, `api/v1/gameplay/combat/arena-system.yaml`).
 - gameplay-service/dnd-integration-shooter — подготовить пакет задач по `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md` (ready, микро-проверки, `api/v1/gameplay/combat/dnd-integration-shooter.yaml`).
+- gameplay-service/stealth — подготовить пакет задач по `.BRAIN/02-gameplay/combat/combat-stealth.md` (ready, системы скрытности, `api/v1/gameplay/combat/stealth.yaml`).
 - gameplay-service/quests — подготовить пакет задач на основе `.BRAIN/05-technical/backend/quest-engine-backend.md` (ready, quest state machine + D&D checks).
 ## Blocked
 - *(блокеров нет)*

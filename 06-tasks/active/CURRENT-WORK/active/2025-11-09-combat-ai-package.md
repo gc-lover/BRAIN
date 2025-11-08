@@ -12,6 +12,7 @@
 - Перепроверены метаданные `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`: статус `approved`, `api-readiness: ready`, актуализирован приоритет `highest`.
 - Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты для дальнейшего разбиения на задачи ДУАПИТАСК.
 - Определены зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
+- Проверено ядро системы проверок `.BRAIN/02-gameplay/combat/combat-dnd-core.md`: подтверждены DC, модификаторы, групповые проверки, добавлено в `ready.md` и `readiness-tracker.yaml`.
 
 ## Блокеры
 - Действует запрет на создание задач в `API-SWAGGER` до отдельного разрешения.
