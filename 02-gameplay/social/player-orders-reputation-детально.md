@@ -25,9 +25,9 @@
 - **Status:** in_progress
 - **Tasks:**
   - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-ratings-api.md) — `api/v1/social/player-orders/ratings.yaml` (рейтинги, отзывы, санкции) — completed 2025-11-08 17:45 (валидировано).
-  - API-TASK-338 — `api/v1/social/player-orders/reviews.yaml` (создание и модерация отзывов, выборки для UI, жалобы/флаги) — in_progress, взято API Executor 2025-11-08 18:15.
+  - API-TASK-338 — `api/v1/social/player-orders/reviews.yaml` (создание и модерация отзывов, выборки для UI, жалобы/флаги) — completed 2025-11-08 18:35 (валидировано).
   - API-TASK-339 — `api/v1/economy/player-orders/risk.yaml` (страхование, escrow и скоринг рисков вознаграждений) — queued 2025-11-08 18:52.
-- **Last Updated:** 2025-11-08 18:15
+- **Last Updated:** 2025-11-08 18:35
 
 ---
 

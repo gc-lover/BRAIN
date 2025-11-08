@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-MENTOR-001: api/v1/social/mentorship/programs.yaml (2025-11-08 10:20)
-  - API-TASK-MENTOR-002: api/v1/social/mentorship/contracts.yaml (2025-11-08 10:20)
-  - API-TASK-MENTOR-003: api/v1/world/academies/events.yaml (2025-11-08 10:20)
-- **Last Updated:** 2025-11-08 10:20
+  - API-TASK-343: api/v1/social/mentorship/programs.yaml (2025-11-08 19:10)
+  - API-TASK-344: api/v1/social/mentorship/contracts.yaml (2025-11-08 19:10)
+  - API-TASK-345: api/v1/world/academies/events.yaml (2025-11-08 19:10)
+- **Last Updated:** 2025-11-08 19:10
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:20  \
+**Последнее обновление:** 2025-11-08 19:10  \
 **Приоритет:** высокий
 
 **target-domain:** social  \
