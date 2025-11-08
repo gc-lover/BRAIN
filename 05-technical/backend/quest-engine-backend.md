@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:30
-**api-readiness-notes:** Quest Engine backend - state machine, dialogue execution, skill checks, branching. Микрофича (~400 строк). MVP блокер!
+**api-readiness-check-date:** 2025-11-09 00:59
+**api-readiness-notes:** Quest Engine backend - state machine, dialogue execution, skill checks и branching; перепроверено 2025-11-09 00:59, готово к постановке задач gameplay-service.
 ---
 ---
 

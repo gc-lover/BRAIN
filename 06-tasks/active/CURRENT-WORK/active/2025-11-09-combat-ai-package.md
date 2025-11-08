@@ -9,15 +9,15 @@
 ---
 
 ## Прогресс
-- Подтверждена актуальность `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`; readiness — `ready`, микросервис `gameplay-service`, фронтенд `modules/combat/ai`.
-- Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты для будущего разбиения на API задачи.
-- Идентифицированы зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам для учёта в постановке задач.
+- Перепроверены метаданные `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`: статус `approved`, `api-readiness: ready`, актуализирован приоритет `highest`.
+- Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты для дальнейшего разбиения на задачи ДУАПИТАСК.
+- Определены зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
 
 ## Блокеры
-- Нет.
+- Действует запрет на создание задач в `API-SWAGGER` до отдельного разрешения.
 
 ## Следующие действия
-- Разбить документ на пакет задач ДУАПИТАСК: REST-контракты, WebSocket-события, Kafka-телеметрия.
-- Подготовить перечень бизнес-правил и D&D проверок, требующих отдельных контрактов или справочников.
-- Уточнить интеграцию с `implementation-tracker.yaml` после получения разрешения на постановку задач.
+1. Сформировать конспект требований (REST, WebSocket, Kafka, D&D проверки) для передачи ДУАПИТАСК.
+2. Сверить связи с документами `combat-extract`, `combat-hacking-networks`, `combat-hacking-combat-integration` и отразить зависимости в пакете.
+3. После снятия запрета на работу в `API-SWAGGER` подготовить задачу, обновить очереди и синхронизировать `implementation-tracker.yaml`.
 
