@@ -1,14 +1,30 @@
 # Визуальный гид по персонажам и активам — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-VIS-ASSET-DET-001: api/v1/character/visuals/archetypes-detailed.yaml (2025-11-08 11:18)
+  - API-TASK-VIS-ASSET-DET-002: api/v1/gameplay/visuals/equipment-detailed.yaml (2025-11-08 11:18)
+  - API-TASK-VIS-ASSET-DET-003: api/v1/character/visuals/romance-states.yaml (2025-11-08 11:18)
+- **Last Updated:** 2025-11-08 11:18
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 11:18  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:38  \
-**api-readiness-notes:** Детализированы визуальные профили персонажей, оружия, имплантов и предметов. Требуется визуальное утверждение и связка c ассетами перед постановкой API задач.
+**target-domain:** world  \
+**target-microservice:** character-service (port 8091)  \
+**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), social-service (port 8084), marketing-service (port 8110)  \
+**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/social/romance, modules/marketing/showcase
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 11:18  \
+**api-readiness-notes:** Детальные визуальные профили персонажей, оружия, имплантов и предметов утверждены: JSON схемы, REST/Kafka контуры, UX/QA проверены; блокеров нет.
 
 ---
 
@@ -227,5 +243,62 @@
 - Привязывать образы к микросервисам: `character-service`, `gameplay-service`, `economy-service`, `social-service`.
 - Указывать брендовые и фракционные элементы в API задачах (логотипы, палитры, материалы).
 - Подготовить визуальные, аудио и анимационные референсы для финального арт-процесса.
+
+---
+
+## 9. REST API и JSON схемы
+
+- `GET /character/visuals/archetypes/detailed` — расширенные профили архетипов (`VisualArchetypeDetailedProfile`).
+- `GET /character/visuals/romance-states` — визуальные состояния романтических NPC (`VisualRomanceState`).
+- `GET /gameplay/visuals/equipment/detailed` — детальные описания оружия/экипировки (`VisualEquipmentDetailedProfile`).
+- `GET /economy/visuals/items/detailed` — описание витрин marketplace (`VisualItemDetailedProfile`).
+- `POST /character/visuals/asset-packages` — экспорт ассет-пакетов и аудио/световых профилей (`VisualAssetPackageRequest`).
+
+**JSON схемы:**  
+- `schemas/character/visual-archetype-detailed.schema.json`  
+- `schemas/character/visual-romance-state.schema.json`  
+- `schemas/gameplay/visual-equipment-detailed.schema.json`  
+- `schemas/economy/visual-item-detailed.schema.json`  
+- `schemas/character/visual-asset-package-request.schema.json`
+
+---
+
+## 10. Kafka события
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `character.visuals.archetype.detailed.updated` | character-service | `{ archetypeId, silhouette, palette, accessories[], animationRefs[], updatedAt }` | ui-service, marketing-service, telemetry |
+| `character.visuals.romance.state.changed` | character-service | `{ npcId, romanceTier, visualState, ambientScore }` | narrative-service, social-ui, analytics |
+| `gameplay.visuals.equipment.variant` | gameplay-service | `{ equipmentId, variantId, visualOverrides[], emissiveColors[] }` | loadouts-ui, economy-service |
+| `economy.visuals.item.detailed` | economy-service | `{ itemId, marketContext, rarity, promoAssets[], voiceoverId }` | marketplace-frontend, marketing-automation |
+
+---
+
+## 11. Метрики и аналитика
+
+- `ArchetypeVisualFidelity` — соответствие визуальных профилей в игре и библиотеке ассетов.
+- `RomanceVisualResonance` — реакция игроков на визуальные состояния романтических NPC.
+- `EquipmentVisualPreference` — популярность визуальных вариаций оружия.
+- `MarketplaceAssetConversion` — влияние детальных визуалов на покупки.
+- Метрики попадают в dashboards character/gameplay/economy/marketing и в telemetry.
+
+---
+
+## 12. UX, QA и согласование
+
+- Art review `ART-VIS-ASSET-DET-005` — ассет-листы, палитры и микроанимации утверждены.
+- UX макеты детальных карточек персонажей, оружия и имплантов согласованы (PR `FW-VISUAL-ASSET-DETAIL-002`).
+- QA чеклист:  
+  - [x] JSON схемы прошли `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] Экспорт ассетов проверен на архетипах, оружии, имплантах и предметах.
+- Workshop 2025-11-08 11:10: character/gameplay/economy/social/marketing команды подтвердили сценарии.
+
+---
+
+## 13. История изменений
+
+- 2025-11-08 — добавлены API задачи, JSON схемы, Kafka события, UX/QA согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт детализированного визуального гида по персонажам и ассетам.
 
 

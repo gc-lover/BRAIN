@@ -131,6 +131,18 @@ documents:
       - "api/v1/gameplay/visuals/equipment.yaml"
       - "api/v1/economy/visuals/items.yaml"
 
+  - path: ".BRAIN/03-lore/_03-lore/visual-guides/visual-style-assets-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 11:18"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Детальные визуальные профили персонажей, оружия, имплантов и предметов утверждены; REST/JSON, Kafka и UX/QA синхронизированы."
+    issues: []
+    api_target:
+      - "api/v1/character/visuals/archetypes-detailed.yaml"
+      - "api/v1/gameplay/visuals/equipment-detailed.yaml"
+      - "api/v1/character/visuals/romance-states.yaml"
+
   - path: ".BRAIN/03-lore/visual-guides/visual-style-assets.md"
     status: "ready"
     version: "1.0.0"
