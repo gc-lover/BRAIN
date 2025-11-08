@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-VIS-ASSET-001: api/v1/character/visuals/archetypes.yaml (2025-11-08 11:12)
-  - API-TASK-VIS-ASSET-002: api/v1/gameplay/visuals/equipment.yaml (2025-11-08 11:12)
-  - API-TASK-VIS-ASSET-003: api/v1/economy/visuals/items.yaml (2025-11-08 11:12)
-- **Last Updated:** 2025-11-08 11:12
+  - API-TASK-328: api/v1/character/visuals/archetypes.yaml (2025-11-08 17:34)
+  - API-TASK-329: api/v1/gameplay/visuals/equipment.yaml (2025-11-08 17:34)
+  - API-TASK-330: api/v1/economy/visuals/items.yaml (2025-11-08 17:34)
+- **Last Updated:** 2025-11-08 17:34
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 11:12  \
+**Последнее обновление:** 2025-11-08 17:34  \
 **Приоритет:** высокий
 
 **target-domain:** world  \
