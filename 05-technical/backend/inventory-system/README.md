@@ -3,7 +3,9 @@
 **Версия:** 1.0.2  
 **Дата:** 2025-11-07  
 **Статус:** approved  
-**api-readiness:** ready
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 23:39  
+**api-readiness-notes:** Навигация по подсистемам инвентаря, указаны сервисы и зависимости.
 
 ---
 

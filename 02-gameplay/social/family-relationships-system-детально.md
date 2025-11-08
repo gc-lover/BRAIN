@@ -1,30 +1,15 @@
 # Система семейных отношений с NPC — детальная версия
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-355: api/v1/social/families/tree.yaml (2025-11-08 20:10)
-  - API-TASK-356: api/v1/social/families/events.yaml (2025-11-08 20:10)
-  - API-TASK-357: api/v1/economy/families/heritage.yaml (2025-11-08 20:10)
 - **Last Updated:** 2025-11-08 20:10
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 20:10  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 20:10  \\n**Приоритет:** высокий
 
-**target-domain:** social  \
-**target-microservice:** social-service (port 8084)  \
-**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), character-service (port 8090)  \
-**target-frontend-module:** modules/social/families, modules/world/insights
+**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), character-service (port 8090)  \\n**target-frontend-module:** modules/social/families, modules/world/insights
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 10:53  \
-**api-readiness-notes:** Семейные отношения формализованы: дерево родства, события, наследование и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:53  \\n**api-readiness-notes:** Семейные отношения формализованы: дерево родства, события, наследование и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
 
 ---
 

@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 22:55 — API-TASK-254 — Chat Features API (completed)
 - **Last Updated:** 2025-11-08 22:55
 ---
 
@@ -254,7 +250,6 @@ public ChatHistoryResponse getHistory(
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 3/3: Chat Features (split from chat-system.md)
-
 
 
 

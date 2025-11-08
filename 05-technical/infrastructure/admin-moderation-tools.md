@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-161: api/v1/admin/moderation.yaml (2025-11-07 11:26)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -134,4 +130,3 @@ CREATE TABLE admin_actions_log (
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание admin tools
-

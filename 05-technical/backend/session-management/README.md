@@ -5,11 +5,7 @@
 **Статус:** approved
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-221: docs/session-management/session-api-readme.md (2025-11-08 03:16)
 - **Last Updated:** 2025-11-08 03:16
 ---
 ## Микросервисная архитектура
@@ -52,4 +48,3 @@
 
 - v1.0.1 (2025-11-07 02:18) - Разбит на 2 части
 - v1.0.0 (2025-11-06) - Создан (961 строка)
-

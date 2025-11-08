@@ -17,12 +17,6 @@
 **интеграции:** reputation, romance, contract outcomes
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-280: api/v1/social/factions/faction-social-dialogues.yaml (2025-11-08 03:00)
-- Last Updated: 2025-11-08 03:00
----
 
 ## 1. Обзор
 - Для ключевых фракций описаны лидеры, их мотивация, условия доступа и ветви общения.

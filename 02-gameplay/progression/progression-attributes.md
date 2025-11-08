@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-159: api/v1/progression/attributes.yaml (2025-11-07 11:22)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -681,4 +677,3 @@ CREATE TABLE attribute_modifiers (
   - Описаны производные параметры
   - Проработана связь с классами, навыками, перками и имплантами
   - Добавлены формулы влияния атрибутов на параметры
-

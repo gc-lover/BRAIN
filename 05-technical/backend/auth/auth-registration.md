@@ -18,10 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -179,7 +176,6 @@ public LoginResponse loginWithOAuth(OAuthProvider provider, String oauthCode) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 1/3: Auth Registration (split from authentication-authorization-system.md)
-
 
 
 

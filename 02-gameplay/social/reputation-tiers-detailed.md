@@ -6,11 +6,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-061: api/v1/gameplay/social/reputation-tiers.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:00
 ---
 
@@ -453,4 +449,3 @@
 - ✅ Title system
 
 **Для API готово!** 🎭
-

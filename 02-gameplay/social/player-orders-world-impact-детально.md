@@ -1,24 +1,12 @@
 # Система заказов — влияние на мир (детально)
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 09:57  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 09:57  \\n**Приоритет:** высокий
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 09:57  \
-**api-readiness-notes:** Влияние заказов на мир формализовано: описаны REST/JSON схемы, Kafka события и связки с world/social/economy сервисами; документ готов к API задачам.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 09:57  \\n**api-readiness-notes:** Влияние заказов на мир формализовано: описаны REST/JSON схемы, Kafka события и связки с world/social/economy сервисами; документ готов к API задачам.
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-world-impact-api.md) — `api/v1/world/player-orders/effects.yaml` (глобальные эффекты, кризисы, события) — completed 2025-11-08 18:10 (валидировано).
-  - [API-TASK-320](../../API-SWAGGER/tasks/active/queue/task-320-player-orders-economy-index-api.md) — `api/v1/economy/player-orders/index.yaml` (экономические индексы, макропоказатели) — created 2025-11-08 12:55.
-  - [API-TASK-321](../../API-SWAGGER/tasks/active/queue/task-321-player-orders-news-api.md) — `api/v1/social/player-orders/news.yaml` (новостная лента, уведомления) — created 2025-11-08 13:05.
 - **Last Updated:** 2025-11-08 18:10
 
 ---
@@ -150,4 +138,3 @@
 
 - 2025-11-08 — добавлены REST/JSON схемы, Kafka события, UX интеграции; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт влияния.
-

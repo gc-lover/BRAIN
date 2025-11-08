@@ -17,12 +17,6 @@
 
 ---
 
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-313: api/v1/narrative/dialogues/quests/fq-arasaka-001.yaml (2025-11-08)
-- Last Updated: 2025-11-08 09:44
-
 ---
 
 ## 1. Контекст и цели

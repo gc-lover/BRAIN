@@ -13,11 +13,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-071: api/v1/meta/league-system.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:50
 ---
 
@@ -294,4 +290,3 @@ Legacy Items мощные, но **не pay-to-win**. Дают преимущес
 ## История изменений
 
 - v1.0.0 (2025-11-06 18:50) — Создание системы лиг с мета-прогрессом и сбросом
-

@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-082: api/v1/gameplay/combat/hacking-types.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:45
 ---
 
@@ -77,5 +73,4 @@
 
 ## История изменений
 - v1.0.0 (2025-11-03) — Выделено из `combat-hacking.md`
-
 

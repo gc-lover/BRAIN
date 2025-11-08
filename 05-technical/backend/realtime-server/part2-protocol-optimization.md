@@ -2,11 +2,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-197: api/v1/technical/realtime/realtime-protocol.yaml (2025-11-07 20:35)
 - **Last Updated:** 2025-11-07 20:35
 ---
 
@@ -404,4 +400,3 @@ realtime.lag.compensation     - срабатываний lag compensation
 
 - v1.0.1 (2025-11-07 02:13) - Создан с полным Java кодом (protocol, lag compensation, optimization)
 - v1.0.0 (2025-11-06) - Создан
-

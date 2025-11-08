@@ -5,12 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-138: api/v1/gameplay/quests/quest-engine.yaml (2025-11-08 18:15)
-  - API-TASK-226: api/v1/gameplay/quests/quest-engine.yaml (2025-11-08 04:12)
 - **Last Updated:** 2025-11-08 18:15
 ---
 
@@ -330,4 +325,3 @@ private SkillCheckResult performSkillCheck(
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Создан Quest Engine Backend (микрофича)
-

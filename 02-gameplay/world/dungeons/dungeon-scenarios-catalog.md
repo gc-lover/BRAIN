@@ -1,10 +1,4 @@
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-245: api/v1/gameplay/world/dungeons.yaml (2025-11-07 21:40)
-- Last Updated: 2025-11-07 21:40
----
 
 ---
 **api-readiness:** ready  

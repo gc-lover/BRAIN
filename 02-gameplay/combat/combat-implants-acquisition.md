@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-093: api/v1/gameplay/combat/implants-acquisition.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 04:15
 ---
 

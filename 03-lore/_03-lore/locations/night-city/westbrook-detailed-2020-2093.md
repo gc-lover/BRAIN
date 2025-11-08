@@ -9,10 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -198,4 +195,3 @@ Tyger Claws используют **BD-запись Evelyn** (до трагеди
 ## История изменений
 
 - v1.0.0 (2025-11-06 16:40) — Создание Westbrook детально
-

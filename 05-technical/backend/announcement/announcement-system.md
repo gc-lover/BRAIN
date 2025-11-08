@@ -8,11 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-205: api/v1/admin/announcements/announcement-system.yaml (2025-11-07 23:25)
 - **Last Updated:** 2025-11-07 23:25
 ---
 
@@ -334,18 +330,33 @@ public class PatchNotesService {
     private String formatPatchNotes(PatchNotesContent content) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append("## New Features\n\n");
-        content.getNewFeatures().forEach(f -> sb.append("- ").append(f).append("\n"));
+        sb.append("## New Features
+
+");
+        content.getNewFeatures().forEach(f -> sb.append("- ").append(f).append("
+"));
         
-        sb.append("\n## Bug Fixes\n\n");
-        content.getBugFixes().forEach(f -> sb.append("- ").append(f).append("\n"));
+        sb.append("
+## Bug Fixes
+
+");
+        content.getBugFixes().forEach(f -> sb.append("- ").append(f).append("
+"));
         
-        sb.append("\n## Improvements\n\n");
-        content.getImprovements().forEach(f -> sb.append("- ").append(f).append("\n"));
+        sb.append("
+## Improvements
+
+");
+        content.getImprovements().forEach(f -> sb.append("- ").append(f).append("
+"));
         
         if (!content.getKnownIssues().isEmpty()) {
-            sb.append("\n## Known Issues\n\n");
-            content.getKnownIssues().forEach(f -> sb.append("- ").append(f).append("\n"));
+            sb.append("
+## Known Issues
+
+");
+            content.getKnownIssues().forEach(f -> sb.append("- ").append(f).append("
+"));
         }
         
         return sb.toString();
@@ -391,4 +402,3 @@ public class PatchNotesService {
 - [Notification System](../notification-system.md)
 - [Maintenance Mode](../maintenance/maintenance-mode-system.md)
 - [Admin Tools](../admin/admin-tools-core.md)
-

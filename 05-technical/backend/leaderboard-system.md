@@ -1,11 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-137: api/v1/world/leaderboards/leaderboard-system.yaml (2025-11-08 18:10)
-  - API-TASK-225: api/v1/world/leaderboards/leaderboards.yaml (2025-11-08 04:00)
 - **Last Updated:** 2025-11-08 18:10
 ---
 
@@ -323,4 +318,3 @@ Top 1000 reward: Rare skin ✅
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание системы рейтингов
-

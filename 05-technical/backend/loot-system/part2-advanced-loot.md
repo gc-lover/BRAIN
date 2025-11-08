@@ -9,11 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-215: api/v1/loot/loot-advanced.yaml (2025-11-08 01:52)
 - **Last Updated:** 2025-11-08 01:52
 ---
 
@@ -285,4 +281,3 @@ public LootTable getLootTable(String tableId) {
 
 - v1.0.1 (2025-11-07 02:19) - Создан с полным Java кодом (rolls, boss loot, smart loot, anti-duplicate)
 - v1.0.0 (2025-11-07) - Создан
-

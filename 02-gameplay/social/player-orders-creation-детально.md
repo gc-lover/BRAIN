@@ -1,14 +1,8 @@
 # Система заказов — создание заказа (детально)
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 09:53  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 09:53  \\n**Приоритет:** высокий
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 09:53  \
-**api-readiness-notes:** Мастер создания заказа финализирован: добавлены формулы бюджета, REST/JSON схемы, Kafka события, UX-поток и интеграции с экономикой/социальными сервисами.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 09:53  \\n**api-readiness-notes:** Мастер создания заказа финализирован: добавлены формулы бюджета, REST/JSON схемы, Kafka события, UX-поток и интеграции с экономикой/социальными сервисами.
 
 ---
 
@@ -17,13 +11,7 @@
 - Подготовка брифа → валидация → оценка сложности → настройка публикации → выбор гарантий → публикация.
 - Оркестрируется `social-service`, вызывает `economy-service` для расчётов и `npc-service` при адресных заказах.
 
-### 1.1 API Tasks Status
-
 - **Status:** in-progress
-- **Tasks:**
-  - [API-TASK-317](../../API-SWAGGER/tasks/active/queue/task-317-player-orders-creation-api.md) — `api/v1/social/player-orders.yaml` (создание/публикация) — queued 2025-11-08 12:10.
-  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-budget-api.md) — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — completed 2025-11-08 16:55.
-  - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-validation-api.md) — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — completed 2025-11-08 16:39.
 - **Last Updated:** 2025-11-08 16:55
 
 ---

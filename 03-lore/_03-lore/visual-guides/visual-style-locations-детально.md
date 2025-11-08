@@ -1,14 +1,6 @@
 # Визуальный гид по локациям — детальная версия
 
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-322: api/v1/world/visuals/locations-detailed.yaml (2025-11-08 16:32)
-  - API-TASK-323: api/v1/social/visuals/hubs-detailed.yaml (2025-11-08 16:32)
-  - API-TASK-324: api/v1/world/visuals/events.yaml (2025-11-08 16:32)
-- Last Updated: 2025-11-08 16:32
----
 
 
 **Статус:** approved  \

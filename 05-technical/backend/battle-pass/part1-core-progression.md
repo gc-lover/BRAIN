@@ -7,11 +7,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-207: api/v1/gameplay/battle-pass/battle-pass-core.yaml (2025-11-07 23:58)
 - **Last Updated:** 2025-11-07 23:58
 ---
 
@@ -258,4 +254,3 @@ public void purchasePremium(UUID playerId) {
 
 - v1.0.1 (2025-11-07 02:40) - Создан с полным Java кодом (schemas, XP, premium)
 - v1.0.0 (2025-11-07 02:30) - Создан
-

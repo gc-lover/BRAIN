@@ -3,18 +3,12 @@
 **Статус:** approved  
 **Версия:** 1.0.1  
 **Дата:** 2025-11-07 02:16  
-**api-readiness:** ready
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 23:39  
+**api-readiness-notes:** Advanced механики (перегруз, auto-loot, качество, ограничения) описаны полно.
 
 [← Part 1](./part1-core-system.md) | [Навигация](./README.md)
 
----
-
-## API Tasks Status
-
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-214: api/v1/inventory/inventory-advanced.yaml (2025-11-08 01:40)
-- **Last Updated:** 2025-11-08 01:40
 ---
 
 ## Weight & Encumbrance

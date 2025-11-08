@@ -1,11 +1,5 @@
 # Диалоги — Side Quest «Maelstrom Double-Cross»
 
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-381: api/v1/narrative/dialogues/quests/maelstrom-double-cross.yaml (2025-11-08 22:25)
-- **Last Updated:** 2025-11-08 22:25
-
 **ID диалога:** `dialogue-quest-side-maelstrom-double-cross`  
 **Тип:** quest  
 **Статус:** approved  

@@ -8,10 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -241,4 +238,3 @@ Payload:
 ## История изменений
 
 - v1.0.0 (2025-11-07 00:01) - API integration guide
-

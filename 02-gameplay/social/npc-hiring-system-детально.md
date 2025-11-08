@@ -1,30 +1,15 @@
 # Система найма NPC — детальная версия
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-349: api/v1/social/npc-hiring/contracts.yaml (2025-11-08 19:40)
-  - API-TASK-350: api/v1/social/npc-hiring/workforce.yaml (2025-11-08 19:40)
-  - API-TASK-351: api/v1/economy/npc-hiring/payroll.yaml (2025-11-08 19:40)
 - **Last Updated:** 2025-11-08 19:40
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 19:40  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 19:40  \\n**Приоритет:** высокий
 
-**target-domain:** social  \
-**target-microservice:** social-service (port 8084)  \
-**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), npc-service (port 8088)  \
-**target-frontend-module:** modules/social/npc-hiring, modules/world/insights
+**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), npc-service (port 8088)  \\n**target-frontend-module:** modules/social/npc-hiring, modules/world/insights
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 10:27  \
-**api-readiness-notes:** Контракты, управление и экономика найма NPC согласованы: REST/Kafka контуры, UX сценарии и метрики готовы к постановке API задач.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:27  \\n**api-readiness-notes:** Контракты, управление и экономика найма NPC согласованы: REST/Kafka контуры, UX сценарии и метрики готовы к постановке API задач.
 
 ---
 

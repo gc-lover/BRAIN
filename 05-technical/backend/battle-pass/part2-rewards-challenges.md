@@ -7,11 +7,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-208: api/v1/gameplay/battle-pass/battle-pass-rewards.yaml (2025-11-08 00:12)
 - **Last Updated:** 2025-11-08 00:12
 ---
 
@@ -242,4 +238,3 @@ Response:
 
 - v1.0.1 (2025-11-07 02:40) - Создан с полным Java кодом (schemas, XP, premium, API)
 - v1.0.0 (2025-11-07 02:30) - Создан
-

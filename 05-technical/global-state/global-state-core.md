@@ -15,14 +15,10 @@
 
 **Микрофича:** Global State архитектура и Event Sourcing  
 **Размер:** ~400 строк ✅  
-**API Task:** API-TASK-074 (api/v1/technical/global-state.yaml)
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -243,4 +239,3 @@ economy.currency.eurodollar.exchangeRate.yen = 0.85
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:00)** - Микрофича 1/5: Global State Core (split from global-state-system.md)
-

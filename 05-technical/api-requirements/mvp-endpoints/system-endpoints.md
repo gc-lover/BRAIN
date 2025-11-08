@@ -15,7 +15,6 @@
 
 **Микрофича:** System endpoints  
 **Размер:** ~120 строк ✅  
-**API Task:** API-TASK-169
 
 ---
 
@@ -31,13 +30,6 @@
 
 **API Gateway health:** http://localhost:8080/actuator/health  
 **Eureka Dashboard:** http://localhost:8761
-
-**API Tasks Status:**
-- ✅ Задача создана: [API-TASK-173](../../../API-SWAGGER/tasks/active/queue/task-173-*.md)
-- 📅 Дата создания задачи: 2025-11-07
-- 🔄 Статус: queued (ожидает выполнения АПИТАСК агентом)
-- 📝 Категория: MVP_ENDPOINTS_SPLIT
-- 🔗 Следующий шаг: АПИТАСК агент создаст OpenAPI спецификацию
 
 ---
 
@@ -122,4 +114,3 @@ TRADE_001 - Insufficient funds
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:05)** - Микрофича 4/4: System Endpoints (split from mvp-endpoints.md)
-

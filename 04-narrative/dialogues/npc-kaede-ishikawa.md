@@ -16,12 +16,6 @@
 **api-readiness-notes:** Версия 1.3.0: ветки Specter/Helios/Balanced, пасхалки и активные события связаны с рейдом Helios Countermesh.
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-290: api/v1/narrative/dialogues/npc-kaede-ishikawa.yaml (2025-11-08 05:50)
-- Last Updated: 2025-11-08 05:50
----
 
 ---
 

@@ -1,10 +1,4 @@
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-248: api/v1/gameplay/world/dungeon-bosses.yaml (2025-11-07 22:20)
-- Last Updated: 2025-11-07 22:20
----
 
 ---
 **Статус:** approved  

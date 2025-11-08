@@ -5,12 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-134: api/v1/social/friends/friend-system.yaml (2025-11-08 17:50)
-  - API-TASK-228: api/v1/social/friends/friend-system.yaml (2025-11-08 04:40)
 - **Last Updated:** 2025-11-08 17:50
 ---
 
@@ -96,4 +91,3 @@ CREATE INDEX idx_friendships_b ON friendships(character_b_id, status);
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:20)** - Создан документ Friend System
-

@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-091: api/v1/gameplay/combat/implants-visuals.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 04:05
 ---
 

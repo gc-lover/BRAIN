@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 23:10 — API-TASK-255 — Chat Moderation API (completed)
 - **Last Updated:** 2025-11-08 23:10
 ---
 
@@ -214,7 +210,6 @@ private void autoBan(UUID playerId, String reason, Duration duration) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 2/3: Chat Moderation (split from chat-system.md)
-
 
 
 

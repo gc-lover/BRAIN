@@ -16,11 +16,7 @@
 **api-readiness-notes:** Определены UX-флоу и API Guild Contract Board; готово к реализации фронтенда и бэкенда.
 
 ---
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-271: api/v1/gameplay/guilds/guild-contract-board.yaml (2025-11-08 01:15)
 - **Last Updated:** 2025-11-08 01:15
 
 ---
@@ -117,4 +113,3 @@
 
 ## 10. История изменений
 - 2025-11-07 23:05 — Создан UI/UX и API документ Guild Contract Board.
-

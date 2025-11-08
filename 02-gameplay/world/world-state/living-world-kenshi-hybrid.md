@@ -6,12 +6,6 @@ api-readiness-notes: Полностью описаны численные коэ
 
 # Living World & Use-Based Progression — Kenshi Hybrid
 
-**API Tasks Status:**
-- Status: completed
-- Tasks:
-  - API-TASK-300: api/v1/gameplay/world/living-world/living-world.yaml (2025-11-08, +schemas, +events)
-- Last Updated: 2025-11-08 09:30
-
 ---
 
 **Статус:** review  

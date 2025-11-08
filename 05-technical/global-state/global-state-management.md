@@ -15,14 +15,10 @@
 
 **Микрофича:** State Management и Event Processing  
 **Размер:** ~430 строк ✅  
-**API Task:** API-TASK-074 (api/v1/technical/global-state.yaml)
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -410,4 +406,3 @@ necpgame.events.global
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:00)** - Микрофича 3/5: Global State Management (split from global-state-system.md)
-

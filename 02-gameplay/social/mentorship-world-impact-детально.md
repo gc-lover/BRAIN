@@ -1,30 +1,15 @@
 # Система наставничества — влияние на мир (детально)
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-346: api/v1/world/player-orders/effects.yaml (2025-11-08 19:25)
-  - API-TASK-347: api/v1/economy/mentorship/index.yaml (2025-11-08 19:25)
-  - API-TASK-348: api/v1/social/mentorship/news.yaml (2025-11-08 19:25)
 - **Last Updated:** 2025-11-08 19:25
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 19:25  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 19:25  \\n**Приоритет:** высокий
 
-**target-domain:** world  \
-**target-microservice:** world-service (port 8092)  \
-**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \
-**target-frontend-module:** modules/world/insights, modules/social/mentorship
+**target-domain:** world  \\n**target-microservice:** world-service (port 8092)  \\n**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \\n**target-frontend-module:** modules/world/insights, modules/social/mentorship
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 10:33  \
-**api-readiness-notes:** Эффекты наставничества формализованы: индексы, world-events, REST/Kafka контуры и UX/QA согласование завершены; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:33  \\n**api-readiness-notes:** Эффекты наставничества формализованы: индексы, world-events, REST/Kafka контуры и UX/QA согласование завершены; блокеров нет.
 
 ---
 
@@ -179,6 +164,5 @@
 
 - 2025-11-08 — добавлены API задачи, индексы, REST/Kafka контуры и UX согласование; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт влияния наставничества.
-
 
 

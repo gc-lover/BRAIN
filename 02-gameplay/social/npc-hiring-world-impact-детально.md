@@ -1,29 +1,15 @@
 # Система найма NPC — влияние на игровой мир (детально)
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-358: api/v1/world/player-orders/effects.yaml (2025-11-08 20:22)
-  - API-TASK-359: api/v1/economy/npc-hiring/index.yaml (2025-11-08 20:22)
 - **Last Updated:** 2025-11-08 20:22
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 20:22  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 20:22  \\n**Приоритет:** высокий
 
-**target-domain:** world  \
-**target-microservice:** world-service (port 8092)  \
-**target-microservice-secondary:** economy-service (port 8089), social-service (port 8084)  \
-**target-frontend-module:** modules/world/insights, modules/social/npc-hiring
+**target-domain:** world  \\n**target-microservice:** world-service (port 8092)  \\n**target-microservice-secondary:** economy-service (port 8089), social-service (port 8084)  \\n**target-frontend-module:** modules/world/insights, modules/social/npc-hiring
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 10:12  \
-**api-readiness-notes:** Мировое влияние найма NPC формализовано: индексы занятости, REST/Kafka контуры и UX сценарии согласованы; блокеров перед API задачами нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:12  \\n**api-readiness-notes:** Мировое влияние найма NPC формализовано: индексы занятости, REST/Kafka контуры и UX сценарии согласованы; блокеров перед API задачами нет.
 
 ---
 
@@ -167,4 +153,3 @@
 
 - 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX сценарии; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт влияния найма.
-

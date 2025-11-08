@@ -1,14 +1,8 @@
 # Система заказов от игроков — детальная версия
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 09:51  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 09:51  \\n**Приоритет:** высокий
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 09:51  \
-**api-readiness-notes:** Система заказов финализирована: добавлены API контракты, JSON схемы, интеграция с economy/social/world сервисами и UX требования; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 09:51  \\n**api-readiness-notes:** Система заказов финализирована: добавлены API контракты, JSON схемы, интеграция с economy/social/world сервисами и UX требования; блокеров нет.
 
 ---
 
@@ -20,14 +14,8 @@
 - **Интерфейсы:** доска заказов, панель создания, панель исполнителя, трекер статуса, журналы сделок.
 - **Данные:** JSON схемы для заказов, заявок, отзывов, escrow операций, мировых эффектов.
 
-### 1.1 API Tasks Status
-
 - **Status:** ready-to-create
 - **Target tasks:**
-  - API-TASK-SOC-PO-001 — `api/v1/social/player-orders.yaml`
-  - API-TASK-SOC-PO-002 — `api/v1/social/player-orders/ratings.yaml`
-  - API-TASK-ECON-ESCROW-001 — `api/v1/economy/escrow/player-orders.yaml`
-  - API-TASK-WORLD-IMPACT-001 — `api/v1/world/player-orders/effects.yaml`
 - **Last Updated:** 2025-11-08 09:51
 
 ---
@@ -218,5 +206,4 @@
 
 - 2025-11-08 — добавлены API контуры, JSON схемы, Kafka события, UX требования; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт.
-
 

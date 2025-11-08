@@ -15,14 +15,10 @@
 
 **Микрофича:** Operations, monitoring, optimization  
 **Размер:** ~480 строк ✅  
-**API Task:** API-TASK-074 (api/v1/technical/global-state.yaml)
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -505,4 +501,3 @@ Global State System - критическая система NECPGAME:
 ✅ Защищает от сбоев
 
 **Готовность:** READY для API! ✅
-

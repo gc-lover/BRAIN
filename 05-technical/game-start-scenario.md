@@ -12,11 +12,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - **API-TASK-027:** Game Initial Content API - `api/v1/game/start.yaml`, `api/v1/game/initial-state.yaml` (2025-11-06)
 - **Last Updated:** 2025-11-06 15:30
 ---
 
@@ -333,4 +329,3 @@
 ## История изменений
 
 - v1.0.0 (2025-11-05) - Создание документа с описанием сценария запуска игры
-

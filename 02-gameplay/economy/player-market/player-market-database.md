@@ -18,10 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -194,4 +191,3 @@ CREATE TABLE seller_reviews (
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:10)** - Микрофича 1/4: Player Market Core (split from economy-player-market.md)
-

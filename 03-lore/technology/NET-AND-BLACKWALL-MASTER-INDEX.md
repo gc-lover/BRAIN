@@ -6,10 +6,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -189,4 +186,3 @@ Alt Cunningham создала Soulkiller (копирует сознание). Г
 ## История изменений
 
 - v1.0.0 (2025-11-06 17:20) — Мастер-индекс NET и Blackwall
-

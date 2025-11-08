@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Файл диалогов Джейка Арчера содержит состояния, проверки, YAML-экспорт и интеграцию с торговыми активностями. Готов к постановке API-задачи.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-286: api/v1/narrative/dialogues/npc-jake-archer.yaml (2025-11-08 04:50)
-- Last Updated: 2025-11-08 04:50
----
 
 ---
 

@@ -1,30 +1,15 @@
 # Визуальный гид по персонажам и активам NECPGAME
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-328: api/v1/character/visuals/archetypes.yaml (2025-11-08 17:34)
-  - API-TASK-329: api/v1/gameplay/visuals/equipment.yaml (2025-11-08 17:34)
-  - API-TASK-330: api/v1/economy/visuals/items.yaml (2025-11-08 17:34)
 - **Last Updated:** 2025-11-08 17:34
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 17:34  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 17:34  \\n**Приоритет:** высокий
 
-**target-domain:** world  \
-**target-microservice:** character-service (port 8091)  \
-**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), marketing-service (port 8110)  \
-**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/economy/marketplace
+**target-domain:** world  \\n**target-microservice:** character-service (port 8091)  \\n**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), marketing-service (port 8110)  \\n**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/economy/marketplace
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 11:12  \
-**api-readiness-notes:** Архетипы и ассеты финализированы: JSON схемы, REST/Kafka контуры, UX/QA согласование выполнены; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 11:12  \\n**api-readiness-notes:** Архетипы и ассеты финализированы: JSON схемы, REST/Kafka контуры, UX/QA согласование выполнены; блокеров нет.
 
 ---
 
@@ -363,5 +348,4 @@
 - Согласовать визуальный гид с арт-директором и зафиксировать утверждённую палитру брендов.
 - Дополнить разделы конкретными именами NPC, наименованиями оружия, техники и экипировки.
 - Подготовить визуальные референсы, акустические и световые профили для ассетов и прикрепить к каждому подпункту в отдельном приложении.
-
 

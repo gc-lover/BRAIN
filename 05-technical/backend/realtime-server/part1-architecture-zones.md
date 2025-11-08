@@ -2,11 +2,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-196: api/v1/technical/realtime/server-zones.yaml (2025-11-07 17:05)
 - **Last Updated:** 2025-11-07 17:05
 ---
 
@@ -420,4 +416,3 @@ private int getUpdateFrequency(PlayerState state) {
 
 - v1.0.1 (2025-11-07 02:12) - Создан с полным Java кодом (архитектура, zones, sync)
 - v1.0.0 (2025-11-06) - Создан
-

@@ -1,10 +1,4 @@
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-146: api/v1/narrative/quests-data/quests-2090-2093.yaml (2025-11-07 10:54)
-- Last Updated: 2025-11-07 00:18
-
 **target-domain:** narrative  
 **target-microservice:** narrative-service (port 8087)  
 **target-frontend-module:** modules/narrative/quests/side

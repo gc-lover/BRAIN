@@ -17,13 +17,8 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** not_created
 - **Suggested tasks:**
-  - API-TASK-CS-001: `api/v1/gameplay/combat/ballistics.yaml` — расчёт урона, траектории и Curved Shot.
-  - API-TASK-CS-002: `api/v1/gameplay/equipment/weapon-mods.yaml` — управление модульными слотами и крафтом обвесов.
-  - API-TASK-CS-003: `api/v1/economy/crafting/weapon-jobs.yaml` — очередь заказов на моды и материалы.
 - **Last Updated:** 2025-11-08 09:37
 
 ---
@@ -276,4 +271,3 @@ Smart Scope Mk.II
 
 - 2025-11-08 — финализирована API интеграция, описаны REST/Async контракты и подготовлены задачи для API-SWAGGER.
 - 2025-11-07 — первый драфт механик дистанций, рикошетов и кастомизации.
-

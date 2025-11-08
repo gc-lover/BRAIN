@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-141: api/v1/system/reset-system.yaml (2025-11-07 10:42)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -414,4 +410,3 @@ Player completes 3/5 quests:
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание системы сбросов
-

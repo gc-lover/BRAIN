@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-161: api/v1/admin/anti-cheat.yaml (2025-11-07 11:26)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -273,4 +269,3 @@ POST /anticheat/appeal              - Submit appeal
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание anti-cheat системы
-

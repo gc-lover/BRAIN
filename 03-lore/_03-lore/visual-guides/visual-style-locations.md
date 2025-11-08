@@ -1,30 +1,15 @@
 # Визуальный гид по локациям и пространствам NECPGAME
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-VIS-LOC-001: api/v1/world/visuals/locations.yaml (2025-11-08 11:00)
-  - API-TASK-VIS-LOC-002: api/v1/social/visuals/hubs.yaml (2025-11-08 11:00)
-  - API-TASK-VIS-LOC-003: api/v1/economy/visuals/markets.yaml (2025-11-08 11:00)
 - **Last Updated:** 2025-11-08 11:00
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 11:00  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 11:00  \\n**Приоритет:** высокий
 
-**target-domain:** world  \
-**target-microservice:** world-service (port 8092)  \
-**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \
-**target-frontend-module:** modules/world/atlas, modules/social/hubs
+**target-domain:** world  \\n**target-microservice:** world-service (port 8092)  \\n**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \\n**target-frontend-module:** modules/world/atlas, modules/social/hubs
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 11:00  \
-**api-readiness-notes:** Визуальные профили локаций закреплены: JSON схемы, REST/Kafka контуры и UX согласованы с world/social/economy сервисами.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 11:00  \\n**api-readiness-notes:** Визуальные профили локаций закреплены: JSON схемы, REST/Kafka контуры и UX согласованы с world/social/economy сервисами.
 
 ---
 
@@ -270,5 +255,4 @@
 - `../locations/` — детальные описания городов и районов.
 - `../factions/` — визуальные мотивы корпораций, банд и кланов.
 - `../../05-technical/start-content/endgame-raids/` — механика рейдов.
-
 

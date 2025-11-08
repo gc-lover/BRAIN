@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-102: api/v1/narrative/origin-stories.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 05:00
 ---
 
@@ -278,4 +274,3 @@
 
 ## 8. История изменений
 - v1.0.0 (2025-11-06) — системный обзор origin stories (7 классов).
-

@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-068: api/v1/gameplay/economy/currencies.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:35
 ---
 
@@ -358,4 +354,3 @@
 - ✅ Balance sinks/sources
 
 **Следующий шаг:** Детальный каталог ресурсов!
-

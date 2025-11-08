@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -199,4 +196,3 @@ completeSale(auction, price, method) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:15)** - Микрофича 1/3 (split from economy-auction-house.md)
-

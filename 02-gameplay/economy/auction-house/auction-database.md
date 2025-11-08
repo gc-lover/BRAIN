@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -122,4 +119,3 @@ CREATE INDEX idx_bids_bidder ON auction_bids(bidder_id);
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:15)** - Микрофича 2/3 (split from economy-auction-house.md)
-

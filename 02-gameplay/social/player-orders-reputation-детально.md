@@ -1,14 +1,8 @@
 # Система заказов — репутация и рейтинг (детально)
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 18:52  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 18:52  \\n**Приоритет:** высокий
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 09:55  \
-**api-readiness-notes:** Рейтинги заказчиков/исполнителей финализированы: формулы, JSON схемы, REST/Kafka контракты и UX требования согласованы с social/economy/world сервисами.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 09:55  \\n**api-readiness-notes:** Рейтинги заказчиков/исполнителей финализированы: формулы, JSON схемы, REST/Kafka контракты и UX требования согласованы с social/economy/world сервисами.
 
 ---
 
@@ -20,13 +14,7 @@
 - **Категории:** Bronze (0–39), Silver (40–64), Gold (65–84), Platinum (85–100).
 - **Decay:** рейтинг снижается со временем без активности, минимальный уровень = 20% от исторического пика.
 
-### 1.1 API Tasks Status
-
 - **Status:** in_progress
-- **Tasks:**
-  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-ratings-api.md) — `api/v1/social/player-orders/ratings.yaml` (рейтинги, отзывы, санкции) — completed 2025-11-08 17:45 (валидировано).
-  - API-TASK-338 — `api/v1/social/player-orders/reviews.yaml` (создание и модерация отзывов, выборки для UI, жалобы/флаги) — completed 2025-11-08 18:35 (валидировано).
-  - API-TASK-339 — `api/v1/economy/player-orders/risk.yaml` (страхование, escrow и скоринг рисков вознаграждений) — completed 2025-11-08 18:55 (валидировано).
 - **Last Updated:** 2025-11-08 18:55
 
 ---
@@ -226,5 +214,4 @@ Score_client = v_pr * PR + v_bq * BQ + v_dr * DR + v_rf * RF + v_rb * RB
 
 - 2025-11-08 — добавлены формулы, JSON схемы, REST/Kafka контракты, UX требования; статус `approved`, готовность `ready`.
 - 2025-11-07 — базовые метрики рейтингов.
-
 

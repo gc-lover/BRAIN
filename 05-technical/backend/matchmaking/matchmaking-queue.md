@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 22:05 — API-TASK-251 — Matchmaking Queue API (completed)
 - **Last Updated:** 2025-11-08 22:05
 ---
 
@@ -182,7 +178,6 @@ Wait time > 15 min: priority +5 (urgent)
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 1/3: Matchmaking Queue (split from matchmaking-system.md)
-
 
 
 

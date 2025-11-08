@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-120: api/v1/narrative/raids/raid-corpo-tower.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 06:45
 ---
 
@@ -265,4 +261,3 @@
 
 ## 11. История изменений
 - v1.0.0 (2025-11-06) — первичная спецификация raid.
-

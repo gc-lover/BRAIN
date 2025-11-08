@@ -14,11 +14,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-055: api/v1/gameplay/progression/rebirth.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 00:30
 ---
 
@@ -105,4 +101,3 @@
 ## История изменений
 
 - v1.0.0 (2025-11-03) - Создан документ с детальными решениями по системе перерождений
-

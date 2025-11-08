@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Диалог NCPD оформлен с состояниями, проверками, экспортом и REST/GraphQL контрактом. Инфракции синхронизированы с gameplay.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-293: api/v1/narrative/dialogues/npc-sara-miller.yaml (2025-11-08 06:40)
-- Last Updated: 2025-11-08 06:40
----
 
 ---
 

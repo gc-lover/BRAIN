@@ -16,11 +16,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-121: api/v1/gameplay/economy/analytics.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 06:55
 ---
 
@@ -390,4 +386,3 @@ CREATE TABLE player_analytics_settings (
   - Alerts and notifications
   - Структура БД (1 таблица)
   - API endpoints (4 REST)
-

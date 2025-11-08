@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-136: api/v1/world/achievements/achievement-system.yaml (2025-11-08 18:05)
 - **Last Updated:** 2025-11-08 18:05
 ---
 
@@ -534,4 +530,3 @@ Player does it:
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание системы достижений
-

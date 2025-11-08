@@ -17,11 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-209: api/v1/gameplay/achievements/achievements-ui.yaml (2025-11-08 00:28)
 - **Last Updated:** 2025-11-08 00:28
 ---
 
@@ -520,4 +516,3 @@ useEffect(() => {
 - [Achievement System Backend](../../backend/achievement/achievement-core.md)
 - [Leaderboard UI](../leaderboards/ui-leaderboards.md)
 - [Notification System](../../backend/notification-system.md)
-

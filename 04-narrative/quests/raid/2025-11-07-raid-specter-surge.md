@@ -1,11 +1,5 @@
 # Рейд — Specter Surge
 
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-375: api/v1/narrative/raids/specter-surge.yaml (2025-11-08 20:35)
-- **Last Updated:** 2025-11-08 20:35
-
 **ID квеста:** `raid-2025-11-07-specter-surge`  
 **Тип:** raid  
 **Статус:** approved  

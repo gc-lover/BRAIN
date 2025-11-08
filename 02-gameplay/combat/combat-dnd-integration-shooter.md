@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-076: api/v1/gameplay/mechanics/dnd-shooter-integration.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:15
 ---
 
@@ -58,5 +54,4 @@
 
 ## История изменений
 - v0.1.0 (2025-11-05) — Перечень микро-ивентов проверок в бою, влияние имплантов
-
 

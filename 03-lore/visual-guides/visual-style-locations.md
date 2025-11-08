@@ -1,10 +1,4 @@
 ---
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-361: api/v1/world/visuals/locations.yaml (2025-11-08 17:20)
-- **Last Updated:** 2025-11-08 17:20
----
 
 # Визуальный гид по локациям и пространствам NECPGAME
 

@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-096: api/v1/gameplay/economy/resources-catalog.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 04:30
 ---
 
@@ -544,4 +540,3 @@ Event bonus: 120 €$ (-20%)
 - ✅ Dynamic economy factors
 
 **Следующий шаг:** Рецепты крафта!
-

@@ -4,11 +4,7 @@
 **api-readiness-notes:** Leaderboard System. Глобальные и локальные рейтинги, различные категории, сезонность. ~400 строк.
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-237: api/v1/leaderboards/leaderboard-core.yaml (2025-11-08 06:45)
 - **Last Updated:** 2025-11-08 06:45
 ---
 
@@ -506,4 +502,3 @@ Message format:
 
 - [Achievement System](../achievement/achievement-core.md)
 - [PvP Rating System](../pvp/pvp-rating.md)
-

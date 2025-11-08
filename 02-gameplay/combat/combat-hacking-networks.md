@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-083: api/v1/gameplay/combat/hacking-networks.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:50
 ---
 
@@ -69,5 +65,4 @@
 
 ## История изменений
 - v1.0.0 (2025-11-03) — Выделено из `combat-hacking.md`
-
 

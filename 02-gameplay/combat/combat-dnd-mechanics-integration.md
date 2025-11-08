@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-077: api/v1/gameplay/mechanics/dnd-mechanics-integration.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:20
 ---
 
@@ -57,5 +53,4 @@
 
 ## История изменений
 - v0.1.0 (2025-11-05) — Базовые правила проверок в ключевых механиках
-
 

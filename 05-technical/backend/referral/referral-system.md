@@ -8,11 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-201: api/v1/social/referrals/referral-system.yaml (2025-11-07 22:05)
 - **Last Updated:** 2025-11-07 22:05
 ---
 
@@ -335,4 +331,3 @@ ORDER BY active_referrals DESC;
 - [Achievement System](../achievement/achievement-core.md)
 - [Premium Currency](../../economy/premium-currency.md)
 - [Notification System](../notification-system.md)
-

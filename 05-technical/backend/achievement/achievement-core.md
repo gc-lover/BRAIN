@@ -4,11 +4,7 @@
 **api-readiness-notes:** Achievement System Core. Система достижений - типы, категории, прогресс, rewards. ~400 строк.
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-218: api/v1/achievements/achievement-core.yaml (2025-11-08 02:38)
 - **Last Updated:** 2025-11-08 02:38
 ---
 
@@ -547,4 +543,3 @@ public class AchievementEventListener {
 - [Achievement Examples & API](./achievement-examples-api.md)
 - [Leaderboard System](../leaderboard/leaderboard-core.md)
 - [Notification System](../notification-system.md)
-

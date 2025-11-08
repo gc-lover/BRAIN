@@ -12,10 +12,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -614,4 +611,3 @@ POST /api/v1/trade/sell
 ## История изменений
 
 - v1.0.0 (2025-11-04) - Создание документа с планом MVP
-

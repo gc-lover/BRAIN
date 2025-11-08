@@ -9,11 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-217: api/v1/players/character-management.yaml (2025-11-08 02:24)
 - **Last Updated:** 2025-11-08 02:24
 ---
 
@@ -500,4 +496,3 @@ private void permanentlyDeleteCharacter(UUID characterId) {
 
 - v1.0.1 (2025-11-07 02:22) - Создан с полным Java кодом (schemas, creation, deletion, restore)
 - v1.0.0 (2025-11-07) - Создан
-

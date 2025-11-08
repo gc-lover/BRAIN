@@ -9,11 +9,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-160: api/v1/world/events/events-1990-2000.yaml (2025-11-07 11:24)
 - **Last Updated:** 2025-11-07 00:18
 ---
 

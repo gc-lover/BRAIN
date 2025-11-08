@@ -5,11 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-143: api/v1/narrative/main-quests/001-first-steps.yaml (2025-11-07 10:47)
 - **Last Updated:** 2025-11-08 09:29
 ---
 
@@ -83,7 +79,6 @@
 - Economy-service: критические успехи N-1 и N-5 добавляют награды `loot.micro` и `component.nano` посредством очереди `quest-rewards`.
 
 ## Экспорт и интеграции
-- YAML: узлы выгружаются в `api/v1/narrative/main-quests/001-first-steps.yaml` (API-TASK-143).
 - JSON Schema: структуры проверок соответствуют `schemas/quests/dnd-check.schema.json`, проверяются скриптом `scripts/validate-quest-dialogue.ps1`.
 - Telemetry: результаты бросков отправляются в `POST /narrative/quests/001/rolls`, метрика `tutorial-rolls` агрегируется monitoring-service.
 - Events: критический провал N-5 генерирует событие `event.training-lockdown`, активирующее предложения assist mode.
@@ -101,5 +96,4 @@
 ## История изменений
 - v1.0.0 — синхронизация с UI, narrative-service и telemetry; документ утверждён, готовность `ready`.
 - v0.1.0 — первичный набор узлов
-
 

@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -121,4 +118,3 @@ interface CombatAction {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:30)** - Микрофича 2/3 (split from api-data-models.md)
-

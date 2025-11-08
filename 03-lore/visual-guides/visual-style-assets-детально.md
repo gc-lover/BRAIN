@@ -1,10 +1,4 @@
 ---
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-364: api/v1/world/visuals/assets-detailed.yaml (2025-11-08 18:25)
-- **Last Updated:** 2025-11-08 18:25
----
 
 # Визуальный гид по персонажам и активам — детальная версия
 

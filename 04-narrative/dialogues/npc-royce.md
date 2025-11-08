@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Версия 1.3.0: добавлены blackwall-alert, mech-bargain, пасхалки и расширенный YAML/REST/телеметрия Maelstrom.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-292: api/v1/narrative/dialogues/npc-royce.yaml (2025-11-08 06:25)
-- Last Updated: 2025-11-08 06:25
----
 
 ---
 

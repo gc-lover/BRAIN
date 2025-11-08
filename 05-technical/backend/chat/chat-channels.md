@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 22:40 — API-TASK-253 — Chat Channels API (completed)
 - **Last Updated:** 2025-11-08 22:40
 ---
 
@@ -242,7 +238,6 @@ private List<UUID> getRecipients(ChannelType channelType, String channelId) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 1/3: Chat Channels (split from chat-system.md)
-
 
 
 

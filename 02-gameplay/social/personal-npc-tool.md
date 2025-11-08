@@ -12,11 +12,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-056: api/v1/gameplay/social/personal-npc-tool.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 00:35
 ---
 
@@ -524,4 +520,3 @@ baseDailyCost = licenseCost + maintenanceCost + energyCost + partsCost + insuran
   - ✅ Детализирована матрица прав и лимитов (иерархия прав, лимиты по лицензиям, контракты переноса)
   - ✅ Формализованы события и сигналы (NPC, сценарии, контракты, лицензии, KPI)
   - ✅ Детализирована экономика содержания (модели затрат для human/robot/android, гибридные схемы)
-

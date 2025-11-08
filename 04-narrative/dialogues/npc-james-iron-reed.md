@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Диалог Militech расширен: динамические состояния, YAML-экспорт, REST/GraphQL контракт, проверка флагов корпоративной войны. Готово для API задач.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-287: api/v1/narrative/dialogues/npc-james-iron-reed.yaml (2025-11-08 05:05)
-- Last Updated: 2025-11-08 05:05
----
 
 ---
 

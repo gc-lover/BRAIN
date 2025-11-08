@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-098: api/v1/gameplay/economy/currencies-resources.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 04:40
 ---
 
@@ -173,5 +169,4 @@
   - Валюты: Региональные валюты + биржа валют
   - Ресурсы: Все типы + товары из лора Cyberpunk (карты, информация, данные)
   - Добыча ресурсов: Комбинация всех способов
-
 

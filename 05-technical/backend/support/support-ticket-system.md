@@ -8,11 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-200: api/v1/admin/support/support-tickets.yaml (2025-11-07 21:50)
 - **Last Updated:** 2025-11-07 21:50
 ---
 
@@ -543,4 +539,3 @@ Response:
 - [Admin Tools](../admin/admin-tools-core.md)
 - [Notification System](../notification-system.md)
 - [Player Reports](../../moderation/player-reports.md)
-

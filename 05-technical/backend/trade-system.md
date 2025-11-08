@@ -1,20 +1,9 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 05:20
-**api-readiness-notes:** Система P2P торговли. Trade window, offers, confirmation, history, restrictions, gold/item trade, security.
+**api-readiness-check-date:** 2025-11-08 23:39
+**api-readiness-notes:** Подробный P2P trade flow, схемы БД, события и антифрод — готово для API.
 ---
 ---
-
-## API Tasks Status
-
-- **Status:** in-progress
-- **Tasks:**
-  - API-TASK-130: api/v1/economy/trade/trade-system.yaml — completed (2025-11-08 22:45)
-  - API-TASK-233: api/v1/economy/trade/trade-system.yaml — queued (2025-11-08 05:55)
-- **Last Updated:** 2025-11-08 22:45
----
-
-
 
 # Trade System (P2P) - Система торговли между игроками
 
@@ -436,4 +425,5 @@ private void executeTrade(TradeSession trade) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:20)** - Создан документ Trade System
+
 

@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-069: api/v1/gameplay/economy/loot-tables.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:40
 ---
 
@@ -336,7 +332,6 @@ criticalMultiplier = 0.5
 
 finalChance = 0.10 * 0.8 * 0.95 * 0.9 * 0.5 = 0.0342 (3.42%)
 ```
-
 
 
 

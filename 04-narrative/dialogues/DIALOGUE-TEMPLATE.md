@@ -10,12 +10,6 @@ api-readiness-notes: "Шаблон диалогов NPC/квестов с сос
 target-domain: "narrative"
 ---
 
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-379: api/v1/narrative/dialogues/templates.yaml (2025-11-08 21:45)
-- **Last Updated:** 2025-11-08 21:45
-
 ---
 
 # {{display-name}}

@@ -1,10 +1,4 @@
 ---
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-362: api/v1/world/visuals/assets.yaml (2025-11-08 17:45)
-- **Last Updated:** 2025-11-08 17:45
----
 
 # Визуальный гид по персонажам и активам NECPGAME
 

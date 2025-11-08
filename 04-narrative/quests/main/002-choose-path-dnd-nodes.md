@@ -5,11 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-143: api/v1/narrative/main-quests/002-choose-path.yaml (2025-11-07 10:47)
 - **Last Updated:** 2025-11-08 09:32
 ---
 
@@ -72,7 +68,6 @@
 - UI: карточки выбора пути используют `modules/narrative/quests/path-choice.json`, HUD подсказки берутся из `tutorial-overlays.json`.
 
 ## Экспорт и интеграции
-- YAML: узлы экспортируются в `api/v1/narrative/main-quests/002-choose-path.yaml` (API-TASK-143).
 - JSON Schema: проверки валидируются `schemas/quests/dnd-check.schema.json` (скрипт `scripts/validate-quest-dialogue.ps1`).
 - Telemetry: броски отправляются в `POST /narrative/quests/002/rolls`, репутационные изменения логируются метрикой `path-choice-rep-delta`.
 - Events: критические провалы генерируют `event.corp.watchlist`, `event.street.ambush`, `event.freelance.contract-denied`.
@@ -90,4 +85,3 @@
 ## История изменений
 - v1.0.0 — синхронизация с диалогами, репутацией и telemetry; готовность `ready`.
 - v0.1.0 — первичный набор узлов
-

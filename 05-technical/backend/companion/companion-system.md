@@ -8,11 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-202: api/v1/gameplay/companions/companion-system.yaml (2025-11-07 22:25)
 - **Last Updated:** 2025-11-07 22:25
 ---
 
@@ -376,4 +372,3 @@ private void improveCompanionStats(PlayerCompanion companion) {
 
 - [Combat System](../../gameplay/combat/combat-overview.md)
 - [Pet Customization](../../cosmetic/pet-customization.md)
-

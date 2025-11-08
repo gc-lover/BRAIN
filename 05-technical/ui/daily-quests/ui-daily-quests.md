@@ -17,11 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-210: api/v1/gameplay/daily-quests/daily-quests-ui.yaml (2025-11-08 00:45)
 - **Last Updated:** 2025-11-08 00:45
 ---
 
@@ -543,4 +539,3 @@ const DailyResetTimer: React.FC = () => {
 - [Daily Reset System Backend](../../backend/daily-reset/daily-reset-compact.md)
 - [Achievement UI](../achievements/ui-achievements-main.md)
 - [Quest System](../../backend/quest-engine-backend.md)
-

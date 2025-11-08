@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Этапы 1-2 романса с Ханако оформлены: чайная сцена, небесный сад, проверки, YAML и обновлённая API-интеграция.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-281: api/v1/narrative/romance/romance-hanako-tanaka.yaml (2025-11-08 03:20)
-- Last Updated: 2025-11-08 03:20
----
 
 ---
 

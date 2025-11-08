@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 22:25 — API-TASK-252 — Matchmaking Rating API (completed)
 - **Last Updated:** 2025-11-08 22:25
 ---
 
@@ -163,7 +159,6 @@ public boolean isSmurf(UUID playerId) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 3/3: Matchmaking Rating (split from matchmaking-system.md)
-
 
 
 

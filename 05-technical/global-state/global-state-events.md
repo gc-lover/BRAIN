@@ -15,14 +15,10 @@
 
 **Микрофича:** Event types and structure  
 **Размер:** ~390 строк ✅  
-**API Task:** API-TASK-074 (api/v1/technical/global-state.yaml)
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -264,4 +260,3 @@ SEASON_RESET
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:00)** - Микрофича 2/5: Global State Events (split from global-state-system.md)
-

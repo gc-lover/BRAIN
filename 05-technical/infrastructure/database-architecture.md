@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-161: docs/database-arch.md (2025-11-07 11:26)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -199,4 +195,3 @@ CREATE TABLE player_quest_choices_2025_11
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание database архитектуры
-

@@ -1,34 +1,15 @@
 # Визуальный гид по персонажам и активам — детальная версия
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-331: api/v1/character/visuals/archetypes-detailed.yaml (2025-11-08 17:50)
-  - API-TASK-332: api/v1/gameplay/visuals/equipment-detailed.yaml (2025-11-08 17:50)
-  - API-TASK-333: api/v1/economy/visuals/items-detailed.yaml (2025-11-08 17:50)
-  - API-TASK-334: api/v1/character/visuals/romance-states.yaml (2025-11-08 18:01)
-  - API-TASK-335: api/v1/character/visuals/romance-scenes.yaml (2025-11-08 18:12)
-  - API-TASK-336: api/v1/character/visuals/romance-export.yaml (2025-11-08 18:25)
-  - API-TASK-337: api/v1/analytics/visuals/metrics.yaml (2025-11-08 18:38)
 - **Last Updated:** 2025-11-08 18:38
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 18:38  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 18:38  \\n**Приоритет:** высокий
 
-**target-domain:** world  \
-**target-microservice:** character-service (port 8091)  \
-**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), social-service (port 8084), marketing-service (port 8110)  \
-**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/social/romance, modules/marketing/showcase
+**target-domain:** world  \\n**target-microservice:** character-service (port 8091)  \\n**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), social-service (port 8084), marketing-service (port 8110)  \\n**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/social/romance, modules/marketing/showcase
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 11:18  \
-**api-readiness-notes:** Детальные визуальные профили персонажей, оружия, имплантов и предметов утверждены: JSON схемы, REST/Kafka контуры, UX/QA проверены; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 11:18  \\n**api-readiness-notes:** Детальные визуальные профили персонажей, оружия, имплантов и предметов утверждены: JSON схемы, REST/Kafka контуры, UX/QA проверены; блокеров нет.
 
 ---
 
@@ -304,5 +285,4 @@
 
 - 2025-11-08 — добавлены API задачи, JSON схемы, Kafka события, UX/QA согласование; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт детализированного визуального гида по персонажам и ассетам.
-
 

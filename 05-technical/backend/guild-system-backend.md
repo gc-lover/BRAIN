@@ -5,12 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-135: api/v1/social/guilds/guild-system.yaml (2025-11-08 17:55)
-  - API-TASK-229: api/v1/social/guilds/guild-system.yaml (2025-11-08 04:55)
 - **Last Updated:** 2025-11-08 17:55
 ---
 
@@ -133,4 +128,3 @@ CREATE INDEX idx_guild_members_character ON guild_members(character_id);
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:20)** - Создан документ Guild System Backend
-

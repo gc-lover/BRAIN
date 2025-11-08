@@ -5,12 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-133: api/v1/social/party/party-system.yaml (2025-11-08 17:45)
-  - API-TASK-231: api/v1/social/party/party-system.yaml (2025-11-08 05:25)
 - **Last Updated:** 2025-11-08 17:45
 ---
 
@@ -102,4 +97,3 @@ CREATE INDEX idx_parties_leader ON parties(leader_id);
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:20)** - Создан документ Party System Backend
-

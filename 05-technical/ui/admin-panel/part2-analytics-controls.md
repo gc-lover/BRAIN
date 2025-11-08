@@ -9,11 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-213: api/v1/admin/panel/admin-panel-analytics-ui.yaml (2025-11-08 01:26)
 - **Last Updated:** 2025-11-08 01:26
 ---
 
@@ -346,4 +342,3 @@ const AdminAuditLog: React.FC = () => {
 
 - v1.0.1 (2025-11-07 02:32) - Создан с полным TSX кодом (analytics, world control, events, audit)
 - v1.0.0 (2025-11-07 02:20) - Создан
-

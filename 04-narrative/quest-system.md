@@ -16,11 +16,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-072: api/v1/narrative/quest-system.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:55
 ---
 
@@ -199,4 +195,3 @@
 ## История изменений
 
 - v1.0.0 (2025-11-03) - Создание документа с вопросами для брейншторма
-

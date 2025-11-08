@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-150: api/v1/economy/trading-guilds.yaml (2025-11-07 11:02)
 - **Last Updated:** 2025-11-07 00:18
 ---
 

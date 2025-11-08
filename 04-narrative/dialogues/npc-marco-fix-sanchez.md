@@ -16,12 +16,6 @@
 **api-readiness-notes:** «Диалог фикса Марко содержит полный набор состояний, YAML-экспорт, REST/GraphQL контракт и валидацию флагов репутации. Готов к API задачам.»
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-289: api/v1/narrative/dialogues/npc-marco-fix-sanchez.yaml (2025-11-08 05:35)
-- Last Updated: 2025-11-08 05:35
----
 
 ---
 

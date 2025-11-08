@@ -16,12 +16,6 @@
 **api-readiness-notes:** Диалог обновлён: добавлены Specter-отряды, баланс city unrest и новые последствия для экономики.
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-284: api/v1/narrative/dialogues/npc-aisha-frost.yaml (2025-11-08 04:20)
-- Last Updated: 2025-11-08 04:20
----
 
 ---
 

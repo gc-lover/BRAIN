@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-193: api/v1/social/voice/voice-lobbies.yaml (2025-11-07 15:45)
 - **Last Updated:** 2025-11-07 15:45
 ---
 
@@ -468,5 +464,4 @@ GROUP BY l.activity_code, l.region;
 - [Clan War System](../clan-war/clan-war-system.md)  
 - [Matchmaking Algorithm](../matchmaking/matchmaking-algorithm.md)  
 - [Daily Reset System](../daily-reset/daily-reset-compact.md)
-
 

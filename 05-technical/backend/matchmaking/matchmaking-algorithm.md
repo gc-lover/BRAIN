@@ -18,11 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - 2025-11-08 21:45 — API-TASK-250 — Matchmaking Algorithm API (completed)
 - **Last Updated:** 2025-11-08 21:45
 ---
 
@@ -173,7 +169,6 @@ Match Quality =
 ## История изменений
 
 - **v1.0.0 (2025-11-07 05:30)** - Микрофича 2/3: Matchmaking Algorithm (split from matchmaking-system.md)
-
 
 
 

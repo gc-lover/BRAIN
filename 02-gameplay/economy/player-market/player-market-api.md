@@ -18,10 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -201,4 +198,3 @@
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:10)** - Микрофича 3/4: Player Market API (split from economy-player-market.md)
-

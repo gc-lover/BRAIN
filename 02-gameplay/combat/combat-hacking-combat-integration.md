@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-085: api/v1/gameplay/combat/hacking-combat-integration.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 03:00
 ---
 
@@ -43,5 +39,4 @@
 
 ## История изменений
 - v1.0.0 (2025-11-03) — Выделено из `combat-hacking.md`
-
 

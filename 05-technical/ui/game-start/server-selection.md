@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -50,4 +47,3 @@
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:35)** - Микрофича 2/3 (split from ui-game-start.md)
-

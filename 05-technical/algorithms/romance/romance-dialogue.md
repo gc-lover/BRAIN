@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -62,4 +59,3 @@ interface RomanceDialogueNode {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:35)** - Микрофича 3/3 (split from romance-event-engine.md)
-

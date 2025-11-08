@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -101,4 +98,3 @@ public void onCombatEnded(CombatEndedEvent event) {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:25)** - Микрофича 2/3 (split from world-state-player-impact.md)
-

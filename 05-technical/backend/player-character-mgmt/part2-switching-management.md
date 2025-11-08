@@ -9,11 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-216: api/v1/players/character-switching.yaml (2025-11-08 02:08)
 - **Last Updated:** 2025-11-08 02:08
 ---
 
@@ -301,4 +297,3 @@ public PurchaseSlotResponse purchaseCharacterSlot(UUID accountId) {
 
 - v1.0.1 (2025-11-07 02:23) - Создан с полным Java кодом (switching, stats, slots)
 - v1.0.0 (2025-11-07) - Создан
-

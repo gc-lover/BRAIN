@@ -1,30 +1,15 @@
 # Система наставничества — детальная версия
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-343: api/v1/social/mentorship/programs.yaml (2025-11-08 19:10)
-  - API-TASK-344: api/v1/social/mentorship/contracts.yaml (2025-11-08 19:10)
-  - API-TASK-345: api/v1/world/academies/events.yaml (2025-11-08 19:10)
 - **Last Updated:** 2025-11-08 19:10
 ---
 
 
-**Статус:** approved  \
-**Версия:** 1.0.0  \
-**Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 19:10  \
-**Приоритет:** высокий
+**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 19:10  \\n**Приоритет:** высокий
 
-**target-domain:** social  \
-**target-microservice:** social-service (port 8084)  \
-**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), gameplay-service (port 8086)  \
-**target-frontend-module:** modules/social/mentorship, modules/world/academies
+**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), gameplay-service (port 8086)  \\n**target-frontend-module:** modules/social/mentorship, modules/world/academies
 
-**api-readiness:** ready  \
-**api-readiness-check-date:** 2025-11-08 10:20  \
-**api-readiness-notes:** Наставничество формализовано: программы, контракты, академии, REST/Kafka контуры и UX готовы к API постановке; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:20  \\n**api-readiness-notes:** Наставничество формализовано: программы, контракты, академии, REST/Kafka контуры и UX готовы к API постановке; блокеров нет.
 
 ---
 

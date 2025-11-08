@@ -1,15 +1,11 @@
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-234: api/v1/inventory/inventory-core.yaml (2025-11-08 06:10)
-- Last Updated: 2025-11-08 06:10
-
 # Inventory System - Part 1: Core System
 
 **Статус:** approved  
 **Версия:** 1.0.1  
 **Дата:** 2025-11-07 02:15  
-**api-readiness:** ready
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 23:39  
+**api-readiness-notes:** Core storage, equipment, схемы БД и процессы готовы для API.
 
 [Навигация](./README.md) | [Part 2 →](./part2-advanced-features.md)
 

@@ -1,11 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-PO-WORLD-001: api/v1/world/player-orders/effects.yaml (2025-11-08 10:05)
-  - API-TASK-PO-ECON-001: api/v1/economy/player-orders/index.yaml (2025-11-08 10:05)
 - **Last Updated:** 2025-11-08 10:05
 ---
 
@@ -105,7 +100,6 @@
 - `player-orders-system-детально.md`, `player-orders-reputation-детально.md`, `player-orders-world-impact-детально.md`.
 - `visual-style-locations-детально.md` — визуализация досок, метки активностей.
 - `city-life-population-algorithm.md` — перераспределение NPC и инфраструктуры.
-- `economy-service` и `world-service` OpenAPI контуры (API-TASK-PO-WORLD-001, API-TASK-PO-ECON-001).
 
 ---
 
@@ -113,5 +107,4 @@
 
 - v1.1.0 (2025-11-08) — добавлены индексы, REST/Kafka контуры, UX сценарии и новые API задачи.
 - v1.0.0 (2025-11-03) — выделение из `player-orders-system.md`.
-
 

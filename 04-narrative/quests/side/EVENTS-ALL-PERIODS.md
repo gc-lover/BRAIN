@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-147: api/v1/narrative/random-events-all.yaml (2025-11-07 10:56)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -466,6 +462,5 @@
 - `quests-expanded-2020-2030.json`
 - `QUEST-EXPANSION-SUMMARY.md`
 - `timeline-gameplay-integration.md`
-
 
 

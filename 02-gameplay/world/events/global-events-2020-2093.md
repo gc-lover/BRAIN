@@ -9,11 +9,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-073: api/v1/gameplay/world/global-events.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:00
 ---
 
@@ -298,4 +294,3 @@
 - Глобальная репутация
 - Доступ к ресурсам и союзникам
 - Изменение истории мира
-

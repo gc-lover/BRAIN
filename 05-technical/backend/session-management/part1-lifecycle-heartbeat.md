@@ -2,11 +2,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-198: api/v1/technical/session-management/lifecycle.yaml (2025-11-07 21:05)
 - **Last Updated:** 2025-11-07 21:05
 ---
 
@@ -489,4 +485,3 @@ EXPIRED (30 min): "You have been disconnected due to inactivity"
 
 - v1.0.1 (2025-11-07 02:03) - Восстановлен с полным Java кодом
 - v1.0.0 (2025-11-07 01:46) - Создан
-

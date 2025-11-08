@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-084: api/v1/gameplay/cyberspace/cyberspace.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 02:55
 ---
 
@@ -59,5 +55,4 @@
 
 ## История изменений
 - v1.0.0 (2025-11-03) — Выделено из `combat-hacking.md`
-
 

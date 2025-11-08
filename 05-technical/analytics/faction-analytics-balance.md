@@ -9,11 +9,7 @@
 **api-readiness-notes:** Метрики аналитики и авто-тюнинг фракционных систем. WebSocket через gateway `wss://api.necp.game/v1/analytics/factions`.
 ---
 
-# API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-274: api/v1/technical/analytics/faction-balance.yaml (2025-11-08 01:40)
 - **Last Updated:** 2025-11-08 01:40
 
 # Faction Analytics & Balance — Метрики и авто-тюнинг

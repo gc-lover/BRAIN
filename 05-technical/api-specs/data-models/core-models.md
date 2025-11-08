@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -102,4 +99,3 @@ interface Character {
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:30)** - Микрофича 1/3 (split from api-data-models.md)
-

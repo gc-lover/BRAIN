@@ -5,17 +5,15 @@
 **Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 12:20
-**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию.
+**api-readiness-check-date:** 2025-11-09 00:54
+**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию. Перепроверено 2025-11-09 00:54, готово для постановки задач API.
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (8083)  
+**target-frontend-module:** modules/combat/ai
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-360: api/v1/gameplay/combat/ai-enemies.yaml (2025-11-08 14:45) — матрица AI v1.1.0
-  - API-TASK-047: api/v1/gameplay/combat/ai-enemies.yaml (2025-11-06 21:35) — базовая спецификация (completed)
-- **Last Updated:** 2025-11-08 14:45
+- **Last Updated:** 2025-11-09 00:54
 ---
 
 # COMBAT AI ENEMIES MATRIX
@@ -209,4 +207,3 @@ CREATE TABLE raid_boss_phases (
 
 ## 11. История изменений
 - v1.0.0 (2025-11-07) — базовая матрица AI по слоям NPC, рейдам и сюжетным событиям.
-

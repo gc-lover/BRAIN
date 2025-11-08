@@ -17,11 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-211: api/v1/world/leaderboards/leaderboards-ui.yaml (2025-11-08 00:59)
 - **Last Updated:** 2025-11-08 00:59
 ---
 
@@ -468,4 +464,3 @@ const usePlayerPosition = (playerId: string, leaderboardCode: string) => {
 - [Leaderboard System Backend](../../backend/leaderboard/leaderboard-core.md)
 - [Achievement UI](../achievements/ui-achievements-main.md)
 - [Profile UI](../profile/ui-profile.md)
-

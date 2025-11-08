@@ -21,11 +21,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-212: api/v1/admin/panel/admin-panel-ui.yaml (2025-11-08 01:12)
 - **Last Updated:** 2025-11-08 01:12
 ---
 
@@ -300,4 +296,3 @@ const BanPlayerModal: React.FC<{player}> = ({player}) => {
 
 - v1.0.1 (2025-11-07 02:31) - Создан с полным TSX кодом (dashboard, player management, moderation)
 - v1.0.0 (2025-11-07 02:20) - Создан
-

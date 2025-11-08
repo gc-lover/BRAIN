@@ -1,10 +1,6 @@
 ﻿---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-161: docs/api-gateway-arch.md (2025-11-07 11:26)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -88,9 +84,7 @@ spring:
 
 ```bash
 # Клиент делает запрос к API Gateway
-curl http://localhost:8080/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email": "player@necp.game", "password": "pass123"}'
+curl http://localhost:8080/api/v1/auth/login \\n  -H "Content-Type: application/json" \\n  -d '{"email": "player@necp.game", "password": "pass123"}'
 
 # API Gateway:
 # 1. Получает запрос на /api/v1/auth/login
@@ -211,4 +205,3 @@ Services:
 ## История изменений
 
 - v1.0.0 (2025-11-06 23:00) - Создание API Gateway архитектуры
-

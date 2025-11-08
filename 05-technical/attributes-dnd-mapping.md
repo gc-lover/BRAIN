@@ -12,11 +12,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-104: api/v1/gameplay/mechanics/attributes-dnd-mapping.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 05:10
 ---
 
@@ -383,4 +379,3 @@ DC задачи: 15
 ## История изменений
 
 - v1.0.0 (2025-11-04) - Создание документа с сопоставлением характеристик с D&D системой
-

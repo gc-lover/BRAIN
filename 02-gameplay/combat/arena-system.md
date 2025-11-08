@@ -1,15 +1,9 @@
 ---
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-244: api/v1/gameplay/combat/arena-system.yaml (2025-11-07 21:30)
-- Last Updated: 2025-11-07 21:30
----
 
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:28
-**api-readiness-notes:** Полная спецификация арен: режимы, карты, рейтинги, награды, интеграции с лидербордами и голосовыми лобби.
+**api-readiness-check-date:** 2025-11-09 00:54
+**api-readiness-notes:** Полная спецификация арен: режимы, карты, рейтинги, награды, интеграции с лидербордами и голосовыми лобби; перепроверено 2025-11-09 00:54 перед постановкой API задач.
 ---
 
 # Arena System - Неоновые арены Найт-Сити

@@ -18,10 +18,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -119,4 +116,3 @@ market.listings.conversion.rate - % проданных
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:10)** - Микрофича 4/4: Player Market Analytics (split from economy-player-market.md)
-

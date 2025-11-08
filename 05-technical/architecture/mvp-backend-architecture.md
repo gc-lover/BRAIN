@@ -1,10 +1,4 @@
 ---
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-371: api/v1/technical/mvp-backend-architecture.yaml (2025-11-08 19:25)
-- **Last Updated:** 2025-11-08 19:25
----
 
 # MVP Backend Architecture
 

@@ -17,12 +17,6 @@
 **интеграции:** world events, faction reputation, contracts, combat events
 
 ---
-**API Tasks Status:**
-- Status: created
-- Tasks:
-  - API-TASK-278: api/v1/world/factions/original-catalog.yaml (2025-11-08 02:30)
-- Last Updated: 2025-11-08 02:30
----
 
 ## 1. Цели каталога
 - Расширить мир оригинальными фракциями (корпорации, банды, синдикаты) в стиле Cyberpunk.

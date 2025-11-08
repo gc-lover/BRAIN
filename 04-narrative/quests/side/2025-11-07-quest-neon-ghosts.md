@@ -1,10 +1,4 @@
 ---
-## API Tasks Status
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-374: api/v1/narrative/quests/side/neon-ghosts.yaml (2025-11-08 20:15)
-- **Last Updated:** 2025-11-08 20:15
----
 title: "Neon Ghosts"
 quest-id: "side-neon-ghosts"
 status: "approved"

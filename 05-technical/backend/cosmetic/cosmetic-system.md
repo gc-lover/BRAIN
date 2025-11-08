@@ -8,11 +8,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-203: api/v1/gameplay/cosmetics/cosmetic-system.yaml (2025-11-07 22:45)
 - **Last Updated:** 2025-11-07 22:45
 ---
 
@@ -379,4 +375,3 @@ public void equipCosmetic(UUID playerId, UUID cosmeticId, String slot) {
 - [Battle Pass System](../battle-pass/battle-pass-system.md)
 - [Achievement System](../achievement/achievement-core.md)
 - [Premium Currency](../../economy/premium-currency.md)
-

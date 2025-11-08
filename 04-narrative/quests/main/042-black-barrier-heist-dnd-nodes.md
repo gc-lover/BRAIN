@@ -5,11 +5,7 @@
 ---
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-143: api/v1/narrative/main-quests/042-black-barrier-heist.yaml (2025-11-07 10:47)
 - **Last Updated:** 2025-11-07 00:18
 ---
 
@@ -69,5 +65,4 @@
 
 ## История изменений
 - v0.1.0 — первичная разбивка фаз/узлов
-
 

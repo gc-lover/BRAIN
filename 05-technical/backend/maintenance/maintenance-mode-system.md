@@ -4,11 +4,7 @@
 **api-readiness-notes:** Maintenance Mode System. Управление обслуживанием сервера, плановые остановки, уведомления. ~380 строк.
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-236: api/v1/system/maintenance/maintenance-mode.yaml (2025-11-08 06:35)
 - **Last Updated:** 2025-11-08 06:35
 ---
 
@@ -555,4 +551,3 @@ Response:
 - [Admin Tools](../admin/admin-tools-core.md)
 - [Notification System](../notification-system.md)
 - [Session Management](../session/session-lifecycle-heartbeat.md)
-

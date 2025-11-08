@@ -10,11 +10,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-062: api/v1/gameplay/social/reputation-formulas.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:05
 ---
 
@@ -348,7 +344,6 @@ modifiers = (1 + classBonus) * (1 + originBonus) * (1 + questBonus) * (1 + skill
 - skillCheckBonus: бонус от skill check (-0.5 до +0.5)
 - conflictModifier: модификатор конфликта (-0.8 до +0.2)
 ```
-
 
 
 

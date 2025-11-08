@@ -6,11 +6,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
-  - API-TASK-063: api/v1/gameplay/social/npc-hiring-catalog.yaml (2025-11-07)
 - **Last Updated:** 2025-11-07 01:10
 ---
 
@@ -557,4 +553,3 @@ npc:
 - ✅ Unique legendary options
 
 **Для геймплея готово!** 💼
-

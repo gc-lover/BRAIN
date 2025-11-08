@@ -5,12 +5,6 @@
 
 ---
 
-**API Tasks Status:**
-- Status: queued
-- Tasks:
-  - API-TASK-298: api/v1/admin/reset/reset-operations.yaml (2025-11-07)
-- Last Updated: 2025-11-07 22:55
-
 ---
 
 ## Daily/Weekly Reset

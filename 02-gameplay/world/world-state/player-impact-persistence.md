@@ -17,10 +17,7 @@
 
 ---
 
-## API Tasks Status
-
 - **Status:** created
-- **Tasks:**
 - **Last Updated:** 2025-11-07 20:16
 ---
 
@@ -74,4 +71,3 @@ CREATE INDEX idx_impact_type ON player_world_impact(impact_type);
 ## История изменений
 
 - **v1.0.0 (2025-11-07 06:25)** - Микрофича 3/3 (split from world-state-player-impact.md)
-

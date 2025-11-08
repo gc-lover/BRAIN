@@ -4,11 +4,7 @@
 **api-readiness-notes:** Achievement System Examples & API. Примеры достижений, API endpoints, rewards. ~350 строк.
 ---
 
-## API Tasks Status
-
 - **Status:** queued
-- **Tasks:**
-  - API-TASK-220: api/v1/achievements/examples/examples-api.yaml (2025-11-08 03:05)
 - **Last Updated:** 2025-11-08 03:05
 ---
 
@@ -498,4 +494,3 @@ public void grantItems(UUID playerId, List<ItemReward> items) {
 - [Achievement Core](./achievement-core.md)
 - [Achievement Tracking](./achievement-tracking.md)
 - [Leaderboard System](../leaderboard/leaderboard-core.md)
-

@@ -15,13 +15,7 @@
 **Микросервисы:** world-service (8086), social-service (8084), economy-service (8085), gameplay-service (8083)  
 **Фронтенд модули:** world (production), social (production), economy (production), gameplay (MVP)
 
-## API Tasks Status
-
 - **Status:** completed
-- **Tasks:**
-  - API-TASK-314: api/v1/world/cities/population.yaml (2025-11-08, готово +schemas, +events)
-  - API-TASK-315: api/v1/social/npc/schedules.yaml (2025-11-08, готово +schemas)
-  - API-TASK-316: api/v1/economy/districts/infrastructure.yaml (2025-11-08, готово +schemas, +events)
 - **Last Updated:** 2025-11-08 10:03
 
 ---
