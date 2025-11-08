@@ -1,20 +1,20 @@
 # Визуальный гид по локациям — детальная версия
 
-## API Tasks Status
-
-- **Status:** queued
-- **Tasks:**
-  - API-TASK-VIS-LOC-DET-001: api/v1/world/visuals/locations-detailed.yaml (2025-11-08 11:06)
-  - API-TASK-VIS-LOC-DET-002: api/v1/social/visuals/hubs-detailed.yaml (2025-11-08 11:06)
-  - API-TASK-VIS-LOC-DET-003: api/v1/world/visuals/events.yaml (2025-11-08 11:06)
-- **Last Updated:** 2025-11-08 11:06
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-322: api/v1/world/visuals/locations-detailed.yaml (2025-11-08 16:24)
+  - API-TASK-323: api/v1/social/visuals/hubs-detailed.yaml (2025-11-08 16:24)
+  - API-TASK-324: api/v1/world/visuals/events.yaml (2025-11-08 16:24)
+- Last Updated: 2025-11-08 16:24
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 11:06  \
+**Последнее обновление:** 2025-11-08 16:24  \
 **Приоритет:** высокий
 
 **target-domain:** world  \

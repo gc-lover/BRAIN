@@ -765,6 +765,15 @@ implementations:
 
 # === ECONOMY SYSTEMS (2025-11-07 СЕССИЯ 3 ПРОДОЛЖЕНИЕ) ===
 
+- api_path: "api/v1/economy/player-orders/budget.yaml"
+  task_id: "API-TASK-318"
+  brain_source: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+  frontend:
+    status: "not_started"
+
 - api_path: "api/v1/gameplay/economy/currency-exchange.yaml"
   task_id: "API-TASK-155"
   brain_source: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md v1.0.0"
