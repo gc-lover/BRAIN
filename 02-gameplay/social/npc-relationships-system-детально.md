@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-NPC-REL-001: api/v1/social/npc-relationships/status.yaml (2025-11-08 10:47)
-  - API-TASK-NPC-REL-002: api/v1/social/npc-relationships/interactions.yaml (2025-11-08 10:47)
-  - API-TASK-NPC-REL-003: api/v1/world/npc-relationships/events.yaml (2025-11-08 10:47)
-- **Last Updated:** 2025-11-08 10:47
+  - API-TASK-352: api/v1/social/npc-relationships/status.yaml (2025-11-08 19:55)
+  - API-TASK-353: api/v1/social/npc-relationships/interactions.yaml (2025-11-08 19:55)
+  - API-TASK-354: api/v1/world/npc-relationships/events.yaml (2025-11-08 19:55)
+- **Last Updated:** 2025-11-08 19:55
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:47  \
+**Последнее обновление:** 2025-11-08 19:55  \
 **Приоритет:** высокий
 
 **target-domain:** social  \
