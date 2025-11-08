@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-FAMILY-001: api/v1/social/families/tree.yaml (2025-11-08 10:53)
-  - API-TASK-FAMILY-002: api/v1/social/families/events.yaml (2025-11-08 10:53)
-  - API-TASK-FAMILY-003: api/v1/economy/families/heritage.yaml (2025-11-08 10:53)
-- **Last Updated:** 2025-11-08 10:53
+  - API-TASK-355: api/v1/social/families/tree.yaml (2025-11-08 20:10)
+  - API-TASK-356: api/v1/social/families/events.yaml (2025-11-08 20:10)
+  - API-TASK-357: api/v1/economy/families/heritage.yaml (2025-11-08 20:10)
+- **Last Updated:** 2025-11-08 20:10
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:53  \
+**Последнее обновление:** 2025-11-08 20:10  \
 **Приоритет:** высокий
 
 **target-domain:** social  \

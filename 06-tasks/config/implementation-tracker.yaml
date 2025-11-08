@@ -207,9 +207,12 @@ implementations:
       commit: "06b79a9"
       notes: "CombatController - боевая система"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 11:42"
+      completed: "2025-11-08 11:53"
       agent: "Frontend Agent"
+      commit: ""
+      notes: "autocommit не выполнен: git repository not found"
   
   - api_path: "api/v1/gameplay/combat/weapons.yaml"
     task_id: "API-TASK-010"
