@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-REL-001: api/v1/social/relationships/status.yaml (2025-11-08 10:40)
-  - API-TASK-REL-002: api/v1/social/trust/contracts.yaml (2025-11-08 10:40)
-  - API-TASK-REL-003: api/v1/world/alliances/events.yaml (2025-11-08 10:40)
-- **Last Updated:** 2025-11-08 10:40
+  - API-TASK-340: api/v1/social/relationships/status.yaml (2025-11-08 18:55)
+  - API-TASK-341: api/v1/social/trust/contracts.yaml (2025-11-08 18:55)
+  - API-TASK-342: api/v1/world/alliances/events.yaml (2025-11-08 18:55)
+- **Last Updated:** 2025-11-08 18:55
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:40  \
+**Последнее обновление:** 2025-11-08 18:55  \
 **Приоритет:** высокий
 
 **target-domain:** social  \
