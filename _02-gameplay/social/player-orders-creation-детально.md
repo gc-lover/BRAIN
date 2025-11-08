@@ -21,10 +21,10 @@
 
 - **Status:** in-progress
 - **Tasks:**
-  - API-TASK-SOC-PO-Create — `api/v1/social/player-orders.yaml` (2025-11-08, готово +components, +events)
-  - API-TASK-ECON-PO-Budget — `api/v1/economy/player-orders/budget.yaml` (в работе)
-  - API-TASK-WORLD-PO-Validation — `api/v1/world/player-orders/validation.yaml` (в работе)
-- **Last Updated:** 2025-11-08 10:08
+  - [API-TASK-317](../../API-SWAGGER/tasks/active/queue/task-317-player-orders-creation-api.md) — `api/v1/social/player-orders.yaml` (создание/публикация) — created 2025-11-08 12:10.
+  - API-TASK-318 — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — in progress 2025-11-08 15:20 (GPT-5 Codex).
+  - API-TASK-319 — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — in progress 2025-11-08 15:20 (GPT-5 Codex).
+- **Last Updated:** 2025-11-08 15:20
 
 ---
 
