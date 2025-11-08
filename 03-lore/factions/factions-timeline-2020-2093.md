@@ -2,11 +2,11 @@
 **Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 21:53  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 21:53
-**api-readiness-notes:** Хронология авторских фракций 2020-2093: лор, ключевые события, механики, региональные ветки и API-контуры для world-service/social-service.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Хронология авторских фракций 2020-2093. WebSocket через gateway `wss://api.necp.game/v1/world/history/{id}`; world/social контуры актуальны.
 ---
 
 # Авторские фракции 2020-2093 — Хронология влияния
@@ -247,7 +247,7 @@
 | `/world/history/factions/{id}/activate` | `POST` | Активация сезонного события |
 | `/world/history/factions/{id}/legacy-rep` | `POST` | Обновление шкалы исторической репутации |
 
-**WebSocket:** `wss://world-service/history/{id}` — трансляция `EventStart`, `EventCheckpoint`, `Outcome`, `WorldFlagUpdate`.
+**WebSocket:** `wss://api.necp.game/v1/world/history/{id}` — трансляция `EventStart`, `EventCheckpoint`, `Outcome`, `WorldFlagUpdate`.
 
 ## 7. Схемы данных
 ```sql

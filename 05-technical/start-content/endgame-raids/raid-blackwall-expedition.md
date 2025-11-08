@@ -4,8 +4,8 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:30
-**api-readiness-notes:** Полная спецификация endgame raid «Blackwall Expedition». 10-15 игроков, 3 фазы, hardcore механики.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Полная спецификация endgame raid «Blackwall Expedition». WebSocket переведён на `wss://api.necp.game/v1/gameplay/raids/{raidId}`; 10-15 игроков, 3 фазы, hardcore механики.
 ---
 
 ---
@@ -197,7 +197,7 @@
   - Parameters: `raidId`, `playerId`, `action`, `target`
 
 ### WebSocket для real-time:
-- `ws://api/raids/{raidId}` — live boss HP, timers, player states
+- `wss://api.necp.game/v1/gameplay/raids/{raidId}` — live boss HP, timers, player states
 
 ## 10. Логи и Тесты
 

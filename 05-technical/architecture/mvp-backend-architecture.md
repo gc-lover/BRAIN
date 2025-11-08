@@ -7,8 +7,8 @@
 **Связанные документы:** `mvp-frontend-architecture.md`, `2025-11-08-gameplay-backend-sync.md`, `database/schema.md`
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08
-**api-readiness-notes:** Определены сервисы, интерфейсы, интеграции. Готово к передаче в BACK-JAVA.
+**api-readiness-check-date:** 2025-11-08 12:20  
+**api-readiness-notes:** Сервисы и порты синхронизированы с текущей микросервисной архитектурой и Production URL.
 
 ---
 

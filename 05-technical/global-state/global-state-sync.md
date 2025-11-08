@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:00
-**api-readiness-notes:** Global State Sync микрофича. MMORPG sync, conflict resolution, persistence, event replay, versioning. ~450 строк.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** WebSocket каналы синхронизированы с новым Production доменом `wss://api.necp.game/v1`.
 ---
 
 # Global State Sync - Синхронизация и персистентность
@@ -9,7 +9,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 06:00  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** КРИТИЧЕСКИЙ  
 **Автор:** AI Brain Manager
 
@@ -335,27 +335,27 @@ WHERE
 
 ```typescript
 // Player channel
-ws://api.necpgame.com/ws/player/{playerId}
+wss://api.necp.game/v1/ws/player/{playerId}
 Events:
 - player.level.changed
 - player.quest.updated
 - player.inventory.changed
 
 // World channel
-ws://api.necpgame.com/ws/world/{serverId}
+wss://api.necp.game/v1/ws/world/{serverId}
 Events:
 - world.territory.captured
 - world.npc.fate.changed
 - world.faction.power.changed
 
 // Economy channel
-ws://api.necpgame.com/ws/economy/{serverId}
+wss://api.necp.game/v1/ws/economy/{serverId}
 Events:
 - economy.price.changed
 - economy.auction.bid
 
 // Combat channel
-ws://api.necpgame.com/ws/combat/{sessionId}
+wss://api.necp.game/v1/ws/combat/{sessionId}
 Events:
 - combat.damage.dealt
 - combat.player.died

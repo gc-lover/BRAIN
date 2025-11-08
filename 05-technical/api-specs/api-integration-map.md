@@ -5,7 +5,7 @@
 - **Status:** queued
 - **Tasks:**
   - API-TASK-163: api/docs/integration-architecture.md (2025-11-07 11:30)
-- **Last Updated:** 2025-11-07 00:18
+- **Last Updated:** 2025-11-08 12:20
 ---
 
 
@@ -349,7 +349,7 @@ Multiple services subscribe
 
 **Player Channel:**
 ```
-ws://api.necpgame.com/ws/player/{player_id}
+wss://api.necp.game/v1/ws/player/{player_id}
 
 Messages:
 - quest_update
@@ -361,7 +361,7 @@ Messages:
 
 **Combat Channel:**
 ```
-ws://api.necpgame.com/ws/combat/{session_id}
+wss://api.necp.game/v1/ws/combat/{session_id}
 
 Messages:
 - damage_event
@@ -373,7 +373,7 @@ Messages:
 
 **Market Channel:**
 ```
-ws://api.necpgame.com/ws/market
+wss://api.necp.game/v1/ws/market
 
 Messages:
 - new_listing

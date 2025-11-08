@@ -10,11 +10,11 @@
 **Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 20:37  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37
-**api-readiness-notes:** Каталог боссов подземелий: фазы, уникальные навыки по уровням сложности, таблицы данных и API world-service. Обновление v1.1.0 добавляет два новых боссов, модификаторы Apex+ и аналитические метрики.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Каталог боссов подземелий: фазы, уникальные навыки по уровням сложности, таблицы данных и API world-service. WebSocket обновлён на gateway `wss://api.necp.game/v1/world/dungeons/{instanceId}/boss`. Обновление v1.1.0 добавляет два новых босса, модификаторы Apex+ и аналитические метрики.
 ---
 
 # Dungeon Bosses Catalog — Инстансовые лидеры
@@ -109,7 +109,7 @@
 | `/world/dungeons/bosses/{bossId}/aftermath` | `POST` | Применение world flags и репутаций после победы/поражения |
 
 ## 6. WebSocket и телеметрия
-- `wss://world-service/dungeons/{instanceId}/boss` — события `PhaseStart`, `AbilityTrigger`, `DndCheck`, `Failure`, `Success`.
+- `wss://api.necp.game/v1/world/dungeons/{instanceId}/boss` — события `PhaseStart`, `AbilityTrigger`, `DndCheck`, `Failure`, `Success`.
 - Kafka: `dungeon.boss.telemetry`, `dungeon.boss.outcome`, `dungeon.boss.progress`.
 - Analytics: отслеживание wipe rate, время убийства, эффективность контр-стратегий.
 

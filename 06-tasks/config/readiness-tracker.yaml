@@ -474,11 +474,120 @@ documents:
   - path: ".BRAIN/АПИТАСК.MD"
     status: "not-applicable"
     version: "1.0.0"
-    checked: "2025-11-08 10:20"
+    checked: "2025-11-08 12:25"
     checker: "AI Agent (Brain Readiness Checker)"
-    notes: "Служебная инструкция для API Task Creator Agent, не содержит API механик"
+    notes: "Служебная инструкция для API Task Creator Agent. Обновлена под полностью микросервисный backend и единый Production домен `https://api.necp.game/v1`."
     issues: []
     api_target: null
+
+  # 05-technical архитектура и синхронизация
+  - path: ".BRAIN/05-technical/architecture/mvp-backend-architecture.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "MVP backend выстроен полностью на микросервисах; порты синхронизированы с `auth/character/gameplay/social/economy/world` сервисами и gateway `https://api.necp.game/v1`."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/05-technical/global-state/global-state-sync.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Global State Sync обновлён: все WebSocket каналы переведены на `wss://api.necp.game/v1/...` и готовы к реализации."
+    issues: []
+    api_target: "api/v1/technical/global-state.yaml"
+
+  - path: ".BRAIN/05-technical/api-structures/romance-events-api-spec.yaml"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "OpenAPI спецификация романтических событий обновлена: Production сервер `https://api.necp.game/v1/social`, dev через gateway и `info.x-microservice` для `social-service`."
+    issues: []
+    api_target: "api/v1/social/romance-events.yaml"
+
+  - path: ".BRAIN/05-technical/start-content/romance-quests/romance-sarah-miller-full-arc.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Романтическая арка Сары Миллер. WebSocket обновлён на gateway `wss://api.necp.game/v1/social/romance/{romanceId}`; структура стадий и узлов подтверждена."
+    issues: []
+    api_target: "api/v1/social/romance/sarah-miller.yaml"
+
+  - path: ".BRAIN/05-technical/start-content/endgame-raids/raid-corpo-tower-assault.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Endgame raid «Corpo Tower Assault». WebSocket трансляции через `wss://api.necp.game/v1/gameplay/raids/{raidId}`; 3 фазы подтверждены."
+    issues: []
+    api_target: "api/v1/narrative/raids/raid-corpo-tower.yaml"
+
+  - path: ".BRAIN/05-technical/start-content/endgame-raids/raid-blackwall-expedition.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Endgame raid «Blackwall Expedition». WebSocket через gateway `wss://api.necp.game/v1/gameplay/raids/{raidId}`; механики и стадии согласованы."
+    issues: []
+    api_target: "api/v1/narrative/raids/raid-blackwall.yaml"
+
+  - path: ".BRAIN/05-technical/ui/leaderboards/ui-leaderboards.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "UI Leaderboard System. WebSocket канал обновлён на `wss://api.necp.game/v1/social/leaderboard`; экраны и фильтры готовы к реализации."
+    issues: []
+    api_target: "api/v1/social/leaderboard.yaml"
+
+  - path: ".BRAIN/05-technical/ui/achievements/ui-achievements-main.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "UI Achievement System. WebSocket канал `wss://api.necp.game/v1/gameplay/achievements` подтверждён; список, фильтры и прогресс готовы."
+    issues: []
+    api_target: "api/v1/gameplay/achievements/ui.yaml"
+
+  - path: ".BRAIN/05-technical/analytics/faction-analytics-balance.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Faction Analytics & Balance. WebSocket аналитики перенесён на `wss://api.necp.game/v1/analytics/factions`; метрики и авто-тюнинг валидны."
+    issues: []
+    api_target: "api/v1/technical/analytics/faction-balance.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/dungeons/dungeon-bosses-catalog.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Каталог боссов подземелий: фазы, навыки, Apex+. WebSocket `wss://api.necp.game/v1/world/dungeons/{instanceId}/boss` подтверждён."
+    issues: []
+    api_target: "api/v1/world/dungeons/bosses/catalog.yaml"
+
+  - path: ".BRAIN/02-gameplay/world/world-bosses-catalog.md"
+    status: "ready"
+    version: "1.1.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Каталог мировых боссов: события, последствия. WebSocket через gateway `wss://api.necp.game/v1/world/world-boss/{eventId}`."
+    issues: []
+    api_target: "api/v1/world/bosses/catalog.yaml"
+
+  - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Combat AI Enemies Matrix. WebSocket рейдов обновлён на `wss://api.necp.game/v1/gameplay/raid/{raidId}`; матрица поведений актуальна."
+    issues: []
+    api_target: "api/v1/gameplay/combat/ai-enemies.yaml"
 
   # 02-gameplay/social/ - Социальные механики
   - path: ".BRAIN/02-gameplay/social/relationships-system.md"
@@ -2212,10 +2321,10 @@ documents:
 
   - path: ".BRAIN/03-lore/factions/factions-timeline-2020-2093.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-07 21:46"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Хронология авторских фракций 2020-2093: лор, ключевые события, механики, API-контуры для world-service/social-service."
+    version: "1.1.0"
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Хронология авторских фракций 2020-2093 обновлена: WebSocket трансляции через gateway `wss://api.necp.game/v1/world/history/{id}`, world/social контуры подтверждены."
     issues: []
     api_target: "api/v1/world/factions/history-2020-2093.yaml"
 
@@ -2884,9 +2993,9 @@ documents:
   - path: ".BRAIN/04-narrative/dialogues/faction-social-lines.md"
     status: "ready"
     version: "1.0.0"
-    checked: "2025-11-07 22:05"
-    checker: "AI Agent (Brain Manager)"
-    notes: "Социальные и романтические линии лидеров фракций: мотивация, условия, диалоговые ветки, REST/WS и SQL схемы."
+    checked: "2025-11-08 12:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Социальные и романтические линии лидеров. WebSocket диалогов переведён на gateway `wss://api.necp.game/v1/social/dialogues/{leaderId}`."
     issues: []
     api_target: "api/v1/social/factions/dialogues.yaml"
 

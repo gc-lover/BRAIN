@@ -4,8 +4,8 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** высокий  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:45
-**api-readiness-notes:** Полная романтическая арка с Сарой Миллер. 5 стадий, 28+ узлов диалогов. Соответствует квестам `quest-romance-sarah-01` через `05`.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Полная романтическая арка с Сарой Миллер. WebSocket обновлён на `wss://api.necp.game/v1/social/romance/{romanceId}`. 5 стадий, 28+ узлов диалогов.
 ---
 
 # РОМАНТИЧЕСКАЯ ЛИНИЯ: Сара Миллер (NCPD Officer)
@@ -273,7 +273,7 @@ NODE[hesitate]: «Нужно время.»
 - POST `/api/v1/romance/partner-ability-activate` (playerId, abilityId)
 
 ### WebSocket для events:
-- `ws://api/romance/{romanceId}` — live updates romance points, stage changes
+- `wss://api.necp.game/v1/social/romance/{romanceId}` — live updates romance points, stage changes
 
 ## 11. UX/UI Романса
 

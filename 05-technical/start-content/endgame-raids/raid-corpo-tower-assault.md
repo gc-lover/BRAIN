@@ -4,8 +4,8 @@
 **Дата создания:** 2025-11-06  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 21:35
-**api-readiness-notes:** Полная спецификация endgame raid «Corpo Tower Assault». 10-15 игроков, 3 фазы, hardcore stealth/combat.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Полная спецификация endgame raid «Corpo Tower Assault». WebSocket переведён на `wss://api.necp.game/v1/gameplay/raids/{raidId}`; 10-15 игроков, 3 фазы, hardcore stealth/combat.
 ---
 
 ---
@@ -244,7 +244,7 @@
 - POST `/api/v1/combat/raid-action`
 
 ### WebSocket:
-- `ws://api/raids/{raidId}` — live updates
+- `wss://api.necp.game/v1/gameplay/raids/{raidId}` — live updates
 
 ## 10. Баланс
 

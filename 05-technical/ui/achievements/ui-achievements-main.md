@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:18
-**api-readiness-notes:** UI для Achievement System. Список достижений, прогресс, categories, filters. ~390 строк.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** UI для Achievement System. Список достижений, прогресс, categories, filters. WebSocket обновлён на `wss://api.necp.game/v1/gameplay/achievements`. ~390 строк.
 ---
 
 # UI - Achievement System
@@ -498,7 +498,7 @@ const useAchievementStats = (achievementId: string) => {
 
 // WebSocket для real-time updates
 useEffect(() => {
-  const ws = new WebSocket('ws://api/achievements');
+  const ws = new WebSocket('wss://api.necp.game/v1/gameplay/achievements');
   
   ws.on('achievement_unlocked', (data) => {
     showAchievementUnlockNotification(data.achievement);

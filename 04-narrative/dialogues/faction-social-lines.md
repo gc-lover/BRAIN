@@ -2,11 +2,11 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 22:05  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 22:05
-**api-readiness-notes:** Социальные и романтические линии лидеров фракций: мотивация, репутационные условия, диалоги и интеграция с social-service.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Социальные и романтические линии лидеров фракций: мотивация, репутационные условия, диалоги. WebSocket через gateway `wss://api.necp.game/v1/social/dialogues/{leaderId}`.
 ---
 
 # Faction Social Lines — NPC лидеры и отношения
@@ -65,7 +65,7 @@ ep.nomad >= 20 | Защита караванов, кодекс мехов |
 | /social/dialogues/{leaderId}/branch | POST | Выбор ветки (romance, pact, mentorship) |
 | /social/dialogues/{leaderId}/progress | POST | Сохранение прогресса, выдача наград |
 
-**WebSocket:** wss://social-service/dialogues/{leaderId} — NodeAvailable, AffinityChange, OutcomeApplied.
+**WebSocket:** wss://api.necp.game/v1/social/dialogues/{leaderId} — NodeAvailable, AffinityChange, OutcomeApplied.
 
 ## 6. Схемы данных
 `sql

@@ -10,11 +10,11 @@
 **Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 20:37  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37
-**api-readiness-notes:** Каталог мировых боссов с фазами, уникальными навыками, сюжетными событиями и REST/WebSocket контрактами world-service. Обновление v1.1.0 добавляет орбитальные и хакерские события, таблицы последствий и расширенную интеграцию.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Каталог мировых боссов с фазами, уникальными навыками, сюжетными событиями и REST/WebSocket контрактами world-service. WebSocket обновлён на gateway `wss://api.necp.game/v1/world/world-boss/{eventId}`. Обновление v1.1.0 добавляет орбитальные и хакерские события, таблицы последствий и расширенную интеграцию.
 ---
 
 # World Bosses Catalog — Открытые столкновения
@@ -98,7 +98,7 @@
 | Mythic | Постоянные дебаффы | `Existential Overwrite` (перманентный -10% стат) |
 
 ## 5. Телеметрия и динамика
-- WebSocket канал `wss://world-service/world-boss/{eventId}` публикует `PhaseStart`, `AbilityCast`, `DndCheck`, `PlayerDown`, `LootRoll`.
+- WebSocket канал `wss://api.necp.game/v1/world/world-boss/{eventId}` публикует `PhaseStart`, `AbilityCast`, `DndCheck`, `PlayerDown`, `LootRoll`.
 - Kafka topics: `world.boss.spawn`, `world.boss.telemetry`, `world.boss.outcome`.
 - Автотюнинг: analytics-service корректирует HP и урон на основе среднего времени убийства.
 

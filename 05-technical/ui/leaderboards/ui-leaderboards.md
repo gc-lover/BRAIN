@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 02:18
-**api-readiness-notes:** UI для Leaderboard System. Рейтинги, фильтры, позиция игрока. ~370 строк.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** UI для Leaderboard System. Рейтинги, фильтры, позиция игрока. WebSocket обновлён на `wss://api.necp.game/v1/social/leaderboard`. ~370 строк.
 ---
 
 # UI - Leaderboard System
@@ -412,7 +412,7 @@ const SeasonalLeagueView: React.FC = () => {
 ```tsx
 // WebSocket для live updates
 useEffect(() => {
-  const ws = new WebSocket('ws://api/leaderboard');
+  const ws = new WebSocket('wss://api.necp.game/v1/social/leaderboard');
   
   ws.on('rank_change', (data) => {
     // Update player's rank in real-time

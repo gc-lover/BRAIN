@@ -300,7 +300,7 @@ Endgame Raids: 2 спецификации (10-15 players)
 - `/api/v1/raids/{raidId}/start`
 - `/api/v1/raids/{raidId}/phase-complete`
 - `/api/v1/raids/{raidId}/status`
-- WebSocket: `ws://api/raids/{raidId}`
+- WebSocket: `wss://api.necp.game/v1/gameplay/raids/{raidId}`
 
 ---
 

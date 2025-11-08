@@ -2,11 +2,11 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 20:17  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:17
-**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC, от уличных слоёв до рейдовых боссов. Содержит поведенческую архитектуру, уникальные навыки по уровням сложности, схемы данных, REST/WS контракты и интеграцию с сюжетом.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию.
 ---
 
 # COMBAT AI ENEMIES MATRIX
@@ -171,7 +171,7 @@ CREATE TABLE raid_boss_phases (
 | `/combat/raids/{raidId}/phase` | `POST` | Фиксация смены фазы, публикация в `raid.telemetry`. |
 | `/combat/ai/encounter` | `POST` | Старт встречи, принимает `locationId`, `playerParty`, `worldFlags`. |
 
-**WebSocket:** `wss://gameplay-service/raid/{raidId}` — поток состояния фаз, HP босса, активных механик. События: `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
+**WebSocket:** `wss://api.necp.game/v1/gameplay/raid/{raidId}` — поток состояния фаз, HP босса, активных механик. События: `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
 
 ## 7. D&D проверки и модификаторы
 - **Street Layer:** REF DC 15 для уклонения от `Urban Sweep`, TECH DC 14 для отключения дронов.

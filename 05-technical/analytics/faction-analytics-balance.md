@@ -2,11 +2,11 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-07 22:10  
+**Последнее обновление:** 2025-11-08 12:20  
 **Приоритет:** high  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 22:10
-**api-readiness-notes:** Метрики аналитики и авто-тюнинг фракционных систем: очистка, трибуналы, климат, рейды, социальные линии.
+**api-readiness-check-date:** 2025-11-08 12:20
+**api-readiness-notes:** Метрики аналитики и авто-тюнинг фракционных систем. WebSocket через gateway `wss://api.necp.game/v1/analytics/factions`.
 ---
 
 # API Tasks Status
@@ -59,7 +59,7 @@ aidClearTime сравнивается с целевым диапазоном; п
 | /analytics/factions/autotune | POST | Применение авто-тюнинга (payload с изменениями) |
 | /analytics/factions/alerts | GET | Пороговые события для ГМ |
 
-**WebSocket:** wss://analytics-service/factions — MetricUpdate, AutotuneApplied, AlertRaised.
+**WebSocket:** wss://api.necp.game/v1/analytics/factions — MetricUpdate, AutotuneApplied, AlertRaised.
 
 ## 5. Схемы данных
 `sql
