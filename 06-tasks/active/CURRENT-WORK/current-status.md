@@ -6,7 +6,7 @@
 ---
 
 ## Active
-- Combat Systems Wave 1 — документы по combat-session, combat-ai-enemies, combat-implants-types, combat-dnd-integration-shooter, combat-shooting, combat-combos-synergies, combat-extract, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace и arena-system имеют статус ready; готовим единый пакет (`current note: 2025-11-09-combat-ai-package.md`) для передачи в ДУАПИТАСК; очередь `ready.md` и `readiness-tracker.yaml` синхронизированы по AI (`api/v1/gameplay/combat/ai-enemies.yaml`), arena (`api/v1/gameplay/combat/arena-system.yaml`) и D&D интеграции (`api/v1/gameplay/combat/dnd-integration-shooter.yaml`).
+- Combat Systems Wave 1 — документы по combat-session, combat-ai-enemies, combat-implants-types, combat-dnd-integration-shooter, combat-shooting, combat-stealth, combat-combos-synergies, combat-extract, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace и arena-system имеют статус ready; готовим единый пакет (`current note: 2025-11-09-combat-ai-package.md`) для передачи в ДУАПИТАСК; очередь `ready.md` и `readiness-tracker.yaml` синхронизированы по AI (`api/v1/gameplay/combat/ai-enemies.yaml`), arena (`api/v1/gameplay/combat/arena-system.yaml`) и D&D интеграции (`api/v1/gameplay/combat/dnd-integration-shooter.yaml`).
 - Economy Core Refresh — trade-system и inventory-system/part1-core-system остаются в приоритете high, необходимо синхронизировать постановку задач с economy-service без запуска в API-SWAGGER самостоятельно.
 ## Pending
 - Auth/Characters/Progression — ждём слот ДУАПИТАСК для задач по auth README, character-management и progression-backend.
