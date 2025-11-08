@@ -1,4 +1,15 @@
 ---
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-238: api/v1/narrative/throne-of-sand-campaign.yaml (2025-11-07 16:30)
+  - API-TASK-239: api/v1/gameplay/social/neon-popularity-reset.yaml (2025-11-07 16:30)
+  - API-TASK-240: api/v1/narrative/raids/quantum-reef-siege.yaml (2025-11-07 16:30)
+  - API-TASK-296: api/v1/admin/legal/hybrid-media-references.yaml (2025-11-07 22:05)
+- **Last Updated:** 2025-11-08 18:40
+---
+
+---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Завершённый пакет гибридных медиа-отсылок: детализированы ветки кампаний, UX-правила эвентов и синхронизация рейда.

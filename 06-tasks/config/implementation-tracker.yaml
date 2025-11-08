@@ -441,21 +441,17 @@ implementations:
 # === КРИТИЧЕСКИЕ СИСТЕМЫ (2025-11-07 НОВАЯ СЕССИЯ) ===
 # MVP Блокеры - КРИТИЧНО для запуска игры
 
- - api_path: "api/v1/auth/authentication.yaml"
-   task_id: "API-TASK-136"
-   brain_source: ".BRAIN/05-technical/backend/authentication-authorization-system.md"
-   api_status: "completed"
-   backend:
-    status: "completed"
-    started: "2025-11-06 23:25"
-    completed: "2025-11-08 15:30"
-     agent: "Backend Agent"
-    commit: "pending"
-     priority: "CRITICAL"
-    notes: "Статус обновлён после аудита: реализована связка AuthController/AuthService с реальной бизнес-логикой. Коммит будет указан после запуска scripts/autocommit."
-   frontend:
-     status: "not_started"
-     priority: "CRITICAL"
+- api_path: "api/v1/auth/authentication.yaml"
+  task_id: "API-TASK-126"
+  brain_source: ".BRAIN/05-technical/backend/authentication-authorization-system.md"
+  api_status: "completed"
+  api_completed: "2025-11-08 17:30"
+  backend:
+    status: "not_started"
+    priority: "CRITICAL"
+  frontend:
+    status: "not_started"
+    priority: "CRITICAL"
 
 - api_path: "api/v1/players/player-management.yaml"
   task_id: "API-TASK-137"

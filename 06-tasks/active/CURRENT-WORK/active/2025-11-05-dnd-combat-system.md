@@ -1,4 +1,12 @@
 ---
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-142: api/v1/narrative/quest-dnd-checks.yaml (2025-11-07 10:45)
+- **Last Updated:** 2025-11-08 19:05
+---
+
+---
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-07 16:14
 **api-readiness-notes:** Комплект решений по D&D-проверкам: типы кубиков, интеграция в квесты, сюжет и игровые механики.

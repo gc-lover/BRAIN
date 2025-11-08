@@ -2,10 +2,11 @@
 
 ---
 **API Tasks Status:**
-- Status: planned
+- Status: queued
 - Tasks:
-  - API-TASK-TBD: api/v1/world/events/anomalies.yaml (после постановки ДУАПИТАСК, дедлайн 2025-11-10)
-- Last Updated: 2025-11-08 16:51
+  - API-TASK-364: api/v1/world/events/anomalies.yaml (2025-11-08 17:26)
+  - API-TASK-365: api/v1/social/anomalies/participants.yaml (2025-11-08 17:26)
+- Last Updated: 2025-11-08 17:26
 ---
 
 ---

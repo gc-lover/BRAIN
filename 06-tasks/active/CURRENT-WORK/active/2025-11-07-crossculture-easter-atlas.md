@@ -2,10 +2,12 @@
 
 ---
 **API Tasks Status:**
-- Status: planned
+- Status: queued
 - Tasks:
-  - API-TASK-TBD: api/v1/world/events/crossculture-atlas.yaml (создать до 2025-11-10)
-- Last Updated: 2025-11-08 16:51
+  - API-TASK-366: api/v1/world/events/crossculture-atlas.yaml (2025-11-08 17:26)
+  - API-TASK-367: api/v1/economy/crossculture/capsules.yaml (2025-11-08 17:26)
+  - API-TASK-368: api/v1/social/crossculture/museum.yaml (2025-11-08 17:26)
+- Last Updated: 2025-11-08 17:26
 ---
 
 ---

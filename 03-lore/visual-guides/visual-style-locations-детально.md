@@ -1,3 +1,11 @@
+---
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-363: api/v1/world/visuals/locations-detailed-snapshots.yaml (2025-11-08 18:05)
+- **Last Updated:** 2025-11-08 18:05
+---
+
 # Визуальный гид по локациям — детальная версия
 
 **Статус:** approved  \
