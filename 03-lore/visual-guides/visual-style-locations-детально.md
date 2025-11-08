@@ -256,7 +256,7 @@
 ## 13. Проверка и согласование
 
 - Арт-директор: протокол `ART-VIS-LOC-20251108`.
-- World design: сверка с `city-life-population-algorithm.md` и `visual-style-locations.md` (базовый гид).
+- World design: подтверждение связки с `city-life-population-algorithm.md` и базовым гидом.
 - UI: интеграция JSON файлов в `FRONT-WEB` (PR `FW-visual-detailed-029`).
 - QA чеклист:  
   - [x] Asset ID валидны и совпадают с registry.  

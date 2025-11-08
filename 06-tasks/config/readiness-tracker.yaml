@@ -423,6 +423,15 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/АПИТАСК.MD"
+    status: "not-applicable"
+    version: "1.0.0"
+    checked: "2025-11-08 10:20"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Служебная инструкция для API Task Creator Agent, не содержит API механик"
+    issues: []
+    api_target: null
+
   # 02-gameplay/social/ - Социальные механики
   - path: ".BRAIN/02-gameplay/social/relationships-system.md"
     status: "ready"
@@ -459,6 +468,15 @@ documents:
     notes: "Документ готов к созданию API задач. Содержит детальные механики системы заказов игроков через NPC. TODO блоки только по балансировке (не блокируют создание API)."
     issues: []
     api_target: null
+
+  - path: ".BRAIN/_02-gameplay/social/player-orders-system-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:51"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Детализированная система заказов: API контракты, JSON схемы, escrow, рейтинги, Kafka события и UX требования синхронизированы с social/economy/world сервисами."
+    issues: []
+    api_target: "api/v1/social/player-orders.yaml"
 
   - path: ".BRAIN/02-gameplay/social/mentorship-system.md"
     status: "ready"

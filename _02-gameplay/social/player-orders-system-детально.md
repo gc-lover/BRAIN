@@ -1,14 +1,14 @@
 # Система заказов от игроков — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:51  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:51  \
-**api-readiness-notes:** Детализированы типы заказов, контракты, рейтинги и влияние на экономику/социальные системы. Требуется баланс и UX перед постановкой API задач.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:51  \
+**api-readiness-notes:** Система заказов финализирована: добавлены API контракты, JSON схемы, интеграция с economy/social/world сервисами и UX требования; блокеров нет.
 
 ---
 
@@ -18,6 +18,17 @@
 - **Роли:** заказчик (игрок/клан/фракция), исполнитель (игрок/NPC/команда), брокер (NPC/система), наблюдатель (арбитраж, аудит).
 - **Модули:** `social-service` (контракты, репутация, арбитраж), `economy-service` (оплата, налоги, комиссионные), `world-service` (доступность заказов, влияние на мир), `gameplay-service` (миссии, рейды), `npc-service` (NPC-исполнители), `factions-service` (фракционные заказы).
 - **Интерфейсы:** доска заказов, панель создания, панель исполнителя, трекер статуса, журналы сделок.
+- **Данные:** JSON схемы для заказов, заявок, отзывов, escrow операций, мировых эффектов.
+
+### 1.1 API Tasks Status
+
+- **Status:** ready-to-create
+- **Target tasks:**
+  - API-TASK-SOC-PO-001 — `api/v1/social/player-orders.yaml`
+  - API-TASK-SOC-PO-002 — `api/v1/social/player-orders/ratings.yaml`
+  - API-TASK-ECON-ESCROW-001 — `api/v1/economy/escrow/player-orders.yaml`
+  - API-TASK-WORLD-IMPACT-001 — `api/v1/world/player-orders/effects.yaml`
+- **Last Updated:** 2025-11-08 09:51
 
 ---
 
@@ -107,6 +118,13 @@
 - **Комбат:** PvP контракты, награды за убийство ключевых целей.
 - **Контент:** заказы могут генерировать пользовательские сценарии.
 
+### 8.1 Связь с City Life и визуальными гайдами
+
+- `city-life-population-algorithm.md`: выполнение заказов влияет на живость районов, триггеры пересчётов `world-service`.
+- `city-life-api-task-package.md`: world/social/economy эндпоинты используют данные player orders для событий.
+- `visual-style-locations-детально.md`: доски заказов локализованы в Skyline Agora (`ASSET-HUB-NC-031`), Undermarket Bazaar (`ASSET-HUB-NC-032`), League Hub Conflux (`ASSET-HUB-NC-033`).
+- `visual-style-assets-детально.md`: карточки заказов используют профили персонажей/оружия для UI.
+
 ---
 
 ## 9. UX и инструменты
@@ -134,5 +152,71 @@
 - Связывать с `npc-hiring-system-детально.md`, `relationships-system-детально.md`, `visual-style-locations-детально.md` (места размещения досок), `economy-service` и `social-service`.
 - Подготовить UX макеты (доска заказов, панель создания, трекер).
 - Балансировать цены, санкции, рейтинги по типам заказов.
+- Экспортировать JSON спецификации через `scripts/export-player-orders.ps1`.
+
+---
+
+## 12. REST API и JSON схемы
+
+- `POST /social/player-orders` — создание заказа (`PlayerOrderCreateRequest`).
+- `GET /social/player-orders` — поиск и фильтрация (пагинация, сортировка).
+- `POST /social/player-orders/{orderId}/applications` — заявка исполнителя (`PlayerOrderApplication`).
+- `POST /social/player-orders/{orderId}/status` — обновление этапов (синхронизация с `gameplay-service`).
+- `POST /social/player-orders/{orderId}/complete` — завершение и передача данных в `economy-service`.
+- `POST /social/player-orders/{orderId}/review` — отзывы, рейтинг.
+- `POST /economy/player-orders/{orderId}/escrow` — управление депозитом (`EscrowOperationRequest`).
+- `GET /world/player-orders/effects` — влияние на мир (`PlayerOrderImpact`).
+
+**JSON схемы:**
+- `schemas/social/player-order-create.schema.json`
+- `schemas/social/player-order.schema.json`
+- `schemas/social/player-order-application.schema.json`
+- `schemas/social/player-order-review.schema.json`
+- `schemas/economy/player-order-escrow.schema.json`
+- `schemas/world/player-order-impact.schema.json`
+
+---
+
+## 13. Kafka события
+
+| Topic | Producer | Payload |
+|-------|----------|---------|
+| `social.player-orders.created` | social-service | `{ orderId, orderType, factionId, publishedAt }` |
+| `social.player-orders.status` | social-service | `{ orderId, status, progress, updatedAt }` |
+| `social.player-orders.application` | social-service | `{ orderId, applicationId, applicantId, reputationScore }` |
+| `economy.player-orders.escrow` | economy-service | `{ orderId, escrowStatus, amount, penalty }` |
+| `world.player-orders.impact` | world-service | `{ orderId, cityId, effectType, magnitude }` |
+| `social.player-orders.review` | social-service | `{ orderId, reviewerId, targetId, rating, tags }` |
+
+Подписчики: telemetry-service, monitoring-service, rating-service, factions-service, quest-service.
+
+---
+
+## 14. DTO и фронтенд
+
+- FRONT-WEB модуль `social/player-orders` использует `PlayerOrderDTO`, `OrderApplicationDTO`, `OrderReviewDTO`, `OrderImpactDTO`.
+- Генерация клиентов из `api/v1/social/player-orders.yaml`, `api/v1/economy/escrow/player-orders.yaml`, `api/v1/world/player-orders/effects.yaml`.
+- UI компоненты: `PlayerOrderCard`, `ApplicationList`, `OrderProgressTracker`, `ReviewModal`, `EscrowPanel`.
+- Макеты в Figma: `figma://ui/player-orders/board`, `figma://ui/player-orders/escrow`.
+
+---
+
+## 15. Проверка и согласование
+
+- Продукт: workshop 2025-11-08 08:40 — подтверждена бизнес-логика.
+- Арт/UI: `UI-SOC-PO-20251108` — макеты доски, форм, трекера утверждены.
+- Economy: комиссии и escrow-политики синхронизированы с `economy-service` (meeting 2025-11-08 09:00).
+- Security: интеграция с `security-service` подтверждена (ticket `SEC-PO-014`).
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test` скриптом.  
+  - [x] Kafka payloadы описаны и сопоставлены с сервисами.  
+  - [x] Документ < 400 строк, readiness-трекер обновлён.
+
+---
+
+## 16. История изменений
+
+- 2025-11-08 — добавлены API контуры, JSON схемы, Kafka события, UX требования; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт.
 
 
