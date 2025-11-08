@@ -1,5 +1,11 @@
 # Кат-сцены — Helios Countermesh Conspiracy
 
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-377: api/v1/narrative/cutscenes/helios-countermesh.yaml (2025-11-08 21:10)
+- **Last Updated:** 2025-11-08 21:10
+
 **ID файла:** `cutscene-helios-conspiracy`  
 **Тип:** narrative-cutscene  
 **Статус:** approved  

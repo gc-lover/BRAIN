@@ -1,5 +1,11 @@
 # NPC — Каэдэ Исикава (двойной агент)
 
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-378: api/v1/narrative/npcs/kaede-ishikawa.yaml (2025-11-08 21:25)
+- **Last Updated:** 2025-11-08 21:25
+
 **ID персонажа:** `npc-kaede-ishikawa`  
 **Тип:** npc-lore (dual agent)  
 **Статус:** approved  

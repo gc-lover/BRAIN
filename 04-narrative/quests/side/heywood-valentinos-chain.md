@@ -1,5 +1,11 @@
 # Диалоги — Цепочка побочных квестов «Heywood Valentinos»
 
+## API Tasks Status
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-380: api/v1/narrative/dialogues/quests/heywood-valentinos-chain.yaml (2025-11-08 22:05)
+- **Last Updated:** 2025-11-08 22:05
+
 **ID диалога:** `dialogue-quest-side-heywood-valentinos-chain`  
 **Тип:** quest  
 **Статус:** approved  

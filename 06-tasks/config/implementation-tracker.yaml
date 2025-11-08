@@ -147,16 +147,46 @@ implementations:
       notes: "autocommit не выполнен: git repository not found"
   
   - api_path: "api/v1/inventory/inventory.yaml"
-    task_id: "API-TASK-006"
+    task_id: "API-TASK-128"
+    brain_source: ".BRAIN/05-technical/backend/inventory-system/README.md"
     api_status: "completed"
+    api_completed: "2025-11-08 18:20"
     backend:
-      status: "in_progress"
-      started: "2025-11-06 10:00"
-      agent: "Backend Agent"
-      commit: ""
-      notes: "InventoryServiceImpl пока содержит заглушки, требуется реализация операций с инвентарём. Задача: BACK-TASK-INV-IMPLEMENT (CRUD слотов, миграции по складам)."
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Реализовать core-инвентарь: CRUD предметов, стеки, вес, триггеры use/split (см. спецификацию 1.1.0)."
     frontend:
       status: "not_started"
+      priority: "CRITICAL"
+      notes: "Инвентарь UI интегрировать с новым contract: drag-n-drop, weight bar, auto-stack."
+
+  - api_path: "api/v1/inventory/equipment.yaml"
+    task_id: "API-TASK-128"
+    brain_source: ".BRAIN/05-technical/backend/inventory-system/part1-core-system.md"
+    api_status: "completed"
+    api_completed: "2025-11-08 18:20"
+    backend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Реализовать EquipmentService: проверки класса/уровня, bind-on-equip, swap/unequip логика."
+    frontend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Экран экипировки, сет-бонусы, подсветка слотов."
+
+  - api_path: "api/v1/inventory/bank.yaml"
+    task_id: "API-TASK-128"
+    brain_source: ".BRAIN/05-technical/backend/inventory-system/part2-advanced-features.md"
+    api_status: "completed"
+    api_completed: "2025-11-08 18:20"
+    backend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Bank/Stash сервис: лимиты аккаунта, транзакции deposit/withdraw с проверкой привязки."
+    frontend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "UI общего хранилища, управление расширениями и фильтрами предметов."
   
   - api_path: "api/v1/locations/locations.yaml"
     task_id: "API-TASK-007"
