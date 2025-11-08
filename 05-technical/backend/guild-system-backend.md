@@ -9,8 +9,9 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-229: api/v1/guilds/guild-system.yaml (2025-11-08 04:55)
-- **Last Updated:** 2025-11-08 04:55
+  - API-TASK-135: api/v1/social/guilds/guild-system.yaml (2025-11-08 17:55)
+  - API-TASK-229: api/v1/social/guilds/guild-system.yaml (2025-11-08 04:55)
+- **Last Updated:** 2025-11-08 17:55
 ---
 
 

@@ -9,8 +9,9 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-231: api/v1/party/party-system.yaml (2025-11-08 05:25)
-- **Last Updated:** 2025-11-08 05:25
+  - API-TASK-133: api/v1/social/party/party-system.yaml (2025-11-08 17:45)
+  - API-TASK-231: api/v1/social/party/party-system.yaml (2025-11-08 05:25)
+- **Last Updated:** 2025-11-08 17:45
 ---
 
 

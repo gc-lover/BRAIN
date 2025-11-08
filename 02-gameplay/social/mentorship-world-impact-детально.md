@@ -4,7 +4,7 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-346: api/v1/world/mentorship/effects.yaml (2025-11-08 19:25)
+  - API-TASK-346: api/v1/world/player-orders/effects.yaml (2025-11-08 19:25)
   - API-TASK-347: api/v1/economy/mentorship/index.yaml (2025-11-08 19:25)
   - API-TASK-348: api/v1/social/mentorship/news.yaml (2025-11-08 19:25)
 - **Last Updated:** 2025-11-08 19:25
@@ -179,5 +179,6 @@
 
 - 2025-11-08 — добавлены API задачи, индексы, REST/Kafka контуры и UX согласование; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт влияния наставничества.
+
 
 

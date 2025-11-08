@@ -9,8 +9,9 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-233: api/v1/trade/trade-system.yaml (2025-11-08 05:55)
-- **Last Updated:** 2025-11-08 05:55
+  - API-TASK-130: api/v1/economy/trade/trade-system.yaml (2025-11-08 17:30)
+  - API-TASK-233: api/v1/economy/trade/trade-system.yaml (2025-11-08 05:55)
+- **Last Updated:** 2025-11-08 17:30
 ---
 
 

@@ -146,7 +146,7 @@ implementations:
       commit: ""
       notes: "autocommit не выполнен: git repository not found"
   
-  - api_path: "api/v1/inventory/inventory.yaml"
+  - api_path: "api/v1/economy/inventory/inventory.yaml"
     task_id: "API-TASK-128"
     brain_source: ".BRAIN/05-technical/backend/inventory-system/README.md"
     api_status: "completed"
@@ -188,7 +188,7 @@ implementations:
       priority: "CRITICAL"
       notes: "UI общего хранилища, управление расширениями и фильтрами предметов."
 
-  - api_path: "api/v1/loot/loot-generation.yaml"
+  - api_path: "api/v1/gameplay/loot/loot-generation.yaml"
     task_id: "API-TASK-129"
     brain_source: ".BRAIN/05-technical/backend/loot-system/README.md"
     api_status: "completed"
@@ -543,7 +543,7 @@ implementations:
     agent: "Frontend Agent"
     priority: "CRITICAL"
 
-- api_path: "api/v1/players/players.yaml"
+- api_path: "api/v1/characters/players/players.yaml"
   task_id: "API-TASK-127"
   brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
   api_status: "completed"
@@ -1788,7 +1788,7 @@ implementations:
     frontend:
       status: "not_started"
 
-  - api_path: "api/v1/loot/loot-generation.yaml"
+  - api_path: "api/v1/gameplay/loot/loot-generation.yaml"
     task_id: "API-TASK-235"
     brain_source: ".BRAIN/05-technical/backend/loot-system/part1-loot-generation.md"
     api_status: "completed"
@@ -1853,4 +1853,5 @@ implementations:
 
     frontend:
       status: "not_started"
+
 

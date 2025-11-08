@@ -4,7 +4,7 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-358: api/v1/world/npc-hiring/effects.yaml (2025-11-08 20:22)
+  - API-TASK-358: api/v1/world/player-orders/effects.yaml (2025-11-08 20:22)
   - API-TASK-359: api/v1/economy/npc-hiring/index.yaml (2025-11-08 20:22)
 - **Last Updated:** 2025-11-08 20:22
 ---
@@ -167,3 +167,4 @@
 
 - 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX сценарии; статус `approved`, готовность `ready`.
 - 2025-11-07 — первичный драфт влияния найма.
+

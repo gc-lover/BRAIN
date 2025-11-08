@@ -1,7 +1,7 @@
 **API Tasks Status:**
 - Status: queued
 - Tasks:
-  - API-TASK-235: api/v1/loot/loot-generation.yaml (2025-11-08 06:22)
+  - API-TASK-235: api/v1/gameplay/loot/loot-generation.yaml (2025-11-08 06:22)
 - Last Updated: 2025-11-08 06:22
 
 # Loot System - Part 1: Loot Generation
@@ -384,4 +384,5 @@ public void createPartyLoot(
 
 - v1.0.1 (2025-11-07 02:18) - Создан с полным Java кодом (generation, solo, party)
 - v1.0.0 (2025-11-07) - Создан
+
 

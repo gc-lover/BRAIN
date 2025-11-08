@@ -740,7 +740,7 @@ documents:
     notes: "Влияние наставничества: индексы, world-events, REST/Kafka контуры и UX подтверждены; world/social/economy сервисы синхронизированы."
     issues: []
     api_target:
-      - "api/v1/world/mentorship/effects.yaml"
+      - "api/v1/world/player-orders/effects.yaml"
       - "api/v1/economy/mentorship/index.yaml"
       - "api/v1/social/mentorship/news.yaml"
 
@@ -1919,7 +1919,7 @@ documents:
     notes: "Влияние найма NPC на мир: индексы занятости, REST/Kafka контуры, UX/телеметрия синхронизированы с world/economy/social сервисами."
     issues: []
     api_target:
-      - "api/v1/world/npc-hiring/effects.yaml"
+      - "api/v1/world/player-orders/effects.yaml"
       - "api/v1/economy/npc-hiring/index.yaml"
 
   # Детализация player-orders системы
@@ -3453,4 +3453,5 @@ documents:
     api_target: "api/v1/lore/locations/denver.yaml"
 
 # Примеры записей:
+
 
