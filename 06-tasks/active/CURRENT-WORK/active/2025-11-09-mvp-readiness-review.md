@@ -53,6 +53,24 @@
 - **Архитектура:** `gameplay-service`, модуль `modules/combat/combos`.  
 - **Замечания:** соответствует требованиям, доп. задач пока не заводим.
 
+## 9. Combat AI Matrix (`.BRAIN/02-gameplay/combat/combat-ai-enemies.md`)
+- **Статус:** ready (v1.0.0, 2025-11-09 00:55)  
+- **Покрытие:** поведенческие слои NPC, Kafka/WebSocket, D&D проверки, рейдовые сценарии.  
+- **Архитектура:** `gameplay-service`, порт 8083, WebSocket `wss://api.necp.game/v1/gameplay/raid/{raidId}`, интеграции с world/social/economy.  
+- **Замечания:** удалены устаревшие статусы, документ готов к постановке задач по AI и телеметрии.
+
+## 10. Arena System (`.BRAIN/02-gameplay/combat/arena-system.md`)
+- **Статус:** ready (v1.0.0, 2025-11-09 00:55)  
+- **Покрытие:** карты арен, режимы, рейтинги, экономика, интеграции (voice lobby, лидерборды, античит).  
+- **Архитектура:** `gameplay-service`, модули `modules/combat/arenas`, orchestrator через gRPC, Kafka `arena.match.state`.  
+- **Замечания:** структура соответствует микросервисной карте, до постановки задач дополнительно ничего не требуется.
+
+## 11. D&D Integration (`.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md`)
+- **Статус:** ready (v1.0.0, 2025-11-09 00:55)  
+- **Покрытие:** гибрид D20 проверок с realtime боем, импланты, advantage/disadvantage, логирование.  
+- **Архитектура:** `gameplay-service`, модуль `modules/combat/mechanics`, интеграция с combat session и имплантами.  
+- **Замечания:** очищены старые статусы, документ готов для формирования задач второй волны.
+
 ---
 
 ### Общие выводы
