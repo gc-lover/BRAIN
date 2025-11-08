@@ -1,6 +1,6 @@
 ---
 **Статус:** updated  
-**Дата:** 2025-11-08 16:51  
+**Дата:** 2025-11-08 17:39  
 **Ответственный:** AI Brain Manager
 ---
 
@@ -23,6 +23,7 @@
 ## Обновлённые планы
 
 - `2025-11-07-api-spec-batch-plan.md` — добавлены Batch 05 (Competitive & Events) и Batch 06 (Lore Reference). YAML-файлы для Batch 05 будут созданы после запуска Batch 01–04.
+- API задачи: `API-TASK-364/365` (аномалии), `API-TASK-366/367/368` (Metropolis Threads), `API-TASK-369/370/371` (Subliminal Network) — статус queued в `tasks/active/queue` и `brain-mapping.yaml`.
 
 ## Связанные системы
 
@@ -31,18 +32,16 @@
 
 ## Активные фокусы
 
-- `CURRENT-WORK/active/2025-11-08-gameplay-backend-sync.md` — передача задач API Task Creator (combat/social/world sync) до 2025-11-10.
-- `API-SWAGGER/tasks/active/queue` — запуск Batch 01–05 после подтверждения готовности и обновления brain-mapping.
-- Подготовка YAML `batch-05-competitive.yaml` и формирование набора для Batch 06 (Lore Support).
+- `CURRENT-WORK/active/2025-11-08-gameplay-backend-sync.md` — контроль передачи пакетов в API Executor до 2025-11-10.
+- `API-SWAGGER/tasks/active/queue` — мониторинг выполнения задач 364–371 и запуск Batch 01–05 после генерации клиентов.
+- Подготовка YAML `batch-05-competitive.yaml` и формирование пакета для Batch 06 (Lore Support).
 
 ## Следующие действия
 
-1. Передать в ДУАПИТАСК три документа (аномалии, сезон, сублиминальная сеть) и создать соответствующие задания API.
-2. Запустить автогенерацию DTO/клиентов в BACK-JAVA и FRONT-WEB после постановки задач.
-3. Обновить brain-mapping.yaml ссылками на новые API цели и отметить Batch 05 как готовый к запуску.
-4. Подготовить YAML `batch-05-competitive.yaml` (после запуска Batch 01–04).
-5. Провести синхронизацию с UI/UX и Audio по фильтрам `Afterglow` и плейлистам Fusion Echo.
-6. Обновить `TODO.md` основными достижениями и перенести завершённые задачи в архив.
+1. Запустить автогенерацию DTO/клиентов в `BACK-GO` и `FRONT-WEB` для задач API-TASK-364..371, зафиксировать результаты.
+2. Завершить YAML `batch-05-competitive.yaml` и подготовить исходные материалы для Batch 06 (Lore Support).
+3. После генерации обновить `current-status.md`, `TODO.md` и readiness-трекер (при необходимости отметить выполнение).
+4. Держать мониторинг по `CURRENT-WORK/active/2025-11-08-gameplay-backend-sync.md` и зафиксировать передачу в API Executor.
 
 ## Блокирующие факторы
 
