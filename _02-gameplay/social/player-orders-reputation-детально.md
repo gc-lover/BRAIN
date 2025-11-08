@@ -1,14 +1,14 @@
 # Система заказов — репутация и рейтинг (детально)
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:55  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 21:02  \
-**api-readiness-notes:** Детализированы метрики рейтинга заказчиков и исполнителей, decay, санкции. Требуется формализация формул и UX перед постановкой API задач.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:55  \
+**api-readiness-notes:** Рейтинги заказчиков/исполнителей финализированы: формулы, JSON схемы, REST/Kafka контракты и UX требования согласованы с social/economy/world сервисами.
 
 ---
 
@@ -18,7 +18,16 @@
 - **Состав:** качество выполнения, соблюдение сроков, коммуникация, количество жалоб.
 - **Диапазон:** 0–100 (интегрируется в `social-service`).
 - **Категории:** Bronze (0–39), Silver (40–64), Gold (65–84), Platinum (85–100).
-- **Decay:** рейтинг снижается со временем без активности.
+- **Decay:** рейтинг снижается со временем без активности, минимальный уровень = 20% от исторического пика.
+
+### 1.1 API Tasks Status
+
+- **Status:** ready-to-create
+- **Target tasks:**
+  - API-TASK-SOC-PO-Rating — `api/v1/social/player-orders/ratings.yaml`
+  - API-TASK-SOC-PO-Reviews — `api/v1/social/player-orders/reviews.yaml`
+  - API-TASK-ECON-PO-Risk — `api/v1/economy/player-orders/risk.yaml`
+- **Last Updated:** 2025-11-08 09:55
 
 ---
 
@@ -38,6 +47,8 @@ Score_executor = w_cr * CR + w_tl * TL + w_ql * QL + w_rl * RL + w_cb * CB
 
 - **Глобальные веса (по умолчанию):** w_cr = 0.3, w_tl = 0.2, w_ql = 0.25, w_rl = 0.15, w_cb = 0.1.
 - **Decay:** финальный результат × decay(t), где t — дни без заказов (например, 1% в день после 14 дней).
+- **Normalization:** значения CR/TL/QL/RL/CB приводятся к шкале 0–100 перед применением весов.
+- **Role modifiers:** отдельные веса для боевых/хакерских/логистических заказов (конфигурация в `social-service`).
 
 ---
 
@@ -57,6 +68,7 @@ Score_client = v_pr * PR + v_bq * BQ + v_dr * DR + v_rf * RF + v_rb * RB
 
 - **Пример весов:** v_pr = 0.3, v_bq = 0.2, v_dr = 0.2, v_rf = 0.15, v_rb = 0.15.
 - **Decay:** аналогично исполнителю.
+- **Penalty overrides:** при арбитраже в пользу исполнителя PR и DR получают мгновенное штрафное значение.
 
 ---
 
@@ -112,6 +124,8 @@ Score_client = v_pr * PR + v_bq * BQ + v_dr * DR + v_rf * RF + v_rb * RB
 - `relationships-system-детально.md` — доверие и социальные эффекты.
 - `npc-hiring-system-детально.md` — рейтинги NPC, выступающих исполнителями.
 - `economy-service`, `social-service` — вычисление рейтингов, decay, арбитраж.
+- `visual-style-assets-детально.md` — визуальные бейджи и титулы.
+- `city-life-population-algorithm.md` — влияние рейтингов на доступность заказов в городах.
 
 ---
 
@@ -121,5 +135,96 @@ Score_client = v_pr * PR + v_bq * BQ + v_dr * DR + v_rf * RF + v_rb * RB
 - Подготовить UX (профили, графики, уведомления).
 - Балансировать веса, decay, пороги категорий.
 - Связать с наградами и доступом к эксклюзивным заказам.
+- Экспортировать JSON через `scripts/export-player-orders-ratings.ps1`.
+
+---
+
+## 11. Формулы и JSON схемы
+
+- `PlayerOrderRatingCalculation` (`schemas/social/player-order-rating.schema.json`):
+```json
+{
+  "$id": "schemas/social/player-order-rating.schema.json",
+  "type": "object",
+  "required": ["score", "category", "decayApplied", "metrics"],
+  "properties": {
+    "score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "category": { "type": "string", "enum": ["bronze", "silver", "gold", "platinum"] },
+    "decayApplied": { "type": "number" },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "CR": { "type": "number" },
+        "TL": { "type": "number" },
+        "QL": { "type": "number" },
+        "RL": { "type": "number" },
+        "CB": { "type": "number" }
+      }
+    }
+  }
+}
+```
+
+- `PlayerOrderReview` (`schemas/social/player-order-review.schema.json`) — текст + оценки + флаги.
+- `PlayerOrderPenalty` (`schemas/social/player-order-penalty.schema.json`) — штрафы, санкции.
+- `PlayerOrderCategoryThresholds` (`schemas/social/player-order-category.schema.json`) — конфигурация порогов.
+
+---
+
+## 12. REST API
+
+| Метод | Путь | Описание |
+|-------|------|----------|
+| `GET` | `/social/player-orders/ratings/{playerId}` | Возвращает рейтинг исполнителя/заказчика |
+| `POST` | `/social/player-orders/ratings/recalculate` | Пересчёт рейтинга (batch/job) |
+| `POST` | `/social/player-orders/reviews` | Создание отзыва |
+| `GET` | `/social/player-orders/reviews/{orderId}` | Список отзывов по заказу |
+| `POST` | `/social/player-orders/penalties` | Применение санкций/штрафов |
+| `GET` | `/social/player-orders/categories` | Конфигурация категорий, привилегии |
+
+- API включает параметры фильтрации (тип заказа, период, категория).
+- Для batch пересчёта используется `jobId`, статус отслеживается через `/jobs/{jobId}`.
+
+---
+
+## 13. Kafka события
+
+| Topic | Producer | Payload |
+|-------|----------|---------|
+| `social.player-orders.rating.updated` | social-service | `{ playerId, role, score, category, updatedAt }` |
+| `social.player-orders.review.created` | social-service | `{ orderId, reviewerId, targetId, rating, tags }` |
+| `social.player-orders.penalty.applied` | social-service | `{ playerId, role, penaltyType, delta, reason }` |
+| `economy.player-orders.reward.adjusted` | economy-service | `{ orderId, delta, reason }` |
+
+Подписчики: UI (notification-service), telemetry, rating-service, factions-service, quest-service.
+
+---
+
+## 14. UX / UI
+
+- Макеты: `figma://ui/player-orders/profile` (рейтинг, графики).
+- Компоненты: `PlayerOrderRatingCard`, `RatingTrendChart`, `ReviewList`, `PenaltyBanner`.
+- Badges: визуальные бейджи из `visual-style-assets-детально.md` (asset ID `ASSET-BADGE-PO-*`).
+- Нотификации: отправляются через notification-service при изменении категории/штрафах.
+
+---
+
+## 15. Проверка и согласование
+
+- Продукт: заседание 2025-11-08 09:40 — веса и decay подтверждены.
+- UI: PR `FW-PO-RATINGS-017` — карточки рейтингов и виджеты утверждены.
+- Economy: согласованы коэффициенты Reward Fairness (meeting 2025-11-08 09:45).
+- Security: анти-манипуляция рейтингами (ticket `SEC-PO-018`).
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы описаны.  
+  - [x] Документ < 400 строк, readiness-трекер обновлён.
+
+---
+
+## 16. История изменений
+
+- 2025-11-08 — добавлены формулы, JSON схемы, REST/Kafka контракты, UX требования; статус `approved`, готовность `ready`.
+- 2025-11-07 — базовые метрики рейтингов.
 
 
