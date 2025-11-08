@@ -496,6 +496,17 @@ documents:
     issues: []
     api_target: "api/v1/social/player-orders/ratings.yaml"
 
+  - path: ".BRAIN/_02-gameplay/social/player-orders-world-impact-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:57"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Влияние заказов на мир формализовано: REST/JSON схемы, Kafka события и UX интеграции утверждены; world/economy/social сервисы синхронизированы."
+    issues: []
+    api_target:
+      - "api/v1/world/player-orders/effects.yaml"
+      - "api/v1/economy/player-orders/index.yaml"
+
   - path: ".BRAIN/02-gameplay/social/mentorship-system.md"
     status: "ready"
     version: "1.1.0"

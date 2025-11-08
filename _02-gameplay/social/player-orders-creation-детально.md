@@ -19,12 +19,12 @@
 
 ### 1.1 API Tasks Status
 
-- **Status:** ready-to-create
-- **Target tasks:**
-  - API-TASK-SOC-PO-Create — `api/v1/social/player-orders.yaml` (создание/публикация).
-  - API-TASK-ECON-PO-Budget — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow).
-  - API-TASK-WORLD-PO-Validation — `api/v1/world/player-orders/validation.yaml` (проверки территорий/санкций).
-- **Last Updated:** 2025-11-08 09:53
+- **Status:** in-progress
+- **Tasks:**
+  - API-TASK-SOC-PO-Create — `api/v1/social/player-orders.yaml` (2025-11-08, готово +components, +events)
+  - API-TASK-ECON-PO-Budget — `api/v1/economy/player-orders/budget.yaml` (в работе)
+  - API-TASK-WORLD-PO-Validation — `api/v1/world/player-orders/validation.yaml` (в работе)
+- **Last Updated:** 2025-11-08 10:08
 
 ---
 
