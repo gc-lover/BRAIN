@@ -1638,12 +1638,25 @@ documents:
 
   - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact.md"
     status: "ready"
-    version: "1.0.0"
-    checked: "2025-11-06 20:41"
-    checker: "AI Agent"
-    notes: "Документ готов к созданию API задач. Влияние найма NPC на игровой мир."
+    version: "1.1.0"
+    checked: "2025-11-08 10:05"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Мировые эффекты заказов: индексы экономики, world-events, REST/Kafka интеграции world/economy/social сервисов оформлены."
     issues: []
-    api_target: "api/v1/social/npc-hiring-world-impact.yaml"
+    api_target:
+      - "api/v1/world/player-orders/effects.yaml"
+      - "api/v1/economy/player-orders/index.yaml"
+
+  - path: ".BRAIN/_02-gameplay/social/npc-hiring-world-impact-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:12"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Влияние найма NPC на мир: индексы занятости, REST/Kafka контуры, UX/телеметрия синхронизированы с world/economy/social сервисами."
+    issues: []
+    api_target:
+      - "api/v1/world/npc-hiring/effects.yaml"
+      - "api/v1/economy/npc-hiring/index.yaml"
 
   # Детализация player-orders системы
   - path: ".BRAIN/02-gameplay/social/player-orders-types.md"
