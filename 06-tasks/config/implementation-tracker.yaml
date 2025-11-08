@@ -1169,6 +1169,15 @@ implementations:
   frontend:
     status: "not_started"
 
+- api_path: "api/v1/social/player-orders.yaml"
+  task_id: "API-TASK-317"
+  brain_source: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+  frontend:
+    status: "not_started"
+
 - api_path: "api/v1/narrative/narrative-coherence.yaml"
   task_id: "API-TASK-175"
   brain_source: ".BRAIN/04-narrative/narrative-coherence/ (3 phase documents)"

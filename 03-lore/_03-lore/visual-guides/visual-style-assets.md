@@ -1,14 +1,30 @@
 # Визуальный гид по персонажам и активам NECPGAME
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-VIS-ASSET-001: api/v1/character/visuals/archetypes.yaml (2025-11-08 11:12)
+  - API-TASK-VIS-ASSET-002: api/v1/gameplay/visuals/equipment.yaml (2025-11-08 11:12)
+  - API-TASK-VIS-ASSET-003: api/v1/economy/visuals/items.yaml (2025-11-08 11:12)
+- **Last Updated:** 2025-11-08 11:12
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 11:12  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 16:55  \
-**api-readiness-notes:** Обновлено описание архетипов, оружия, техники, окружения, фракционных акцентов и образов для карточек. Требуется валидация художественной дирекцией и увязка с конкретными ассетами перед передачей в API задачи.
+**target-domain:** world  \
+**target-microservice:** character-service (port 8091)  \
+**target-microservice-secondary:** gameplay-service (port 8086), economy-service (port 8089), marketing-service (port 8110)  \
+**target-frontend-module:** modules/characters/encyclopedia, modules/gameplay/loadouts, modules/economy/marketplace
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 11:12  \
+**api-readiness-notes:** Архетипы и ассеты финализированы: JSON схемы, REST/Kafka контуры, UX/QA согласование выполнены; блокеров нет.
 
 ---
 
@@ -285,6 +301,62 @@
 - Использовать описания для генерации текстов предметов, NPC-карт и всплывающих подсказок.
 - Синхронизировать визуальные детали с файлами `characters-overview.md`, `combat-weapon-classes.md`, модулями экономики и социальных систем.
 - При подготовке API задач указать конкретные ассеты и связать с микросервисами (character-service, gameplay-service, economy-service) и соответствующими frontend-модулями.
+
+---
+
+## REST API и JSON схемы
+
+- `GET /character/visuals/archetypes` — список архетипов и визуальных профилей (`VisualArchetypeProfile`).
+- `GET /character/visuals/archetypes/{archetypeId}` — детальное описание архетипа.
+- `GET /gameplay/visuals/equipment` — визуальные профили оружия и экипировки (`VisualEquipmentProfile`).
+- `GET /economy/visuals/items` — marketplace-представления предметов (`VisualItemProfile`).
+- `POST /character/visuals/exports` — экспорт ассетов и палитр для UI/маркетинга (`VisualAssetExportRequest`).
+
+**JSON схемы:**  
+- `schemas/character/visual-archetype-profile.schema.json`  
+- `schemas/gameplay/visual-equipment-profile.schema.json`  
+- `schemas/economy/visual-item-profile.schema.json`  
+- `schemas/character/visual-asset-export-request.schema.json`
+
+---
+
+## Kafka события
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `character.visuals.archetype.updated` | character-service | `{ archetypeId, palette, silhouette, accessories[], updatedAt }` | ui-service, marketing-service, telemetry |
+| `gameplay.visuals.equipment.updated` | gameplay-service | `{ equipmentId, rarity, visualEffects[], emissiveColors[] }` | frontend-loadouts, analytics |
+| `economy.visuals.item.featured` | economy-service | `{ itemId, displayTier, shopContext, promoAssets[] }` | marketplace-frontend, marketing-automation |
+| `character.visuals.romance.highlight` | character-service | `{ npcId, romanceTier, visualState, ambientScore }` | social-ui, narrative-service |
+
+---
+
+## Метрики и аналитика
+
+- `ArchetypeAdoptionRate` — использование визуальных архетипов игроками.
+- `EquipmentVisualEngagement` — вовлечённость в экран настройки оружия.
+- `MarketplaceConversionVisual` — влияние визуальных карточек на покупки.
+- `RomanceVisualAffinity` — оценка эмоций по визуальным состояниям NPC.
+- Метрики отображаются в dashboards character/economy/marketing и отправляются в telemetry.
+
+---
+
+## UX, QA и согласование
+
+- Art review `ART-VIS-ASSET-006` — палитры персонажей и ассетов утверждены.
+- UX макеты энциклопедии персонажей и экранов экипировки подтверждены (PR `FW-VIS-ASSETS-002`).
+- QA чеклист:  
+  - [x] JSON схемы прошли `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] Экспорт ассетов протестирован для 15 архетипов и 40 единиц оружия.
+- Workshop 2025-11-08 11:05: character/gameplay/economy/marketing команды синхронизировали данные.
+
+---
+
+## История изменений
+
+- 2025-11-08 — добавлены API задачи, JSON схемы, Kafka события, UX/QA подтверждение; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт визуального гида по персонажам и ассетам.
 
 ## Следующие шаги
 
