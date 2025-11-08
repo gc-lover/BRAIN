@@ -1684,6 +1684,18 @@ documents:
       - "api/v1/social/npc-hiring/workforce.yaml"
       - "api/v1/economy/npc-hiring/payroll.yaml"
 
+  - path: ".BRAIN/_02-gameplay/social/npc-relationships-system-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:47"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Отношения с NPC: шкалы, эмоции, романтика и события; REST/Kafka контуры согласованы с social/world/gameplay сервисами."
+    issues: []
+    api_target:
+      - "api/v1/social/npc-relationships/status.yaml"
+      - "api/v1/social/npc-relationships/interactions.yaml"
+      - "api/v1/world/npc-relationships/events.yaml"
+
   - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact.md"
     status: "ready"
     version: "1.1.0"

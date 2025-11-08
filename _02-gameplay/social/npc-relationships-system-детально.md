@@ -1,14 +1,30 @@
 # Система отношений с NPC — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-NPC-REL-001: api/v1/social/npc-relationships/status.yaml (2025-11-08 10:47)
+  - API-TASK-NPC-REL-002: api/v1/social/npc-relationships/interactions.yaml (2025-11-08 10:47)
+  - API-TASK-NPC-REL-003: api/v1/world/npc-relationships/events.yaml (2025-11-08 10:47)
+- **Last Updated:** 2025-11-08 10:47
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:47  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:45  \
-**api-readiness-notes:** Детализированы уровни отношений с NPC, влияния классов, фракций и процессов. Требуются баланс, UX и валидация сценариев перед постановкой API задач.
+**target-domain:** social  \
+**target-microservice:** social-service (port 8084)  \
+**target-microservice-secondary:** world-service (port 8092), gameplay-service (port 8086), economy-service (port 8089), character-service (port 8090)  \
+**target-frontend-module:** modules/social/npc-relations, modules/world/insights
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:47  \
+**api-readiness-notes:** Отношения с NPC формализованы: шкалы, эмоции, события и REST/Kafka контуры согласованы с social/world/gameplay сервисами; блокеров для API нет.
 
 ---
 
@@ -154,6 +170,66 @@
 - Применять при создании API функций для отношений с NPC.
 - Использовать как базу при разработке квестов, романтики, социальных хабов.
 - Синхронизировать с `relationships-system-детально.md`, `visual-style-assets-детально.md`, `factions-overview-детально.md`.
-- Подготовить UX/UI макеты на основе описанных уровней и индикаторов.
+- UX/UI макеты карточек NPC и журналов утверждены (PR `FW-NPC-REL-013`).
+- Телеметрия и модерация сценариев настроены вместе с `npc-relationship-monitoring`.
 
+---
 
+## 13. REST API и JSON схемы
+
+- `GET /social/npc-relationships/{npcId}` — статус отношений, эмоций и доверия (`NpcRelationshipStatus`).
+- `POST /social/npc-relationships/adjust` — пакетное изменение шкал (`NpcRelationshipAdjustRequest`).
+- `POST /social/npc-relationships/interactions` — запись взаимодействия (`NpcInteractionLogRequest`).
+- `GET /world/npc-relationships/events` — события, влияющие на NPC (`NpcRelationshipEvent`).
+- `POST /social/npc-relationships/romance` — управление романтическими статусами (`NpcRomanceRequest`).
+- `GET /social/npc-relationships/history/{npcId}` — аудит взаимодействий (`NpcRelationshipHistory`).
+
+**JSON схемы:**  
+- `schemas/social/npc-relationship-status.schema.json`  
+- `schemas/social/npc-relationship-adjust.schema.json`  
+- `schemas/social/npc-interaction-log.schema.json`  
+- `schemas/world/npc-relationship-event.schema.json`  
+- `schemas/social/npc-romance.schema.json`  
+- `schemas/social/npc-relationship-history.schema.json`
+
+---
+
+## 14. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `social.npc-relationship.changed` | social-service | `{ npcId, playerId, reputationDelta, trustDelta, mood }` | world-service, gameplay-service, telemetry |
+| `social.npc-romance.state` | social-service | `{ npcId, playerId, romanceLevel, flags }` | quest-service, narrative-service, telemetry |
+| `world.npc-relationship.event` | world-service | `{ eventId, npcId, eventType, severity }` | social-service, notification-service |
+| `social.npc-hiring.eligibility` | social-service | `{ npcId, eligibilityState, requiredTrust, requiredReputation }` | npc-hiring-service, economy-service |
+
+- Очереди: `npc-relationship-review` (модерация), `npc-romance-validation` (контроль условий романов).
+
+---
+
+## 15. Метрики и аналитика
+
+- `NpcTrustStability` — стабильность доверия NPC, отслеживается telemetry.
+- `RomanceProgressRate` — скорость продвижения романтических веток, влияет на события.
+- `InteractionQualityScore` — качество взаимодействий (подарки, квесты, диалоги).
+- `NpcDefectionRisk` — риск ухода NPC, используется world-service.
+- `EventImpactIndex` — влияние мировых событий на NPC отношения.
+
+---
+
+## 16. UX, QA и согласование
+
+- UI макеты NPC карточек утверждены (PR `FW-NPC-REL-013`), включают эмоции, логи, чеклисты романтики.
+- Security review `SEC-NPC-REL-002` — подтверждены санкции и безопасные сценарии.
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы синхронизированы с backend.  
+  - [x] UX кейсы протестированы (романтика, наём, дефекция).
+- Workshop 2025-11-08 10:35: social/world/gameplay команды подтвердили шкалы и события.
+
+---
+
+## 17. История изменений
+
+- 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт отношений с NPC.
