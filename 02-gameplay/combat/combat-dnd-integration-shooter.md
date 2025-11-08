@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:55
-**api-readiness-notes:** Интеграция D&D с realtime шутером полностью определена (микро-проверки, импланты, способности). Перепроверено 2025-11-09 00:55, готово для API задач gameplay-service.
+**api-readiness-check-date:** 2025-11-09 01:15
+**api-readiness-notes:** Интеграция D&D с realtime шутером полностью определена (микро-проверки, импланты, способности). Перепроверено 2025-11-09 01:15, готово для API задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  

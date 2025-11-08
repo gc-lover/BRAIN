@@ -34,7 +34,7 @@
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: сформировать задания на интеграцию D&D-проверок (gameplay-service, api/v1/gameplay/combat/dnd-integration-shooter.yaml).
+  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: вынести задания на интеграцию D&D-проверок в шутер (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:58 — Brain Manager | Следующий шаг: подготовить задания по TTK, отдаче и имплант-модификаторам стрельбы (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
@@ -46,9 +46,9 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
-  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service).
+  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service, `api/v1/gameplay/combat/abilities.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
+  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service, `api/v1/gameplay/combat/dnd-core.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service, api/v1/gameplay/combat/stealth.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  

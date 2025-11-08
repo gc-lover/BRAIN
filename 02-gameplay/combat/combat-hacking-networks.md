@@ -1,17 +1,17 @@
 ﻿# Боевая система — Хакерство: Сети и защита
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:54
-**api-readiness-notes:** Документ готов к созданию API задач. Перепроверено 2025-11-09 00:54; содержит детальные решения по структуре сетей (простые/сложные/изолированные), взлому сетей, защите сетей (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
+**api-readiness-check-date:** 2025-11-09 01:15
+**api-readiness-notes:** Перепроверено 2025-11-09 01:15. Документ готов к созданию API задач: структура сетей (простые/сложные/изолированные), взлом, защита, уровни ICE (v1.0.0).
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/hacking
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 02:50
+- **Status:** approved
+- **Last Updated:** 2025-11-09 01:15
 ---
 
 ---
