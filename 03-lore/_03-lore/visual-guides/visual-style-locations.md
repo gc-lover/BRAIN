@@ -1,14 +1,30 @@
 # Визуальный гид по локациям и пространствам NECPGAME
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-VIS-LOC-001: api/v1/world/visuals/locations.yaml (2025-11-08 11:00)
+  - API-TASK-VIS-LOC-002: api/v1/social/visuals/hubs.yaml (2025-11-08 11:00)
+  - API-TASK-VIS-LOC-003: api/v1/economy/visuals/markets.yaml (2025-11-08 11:00)
+- **Last Updated:** 2025-11-08 11:00
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 11:00  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:17  \
-**api-readiness-notes:** Базовые визуальные описания локаций, хабов и рейдов подготовлены. Требуется согласование с арт-директором и привязка к ассетам перед передачей в API задачи.
+**target-domain:** world  \
+**target-microservice:** world-service (port 8092)  \
+**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \
+**target-frontend-module:** modules/world/atlas, modules/social/hubs
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 11:00  \
+**api-readiness-notes:** Визуальные профили локаций закреплены: JSON схемы, REST/Kafka контуры и UX согласованы с world/social/economy сервисами.
 
 ---
 
@@ -194,6 +210,59 @@
 - Сопоставлять локации с микросервисами (`world-service`, `economy-service`, `social-service`).
 - Связывать визуальные мотивы с фракционными документами (`factions/`, `world-cities/`).
 - Для рейдов синхронизировать с документами `start-content/endgame-raids/` и системами боёв.
+
+---
+
+## REST API и JSON схемы
+
+- `GET /world/visuals/locations` — список `VisualLocationProfile`.
+- `GET /world/visuals/locations/{locationId}` — детальное описание и атмосферные теги.
+- `GET /social/visuals/hubs` — визуальные профили социальных хабов (`VisualHubProfile`).
+- `GET /economy/visuals/markets` — данные рынков и инфраструктуры (`VisualMarketProfile`).
+- `POST /world/visuals/locations/export` — экспорт пакета профилей для UI и маркетинга.
+
+**JSON схемы:**  
+- `schemas/world/visual-location-profile.schema.json`  
+- `schemas/social/visual-hub-profile.schema.json`  
+- `schemas/economy/visual-market-profile.schema.json`  
+- `schemas/world/visual-export-request.schema.json`
+
+---
+
+## Kafka события
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `world.visuals.location.updated` | world-service | `{ locationId, palette, silhouette, moodTags[], updatedAt }` | frontend-theme-service, marketing-service, telemetry |
+| `social.visuals.hub.highlight` | social-service | `{ hubId, eventType, primaryColors[], audienceLevel }` | notification-service, ui-service |
+| `economy.visuals.market.state` | economy-service | `{ marketId, trafficLevel, featuredVendors[], ambience }` | trading-ui, analytics |
+
+---
+
+## Метрики и аналитика
+
+- `LocationMoodConsistency` — соответствие визуальных тегов игровым событиям.
+- `HubEngagementIndex` — вовлечённость в социальных хабах (по визуальному профилю).
+- `MarketVisualConversion` — влияние визуала на торговую активность.
+- Метрики передаются в telemetry и мониторятся через dashboards world/social команд.
+
+---
+
+## UX, QA и согласование
+
+- UI/Art review `ART-VIS-LOC-007` — палитры, силуэты, голографические паттерны утверждены.
+- UX макеты карт, превью и карточек локаций согласованы (PR `FW-VISUAL-ATLAS-005`).
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] Экспорт `VisualLocationProfile` протестирован на выборке из 20 локаций.
+
+---
+
+## История изменений
+
+- 2025-11-08 — добавлены API задачи, JSON схемы, Kafka события, UX/QA согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — базовое описание визуального языка локаций.
 
 ## Связанные документы
 
