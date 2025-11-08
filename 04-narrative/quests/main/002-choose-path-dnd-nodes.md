@@ -1,7 +1,7 @@
 ﻿---
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 17:09
-**api-readiness-notes:** Узлы проверок для квеста 1.2. Требует увязки с репутацией фракций.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 09:32
+**api-readiness-notes:** Узлы квеста 1.2 увязаны с репутациями фракций, диалогами и telemetry; блокеров нет.
 ---
 ---
 
@@ -10,16 +10,16 @@
 - **Status:** queued
 - **Tasks:**
   - API-TASK-143: api/v1/narrative/main-quests/002-choose-path.yaml (2025-11-07 10:47)
-- **Last Updated:** 2025-11-07 00:18
+- **Last Updated:** 2025-11-08 09:32
 ---
 
 
 
 # Квест 1.2 «Выбор пути» — D&D узлы проверок
 
-**Статус:** draft  
-**Версия:** 0.1.0  
-**Дата:** 2025-11-05
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата:** 2025-11-08
 
 ## Правила (ссылка)
 - База: `02-gameplay/combat/combat-dnd-core.md`
@@ -34,6 +34,7 @@
 - Успех: ранний доступ к корпоративным контрактам, репутация +10
 - Провал: стандартная ветка, репутация +5
 - Крит.провал: «черный список» временно (-10 к скрытым офферам)
+- HUD: подсказка `corp-negotiation`, индикатор доверия Arasaka
 
 ### N-11 Бандитская проверка «свой-чужой»
 - Тип: Социальная / Intimidation или Deception
@@ -42,6 +43,7 @@
 - Провал: проверочный бой/задание на доверие
 - Крит.успех: сразу редкая «наводка»
 - Крит.провал: засада (мягкая для ранних уровней)
+- HUD: подсказка `gang-oath`, индикатор лояльности Valentinos
 
 ### N-12 Независимый путь: демонстрация навыка
 - Тип: Выбор по стилю класса (Solo/Netrunner/Techie)
@@ -50,19 +52,42 @@
 - Techie: Ремонт/Сборка редкого модуля (DC 18–20)
 - Успех: уникальная независимая награда, репутация «фриланс» +10
 - Провал: базовый независимый маршрут без бонусов
+- HUD: подсказка `freelance-performance`, отслеживает прогресс архетипа
 
 ## Влияние на ветвления
 - Выбор фракции фиксирует набор будущих узлов и диапазоны DC
 - Репутационные модификаторы записываются в социальные системы
+- Виджет `path-choice-summary` отображает выбранный путь и активные флаги
 
 ## Групповые правила (MMORPG)
 - Переговоры: спикер + ассистенты (каждый ассистент успешной «поддержкой» дает +1, макс +3)
 - Сцены конфликта с бандой: проверка группы по среднему успеху (2 из 3 должны пройти)
+- Независимый путь: каждая роль выполняет профильную проверку, в зачёт идёт лучший результат команды
+
+## Синхронизация с системами
+- Диалоги: узлы N-10...N-12 соответствуют сценам `corp-track`, `gang-track`, `law-track`, `freelance-brief` из `dialogue-quest-main-002-choose-path`; флаги `flag.main002.*` апдейтились narrative-service.
+- Репутация: social-service обрабатывает события `/reputation/apply` (Arasaka, Valentinos, NCPD, Freelance).
+- World-service: выбор пути активирует маршруты `main002.corp_route`, `main002.street_route`, `main002.freelance_route`.
+- Economy-service: критические успехи ставят задания в очередь `contracts.assign` с соответствующими контрактами.
+- UI: карточки выбора пути используют `modules/narrative/quests/path-choice.json`, HUD подсказки берутся из `tutorial-overlays.json`.
+
+## Экспорт и интеграции
+- YAML: узлы экспортируются в `api/v1/narrative/main-quests/002-choose-path.yaml` (API-TASK-143).
+- JSON Schema: проверки валидируются `schemas/quests/dnd-check.schema.json` (скрипт `scripts/validate-quest-dialogue.ps1`).
+- Telemetry: броски отправляются в `POST /narrative/quests/002/rolls`, репутационные изменения логируются метрикой `path-choice-rep-delta`.
+- Events: критические провалы генерируют `event.corp.watchlist`, `event.street.ambush`, `event.freelance.contract-denied`.
+
+## Метрики и аналитика
+- `corp-negotiation-success-rate`
+- `gang-oath-success-rate`
+- `freelance-challenge-success-rate`
+- `path-choice-distribution`
+- Ограничения: доля критических провалов ≤ 12% в каждой ветке; перекос выбора (>60% одной ветки) активирует world-event коррекцию.
 
 ## Связанные
 - `main-quests-outline.md`
 
 ## История изменений
+- v1.0.0 — синхронизация с диалогами, репутацией и telemetry; готовность `ready`.
 - v0.1.0 — первичный набор узлов
-
 
