@@ -18,11 +18,11 @@
 - **Документ:** .BRAIN/05-technical/backend/progression-backend.md (v1.0.0)  
   **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить API задачу для progression core.
 - **Документ:** .BRAIN/05-technical/backend/inventory-system/part1-core-system.md (v1.0.1)  
-  **Проверено:** 2025-11-09 01:23 — Brain Manager | Следующий шаг: завести новое API задание по инвентарю (economy-service, api/v1/inventory/inventory-core.yaml).
+  **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: подготовить пакет задач по inventory core (economy-service, `api/v1/inventory/inventory-core.yaml`).
 - **Документ:** .BRAIN/05-technical/backend/combat-session-backend.md (v1.0.0)  
   **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить свежую задачу для combat session lifecycle.
 - **Документ:** .BRAIN/05-technical/backend/trade-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:23 — Brain Manager | Следующий шаг: подготовить обновлённый пакет материалов по торговле (economy-service, api/v1/trade/trade-system.yaml) перед ДУАПИТАСК.
+  **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: синхронизировать пакет по P2P trade (economy-service, `api/v1/trade/trade-system.yaml`) и передать в ДУАПИТАСК при открытии слота.
 - **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:19 — Brain Manager | Следующий шаг: оформить REST/WS/EventBus задачи по конспекту `2025-11-09-quest-engine-package.md` и подготовить передачу в ДУАПИТАСК (`api/v1/gameplay/quests/quest-engine.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
