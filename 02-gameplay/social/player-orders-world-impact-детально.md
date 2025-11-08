@@ -14,7 +14,7 @@
 
 ## API Tasks Status
 
-- **Status:** in_progress
+- **Status:** queued
 - **Tasks:**
   - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-world-impact-api.md) — `api/v1/world/player-orders/effects.yaml` (глобальные эффекты, кризисы, события) — completed 2025-11-08 18:10 (валидировано).
   - [API-TASK-320](../../API-SWAGGER/tasks/active/queue/task-320-player-orders-economy-index-api.md) — `api/v1/economy/player-orders/index.yaml` (экономические индексы, макропоказатели) — created 2025-11-08 12:55.
