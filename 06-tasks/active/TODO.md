@@ -1,6 +1,6 @@
 # TODO — Brain Manager
 
-**Обновлено:** 2025-11-09 00:57  
+**Обновлено:** 2025-11-09 00:58  
 **Ответственный:** Brain Manager
 
 ---
@@ -12,6 +12,7 @@
 - [~] Подготовить пакет материалов для ДУАПИТАСК по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service) — документ в ready, ждёт постановки.
 - [ ] Сформировать пакет для `.BRAIN/02-gameplay/combat/arena-system.md` (gameplay-service) — арены готовы, требуется задача.
 - [ ] Подготовить материалы по `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md` (gameplay-service) — интеграция D&D ожидает постановки.
+- [ ] Подготовить материалы по `.BRAIN/02-gameplay/combat/combat-shooting.md` (gameplay-service) — TTK и отдача готовы к задачам.
 
 ## Medium
 - *(пусто)*

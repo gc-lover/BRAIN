@@ -40,6 +40,8 @@
   **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: вынести задания на интеграцию D&D-проверок в шутерный бой (gameplay-service).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
+  **Проверено:** 2025-11-09 00:58 — Brain Manager | Следующий шаг: подготовить задания по TTK, отдаче и имплант-модификаторам стрельбы (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать задачи для экстрактшутер механик (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
