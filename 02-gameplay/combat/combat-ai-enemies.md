@@ -2,11 +2,11 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-08 12:20  
+**Последнее обновление:** 2025-11-09 00:55  
 **Приоритет:** highest  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:54
-**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию. Перепроверено 2025-11-09 00:54, готово для постановки задач API.
+**api-readiness-check-date:** 2025-11-09 00:55
+**api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию. Перепроверено 2025-11-09 00:55, готово для постановки задач API.
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/ai

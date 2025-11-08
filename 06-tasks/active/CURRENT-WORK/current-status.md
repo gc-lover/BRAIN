@@ -1,6 +1,6 @@
 # Текущий статус активных направлений
 
-**Обновлено:** 2025-11-09 00:54  
+**Обновлено:** 2025-11-09 00:55  
 **Ответственный:** Brain Manager
 
 ---
@@ -8,7 +8,7 @@
 ## Active
 - *(нет активных направлений)*
 ## Pending
-- Подготовить пакет для ДУАПИТАСК: `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service, combat AI) — без создания задач в API-SWAGGER до отдельного указания.
+- Ожидаем отдельного разрешения на создание задач в API-SWAGGER по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service, combat AI); пакет подготовлен, очередь обновлена 2025-11-09 00:55.
 
 ## Blocked
 - *(блокеров нет)*

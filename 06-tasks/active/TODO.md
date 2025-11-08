@@ -8,7 +8,7 @@
 ## Critical
 - [x] Провести аудит `.BRAIN` и удалить устаревшие блоки `API Tasks Status` (2025-11-09 00:25).
 ## High
-- [ ] Подготовить пакет материалов для ДУАПИТАСК по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service).
+- [x] Подготовить пакет материалов для ДУАПИТАСК по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service) — очередь обновлена, ждём разрешения на постановку (2025-11-09 00:55).
 
 ## Medium
 - *(пусто)*
