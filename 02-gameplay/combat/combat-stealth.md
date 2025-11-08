@@ -1,11 +1,11 @@
 ﻿# Боевая система - STEALTH (Скрытность)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:01
-**api-readiness-notes:** Перепроверено 2025-11-09 01:01. Документ фиксирует каналы обнаружения, импланты, социальную инженерию; балансировочные TODO не блокируют создание задач.
+**api-readiness-check-date:** 2025-11-09 01:09
+**api-readiness-notes:** Перепроверено 2025-11-09 01:09. Документ фиксирует каналы обнаружения, импланты, социальную инженерию; балансировочные TODO не блокируют создание задач.
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/stealth
 
 **Статус:** approved - готов к созданию API задач  
@@ -15,7 +15,7 @@
 ---
 
 - **Status:** approved
-- **Last Updated:** 2025-11-09 01:01
+- **Last Updated:** 2025-11-09 01:09
 ---
 
 ---

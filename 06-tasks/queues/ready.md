@@ -46,13 +46,10 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
-  **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service).
+  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
+  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service).
-- **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:59 — Brain Manager | Следующий шаг: подготовить API задачи для quest engine (gameplay-service).
- 
+  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service).
