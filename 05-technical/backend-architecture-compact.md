@@ -8,15 +8,20 @@
 ## Архитектура
 
 **Микросервисы:**
+- API Gateway (`https://api.necp.game/v1`)
 - Auth Service
 - Character Service
-- Quest Service
-- Combat Service
-- Economy Service
+- Gameplay Service
 - Social Service
+- Economy Service
 - World Service
 
-**Детали:** См. отдельные файлы в backend/
+**Принципы:**
+- Production доступ только через gateway; прямые порты (`8081-8086`) используются в dev.
+- Каждая OpenAPI спецификация содержит `info.x-microservice` с именем, портом и доменом сервиса.
+- Монолитные модули удалены; новые доменные сервисы проходят архитектурное ревью.
+
+**Детали:** См. файлы в `backend/` и `architecture/`
 
 ---
 
