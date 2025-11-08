@@ -4,17 +4,17 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-MENTOR-WORLD-001: api/v1/world/mentorship/effects.yaml (2025-11-08 10:33)
-  - API-TASK-MENTOR-ECON-001: api/v1/economy/mentorship/index.yaml (2025-11-08 10:33)
-  - API-TASK-MENTOR-SOCIAL-001: api/v1/social/mentorship/news.yaml (2025-11-08 10:33)
-- **Last Updated:** 2025-11-08 10:33
+  - API-TASK-346: api/v1/world/mentorship/effects.yaml (2025-11-08 19:25)
+  - API-TASK-347: api/v1/economy/mentorship/index.yaml (2025-11-08 19:25)
+  - API-TASK-348: api/v1/social/mentorship/news.yaml (2025-11-08 19:25)
+- **Last Updated:** 2025-11-08 19:25
 ---
 
 
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 10:33  \
+**Последнее обновление:** 2025-11-08 19:25  \
 **Приоритет:** высокий
 
 **target-domain:** world  \
