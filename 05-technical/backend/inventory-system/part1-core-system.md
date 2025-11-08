@@ -4,8 +4,12 @@
 **Версия:** 1.0.1  
 **Дата:** 2025-11-07 02:15  
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 23:39  
-**api-readiness-notes:** Core storage, equipment, схемы БД и процессы готовы для API.
+**api-readiness-check-date:** 2025-11-09 01:23  
+**api-readiness-notes:** Перепроверено 2025-11-09 01:23. Core storage, equipment, схемы БД и процессы готовы для API economy-service.
+**Последнее обновление:** 2025-11-09 01:23  
+**target-domain:** economy-inventory  
+**target-microservice:** economy-service (8085)  
+**target-frontend-module:** modules/economy/inventory
 
 [Навигация](./README.md) | [Part 2 →](./part2-advanced-features.md)
 

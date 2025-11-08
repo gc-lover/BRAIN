@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:23
-**api-readiness-notes:** Проводка P2P трейда, схемы БД, события и антифрод перепроверены 2025-11-09 01:23 — документ готов для API economy-service.
+**api-readiness-check-date:** 2025-11-09 01:24
+**api-readiness-notes:** Проводка P2P трейда, схемы БД, события и антифрод перепроверены 2025-11-09 01:24 — документ готов для API economy-service.
 **target-domain:** economy-trade  
 **target-microservice:** economy-service (8085)  
 **target-frontend-module:** modules/economy/trade
@@ -13,7 +13,7 @@
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Последнее обновление:** 2025-11-09 01:23  
+**Последнее обновление:** 2025-11-09 01:24  
 **Приоритет:** высокий (критично для экономики)  
 **Автор:** AI Brain Manager
 

@@ -18,11 +18,11 @@
 - **Документ:** .BRAIN/05-technical/backend/progression-backend.md (v1.0.0)  
   **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить API задачу для progression core.
 - **Документ:** .BRAIN/05-technical/backend/inventory-system/part1-core-system.md (v1.0.1)  
-  **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: завести новое API задание по инвентарю.
+  **Проверено:** 2025-11-09 01:23 — Brain Manager | Следующий шаг: завести новое API задание по инвентарю (economy-service, api/v1/inventory/inventory-core.yaml).
 - **Документ:** .BRAIN/05-technical/backend/combat-session-backend.md (v1.0.0)  
   **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить свежую задачу для combat session lifecycle.
 - **Документ:** .BRAIN/05-technical/backend/trade-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить обновлённый пакет материалов по торговле (economy-service) перед ДУАПИТАСК.
+  **Проверено:** 2025-11-09 01:23 — Brain Manager | Следующий шаг: подготовить обновлённый пакет материалов по торговле (economy-service, api/v1/trade/trade-system.yaml) перед ДУАПИТАСК.
 - **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:19 — Brain Manager | Следующий шаг: оформить REST/WS/EventBus задачи по конспекту `2025-11-09-quest-engine-package.md` и подготовить передачу в ДУАПИТАСК (`api/v1/gameplay/quests/quest-engine.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
@@ -30,9 +30,9 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2, api/v1/gameplay/combat/combos-synergies.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service, api/v1/gameplay/combat/ai-enemies.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service, api/v1/gameplay/combat/ai-enemies.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: вынести задания на интеграцию D&D-проверок в шутер (gameplay-service, api/v1/gameplay/combat/dnd-integration-shooter.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
@@ -45,11 +45,11 @@
   **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: подготовить задачи по интеграции хакерства в бою (gameplay-service, api/v1/gameplay/combat/hacking/combat-integration.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
-- **Документ:** .BRAIN/02-gameplay/comбат/combat-abilities.md (v1.2.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service, api/v1/gameplay/combat/abilities.yaml).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service, api/v1/gameplay/combat/abilities.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service, api/v1/gameplay/combat/dnd-core.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service, api/v1/gameplay/combat/dnd-core.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service, api/v1/gameplay/combat/stealth.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service, api/v1/gameplay/combat/stealth.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service, api/v1/gameplay/combat/freerun.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service, api/v1/gameplay/combat/freerun.yaml).
