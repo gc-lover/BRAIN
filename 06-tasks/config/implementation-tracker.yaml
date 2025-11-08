@@ -169,9 +169,12 @@ implementations:
       commit: "06b79a9"
       notes: "CitiesController - справочные данные городов"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 11:17"
+      completed: "2025-11-08 11:30"
       agent: "Frontend Agent"
+      commit: ""
+      notes: "autocommit не выполнен: git repository not found"
   
   - api_path: "api/v1/trading/trading.yaml"
     task_id: "API-TASK-008"
@@ -759,7 +762,7 @@ implementations:
 
 - api_path: "api/v1/economy/player-orders/budget.yaml"
   task_id: "API-TASK-318"
-  brain_source: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md v1.0.0"
+  brain_source: ".BRAIN/02-gameplay/social/player-orders-creation-детально.md v1.0.0"
   api_status: "completed"
   backend:
     status: "not_started"
@@ -1175,7 +1178,7 @@ implementations:
 
 - api_path: "api/v1/social/player-orders.yaml"
   task_id: "API-TASK-317"
-  brain_source: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md v1.0.0"
+  brain_source: ".BRAIN/02-gameplay/social/player-orders-creation-детально.md v1.0.0"
   api_status: "completed"
   backend:
     status: "not_started"

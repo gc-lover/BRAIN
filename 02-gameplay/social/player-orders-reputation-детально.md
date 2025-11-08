@@ -3,7 +3,7 @@
 **Статус:** approved  \
 **Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-08 09:55  \
+**Последнее обновление:** 2025-11-08 18:52  \
 **Приоритет:** высокий
 
 **api-readiness:** ready  \
@@ -22,12 +22,12 @@
 
 ### 1.1 API Tasks Status
 
-- **Status:** in_progress
+- **Status:** queued
 - **Tasks:**
   - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-ratings-api.md) — `api/v1/social/player-orders/ratings.yaml` (рейтинги, отзывы, санкции) — completed 2025-11-08 17:45 (валидировано).
-  - API-TASK-SOC-PO-Reviews — `api/v1/social/player-orders/reviews.yaml` (UI-friendly отзывные выборки, публичное отображение) — pending creation.
-  - API-TASK-ECON-PO-Risk — `api/v1/economy/player-orders/risk.yaml` (страхование и скоринг риска) — pending creation.
-- **Last Updated:** 2025-11-08 17:45
+  - API-TASK-338 — `api/v1/social/player-orders/reviews.yaml` (создание и модерация отзывов, выборки для UI, жалобы/флаги) — queued 2025-11-08 18:50.
+  - API-TASK-339 — `api/v1/economy/player-orders/risk.yaml` (страхование, escrow и скоринг рисков вознаграждений) — queued 2025-11-08 18:52.
+- **Last Updated:** 2025-11-08 18:52
 
 ---
 

@@ -517,7 +517,7 @@ documents:
     issues: []
     api_target: null
 
-  - path: ".BRAIN/_02-gameplay/social/relationships-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/relationships-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:40"
@@ -529,7 +529,7 @@ documents:
       - "api/v1/social/trust/contracts.yaml"
       - "api/v1/world/alliances/events.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/player-orders-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/player-orders-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 09:51"
@@ -538,7 +538,7 @@ documents:
     issues: []
     api_target: "api/v1/social/player-orders.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md"
+  - path: ".BRAIN/02-gameplay/social/player-orders-creation-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 09:53"
@@ -547,7 +547,7 @@ documents:
     issues: []
     api_target: "api/v1/social/player-orders.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/player-orders-reputation-детально.md"
+  - path: ".BRAIN/02-gameplay/social/player-orders-reputation-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 09:55"
@@ -556,7 +556,7 @@ documents:
     issues: []
     api_target: "api/v1/social/player-orders/ratings.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/player-orders-world-impact-детально.md"
+  - path: ".BRAIN/02-gameplay/social/player-orders-world-impact-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 09:57"
@@ -576,7 +576,7 @@ documents:
     issues: []
     api_target: null
 
-  - path: ".BRAIN/_02-gameplay/social/mentorship-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/mentorship-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:20"
@@ -588,7 +588,7 @@ documents:
       - "api/v1/social/mentorship/contracts.yaml"
       - "api/v1/world/academies/events.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/mentorship-world-impact-детально.md"
+  - path: ".BRAIN/02-gameplay/social/mentorship-world-impact-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:33"
@@ -1283,7 +1283,7 @@ documents:
     issues: []
     api_target: null
 
-  - path: ".BRAIN/_02-gameplay/combat/combat-shooting-advanced.md"
+  - path: ".BRAIN/02-gameplay/combat/combat-shooting-advanced.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 09:37"
@@ -1720,7 +1720,7 @@ documents:
     issues: []
     api_target: "api/v1/social/npc-hiring-advanced.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/npc-hiring-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:27"
@@ -1732,7 +1732,7 @@ documents:
       - "api/v1/social/npc-hiring/workforce.yaml"
       - "api/v1/economy/npc-hiring/payroll.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/npc-relationships-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/npc-relationships-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:47"
@@ -1744,7 +1744,7 @@ documents:
       - "api/v1/social/npc-relationships/interactions.yaml"
       - "api/v1/world/npc-relationships/events.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/family-relationships-system-детально.md"
+  - path: ".BRAIN/02-gameplay/social/family-relationships-system-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:53"
@@ -1767,7 +1767,7 @@ documents:
       - "api/v1/world/player-orders/effects.yaml"
       - "api/v1/economy/player-orders/index.yaml"
 
-  - path: ".BRAIN/_02-gameplay/social/npc-hiring-world-impact-детально.md"
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact-детально.md"
     status: "ready"
     version: "1.0.0"
     checked: "2025-11-08 10:12"
