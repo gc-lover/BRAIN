@@ -28,11 +28,11 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:45 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service).
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service, api/v1/gameplay/combat/ai-enemies.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service).
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: сформировать задания на интеграцию D&D-проверок (gameplay-service).
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать задания на интеграцию D&D-проверок (gameplay-service, api/v1/gameplay/combat/dnd-integration-shooter.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:58 — Brain Manager | Следующий шаг: подготовить задания по TTK, отдаче и имплант-модификаторам стрельбы (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
@@ -51,4 +51,6 @@
   **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:01 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service).
+- **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
+  **Проверено:** 2025-11-09 00:59 — Brain Manager | Следующий шаг: подготовить API задачи для quest engine (gameplay-service).
  
