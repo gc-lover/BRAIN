@@ -17,12 +17,12 @@
 
 ## API Tasks Status
 
-- **Status:** not_created
-- **Suggested tasks:**
-  - API-TASK-CL-001: `api/v1/world/cities/population` — расчёт и пересчёт конфигураций города.
-  - API-TASK-CL-002: `api/v1/social/npc/schedules` — выдача расписаний и профилей NPC по районам.
-  - API-TASK-CL-003: `api/v1/economy/districts/infrastructure` — мониторинг инфраструктуры и SLA загрузки.
-- **Last Updated:** 2025-11-08 09:35
+- **Status:** created
+- **Tasks:**
+  - API-TASK-314: api/v1/world/cities/population.yaml (2025-11-08)
+  - API-TASK-315: api/v1/social/npc/schedules.yaml (2025-11-08)
+  - API-TASK-316: api/v1/economy/districts/infrastructure.yaml (2025-11-08)
+- **Last Updated:** 2025-11-08 09:51
 
 ---
 

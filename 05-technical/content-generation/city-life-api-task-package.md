@@ -7,6 +7,16 @@
 
 # City Life API Task Package
 
+## API Tasks Status
+
+- **Status:** ready-to-create
+- **Target tasks:**
+  - API-TASK-CL-001 — world-service (`api/v1/world/cities/population.yaml`)
+  - API-TASK-CL-002 — social-service (`api/v1/social/npc/schedules.yaml`)
+  - API-TASK-CL-003 — economy-service (`api/v1/economy/districts/infrastructure.yaml`)
+  - API-TASK-CL-004 — gameplay-service (`api/v1/gameplay/city-activity.yaml`)
+- **Last Updated:** 2025-11-08 09:37
+
 ## Финальные baseline и культурные рамки
 
 | Район | Население (лор) | Baseline `populationTarget` | Ключевые фракции | Культурные запреты |
@@ -251,4 +261,11 @@ attachments:
 - Документ: `city-life-api-task-package.md`
 - Приложения: baseline файлы, алгоритм 0.3.0, ER-схемы, payload примеры.
 - Следующий шаг: создать карточку в API-SWAGGER/tasks с ссылкой на этот пакет и указанием микросервисов world/social/economy/gameplay.
+
+---
+
+## История изменений
+
+- 2025-11-08 — финализирован пакет задач, добавлен статус готовности и список целевых API задач.
+- 2025-11-07 — первичный пакет API для City Life.
 
