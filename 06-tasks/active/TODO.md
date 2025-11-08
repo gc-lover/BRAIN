@@ -13,7 +13,7 @@
 - [ ] Auth/Characters/Progression — подготовить бриф для ДУАПИТАСК по auth README, character-management и progression-backend (2025-11-09 00:58).
 - [~] Quest Engine Package — подготовить материалы `.BRAIN/05-technical/backend/quest-engine-backend.md` для передачи в ДУАПИТАСК (2025-11-09 01:19).
 ## Medium
-- [ ] Combat Shooting — обновить материалы `.BRAIN/02-gameplay/combat/combat-shooting.md` и TTK/отдачу перед постановкой задач (2025-11-09 00:58).
+- [~] Combat Shooting — подготовить материалы `.BRAIN/02-gameplay/combat/combat-shooting.md` (TTK, отдача, импланты) для передачи в ДУАПИТАСК (2025-11-09 01:37).
 - [ ] Combat Stealth — подготовить brief по `.BRAIN/02-gameplay/combat/combat-stealth.md` (каналы обнаружения, импланты) для ДУАПИТАСК (2025-11-09 01:22).
 - [ ] Combat Abilities — подготовить brief по `.BRAIN/02-gameplay/combat/combat-abilities.md` (источники, ранги, ограничения) для ДУАПИТАСК (2025-11-09 01:22).
 - [ ] Combat D&D Core — зафиксировать требования по `.BRAIN/02-gameplay/combat/combat-dnd-core.md` и согласовать структуру API (`api/v1/gameplay/combat/dnd-core.yaml`) (2025-11-09 01:22).

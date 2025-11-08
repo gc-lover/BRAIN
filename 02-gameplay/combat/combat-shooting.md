@@ -1,8 +1,8 @@
 ﻿# Боевая система - Стрельба и основы боя
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:15
-**api-readiness-notes:** Перепроверено 2025-11-09 01:15. Документ фиксирует TTK, отдачу, имплант-модификаторы и боевые сценарии; TODO по тонкой настройке отдачи не блокирует задачи.
+**api-readiness-check-date:** 2025-11-09 01:37
+**api-readiness-notes:** Перепроверено 2025-11-09 01:37. Документ фиксирует TTK, отдачу, имплант-модификаторы и боевые сценарии; TODO по тонкой настройке отдачи не блокирует задачи.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
@@ -15,7 +15,7 @@
 ---
 
 - **Status:** approved
-- **Last Updated:** 2025-11-09 01:15
+- **Last Updated:** 2025-11-09 01:37
 ---
 
 

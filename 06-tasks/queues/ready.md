@@ -30,13 +30,13 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:15 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2, api/v1/gameplay/combat/combos-synergies.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: брать REST/WS backlog из `2025-11-09-combat-wave-package.md` (api/v1/gameplay/combat/ai-enemies.yaml).
+  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: подготовить пакет API задач по AI и WebSocket потокам (gameplay-service, `api/v1/gameplay/combat/ai-enemies.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: применять backlog `2025-11-09-combat-wave-package.md` (api/v1/gameplay/combat/dnd-integration-shooter.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: подготовить задания по TTK, отдаче и имплант-модификаторам стрельбы (gameplay-service, api/v1/gameplay/combat/shooting.yaml).
+  **Проверено:** 2025-11-09 01:37 — Brain Manager | Следующий шаг: подготовить REST/WS пакет по TTK, отдаче и имплант-модификаторам (gameplay-service, `api/v1/gameplay/combat/shooting.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
   **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: сформировать задачи для экстрактшутер механик (gameplay-service, api/v1/gameplay/combat/extraction.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
