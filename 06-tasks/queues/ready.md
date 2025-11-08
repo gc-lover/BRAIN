@@ -34,13 +34,13 @@
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: применять backlog `2025-11-09-combat-wave-package.md` (api/v1/gameplay/combat/dnd-integration-shooter.yaml).
+  **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: подготовить пакет API задач по гибридным D&D проверкам (gameplay-service, `api/v1/gameplay/combat/dnd-integration-shooter.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:37 — Brain Manager | Следующий шаг: подготовить REST/WS пакет по TTK, отдаче и имплант-модификаторам (gameplay-service, `api/v1/gameplay/combat/shooting.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
-  **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: сформировать задачи для экстрактшутер механик (gameplay-service, api/v1/gameplay/combat/extraction.yaml).
+  **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать пакет API задач по экстракт-зонам (gameplay-service, `api/v1/gameplay/combat/extraction.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: сформировать задания на сетевой хакерский слой (gameplay-service, api/v1/gameplay/combat/hacking/networks.yaml).
+  **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать API задачи на сетевой хакерский слой (gameplay-service, `api/v1/gameplay/combat/hacking/networks.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:28 — Brain Manager | Следующий шаг: подготовить задачи по интеграции хакерства в бою (gameplay-service, api/v1/gameplay/combat/hacking/combat-integration.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
@@ -48,7 +48,7 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
   **Проверено:** 2025-11-09 01:42 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по системе боевых способностей (gameplay-service, `api/v1/gameplay/combat/abilities.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service, api/v1/gameplay/combat/dnd-core.yaml).
+  **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по ядру D&D проверок (gameplay-service, `api/v1/gameplay/combat/dnd-core.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:39 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по скрытности и обнаружению (gameplay-service, `api/v1/gameplay/combat/stealth.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  

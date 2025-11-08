@@ -1,8 +1,8 @@
 ﻿# Боевая система - Экстрактшутер механики
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:15
-**api-readiness-notes:** Перепроверено 2025-11-09 01:15. Документ готов к созданию API задач: типы лута, редкость, источники, динамика зон, страховка/восстановление (TODO не блокирует API) (v1.3.0).
+**api-readiness-check-date:** 2025-11-09 01:44
+**api-readiness-notes:** Перепроверено 2025-11-09 01:44. Типы лута, рисковые уровни, страховка/восстановление готовы для формирования пакета API задач (v1.3.0).
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
@@ -15,7 +15,7 @@
 ---
 
 - **Status:** approved
-- **Last Updated:** 2025-11-09 01:15
+- **Last Updated:** 2025-11-09 01:44
 ---
 
 
