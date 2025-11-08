@@ -20,7 +20,7 @@
 - `combat-dnd-core.md` — v1.0.0, `ready`, покрывает DC, модификаторы, преимущества/помехи, целевой каталог `api/v1/gameplay/combat/dnd-core.yaml`.
 - `combat-abilities.md` — v1.2.0, `ready`, описывает источники/типы способностей, ограничения, влияние на киберпсихоз; целевой каталог `api/v1/gameplay/combat/abilities.yaml`, модуль `modules/combat/abilities`.
 - `combat-stealth.md` — v1.1.0, `ready`, фиксирует каналы обнаружения, импланты, социальную инженерию; целевой каталог `api/v1/gameplay/combat/stealth.yaml`, модуль `modules/combat/stealth`.
-- `combat-freerun.md` — v1.1.0, `ready`, определяет паркур и боевые манёвры; целевой каталог `api/v1/gameplay/combat/freerun.yaml`, модуль `modules/combat/freerun`.
+- `combat-freerun.md` — v1.1.0, `ready`, определяет паркур и боевые манёвры; целевой каталог `api/v1/gameplay/combat/freerun.yaml`, модуль `modules/combat/movement`.
 - Дополнительные зависимости: `combat-combos-synergies.md`, `combat-extract.md`, `combat-hacking-networks.md`, `combat-hacking-combat-integration.md`, `combat-session-backend.md` — все имеют статус `ready` и учтены в очереди.
 
 ## Блокеры
