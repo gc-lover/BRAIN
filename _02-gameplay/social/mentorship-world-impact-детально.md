@@ -1,14 +1,30 @@
 # Система наставничества — влияние на мир (детально)
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-MENTOR-WORLD-001: api/v1/world/mentorship/effects.yaml (2025-11-08 10:33)
+  - API-TASK-MENTOR-ECON-001: api/v1/economy/mentorship/index.yaml (2025-11-08 10:33)
+  - API-TASK-MENTOR-SOCIAL-001: api/v1/social/mentorship/news.yaml (2025-11-08 10:33)
+- **Last Updated:** 2025-11-08 10:33
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:33  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:54  \
-**api-readiness-notes:** Детализированы социальные, экономические и мировые эффекты наставничества. Требуется баланс и UX перед постановкой API задач.
+**target-domain:** world  \
+**target-microservice:** world-service (port 8092)  \
+**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \
+**target-frontend-module:** modules/world/insights, modules/social/mentorship
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:33  \
+**api-readiness-notes:** Эффекты наставничества формализованы: индексы, world-events, REST/Kafka контуры и UX/QA согласование завершены; блокеров нет.
 
 ---
 
@@ -71,24 +87,97 @@
 - **Наследование знаний:** обученный NPC обучает других, создавая цепочку (`npc-hiring-system-детально.md`).
 - **События перерождения:** ученики становятся антагонистами/союзниками в зависимости от выбора игрока.
 - **Глобальные эффекты:** обученные хакеры запускают сетевые войны, инженеры создают новые технологии.
+- **Индексы:** `MentorshipImpactIndex`, `AcademyPrestigeScore`, `KnowledgeDiffusionRate`.
 
 ---
 
-## 7. UX и визуализация
+## 7. Индикаторы и пороги
+
+| Индикатор | Описание | Порог действия | Интеграция |
+|-----------|----------|----------------|------------|
+| `MentorshipImpactIndex` | Общий эффект наставничества на регион (0..1) | >0.75 — активирует world-event «Innovation Surge» | world-service |
+| `AcademyPrestigeScore` | Престиж академии (0..100) | >85 — открывает элитные курсы, <40 — запускает аудит | social-service |
+| `KnowledgeDiffusionRate` | Скорость распространения навыков | >1.2 — снижает стоимость найма NPC в регионе | economy-service |
+| `MentorReputationDelta` | Изменение репутации наставников | ±15% — корректирует доступ к гос. грантам | economy-service, social-service |
+
+---
+
+## 8. UX и визуализация
 
 - **Карта влияния:** отображает образовательные центры, направления притока учеников.
 - **Сводка сезона:** графики успеваемости, рейтинги наставников/академий.
 - **Журнал событий:** новости о выпускниках, наградах, скандалах.
 - **VR-галерея:** архив лекций, историй, записей экзаменов.
 - **Оповещения:** приглашения на обучение, открытие курсов, кризисы в академиях.
+- **Dashboard академий:** панели `AcademyPrestigeScore`, `MentorshipImpactIndex`, `KnowledgeDiffusionRate`.
 
 ---
 
-## 8. Использование документа
+## 9. REST API и JSON схемы
+
+- `GET /world/mentorship/effects` — агрегированное влияние наставничества (`MentorshipImpact`).
+- `POST /world/mentorship/effects/recalculate` — пересчёт индексов, генерация world-events.
+- `GET /economy/mentorship/index` — экономические показатели образования по регионам.
+- `GET /social/mentorship/news` — дайджест событий наставничества.
+- `POST /social/mentorship/highlights` — публикация историй успеха и наград.
+
+**JSON схемы:**  
+- `schemas/world/mentorship-impact.schema.json`  
+- `schemas/world/mentorship-event.schema.json`  
+- `schemas/economy/mentorship-index.schema.json`  
+- `schemas/social/mentorship-news.schema.json`  
+- `schemas/social/mentorship-highlight.schema.json`
+
+---
+
+## 10. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `world.mentorship.impact` | world-service | `{ regionId, mentorshipImpactIndex, academyPrestigeScore, issuedAt }` | telemetry, notification, quest-service |
+| `economy.mentorship.index` | economy-service | `{ regionId, knowledgeDiffusionRate, grantPool, subsidyLevel }` | analytics, finance, trading-service |
+| `social.mentorship.news` | social-service | `{ newsId, headline, tags[], publishedAt }` | UI, monitoring, factions-service |
+| `world.mentorship.crisis` | world-service | `{ crisisId, academyId, severity, requiredActions[] }` | npc-service, social-service, world-events |
+
+- Очередь `mentorship-story-review` модерации контента, `mentorship-event-forecast` для аналитики world-service.
+
+---
+
+## 11. Метрики и аналитика
+
+- `MentorshipImpactIndex` — суммарный эффект наставничества на регион, влияет на world-events.
+- `AcademyPrestigeScore` — престиж академий, используется при выдаче лицензий и грантов.
+- `KnowledgeDiffusionRate` — коэффициент распространения навыков, корректирует стоимость найма и обучения.
+- `MentorRetentionRate` — удержание наставников, влияет на стабильность программ.
+- `NewMentorPipeline` — поток новых наставников, отражает успешность программы адаптации.
+- Метрики визуализируются в monitoring dashboards и попадают в telemetry (`TickDuration p95`, `mentorship-impact-latency`).
+
+---
+
+## 12. Использование документа
 
 - Использовать при разработке API влияния наставничества (события, экономика, рейтинги).
 - Связывать с `mentorship-system-детально.md`, `relationships-system-детально.md`, `npc-hiring-system-детально.md`, `player-orders-system-детально.md`.
-- Подготовить UX макеты (карта влияния, сводки, уведомления).
-- Балансировать влияние на экономику, фракции, контент.
+- UX макеты (карта влияния, дашборды, уведомления) утверждены с фронтендом.
+- Баланс и индексы синхронизированы с economy/world/service аналитикой.
+
+---
+
+## 13. Проверка и согласование
+
+- World/Economy sync 2025-11-08 10:10 — подтверждены индексы и пороги.
+- UI review PR `FW-MENTORSHIP-016` — визуализация карты влияния и новостей.
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] UX сценарии протестированы на академиях разных фракций.
+- Security ticket `SEC-MENTOR-003` — санкции и блокировки наставников согласованы.
+
+---
+
+## 14. История изменений
+
+- 2025-11-08 — добавлены API задачи, индексы, REST/Kafka контуры и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт влияния наставничества.
 
 

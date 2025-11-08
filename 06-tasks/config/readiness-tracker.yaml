@@ -528,6 +528,18 @@ documents:
       - "api/v1/social/mentorship/contracts.yaml"
       - "api/v1/world/academies/events.yaml"
 
+  - path: ".BRAIN/_02-gameplay/social/mentorship-world-impact-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:33"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Влияние наставничества: индексы, world-events, REST/Kafka контуры и UX подтверждены; world/social/economy сервисы синхронизированы."
+    issues: []
+    api_target:
+      - "api/v1/world/mentorship/effects.yaml"
+      - "api/v1/economy/mentorship/index.yaml"
+      - "api/v1/social/mentorship/news.yaml"
+
   - path: ".BRAIN/02-gameplay/social/family-relationships-system.md"
     status: "ready"
     version: "1.1.0"
