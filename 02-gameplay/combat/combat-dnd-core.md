@@ -4,14 +4,8 @@
 **api-readiness-notes:** Перепроверено 2025-11-09 01:01. D&D система проверок (d20/d100, DC, модификаторы, критические случаи, атрибуты, навыки, преимущества/помехи) готова для API задач.
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/mechanics
----
-
----
-
-- **Status:** approved
-- **Last Updated:** 2025-11-09 01:01
 ---
 
 # D&D — Ядро системы проверок (кубики и DC)

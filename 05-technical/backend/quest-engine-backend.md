@@ -1,17 +1,21 @@
-﻿---
+﻿# Quest Engine Backend — бэкенд движка квестов
+
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:59
-**api-readiness-notes:** Quest Engine backend - state machine, dialogue execution, skill checks и branching; перепроверено 2025-11-09 00:59, готово к постановке задач gameplay-service.
+**api-readiness-check-date:** 2025-11-09 01:03  
+**api-readiness-notes:** Quest Engine backend перепроверен 2025-11-09 01:03: state machine, диалоговый движок, D&D skill checks и branching готовы к постановке задач для gameplay-service.
+
+**target-domain:** gameplay-quests  
+**target-microservice:** gameplay-service (port 8083)  
+**target-frontend-module:** modules/quests
+
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-08 18:15  
+**Приоритет:** критический (MVP блокер)  
+**Ответственный:** Brain Manager
+
 ---
----
-
-- **Status:** queued
-- **Last Updated:** 2025-11-08 18:15
----
-
-
-
-# Quest Engine Backend - Backend движок квестов
 
 **Статус:** approved  
 **Версия:** 1.0.0  
