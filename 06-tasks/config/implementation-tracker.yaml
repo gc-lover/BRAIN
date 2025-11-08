@@ -187,6 +187,48 @@ implementations:
       status: "not_started"
       priority: "CRITICAL"
       notes: "UI общего хранилища, управление расширениями и фильтрами предметов."
+
+  - api_path: "api/v1/loot/loot-generation.yaml"
+    task_id: "API-TASK-129"
+    brain_source: ".BRAIN/05-technical/backend/loot-system/README.md"
+    api_status: "completed"
+    api_completed: "2025-11-08 18:55"
+    backend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Реализовать генерацию по весовым таблицам, регистрацию drop-событий и публикацию эвентов."
+    frontend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Комбат UI: отобразить дроп, seed-based результаты, гарантированные награды."
+
+  - api_path: "api/v1/loot/loot-distribution.yaml"
+    task_id: "API-TASK-129"
+    brain_source: ".BRAIN/05-technical/backend/loot-system/part2-advanced-loot.md"
+    api_status: "completed"
+    api_completed: "2025-11-08 18:55"
+    backend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "LootDistributionService: personal/shared/master looter, nearby поиск, авто-лут правила."
+    frontend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Интерфейс drop-модалки, история, отображение eligible игроков."
+
+  - api_path: "api/v1/loot/loot-rolls.yaml"
+    task_id: "API-TASK-129"
+    brain_source: ".BRAIN/05-technical/backend/loot-system/part2-advanced-loot.md"
+    api_status: "completed"
+    api_completed: "2025-11-08 18:55"
+    backend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "RollManager: таймер 60с, need/greed/pass приоритеты, события победителей."
+    frontend:
+      status: "not_started"
+      priority: "CRITICAL"
+      notes: "Roll UI с таймером, кнопки need/greed/pass, отображение результата."
   
   - api_path: "api/v1/locations/locations.yaml"
     task_id: "API-TASK-007"
