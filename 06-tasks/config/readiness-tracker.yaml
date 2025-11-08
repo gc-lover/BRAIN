@@ -461,6 +461,41 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-anomalous-easter-scenarios.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 16:51"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Календарь аномалий 2077–2093: расписания, REST и Kafka контуры, награды и мониторинг для world/social/economy сервисов."
+    issues: []
+    api_target:
+      - "api/v1/world/events/anomalies.yaml"
+      - "api/v1/social/anomalies/participants.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-crossculture-easter-atlas.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 16:51"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Сезон Metropolis Threads: граффити, павильон, рынок, фестиваль и музей с расписаниями, экономикой и аналитикой. Готово к API задачам world/economy/social."
+    issues: []
+    api_target:
+      - "api/v1/world/events/crossculture-atlas.yaml"
+      - "api/v1/economy/crossculture/capsules.yaml"
+      - "api/v1/social/crossculture/museum.yaml"
+
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-subliminal-easter-network.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 16:51"
+    checker: "AI Agent (Brain Manager)"
+    notes: "Resonance Underlayer: HUD сигналы, почта, билборды, подкасты и анти-спам `/knock` с API, Kafka и схемами данных."
+    issues: []
+    api_target:
+      - "api/v1/social/subliminal-network.yaml"
+      - "api/v1/world/subliminal/billboards.yaml"
+      - "api/v1/audio/subliminal/podcasts.yaml"
+
   # Служебные файлы
   - path: ".BRAIN/МЕНЕДЖЕР.MD"
     status: "not-applicable"

@@ -9,6 +9,13 @@
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-08 12:20  
 **api-readiness-notes:** Сервисы и порты синхронизированы с текущей микросервисной архитектурой и Production URL.
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-360: api/v1/admin/architecture/mvp-backend.yaml (2025-11-08)
+- Last Updated: 2025-11-08 21:25
+---
 
 ---
 

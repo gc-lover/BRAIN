@@ -9,6 +9,15 @@
 **api-readiness-notes:** Комплексная матрица AI для всех категорий NPC. WebSocket обновлён на gateway `wss://api.necp.game/v1/gameplay/raid/{raidId}`; документ содержит архитектуру поведения, REST/WS контракты и сюжетную интеграцию.
 ---
 
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-360: api/v1/gameplay/combat/ai-enemies.yaml (2025-11-08 14:45) — матрица AI v1.1.0
+  - API-TASK-047: api/v1/gameplay/combat/ai-enemies.yaml (2025-11-06 21:35) — базовая спецификация (completed)
+- **Last Updated:** 2025-11-08 14:45
+---
+
 # COMBAT AI ENEMIES MATRIX
 
 ## 1. Архитектура AI
