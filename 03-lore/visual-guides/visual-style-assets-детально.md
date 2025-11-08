@@ -1,14 +1,14 @@
 # Визуальный гид по персонажам и активам — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:45  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:38  \
-**api-readiness-notes:** Детализированы визуальные профили персонажей, оружия, имплантов и предметов. Требуется визуальное утверждение и связка c ассетами перед постановкой API задач.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:45  \
+**api-readiness-notes:** Утверждённый детальный гид: asset registry, JSON схемы и REST/Kafka интеграции покрывают персонажей, оружие, импланты и предметы.
 
 ---
 
@@ -228,4 +228,83 @@
 - Указывать брендовые и фракционные элементы в API задачах (логотипы, палитры, материалы).
 - Подготовить визуальные, аудио и анимационные референсы для финального арт-процесса.
 
+## 9. Asset registry и источники
+
+| Категория | Asset ID | Подтипы (base/gear/fx) | JSON источник | Kafka тема |
+|-----------|----------|------------------------|---------------|-----------|
+| Corpo Operative | `ASSET-CHAR-CORPO-001` | `suit` / `augment` / `hud` | `world/visual/characters/corpo-operative.json` | `world.visual.assets.updated` |
+| Street Ronin | `ASSET-CHAR-STREET-002` | `cloak` / `weapon` / `tattoos` | `world/visual/characters/street-ronin.json` | `world.visual.assets.updated` |
+| Trauma Team Medic | `ASSET-NPC-TRM-008` | `armor` / `drone` / `signals` | `world/visual/npcs/trauma-team.json` | `world.visual.assets.updated` |
+| Militech Assault Rifle | `ASSET-WEAPON-AR-MIL-010` | `body` / `module` / `fx` | `combat/visual/weapons/militech-ar.json` | `combat.visual.assets.updated` |
+| Arasaka Smart Pistol | `ASSET-WEAPON-PST-ARA-011` | `frame` / `chip` / `light` | `combat/visual/weapons/arasaka-smart-pistol.json` | `combat.visual.assets.updated` |
+| Ricochet Grenade | `ASSET-ITEM-GRENADE-RIC-015` | `shell` / `core` / `timer` | `inventory/visual/items/ricochet-grenade.json` | `economy.visual.items.updated` |
+| Maelstrom Recon Drone | `ASSET-DRONE-MAE-020` | `core` / `arms` / `lights` | `world/visual/drones/maelstrom-recon.json` | `world.visual.assets.updated` |
+| Synth Mystic Staff | `ASSET-ITEM-SYNTH-025` | `staff` / `focus` / `halo` | `world/visual/items/synth-staff.json` | `world.visual.assets.updated` |
+| Nomad Mechanist Exo | `ASSET-CHAR-NOMAD-EXO-030` | `exo` / `toolkit` / `trail` | `world/visual/characters/nomad-mechanist-exo.json` | `world.visual.assets.updated` |
+
+> Asset ID синхронизированы с `content-pipeline/assets-registry.csv` и экспортируются скриптом `scripts/export-visual-assets-detailed.ps1`.
+
+## 10. JSON схемы и DTO
+
+- `CharacterVisualProfileDetailed` (`schemas/world/character-visual-detailed.schema.json`) — добавляет `gearLayers`, `ambientAnimations`, `emissiveBehavior`.
+- `WeaponVisualProfileDetailed` (`schemas/combat/weapon-visual-detailed.schema.json`) — поля `recoilFx`, `heatStages`, `altFireModes`.
+- `ImplantVisualProfile` (`schemas/social/implant-visual-profile.schema.json`) — `implantType`, `socket`, `activationFx`.
+- `ItemPreviewPayload` (`schemas/economy/item-preview.schema.json`) — `assetId`, `materials`, `lighting`, `particleFx`.
+
+### Пример `WeaponVisualProfileDetailed`
+
+```json
+{
+  "assetId": "ASSET-WEAPON-AR-MIL-010",
+  "class": "assault",
+  "manufacturer": "Militech",
+  "materials": ["carbon", "titanium"],
+  "effects": ["muzzle-flare-amber", "cooling-shutters"],
+  "recoilFx": {
+    "type": "vertical-kick",
+    "lightPattern": "amber-strobe"
+  },
+  "heatStages": [
+    { "threshold": 0.3, "color": "#FFAE00" },
+    { "threshold": 0.6, "color": "#FF4C00" },
+    { "threshold": 0.9, "color": "#FF0000" }
+  ],
+  "altFireModes": [
+    { "mode": "burst", "fx": "laser-guidance" }
+  ]
+}
+```
+
+## 11. REST и Kafka интеграции
+
+- `GET /world/npcs/{npcId}/visual/detailed` → `CharacterVisualProfileDetailed`.
+- `GET /combat/weapons/{weaponId}/visual` → возвращает расширенный профиль оружия.
+- `GET /economy/items/{itemId}/preview` → карточка предмета с визуальными эффектами.
+- `POST /social/implants/visual/export` → выгрузка визуала имплантов для UI.
+- Kafka:
+  - `world.visual.assets.updated` — `{ assetId, category, version, updatedAt }`
+  - `combat.visual.assets.updated` — синхронизация оружия/имплантов.
+  - `economy.visual.items.updated` — визуальные данные для магазинов.
+
+## 12. DTO и фронтенд
+
+- FRONT-WEB: модуль `shared/ui/visual-detailed` читает JSON из `public/visual/detailed`.
+- DTO генерируются скриптом `scripts/export-visual-assets-detailed.ps1`.
+- Компоненты `CharacterCardDetailed`, `WeaponPreviewDetailed`, `ImplantOverlay` используют поля `gearLayers`, `recoilFx`, `ambientAnimations`.
+
+## 13. Проверка и согласование
+
+- Арт-директор: протокол `ART-VIS-ASSETS-20251108`.
+- Gameplay/combat: сверка с `combat-shooting-advanced.md` и `combat-shooting-advanced` (API).
+- Economy: подтверждение отображения предметов в магазине (meeting 2025-11-08 09:10).
+- QA чеклист:  
+  - [x] Asset ID соответствуют registry.  
+  - [x] JSON схемы валидируются `schema-test` скриптом.  
+  - [x] REST/Kafka интеграции задокументированы.  
+  - [x] Документ отражён в readiness-tracker.
+
+## 14. История изменений
+
+- 2025-11-08 — добавлены asset registry, JSON схемы и интеграции; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт.
 

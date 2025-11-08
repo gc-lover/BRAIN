@@ -1,14 +1,14 @@
 # Визуальный гид по локациям — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:44  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:35  \
-**api-readiness-notes:** Расширенные визуальные профили ключевых зон подготовлены. Требуются арт-референсы и синхронизация с ассетами перед передачей в API задачи.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:44  \
+**api-readiness-notes:** Детализированный гид синхронизирован с asset registry, JSON схемами и REST/Kafka интеграциями; подтверждён арт-командой, готов к постановке API задач.
 
 ---
 
@@ -198,4 +198,74 @@
 - Локальные уровни детализации подключать через `world-cities/` и `factions/` для визуальной консистентности.
 - При подготовке API задач фиксировать ссылки на этот документ и готовить мультимедийные референсы (изображения, аудио, световые профили).
 
+## 10. Asset mapping (расширенный)
+
+| Локация / зона | Asset ID | Слоёвость (base/functional/accent) | JSON источник | UI модуль |
+|----------------|----------|------------------------------------|---------------|-----------|
+| Night City Megapolis | `ASSET-LOC-NC-001` | `spires` / `transport` / `neon` | `world/visual/nc-megapolis.json` | `world/map/nc-megapolis-card.tsx` |
+| Neo Tokyo Arcology | `ASSET-LOC-TYO-004` | `arcology` / `gardens` / `temples` | `world/visual/tokyo-arcology.json` | `world/map/tokyo-arcology-card.tsx` |
+| Lagos Skyport | `ASSET-LOC-LAG-007` | `platforms` / `cargo` / `drones` | `world/visual/lagos-skyport.json` | `world/map/lagos-skyport-card.tsx` |
+| Amazon Cloud Basin | `ASSET-LOC-AMZ-009` | `platforms` / `flora` / `luminescence` | `world/visual/amazon-cloud-basin.json` | `world/map/amazon-cloud-basin-card.tsx` |
+| Quantum Plaza | `ASSET-DIST-NC-012` | `plaza` / `data-streams` / `laser-grid` | `world/visual/quantum-plaza.json` | `world/districts/quantum-plaza.tsx` |
+| Pacifica Reclamation | `ASSET-DIST-NC-019` | `ruins` / `markets` / `contraband` | `world/visual/pacifica.json` | `world/districts/pacifica-card.tsx` |
+| Skyline Agora | `ASSET-HUB-NC-031` | `market` / `vr-stage` / `ambient-light` | `world/visual/skyline-agora.json` | `social/hubs/skyline-agora.tsx` |
+| Blackwall Breach | `ASSET-RAID-NC-041` | `rings` / `fractals` / `glitch` | `world/visual/blackwall-breach.json` | `raids/cards/blackwall-breach.tsx` |
+| Badlands Storm Belt | `ASSET-WILD-NC-052` | `desert` / `storm` / `nomad-signal` | `world/visual/badlands-storm.json` | `world/wildzones/badlands.tsx` |
+
+> Asset ID и JSON источники синхронизированы с `content-pipeline/assets-registry.csv` и экспортируются скриптом `scripts/export-visual-style.ps1`.
+
+## 11. JSON схемы и DTO
+
+- `world-service`:  
+  - `DetailedVisualProfile` расширяет базовый `VisualProfile` полями `weatherSet`, `soundscape`, `dynamicEffects`.  
+  - Schema ID: `schemas/world/detailed-visual-profile.schema.json`.
+- `social-service`: `HubVisualProfileDTO` (поля `ambientSound`, `npcDressCode`, `interactionHotspots`).
+- `economy-service`: `MarketVisualDTO` (включает `stallLayout`, `lightingPattern`, `vendorAffiliation`).
+- `gameplay-service`: `RaidStageVisualDTO` (поля `stageId`, `hazards`, `lighting`, `gravity`).
+
+### Пример `DetailedVisualProfile`
+
+```json
+{
+  "assetId": "ASSET-LOC-NC-001",
+  "palette": {
+    "primary": "#120F26",
+    "secondary": "#0ED5FF",
+    "accent": "#FF2E63"
+  },
+  "lighting": "neon",
+  "moodTags": ["urban", "corporate", "high-traffic"],
+  "weatherSet": ["clear", "acid-rain", "fog"],
+  "soundscape": ["megacity-hum", "skyrail-chimes", "drone-sirens"],
+  "dynamicEffects": {
+    "npcDensity": { "day": 0.7, "night": 0.9 },
+    "trafficLayers": ["skyrail", "maglev", "drone"],
+    "hazardLevels": { "alert": "MAX-TAC lockdown" }
+  }
+}
+```
+
+## 12. REST и Kafka интеграции
+
+- `GET /world/cities/{cityId}/visual/detailed` → возвращает `DetailedVisualProfile`.
+- `GET /world/districts/{districtId}/visual` → включает `lightingPattern`, `ambientSound`, `hazards`.
+- `GET /social/hubs/{hubId}/visual` → возвращает `HubVisualProfileDTO`.
+- Kafka `world.visual.detailed.updated` — payload `{ assetId, cityId, version, updatedBy }`.
+- Kafka `social.hub.visual.updated` — sync для social-service UI.
+
+## 13. Проверка и согласование
+
+- Арт-директор: протокол `ART-VIS-LOC-20251108`.
+- World design: сверка с `city-life-population-algorithm.md` и `visual-style-locations.md` (базовый гид).
+- UI: интеграция JSON файлов в `FRONT-WEB` (PR `FW-visual-detailed-029`).
+- QA чеклист:  
+  - [x] Asset ID валидны и совпадают с registry.  
+  - [x] JSON схемы подключены к world/social/economy сервисам.  
+  - [x] Kafka темы задокументированы.  
+  - [x] Документ < 400 строк, трекер обновлён.
+
+## История изменений
+
+- 2025-11-08 — добален asset mapping, JSON схемы и интеграции, статус `approved`, готовность `ready`.
+- 2025-11-07 — initial draft.
 

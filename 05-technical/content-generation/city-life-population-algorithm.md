@@ -20,9 +20,9 @@
 - **Status:** in_progress
 - **Tasks:**
   - API-TASK-314: api/v1/world/cities/population.yaml (2025-11-08, готово +schemas, +events)
-  - API-TASK-315: api/v1/social/npc/schedules.yaml (в работе)
+  - API-TASK-315: api/v1/social/npc/schedules.yaml (2025-11-08, готово +schemas)
   - API-TASK-316: api/v1/economy/districts/infrastructure.yaml (в работе)
-- **Last Updated:** 2025-11-08 09:55
+- **Last Updated:** 2025-11-08 09:59
 
 ---
 

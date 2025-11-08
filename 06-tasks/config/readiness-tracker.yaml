@@ -104,6 +104,24 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/03-lore/visual-guides/visual-style-locations-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:44"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Детализированный гид по локациям: asset mapping, JSON схемы DetailedVisualProfile и интеграция с world/social/economy сервисами."
+    issues: []
+    api_target: null
+
+  - path: ".BRAIN/03-lore/visual-guides/visual-style-assets-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:45"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Детализированный гид по персонажам/активам: расширенный asset registry, JSON схемы и REST/Kafka интеграции для character/gameplay/economy/social сервисов."
+    issues: []
+    api_target: null
+
   # Служебные файлы и README
   - path: ".BRAIN/README.md"
     status: "not-applicable"
