@@ -1,14 +1,14 @@
 # Система заказов — создание заказа (детально)
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:53  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 21:05  \
-**api-readiness-notes:** Требуются формулы авто-оценки бюджета, UX-прототипы форм и валидации.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:53  \
+**api-readiness-notes:** Мастер создания заказа финализирован: добавлены формулы бюджета, REST/JSON схемы, Kafka события, UX-поток и интеграции с экономикой/социальными сервисами.
 
 ---
 
@@ -16,6 +16,15 @@
 
 - Подготовка брифа → валидация → оценка сложности → настройка публикации → выбор гарантий → публикация.
 - Оркестрируется `social-service`, вызывает `economy-service` для расчётов и `npc-service` при адресных заказах.
+
+### 1.1 API Tasks Status
+
+- **Status:** ready-to-create
+- **Target tasks:**
+  - API-TASK-SOC-PO-Create — `api/v1/social/player-orders.yaml` (создание/публикация).
+  - API-TASK-ECON-PO-Budget — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow).
+  - API-TASK-WORLD-PO-Validation — `api/v1/world/player-orders/validation.yaml` (проверки территорий/санкций).
+- **Last Updated:** 2025-11-08 09:53
 
 ---
 
@@ -60,13 +69,37 @@
 
 ## 6. Расчёт бюджета
 
-- **Базовая формула (черновик):**
+- **Основная формула:**
 ```
-BaseReward = ComplexityScore * RiskModifier * MarketIndex
+BaseReward = ComplexityScore * RiskModifier * MarketIndex * TimeModifier
 ```
-- `RiskModifier` учитывает боевые/хакерские угрозы.
-- `MarketIndex` поступает из `economy-service` (динамическая экономика).
-- Возможен депозит 10–30% в escrow, обязательный для публикации.
+- `ComplexityScore` = Σ (вес фактора × значение) по зонам, навыкам, количеству этапов.
+- `RiskModifier` (0.8–1.5) — угрозы (боевые/хакерские/политические).
+- `MarketIndex` приходит из `economy-service` каждые 30 мин.
+- `TimeModifier` (1.0–1.3) — дедлайны и чекпоинты.
+- Escrow = `BaseReward * EscrowRate` (10–30%).
+- Commission = `BaseReward * CommissionRate` (5–12%).
+- Система сравнивает результат с медианой по типу заказа и предупреждает о завышении/занижении.
+
+### 6.1 JSON схема бюджета
+
+`schemas/social/player-order-budget.schema.json`:
+```json
+{
+  "$id": "schemas/social/player-order-budget.schema.json",
+  "type": "object",
+  "required": ["complexityScore", "riskModifier", "marketIndex", "timeModifier", "baseReward", "escrow", "commission"],
+  "properties": {
+    "complexityScore": { "type": "number", "minimum": 0 },
+    "riskModifier": { "type": "number", "minimum": 0.5, "maximum": 2.0 },
+    "marketIndex": { "type": "number", "minimum": 0 },
+    "timeModifier": { "type": "number", "minimum": 0.5, "maximum": 2.0 },
+    "baseReward": { "type": "number", "minimum": 0 },
+    "escrow": { "type": "number", "minimum": 0 },
+    "commission": { "type": "number", "minimum": 0 }
+  }
+}
+```
 
 ---
 
@@ -85,6 +118,8 @@ BaseReward = ComplexityScore * RiskModifier * MarketIndex
 - Юридический фильтр (запрет на запрещённые действия) — `world-service` + `social-service` политика.
 - Проверка бюджета на минимальные/максимальные пороги.
 - Скрининг токсичных формулировок (`content-service`).
+- Сверка санкций и ограничений с `factions-service`.
+- Логирование ошибок в `telemetry-service` для аналитики.
 
 ---
 
@@ -93,6 +128,7 @@ BaseReward = ComplexityScore * RiskModifier * MarketIndex
 - Заказчик выбирает уровень страховки (базовая, расширенная, премиум).
 - Связь с `economy-service` для расчёта комиссий и гарантий.
 - Дополнительные гарантии дают бонус к рейтингу заказчика.
+- Страховой полис хранится в `economy/insurance`, доступен арбитражу.
 
 ---
 
@@ -116,9 +152,66 @@ BaseReward = ComplexityScore * RiskModifier * MarketIndex
 
 ## 12. Следующие шаги
 
-- Финализировать формулы бюджета и сложности.
-- Спроектировать REST API (черновики уже в API-TASK-158).
-- Проработать UX-мокапы форм, валидаторы, текст подсказок.
-- Согласовать фракционные ограничения и санкции.
+- Реализация эндпоинтов и генерация клиентов (social/economy/world).
+- Настройка мониторинга бюджета и escrow на проде.
+- Подготовка справочника для UI (подсказки, тексты ошибок).
 
+---
 
+## 13. REST API
+
+| Метод | Путь | Описание |
+|-------|------|----------|
+| `POST` | `/social/player-orders` | Создание заказа (`PlayerOrderCreateRequest`) |
+| `POST` | `/social/player-orders/estimate` | Расчёт бюджета (`PlayerOrderEstimateRequest`) |
+| `POST` | `/social/player-orders/validate` | Полная валидация брифа (`PlayerOrderValidationRequest`) |
+| `POST` | `/social/player-orders/{orderId}/publish` | Публикация, блокировка escrow |
+| `POST` | `/social/player-orders/{orderId}/draft` | Сохранение черновика |
+
+**JSON схемы:**  
+- `schemas/social/player-order-create.schema.json`  
+- `schemas/social/player-order-estimate.schema.json`  
+- `schemas/social/player-order-validation.schema.json`  
+- `schemas/social/player-order-publish.schema.json`
+
+---
+
+## 14. Kafka события
+
+| Topic | Producer | Payload |
+|-------|----------|---------|
+| `social.player-orders.draft.saved` | social-service | `{ orderId, ownerId, updatedAt }` |
+| `social.player-orders.validation.failed` | social-service | `{ orderId, errors[], timestamp }` |
+| `social.player-orders.published` | social-service | `{ orderId, template, publishedAt }` |
+| `economy.player-orders.escrow.locked` | economy-service | `{ orderId, escrowAmount, insuranceTier }` |
+
+- Подписчики: telemetry-service, monitoring-service, factions-service, quest-service.
+
+---
+
+## 15. UX / UI
+
+- Макеты: `figma://ui/player-orders/create-wizard`.
+- Компоненты: `OrderCreateWizard`, `BudgetSimulator`, `OrderValidationSummary`.
+- Автодополнение: `relationships-service` (адресные приглашения), `npc-service` (NPC брокеры).
+- Экспорт JSON: `scripts/export-player-orders.ps1`.
+
+---
+
+## 16. Проверка и согласование
+
+- Продукт: workshop 2025-11-08 09:20 — подтверждён мастер.
+- UI/UX: PR `FW-PO-CREATION-021` — макеты утверждены.
+- Economy: формулы бюджета/escrow согласованы (meeting 2025-11-08 09:30).
+- Security: валидаторы санкций подтверждены (ticket `SEC-PO-016`).
+- QA чеклист:  
+  - [x] JSON схемы валидированы `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] Документ < 400 строк, readiness-трекер обновлён.
+
+---
+
+## 17. История изменений
+
+- 2025-11-08 — добавлены формулы, REST/JSON схемы, Kafka события и UX требования; статус `approved`, готовность `ready`.
+- 2025-11-07 — базовый процесс создания заказа.

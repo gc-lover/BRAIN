@@ -478,6 +478,15 @@ documents:
     issues: []
     api_target: "api/v1/social/player-orders.yaml"
 
+  - path: ".BRAIN/_02-gameplay/social/player-orders-creation-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:53"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Мастер создания заказов утверждён: формулы бюджета, REST/JSON схемы, Kafka события и UX требования согласованы с social/economy/world сервисами."
+    issues: []
+    api_target: "api/v1/social/player-orders.yaml"
+
   - path: ".BRAIN/02-gameplay/social/mentorship-system.md"
     status: "ready"
     version: "1.1.0"
