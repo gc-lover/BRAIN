@@ -147,12 +147,11 @@ implementations:
     task_id: "API-TASK-006"
     api_status: "completed"
     backend:
-      status: "completed"
+      status: "in_progress"
       started: "2025-11-06 10:00"
-      completed: "2025-11-06 23:25"
       agent: "Backend Agent"
-      commit: "06b79a9"
-      notes: "InventoryController - управление инвентарем"
+      commit: ""
+      notes: "InventoryServiceImpl пока содержит заглушки, требуется реализация операций с инвентарём. Задача: BACK-TASK-INV-IMPLEMENT (CRUD слотов, миграции по складам)."
     frontend:
       status: "not_started"
   
@@ -349,26 +348,6 @@ implementations:
   # === NEW CRITICAL SYSTEMS (2025-11-07 23:45) ===
   # MVP Блокеры
 
-  - api_path: "api/v1/auth/authentication.yaml"
-    task_id: "API-TASK-126"
-    api_status: "completed"
-    backend:
-      status: "in_progress"
-      started: "2025-11-08 00:30"
-      agent: "Backend Agent"
-    frontend:
-      status: "not_started"
-
-  - api_path: "api/v1/players/player-management.yaml"
-    task_id: "API-TASK-127"
-    api_status: "completed"
-    backend:
-      status: "in_progress"
-      started: "2025-11-08 00:30"
-      agent: "Backend Agent"
-    frontend:
-      status: "not_started"
-
   - api_path: "api/v1/inventory/inventory-management.yaml"
     task_id: "API-TASK-128"
     api_status: "completed"
@@ -449,13 +428,13 @@ implementations:
    brain_source: ".BRAIN/05-technical/backend/authentication-authorization-system.md"
    api_status: "completed"
    backend:
-     status: "completed"
-     started: "2025-11-06 23:25"
-     completed: "2025-11-06 23:52"
+    status: "completed"
+    started: "2025-11-06 23:25"
+    completed: "2025-11-08 15:30"
      agent: "Backend Agent"
-     commit: "c1841ed"
+    commit: "pending"
      priority: "CRITICAL"
-     notes: "Stubs implementation: 9 endpoints, AccountEntity, migration 061. Full business logic - TODO"
+    notes: "Статус обновлён после аудита: реализована связка AuthController/AuthService с реальной бизнес-логикой. Коммит будет указан после запуска scripts/autocommit."
    frontend:
      status: "not_started"
      priority: "CRITICAL"
@@ -465,10 +444,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/player-character-management.md"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-08 08:38"
+    completed: "2025-11-08 15:35"
     agent: "Backend Agent"
+    commit: "pending"
     priority: "CRITICAL"
+    notes: "Переработан слой PlayersService: вынесены фасады, реализована логика слотов/сессий согласно контракту."
   frontend:
     status: "in_progress"
     started: "2025-11-08 07:55"
@@ -484,6 +466,7 @@ implementations:
     started: "2025-11-08 08:38"
     agent: "Backend Agent"
     priority: "CRITICAL"
+    notes: "Генерированные слои готовы, бизнес-логика перемещения предметов ожидает реализации."
   frontend:
     status: "in_progress"
     started: "2025-11-08 07:15"
@@ -495,13 +478,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/loot-system.md"
   api_status: "completed"
   backend:
-    status: "completed"
+    status: "in_progress"
     started: "2025-11-07 01:20"
-    completed: "2025-11-07 02:00"
     agent: "Backend Agent"
-    commit: "9068445"
+    commit: ""
     priority: "CRITICAL"
-    notes: "Generated from OpenAPI! LootApi, LootService, LootServiceImpl, LootController, 2 Entities, 2 Repos, migration 062. 4 endpoints. BUILD SUCCESS"
+    notes: "Сервисные классы пока содержат UnsupportedOperationException, требуется бизнес-логика добычи. Задача: BACK-TASK-LOOT-IMPLEMENT (алгоритмы выпадения, миграции для таблиц дропа)."
   frontend:
     status: "not_started"
     priority: "CRITICAL"
@@ -513,13 +495,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/trade-system.md"
   api_status: "completed"
   backend:
-    status: "completed"
+    status: "in_progress"
     started: "2025-11-07 02:00"
-    completed: "2025-11-07 02:30"
     agent: "Backend Agent"
-    commit: "62ff524"
+    commit: ""
     priority: "HIGH"
-    notes: "Generated from OpenAPI! TradeApi, TradeService, TradeServiceImpl, TradeController, TradeSessionEntity, TradeSessionRepo, migration 063. 5 endpoints. BUILD SUCCESS"
+    notes: "Контроллеры и сервисы содержат заглушки, требуется реализация торговых сценариев. Задача: BACK-TASK-TRADE-IMPLEMENT (торговые сессии, миграции по сделкам)."
   frontend:
     status: "not_started"
     priority: "HIGH"
@@ -529,13 +510,12 @@ implementations:
   brain_source: ".BRAIN/05-technical/backend/mail-system.md"
   api_status: "completed"
   backend:
-    status: "completed"
+    status: "in_progress"
     started: "2025-11-07 03:02"
-    completed: "2025-11-07 03:11"
     agent: "Backend Agent"
-    commit: "e562bfe"
+    commit: ""
     priority: "HIGH"
-    notes: "MailApi, MailService, MailServiceImpl, MailController, MailMessageEntity, MailMessageRepository, migration 066"
+    notes: "MailServiceImpl возвращает UnsupportedOperationException, необходима полноценная отправка писем. Задача: BACK-TASK-MAIL-IMPLEMENT (хранилище писем, миграции очередей)."
   frontend:
     status: "in_progress"
     started: "2025-11-08 00:31"
@@ -1054,10 +1034,13 @@ implementations:
   brain_source: ".BRAIN/05-technical/api-requirements/ (6 MVP documents)"
   api_status: "completed"
   backend:
-    status: "in_progress"
+    status: "completed"
     started: "2025-11-08 08:38"
+    completed: "2025-11-08 15:45"
     agent: "Backend Agent"
+    commit: "pending"
     priority: "HIGH"
+    notes: "Реализован MvpServiceImpl с фасадами, контроллер адаптирован к сгенерированному контракту. Коммит будет добавлен после scripts/autocommit."
   frontend:
     status: "completed"
     started: "2025-11-07 21:10"
