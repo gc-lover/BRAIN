@@ -22,12 +22,12 @@
 
 ### 1.1 API Tasks Status
 
-- **Status:** ready-to-create
-- **Target tasks:**
-  - API-TASK-SOC-PO-Rating — `api/v1/social/player-orders/ratings.yaml`
-  - API-TASK-SOC-PO-Reviews — `api/v1/social/player-orders/reviews.yaml`
-  - API-TASK-ECON-PO-Risk — `api/v1/economy/player-orders/risk.yaml`
-- **Last Updated:** 2025-11-08 09:55
+- **Status:** created
+- **Tasks:**
+  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-ratings-api.md) — `api/v1/social/player-orders/ratings.yaml` (рейтинги, отзывы, санкции) — created 2025-11-08 12:30.
+  - API-TASK-SOC-PO-Reviews — `api/v1/social/player-orders/reviews.yaml` (UI-friendly отзывные выборки, публичное отображение) — pending creation.
+  - API-TASK-ECON-PO-Risk — `api/v1/economy/player-orders/risk.yaml` (страхование и скоринг риска) — pending creation.
+- **Last Updated:** 2025-11-08 12:30
 
 ---
 

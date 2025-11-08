@@ -19,12 +19,12 @@
 
 ### 1.1 API Tasks Status
 
-- **Status:** in-progress
+- **Status:** created
 - **Tasks:**
-  - [API-TASK-317](../../API-SWAGGER/tasks/active/queue/task-317-player-orders-creation-api.md) — `api/v1/social/player-orders.yaml` (создание/публикация) — created 2025-11-08 12:10.
-  - API-TASK-318 — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — in progress 2025-11-08 15:20 (GPT-5 Codex).
-  - API-TASK-319 — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — in progress 2025-11-08 15:20 (GPT-5 Codex).
-- **Last Updated:** 2025-11-08 15:20
+  - [API-TASK-317](../../API-SWAGGER/tasks/active/queue/task-317-player-orders-creation-api.md) — `api/v1/social/player-orders.yaml` (создание/публикация) — queued 2025-11-08 12:10.
+  - [API-TASK-318](../../API-SWAGGER/tasks/active/queue/task-318-player-orders-budget-api.md) — `api/v1/economy/player-orders/budget.yaml` (estimate/escrow) — queued 2025-11-08 15:25.
+  - [API-TASK-319](../../API-SWAGGER/tasks/active/queue/task-319-player-orders-validation-api.md) — `api/v1/world/player-orders/validation.yaml` (territory/sanctions checks) — queued 2025-11-08 15:35.
+- **Last Updated:** 2025-11-08 15:35
 
 ---
 
