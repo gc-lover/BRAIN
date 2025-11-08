@@ -1,14 +1,30 @@
 # Система найма NPC — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-NPC-HIRE-001: api/v1/social/npc-hiring/contracts.yaml (2025-11-08 10:27)
+  - API-TASK-NPC-HIRE-002: api/v1/social/npc-hiring/workforce.yaml (2025-11-08 10:27)
+  - API-TASK-NPC-HIRE-003: api/v1/economy/npc-hiring/payroll.yaml (2025-11-08 10:27)
+- **Last Updated:** 2025-11-08 10:27
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:27  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:49  \
-**api-readiness-notes:** Детализированы роли, контракты, экономика и управление наймом NPC. Требуется баланс и согласование с экономикой/социальными системами перед постановкой API задач.
+**target-domain:** social  \
+**target-microservice:** social-service (port 8084)  \
+**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), npc-service (port 8088)  \
+**target-frontend-module:** modules/social/npc-hiring, modules/world/insights
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:27  \
+**api-readiness-notes:** Контракты, управление и экономика найма NPC согласованы: REST/Kafka контуры, UX сценарии и метрики готовы к постановке API задач.
 
 ---
 
@@ -133,7 +149,67 @@
 
 - Использовать для разработки API найма, управления, экономики.
 - Связать с `relationships-system-детально.md`, `npc-relationships-system-детально.md`, `visual-style-assets-детально.md` (визуалы NPC), `factions-overview-детально.md` (лицензии, налоги).
-- Подготовить UX макеты (биржа найма, панель управления, контракты).
-- Проработать баланс и формулы (`npc-hiring-economy.md`, `npc-hiring-effectiveness.md`).
+- UX макеты биржи, панелей и контрактов согласованы с фронтендом.
+- Баланс и формулы подтянуты из `npc-hiring-economy.md` и `npc-hiring-effectiveness.md`.
 
+---
 
+## 12. REST API и JSON схемы
+
+- `POST /social/npc-hiring/contracts` — создание контракта (`NpcContractCreateRequest`).
+- `GET /social/npc-hiring/contracts/{contractId}` — детали и статус (`NpcContract`).
+- `POST /social/npc-hiring/workforce` — найм группы NPC (`NpcWorkforceHireRequest`).
+- `POST /economy/npc-hiring/payroll/calculate` — расчёт зарплат и налогов (`NpcPayrollRequest`).
+- `GET /social/npc-hiring/dashboard` — агрегированные данные управления (`NpcHiringDashboard`).
+- `POST /npc/npc-hiring/performance` — обновление KPI NPC (`NpcPerformanceUpdateRequest`).
+
+**JSON схемы:**  
+- `schemas/social/npc-contract-create.schema.json`  
+- `schemas/social/npc-workforce-hire.schema.json`  
+- `schemas/economy/npc-payroll.schema.json`  
+- `schemas/social/npc-hiring-dashboard.schema.json`  
+- `schemas/npc/npc-performance-update.schema.json`
+
+---
+
+## 13. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `social.npc-hiring.contract.created` | social-service | `{ contractId, employerId, npcId, contractType, startAt }` | economy-service, notification-service, world-service |
+| `social.npc-hiring.contract.updated` | social-service | `{ contractId, status, salary, loyaltyDelta }` | telemetry, npc-service |
+| `economy.npc-hiring.payroll.processed` | economy-service | `{ payrollId, employerId, totalCost, taxes, bonuses }` | analytics, accounting |
+| `npc.hiring.performance.changed` | npc-service | `{ npcId, performanceScore, loyalty, mood }` | social-service, world-service, quest-service |
+| `social.npc-hiring.alert` | social-service | `{ alertId, severity, message, npcIds[] }` | UI, monitoring, factions-service |
+
+- Очередь `npc-hiring-contract-review` контролирует модерацию условий контрактов и соответствие лицензиям.
+
+---
+
+## 14. Метрики и аналитика
+
+- `ContractSuccessRate` — доля контрактов, завершённых без штрафов.
+- `NpcPerformanceIndex` — средний KPI по ролям, применяется к бонусам.
+- `PayrollBurnRate` — еженедельные расходы на NPC, отслеживается economy-service.
+- `LoyaltyTrend` — изменение лояльности, влияет на риск ухода/предательства.
+- `HiringLeadTime` — время от создания заявки до подписания контракта.
+- Метрики отправляются в monitoring dashboards (Grafana) и telemetry (`TickDuration p95`, `npc-hiring-response-time`).
+
+---
+
+## 15. UX, QA и согласование
+
+- UI макеты утверждены: PR `FW-NPC-HIRING-010`, включают биржу, мастер контрактов, отчёты.
+- Security review `SEC-NPC-HIRE-004` — проверены санкции и правовые ограничения.
+- QA чеклист:  
+  - [x] JSON схемы проверены `schema-test`.  
+  - [x] Kafka payloadы синхронизированы с backend.  
+  - [x] UX потоки протестированы на edge-кейсах массового найма.
+- Воркшоп 2025-11-08 09:55: social/economy/world команды согласовали индексы и события.
+
+---
+
+## 16. История изменений
+
+- 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт системы найма NPC.

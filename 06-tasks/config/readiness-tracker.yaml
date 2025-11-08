@@ -1648,6 +1648,18 @@ documents:
     issues: []
     api_target: "api/v1/social/npc-hiring-advanced.yaml"
 
+  - path: ".BRAIN/_02-gameplay/social/npc-hiring-system-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:27"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Базовая система найма NPC: контракты, workforce, payroll; REST/Kafka контуры и UX сценарии согласованы с social/economy/world сервисами."
+    issues: []
+    api_target:
+      - "api/v1/social/npc-hiring/contracts.yaml"
+      - "api/v1/social/npc-hiring/workforce.yaml"
+      - "api/v1/economy/npc-hiring/payroll.yaml"
+
   - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact.md"
     status: "ready"
     version: "1.1.0"
