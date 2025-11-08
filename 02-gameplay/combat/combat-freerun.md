@@ -1,21 +1,21 @@
 ﻿# Боевая система - FREERUN (Паркур)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:36
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по интеграции паркура с боем (атаки с воздуха, стрельба в движении, мобильные способности, комбо) (v1.1.0). TODO только для балансировки (не блокирует создание API).
+**api-readiness-check-date:** 2025-11-09 01:01
+**api-readiness-notes:** Перепроверено 2025-11-09 01:01. Документ готов к API: интеграция паркура с боем (атаки с воздуха, стрельба в движении, мобильные способности, комбо) (v1.1.0). Балансные TODO не блокируют задачи.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/movement
 
-**Статус:** review - проверка готовности к созданию API задач  
+**Статус:** approved  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 02:35
+- **Status:** approved
+- **Last Updated:** 2025-11-09 01:01
 ---
 
 ---

@@ -1,6 +1,6 @@
 # TODO — Brain Manager
 
-**Обновлено:** 2025-11-09 00:59  
+**Обновлено:** 2025-11-09 01:00  
 **Ответственный:** Brain Manager
 
 ---
@@ -14,6 +14,7 @@
 - [ ] Quest Engine Package — подготовить материалы `.BRAIN/05-technical/backend/quest-engine-backend.md` для передачи в ДУАПИТАСК (2025-11-09 00:59).
 ## Medium
 - [ ] Combat Shooting — обновить материалы `.BRAIN/02-gameplay/combat/combat-shooting.md` и TTK/отдачу перед постановкой задач (2025-11-09 00:58).
+- [ ] Combat Stealth — подготовить brief по `.BRAIN/02-gameplay/combat/combat-stealth.md` (каналы обнаружения, импланты) для ДУАПИТАСК (2025-11-09 01:00).
 ## Low
 - *(пусто)*
 
