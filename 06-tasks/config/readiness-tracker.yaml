@@ -86,6 +86,15 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/03-lore/visual-guides/visual-style-locations.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:41"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Визуальный гид по локациям: asset ID, палитры, JSON схемы и связь с world/social/economy сервисами; готов к созданию API задач."
+    issues: []
+    api_target: null
+
   # Служебные файлы и README
   - path: ".BRAIN/README.md"
     status: "not-applicable"

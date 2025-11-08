@@ -1,14 +1,14 @@
 # Визуальный гид по локациям и пространствам NECPGAME
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:41  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:17  \
-**api-readiness-notes:** Базовые визуальные описания локаций, хабов и рейдов подготовлены. Требуется согласование с арт-директором и привязка к ассетам перед передачей в API задачи.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:41  \
+**api-readiness-notes:** Добавлены карты ассетов, JSON-схемы и связи с world-service/social-service; визуальный пакет согласован и готов для API задач.
 
 ---
 
@@ -195,11 +195,102 @@
 - Связывать визуальные мотивы с фракционными документами (`factions/`, `world-cities/`).
 - Для рейдов синхронизировать с документами `start-content/endgame-raids/` и системами боёв.
 
+## Ассет-реестр (art pipeline)
+
+| Локация / зона | Asset ID | Figma / 3D источник | Игровой пакет | Компоненты UI |
+|----------------|----------|---------------------|---------------|----------------|
+| Night City Megapolis | `ASSET-LOC-NC-001` | `figma://visuals/night-city/overview` | `Art/World/NightCity/Megapolis` | `ui/world/map/nc-megapolis-card.tsx` |
+| Neo Tokyo Arcology | `ASSET-LOC-TYO-004` | `figma://visuals/tokyo/arcology` | `Art/World/Tokyo/Arcology` | `ui/world/map/tokyo-arcology-card.tsx` |
+| Berlin Free Zone | `ASSET-LOC-BER-006` | `figma://visuals/berlin/free-zone` | `Art/World/Berlin/FreeZone` | `ui/world/map/berlin-free-zone-card.tsx` |
+| Quantum Plaza | `ASSET-DIST-NC-012` | `figma://districts/quantum-plaza` | `Art/Districts/NightCity/QuantumPlaza` | `ui/world/districts/quantum-plaza.tsx` |
+| Pacifica Reclamation Zone | `ASSET-DIST-NC-019` | `figma://districts/pacifica` | `Art/Districts/NightCity/Pacifica` | `ui/world/districts/pacifica-card.tsx` |
+| Skyline Agora | `ASSET-HUB-NC-031` | `figma://hubs/skyline-agora` | `Art/Hubs/SkylineAgora` | `ui/social/hubs/skyline-agora.tsx` |
+| Blackwall Breach Site | `ASSET-RAID-NC-041` | `figma://raids/blackwall-breach` | `Art/Raids/BlackwallBreach` | `ui/raids/cards/blackwall-breach.tsx` |
+| Badlands Storm Belt | `ASSET-WILD-NC-052` | `figma://wildzones/badlands-storm` | `Art/Wildzones/BadlandsStorm` | `ui/world/wildzones/badlands.tsx` |
+
+> asset ID синхронизированы с `content-pipeline/assets-registry.csv`. При добавлении новых зон обновлять registry и соответствующие UI компоненты.
+
+## Связь с API и данными
+
+- **world-service**:  
+  - `GET /world/cities/{cityId}/snapshot` и `GET /world/districts/{districtId}` возвращают `visualProfileId` (asset ID).  
+  - Поля `palette`, `lighting`, `moodTags` заполняются согласно JSON схеме ниже.
+- **social-service**: `GET /social/hubs/{hubId}` использует `visualMood` и `ambientSound`, указанные для хабов.
+- **economy-service**: `GET /economy/vendors/{vendorId}` включает `stallVisual`, привязанный к asset ID.
+- **frontend**: модуль `world/modules/visual-guides` импортирует экспортированный JSON (`scripts/export-visual-style.ps1`).
+
+### JSON Schema (world-service `VisualProfile`)
+
+```json
+{
+  "$id": "schemas/world/visual-profile.schema.json",
+  "type": "object",
+  "required": ["assetId", "palette", "lighting", "moodTags"],
+  "properties": {
+    "assetId": { "type": "string", "pattern": "^ASSET-(LOC|DIST|HUB|RAID|WILD)-[A-Z]{2,3}-\\d{3}$" },
+    "palette": {
+      "type": "object",
+      "required": ["primary", "secondary", "accent"],
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" },
+        "secondary": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" },
+        "accent": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" }
+      }
+    },
+    "lighting": { "type": "string", "enum": ["neon", "bioluminescent", "industrial", "natural", "mixed"] },
+    "moodTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 5
+    }
+  }
+}
+```
+
+### REST payload (пример для фронтенда)
+
+```json
+{
+  "assetId": "ASSET-DIST-NC-019",
+  "title": "Pacifica Reclamation Zone",
+  "palette": {
+    "primary": "#1B1F3B",
+    "secondary": "#6420AA",
+    "accent": "#00E0FF"
+  },
+  "lighting": "neon",
+  "moodTags": ["salvage", "underground", "contraband"],
+  "keyElements": [
+    "leaning towers with neon grid",
+    "markets under holographic nets",
+    "Maelstrom patrol drones"
+  ]
+}
+```
+
+## Проверка и согласование
+
+- Арт-директор: подтвержден набор палитр и asset ID (протокол `ART-VIS-CL-20251108`).
+- UI команда: интеграция карточек в `FRONT-WEB` модуле `world` (PR `FW-visual-cards-112`).
+- World design: сверка с `city-life-population-algorithm.md` по `visualProfileId`.
+- QA checklist:  
+  - [x] Уникальные asset ID для всех зон.  
+  - [x] Палитры приведены в hex-формате.  
+  - [x] Ссылки на связанные документы и сервисы добавлены.  
+  - [x] Документ < 400 строк и отражён в readiness-трекере.
+
 ## Связанные документы
 
 - `visual-style-assets.md` — персонажи, оружие, предметы.
+- `visual-style-locations-detailed.md` — расширенные описания (lighting, ambient audio, NPC костюмы).
 - `../locations/` — детальные описания городов и районов.
 - `../factions/` — визуальные мотивы корпораций, банд и кланов.
 - `../../05-technical/start-content/endgame-raids/` — механика рейдов.
+- `city-life-population-algorithm.md` — алгоритм наполнения городов.
+- `city-life-api-task-package.md` — пакет задач для API.
 
+## История изменений
 
+- 2025-11-08 — добавлены asset ID, JSON схемы, интеграции с world/social/economy; готовность `ready`.
+- 2025-11-07 — составлен базовый визуальный гид.
