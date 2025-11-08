@@ -12,10 +12,6 @@
 **target-frontend-module:** modules/combat/ai
 ---
 
-- **Status:** queued
-- **Last Updated:** 2025-11-09 00:54
----
-
 # COMBAT AI ENEMIES MATRIX
 
 ## 1. Архитектура AI

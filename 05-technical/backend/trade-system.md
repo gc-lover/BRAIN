@@ -1,7 +1,10 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 23:39
-**api-readiness-notes:** Подробный P2P trade flow, схемы БД, события и антифрод — готово для API.
+**api-readiness-check-date:** 2025-11-09 00:56
+**api-readiness-notes:** Подробный P2P trade flow, схемы БД, события и антифрод перепроверены 2025-11-09 00:56 — документ готов для API.
+**target-domain:** economy-trade  
+**target-microservice:** economy-service (8085)  
+**target-frontend-module:** modules/economy/trade
 ---
 ---
 

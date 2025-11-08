@@ -33,18 +33,19 @@
   **Проверено:** 2025-11-09 00:47 — Brain Manager | Следующий шаг: сформировать API задачи по боевым имплантам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:45 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2).
+
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: подготовить пакет API задач по матрице боевого AI (gameplay-service).
-- **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить волну API задач по экстракт-зонам для gameplay-service.
-- **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать API задачи по сетевому хакерству (gameplay-service).
-- **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить API задачи на боевую интеграцию хакерства (gameplay-service).
-- **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: спланировать API задачи по режиму киберпространства (gameplay-service).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: подготовить пакет задач по боевому AI и WebSocket потокам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать API задания на арены и рейтинговые циклы (gameplay-service).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: завести API задачи по интеграции D&D проверок в шутер (gameplay-service).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: вынести задания на интеграцию D&D-проверок в шутерный бой (gameplay-service).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать задачи для экстрактшутер механик (gameplay-service).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать задания на сетевой хакерский слой (gameplay-service).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задачи по интеграции хакерства в бою (gameplay-service).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
+  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 

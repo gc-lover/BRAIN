@@ -1,21 +1,21 @@
 ﻿# Боевая система - Стрельба и основы боя
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:36
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по сочетанию шутера/MMORPG, стилю стрельбы, TTK, системе урона, движению и стрельбе, покрытию и укрытиям (v1.1.0). TODO только для детализации отдачи и прицеливания (не блокирует создание API).
+**api-readiness-check-date:** 2025-11-09 00:58
+**api-readiness-notes:** Перепроверено 2025-11-09 00:58. Документ фиксирует TTK, отдачу, имплант-модификаторы и боевые сценарии; TODO по тонкой настройке отдачи не блокирует задачи.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/shooting
 
-**Статус:** review - проверка готовности к созданию API задач  
+**Статус:** approved - готов к созданию API задач  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-06 23:00
+- **Status:** approved
+- **Last Updated:** 2025-11-09 00:58
 ---
 
 
