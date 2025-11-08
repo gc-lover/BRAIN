@@ -41,6 +41,8 @@
 - Global state
 - Real-time sync
 
+**Production-доступ:** все игровые сервисы публикуются через `https://api.necp.game/v1` (HTTP) и `wss://api.necp.game/v1`; OpenAPI спецификации содержат `info.x-microservice` с целевым сервисом.
+
 ---
 
 ## Структура
