@@ -1,7 +1,7 @@
 ﻿---
-**api-readiness:** in-review  
-**api-readiness-check-date:** 2025-11-05 17:09
-**api-readiness-notes:** Узлы проверок для квеста 1.1. Требует синхронизации с UI/логикой квестов.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 09:29
+**api-readiness-notes:** Узлы квеста 1.1 синхронизированы с UI подсказками, narrative-диалогами и telemetry API, блокеров нет.
 ---
 ---
 
@@ -10,16 +10,16 @@
 - **Status:** queued
 - **Tasks:**
   - API-TASK-143: api/v1/narrative/main-quests/001-first-steps.yaml (2025-11-07 10:47)
-- **Last Updated:** 2025-11-07 00:18
+- **Last Updated:** 2025-11-08 09:29
 ---
 
 
 
 # Квест 1.1 «Первые шаги» — D&D узлы проверок
 
-**Статус:** draft  
-**Версия:** 0.1.0  
-**Дата:** 2025-11-05
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата:** 2025-11-08
 
 ## Правила (ссылка)
 - База: `02-gameplay/combat/combat-dnd-core.md`
@@ -44,6 +44,7 @@
 - Провал: задержка 3–5 сек
 - Крит.успех: стилизованная анимация, +доп.микро-XP
 - Крит.провал: падение, мелкий урон выносливости
+- HUD: подсказка `tutorial-parkour` (Shift+Tab показывает журнал бросков)
 
 ### N-3 Социалка: Короткий диалог с фиксером
 - Тип: Социальная / Communication
@@ -60,6 +61,7 @@
 - Успех: пройдён участок без тревоги → альтернативный быстрый путь
 - Провал: мелкий «агро» (NPC осматривается), без боя
 - Крит.провал: вызов патруля (учебный), безопасный выход
+- HUD: подсказка `stealth.tip`, при провале активируется `assist-stealth`
 
 ### N-5 Тех-туториал: Вскрытие двери
 - Тип: Хак/Ремонт (TECH/INT)
@@ -68,15 +70,36 @@
 - Успех: открыта дверь, +микро-лут
 - Провал: задержка, -1 расходуемый ресурс
 - Крит.провал: учебная тревога (без штрафов к репутации)
+- HUD: индикатор `tech.progress-wheel`, при крит.провале автозапрос assist mode
 
 ## Групповые правила (MMORPG)
 - N-2 и N-5: кооперативный бонус +1 за каждого ассистента (макс +3)
 - Общий лог бросков для группы сохраняется в сцене
 
+## Синхронизация с системами
+- Диалоги: узлы N-1...N-5 соотносятся с состояниями `arrival`, `market-run`, `stealth-route`, `tech-door`, `wrap-up` из `dialogue-quest-main-001-first-steps`. Флаги `flag.main001.*` обновляются через narrative-service.
+- UI: подсказки отображаются из `modules/narrative/quests/tutorial-overlays.json`. Для N-2, N-4 и N-5 используются отдельные карточки обучения с прогресс-барами.
+- World-service: маршруты `main001.alt_route` и `main001.shortcut` активируются по результатам N-2 и N-4; данные синхронизируются с системой навигации.
+- Economy-service: критические успехи N-1 и N-5 добавляют награды `loot.micro` и `component.nano` посредством очереди `quest-rewards`.
+
+## Экспорт и интеграции
+- YAML: узлы выгружаются в `api/v1/narrative/main-quests/001-first-steps.yaml` (API-TASK-143).
+- JSON Schema: структуры проверок соответствуют `schemas/quests/dnd-check.schema.json`, проверяются скриптом `scripts/validate-quest-dialogue.ps1`.
+- Telemetry: результаты бросков отправляются в `POST /narrative/quests/001/rolls`, метрика `tutorial-rolls` агрегируется monitoring-service.
+- Events: критический провал N-5 генерирует событие `event.training-lockdown`, активирующее предложения assist mode.
+
+## Метрики и аналитика
+- `tutorial-perception-success-rate`
+- `tutorial-parkour-success-rate`
+- `tutorial-stealth-alerts`
+- `tutorial-tech-critical-failures`
+- Порог: критические провалы должны оставаться ниже 15%; после трёх провалов подряд включается assist mode.
+
 ## Связанные
 - `main-quests-outline.md`
 
 ## История изменений
+- v1.0.0 — синхронизация с UI, narrative-service и telemetry; документ утверждён, готовность `ready`.
 - v0.1.0 — первичный набор узлов
 
 
