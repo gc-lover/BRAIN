@@ -1,14 +1,16 @@
 ﻿# Система Комбо и Синергий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:45  
-**api-readiness-notes:** Документ очищен от устаревших ссылок на задачи; структура комбо-системы готова для постановки новых API задач (v1.0.0).
+**api-readiness-check-date:** 2025-11-09 01:15  
+**api-readiness-notes:** Перепроверено 2025-11-09 01:15: структура комбо-системы и синергий готова к постановке API задач (v1.0.0), устаревших ссылок нет.
 
 **Версия:** 1.0.0  
-**Дата:** 2025-11-06
+**Дата:** 2025-11-06  
+**Статус:** approved  
+**Последнее обновление:** 2025-11-09 01:15
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/combos
 
 ---

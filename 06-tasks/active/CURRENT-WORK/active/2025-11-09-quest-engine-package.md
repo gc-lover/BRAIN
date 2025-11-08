@@ -13,12 +13,15 @@
 - Связаны опорные материалы по D&D проверкам (`combat-dnd-core.md`) и структуре квестов (`quest-system.md`) для ссылок в задачах.
 - Сформирована матрица зависимостей: character-service (статы и флаги), economy-service (награды), social-service (репутация), combat-service (килл-триггеры), analytics-service (телеметрия skill checks).
 - Зафиксирован набор событий Event Bus: `quest:started`, `quest:objective-completed`, `quest:completed`, `quest:failed`; входящие `combat:enemy-killed`, `item:collected`, `npc:talked`.
+- Выписаны REST точки для постановки задач: `POST /api/v1/quests/start`, `GET /api/v1/quests/active`, `POST /api/v1/quests/{id}/dialogue/choice`, `GET /api/v1/quests/{id}/dialogue/current`, `POST /api/v1/quests/{id}/complete`, `POST /api/v1/quests/{id}/abandon`.
+- Зафиксированы основные сущности хранения: `quest_instances`, `dialogue_state`, `skill_check_results` (связь с персонажем, состояние диалога, результаты проверок).
+- Обновлена очередь `ready.md`: карточка с путём `.BRAIN/05-technical/backend/quest-engine-backend.md` содержит таргет `api/v1/gameplay/quests/quest-engine.yaml` и задание на подготовку пакета для ДУАПИТАСК.
 
 ## Блокеры
 - Нет.
 
 ## Следующие действия
-- Разбить backend-описание на задачи ДУАПИТАСК: REST (`/quests/instances`, `/quests/templates`, `/quests/flags`), обработка skill checks, webhook-уведомления.
-- Описать требования к хранению диалоговых деревьев и условий ветвления (отдельные контракты или справочники).
-- Подготовить чек на обновление `implementation-tracker.yaml` после получения слота на API задачи.
+- Подготовить для ДУАПИТАСК сводку REST/WS/Events + хранение (таблицы, JSON поля) в формате брифа.
+- Свести зависимости в отдельный блок (character/economy/social/combat/analytics) и обозначить требования к API контрактам для каждой связки.
+- Отметить прогресс в `implementation-tracker.yaml` после получения окна на постановку задач.
 

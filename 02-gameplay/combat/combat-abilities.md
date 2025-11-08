@@ -1,11 +1,11 @@
 ﻿# Боевая система - Система способностей
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:05
-**api-readiness-notes:** Перепроверено 2025-11-09 01:05. Документ готов к созданию API задач: источники способностей, типы, ограничения, комбинации, влияние на киберпсихоз (v1.2.0). TODO по балансировке не блокирует API.
+**api-readiness-check-date:** 2025-11-09 01:15
+**api-readiness-notes:** Перепроверено 2025-11-09 01:15. Документ готов к созданию API задач: источники способностей, типы, ограничения, комбинации, влияние на киберпсихоз (v1.2.0). TODO по балансировке не блокирует API.
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/abilities
 
 **Статус:** approved  
@@ -15,7 +15,7 @@
 ---
 
 - **Status:** approved
-- **Last Updated:** 2025-11-09 01:05
+- **Last Updated:** 2025-11-09 01:15
 ---
 
 

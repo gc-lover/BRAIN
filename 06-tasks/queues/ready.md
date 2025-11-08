@@ -24,7 +24,7 @@
 - **Документ:** .BRAIN/05-technical/backend/trade-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить обновлённый пакет материалов по торговле (economy-service) перед ДУАПИТАСК.
 - **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить задачи по quest state machine для gameplay-service (`api/v1/gameplay/quests/quest-engine.yaml`).
+  **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить пакет (REST `/quests/*`, Event Bus, хранение skill checks) для gameplay-service (`api/v1/gameplay/quests/quest-engine.yaml`) перед ДУАПИТАСК.
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:47 — Brain Manager | Следующий шаг: сформировать API задачи по боевым имплантам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
@@ -46,10 +46,10 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  
-  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service).
+  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
-  **Проверено:** 2025-11-09 01:05 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
+  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: сформировать задачи по ядру D&D проверок (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:09 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service, api/v1/gameplay/combat/stealth.yaml).
+  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: подготовить задания по системе скрытности и обнаружения (gameplay-service, api/v1/gameplay/combat/stealth.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:09 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service, api/v1/gameplay/combat/freerun.yaml).
+  **Проверено:** 2025-11-09 01:13 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service, api/v1/gameplay/combat/freerun.yaml).
