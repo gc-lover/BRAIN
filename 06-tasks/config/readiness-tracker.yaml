@@ -107,6 +107,18 @@ documents:
       - "api/v1/social/visuals/hubs.yaml"
       - "api/v1/economy/visuals/markets.yaml"
 
+  - path: ".BRAIN/03-lore/_03-lore/visual-guides/visual-style-locations-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 11:06"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Детализированные визуальные сценарии зон: JSON схемы, REST/Kafka контуры и UX/QA подтверждены для world/social/economy/marketing сервисов."
+    issues: []
+    api_target:
+      - "api/v1/world/visuals/locations-detailed.yaml"
+      - "api/v1/social/visuals/hubs-detailed.yaml"
+      - "api/v1/world/visuals/events.yaml"
+
   - path: ".BRAIN/03-lore/visual-guides/visual-style-assets.md"
     status: "ready"
     version: "1.0.0"

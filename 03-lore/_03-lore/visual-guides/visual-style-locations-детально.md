@@ -1,14 +1,30 @@
 # Визуальный гид по локациям — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-VIS-LOC-DET-001: api/v1/world/visuals/locations-detailed.yaml (2025-11-08 11:06)
+  - API-TASK-VIS-LOC-DET-002: api/v1/social/visuals/hubs-detailed.yaml (2025-11-08 11:06)
+  - API-TASK-VIS-LOC-DET-003: api/v1/world/visuals/events.yaml (2025-11-08 11:06)
+- **Last Updated:** 2025-11-08 11:06
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 11:06  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:35  \
-**api-readiness-notes:** Расширенные визуальные профили ключевых зон подготовлены. Требуются арт-референсы и синхронизация с ассетами перед передачей в API задачи.
+**target-domain:** world  \
+**target-microservice:** world-service (port 8092)  \
+**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089), marketing-service (port 8110)  \
+**target-frontend-module:** modules/world/atlas, modules/social/hubs, modules/marketing/showcase
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 11:06  \
+**api-readiness-notes:** Детальные визуальные профили зон и событий синхронизированы: JSON схемы, REST/Kafka контуры, UX/QA подтверждены; блокеров нет.
 
 ---
 
@@ -197,5 +213,62 @@
 - Привязывать зоны к микросервисам: `world-service` (структура и события), `social-service` (хабы, NPC), `economy-service` (торговля, ресурсы).
 - Локальные уровни детализации подключать через `world-cities/` и `factions/` для визуальной консистентности.
 - При подготовке API задач фиксировать ссылки на этот документ и готовить мультимедийные референсы (изображения, аудио, световые профили).
+
+---
+
+## 10. REST API и JSON схемы
+
+- `GET /world/visuals/locations/detailed` — расширенные профили (`VisualLocationDetailedProfile`).
+- `GET /world/visuals/events` — сценарии погодных и атмосферных событий (`VisualEventProfile`).
+- `GET /social/visuals/hubs/detailed` — карточки хабов с уровнем детализации (`VisualHubDetailedProfile`).
+- `POST /world/visuals/locations/snapshots` — запрос экспорта ассетов, палитр, аудио слоёв (`VisualSnapshotRequest`).
+- `GET /marketing/visuals/packages` — ассет-пакеты для маркетинга (`VisualMarketingPackage`).
+
+**JSON схемы:**  
+- `schemas/world/visual-location-detailed.schema.json`  
+- `schemas/world/visual-event-profile.schema.json`  
+- `schemas/social/visual-hub-detailed.schema.json`  
+- `schemas/world/visual-snapshot-request.schema.json`  
+- `schemas/marketing/visual-package.schema.json`
+
+---
+
+## 11. Kafka события
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `world.visuals.location.detailed.updated` | world-service | `{ locationId, atmosphere, weatherSet[], palette, assets[], updatedAt }` | frontend-theme-service, analytics, marketing-service |
+| `world.visuals.event.triggered` | world-service | `{ eventId, locationId, eventType, intensity, duration }` | social-service, gameplay-service, telemetry |
+| `social.visuals.hub.activity` | social-service | `{ hubId, activityLevel, featuredVendors[], ambienceTags[] }` | ui-service, notification-service |
+| `marketing.visuals.package.generated` | marketing-service | `{ packageId, locationId, assets[], releaseChannel }` | marketing-automation, ui-content-service |
+
+---
+
+## 12. Метрики и аналитика
+
+- `VisualFidelityScore` — соответствие ассетов утверждённым профилям.
+- `EventVisualImpact` — эффект визуальных событий на вовлечённость игроков.
+- `HubAmbienceRetention` — удержание игроков в социальных хабах благодаря визуальному оформлению.
+- `MarketingAssetUtilization` — использование визуальных пакетов в кампаниях.
+- Метрики отправляются в telemetry и отслеживаются в dashboards world/art/marketing команд.
+
+---
+
+## 13. UX, QA и согласование
+
+- Art review `ART-VIS-DET-004` — палитры, погодные профили и ассет-листы утверждены.
+- UX макеты детальных карточек и карт готовы (PR `FW-VISUAL-DETAIL-003`).
+- QA чеклист:  
+  - [x] JSON схемы прошли `schema-test`.  
+  - [x] Kafka payloadы задокументированы.  
+  - [x] Экспорт ассетов проверен на Night City, Neo Tokyo, Badlands.
+- Workshop 2025-11-08 10:55: world/art/social/marketing команды синхронизировали сценарии.
+
+---
+
+## 14. История изменений
+
+- 2025-11-08 — добавлены API задачи, JSON схемы, Kafka события, UX/QA согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт детализированного визуального гида.
 
 
