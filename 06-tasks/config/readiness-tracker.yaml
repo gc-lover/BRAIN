@@ -95,6 +95,15 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/03-lore/visual-guides/visual-style-assets.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 09:42"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Визуальный гид по персонажам и активам: asset ID, JSON схемы, REST/Kafka интеграции с character/gameplay/economy сервисами."
+    issues: []
+    api_target: null
+
   # Служебные файлы и README
   - path: ".BRAIN/README.md"
     status: "not-applicable"

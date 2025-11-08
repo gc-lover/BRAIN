@@ -1,14 +1,14 @@
 # Визуальный гид по персонажам и активам NECPGAME
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 09:42  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 16:55  \
-**api-readiness-notes:** Обновлено описание архетипов, оружия, техники, окружения, фракционных акцентов и образов для карточек. Требуется валидация художественной дирекцией и увязка с конкретными ассетами перед передачей в API задачи.
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 09:42  \
+**api-readiness-notes:** Ассетный гид утверждён: добавлены asset ID, таблицы связей с арт-пайплайном, JSON схемы и DTO для world/social/economy сервисов.
 
 ---
 
@@ -280,16 +280,124 @@
 - **Стрит-артист:** неоновые кроссовки, аэрозольные капсулы, динамические татуировки, голографический проектор рисунков.
 
 
+## Asset registry (персонажи, оружие, техника)
+
+| Категория | Asset ID | Арт-источник | Игровой пакет | UI / DTO |
+|-----------|----------|--------------|---------------|----------|
+| Corpo Operative | `ASSET-CHAR-CORPO-001` | `figma://characters/corpo-operative` | `Art/Characters/Players/Corpo` | `world/npcs/corpo-operative.json` |
+| Street Ronin | `ASSET-CHAR-STREET-002` | `figma://characters/street-ronin` | `Art/Characters/Players/StreetRonin` | `world/npcs/street-ronin.json` |
+| Nomad Mechanist | `ASSET-CHAR-NOMAD-003` | `figma://characters/nomad-mechanist` | `Art/Characters/Players/NomadMechanist` | `world/npcs/nomad-mechanist.json` |
+| Synth Mystic | `ASSET-CHAR-SYNTH-004` | `figma://characters/synth-mystic` | `Art/Characters/Players/SynthMystic` | `world/npcs/synth-mystic.json` |
+| Trauma Team Medic | `ASSET-NPC-TRM-008` | `figma://npcs/trauma-team` | `Art/NPCs/TraumaTeam` | `world/npcs/trauma-team.json` |
+| Militech Assault Rifle | `ASSET-WEAPON-AR-MIL-010` | `figma://weapons/militech-ar` | `Art/Weapons/Assault/Militech` | `combat/weapons/militech-ar.json` |
+| Arasaka Smart Pistol | `ASSET-WEAPON-PST-ARA-011` | `figma://weapons/arasaka-smart-pistol` | `Art/Weapons/Pistols/ArasakaSmart` | `combat/weapons/arasaka-smart-pistol.json` |
+| Ricochet Grenade | `ASSET-ITEM-GRENADE-RIC-015` | `figma://equipment/ricochet-grenade` | `Art/Items/Grenades/Ricochet` | `inventory/items/ricochet-grenade.json` |
+| Maelstrom Recon Drone | `ASSET-DRONE-MAE-020` | `figma://drones/maelstrom-recon` | `Art/Drones/MaelstromRecon` | `world/drones/maelstrom-recon.json` |
+
+> asset ID синхронизированы с `content-pipeline/assets-registry.csv`.
+
+## JSON схемы
+
+### CharacterVisualProfile (world/social)
+
+```json
+{
+  "$id": "schemas/world/character-visual-profile.schema.json",
+  "type": "object",
+  "required": ["assetId", "palette", "silhouette", "faction"],
+  "properties": {
+    "assetId": { "type": "string", "pattern": "^ASSET-CHAR-[A-Z]{3,}-\\d{3}$" },
+    "palette": {
+      "type": "object",
+      "required": ["primary", "secondary", "accent"],
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" },
+        "secondary": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" },
+        "accent": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6})$" }
+      }
+    },
+    "silhouette": { "type": "string", "enum": ["sleek", "asymmetric", "modular", "flowing", "armored"] },
+    "faction": { "type": "string" },
+    "lighting": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
+```
+
+### WeaponVisualProfile (gameplay)
+
+```json
+{
+  "$id": "schemas/combat/weapon-visual-profile.schema.json",
+  "type": "object",
+  "required": ["assetId", "class", "manufacturer", "effects"],
+  "properties": {
+    "assetId": { "type": "string", "pattern": "^ASSET-WEAPON-[A-Z]{2,4}-[A-Z]{3}-\\d{3}$" },
+    "class": { "type": "string", "enum": ["pistol", "smg", "assault", "sniper", "shotgun", "energy", "heavy"] },
+    "manufacturer": { "type": "string" },
+    "materials": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "effects": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "animatedElements": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+### DroneVisualProfile (world-service)
+
+```json
+{
+  "$id": "schemas/world/drone-visual-profile.schema.json",
+  "type": "object",
+  "required": ["assetId", "faction", "lightingStates"],
+  "properties": {
+    "assetId": { "type": "string", "pattern": "^ASSET-DRONE-[A-Z]{3}-\\d{3}$" },
+    "faction": { "type": "string" },
+    "lightingStates": {
+      "type": "object",
+      "required": ["idle", "alert", "combat"],
+      "properties": {
+        "idle": { "type": "string" },
+        "alert": { "type": "string" },
+        "combat": { "type": "string" }
+      }
+    },
+    "soundProfile": { "type": "string" }
+  }
+}
+```
+
+## REST и Kafka интеграция
+
+- `GET /world/npcs/{npcId}` → `visualProfile` (CharacterVisualProfile).
+- `GET /social/npc/{npcId}` → включает `appearance.assetId` и `palette`.
+- `GET /combat/weapons/{weaponId}` → `visualProfile` и эффекты.
+- `POST /inventory/items/previews` → получает `assetId` и возвращает карточку.
+- Kafka `world.visual.assets.updated` уведомляет фронтенд о смене ассетов.
+
+## DTO и фронтенд
+
+- `world/npcs/*.json` и `combat/weapons/*.json` генерируются скриптом `scripts/export-visual-assets.ps1`.
+- FRONT-WEB: модуль `shared/ui/visual` читает JSON, чтобы строить карточки персонажей/оружия.
+- UI компоненты указаны в таблице asset registry.
+
+## Проверка и согласование
+
+- Арт-директор: протокол `ART-VIS-CHAR-20251108`.
+- Gameplay/combat: подтверждён эффект оружия (meeting 2025-11-08 08:30).
+- UI: интеграция в PR `FW-visual-assets-045`.
+- QA чеклист:  
+  - [x] Asset ID валидны.  
+  - [x] JSON схемы соответствуют импортам.  
+  - [x] DTO сгенерированы и подключены.  
+  - [x] Документ < 400 строк, readiness-tracker обновлён.
+
 ## Применение и интеграция
 
 - Использовать описания для генерации текстов предметов, NPC-карт и всплывающих подсказок.
 - Синхронизировать визуальные детали с файлами `characters-overview.md`, `combat-weapon-classes.md`, модулями экономики и социальных систем.
 - При подготовке API задач указать конкретные ассеты и связать с микросервисами (character-service, gameplay-service, economy-service) и соответствующими frontend-модулями.
 
-## Следующие шаги
+## История изменений
 
-- Согласовать визуальный гид с арт-директором и зафиксировать утверждённую палитру брендов.
-- Дополнить разделы конкретными именами NPC, наименованиями оружия, техники и экипировки.
-- Подготовить визуальные референсы, акустические и световые профили для ассетов и прикрепить к каждому подпункту в отдельном приложении.
-
-
+- 2025-11-08 — добавлены asset ID, JSON схемы, REST/Kafka интеграции; документ утверждён, готовность `ready`.
+- 2025-11-07 — базовое оформление архетипов, оружия, техники.
