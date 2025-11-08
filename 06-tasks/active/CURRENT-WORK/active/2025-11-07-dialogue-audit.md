@@ -4,6 +4,14 @@
 **api-readiness-notes:** Аудит обновлён Specter-веткой: расширены NPC Neon Ghosts и добавлены ссылки на городские беспорядки. Готово для API Task Creator.
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-311: api/v1/narrative/dialogues/dialogue-audit.yaml (2025-11-08)
+- Last Updated: 2025-11-08 09:26
+---
+
 # Диалоговый аудит 2025-11-07
 
 **Статус:** approved  
