@@ -23,16 +23,18 @@
   **Проверено:** 2025-11-08 23:56 — Brain Manager | Следующий шаг: подготовить свежую задачу для combat session lifecycle.
 - **Документ:** .BRAIN/05-technical/backend/trade-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить обновлённый пакет материалов по торговле (economy-service) перед ДУАПИТАСК.
+- **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
+  **Проверено:** 2025-11-09 01:03 — Brain Manager | Следующий шаг: подготовить задачи по quest state machine для gameplay-service (`api/v1/gameplay/quests/quest-engine.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:47 — Brain Manager | Следующий шаг: сформировать API задачи по боевым имплантам (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-combos-synergies.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:45 — Brain Manager | Следующий шаг: запланировать API задачи на систему комбо/синергий (gameplay-service, волна 2).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-ai-enemies.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service, api/v1/gameplay/combat/ai-enemies.yaml).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: подготовить пакет задач по AI и WebSocket потокам (gameplay-service, api/v1/gameplay/combat/ai-enemies.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/arena-system.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: синхронизировать постановку задач по аренам и рейтингам (gameplay-service, api/v1/gameplay/combat/arena-system.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md (v1.0.0)  
-  **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: сформировать задания на интеграцию D&D-проверок (gameplay-service, api/v1/gameplay/combat/dnd-integration-shooter.yaml).
+  **Проверено:** 2025-11-09 00:55 — Brain Manager | Следующий шаг: сформировать задания на интеграцию D&D-проверок (gameplay-service, api/v1/gameplay/combat/dnd-integration-shooter.yaml).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-shooting.md (v1.1.0)  
   **Проверено:** 2025-11-09 00:58 — Brain Manager | Следующий шаг: подготовить задания по TTK, отдаче и имплант-модификаторам стрельбы (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
