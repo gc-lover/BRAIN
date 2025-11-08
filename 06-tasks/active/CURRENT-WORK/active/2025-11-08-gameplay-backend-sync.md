@@ -12,6 +12,17 @@
 
 ---
 
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-382: api/v1/gameplay/combat/combat-ballistics.yaml (2025-11-08 21:55)
+  - API-TASK-383: api/v1/social/orders/orders-lifecycle.yaml (2025-11-08 22:00)
+  - API-TASK-384: api/v1/economy/crafting/crafting-weapon-jobs.yaml (2025-11-08 22:05)
+  - API-TASK-385: api/v1/world/impact/world-impact.yaml (2025-11-08 22:10)
+- Last Updated: 2025-11-08 22:10
+
+---
+
 ## 1. Обзор и цели
 
 - Закрыть пробелы в интеграции продвинутой стрельбы (`combat-shooting-advanced.md`) и системы социальных заказов (`player-orders-system-детально.md`).
@@ -109,7 +120,7 @@
 - [x] Определить REST и Kafka контракты, DTO, связи.
 - [x] Зафиксировать сроки для API-SWAGGER (2025-11-10).
 - [x] Обновить `2025-11-08-gap-analysis.md` ссылкой на документ (pending в следующем коммите).
-- [ ] Выпустить API задания в `API-SWAGGER` (передать Task Creator).
+- [x] Выпустить API задания в `API-SWAGGER` (передать Task Creator).
 
 ## 8. Контакты и владельцы
 
