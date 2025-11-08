@@ -1158,6 +1158,17 @@ implementations:
     priority: "MEDIUM"
     notes: "NPCHiringExtendedPage, HireableNPCExtendedCard (tiers/legendary), HiringContractCard, MissionAssignmentCard, SupportAssetCard, LoyaltyProgramCard, HiringSummaryCard, фильтры"
 
+# === SOCIAL RESONANCE (2025-11-08) ===
+
+- api_path: "api/v1/social/resonance.yaml"
+  task_id: "API-TASK-243"
+  brain_source: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-07-world-interaction-ui.md v1.0.0"
+  api_status: "completed"
+  backend:
+    status: "not_started"
+  frontend:
+    status: "not_started"
+
 - api_path: "api/v1/narrative/narrative-coherence.yaml"
   task_id: "API-TASK-175"
   brain_source: ".BRAIN/04-narrative/narrative-coherence/ (3 phase documents)"

@@ -469,6 +469,18 @@ documents:
     issues: []
     api_target: null
 
+  - path: ".BRAIN/_02-gameplay/social/relationships-system-детально.md"
+    status: "ready"
+    version: "1.0.0"
+    checked: "2025-11-08 10:40"
+    checker: "AI Agent (Brain Readiness Checker)"
+    notes: "Отношения и доверие: шкалы, договоры и события подтверждены; REST/Kafka контуры и UX синхронизированы с social/world/economy сервисами."
+    issues: []
+    api_target:
+      - "api/v1/social/relationships/status.yaml"
+      - "api/v1/social/trust/contracts.yaml"
+      - "api/v1/world/alliances/events.yaml"
+
   - path: ".BRAIN/_02-gameplay/social/player-orders-system-детально.md"
     status: "ready"
     version: "1.0.0"

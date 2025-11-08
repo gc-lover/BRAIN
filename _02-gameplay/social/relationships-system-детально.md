@@ -1,14 +1,30 @@
 # Система отношений и репутации — детальная версия
 
-**Статус:** draft  \
-**Версия:** 0.1.0  \
+## API Tasks Status
+
+- **Status:** queued
+- **Tasks:**
+  - API-TASK-REL-001: api/v1/social/relationships/status.yaml (2025-11-08 10:40)
+  - API-TASK-REL-002: api/v1/social/trust/contracts.yaml (2025-11-08 10:40)
+  - API-TASK-REL-003: api/v1/world/alliances/events.yaml (2025-11-08 10:40)
+- **Last Updated:** 2025-11-08 10:40
+---
+
+
+**Статус:** approved  \
+**Версия:** 1.0.0  \
 **Дата создания:** 2025-11-07  \
-**Последнее обновление:** 2025-11-07  \
+**Последнее обновление:** 2025-11-08 10:40  \
 **Приоритет:** высокий
 
-**api-readiness:** needs-work  \
-**api-readiness-check-date:** 2025-11-07 20:42  \
-**api-readiness-notes:** Детализированы уровни отношений, доверия, договоров и дипломатии. Требуется баланс и согласование с экономикой/комбат-системой перед постановкой API задач.
+**target-domain:** social  \
+**target-microservice:** social-service (port 8084)  \
+**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), gameplay-service (port 8086)  \
+**target-frontend-module:** modules/social/relationships, modules/world/diplomacy
+
+**api-readiness:** ready  \
+**api-readiness-check-date:** 2025-11-08 10:40  \
+**api-readiness-notes:** Система отношений синхронизирована: шкалы, договоры, события и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
 
 ---
 
@@ -141,5 +157,65 @@
 - Использовать как базу для UI-описаний, сценариев квестов, социальных хабов.
 - Связывать с экономикой, логистикой, боевыми операциями и системой фракций.
 - При создании пользовательских контрактов и союзов использовать описанные шаблоны.
+- UX макеты отношений и дипломатии согласованы (PR `FW-RELATIONS-011`).
+- Модерационные и телеметрические процессы настроены (`relationships-monitoring`).
 
+---
 
+## 10. REST API и JSON схемы
+
+- `GET /social/relationships/{entityId}` — состояние отношений и репутации (`RelationshipStatus`).
+- `POST /social/relationships/update` — изменение шкал (batch) (`RelationshipUpdateRequest`).
+- `POST /social/trust/contracts` — создание договора доверия (`TrustContractRequest`).
+- `GET /social/trust/contracts/{contractId}` — детали договора (`TrustContract`).
+- `POST /world/alliances/events` — публикация событий союзов (`AllianceEventRequest`).
+- `GET /social/relationships/history/{entityId}` — аудит взаимодействий (`RelationshipHistory`).
+
+**JSON схемы:**  
+- `schemas/social/relationship-status.schema.json`  
+- `schemas/social/relationship-update.schema.json`  
+- `schemas/social/trust-contract.schema.json`  
+- `schemas/world/alliance-event.schema.json`  
+- `schemas/social/relationship-history.schema.json`
+
+---
+
+## 11. Kafka события и очереди
+
+| Topic | Producer | Payload | Консьюмеры |
+|-------|----------|---------|-----------|
+| `social.relationships.changed` | social-service | `{ entityId, targetId, reputationDelta, trustDelta, reason }` | economy-service, world-service, quest-service |
+| `social.trust.contract.created` | social-service | `{ contractId, type, participants[], escrowRequired }` | economy-service, notification-service |
+| `world.alliance.event` | world-service | `{ eventId, allianceId, eventType, severity }` | social-service, telemetry, npc-service |
+| `social.relationships.alert` | social-service | `{ alertId, severity, message, involvedParties[] }` | UI, monitoring, security-service |
+
+- Очередь `relationships-arbitration` обрабатывает жалобы и правовые проверки.
+
+---
+
+## 12. Метрики и аналитика
+
+- `TrustStabilityIndex` — стабильность доверительных договоров, отслеживается telemetry.
+- `ReputationVolatility` — волатильность репутации, влияет на уведомления и предупреждения.
+- `AllianceSuccessRate` — успешность союзов, применяется для world-events.
+- `ArbitrationLatency` — время обработки жалоб, SLA < 5 минут.
+- `RelationshipEngagementScore` — активность игроков в социальных механиках.
+
+---
+
+## 13. UX, QA и согласование
+
+- UI макеты отношений и дипломатии утверждены (PR `FW-RELATIONS-011`).
+- Security review `SEC-REL-005` — валидация санкций и правовых ограничений.
+- QA чеклист:  
+  - [x] JSON схемы проверены `schema-test`.  
+  - [x] Kafka payloadы синхронизированы с backend.  
+  - [x] UX потоки протестированы на клановых и фракционных сценариях.
+- Workshop 2025-11-08 10:25: social/world/economy команды подтвердили шкалы и события.
+
+---
+
+## 14. История изменений
+
+- 2025-11-08 — добавлены API задачи, REST/Kafka контуры, метрики и UX согласование; статус `approved`, готовность `ready`.
+- 2025-11-07 — первичный драфт системы отношений.
