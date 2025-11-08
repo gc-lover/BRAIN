@@ -119,9 +119,12 @@ implementations:
       commit: "06b79a9"
       notes: "GameInitialStateController - начальное состояние игры"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 11:01"
       agent: "Frontend Agent"
+      completed: "2025-11-08 11:08"
+      commit: ""
+      notes: "autocommit не выполнен: git repository not found"
   
   # === GAMEPLAY SYSTEMS ===
   
@@ -136,7 +139,9 @@ implementations:
       commit: "06b79a9"
       notes: "GameplayActionsController - действия игрока"
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-08 11:10"
+      agent: "Frontend Agent"
   
   - api_path: "api/v1/inventory/inventory.yaml"
     task_id: "API-TASK-006"
