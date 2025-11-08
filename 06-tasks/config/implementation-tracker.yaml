@@ -139,9 +139,12 @@ implementations:
       commit: "06b79a9"
       notes: "GameplayActionsController - действия игрока"
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-08 11:10"
+      completed: "2025-11-08 11:16"
       agent: "Frontend Agent"
+      commit: ""
+      notes: "autocommit не выполнен: git repository not found"
   
   - api_path: "api/v1/inventory/inventory.yaml"
     task_id: "API-TASK-006"

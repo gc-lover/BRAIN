@@ -9,7 +9,8 @@
   - API-TASK-333: api/v1/economy/visuals/items-detailed.yaml (2025-11-08 17:50)
   - API-TASK-334: api/v1/character/visuals/romance-states.yaml (2025-11-08 18:01)
   - API-TASK-335: api/v1/character/visuals/romance-scenes.yaml (2025-11-08 18:12)
-- **Last Updated:** 2025-11-08 18:12
+-  - API-TASK-336: api/v1/character/visuals/romance-export.yaml (2025-11-08 18:25)
+- **Last Updated:** 2025-11-08 18:25
 ---
 
 
