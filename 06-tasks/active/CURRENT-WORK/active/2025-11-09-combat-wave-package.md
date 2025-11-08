@@ -81,6 +81,52 @@
    - единый reference по D&D проверкам (`combat-dnd-core`) и синхронизация с quest-engine.  
    - согласование security (anti-cheat, rate-limits) с `combat-session-backend`.
 
+### 3.1 REST backlog (черновая декомпозиция)
+| Приоритет | Endpoint | Источник документа | Краткое описание |
+| --- | --- | --- | --- |
+| P0 | `POST /combat/sessions` | combat-session-backend | запуск сессии, регистрация участников, выдача sessionId |
+| P0 | `POST /combat/sessions/{id}/events` | combat-session-backend | публикация событий (damage, revive, state change) |
+| P0 | `POST /combat/ai/profiles` | combat-ai-enemies | регистрация AI профиля врага (behaviour tree, skill deck) |
+| P0 | `PUT /combat/ai/profiles/{enemyId}/phase` | combat-ai-enemies | обновление фазы рейда, механики, телеметрия |
+| P1 | `GET /combat/abilities` | combat-abilities | перечень активных способностей и связанной синергии |
+| P1 | `POST /combat/abilities/{abilityId}/sync` | combat-abilities + combat-combos-synergies | синхронизация способностей с комбо и D&D модификаторами |
+| P1 | `POST /combat/dnd/checks` | combat-dnd-core | расчёт проверки (атрибуты, бонусы, модификаторы) |
+| P1 | `POST /combat/dnd/micro-events` | combat-dnd-integration-shooter | логирование микро-проверок в бою |
+| P1 | `POST /combat/hacking/networks/{networkId}/breach` | combat-hacking-networks | запуск взлома, уровни доступа, время |
+| P1 | `POST /combat/hacking/combat/{sessionId}` | combat-hacking-combat-integration | интеграция боевого хакерства (offensive/defensive) |
+| P1 | `POST /combat/cyberspace/instances` | combat-cyberspace | создание VR-сессии, уровни доступа |
+| P1 | `POST /combat/stealth/events` | combat-stealth | фиксация обнаружения/стелс событий, модификаторы |
+| P1 | `POST /combat/freerun/actions` | combat-freerun | паркур/манёвры, проверка ограничений |
+| P2 | `POST /combat/extraction/zones/{zoneId}/extract` | combat-extract | старт/результат экстракции |
+| P2 | `POST /combat/arenas/{arenaId}/match` | arena-system | старт арены, рейтинги, награды |
+| P2 | `POST /combat/combos/apply` | combat-combos-synergies | применение комбо, проверка требований |
+
+### 3.2 WebSocket backlog
+| Приоритет | Канал | Источник | Описание payload |
+| --- | --- | --- | --- |
+| P0 | `wss://.../combat/raid/{raidId}` | combat-ai-enemies, combat-session-backend | `phase`, `mechanic`, `target`, `dndCheck` |
+| P0 | `wss://.../combat/sessions/{sessionId}` | combat-session-backend | события damage/heal, состояние участников |
+| P1 | `wss://.../combat/stealth/{sessionId}` | combat-stealth | `threatLevel`, `channel`, `detectedBy`, `timestamp` |
+| P1 | `wss://.../combat/freerun/{sessionId}` | combat-freerun | `action`, `success`, `buffs`, `dndCheckId` |
+| P1 | `wss://.../combat/cyberspace/{instanceId}` | combat-cyberspace | `layer`, `eventType`, `accessLevel`, `reward` |
+| P2 | `wss://.../combat/arenas/{arenaId}/match` | arena-system | `score`, `phase`, `voiceInvite`, `rewardPreview` |
+
+### 3.3 Event Bus backlog
+| Topic | Producer | Consumer | Поля |
+| --- | --- | --- | --- |
+| `combat.ai.state` | gameplay-service (AI) | analytics-service, quest-engine | `enemyId`, `phase`, `threat`, `timestamp` |
+| `combat.session.events` | gameplay-service (session) | analytics-service, economy-service | `sessionId`, `eventType`, `payload` |
+| `combat.freerun.movement` | gameplay-service (movement) | analytics-service | `characterId`, `action`, `success`, `position` |
+| `combat.hacking.alert` | gameplay-service (hacking) | security-service, quest-engine | `networkId`, `severity`, `source`, `actionRequired` |
+| `combat.extraction.result` | gameplay-service (extract) | economy-service, inventory-service | `zoneId`, `outcome`, `loot`, `squad` |
+| `combat.arena.match` | gameplay-service (arenas) | social-service, leaderboard-service | `arenaId`, `result`, `ratingDelta`, `reward` |
+
+### 3.4 Зависимости и этапы
+- **Этап 1 (P0):** combat sessions + raid AI (REST + WS + Kafka) — блокирует остальные подсистемы.
+- **Этап 2 (P1):** D&D ядро, abilities, hacking, stealth/freerun — требует Stage 1 и готовности D&D контрактов.
+- **Этап 3 (P2):** extraction, arenas, combos — можно запускать после стабилизации предыдущих этапов.
+- **Shared requirements:** security (rate limits, anti-cheat), telemetry (analytics-service), economy (награждения).
+
 ---
 
 ## 4. Следующие действия

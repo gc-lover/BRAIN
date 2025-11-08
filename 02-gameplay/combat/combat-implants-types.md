@@ -1,11 +1,11 @@
 ﻿# Боевая система — Импланты: Типы и назначение
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 00:47
-**api-readiness-notes:** Документ перепроверен, очищен от устаревших ссылок на API задачи; содержит полную детализацию типов боевых имплантов (v1.1.0).
+**api-readiness-check-date:** 2025-11-09 01:28
+**api-readiness-notes:** Перепроверено 2025-11-09 01:28. Полная детализация типов боевых имплантов готова к постановке API задач (v1.1.0).
 
 **target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (port 8083)  
+**target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/implants
 
 ## 1. Типы имплантов для боя — ✅ Решение
