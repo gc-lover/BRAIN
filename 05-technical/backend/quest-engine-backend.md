@@ -9,8 +9,9 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-226: api/v1/quests/quest-engine.yaml (2025-11-08 04:12)
-- **Last Updated:** 2025-11-08 04:12
+  - API-TASK-138: api/v1/gameplay/quests/quest-engine.yaml (2025-11-08 18:15)
+  - API-TASK-226: api/v1/gameplay/quests/quest-engine.yaml (2025-11-08 04:12)
+- **Last Updated:** 2025-11-08 18:15
 ---
 
 

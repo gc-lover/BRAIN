@@ -4,8 +4,8 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-136: api/v1/achievements/achievements.yaml (2025-11-07 10:32)
-- **Last Updated:** 2025-11-07 00:18
+  - API-TASK-136: api/v1/world/achievements/achievement-system.yaml (2025-11-08 18:05)
+- **Last Updated:** 2025-11-08 18:05
 ---
 
 

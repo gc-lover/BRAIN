@@ -9,8 +9,9 @@
 
 - **Status:** queued
 - **Tasks:**
-  - API-TASK-227: api/v1/combat/combat-session.yaml (2025-11-08 04:24)
-- **Last Updated:** 2025-11-08 04:24
+  - API-TASK-139: api/v1/gameplay/combat/combat-session.yaml (2025-11-08 18:20)
+  - API-TASK-227: api/v1/gameplay/combat/combat-session.yaml (2025-11-08 04:24)
+- **Last Updated:** 2025-11-08 18:20
 ---
 
 
