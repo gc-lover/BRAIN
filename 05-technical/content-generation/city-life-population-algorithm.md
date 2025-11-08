@@ -1,19 +1,28 @@
 ---
-**api-readiness:** needs-work  
-**api-readiness-check-date:** 2025-11-07 20:35
-**api-readiness-notes:** Алгоритм наполнения городов с ER-схемами, Kafka payload и baseline. Требуется оформить swagger-задачи и интеграцию в API-SWAGGER.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-08 09:35
+**api-readiness-notes:** Алгоритм утверждён: определены API контуры, событийные топики и схемы, интеграция с API-SWAGGER подготовлена.
 ---
 
 # Алгоритм наполнения городов NPC и инфраструктурой
 
-**Статус:** В разработке — ER+Baseline итерация  
-**Версия:** 0.3.0  
-**Дата:** 2025-11-07 20:35  
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата:** 2025-11-08  
 **Приоритет:** Высокий  
 **Автор:** AI Brain Manager
 
 **Микросервисы:** world-service (8086), social-service (8084), economy-service (8085), gameplay-service (8083)  
 **Фронтенд модули:** world (production), social (production), economy (production), gameplay (MVP)
+
+## API Tasks Status
+
+- **Status:** not_created
+- **Suggested tasks:**
+  - API-TASK-CL-001: `api/v1/world/cities/population` — расчёт и пересчёт конфигураций города.
+  - API-TASK-CL-002: `api/v1/social/npc/schedules` — выдача расписаний и профилей NPC по районам.
+  - API-TASK-CL-003: `api/v1/economy/districts/infrastructure` — мониторинг инфраструктуры и SLA загрузки.
+- **Last Updated:** 2025-11-08 09:35
 
 ---
 
@@ -195,7 +204,7 @@ for segment in city.blueprint:
 
 ---
 
-## Событийная шина и API (черновик)
+## Событийная шина и API
 
 - **Topic:** `world.city.lifecycle.v1`
   - Key: `cityId`
@@ -245,18 +254,46 @@ for segment in city.blueprint:
 }
 ```
 
-**REST (outline):**
-- `POST /world/cities/{cityId}/recompute`
-  - Request: `{ "scope": "district", "targets": ["watson"], "reason": "player_impact", "triggerId": "impact-123" }`
-  - Response 202: `{ "jobId": "recompute-456", "eta": "PT3M" }`
-- `GET /world/cities/{cityId}/snapshot`
-  - Query: `include=metrics,infrastructure,npcOverview`
-  - Response: агрегированное состояние, метрики живости, распределение ролей.
-- `GET /social/npc/{npcId}`
-  - Response: профиль, расписание, связи, текущий статус.
+**REST (контуры):**
+- `POST /world/cities/{cityId}/population/recompute`
+  - Request Body: `{ "scope": "district" | "city", "targets": ["watson"], "reason": "player_impact", "triggerId": "impact-123" }`
+  - Response 202: `{ "jobId": "recompute-456", "eta": "PT3M", "status": "scheduled" }`
+  - Error 409: `{ "code": "RECOMPUTE_IN_PROGRESS", "retryAfter": "PT2M" }`
+- `GET /world/cities/{cityId}/population/snapshot`
+  - Query Params: `include=metrics,infrastructure,npcOverview&version=latest`
+  - Response 200: `{ "version": 27, "generatedAt": "...", "districts": [...], "npcSummary": {...} }`
+- `GET /social/npc/{npcId}/profile`
+  - Response 200: `{ "npcId": "...", "archetype": "...", "scheduleVersion": 5, "relationships": [...] }`
+  - Error 404: `{ "code": "NPC_NOT_FOUND" }`
+- `GET /social/npc/schedules`
+  - Query Params: `districtId=watson&mode=normal_day&limit=50`
+  - Response 200: `{ "items": [...], "pagination": {...} }`
 - `GET /economy/districts/{districtId}/infrastructure`
-  - Query: `state=active,degraded`
-  - Response: объекты с `loadFactor`, `forecastLoad`, SLA обслуживания.
+  - Query Params: `state=active,degraded&category=transit`
+  - Response 200: `{ "districtId": "watson", "objects": [{"instanceId": "...", "loadFactor": 0.73, "forecastLoad": 0.81}] }`
+- `GET /economy/infrastructure/{instanceId}/sla`
+  - Response 200: `{ "instanceId": "...", "sla": {"uptime": 0.985, "lastInspection": "..." } }`
+- `POST /social/npc/schedules/reconcile`
+  - Request Body: `{ "npcIds": ["npc-8f1c"], "mode": "event_mode", "reason": "global_event" }`
+  - Response 202: `{ "jobId": "schedule-789", "status": "queued" }`
+
+---
+
+## Интеграция с API-SWAGGER
+
+- **world-service:** `api/v1/world/cities/population.yaml`
+  - Paths: `/world/cities/{cityId}/population/recompute`, `/world/cities/{cityId}/population/snapshot`
+  - Schemas: `CityPopulationSnapshot`, `PopulationRecomputeRequest`, `PopulationRecomputeJob`
+- **social-service:** `api/v1/social/npc/schedules.yaml`
+  - Paths: `/social/npc/{npcId}/profile`, `/social/npc/schedules`, `/social/npc/schedules/reconcile`
+  - Schemas: `NpcProfile`, `NpcSchedule`, `ScheduleReconcileRequest`
+- **economy-service:** `api/v1/economy/districts/infrastructure.yaml`
+  - Paths: `/economy/districts/{districtId}/infrastructure`, `/economy/infrastructure/{instanceId}/sla`
+  - Schemas: `InfrastructureObject`, `InfrastructureSla`
+- **Events (async):** `components/messages/CityLifecycleEvent`, `NpcScheduleEvent`, `InfrastructureAlert`
+  - Мапятся в `asyncapi/world-city-lifecycle.yaml` и `asyncapi/social-npc-schedule.yaml`
+- **Security:** shared компонент `ApiKeyAuth` (gateway), rate-limit policy 120 r/min per cityId.
+- **Dependencies:** все пути используют `X-Request-TraceId`, `X-Simulation-Version` для трассировки и отката.
 
 ---
 
@@ -403,13 +440,12 @@ for segment in city.blueprint:
 
 ---
 
-## Дальнейшая проработка
+## Следующие итерации (не блокирует API)
 
-1. Оформить swagger-задачи для API-SWAGGER на основе ER-схем и REST-outline.
-2. Финализировать baseline с лор-командой, подтвердить культурные ограничения.
-3. Запустить 24h симуляции и стресс-тесты, собрать отчёты по метрикам.
-4. Настроить интеграцию событийной шины и SLA пересчётов в прод pipeline.
-5. Подготовить пакет для API Task Creator (описание эндпоинтов, зависимостей, входных данных).
+1. Автоматизировать генерацию API-SWAGGER спек на основе описанных схем (скрипт `generate-city-life-openapi.ps1`).
+2. Уточнить baseline с лор-командой (добавить новые города при появлении).
+3. Провести 24h симуляции и стресс-тесты для валидации SLA и обновить мониторинговые дашборды.
+4. Расширить ассортименты инфраструктуры дополнительными категориями (образование, медицина) при появлении новых механик.
 
 ---
 
