@@ -16,8 +16,16 @@
 ## Блокеры
 - Действует запрет на создание задач в `API-SWAGGER` до отдельного разрешения.
 
+## Черновик пакета для ДУАПИТАСК
+- **REST:** `/combat/ai/profiles`, `/combat/ai/profiles/{id}`, `/combat/ai/profiles/{id}/telemetry`, `/combat/raids/{raidId}/phase`, `/combat/ai/encounter`.
+- **WebSocket:** `wss://api.necp.game/v1/gameplay/raid/{raidId}` с событиями `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
+- **Kafka:** `combat.ai.state`, `world.events.trigger`, `raid.telemetry` — указаны producer/consumer и payload.
+- **D&D проверки:** Street REF 15 / TECH 14, Tactical INT 18 / WIS 17, Mythic WIS 20 / TECH 19, Raid INT 22 / STR 21.
+- **Схемы БД:** `enemy_ai_profiles`, `enemy_ai_abilities`, `raid_boss_phases` (JSONB поля для поведений и механик).
+- **Зависимости:** материалы `combat-extract`, `combat-hacking`, `combat-combos`, `combat-implants`, `combat-session` (все в статусе ready) — обеспечивают связность навыков и телеметрии.
+
 ## Следующие действия
-1. Сформировать конспект требований (REST, WebSocket, Kafka, D&D проверки) для передачи ДУАПИТАСК.
-2. Сверить связи с документами `combat-extract`, `combat-hacking-networks`, `combat-hacking-combat-integration` и отразить зависимости в пакете.
-3. После снятия запрета на работу в `API-SWAGGER` подготовить задачу, обновить очереди и синхронизировать `implementation-tracker.yaml`.
+1. Сформировать краткое резюме требований (REST, WebSocket, Kafka потоки, D&D проверки) для передачи ДУАПИТАСК.
+2. Сверить зависимости с другими документами (`combat-extract`, `combat-hacking`) и указать их в итоговом пакете.
+3. После разрешения на работу в `API-SWAGGER` подготовить задачу и обновить очереди/трекеры.
 

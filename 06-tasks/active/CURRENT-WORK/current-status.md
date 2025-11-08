@@ -1,6 +1,6 @@
 # Текущий статус активных направлений
 
-**Обновлено:** 2025-11-09 00:58  
+**Обновлено:** 2025-11-09 00:59  
 **Ответственный:** Brain Manager
 
 ---
@@ -11,6 +11,7 @@
 ## Pending
 - Auth/Characters/Progression — ждём слот ДУАПИТАСК для задач по auth README, character-management и progression-backend.
 - gameplay-service/arenas — подтвердить приоритет и окно ДУАПИТАСК для `.BRAIN/02-gameplay/combat/arena-system.md` (ready, рейтинговые циклы).
+- gameplay-service/quests — подготовить пакет задач на основе `.BRAIN/05-technical/backend/quest-engine-backend.md` (ready, quest state machine + D&D checks).
 ## Blocked
 - *(блокеров нет)*
 
