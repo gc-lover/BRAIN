@@ -13,7 +13,7 @@
 - Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты для дальнейшего разбиения на задачи ДУАПИТАСК.
 - Определены зависимости по микросервисам (`world-service`, `social-service`, `economy-service`) и Kafka-топикам (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
 - Проверено ядро системы проверок `.BRAIN/02-gameplay/combat/combat-dnd-core.md`: подтверждены DC, модификаторы, групповые проверки, добавлено в `ready.md` и `readiness-tracker.yaml`.
-- Актуализированы readiness-записи для `combat-abilities`, `combat-stealth`, `combat-freerun` — подтверждён статус `ready`, даты проверки освежены (2025-11-09 01:13), добавлены каталоги `api/v1/gameplay/combat/abilities.yaml`, `api/v1/gameplay/combat/stealth.yaml`, `api/v1/gameplay/combat/freerun.yaml` и соответствующие фронтенд-модули; агрегированная сводка зафиксирована в `2025-11-09-combat-wave-package.md`.
+- Актуализированы readiness-записи для `combat-ai-enemies`, `combat-abilities`, `combat-dnd-core`, `combat-dnd-integration-shooter`, `arena-system` — подтверждён статус `ready`, даты проверки освежены (2025-11-09 01:15), уточнены каталоги `api/v1/gameplay/combat/*.yaml` и фронтенд-модули; агрегированная сводка зафиксирована в `2025-11-09-combat-wave-package.md`.
 
 ## Материалы и статусы
 - `combat-ai-enemies.md` — v1.0.0, `ready`, приоритет `highest`, микросервис `gameplay-service`, модуль `modules/combat/ai`.
