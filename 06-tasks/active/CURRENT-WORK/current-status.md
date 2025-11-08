@@ -1,14 +1,16 @@
 # Текущий статус активных направлений
 
-**Обновлено:** 2025-11-09 00:55  
+**Обновлено:** 2025-11-09 00:57  
 **Ответственный:** Brain Manager
 
 ---
 
 ## Active
-- *(нет активных направлений)*
+- MVP Readiness Review — проверяем и фиксируем готовность документов (auth, characters, progression, inventory, combat session, trade, combat implants, combat combos, combat AI, D&D integration, arenas) без запуска задач в API-SWAGGER.
 ## Pending
-- Ожидаем отдельного разрешения на создание задач в API-SWAGGER по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (gameplay-service, combat AI); пакет подготовлен, очередь обновлена 2025-11-09 00:55.
+- gameplay-service/combat-ai — подготовить ДУАПИТАСК по `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` (ready, REST/WS покрыты).
+- gameplay-service/arenas — сформировать задания для `.BRAIN/02-gameplay/combat/arena-system.md` (ready, рейтинговые циклы).
+- gameplay-service/dnd-integration — спланировать задачу по `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md` (ready, микро-проверки).
 
 ## Blocked
 - *(блокеров нет)*
