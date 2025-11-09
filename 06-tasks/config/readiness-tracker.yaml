@@ -1921,6 +1921,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Файл заполнен краткими маркерами; необходимо применить QUEST-TEMPLATE, добавить версию, статусы, ветки, награды и связи с системами перед постановкой API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-003-armenian-cognac.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 09:38: требуется применить QUEST-TEMPLATE, описать ветвления, зависимости и целевые API каталоги, указать связанный фронтенд модуль."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-002-tacos-al-pastor.md"
     version: "0.1.0"
     status: "needs-work"
