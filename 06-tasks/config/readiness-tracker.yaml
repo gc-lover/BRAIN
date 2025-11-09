@@ -242,46 +242,46 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:18"
+    checked: "2025-11-09 04:27"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Очередь not-applicable перепроверена 2025-11-09 04:18; документ служебный и не формирует API задачи."
+    notes: "Очередь not-applicable перепроверена 2025-11-09 04:27; документ служебный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/needs-work.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:18"
+    checked: "2025-11-09 04:27"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Очередь needs-work перепроверена 2025-11-09 04:18; документ служебный и не формирует API задачи."
+    notes: "Очередь needs-work перепроверена 2025-11-09 04:27; документ служебный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/in-review.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:18"
+    checked: "2025-11-09 04:27"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Очередь in-review перепроверена 2025-11-09 04:18; документ служебный и не формирует API задачи."
+    notes: "Очередь in-review перепроверена 2025-11-09 04:27; документ служебный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/blocked.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:18"
+    checked: "2025-11-09 04:27"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Очередь blocked перепроверена 2025-11-09 04:18; документ служебный и не формирует API задачи."
+    notes: "Очередь blocked перепроверена 2025-11-09 04:27; документ служебный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1459,17 +1459,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Перепроверено 2025-11-09 04:17: файл служит навигацией по материалам биржи и не формирует API задачи."
-  - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
-    version: "1.1.0"
+  - path: ".BRAIN/02-gameplay/economy/economy-trading.md"
+    version: "1.0.0"
     status: "ready"
     priority: "high"
-    checked: "2025-11-09 04:19"
+    checked: "2025-11-09 04:28"
     checker: "Brain Manager"
     api_target:
       microservice: "economy-service"
-      directory: "api/v1/economy/trading/trading-guilds.yaml"
-      frontend_module: "modules/economy/trading-guilds"
-    notes: "Перепроверено 2025-11-09 04:19: документ покрывает создание, управление капиталом, API, аудит и интеграции торговых гильдий; готов к постановке задач economy-service."
+      directory: "api/v1/economy/trading/trading-core.yaml"
+      frontend_module: "modules/economy/trading"
+    notes: "Перепроверено 2025-11-09 04:28: зафиксированы типы торговли, социальное влияние и маршруты; документ готов к постановке API задач economy-service."
   - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
     version: "1.1.0"
     status: "ready"

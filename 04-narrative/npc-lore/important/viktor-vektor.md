@@ -7,8 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 11:15
-**api-readiness-notes:** Литературный документ, описание NPC, не предназначен для создания API
+**api-readiness-check-date:** 2025-11-09 04:28
+**api-readiness-notes:** Литературный документ; подтверждено 2025-11-09 04:28, что материал описывает NPC и не требует API задач
 
 **Категория:** important  
 **ID NPC:** npc-viktor-vektor
