@@ -22,7 +22,7 @@
   2. `Tactical Layer` — корпоративные отряды 2060-2093 и элита фракций.
   3. `Mythic Layer` — киберпсихи, легендарные враги и мировые события.
   4. `Raid Layer` — сценарии рейдов (Blackwall Expedition, Corpo Tower Assault).
-- **Контроллер:** Behaviour Tree + Utility AI + D&D проверки. Очередь действий синхронизируется через `combat_session` (WebSocket) и Kafka-топики.
+- **Контроллер:** Behaviour Tree + Utility AI + shooter skill tests (accuracy, resilience, tech mastery). Очередь действий синхронизируется через `combat_session` (WebSocket) и Kafka-топики.
 
 ### Kafka топики
 | Топик | Producer | Consumer | Payload |
@@ -38,33 +38,33 @@
 | Street | NCPD Patrol, 6th Street, Scavs | Bronze-Silver | `Urban Sweep` | Короткие рывки из укрытий, усиливаются, когда игрок нарушает закон в районе (сюжет: восстановление порядка в Watson 2023-2028). |
 | Street | Valentinos, Tyger Claws | Silver-Gold | `Honor Duel` | Предлагают одиночный бой, при отказе вызывают подкрепление. Подвязывается к репутации в `social-service`. |
 | Tactical | Arasaka SpecOps, Militech Strike | Gold-Platinum | `Sync Burst` | Синхронизированный залп после счёта | lore: корпоративные войны 2060-2077. |
-| Tactical | NetWatch Drones, Kang Tao Mechs | Platinum | `Protocol Lock` | Запирают способности игроков, пока netrunner не выполнит взлом (D&D INT DC 18). |
-| Mythic | MaxTac, Cyberpsycho, Rogue AI | Diamond | `Fear Surge` | Массовый дебафф морального духа, проверка WIS DC 20. Триггер событий «Cyberpsycho Surge» 2084. |
-| Raid | Blackwall Entities | Mythic+ | `Reality Tear` | Перенос игроков в карманы реальности, проверка INT DC 22. Связан с квестом `quest-main-2093-net-shift`. |
+| Tactical | NetWatch Drones, Kang Tao Mechs | Platinum | `Protocol Lock` | Блокируют способности, пока netrunner не применит `tech_mastery ≥ 72` или контр-имплант `firewall-breaker`. |
+| Mythic | MaxTac, Cyberpsycho, Rogue AI | Diamond | `Fear Surge` | Массовый дебафф морали, требует `resilience ≥ 78` либо активного `psy-shield` импланта. |
+| Raid | Blackwall Entities | Mythic+ | `Reality Tear` | Перенос игроков в карманы реальности; необходимо удерживать `stability ≥ 80` и поддерживать `sync-link` squad. |
 | Raid | Corpo Tower Guardians | Mythic+ | `Corporate Ultimatum` | Таймер на уничтожение целей, иначе массовая казнь NPC союзников (сюжет операции 2088). |
 
 ## 3. Поведенческие профили
 
 ### Street Layer
-- **Изменение тактики:** Стадии тревоги (низкая, эскалация, критическая). Переходы зависят от d20 проверки слуха/зрения.
+- **Изменение тактики:** Стадии тревоги (низкая, эскалация, критическая). Переходы зависят от `threatDetection` (шанс обнаружения ≥ 65%) и `noise_level` из `combat-stealth`.
 - **Навыки:**
-  - `Urban Sweep` (Cooldown 12s, AoE suppression).
-  - `Adrenal Shift` (при HP < 40%, +10 инициативы, lore: стимуляторы Arasaka 2055).
+  - `Urban Sweep` (Cooldown 12s, AoE suppression, наносит `suppressionScore = 40`).
+  - `Adrenal Shift` (при HP < 40%, +15% скорость реакции, lore: стимуляторы Arasaka 2055).
   - `Flash Escort` (вызов дронов сопровождения, доступно после сюжетной арки NCPD 2070).
 - **Интеграция с лором:** выбор тактик зависит от статуса района в `world-state`: если район под контролем корпорации, NPC используют корпоративные гаджеты.
 
 ### Tactical Layer
 - **Фракции:** Arasaka, Militech, Kang Tao, NetWatch, Voodoo Boys (сетевые фантомы).
 - **Ротация фаз:**
-  1. `Recon` — анализ укрытий, скан игроков (`Scan Pulse`, D&D PER DC 17).
+  1. `Recon` — анализ укрытий, скан игроков (`Scan Pulse`, требует `stealth_resistance ≥ 62` для сохранения невидимости).
   2. `Engage` — применение `Sync Burst`, `Protocol Lock`.
   3. `Adapt` — смена паттернов в зависимости от действий игроков (анализ через аналитический сервис).
 - **Уникальные навыки:**
   - Arasaka: `Silent Rift` (мгновенное перемещение двух бойцов, история спецоперации 2072).
   - Militech: `Saturation Fire` (LMG залп, подавление, требуется Tank блокировка).
   - Kang Tao: `Smart Swarm` (дроны, наведение по тепловой сигнатуре).
-  - NetWatch: `ICE Burst` (заморозка кибердеков, INT спасбросок).
-  - Voodoo Boys: `Digital Possession` (краткое управление имплантом игрока, COOL DC 20).
+  - NetWatch: `ICE Burst` (заморозка кибердеков; контрится `tech_mastery ≥ 74`).
+  - Voodoo Boys: `Digital Possession` (краткое управление имплантом игрока; требуется `psy_resistance ≥ 77`).
 
 ### Mythic Layer
 - **Типы:** MaxTac, Cyberpsycho, Rogue AI Avatars, Legendary Fixers.
@@ -72,16 +72,16 @@
   - `Cyberpsycho Resurgence` (2084) — миссии NCPD, игроки выбирают спасти или устранить.
   - `Blackwall Breach` (2090) — Rogue AI выходит в мир, приводит к активу Rogue AI Avatars.
 - **Навыки:**
-  - MaxTac: `Zero Strike` (одно целевое отключение, требует реакцию Tank, WIS DC 21 для перехвата).
-  - Cyberpsycho: `Overclock Rage` (stack damage, если не сбить имплант через TECH DC 19).
+  - MaxTac: `Zero Strike` (одно целевое отключение, требует синхронный `guard_response ≥ 82` от Tank).
+  - Cyberpsycho: `Overclock Rage` (stack damage, прекращается при `tech_mastery ≥ 76` или импланте `neuro-dampener`).
   - Rogue AI: `Adaptive Mirror` (копирует последнюю способность игрока, требует вариативность в тимплее).
-- **Мораль и страх:** AI отслеживает `morale` и `fear` по таблице, влияет на вероятность отступления или berserk.
+- **Мораль и страх:** AI отслеживает `morale` и `fear` по таблице, влияет на вероятность отступления или berserk; игроки снижают эффект через `resilience` и способности `combat-abilities`.
 
 ### Raid Layer
 - **Сценарии:** `raid-blackwall-expedition`, `raid-corpo-tower-assault`.
 - **Фазовые состояния:** `Preparation`, `PhaseCombat`, `Intermission`, `Finale`. Каждое состояние публикуется в `raid.telemetry`.
 - **Навыки босса:**
-  - Blackwall Entity: `Reality Tear`, `Neural Cascade`, `Entropy Spiral` (stacking DoT, очищается skill check TECH DC 20).
+  - Blackwall Entity: `Reality Tear`, `Neural Cascade`, `Entropy Spiral` (stacking DoT, очищается при `tech_mastery ≥ 80` или активации `stability_matrix`).
   - Corpo Tower AI: `Corporate Ultimatum`, `Omni Turret Grid`, `Collateral Threat` (NPC заложники, выбор игрока влияет на сюжетные флаги).
 - **Уникальные рейдовые механики:** связки с квестами (`quest-main-042-black-barrier-heist`, `quest-main-022-corporate-wars-operation`). Разрешение влияет на глобальные флаги `world.flag.corporate_balance` и `world.flag.blackwall_integrity`.
 
@@ -100,7 +100,7 @@ aiprofile:
   stats:
     level: 55
     hp: 3800
-    armorClass: 24
+    defenseRating: 24
     morale: 95
   abilities:
     - id: "zero-strike"
@@ -110,9 +110,9 @@ aiprofile:
     - id: "fear-surge"
       cooldown: 30
       effect: "aoe-morale-break"
-      savingThrow:
-        attribute: "WIS"
-        dc: 20
+      skillTest:
+        metric: "resilience"
+        threshold: 78
     - id: "drone-command"
       cooldown: 25
       effect: "summon"
@@ -159,7 +159,7 @@ CREATE TABLE raid_boss_phases (
     phase INTEGER NOT NULL,
     hp_threshold INTEGER NOT NULL,
     mechanics JSONB NOT NULL,
-    dnd_checks JSONB NOT NULL,
+    skill_tests JSONB NOT NULL,
     PRIMARY KEY (boss_id, phase)
 );
 ```
@@ -176,15 +176,15 @@ CREATE TABLE raid_boss_phases (
 
 **WebSocket:** `wss://api.necp.game/v1/gameplay/raid/{raidId}` — поток состояния фаз, HP босса, активных механик. События: `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
 
-## 7. D&D проверки и модификаторы
-- **Street Layer:** REF DC 15 для уклонения от `Urban Sweep`, TECH DC 14 для отключения дронов.
-- **Tactical Layer:** INT DC 18 для взлома `Protocol Lock`, WIS DC 17 для заметки `Silent Rift`.
-- **Mythic Layer:** WIS DC 20 против `Fear Surge`, TECH DC 19 для стабилизации киберпсихов без убийства (влияет на репутацию NCPD).
-- **Raid Layer:** INT DC 22 для `Reality Tear`, STR DC 21 для удержания колонн в Corpo Tower (событие 2088).
+## 7. Shooter skill tests и пороги
+- **Street Layer:** `evasion_threshold ≥ 66` для ухода от `Urban Sweep`, `tech_mastery ≥ 62` для отключения дронов сопровождения.
+- **Tactical Layer:** `tech_mastery ≥ 74` для взлома `Protocol Lock`, `awareness ≥ 70` чтобы заметить подготовку `Silent Rift`.
+- **Mythic Layer:** `resilience ≥ 78` против `Fear Surge`, `tech_mastery ≥ 76` для стабилизации киберпсихов без летального исхода (поддерживает репутацию NCPD).
+- **Raid Layer:** `stability ≥ 80` для противодействия `Reality Tear`, `strength_support ≥ 82` для удержания силовых колонн в Corpo Tower (операция 2088).
 
 ## 8. Баланс и телеметрия
 - **Цели сложности:** Street — 65% победа соло, Tactical — 55% для групп, Mythic — 35%, Raid — 20% (первый clear).
-- **Метрики:** средний урон по игрокам, время до первого падения, количество успешных спасбросков, использование контр-способностей.
+- **Метрики:** средний урон по игрокам, время до первого падения, доля успешных shooter skill tests, использование контр-способностей.
 - **Автотюнинг:** analytics-service пересчитывает коэффициенты каждые 24 часа, обновления откладываются, пока world-event активен.
 - **Анти-эксплойт:** повторяющиеся однообразные действия снижают эффективность навыка AI (Utility AI снижает вес паттерна).
 
@@ -199,7 +199,7 @@ CREATE TABLE raid_boss_phases (
 - **Integration:** симуляция встречи 4 типов сложностей, проверка Kafka сообщений и синхронизации фаз.
 - **Narrative QA:** соответствие реплик NPC изменению мировых флагов и репутации.
 - **Load:** стресс-тест рейдов на 20k событий в минуту, проверка лагов и отката способности `Reality Tear`.
-- **Telemetry Review:** еженедельный отчёт по провалам D&D проверок, корректировка DC.
+- **Telemetry Review:** еженедельный отчёт по провалам shooter skill tests, корректировка порогов `accuracy/resilience/tech_mastery`.
 
 ## 11. История изменений
 - v1.0.0 (2025-11-07) — базовая матрица AI по слоям NPC, рейдам и сюжетным событиям.

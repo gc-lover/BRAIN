@@ -83,10 +83,10 @@
 - Получение и улучшение имплантов
 - Хакерство имплантов, совместимость, долговечность
 
-### 9. D&D: Кубики и проверки (интеграция)
-- **См. документ:** `combat-dnd-core.md`
-- **Интеграция с шутером:** `combat-dnd-integration-shooter.md`
-- **Применение в механиках:** `combat-dnd-mechanics-integration.md`
+### 9. Shooter Core и skill tests
+- **См. документ:** `combat-shooter-core.md`
+- **Интеграция с системами:** `combat-shooting.md`, `combat-abilities.md`, `combat-stealth.md`
+- **Применение в механиках:** loadouts, прогрессия, античит, телеметрия
 
 ### 10. Система Loadouts и комплектов
 - **См. документ:** `combat-loadouts-system.md`

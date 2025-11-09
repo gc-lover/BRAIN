@@ -35,11 +35,11 @@
 - COOL 19 — сопротивление безумию (защита от insanity статуса).
 - INT 19 — понять архивы (+данные, +XP 150).
 
-## 3. D&D-параметры
-- Инициатива: d20 + INT (netrunning), d20 + REF (physical).
-- AC: 16–18 (AI combat proxy), 19 (Archive guardians).
-- Урон: d10+5 (neural attacks), d12+6 (reality distortion), d20 (instant kill при провале COOL).
-- Состояния: «Безумие» (insanity, случайные действия), «Кибершок» (stun), «Реальностный разрыв» (teleportation, confusion).
+## 3. Shooter параметры
+- Инициатива: `reaction_time = 0.7 × REF + импланты`, для netrunner ветки учитывается `tech_latency`.
+- Защита противников: `defenseRating 250`, `ice_resilience 285` для архивных стражей.
+- Урон: `neural_dps = 180`, `reality_distortion = 240 burst`, мгновенный краш при `cool_resilience < 60`.
+- Состояния: «Безумие» (random input), «Кибершок» (stun), «Reality Tear» (teleport + confusion).
 
 ## 4. UX экраны
 ```

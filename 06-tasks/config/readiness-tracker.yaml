@@ -2027,7 +2027,7 @@ mappings:
 
     priority: "low"
 
-    checked: "2025-11-09 23:30"
+    checked: "2025-11-09 23:50"
 
     checker: "Brain Manager"
 
@@ -2072,7 +2072,7 @@ mappings:
 
     version: "0.2.0"
 
-    status: "drafting"
+    status: "in-progress"
 
     priority: "critical"
 
@@ -2086,9 +2086,9 @@ mappings:
 
       directory: "api/v1/gameplay/combat/shooter-core.yaml"
 
-      frontend_module: "modules/combat/shooter"
+      frontend_module: "modules/combat/mechanics"
 
-    notes: "Обновлены таблицы оружия, хитбоксов и SLA. Перед переводом в ready нужно сверить значения с combat-shooting.md и утвердить античит пороги."
+    notes: "Заполнены оружейные таблицы и SLA; требуется обновить оставшиеся квестовые документы и подтвердить античит пороги с security-service перед переводом в ready."
 
   - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
 

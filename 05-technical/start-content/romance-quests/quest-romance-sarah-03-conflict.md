@@ -37,16 +37,16 @@
 - **Path B (Investigate):** Расследовать дело → раскрыть коррупцию (+30 romance points, спасти друга, −10 NCPD rep)
 - **Path C (Reject):** Отвергнуть Сару → конфликт (−40 romance points, romance arc damaged)
 
-## 3. D&D-параметры
+## 3. Shooter параметры
 
-### Skill Checks:
-- COOL 17 — поддержать решение Сары (успех = +20 romance points)
-- INVESTIGATION 16 — найти доказательства коррупции (успех = раскрыть заговор)
-- EMPATHY 15 — понять эмоции Сары (успех = +10 romance points)
+### Skill Tests:
+- `cool_resilience ≥ 68` — поддержать решение Сары (успех = +20 romance points).
+- `investigation_proficiency ≥ 65` — найти доказательства коррупции (успех = раскрыть заговор).
+- `empathy_signal ≥ 60` — понять эмоции Сары (успех = +10 romance points).
 
 ### Combat (опционально, если Path C):
-- 5 врагов (коррумпированные копы), AC 14, HP 80
-- Сара может сражаться на стороне игрока OR против (зависит от choices)
+- 5 врагов (коррумпированные копы), `defenseRating 190`, HP 320, `accuracy 58%`.
+- Сара может сражаться на стороне игрока или против (зависит от choices); модификатор `support_bonus = 12% dmg`.
 
 ## 4. UX экраны
 

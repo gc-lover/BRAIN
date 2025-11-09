@@ -347,10 +347,10 @@
    - Меняет тактики
    - Эмоциональная система
 
-4. **D&D Skill Checks** в шутере
-   - d20 rolls для критических моментов
-   - Attribute влияние
-   - Team coordination checks
+4. **Shooter Skill Tests** в шутере
+   - Пороговые значения точности/устойчивости
+   - Влияние имплантов и ролей
+   - Синхронизация командных триггеров без рандома
 
 5. **Cyberpunk Authenticity**
    - Sandevistan, Mantis Blades
@@ -484,7 +484,7 @@ CombatRole.java
 - ✅ **Weapon mastery** с прогрессией
 - ✅ **Adaptive AI** который учится
 - ✅ **Boss catalog** с уникальными механиками
-- ✅ **D&D checks** интегрированы
+- ✅ **Shooter skill tests** интегрированы
 - ✅ **Cyberpunk lore** аутентичен
 
 ---
