@@ -11,8 +11,6 @@
 
 ---
 
-# История Гражданской Войны
-
 **quest-id:** ATLANTA-2029-005  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h

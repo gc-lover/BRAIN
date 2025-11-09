@@ -54,6 +54,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE: структурировать этапы с развилками, добавить зависимости (quest-engine, economy, social), определить микросервис, каталог API и фронтенд-модуль для Berlin Tech Summit.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/rome/2020-2029/quest-004-pasta-master.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:36 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE: добавить версию и статус сценария, расписать зависимости с системами, проверки этапов, ветвления, а также определить целевые микросервисы, каталоги API и фронтенд-модуль перед передачей в API поток.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать ветвления, NPC, требования к quest-engine, KPI наград и интеграции с экономикой/социальными системами; определить целевые API каталоги.
@@ -63,8 +66,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-001-white-house.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Расписать контроль доступа, NPC Secret Service, исходы туров и интеграции с дипломатическими/безопасными системами quest-engine, определить целевые каталоги API.
-<<<<<<< Updated upstream
-=======
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Разработать ветвления (тур, заседание, тревога), NPC и события Jan 6, интеграции с системами безопасности/политики и указать каталоги API quest-engine.
@@ -74,7 +75,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Сформировать маршруты, расписания, ветвления и KPI посещений Smithsonian, добавить NPC и определить интеграции с образовательными/экономическими системами и каталогами API quest-engine.
->>>>>>> Stashed changes
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
