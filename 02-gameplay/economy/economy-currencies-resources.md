@@ -7,6 +7,13 @@
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
 **target-frontend-module:** modules/economy/currencies
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-107: api/v1/economy/currencies/currencies-resources.yaml (2025-11-09)
+- Last Updated: 2025-11-09 19:55
+---
 
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-03  
