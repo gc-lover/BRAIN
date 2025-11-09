@@ -13,6 +13,13 @@
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/combos
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-402: api/v1/gameplay/combat/combos/combos-synergies.yaml (2025-11-09)
+- Last Updated: 2025-11-09 22:50
+---
+
 ---
 
 ## 🔗 Типы Синергий
