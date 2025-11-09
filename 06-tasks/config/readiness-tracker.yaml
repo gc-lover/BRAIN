@@ -106,6 +106,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Сценарий Brain Manager перепроверен 2025-11-09 03:55; документ описывает процессы и не формирует прямых API задач."
+  - path: ".BRAIN/МЕНЕДЖЕР-CHECKLIST.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:00"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Чеклист Brain Manager перепроверен 2025-11-09 04:00; документ используется для внутреннего контроля и не формирует API задачи."
+  - path: ".BRAIN/МЕНЕДЖЕР-EXAMPLES.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:59"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Примеры Brain Manager перепроверены 2025-11-09 03:59; документ предоставляет примеры процессов и не формирует API задачи."
   - path: ".BRAIN/МЕНЕДЖЕР-PROCEDURES.md"
     version: "1.0.0"
     status: "not-applicable"

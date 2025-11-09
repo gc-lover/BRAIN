@@ -1,3 +1,15 @@
+---
+
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Последнее обновление:** 2025-11-09 04:00  
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 04:00  
+**api-readiness-notes:** Чеклист Brain Manager служит вспомогательным контролем процессов и не требует постановки API задач; статус not-applicable подтверждён 2025-11-09 04:00.
+
+---
+
 # Чеклист Brain Manager Agent
 
 ## Ссылки
