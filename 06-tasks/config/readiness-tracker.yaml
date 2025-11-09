@@ -183,6 +183,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Обзор справочных материалов перепроверен 2025-11-09 04:08; служебный документ не формирует API задачи."
+  - path: ".BRAIN/08-references/links.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:10"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Список ссылок перепроверен 2025-11-09 04:10; документ служебный и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1096,3 +1107,14 @@ mappings:
       directory: "api/v1/economy/production/production-chains.yaml"
       frontend_module: "modules/economy/production"
     notes: "Перепроверено 2025-11-09 04:03: последовательности крафта, временные затраты и экономические показатели готовы к пакетированию API задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-resources-catalog.md"
+    version: "2.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 04:10"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/resources/resources-catalog.yaml"
+      frontend_module: "modules/economy/resources"
+    notes: "Перепроверено 2025-11-09 04:10: классификация ресурсов, источники, стоимости и ограничения готовы к постановке API задач economy-service."

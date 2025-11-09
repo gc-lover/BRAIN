@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/economy-resources-catalog.md"
   - path: ".BRAIN/02-gameplay/economy/economy-stock-exchange/README.md"
   - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
   - path: ".BRAIN/02-gameplay/economy/economy-trading.md"
@@ -2708,4 +2707,3 @@
   - path: ".BRAIN/07-research/README.md"
   - path: ".BRAIN/08-references/abbreviations.md"
   - path: ".BRAIN/08-references/glossary.md"
-  - path: ".BRAIN/08-references/links.md"

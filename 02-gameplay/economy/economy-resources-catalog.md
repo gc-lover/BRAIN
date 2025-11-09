@@ -1,4 +1,14 @@
-﻿# Каталог Ресурсов и Материалов
+﻿---
+- **Status:** approved
+- **Last Updated:** 2025-11-09 04:10
+---
+
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 04:10  
+**api-readiness-notes:** Перепроверено 2025-11-09 04:10. Каталог ресурсов покрывает категории, источники, применения, экономические параметры и ограничения; документ готов к постановке задач economy-service.
+
+
+# Каталог Ресурсов и Материалов
 
 **Версия:** 2.0.0  
 **Дата:** 2025-11-06  
@@ -7,12 +17,6 @@
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
 **target-frontend-module:** modules/economy/resources
-
----
-
-- **Status:** created
-- **Last Updated:** 2025-11-07 04:30
----
 
 ---
 
