@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-09 01:03  
 **api-readiness-notes:** Quest Engine backend перепроверен 2025-11-09 01:03: state machine, диалоговый движок, D&D skill checks и branching готовы к постановке задач для gameplay-service.
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-098: api/v1/gameplay/quests/quest-engine.yaml (2025-11-09)
+- Last Updated: 2025-11-09 17:28
+---
+
 **target-domain:** gameplay-quests  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/quests
