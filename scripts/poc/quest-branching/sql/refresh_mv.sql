@@ -1,0 +1,2 @@
+REFRESH MATERIALIZED VIEW CONCURRENTLY quest_path_popularity;
+
