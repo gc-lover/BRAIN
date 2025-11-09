@@ -1,5 +1,14 @@
 # Берлинская Tech-Конференция
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:36  
+**Приоритет:** low
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:36  
+**api-readiness-notes:** Требуется применить QUEST-TEMPLATE: структурировать этапы с вариантами исходов, добавить зависимости (quest-engine, economy, social), указать целевой микросервис, каталог API и фронтенд-модуль, а также расширить награды и интеграции перед постановкой задач.
+
 **quest-id:** BERLIN-2077-036  
 **city:** Берлин | **region:** Европа | **period:** 2061-2077  
 **quest-type:** event | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h

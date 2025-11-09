@@ -1239,6 +1239,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Квест описан поверхностно: нет версии утверждения, ветвлений, KPI, API требований и связей с quest-engine; требуется структурировать этапы и зависимости перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Документ без версии утверждения и API целей; требуется расписать сценарные ветви, показатели livability/affordability, зависимости с экономикой и социалкой перед постановкой задач."
   - path: ".BRAIN/04-narrative/npc-lore/common/enemies/maelstrom-tech-2070s-watson.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1976,6 +1987,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Торонто описывает региональные события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/vancouver-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Ванкувера описывает региональные события и не требует API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md"
     version: "0.1.0"
     status: "needs-work"

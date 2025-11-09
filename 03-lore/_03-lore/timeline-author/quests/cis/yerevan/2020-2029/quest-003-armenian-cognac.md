@@ -1,5 +1,14 @@
 # Армянский Коньяк
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:38  
+**Приоритет:** medium
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:38  
+**api-readiness-notes:** Требуется применить QUEST-TEMPLATE: определить целевые микросервисы и каталоги API, описать ветвления, зависимости, KPI наград и связанный фронтенд модуль перед постановкой задач.
+
 **quest-id:** YEREVAN-2029-003  
 **city:** Ереван | **region:** СНГ | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h
