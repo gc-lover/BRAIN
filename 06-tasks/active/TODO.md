@@ -1,6 +1,6 @@
 # TODO — Brain Manager
 
-**Обновлено:** 2025-11-09 09:38  
+**Обновлено:** 2025-11-09 10:12  
 **Ответственный:** Brain Manager
 
 ---
@@ -21,14 +21,13 @@
 - [ ] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 01:22).
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 - [!] Player Market API — доработать `.BRAIN/02-gameplay/economy/player-market/player-market-api.md`: добавить авторизацию, ошибки, схемы запросов/ответов, событийные потоки и интеграцию с БД/аналитикой перед постановкой задач economy-service (2025-11-09 09:42).
-- [!] Player Market Core — расширить `.BRAIN/02-gameplay/economy/player-market/player-market-core.md`: описать статусы сделок, ограничения, комиссии, интеграции с инвентарём/экономикой, события, схемы данных и целевые каталоги API/БД перед передачей в ДУАПИТАСК (2025-11-09 09:48).
-- [!] Player Market Database — доработать `.BRAIN/02-gameplay/economy/player-market/player-market-database.md`: описать детальные схемы, миграции, ограничения, Events/CDC и интеграцию с API/UI перед постановкой задач economy-service (2025-11-09 10:07).
 ## Low
 - [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
 - [!] Quest 035 Кунсткамера — расширить структуру, добавить версию/статус, расписать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:43).
 - [!] Quest 036 Екатерининский бал — привести квест к QUEST-TEMPLATE, добавить версию/статус, описать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:46).
 - [!] Quest 037 Коллекция Фаберже — оформить маршруты, экономику и API каталоги для глобального сбора артефактов перед передачей в ДУАПИТАСК (2025-11-09 09:59).
 - [!] Quest 037 Love Hotel — оформить статус/версию/приоритет, расписать ветвления и награды, определить целевые микросервисы и каталоги API перед передачей ДУАПИТАСК (2025-11-09 09:36).
+- [!] Quest 037 Simulation Hint — расширить `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-037-simulation-hint.md`: сцены, NPC, системные зависимости, каталоги API и структура сюжетной линии (2025-11-09 10:12).
 - [!] Quest 035 Имплантная зависимость — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md` к QUEST-TEMPLATE, расписать ветвления лечения, связать с имплантами и подготовить цели API quest-engine/economy (2025-11-09 09:37).
 - [!] Granville Island Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md`: описать ветвления, NPC, зависимости с quest-engine и KPI наград перед передачей в ДУАПИТАСК (2025-11-09 09:35).
 - [!] Most Livable City Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md`: расписать сценарио, livability KPI, интеграции с экономикой и социальными системами перед постановкой задач (2025-11-09 09:35).
@@ -38,6 +37,7 @@
 - [!] Smithsonian Museums Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md`: сформировать маршруты, NPC, KPI и интеграции с образовательными/экономическими системами перед постановкой задач (2025-11-09 09:35).
 - [!] Washington Monument Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-005-washington-monument.md`: описать бронирование, очереди, погодные ограничения, NPC и KPI для интеграции с системами туризма/безопасности (2025-11-09 09:35).
 - [!] Vietnam Memorial Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-006-vietnam-memorial.md`: добавить сценарии взаимодействия с ветеранами, моральные выборы, KPI и интеграции с системами эмоций/социальных связей (2025-11-09 09:35).
+- [!] Pentagon Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-007-pentagon.md`: описать security clearance, NPC фракций, ветви допуска/отказа и каталоги API quest-engine (2025-11-09 09:35).
 - [!] Phoenix Urban Sprawl Quest — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md` к QUEST-TEMPLATE, добавить ветвления, KPI, связи с narrative-service и определить каталоги API/фронтенда перед постановкой задач (2025-11-09 09:36).
 
 ---

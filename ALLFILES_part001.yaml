@@ -1,6 +1,4 @@
 files:
-  - path: ".BRAIN/02-gameplay/economy/player-market/player-market-core.md"
-  - path: ".BRAIN/02-gameplay/economy/player-market/player-market-database.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/README.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-advanced.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-analytics.md"

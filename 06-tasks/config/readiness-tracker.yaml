@@ -1273,6 +1273,17 @@ mappings:
       frontend_module: null
     notes: "Квест про китайскую оперу описан поверхностно: отсутствуют ветвления, связи с системами и целевые API; требуется привести документ к QUEST-TEMPLATE, детализировать этапы и награды перед постановкой задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-009-jade-buddha-temple.md"
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-010-nanjing-road.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 10:19"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест про Нанкинскую дорогу описан поверхностно: требуется привести к QUEST-TEMPLATE, добавить ветвления, KPI шопинга, связи с экономикой/социальными системами и указать целевые каталоги API перед постановкой задач."
     version: "0.1.0"
     status: "needs-work"
     priority: "low"
@@ -1349,6 +1360,40 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Добавить детализированные этапы турнира, NPC, модели ставок и связи с economy/combat системами; подготовить каталоги quest-engine и betting сервисов перед постановкой API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-003-armenian-cognac.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 09:38: требуется применить QUEST-TEMPLATE, описать ветвления дегустации, зависимости и целевые API каталоги, указать связанный фронтенд модуль."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-004-khor-virap-monastery.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:45"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 09:45: требуется оформить паломнический сценарий по QUEST-TEMPLATE, указать зависимости quest-engine и narrative-service, целевые API каталоги и модуль фронтенда, добавить KPI наград."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-005-khachkars-art.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:56"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 09:56: требуется оформить квест по QUEST-TEMPLATE, расписать образовательные ветки и мастер-классы, определить интеграции quest-engine и культурных систем, каталоги API и модуль фронтенда, согласовать KPI наград."
+
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/rome/2020-2029/quest-004-pasta-master.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1416,3 +1461,43 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Проработать сценарные ветки боя (tecnicos vs rudos), добавить проверки навыков, интеграции с системами прогрессии, экономики и социального рейтинга, а также определить целевые каталоги OpenAPI и фронтенд-модуль."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-001-golden-gate-jump.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:44"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "narrative-service"
+      directory: null
+      frontend_module: "modules/narrative/quests"
+    notes: "Квест описывает экстремальный прыжок, но отсутствуют ветвления, требования безопасности, интеграции с quest-engine и KPI; необходимо привести документ к QUEST-TEMPLATE, определить каталоги API и фронтенд-модуль перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-002-alcatraz-escape.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 10:20"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "narrative-service"
+      directory: null
+      frontend_module: "modules/narrative/quests"
+    notes: "Квест описывает побег из Алькатраса, но отсутствуют ветвления, охранные сценарии, интеграции с quest-engine, безопасностью и экономикой; требуется привести документ к QUEST-TEMPLATE, определить каталоги API и модуль modules/narrative/quests перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-005-day-of-the-dead.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:22"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Расширить ветки шествий и ритуалов, связать с системами социального рейтинга, экономики и нарратива, определить целевые каталоги OpenAPI и фронтенд-модуль."
+TEST-LINE
+
+  - path: '.BRAIN/03-lore/_03-lore/characters/activity-npc-roster.md'
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact-детально.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"

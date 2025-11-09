@@ -3,12 +3,12 @@
 
 **Статус:** active  
 **Версия:** 1.0.0  
-**Последнее обновление:** 2025-11-09 10:11  
+**Последнее обновление:** 2025-11-09 10:19  
 
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-09 10:11  
+**api-readiness-check-date:** 2025-11-09 10:19  
 **api-readiness-notes:** Перепроверено 2025-11-09 10:11: очередь фиксирует документы, требующие доработки, и не формирует API задачи.
 
 - Лимит файла: ≤ 500 строк. При превышении создайте `needs-work_0001.md`, `needs-work_0002.md` и свяжите файлы.
@@ -113,6 +113,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-006-vietnam-memorial.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Привести к QUEST-TEMPLATE, добавить сценарии взаимодействия с ветеранами, моральные выборы, KPI и интеграции с системами эмоций/социальных связей и каталогами API quest-engine.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-007-pentagon.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Описать security clearance, ветви допуска/отказа, NPC фракций и интеграции с системами угроз; определить KPI и каталоги API quest-engine перед постановкой задач.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
@@ -214,3 +217,6 @@
   **Проверено:** 2025-11-09 09:42 — Brain Manager  
   **Что доработать:** Добавить YAML-метаданные, версию, статус, ветвления и интеграции по шаблону QUEST-TEMPLATE; расширить этапы, выборы и награды перед подготовкой API задач.
 
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-002-alcatraz-escape.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:20 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, расписать ветвления побега, сценарии охраны, интеграции с quest-engine, системами безопасности и экономикой наград; определить каталоги API и модуль modules/narrative/quests.
