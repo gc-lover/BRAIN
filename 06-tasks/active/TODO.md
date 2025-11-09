@@ -26,6 +26,7 @@
 - [!] Quest 035 Кунсткамера — расширить структуру, добавить версию/статус, расписать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:43).
 - [!] Quest 036 Екатерининский бал — привести квест к QUEST-TEMPLATE, добавить версию/статус, описать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:46).
 - [!] Quest 037 Коллекция Фаберже — оформить маршруты, экономику и API каталоги для глобального сбора артефактов перед передачей в ДУАПИТАСК (2025-11-09 09:59).
+- [!] Quest 038 Исаакий — оформить версии, ветвления, туризм/прогрессию и целевые API каталоги для постановки задачи (2025-11-09 10:23).
 - [!] Quest 037 Love Hotel — оформить статус/версию/приоритет, расписать ветвления и награды, определить целевые микросервисы и каталоги API перед передачей ДУАПИТАСК (2025-11-09 09:36).
 - [!] Quest 037 Simulation Hint — расширить `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-037-simulation-hint.md`: сцены, NPC, системные зависимости, каталоги API и структура сюжетной линии (2025-11-09 10:12).
 - [!] Quest 035 Имплантная зависимость — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md` к QUEST-TEMPLATE, расписать ветвления лечения, связать с имплантами и подготовить цели API quest-engine/economy (2025-11-09 09:37).
@@ -46,3 +47,4 @@
 
 - [!] Golden Gate Jump Quest — привести .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-001-golden-gate-jump.md к QUEST-TEMPLATE, добавить ветвления по разрешениям/авариям, интеграции с quest-engine и системами безопасности, определить каталоги API и модуль modules/narrative/quests (2025-11-09 09:44).
 - [!] Alcatraz Escape Quest — привести .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-002-alcatraz-escape.md к QUEST-TEMPLATE, расписать ветвления побега и охраны, интеграции с quest-engine, безопасностью и экономикой наград, определить каталоги API и модуль modules/narrative/quests (2025-11-09 10:11).
+- [!] Silicon Valley Startup Quest — привести .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-003-silicon-valley-startup.md к QUEST-TEMPLATE, добавить ветвления (финансирование, IPO, провал), интеграции с quest-engine/economy/progression, определить каталоги API и модуль modules/narrative/quests (2025-11-09 10:30).

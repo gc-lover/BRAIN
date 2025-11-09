@@ -1,4 +1,4 @@
-﻿# Трекер готовности документов .BRAIN к созданию API задач
+# Трекер готовности документов .BRAIN к созданию API задач
 #
 # Формат записи:
 # - path: относительный путь к документу .BRAIN
@@ -1431,7 +1431,7 @@ mappings:
     version: "0.1.0"
     status: "needs-work"
     priority: "high"
-    checked: "2025-11-09 10:12"
+    checked: "2025-11-09 09:58"
     checker: "Brain Manager"
     api_target:
       microservice: null
@@ -1620,3 +1620,26 @@ mappings:
     directory: null
     frontend_module: null
   notes: "Описание высотной болезни требует приведения к QUEST-TEMPLATE: добавить YAML-метаданные, статус, ветвления, зависимости с системами здоровья и экономики, определить каталоги API и расширить награды."
+
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-024-red-sky-storm.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:13"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Событие требует оформления по QUEST-TEMPLATE, указания зависимостей и каталогов API перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-003-silicon-valley-startup.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 10:30"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "narrative-service"
+      directory: null
+      frontend_module: "modules/narrative/quests"
+    notes: "Квест описывает цикл стартапа, но отсутствуют ветвления, системные зависимости и API требования; нужно применить QUEST-TEMPLATE, добавить интеграции с quest-engine, economy и progression и определить каталоги API/фронтенд модуль перед постановкой задач."
