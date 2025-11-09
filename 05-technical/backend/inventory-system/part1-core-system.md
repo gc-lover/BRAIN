@@ -13,10 +13,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-100: api/v1/economy/inventory/inventory-core.yaml (2025-11-09)
-- Last Updated: 2025-11-09 18:05
+  - API-TASK-100: Inventory Core API — `api/v1/economy/inventory/inventory-core/inventory-core.yaml`
+    - Создано: 2025-11-09 18:05
+    - Завершено: 2025-11-09 20:22
+    - Доп. файлы: `inventory-core-models.yaml`, `inventory-core-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-100-inventory-core-api.md`
+- Last Updated: 2025-11-09 20:22
 ---
 
 [Навигация](./README.md) | [Part 2 →](./part2-advanced-features.md)
