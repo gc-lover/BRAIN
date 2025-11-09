@@ -1405,6 +1405,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "РЎС†РµРЅР°СЂРёР№ РєРІРµСЃС‚Р° С‚СЂРµР±СѓРµС‚ РѕС„РѕСЂРјР»РµРЅРёСЏ РїРѕ QUEST-TEMPLATE: РґРѕР±Р°РІРёС‚СЊ РІРµСЂСЃРёСЋ Рё СЃС‚Р°С‚СѓСЃ, РїСЂРѕРїРёСЃР°С‚СЊ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё СЃ СЃРёСЃС‚РµРјР°РјРё, РІРµС‚РІР»РµРЅРёСЏ Рё СЃСЃС‹Р»РєРё РЅР° С†РµР»РµРІС‹Рµ РјРёРєСЂРѕСЃРµСЂРІРёСЃС‹ Рё С„СЂРѕРЅС‚РµРЅРґ РїРµСЂРµРґ РїРѕСЃС‚Р°РЅРѕРІРєРѕР№ API Р·Р°РґР°С‡."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/rome/2020-2029/quest-006-mafia-connection.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:11"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест про вступление в мафию необходимо структурировать по QUEST-TEMPLATE: добавить статус/версию, расписать ветки и проверки, определить зависимости с криминалом, репутацией и экономикой, а также указать целевые микросервисы, каталоги API и связанный фронтенд-модуль."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-037-simulation-hint.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1427,6 +1438,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "РљРІРµСЃС‚ СЏРІР»СЏРµС‚СЃСЏ Р·Р°РіРѕС‚РѕРІРєРѕР№: РЅРµС‚ РІРµС‚РІР»РµРЅРёР№, NPC, Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№ Рё KPI; РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРёРјРµРЅРёС‚СЊ QUEST-TEMPLATE, РѕРїСЂРµРґРµР»РёС‚СЊ С†РµР»РµРІС‹Рµ СЃРµСЂРІРёСЃС‹ (quest-engine, economy, social) Рё РєР°С‚Р°Р»РѕРіРё API."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-004-atlanta-airport.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Needs QUEST-TEMPLATE structure, system dependencies, and target API directories before task creation."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-005-civil-war-history.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:43"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Requires QUEST-TEMPLATE with NPCs, branches, progression/social links, and defined API catalogs."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-006-southern-food.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:45"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Add tasting branches, economy/progression hooks, NPCs, and target API endpoints."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-007-hip-hop-capital.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1501,3 +1545,10 @@ TEST-LINE
     version: "1.0.0"
     status: "ready"
     priority: "high"
+    checked: "2025-11-09 09:55"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "world-service"
+      directory: "api/v1/world/npc-hiring/impact.yaml"
+
+      frontend_module: "modules/world/insights"
