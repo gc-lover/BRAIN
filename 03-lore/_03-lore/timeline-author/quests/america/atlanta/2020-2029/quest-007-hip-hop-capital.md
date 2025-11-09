@@ -1,5 +1,18 @@
 # Столица Хип-Хопа
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:55  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:55  
+**api-readiness-notes:** Нужен QUEST-TEMPLATE: описать NPC, ветвления, KPI и интеграции с quest-engine, social и economy; определить целевые API каталоги.
+
+---
+
+# Столица Хип-Хопа
+
 **quest-id:** ATLANTA-2029-007  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 2-4h

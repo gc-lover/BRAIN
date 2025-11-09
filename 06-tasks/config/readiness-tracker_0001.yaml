@@ -22,6 +22,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Квест о квантовой лаборатории Берлина требует применения QUEST-TEMPLATE: добавить ветвления по выбору получателя технологии, определить зависимости с quest-engine, research и economy системами, указать каталоги API и фронтенд-модуль, расширить награды и KPI перед передачей в API поток."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-038-european-chip.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 10:33"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Проект европейской фабрики требует применения QUEST-TEMPLATE: структурировать этапы с ключевыми решениями (финансирование, кадры, экспорт), определить зависимости с quest-engine, economy и research системами, указать каталоги API и фронтенд-модуль, расширить награды и KPI перед постановкой задач."
 mappings:
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md"
     version: "0.1.0"

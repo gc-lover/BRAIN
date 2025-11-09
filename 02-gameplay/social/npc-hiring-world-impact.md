@@ -1,19 +1,17 @@
-﻿---
+﻿# Система найма NPC — Влияние на игровой мир
 
-- **Status:** queued
-- **Last Updated:** 2025-11-07 00:18
----
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 10:35  
+**api-readiness-notes:** Обзорный документ; задачный пакет оформлен в `npc-hiring-world-impact-детально.md`, постановка задач ведётся по нему.
 
+**Версия:** 1.0.0  
+**Статус:** approved  
+**Последнее обновление:** 2025-11-09 10:35  
+**Приоритет:** высокий
 
-# Система найма NPC — Влияние на игровой мир
-
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит влияние на мир и экономику.
-
-**target-domain:** social  
-**target-microservice:** social-service (port 8084)  
-**target-frontend-module:** modules/social/npc-hiring
+**target-domain:** world  
+**target-microservice:** world-service (port 8092)  
+**target-frontend-module:** modules/world/insights
 
 **Детально:** `npc-hiring-world-impact-детально.md`
 
