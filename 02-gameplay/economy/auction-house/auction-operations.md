@@ -20,9 +20,12 @@
 **Размер:** ~220 строк ✅
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-110: api/v1/economy/auction-house/auction-operations.yaml (2025-11-09)
+- Last Updated: 2025-11-09 20:25
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## API Endpoints
