@@ -55,7 +55,7 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 03:05"
+    checked: "2025-11-09 03:07"
     checker: "Brain Manager"
     api_target:
       microservice: null
@@ -121,13 +121,13 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 03:05"
+    checked: "2025-11-09 03:07"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Каталог уникальных особенностей служит маркетинговой и концептуальной цели; статус not-applicable подтверждён 2025-11-09 03:05."
+    notes: "Перепроверено 2025-11-09 03:07; каталог уникальных особенностей служит концептуальной цели и не требует постановки API задач."
   - path: ".BRAIN/01-concepts/vision.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -249,6 +249,17 @@ mappings:
       directory: "api/v1/gameplay/combat/ai-enemies.yaml"
       frontend_module: "modules/combat/ai"
     notes: "Матрица AI врагов перепроверена 2025-11-09 01:22: REST/WS контракты и телеметрия готовы к постановке задач gameplay-service (конспект `2025-11-09-combat-wave-package.md`)."
+  - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies/README.md"
+    version: "1.0.1"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:08"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Индекс навигации по материалам боевого AI; статус not-applicable подтвержден 2025-11-09 03:08, API задачи не формируются."
   - path: ".BRAIN/02-gameplay/combat/arena-system.md"
     version: "1.0.0"
     status: "ready"
@@ -296,14 +307,14 @@ mappings:
   - path: ".BRAIN/02-gameplay/combat/combat-abilities/README.md"
     version: "1.0.1"
     status: "not-applicable"
-    priority: "low"
-    checked: "2025-11-09 03:09"
+    priority: "medium"
+    checked: "2025-11-09 03:08"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Навигационный индекс каталога боевых способностей; API задачи не формируются, статус not-applicable подтвержден 2025-11-09."
+    notes: "Навигационный индекс каталога боевых способностей; статус not-applicable переподтвержден 2025-11-09 03:08, API задачи не требуются."
   - path: ".BRAIN/02-gameplay/combat/combat-freerun.md"
     version: "1.1.0"
     status: "ready"

@@ -1,7 +1,4 @@
 files:
-  - path: ".BRAIN/02-gameplay/combat/arena-system.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-abilities/README.md"
   - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies.md"
   - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies/README.md"
   - path: ".BRAIN/02-gameplay/combat/combat-combos-synergies.md"
