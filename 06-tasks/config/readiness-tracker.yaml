@@ -392,6 +392,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея скрытых медиа-пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-dynamic-media-crossovers.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:28"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея динамических кроссоверов перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-cyberspace-easter-weaves.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:28"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея киберпространственных пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hybrid-media-references.md"
     version: "1.0.0"
     status: "ready"
@@ -1580,6 +1602,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Методический документ распределения активных лет NPC; подтверждено 2025-11-09 04:38, что он служит планированию и не формирует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/ripperdocs/cassius-ryder-2060-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:42"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль элитного ripper doc; подтверждено 2025-11-09 04:42, что документ описательный и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/ripperdocs/fingers-2050-2080.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 04:42"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль сомнительного ripper doc; подтверждено 2025-11-09 04:42, что документ описательный и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/ripperdocs/viktor-vektor-2030-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "very high"
+    checked: "2025-11-09 04:42"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль легендарного ripper doc; подтверждено 2025-11-09 04:42, что документ описательный и не требует API задач."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
@@ -1734,3 +1789,14 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Перепроверено 2025-11-09 04:40: навигационное оглавление раздела, не содержит данных для API задач."
+  - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 04:43"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: null
+      frontend_module: "modules/economy/loot"
+    notes: "Перепроверено 2025-11-09 04:43: представлены концептуальные таблицы и примеры, но отсутствуют полные матрицы по зонам, брендам и согласование с economy-service; требуется детализация перед постановкой API задач."

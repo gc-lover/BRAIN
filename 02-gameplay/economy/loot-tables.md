@@ -1,7 +1,7 @@
 ﻿---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-05 19:30
-**api-readiness-notes:** Полные лут-таблицы для всех типов квестов, событий, врагов. Формулы вероятностей, редкость, модификаторы.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 04:43
+**api-readiness-notes:** Перепроверено 2025-11-09 04:43. Документ фиксирует концепцию и примеры, но отсутствуют согласованные значения для всех зон, таблицы дропа по брендам и согласование с economy-service; требуется доработка перед постановкой API задач.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
@@ -10,8 +10,8 @@
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 01:40
+- **Status:** in-review
+- **Last Updated:** 2025-11-09 04:43
 ---
 
 # Лут-таблицы NECPGAME

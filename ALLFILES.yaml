@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-analytics.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-api.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-core.md"
@@ -2650,6 +2649,4 @@
   - path: ".BRAIN/06-tasks/ideas/2025-11-03-IDEA-procedural-equipment-matrix.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-anomalous-easter-scenarios.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-crossculture-easter-atlas.md"
-  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-cyberspace-easter-weaves.md"
-  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-dynamic-media-crossovers.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-immersive-media-cheese.md"
