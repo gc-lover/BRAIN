@@ -1375,35 +1375,35 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:25"
+    checked: "2025-11-09 04:28"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль бывшего телохранителя Arasaka; подтверждено 2025-11-09 04:25, что документ описательный и не формирует API задачи."
+    notes: "Профиль бывшего телохранителя Arasaka; подтверждено 2025-11-09 04:28, что документ описательный и не формирует API задачи."
   - path: ".BRAIN/04-narrative/npc-lore/important/viktor-vektor.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:25"
+    checked: "2025-11-09 04:28"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль риппердока Виктора; подтверждено 2025-11-09 04:25, что документ служит лору и не требует API задач."
+    notes: "Профиль риппердока Виктора; подтверждено 2025-11-09 04:28, что документ служит лору и не требует API задач."
   - path: ".BRAIN/04-narrative/npc-lore/important/wakako-okada.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:25"
+    checked: "2025-11-09 04:28"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль фикcера Japantown; подтверждено 2025-11-09 04:25, что документ описательный и не формирует API задачи."
+    notes: "Профиль фикcера Japantown; подтверждено 2025-11-09 04:28, что документ описательный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
