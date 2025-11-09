@@ -1,3 +1,14 @@
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 10:12  
+**Приоритет:** высокий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:12  
+**api-readiness-notes:** Не хватает сцен и NPC, не описаны системные зависимости (quest-engine, world-state, narrative triggers), отсутствуют каталоги API и структура раскрытия симуляции.
+
+---
+
 # Край Симуляции
 
 **quest-id:** MOSCOW-2077-037  
