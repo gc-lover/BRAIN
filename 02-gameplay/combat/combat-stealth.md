@@ -8,6 +8,13 @@
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/stealth
 
+- **API Tasks Status:**
+  - Status: created
+  - Tasks:
+    - API-TASK-405: api/v1/gameplay/combat/stealth/stealth.yaml (2025-11-09)
+  - Last Updated: 2025-11-09 23:25
+---
+
 **Статус:** approved - готов к созданию API задач  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
