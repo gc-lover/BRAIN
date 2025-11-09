@@ -42,6 +42,8 @@
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать API задачи на сетевой хакерский слой (gameplay-service, `api/v1/gameplay/combat/hacking/networks.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: подготовить API задачи по интеграции хакерства в бою (gameplay-service, `api/v1/gameplay/combat/hacking/combat-integration.yaml`).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-cyberpsychosis.md (v1.1.0)  
+  **Проверено:** 2025-11-09 03:11 — Brain Manager | Следующий шаг: подготовить API задачи по человечности, стадиям симптомов и управлению киберпсихозом (gameplay-service, `api/v1/gameplay/combat/cyberpsychosis.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-cyberspace.md (v1.0.0)  
   **Проверено:** 2025-11-09 00:54 — Brain Manager | Следующий шаг: подготовить задания для киберпространства и связанных режимов (gameplay-service).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-abilities.md (v1.2.0)  

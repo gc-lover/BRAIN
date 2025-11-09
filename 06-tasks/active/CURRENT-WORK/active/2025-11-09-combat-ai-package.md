@@ -28,6 +28,7 @@
 - Подтверждено ядро D&D (`combat-dnd-core`): DC, модификаторы, групповые/кооперативные проверки; документ добавлен в `ready.md` и `readiness-tracker.yaml`.
 - Синхронизированы записи в `ready.md` и `readiness-tracker.yaml` для combat-комплекта (AI, D&D core, D&D shooter integration, arenas, combat session, implants, combos, extraction, hacking).
 - Выявлены зависимости между документами (combat session, hacking, extraction, implants) — все находятся в статусе `ready` и перечислены в пакете.
+- Подготовлен отдельный brief `2025-11-09-combat-systems-wave1-brief.md` для передачи ДУАПИТАСК (сводка каталогов, контрактов, зависимостей).
 
 ## Сводка документов для пакета
 | Документ | Версия | Каталог API | Следующий шаг |

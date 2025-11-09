@@ -1,12 +1,13 @@
 ﻿# Боевая система — Киберпсихоз
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:11
-**api-readiness-notes:** Перепроверено 2025-11-09 03:11. Документ раскрывает систему человечности, стадии симптомов, последствия, управление и экономические/социальные интеграции (v1.1.0); готов к пакетированию задач gameplay-service.
+**api-readiness-check-date:** 2025-11-09 03:12
+**api-readiness-notes:** Перепроверено 2025-11-09 03:12. Документ раскрывает систему человечности, стадии симптомов, последствия, управление и экономические/социальные интеграции (v1.1.0); готов к пакетированию задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/cyberpsychosis
+**version:** 1.1.0
 
 ---
 

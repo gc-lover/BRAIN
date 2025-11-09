@@ -1,5 +1,4 @@
 files:
-  - path: ".BRAIN/02-gameplay/combat/combat-cyberpsychosis.md"
   - path: ".BRAIN/02-gameplay/combat/combat-cyberspace.md"
   - path: ".BRAIN/02-gameplay/combat/combat-dnd-core.md"
   - path: ".BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md"
@@ -22,7 +21,6 @@ files:
   - path: ".BRAIN/02-gameplay/combat/combat-shooting.md"
   - path: ".BRAIN/02-gameplay/combat/combat-stealth.md"
   - path: ".BRAIN/02-gameplay/combat/COMBAT-SYSTEM-EXPANSION-SUMMARY.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-weapon-classes/README.md"
   - path: ".BRAIN/02-gameplay/combat/loot-hunt-system.md"
   - path: ".BRAIN/02-gameplay/economy/auction-house/auction-database.md"
   - path: ".BRAIN/02-gameplay/economy/auction-house/auction-mechanics.md"
