@@ -30,6 +30,10 @@
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE: расписать зависимости (локации, NPC, цепочки), определить целевой микросервис, каталог OpenAPI и фронтенд-модуль, связать этапы и награды с системами прогрессии и экономики.
 
+- **Документ:** .BRAIN/02-gameplay/social/npc-hiring-types.md (v1.0.0)  
+  **Проверено:** 2025-11-09 09:43 — Brain Manager  
+  **Что доработать:** Сбалансировать стоимость и эффективность ролей найма, оформить API контракты social-service и фронтенд витрины.
+
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-003-teotihuacan-pyramids.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Manager  
   **Что доработать:** Расширить квест ветвлениями и проверками, связать с системами эксплоринга, транспорта и экономики, определить микросервис, каталоги OpenAPI и фронтенд-модуль.
@@ -62,9 +66,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE: структурировать этапы с развилками, добавить зависимости (quest-engine, economy, social), определить микросервис, каталог API и фронтенд-модуль для Berlin Tech Summit.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-037-quantum-computing.md (v0.1.0)  
-  **Проверено:** 2025-11-09 09:45 — Brain Manager  
-  **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления с последствиями передачи технологии, описать зависимости (quest-engine, research, economy), определить микросервис, каталог API и фронтенд-модуль, расширить награды и KPI.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать ветвления, NPC, требования к quest-engine, KPI наград и интеграции с экономикой/социальными системами; определить целевые API каталоги.
