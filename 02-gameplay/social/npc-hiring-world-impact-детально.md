@@ -17,6 +17,14 @@
 
 ---
 
+**API Tasks Status:**
+- Status: queued
+- Tasks:
+  - API-TASK-358: api/v1/world/player-orders/effects.yaml (2025-11-08)
+  - API-TASK-359: api/v1/economy/npc-hiring/index.yaml (2025-11-08)
+- Last Updated: 2025-11-09 21:35
+---
+
 ## 1. Социальные экосистемы найма
 
 - **Рынок труда:** доски объявлений, гильдии, агентства (`npc-relationships-system-детально.md`). NPC конкурируют за лучшие контракты.
