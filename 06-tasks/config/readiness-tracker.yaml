@@ -161,6 +161,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Процедуры Clear Agent перепроверены 2025-11-09 04:05; документ описывает шаги архивации и не формирует API задачи."
+  - path: ".BRAIN/АПИТАСК.MD"
+    version: "2.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:06"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Памятка передачи задач перепроверена 2025-11-09 04:06; документ направляет к API-SWAGGER инструкциям и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
