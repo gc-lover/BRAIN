@@ -1,5 +1,13 @@
 # Мемориал Линкольна
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:35  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Не заданы сценарии взаимодействия с историческими событиями, NPC и социальными эффектами; требуется шаблон QUEST-TEMPLATE, KPI и связь с quest-engine.
+
 **quest-id:** WASHINGTON-2029-003  
 **city:** Вашингтон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h

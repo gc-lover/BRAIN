@@ -1261,6 +1261,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Требуется описать расписание туров, NPC Secret Service, ветви допуска/отказа и API интеграции с дипломатическими/безопасными системами прежде чем формировать задачи."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Не хватает сценариев заседаний/тревог, NPC и интеграций (security, politics), отсутствуют API каталоги quest-engine; требуется детализация перед задачами."
   - path: ".BRAIN/04-narrative/npc-lore/common/enemies/maelstrom-tech-2070s-watson.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -2064,6 +2075,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Бангкока описывает городские события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/beijing-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Пекина описывает городские события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/delhi-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Дели описывает городские события и не требует API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md"
     version: "0.1.0"
     status: "needs-work"

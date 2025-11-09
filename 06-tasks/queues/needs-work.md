@@ -9,7 +9,11 @@
 
 **api-readiness:** not-applicable  
 **api-readiness-check-date:** 2025-11-09 09:38  
+<<<<<<< Updated upstream
 **api-readiness-notes:** Перепроверено 2025-11-09 09:37: очередь фиксирует документы, требующие доработки, и не формирует API задачи.
+=======
+**api-readiness-notes:** Перепроверено 2025-11-09 09:38: очередь фиксирует документы, требующие доработки, и не формирует API задачи.
+>>>>>>> Stashed changes
 
 - Лимит файла: ≤ 500 строк. При превышении создайте `needs-work_0001.md`, `needs-work_0002.md` и свяжите файлы.
 - Формат записи:
@@ -56,6 +60,12 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-001-white-house.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Расписать контроль доступа, NPC Secret Service, исходы туров и интеграции с дипломатическими/безопасными системами quest-engine, определить целевые каталоги API.
+<<<<<<< Updated upstream
+=======
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Разработать ветвления (тур, заседание, тревога), NPC и события Jan 6, интеграции с системами безопасности/политики и указать каталоги API quest-engine.
+>>>>>>> Stashed changes
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
