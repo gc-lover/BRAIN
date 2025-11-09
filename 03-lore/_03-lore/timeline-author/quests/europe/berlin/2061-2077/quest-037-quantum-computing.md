@@ -1,5 +1,14 @@
 # Квантовые Вычисления
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:45  
+**Приоритет:** low
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:45  
+**api-readiness-notes:** Требуется применить QUEST-TEMPLATE: добавить YAML-метаданные, ветвления с последствиями выбора получателя технологии, определить зависимости (quest-engine, research, economy), указать целевой микросервис, каталог API и фронтенд-модуль, расширить награды и KPI перед постановкой задач.
+
 **quest-id:** BERLIN-2077-037  
 **city:** Берлин | **region:** Европа | **period:** 2061-2077  
 **quest-type:** main | **difficulty:** extreme | **solo-group:** solo | **time:** 4h+

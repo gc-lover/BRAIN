@@ -216,6 +216,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Список сокращений перепроверен 2025-11-09 04:16; документ вспомогательный и не формирует API задачи."
+  - path: ".BRAIN/03-lore/_03-lore/locations/world-cities/CITY-DETAIL-TEMPLATE.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:44"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Шаблон профиля города используется для оформления документов и не требует постановки API задач."
   - path: ".BRAIN/03-lore/_03-lore/locations/world-cities/chicago-detailed-2020-2093.md"
     version: "1.0.0"
     status: "needs-work"
@@ -2075,6 +2086,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Квест описывает участие в Berlin Tech Summit, но отсутствуют ветвления, зависимости с системами и целевые каталоги API; необходимо применить QUEST-TEMPLATE, указать микросервис quest-engine, каталог api/v1/... и фронтенд-модуль, расширить награды и интеграции."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-037-quantum-computing.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:45"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест о квантовой лаборатории Берлина требует применения QUEST-TEMPLATE: добавить ветвления по выбору получателя технологии, определить зависимости с quest-engine, research/economy системами, указать каталоги API и фронтенд-модуль, расширить награды и KPI перед передачей в API поток."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-021-flooded-manhattan.md"
     version: "0.1.0"
     status: "needs-work"
@@ -2119,6 +2141,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Обзор найма NPC перепроверен 2025-11-09 09:34; документ служит навигацией по дочерним материалам и не формирует API задачи напрямую."
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-types.md"
+    version: "1.0.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:43"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "social-service"
+      directory: null
+      frontend_module: "modules/social/npc-hiring"
+    notes: "Перепроверено 2025-11-09 09:43: отсутствует балансировка стоимости и эффективности ролей, не оформлены API контракты social-service; требуется доработка."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/sao-paulo-2020-2093.md"
     version: "0.1.0"
     status: "not-applicable"

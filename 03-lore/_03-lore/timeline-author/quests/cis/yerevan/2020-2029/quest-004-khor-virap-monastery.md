@@ -1,5 +1,14 @@
 # Монастырь Хор Вирап
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:45  
+**Приоритет:** medium
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:45  
+**api-readiness-notes:** Требуется привести квест к QUEST-TEMPLATE: добавить ветвления паломничества, интеграцию с quest-engine и narrative-service, определить каталоги API и фронтенд модуль, а также KPI наград и зависимости.
+
 **quest-id:** YEREVAN-2029-004  
 **city:** Ереван | **region:** СНГ | **period:** 2020-2029  
 **quest-type:** side | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h

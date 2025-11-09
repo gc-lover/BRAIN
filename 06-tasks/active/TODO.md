@@ -20,6 +20,7 @@
 - [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 02:48).
 - [ ] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 01:22).
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
+- [!] Player Market API — доработать `.BRAIN/02-gameplay/economy/player-market/player-market-api.md`: добавить авторизацию, ошибки, схемы запросов/ответов, событийные потоки и интеграцию с БД/аналитикой перед постановкой задач economy-service (2025-11-09 09:42).
 ## Low
 - [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
 - [!] Quest 035 Кунсткамера — расширить структуру, добавить версию/статус, расписать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:43).
@@ -31,6 +32,7 @@
 - [!] Capitol Building Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md`: структурировать ветви, NPC и события Jan 6, определить интеграции и каталоги API quest-engine (2025-11-09 09:35).
 - [!] Lincoln Memorial Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-003-lincoln-memorial.md`: привести к QUEST-TEMPLATE, добавить ветвления, NPC и KPI для интеграции с quest-engine (2025-11-09 09:35).
 - [!] Smithsonian Museums Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md`: сформировать маршруты, NPC, KPI и интеграции с образовательными/экономическими системами перед постановкой задач (2025-11-09 09:35).
+- [!] Washington Monument Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-005-washington-monument.md`: описать бронирование, очереди, погодные ограничения, NPC и KPI для интеграции с системами туризма/безопасности (2025-11-09 09:35).
 - [!] Phoenix Urban Sprawl Quest — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md` к QUEST-TEMPLATE, добавить ветвления, KPI, связи с narrative-service и определить каталоги API/фронтенда перед постановкой задач (2025-11-09 09:36).
 
 ---
