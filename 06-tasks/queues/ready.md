@@ -30,6 +30,10 @@
   **Проверено:** 2025-11-09 03:09 — Brain Manager | Следующий шаг: сверстать задачи для economy-service по операционным REST эндпоинтам аукциона (`api/v1/economy/auction-house/auction-operations.yaml`) и мониторингу.
 - **Документ:** .BRAIN/02-gameplay/economy/economy-analytics.md (v1.0.0)  
   **Проверено:** 2025-11-09 03:20 — Brain Manager | Следующий шаг: подготовить задания economy-service по аналитическим REST/WS потокам (`api/v1/economy/analytics/analytics.yaml`) и синхронизировать модуль `modules/economy/analytics`.
+- **Документ:** .BRAIN/02-gameplay/economy/economy-contracts.md (v1.1.0)  
+  **Проверено:** 2025-11-09 03:20 — Brain Manager | Следующий шаг: оформить задачи economy-service по контрактам и escrow (`api/v1/economy/contracts/contracts.yaml`) и связать с модулем `modules/economy/contracts`.
+- **Документ:** .BRAIN/02-gameplay/economy/economy-crafting.md (v1.0.0)  
+  **Проверено:** 2025-11-09 03:20 — Brain Manager | Следующий шаг: подготовить API пакет по гибридному крафту (`api/v1/economy/crafting/crafting.yaml`) и модулю `modules/economy/crafting`.
 - **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:19 — Brain Manager | Следующий шаг: оформить REST/WS/EventBus задачи по конспекту `2025-11-09-quest-engine-package.md` и подготовить передачу в ДУАПИТАСК (`api/v1/gameplay/quests/quest-engine.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  

@@ -7,8 +7,8 @@
 **Приоритет:** средний (расширение)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:20
-**api-readiness-notes:** Перепроверено 2025-11-09 03:20; материалы по аналитике и API остаются полными, готовы для постановки economy-service.
+**api-readiness-check-date:** 2025-11-09 03:22
+**api-readiness-notes:** Перепроверено 2025-11-09 03:22: материалы по аналитике и API остаются полными, готовы для постановки economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

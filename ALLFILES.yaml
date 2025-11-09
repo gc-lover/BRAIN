@@ -1,9 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
-  - path: ".BRAIN/02-gameplay/economy/economy-crafting.md"
-  - path: ".BRAIN/02-gameplay/economy/economy-currencies-detailed.md"
-  - path: ".BRAIN/02-gameplay/economy/economy-currencies-resources.md"
-  - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
   - path: ".BRAIN/02-gameplay/economy/economy-events.md"
   - path: ".BRAIN/02-gameplay/economy/ECONOMY-EXPANSION-SUMMARY.md"
   - path: ".BRAIN/02-gameplay/economy/economy-investments.md"

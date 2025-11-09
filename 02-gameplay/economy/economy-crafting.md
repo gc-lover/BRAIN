@@ -1,8 +1,8 @@
 ﻿# Экономическая система - Крафт
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:36
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по типам крафта (гибридная система + механики из лора Cyberpunk), механикам крафта, источникам рецептов. Все необходимые детали для создания API спецификации присутствуют.
+**api-readiness-check-date:** 2025-11-09 03:20
+**api-readiness-notes:** Перепроверено 2025-11-09 03:20; гибрид крафта, рецепты и API требования остаются полными для задач economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
