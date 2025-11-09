@@ -1,5 +1,11 @@
 # Высотная Болезнь
 
+---
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:50
+**api-readiness-notes:** Краткий конспект высотной болезни не соответствует QUEST-TEMPLATE: отсутствуют YAML-метаданные, версия, статус, ветвления, зависимости с системами и детализированные награды; требуется структурная доработка перед постановкой API задач.
+---
+
 **quest-id:** DENVER-2029-007  
 **city:** Денвер | **region:** Америка | **period:** 2020-2029  
 **quest-type:** side | **difficulty:** medium | **solo-group:** solo | **time:** 2-3 дня

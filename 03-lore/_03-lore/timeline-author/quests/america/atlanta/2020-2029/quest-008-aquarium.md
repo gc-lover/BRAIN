@@ -1,5 +1,18 @@
 # Аквариум Джорджии
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 10:10  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:10  
+**api-readiness-notes:** Требуется структурировать квест по шаблону, добавить NPC/ветвления, зависимости с quest-engine и economy/social системами и определить целевые API каталоги.
+
+---
+
+# Аквариум Джорджии
+
 **quest-id:** ATLANTA-2029-008  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 2-4h
