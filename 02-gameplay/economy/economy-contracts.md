@@ -23,10 +23,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-102: api/v1/economy/contracts/contracts.yaml (2025-11-09)
-- Last Updated: 2025-11-09 18:40
+  - API-TASK-102: Economy Contracts API — `api/v1/economy/contracts/contracts.yaml`
+    - Создано: 2025-11-09 18:40
+    - Завершено: 2025-11-09 21:28
+    - Доп. файлы: `contracts-models.yaml`, `contracts-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-102-economy-contracts-api.md`
+- Last Updated: 2025-11-09 21:28
 ---
 
 ---
