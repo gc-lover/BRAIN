@@ -931,6 +931,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Профиль снайпера MAX-TAC; подтверждено 2025-11-09 03:54, что API задачи не формируются."
+  - path: ".BRAIN/04-narrative/npc-lore/fixers/dino-dinovic-2050-2085.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:58"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль фикcера City Center; подтверждено 2025-11-09 03:58, что постановка API задач не требуется."
+  - path: ".BRAIN/04-narrative/npc-lore/fixers/padre-2040-2085.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:58"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль фикcера Heywood; подтверждено 2025-11-09 03:58, что API задачи не требуются."
+  - path: ".BRAIN/04-narrative/npc-lore/important/dexter-deshawn.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:58"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Литературный профиль ключевого фикcера; подтверждено 2025-11-09 03:58, что API задачи не требуются."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"

@@ -1,3 +1,15 @@
+---
+
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Последнее обновление:** 2025-11-09 03:59  
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 03:59  
+**api-readiness-notes:** Примеры Brain Manager служат справочным материалом и не требуют постановки API задач; статус not-applicable подтверждён 2025-11-09 03:59.
+
+---
+
 # Примеры Brain Manager Agent
 
 ## Ссылки

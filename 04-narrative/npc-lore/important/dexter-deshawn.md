@@ -7,8 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 17:15
-**api-readiness-notes:** Литературный документ, описание NPC, не предназначен для создания API
+**api-readiness-check-date:** 2025-11-09 03:58
+**api-readiness-notes:** Литературный документ, описание NPC; подтверждено 2025-11-09 03:58, что API не требуется
 
 **Категория:** important  
 **ID NPC:** npc-dexter-deshawn
