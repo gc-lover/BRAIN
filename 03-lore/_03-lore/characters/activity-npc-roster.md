@@ -1,9 +1,9 @@
 ---
 
 ---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37
-**api-readiness-notes:** Полный список NPC кураторов активностей с биографиями и связями.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 10:15
+**api-readiness-notes:** Лор-ростер кураторов активностей служит справочником и не формирует API задачи; перепроверено 2025-11-09 10:15.
 ---
 
 # Activity NPC Roster - Лица Неоновых Активностей
@@ -113,9 +113,9 @@
 ---
 
 ---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:34
-**api-readiness-notes:** Полный список NPC кураторов активностей с биографиями и связями.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 10:15
+**api-readiness-notes:** Лор-ростер кураторов активностей служит справочником и не формирует API задачи; перепроверено 2025-11-09 10:15.
 ---
 
 # Activity NPC Roster - Лица Неоновых Активностей

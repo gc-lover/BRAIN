@@ -1,0 +1,26 @@
+# Дополнительный трекер готовности (.BRAIN/06-tasks/config/readiness-tracker_0001.yaml)
+# Используется для новых записей, когда основной файл разрастается.
+
+mappings:
+  - path: ".BRAIN/02-gameplay/economy/player-market/player-market-core.md"
+    version: "1.0.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 09:48"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/player-market/core.yaml"
+      frontend_module: "modules/economy/player-market"
+    notes: "Перепроверено 2025-11-09 09:48: требуется описать статусы сделок, ограничения, комиссии, интеграцию с инвентарём/экономикой, события/очереди и схемы данных перед постановкой задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/player-market/player-market-database.md"
+    version: "1.0.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 10:07"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/player-market/database.yaml"
+      frontend_module: "modules/economy/player-market"
+    notes: "Перепроверено 2025-11-09 10:07: необходимо детализировать схемы БД, миграции, ограничения, Events/CDC и интеграцию с API/UI перед постановкой задач economy-service."

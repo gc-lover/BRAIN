@@ -40,3 +40,5 @@
 
 > Обновляйте статусы: `[ ]` открыто, `[~]` в работе, `[x]` выполнено, `[!]` блокер.
 
+- [!] Golden Gate Jump Quest — привести .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-001-golden-gate-jump.md к QUEST-TEMPLATE, добавить ветвления по разрешениям/авариям, интеграции с quest-engine и системами безопасности, определить каталоги API и модуль modules/narrative/quests (2025-11-09 09:44).
+- [!] Alcatraz Escape Quest — привести .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-002-alcatraz-escape.md к QUEST-TEMPLATE, расписать ветвления побега и охраны, интеграции с quest-engine, безопасностью и экономикой наград, определить каталоги API и модуль modules/narrative/quests (2025-11-09 10:11).
