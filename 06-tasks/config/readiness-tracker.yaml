@@ -370,6 +370,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея реактивных пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-passive-media-easter-eggs.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:28"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея пассивных медиа-пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1635,3 +1646,14 @@ mappings:
       directory: null
       frontend_module: "modules/progression/classes"
     notes: "Перепроверено 2025-11-09 04:36: перечислены цепочки и предметы без экономических коэффициентов, API схем выдачи и торговых ограничений; требуется доработка перед постановкой задач."
+  - path: ".BRAIN/02-gameplay/economy/equipment/equipment-iconic-timeline.md"
+    version: "0.1.1"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 04:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: null
+      frontend_module: "modules/economy/equipment"
+    notes: "Перепроверено 2025-11-09 04:36: хронология легендарок содержит дубли и не фиксирует экономические поля (`tier`, стоимость, сезонный дроп); требуется консолидация и подготовка схемы `/equipment/iconic`."

@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/equipment/equipment-iconic-timeline.md"
   - path: ".BRAIN/02-gameplay/economy/equipment/procedural-equipment-library.md"
   - path: ".BRAIN/02-gameplay/economy/equipment/README.md"
   - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
@@ -2661,4 +2660,3 @@
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hidden-media-easter-eggs.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hybrid-media-references.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-immersive-media-cheese.md"
-  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-passive-media-easter-eggs.md"
