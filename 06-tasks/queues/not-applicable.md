@@ -40,3 +40,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/locations/world-cities/CITY-DETAIL-TEMPLATE.md (v1.0.0)  
   **Пометка:** 2025-11-09 09:44 — Brain Manager  
   **Причина:** Служебный шаблон оформления городов; используется для подготовки материалов и не инициирует API задачи.
+- **Документ:** .BRAIN/02-gameplay/social/npc-hiring-world-impact.md (v1.0.0)  
+  **Пометка:** 2025-11-09 10:35 — Brain Manager  
+  **Причина:** Обзор влияния; задачи ставятся по `npc-hiring-world-impact-детально.md`.
