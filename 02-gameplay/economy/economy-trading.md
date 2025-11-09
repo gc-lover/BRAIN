@@ -12,6 +12,13 @@
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
 **target-frontend-module:** modules/economy/trading
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-112: api/v1/economy/trading/trading.yaml (2025-11-09)
+- Last Updated: 2025-11-09 20:45
+---
 
 **Статус:** approved  
 **Версия:** 1.0.0  
