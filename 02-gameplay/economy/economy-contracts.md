@@ -22,6 +22,14 @@
 **target-frontend-module:** modules/economy/contracts
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-102: api/v1/economy/contracts/contracts.yaml (2025-11-09)
+- Last Updated: 2025-11-09 18:40
+---
+
+---
 
 ## Краткое описание
 
