@@ -1,142 +1,133 @@
 ---
 **Статус:** review  
-**Версия:** 1.0.0  
+**Версия:** 2.0.0  
 **Дата создания:** 2025-11-06  
+**Последнее обновление:** 2025-11-10 01:30  
 **Приоритет:** высокий  
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 20:25
-**api-readiness-notes:** Полная спецификация квеста 2027 «Протокол восстановления» с 22 узлами диалогов. Соответствует `quest-main-2027-rebuild-protocol`.
+**api-readiness:** in-review  
+**api-readiness-check-date:** 2025-11-10 01:30  
+**api-readiness-notes:** Shooter-рефактор в процессе согласования с quest-engine и analytics. Требуется финальная валидация параметров и событийных потоков.
 ---
 
-# [АРХИВ] Основной квест: Протокол восстановления (2027)
+# Основной квест: Протокол восстановления (2027)
 
-**Статус:** archived  
-**Версия:** 1.0.0  
-**Дата создания:** 2025-11-05  
-**Последнее обновление:** 2025-11-05  
-**Приоритет:** высокий
+## 1. Сводка
+- **ID:** `quest-main-2027-rebuild-protocol`
+- **Выдаёт:** `npc-elizabeth-chen` (NetWatch HQ, Downtown)
+- **Период:** 2027 — восстановление сетей после DataKrash
+- **Основная петля:** восстановление узлов связи под огнём + оборона
+- **Ключевые роли:** tech support, assault, hacking
 
-**api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-09 23:59
-**api-readiness-notes:** D&D-параметры устарели, документ хранится для истории.
+## 2. Контекст и цели
+1. Получить задание у Элизабет Чен.
+2. Добраться до слепой зоны NetWatch и восстановить три узла связи.
+3. Защитить восстановленные узлы от рейда «Rust Tigers».
+4. Вернуться и отчитаться о восстановлении сети.
 
-> ⚠️ Shooter pivot: используйте shooter-шаблоны и `combat-shooter-core.md` вместо этой версии.
-
-## 1. Синопсис
-DataKrash 2020 оставил слепые зоны в МАКСТАК. Элизабет Чен нанимает игрока для восстановления узлов связи и защиты их от банд, охотящихся за tech-компонентами. Технологический квест с элементами обороны и взлома.
-
-- ID: `quest-main-2027-rebuild-protocol`
-- Тип: `main`
-- Дает: `npc-elizabeth-chen`
-- Уровень: 3
-- Эпоха: 2020-2030
-- Локации: `loc-downtown-001`, `loc-watson-001`
-
-## 2. Цели и ветвления
-1) Принять задание у Элизабет Чен.
-2) Добраться до слепой зоны и восстановить 3 узла связи.
-3) Отразить рейд бандитов (5 врагов).
-4) Вернуться к Элизабет с отчётом.
-
-Ветвления:
-- TECH 14 — быстрый ремонт узлов (уменьшение времени, +XP).
-- HACKING 14 — защита узлов от повторных атак (уменьшение врагов).
-- PERCEPTION 13 — раннее обнаружение налёта (подготовка к обороне).
-
-## 3. D&D-параметры
-- Инициатива: d20 + REF (модификатор Рефлексов).
-- AC врагов: 11–13 (бандиты-мародёры, tech-scavs).
-- Урон: d6+2 (пистолеты), d8+3 (дробовики).
-- Состояния: «Оглушение» (светошумовые гранаты), «Помехи» (emp-удары).
-
-## 4. UX экраны
-```
-┌─────────────────────────────────────────┐
-│ ЭЛИЗАБЕТ ЧЕН                           │
-│ «МАКСТАК повреждён. Нужен tech-spec.»   │
-│ [Принять] [Спросить о зоне]            │
-└─────────────────────────────────────────┘
+### Метрики прогресса
+```yaml
+quest-type: main
+party: coop-2 (поддержка до 4)
+expected-duration: 35-45m
+repeatable: once
+telemetry-topics:
+  - combat.shooter.encounter
+  - quest.progress.main
+  - analytics.network.restore
 ```
 
-## 5. Диалоговое дерево (22 узла)
+## 3. Стадии и shooter-интеракции
 
-NODE[start]: Элизабет → «Готов восстановить узлы?»
-- [Принять] → NODE[accept]
-- [Что за слепая зона?] → NODE[explain]
+### Стадия A — «Blind Zone Recon»
+- **Локация:** industrial outskirts Santo Domingo
+- **Цель:** обследовать область, обнаружить угрозы
 
-NODE[explain]: Элизабет → «DataKrash оборвал каналы. Узлы потеряли сигнал. Восстанови их, пока бандиты не растащили компоненты.»
-- [Понял, принимаю] → NODE[accept]
+| Событие | Требования | Ресурсы | Эффект | Логи |
+| --- | --- | --- | --- | --- |
+| Recon Sweep | `accuracy ≥ 0.54`, `perception_sensor ≥ 0.55` | Дрон `scan-mk2`, имплант `optic_suite` | Помечает засады, открывает stealth-маршрут | `quest.recon.scan`, `analytics.heatmap` |
+| Presence Brief | `presence ≥ 0.58`, `suppression_score ≤ 0.25` | 180 eddies, имплант `voice_mod` | Переговоры с мародёрами → −1 encounter, +репутация Civilians +4 | `quest.social.presence`, `combat.shooter.social` |
+| Hazard Marking | `analysis ≥ 0.52`, `mobility ≥ 0.48` | Тех-инструменты | Обходит ловушки, снижает урон от hazards на 30% | `environment.hazard.tag` |
 
-NODE[accept]: «Задание принято.» → NODE[travel]
+### Стадия B — «Node Bring-Up»
+- **Локация:** NetWatch relay cluster `NW-23`
+- **Цель:** восстановить узлы 1–3, удерживая линию связи
 
-NODE[travel]: Переход в слепую зону → «Ржавые антенны и обломки.»
-- [PERCEPTION 13 Осмотр] → success NODE[spot_danger] / fail NODE[no_warning]
-- [Начать ремонт] → NODE[repair_start]
+| Узел | Интеракция | Порог | Оснащение | Результат |
+| --- | --- | --- | --- | --- |
+| Node 1 | Field Repair Loop | `tech_override ≥ 0.56`, `handling ≥ 0.53` | `servo-glove`, `engineering_toolkit` | Сокращает время восстановления на 45 сек, открывает bonus XP | `quest.objective.progress` |
+| Node 2 | Defensive Hacking | `hacking ≥ 0.58`, `analysis ≥ 0.55` | Дек `net-control`, имплант `neuro-weave` | Снижает волну рейда на 2 врага, активирует авто-турель | `combat.shooter.override` |
+| Node 3 | Support Stabilizer | `support_efficiency ≥ 0.47`, `resilience ≥ 0.50` | Генератор `shield-dome` | Создаёт щит на 900 HP, защищает инженера NPC | `combat.shooter.support` |
 
-NODE[spot_danger]: «Замечены следы свежей активности. Приближается группа.» (+готовность)
-- [Подготовиться] → NODE[prepare_defense]
+### Стадия C — «Rust Tigers Raid»
+- **Локация:** временный лагерь у relay `NW-23`
+- **Цель:** отразить атаку, сохранить uptime ≥ 85%
 
-NODE[no_warning]: «Начинаю ремонт.»
-- [Ремонт узла 1] → NODE[repair_1]
+| Событие | Требования | Ресурсы | Эффект |
+| --- | --- | --- | --- |
+| Suppression Grid | `suppression_score ≥ 0.40`, `accuracy ≥ 0.55` | AR/LMG, ability `suppression_burst` | Замедляет рейдеров, снижает входящий урон на 20% | `combat.shooter.suppress` |
+| Drone Hijack | `hacking ≥ 0.60`, `analysis ≥ 0.58` | Модуль `net-overclock` | Перехватывает боевого дрона → союзный огонь 45 сек | `combat.shooter.hack` |
+| Evac Route Call | `mobility ≥ 0.52`, `presence ≥ 0.55` | Связь с NetWatch | Вызывает резервный отряд (delay 60 сек) → ускоряет завершение | `quest.signal.request` |
 
-NODE[prepare_defense]: «Установлены ловушки и укрепления.» (уменьшение врагов)
-- [Ремонт узла 1] → NODE[repair_1]
+### Стадия D — «Uplink Confirmed»
+- **Цель:** зафиксировать восстановление сети и вернуться к Элизабет
+- **Интеракции:** финальный отчёт, вычисление экономического эффекта, триггер новых заданий NetWatch
 
-NODE[repair_1]: «Узел 1 — починка начата.»
-- [TECH 14 Быстрый ремонт] → success NODE[repair_1_fast] / fail NODE[repair_1_slow]
+## 4. Боевые сценарии
 
-NODE[repair_1_fast]: «Узел 1 восстановлен быстро.» (+XP, −время)
-- [Узел 2] → NODE[repair_2]
+### Encounter 1 — Rust Tigers Vanguard
+| Враг | Роль | defenseRating | HP | Accuracy | DPS | Особенности |
+| --- | --- | --- | --- | --- | --- | --- |
+| Tiger Gunner | assault | 205 | 320 | 0.56 | 175 | Smoke ×1, suppression 0.35 |
+| Tiger Technician | support | 195 | 260 | 0.50 | 130 | EMP гранаты (disrupt shields) |
+| Tiger Melee | bruiser | 210 | 360 | 0.42 | 160 | Rush + knockdown, устойчив к suppression |
 
-NODE[repair_1_slow]: «Узел 1 восстановлен медленно.»
-- [Узел 2] → NODE[repair_2]
+### Encounter 2 — Drone Reinforcements (если провал Recon Sweep)
+| Враг | Роль | defenseRating | HP | Accuracy | DPS | Особенности |
+| --- | --- | --- | --- | --- | --- | --- |
+| Attack Drone Mk2 | harassment | 180 | 210 | 0.58 | 140 | Перегревает технику, требует Drone Hijack |
+| Turret Drop Pod | static | 220 | 350 | 0.62 | 190 | Активируется через 30 сек, можно отключить Engineering Override |
 
-NODE[repair_2]: «Узел 2 — процесс запущен.»
-- [HACKING 14 Защита от повторных атак] → success NODE[secure_2] / fail NODE[repair_2_basic]
+## 5. Hazards & Environment
+| Hazard | Условие | Эффект | Контрмера | События |
+| --- | --- | --- | --- | --- |
+| Электрические дуги | Перегрузка узлов (>85% load) | 18 HP/тик, перегрев оборудования | Field Repair Loop, shield-dome | `environment.hazard.arc` |
+| Газовые выбросы | Бой > 120 сек | Accuracy −20%, visibility | Vent override, поддержка дрона | `environment.hazard.gas` |
+| Sniper Overwatch | Провал Recon Sweep | Target lock, крит 2× | Smoke deploy, suppression | `combat.shooter.sniper` |
 
-NODE[secure_2]: «Узел 2 защищён.» (уменьшение врагов на 2)
-- [Узел 3] → NODE[repair_3]
+## 6. Награды и последствия
+- **База:** 560 XP, 650 eddies, `item-cyberdeck-netwatch-mk1`, репутация NetWatch +18.
+- **Бонусы:**
+  - Field Repair Loop успех → +70 XP, дополнительный loot cache.
+  - Defensive Hacking успех → вводит `auto-turret blueprint`.
+  - Suppression Grid успех → повышает шанс редкого оружия (AR Tactical Mk1).
+- **Штрафы:** падение uptime < 70% → −15% награды, повтор Stage B.
+- **Продолжение:** открывает цепочку `quest-main-2030-network-resurgence`, даёт доступ к NetWatch store tier 2.
 
-NODE[repair_2_basic]: «Узел 2 работает.»
-- [Узел 3] → NODE[repair_3]
+## 7. API и телеметрия
+- `POST /api/v1/quests/{questId}/accept`
+- `POST /api/v1/quests/{questId}/interaction` — `{ interactionId, metrics, outcome, latency, resources }`
+- `POST /api/v1/combat/shooter` — отчёт по встречам (encounterId, snapshot, validation)
+- `POST /api/v1/network/restore` — статус узлов, uptime, hazards
+- `POST /api/v1/quests/{questId}/objective` — прогресс узлов (1..3)
+- `POST /api/v1/quests/{questId}/complete`
 
-NODE[repair_3]: «Узел 3 — последний.»
-- [Завершить ремонт] → NODE[raid_trigger]
+**WebSocket:** `wss://api.necp.game/v1/quests/{questId}/events` → события repair/raid/telemetry.  
+**Kafka:** `quest.progress.main`, `combat.shooter.encounter`, `analytics.network.restore`, `anti-cheat.validation`.
 
-NODE[raid_trigger]: «Рейд бандитов!» → бой (5 врагов, AC 11–13, если подготовка − уменьшено до 3)
-- win → NODE[raid_won]
-- lose → NODE[raid_lost]
+## 8. Тест-кейсы
+1. **Tech перфект:** успех всех engineering/hacking проверок, минимум врагов.
+2. **Combat heavy:** провал Recon + Defensive Hacking → максимум рейдов, проверка выживаемости.
+3. **Support focus:** Shield-дом и Suppression Grid удерживают инженера NPC.
+4. **Failure recovery:** Defeat → повтор Stage B, проверка логов и наказаний.
+5. **Latency spike:** симуляция задержки > 220 мс, проверка anti-cheat уведомления.
 
-NODE[raid_won]: «Рейд отражён. Узлы работают.»
-- [Вернуться к Элизабет] → NODE[return]
-
-NODE[raid_lost]: «Медпункт. Узлы уязвимы.» (штраф −10% награды)
-- [Попытаться снова] → NODE[repair_3]
-
-NODE[return]: Элизабет → «Отлично! МАКСТАК снова онлайн в этой зоне.»
-- [Получить награду] → NODE[complete]
-
-NODE[complete]: «Квест завершён.» +420 XP, +550 eddies, +кибердека базовая, +репутация NetWatch 15.
-
-## 6. Награды и баланс
-- База: 420 XP, 550 eddies, `item-cyberdeck-basic`, +репутация NetWatch 15.
-- Бонусы: TECH/HACKING успехи дают +40–60 XP, уменьшают время и количество врагов.
-- Штрафы: поражение в бою −10% денег, повтор ремонта.
-
-## 7. API эндпоинты
-- POST `/api/v1/quests/quest-main-2027-rebuild-protocol/accept`
-- POST `/api/v1/skill-check` (perception 13, tech 14, hacking 14)
-- POST `/api/v1/combat/start` (raidTrigger, enemies 3–5)
-- POST `/api/v1/quests/quest-main-2027-rebuild-protocol/complete`
-
-## 8. Соответствие JSON
-- См. `mvp-data-json/quests.json`: `quest-main-2027-rebuild-protocol`.
-- Objectives: accept → restore-nodes (×3) → defend (5) → return.
-
-## 9. Логи/Тесты
-- Логи: skill-check результаты, бои, repair прогресс.
-- Тесты: чисто tech путь; силовой путь; смешанный; провал и повтор.
+## 9. Логи и аналитика
+- Shooter метрики: accuracy, stability, suppression, shields uptime.
+- Repair telemetry: время на узел, материалы, расход энергии.
+- Economic impact: новые заказы NetWatch, изменение цен на tech-компоненты.
+- Anti-cheat: rapid fire, macro detection, coordinate spoofing.
 
 ## 10. История изменений
-- v1.0.0 (2025-11-06) — первичная спецификация (22 узла).
+- v2.0.0 (2025-11-10) — Shooter-рефактор, обновлены стадии, API, награды.
+- v1.0.0 (2025-11-06) — D&D версия (архив).
 

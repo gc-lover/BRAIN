@@ -71,9 +71,10 @@
 - Figma: `https://figma.com/file/shooter-start-ui` (mvp-link).
 - Видео-инструктаж: на стороне контент-команды.
 - Голосовые подсказки: TBD, зависят от `audio-service`.
+- JSON-конфиг обучения: `ui/game-start/shooter-briefing-config.json`
 
 ## 9. Следующие шаги
 1. Синхронизировать макеты с frontend (`FRONT-WEB/modules/game-start`).
-2. Подготовить JSON-конфигурации (`ui-game-start.json`) для обучения.
+2. Развернуть `shooter-briefing-config.json` на dev-среде и интегрировать с `POST /api/v1/tutorial/events`.
 3. Проверить доступность (screen reader, key-only navigation).
 4. После WebGL демо — обновить раздел UE5 Launchpad.
