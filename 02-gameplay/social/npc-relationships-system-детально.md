@@ -21,10 +21,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-096: api/v1/gameplay/social/npc-relationships.yaml (2025-11-09)
-- Last Updated: 2025-11-09 16:40
+  - API-TASK-096: NPC Relationships API — `api/v1/social/npc-relationships/npc-relationships.yaml`
+    - Создано: 2025-11-09 16:40
+    - Завершено: 2025-11-09 19:17
+    - Доп. файлы: `npc-relationships-models.yaml`, `npc-relationships-models-operations.yaml`, `README.md`
+    - Файл задания: `API-SWAGGER/tasks/completed/2025-11-09/task-096-social-npc-relationships-api.md`
+- Last Updated: 2025-11-09 19:17
 ---
 
 ---
