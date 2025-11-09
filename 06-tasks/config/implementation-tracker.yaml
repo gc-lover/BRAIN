@@ -24,5 +24,16 @@
 #
 # После заполнения 500 строк создавайте продолжение `implementation-tracker_0001.yaml`.
 
-implementations: []
+implementations:
+  - api_path: "api/v1/gameplay/social/personal-npc-scenarios.yaml"
+    task_id: "API-TASK-056"
+    brain_source: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
+    api_status: "completed"
+    backend:
+      status: "in_progress"
+      started: "2025-11-09 13:15"
+      agent: "Backend Agent"
+    frontend:
+      status: "not_started"
+    priority: "critical"
 

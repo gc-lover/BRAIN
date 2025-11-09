@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="quest-branches-table" author="ai-manager">
+        <comment>Создание таблицы ветвей квестов</comment>
+        <createTable tableName="quest_branches">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="quest_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="branch_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="branch_name" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="conditions" type="JSONB"/>
+            <column name="reward_modifiers" type="JSONB"/>
+            <column name="reputation_changes" type="JSONB"/>
+            <column name="branch_rewards" type="JSONB"/>
+            <column name="sets_flags" type="JSONB"/>
+            <column name="unsets_flags" type="JSONB"/>
+            <column name="unlocks_quests" type="JSONB"/>
+            <column name="locks_quests" type="JSONB"/>
+            <column name="world_state_changes" type="JSONB"/>
+            <column name="difficulty_modifier" type="DECIMAL(3,2)" defaultValueNumeric="1.00"/>
+            <column name="moral_weight" type="VARCHAR(20)"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="quest_branches" columnNames="quest_id,branch_id"
+                             constraintName="uq_quest_branch_per_quest"/>
+        <addForeignKeyConstraint baseTableName="quest_branches"
+                                 baseColumnNames="quest_id"
+                                 constraintName="fk_branch_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <rollback>
+            <dropTable tableName="quest_branches" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="dialogue-nodes-table" author="ai-manager">
+        <comment>Создание таблицы узлов диалогов</comment>
+        <createTable tableName="dialogue_nodes">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="quest_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="node_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="npc_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="npc_name" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="location_id" type="VARCHAR(100)"/>
+            <column name="dialogue_text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="emotion" type="VARCHAR(50)"/>
+            <column name="voice_line_id" type="VARCHAR(100)"/>
+            <column name="required_flags" type="JSONB"/>
+            <column name="required_reputation" type="JSONB"/>
+            <column name="blocked_flags" type="JSONB"/>
+            <column name="node_type" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="triggers_combat" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="combat_encounter_id" type="VARCHAR(100)"/>
+            <column name="is_critical_path" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="dialogue_nodes" columnNames="quest_id,node_id"
+                             constraintName="uq_dialogue_node_per_quest"/>
+        <addForeignKeyConstraint baseTableName="dialogue_nodes"
+                                 baseColumnNames="quest_id"
+                                 constraintName="fk_dialogue_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="dialogue_nodes"
+                                 baseColumnNames="npc_id"
+                                 constraintName="fk_dialogue_npc"
+                                 referencedTableName="npcs"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="dialogue_nodes" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="dialogue-choices-table" author="ai-manager">
+        <comment>Создание таблицы вариантов выбора в диалогах</comment>
+        <createTable tableName="dialogue_choices">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="node_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="choice_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="choice_text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="next_node_id" type="INTEGER"/>
+            <column name="required_class" type="VARCHAR(50)"/>
+            <column name="required_origin" type="VARCHAR(50)"/>
+            <column name="required_flags" type="JSONB"/>
+            <column name="required_reputation" type="JSONB"/>
+            <column name="required_items" type="JSONB"/>
+            <column name="skill_check_id" type="INTEGER"/>
+            <column name="reputation_changes" type="JSONB"/>
+            <column name="sets_flags" type="JSONB"/>
+            <column name="unsets_flags" type="JSONB"/>
+            <column name="gives_items" type="JSONB"/>
+            <column name="removes_items" type="JSONB"/>
+            <column name="is_timed" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="time_limit_seconds" type="INTEGER"/>
+            <column name="moral_weight" type="VARCHAR(20)"/>
+            <column name="icon" type="VARCHAR(100)"/>
+            <column name="color" type="VARCHAR(20)"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="dialogue_choices" columnNames="node_id,choice_id"
+                             constraintName="uq_choice_per_node"/>
+        <addForeignKeyConstraint baseTableName="dialogue_choices"
+                                 baseColumnNames="node_id"
+                                 constraintName="fk_choice_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="dialogue_choices"
+                                 baseColumnNames="next_node_id"
+                                 constraintName="fk_choice_next_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="dialogue_choices" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="skill-checks-table" author="ai-manager">
+        <comment>Создание таблицы проверок навыков</comment>
+        <createTable tableName="skill_checks">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="quest_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="check_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="check_name" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="check_type" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="skill" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="attribute" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dc" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formula" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="base_modifiers" type="JSONB"/>
+            <column name="advantage_conditions" type="JSONB"/>
+            <column name="disadvantage_conditions" type="JSONB"/>
+            <column name="success_node_id" type="INTEGER"/>
+            <column name="failure_node_id" type="INTEGER"/>
+            <column name="critical_success_node_id" type="INTEGER"/>
+            <column name="critical_failure_node_id" type="INTEGER"/>
+            <column name="success_reputation" type="JSONB"/>
+            <column name="success_flags" type="JSONB"/>
+            <column name="success_loot" type="JSONB"/>
+            <column name="failure_reputation" type="JSONB"/>
+            <column name="failure_flags" type="JSONB"/>
+            <column name="failure_triggers_combat" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="crit_success_reputation" type="JSONB"/>
+            <column name="crit_success_flags" type="JSONB"/>
+            <column name="crit_success_loot" type="JSONB"/>
+            <column name="crit_failure_reputation" type="JSONB"/>
+            <column name="crit_failure_flags" type="JSONB"/>
+            <column name="crit_failure_triggers_combat" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="allows_cooperation" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="allowed_helper_classes" type="JSONB"/>
+            <column name="cooperation_bonus" type="INTEGER" defaultValueNumeric="0"/>
+            <column name="is_group_check" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="group_check_type" type="VARCHAR(20)"/>
+            <column name="group_roles" type="JSONB"/>
+            <column name="success_threshold" type="INTEGER"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="skill_checks" columnNames="quest_id,check_id"
+                             constraintName="uq_skill_check_per_quest"/>
+        <addForeignKeyConstraint baseTableName="skill_checks"
+                                 baseColumnNames="quest_id"
+                                 constraintName="fk_skill_check_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="skill_checks"
+                                 baseColumnNames="success_node_id"
+                                 constraintName="fk_skill_check_success_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="skill_checks"
+                                 baseColumnNames="failure_node_id"
+                                 constraintName="fk_skill_check_failure_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="skill_checks"
+                                 baseColumnNames="critical_success_node_id"
+                                 constraintName="fk_skill_check_crit_success_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="skill_checks"
+                                 baseColumnNames="critical_failure_node_id"
+                                 constraintName="fk_skill_check_crit_failure_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="skill_checks" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

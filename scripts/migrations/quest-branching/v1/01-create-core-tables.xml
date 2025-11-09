@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="quests-expand-structure" author="ai-manager">
+        <comment>Расширение таблицы quests под ветвящиеся квесты</comment>
+        <addColumn tableName="quests">
+            <column name="category" type="VARCHAR(50)"/>
+            <column name="difficulty" type="VARCHAR(20)"/>
+            <column name="min_level" type="INTEGER" defaultValueNumeric="1" />
+            <column name="max_level" type="INTEGER"/>
+            <column name="required_quests" type="JSONB"/>
+            <column name="required_flags" type="JSONB"/>
+            <column name="required_reputation" type="JSONB"/>
+            <column name="required_class" type="VARCHAR(50)"/>
+            <column name="required_origin" type="VARCHAR(50)"/>
+            <column name="has_branches" type="BOOLEAN" defaultValueBoolean="false" />
+            <column name="dialogue_tree_root" type="INTEGER"/>
+            <column name="objectives" type="JSONB" defaultValueComputed="'[]'::jsonb"/>
+            <column name="tags" type="JSONB"/>
+            <column name="related_quests" type="JSONB"/>
+            <column name="era" type="VARCHAR(20)" defaultValue="2020-2030"/>
+            <column name="region" type="VARCHAR(100)"/>
+            <column name="estimated_duration" type="INTEGER"/>
+            <column name="is_repeatable" type="BOOLEAN" defaultValueBoolean="false" />
+            <column name="cooldown_hours" type="INTEGER"/>
+            <column name="max_concurrent_players" type="INTEGER"/>
+            <column name="is_active" type="BOOLEAN" defaultValueBoolean="true" />
+            <column name="version" type="INTEGER" defaultValueNumeric="1" />
+        </addColumn>
+        <rollback>
+            <dropColumn tableName="quests" columnName="version"/>
+            <dropColumn tableName="quests" columnName="is_active"/>
+            <dropColumn tableName="quests" columnName="max_concurrent_players"/>
+            <dropColumn tableName="quests" columnName="cooldown_hours"/>
+            <dropColumn tableName="quests" columnName="is_repeatable"/>
+            <dropColumn tableName="quests" columnName="estimated_duration"/>
+            <dropColumn tableName="quests" columnName="region"/>
+            <dropColumn tableName="quests" columnName="era"/>
+            <dropColumn tableName="quests" columnName="related_quests"/>
+            <dropColumn tableName="quests" columnName="tags"/>
+            <dropColumn tableName="quests" columnName="objectives"/>
+            <dropColumn tableName="quests" columnName="dialogue_tree_root"/>
+            <dropColumn tableName="quests" columnName="has_branches"/>
+            <dropColumn tableName="quests" columnName="required_origin"/>
+            <dropColumn tableName="quests" columnName="required_class"/>
+            <dropColumn tableName="quests" columnName="required_reputation"/>
+            <dropColumn tableName="quests" columnName="required_flags"/>
+            <dropColumn tableName="quests" columnName="required_quests"/>
+            <dropColumn tableName="quests" columnName="max_level"/>
+            <dropColumn tableName="quests" columnName="min_level"/>
+            <dropColumn tableName="quests" columnName="difficulty"/>
+            <dropColumn tableName="quests" columnName="category"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="quests-indexes-core" author="ai-manager">
+        <createIndex tableName="quests" indexName="idx_quests_type">
+            <column name="type"/>
+        </createIndex>
+        <createIndex tableName="quests" indexName="idx_quests_level">
+            <column name="min_level"/>
+            <column name="max_level"/>
+        </createIndex>
+        <createIndex tableName="quests" indexName="idx_quests_era">
+            <column name="era"/>
+        </createIndex>
+        <createIndex tableName="quests" indexName="idx_quests_region">
+            <column name="region"/>
+        </createIndex>
+        <createIndex tableName="quests" indexName="idx_quests_tags" unique="false">
+            <column name="tags" type="JSONB"/>
+        </createIndex>
+        <rollback>
+            <dropIndex indexName="idx_quests_tags" tableName="quests"/>
+            <dropIndex indexName="idx_quests_region" tableName="quests"/>
+            <dropIndex indexName="idx_quests_era" tableName="quests"/>
+            <dropIndex indexName="idx_quests_level" tableName="quests"/>
+            <dropIndex indexName="idx_quests_type" tableName="quests"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="quest-progress-expand" author="ai-manager">
+        <comment>Расширение quest_progress под ветви и аудит</comment>
+        <addColumn tableName="quest_progress">
+            <column name="current_branch_id" type="VARCHAR(50)"/>
+            <column name="current_node_id" type="INTEGER"/>
+            <column name="chosen_path" type="VARCHAR(50)"/>
+            <column name="objectives_progress" type="JSONB" defaultValueComputed="'{}'::jsonb"/>
+            <column name="last_interaction_at" type="TIMESTAMP"/>
+            <column name="version" type="INTEGER" defaultValueNumeric="1" />
+        </addColumn>
+        <modifyDataType tableName="quest_progress" columnName="progress" newDataType="INTEGER"/>
+        <addNotNullConstraint tableName="quest_progress" columnName="progress"/>
+        <addDefaultValue tableName="quest_progress" columnName="progress" defaultValueNumeric="0"/>
+        <rollback>
+            <dropColumn tableName="quest_progress" columnName="version"/>
+            <dropColumn tableName="quest_progress" columnName="last_interaction_at"/>
+            <dropColumn tableName="quest_progress" columnName="objectives_progress"/>
+            <dropColumn tableName="quest_progress" columnName="chosen_path"/>
+            <dropColumn tableName="quest_progress" columnName="current_node_id"/>
+            <dropColumn tableName="quest_progress" columnName="current_branch_id"/>
+            <dropNotNullConstraint tableName="quest_progress" columnName="progress"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="quest-progress-indexes" author="ai-manager">
+        <createIndex tableName="quest_progress" indexName="idx_quest_progress_character">
+            <column name="character_id"/>
+        </createIndex>
+        <createIndex tableName="quest_progress" indexName="idx_quest_progress_quest">
+            <column name="quest_id"/>
+        </createIndex>
+        <createIndex tableName="quest_progress" indexName="idx_quest_progress_status">
+            <column name="status"/>
+        </createIndex>
+        <createIndex tableName="quest_progress" indexName="idx_quest_progress_branch">
+            <column name="current_branch_id"/>
+        </createIndex>
+        <createIndex tableName="quest_progress" indexName="idx_quest_progress_last_interaction" indexType="BRIN">
+            <column name="last_interaction_at"/>
+        </createIndex>
+        <rollback>
+            <dropIndex indexName="idx_quest_progress_last_interaction" tableName="quest_progress"/>
+            <dropIndex indexName="idx_quest_progress_branch" tableName="quest_progress"/>
+            <dropIndex indexName="idx_quest_progress_status" tableName="quest_progress"/>
+            <dropIndex indexName="idx_quest_progress_quest" tableName="quest_progress"/>
+            <dropIndex indexName="idx_quest_progress_character" tableName="quest_progress"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
