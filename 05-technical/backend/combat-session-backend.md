@@ -5,6 +5,13 @@
 ---
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-113: api/v1/gameplay/combat/combat-session.yaml (2025-11-09)
+- Last Updated: 2025-11-09 21:10
+---
+
 # Combat Session Backend - Backend боевых сессий
 
 **Статус:** approved  
