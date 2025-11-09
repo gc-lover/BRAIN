@@ -6,6 +6,11 @@
 **target-microservice:** economy-service (8085)  
 **target-frontend-module:** modules/economy/trade
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-111: api/v1/economy/trade/trade-system.yaml (2025-11-09)
+- Last Updated: 2025-11-09 20:35
 ---
 
 # Trade System (P2P) - Система торговли между игроками
