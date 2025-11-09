@@ -20,9 +20,12 @@
 **Размер:** ~280 строк ✅
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-108: api/v1/economy/auction-house/auction-database.yaml (2025-11-09)
+- Last Updated: 2025-11-09 20:05
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## Database Schema
