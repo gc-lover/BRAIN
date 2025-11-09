@@ -22,6 +22,7 @@
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 ## Low
 - [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
+- [!] Quest 035 Кунсткамера — расширить структуру, добавить версию/статус, расписать ветвления, награды и целевые API quest-engine перед передачей в ДУАПИТАСК (2025-11-09 09:43).
 - [!] Quest 037 Love Hotel — оформить статус/версию/приоритет, расписать ветвления и награды, определить целевые микросервисы и каталоги API перед передачей ДУАПИТАСК (2025-11-09 09:36).
 - [!] Quest 035 Имплантная зависимость — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md` к QUEST-TEMPLATE, расписать ветвления лечения, связать с имплантами и подготовить цели API quest-engine/economy (2025-11-09 09:37).
 - [!] Granville Island Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md`: описать ветвления, NPC, зависимости с quest-engine и KPI наград перед передачей в ДУАПИТАСК (2025-11-09 09:35).

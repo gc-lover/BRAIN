@@ -1283,6 +1283,28 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Нет ветвлений, NPC и социальных эффектов (MLK, события); требуется привести к QUEST-TEMPLATE, добавить KPI и определить каталоги API для quest-engine."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Не описаны маршруты, расписания, NPC и KPI посещений Smithsonian; требуется применить QUEST-TEMPLATE, добавить ветвления и определить интеграции с образовательными и экономическими системами и каталоги API quest-engine."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-005-washington-monument.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Требуется описать сценарии бронирования, очередей, погодных ограничений и NPC, определить KPI посещаемости и каталоги API quest-engine перед постановкой задач."
   - path: ".BRAIN/04-narrative/npc-lore/common/enemies/maelstrom-tech-2070s-watson.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -2031,6 +2053,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Квест описывает PvP-турнир, но не применяет QUEST-TEMPLATE: отсутствуют YAML-метаданные, ветвления, зависимости, связи с прогрессией и экономикой; требуется детальная доработка перед передачей в API поток."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-026-abbey-road.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:44"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Квест по студии Abbey Road оформлен кратко; необходимо применить QUEST-TEMPLATE, добавить YAML-метаданные, ветвления, зависимости, а также указать прогрессные и экономические связи перед постановкой API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md"
     version: "0.1.0"
     status: "needs-work"
