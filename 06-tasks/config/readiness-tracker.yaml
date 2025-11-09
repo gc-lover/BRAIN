@@ -139,6 +139,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Процедуры Brain Manager перепроверены 2025-11-09 03:57; документ регламентирует процессы и не формирует API задачи."
+  - path: ".BRAIN/КЛИР.MD"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:03"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Сценарий Clear Agent перепроверен 2025-11-09 04:03; документ описывает архивные процессы и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -998,10 +1009,10 @@ mappings:
       frontend_module: "modules/combat/*"
     notes: "Wave 1 combat бриф подтверждён 2025-11-09 03:25; агрегирует готовые документы для передачи ДУАПИТАСК."
   - path: ".BRAIN/02-gameplay/economy/economy-pricing-detailed.md"
-    version: "1.0.0"
+    version: "2.0.0"
     status: "ready"
     priority: "high"
-    checked: "2025-11-09 03:25"
+    checked: "2025-11-09 04:03"
     checker: "Brain Manager"
     api_target:
       microservice: "economy-service"
