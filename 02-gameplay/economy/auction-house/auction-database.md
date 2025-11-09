@@ -5,6 +5,11 @@
 ---
 
 # Auction House Database - База данных
+**target-domain:** economy-auction  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/auction-house
+
+# Auction House Database - База данных
 
 **Статус:** approved  
 **Версия:** 1.0.0  

@@ -1,12 +1,13 @@
 ﻿# Боевая система — Киберпространство
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:28
-**api-readiness-notes:** Перепроверено 2025-11-09 01:28. Типы киберпространства, структура зон, PvP/PvE события и доступ готовы для постановки API задач (v1.0.0).
+**api-readiness-check-date:** 2025-11-09 03:13
+**api-readiness-notes:** Перепроверено 2025-11-09 03:13: типы киберпространства, структура зон, PvP/PvE события и уровни доступа подтверждены (v1.0.0); документ готов к постановке задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/cyberspace
+**version:** 1.0.0
 
 ---
 

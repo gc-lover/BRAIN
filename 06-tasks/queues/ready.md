@@ -38,6 +38,8 @@
   **Проверено:** 2025-11-09 01:37 — Brain Manager | Следующий шаг: подготовить REST/WS пакет по TTK, отдаче и имплант-модификаторам (gameplay-service, `api/v1/gameplay/combat/shooting.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-extract.md (v1.3.0)  
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать пакет API задач по экстракт-зонам (gameplay-service, `api/v1/gameplay/combat/extraction.yaml`).
+- **Документ:** .BRAIN/02-gameplay/combat/loot-hunt-system.md (v1.0.0)  
+  **Проверено:** 2025-11-09 03:09 — Brain Manager | Следующий шаг: подготовить API пакет по Loot Hunt (контракты, эвенты, интеграции; gameplay-service, `api/v1/gameplay/combat/loot-hunt.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-networks.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: сформировать API задачи на сетевой хакерский слой (gameplay-service, `api/v1/gameplay/combat/hacking/networks.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md (v1.0.0)  
