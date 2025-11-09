@@ -11,6 +11,14 @@
 **target-microservice:** economy-service (8085)  
 **target-frontend-module:** modules/economy/inventory
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-100: api/v1/economy/inventory/inventory-core.yaml (2025-11-09)
+- Last Updated: 2025-11-09 18:05
+---
+
 [Навигация](./README.md) | [Part 2 →](./part2-advanced-features.md)
 
 ---
