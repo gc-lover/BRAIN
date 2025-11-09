@@ -48,10 +48,23 @@ implementations:
     brain_source: ".BRAIN/05-technical/backend/player-character-mgmt/character-management.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-09 15:43"
+      completed: "2025-11-09 16:18"
       agent: "Backend Agent"
+      commit: "a51ee69"
+      notes: "Реализованы процессы активных слотов, восстановление и аудит персонажей."
     frontend:
       status: "not_started"
     priority: "critical"
+  - api_path: "api/v1/economy/auction-house/auction-mechanics.yaml"
+    task_id: "API-TASK-109"
+    brain_source: ".BRAIN/02-gameplay/economy/auction-house/auction-mechanics.md"
+    api_status: "completed"
+    backend:
+      status: "not_started"
+    frontend:
+      status: "not_started"
+    priority: "high"
+    notes: "OpenAPI завершён 2025-11-09 16:30 (АПИТАСК)."
 
