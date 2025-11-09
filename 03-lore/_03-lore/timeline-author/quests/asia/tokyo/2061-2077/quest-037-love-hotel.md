@@ -1,5 +1,9 @@
 # Love Hotel
 
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:36  
+**api-readiness-notes:** Отсутствуют статус, версия и приоритет документа, не определены технические зависимости и целевые API; требуется дополнить структуру, сценарии ветвлений и привязку к сервисам перед постановкой задач.
+
 **quest-id:** TOKYO-2077-037  
 **city:** Токио | **region:** Азия | **period:** 2061-2077  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 30-60min

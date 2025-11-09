@@ -1,3 +1,9 @@
+---
+api-readiness: needs-work
+api-readiness-check-date: 2025-11-09 09:35
+api-readiness-notes: отсутствует версия и статус документа, недостаточно конкретики для API задачи
+---
+
 # Призрак Николая II
 
 **quest-id:** SPB-2077-034  

@@ -19,8 +19,9 @@
 - [~] Combat D&D Core — подготовить материалы `.BRAIN/02-gameplay/combat/combat-dnd-core.md` (DC, модификаторы, групповые проверки) для передачи в ДУАПИТАСК (2025-11-09 01:44).
 - [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 02:48).
 - [ ] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 01:22).
+- [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 ## Low
-- *(пусто)*
+- [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
 
 ---
 

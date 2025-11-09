@@ -1,15 +1,15 @@
 ﻿---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:10
-**api-readiness-notes:** Player Market Analytics. Метрики, roadmap, интеграция с геймплеем, стратегии. ~180 строк.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:34
+**api-readiness-notes:** Перепроверено 2025-11-09 09:34. По-прежнему отсутствуют структурированные API контракты для витрин, SQL/ETL схемы и согласованная матрица KPI; требуется детализация перед постановкой задач.
 ---
 
 # Player Market Analytics - Аналитика и метрики
 
-**Статус:** approved  
+**Статус:** in-review  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Дата обновления:** 2025-11-07 06:10  
+**Дата обновления:** 2025-11-09 09:34  
 **Приоритет:** высокий  
 **Автор:** AI Brain Manager
 
@@ -18,8 +18,8 @@
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 20:16
+- **Status:** in-review
+- **Last Updated:** 2025-11-09 09:34
 ---
 
 ## Метрики
