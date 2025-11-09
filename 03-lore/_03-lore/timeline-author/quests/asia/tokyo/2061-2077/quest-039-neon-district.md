@@ -1,5 +1,9 @@
 # Неоновый Район
 
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:13  
+**api-readiness-notes:** Нет статуса, версии и приоритета; отсутствуют ветвления, связки с системами, целевые API и модуль фронтенда; требуется оформить документ по QUEST-TEMPLATE с детализацией конфликтов и зависимостей перед постановкой задач.
+
 **quest-id:** TOKYO-2077-039  
 **city:** Токио | **region:** Азия | **period:** 2061-2077  
 **quest-type:** side | **difficulty:** medium | **solo-group:** solo | **time:** 1-2h

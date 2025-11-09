@@ -1,4 +1,4 @@
-﻿# Трекер готовности документов .BRAIN к созданию API задач
+# Трекер готовности документов .BRAIN к созданию API задач
 #
 # Формат записи:
 # - path: относительный путь к документу .BRAIN
@@ -1360,14 +1360,26 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Требуется оформить по QUEST-TEMPLATE: добавить NPC, ветвления, KPI культуры, зависимости с quest-engine/social/economy и указать целевые REST/WS каталоги."
-  - path: \".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-004-lucha-libre.md\"
-    version: \"0.1.0\"
-    status: \"needs-work\"
-    priority: \"medium\"
-    checked: \"2025-11-09 10:00\"
-    checker: \"Brain Manager\"
+
+  - path: ".BRAIN/03-lore/_03-lore/activities/activities-lore-compendium.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:46"
+    checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: \"Проработать сценарные ветки боя (tecnicos vs rudos), добавить проверки навыков, интеграции с системами прогрессии, экономики и социального рейтинга, а также определить целевые каталоги OpenAPI и фронтенд-модуль.\"
+    notes: "Перепроверено 2025-11-09 09:46: лор-компендиум активностей используется как справочник и не формирует API задачи."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-004-lucha-libre.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:00"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Проработать сценарные ветки боя (tecnicos vs rudos), добавить проверки навыков, интеграции с системами прогрессии, экономики и социального рейтинга, а также определить целевые каталоги OpenAPI и фронтенд-модуль."
