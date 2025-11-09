@@ -8,6 +8,13 @@
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/implants
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-115: api/v1/gameplay/combat/implants/implants-types.yaml (2025-11-09)
+- Last Updated: 2025-11-09 22:30
+---
+
 ## 1. Типы имплантов для боя — ✅ Решение
 
 ### 1.1 Детализация системы имплантов — ✅ Решение
