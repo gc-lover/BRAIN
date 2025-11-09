@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="fn-sync-quests-shadow" author="ai-manager">
+        <sql>
+            CREATE OR REPLACE FUNCTION fn_sync_quests_shadow() RETURNS trigger AS $$
+            DECLARE
+                shadow_setting text := current_setting('quest_branching.shadow_write', true);
+                shadow_enabled boolean := shadow_setting IS NOT NULL AND shadow_setting = 'enabled';
+            BEGIN
+                IF TG_OP = 'DELETE' THEN
+                    IF shadow_enabled THEN
+                        DELETE FROM quest_branches WHERE quest_id = OLD.id;
+                        DELETE FROM quest_consequences WHERE source_quest_id = OLD.id;
+                        DELETE FROM quest_consequences WHERE affects_quest_id = OLD.id;
+                    END IF;
+                    RETURN OLD;
+                END IF;
+
+                IF NEW.created_at IS NULL THEN
+                    NEW.created_at := CURRENT_TIMESTAMP;
+                END IF;
+                NEW.updated_at := CURRENT_TIMESTAMP;
+
+                IF shadow_enabled THEN
+                    INSERT INTO quest_branches(quest_id, branch_id, branch_name)
+                    VALUES (NEW.id, 'default', COALESCE(NEW.name, 'Default Path'))
+                    ON CONFLICT (quest_id, branch_id) DO UPDATE SET branch_name = EXCLUDED.branch_name, updated_at = CURRENT_TIMESTAMP;
+                END IF;
+
+                RETURN NEW;
+            END;
+            $$ LANGUAGE plpgsql;
+        </sql>
+        <rollback>
+            <sql>
+                DROP FUNCTION IF EXISTS fn_sync_quests_shadow();
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="trg-quests-shadow" author="ai-manager">
+        <sql>
+            CREATE TRIGGER trg_quests_shadow
+            BEFORE INSERT OR UPDATE OR DELETE ON quests
+            FOR EACH ROW EXECUTE FUNCTION fn_sync_quests_shadow();
+        </sql>
+        <rollback>
+            <sql>
+                DROP TRIGGER IF EXISTS trg_quests_shadow ON quests;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="fn-sync-quest-progress-shadow" author="ai-manager">
+        <sql>
+            CREATE OR REPLACE FUNCTION fn_sync_quest_progress_shadow() RETURNS trigger AS $$
+            DECLARE
+                shadow_setting text := current_setting('quest_branching.shadow_write', true);
+                shadow_enabled boolean := shadow_setting IS NOT NULL AND shadow_setting = 'enabled';
+                completion_flag text;
+            BEGIN
+                completion_flag := 'quest:' || COALESCE(CASE WHEN TG_OP = 'DELETE' THEN OLD.quest_id ELSE NEW.quest_id END, '') || ':completed';
+
+                IF TG_OP = 'DELETE' THEN
+                    IF shadow_enabled THEN
+                        DELETE FROM player_flags WHERE character_id = OLD.character_id AND flag_name = completion_flag;
+                        DELETE FROM player_quest_consequences WHERE character_id = OLD.character_id AND applied_from_quest = OLD.quest_id;
+                    END IF;
+                    RETURN OLD;
+                END IF;
+
+                IF TG_OP = 'INSERT' THEN
+                    IF NEW.started_at IS NULL THEN
+                        NEW.started_at := CURRENT_TIMESTAMP;
+                    END IF;
+                    NEW.last_interaction_at := CURRENT_TIMESTAMP;
+                ELSE
+                    IF NEW.progress IS DISTINCT FROM OLD.progress
+                        OR NEW.current_node_id IS DISTINCT FROM OLD.current_node_id
+                        OR NEW.status IS DISTINCT FROM OLD.status
+                    THEN
+                        NEW.last_interaction_at := CURRENT_TIMESTAMP;
+                    ELSE
+                        NEW.last_interaction_at := COALESCE(OLD.last_interaction_at, CURRENT_TIMESTAMP);
+                    END IF;
+                END IF;
+
+                NEW.updated_at := CURRENT_TIMESTAMP;
+
+                IF shadow_enabled THEN
+                    IF NEW.status = 'COMPLETED' THEN
+                        INSERT INTO player_flags(character_id, flag_name, flag_type, set_by_quest_id, category)
+                        VALUES (NEW.character_id, completion_flag, 'BOOLEAN', NEW.quest_id, 'QUEST')
+                        ON CONFLICT (character_id, flag_name) DO UPDATE SET updated_at = CURRENT_TIMESTAMP;
+                    ELSE
+                        DELETE FROM player_flags WHERE character_id = NEW.character_id AND flag_name = completion_flag;
+                    END IF;
+                END IF;
+
+                RETURN NEW;
+            END;
+            $$ LANGUAGE plpgsql;
+        </sql>
+        <rollback>
+            <sql>
+                DROP FUNCTION IF EXISTS fn_sync_quest_progress_shadow();
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="trg-quest-progress-shadow" author="ai-manager">
+        <sql>
+            CREATE TRIGGER trg_quest_progress_shadow
+            BEFORE INSERT OR UPDATE OR DELETE ON quest_progress
+            FOR EACH ROW EXECUTE FUNCTION fn_sync_quest_progress_shadow();
+        </sql>
+        <rollback>
+            <sql>
+                DROP TRIGGER IF EXISTS trg_quest_progress_shadow ON quest_progress;
+            </sql>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+
