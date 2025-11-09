@@ -7,7 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 11:52
+**api-readiness-check-date:** 2025-11-09 04:38
+**api-readiness-notes:** Литературный документ; подтверждено 2025-11-09 04:38, что материал описывает NPC и не требует API задач
 
 **Категория:** important  
 **ID NPC:** npc-netrunner-tbug-2050-2077

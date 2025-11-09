@@ -1,5 +1,14 @@
 # Equipment Matrix - Навигация
 
+---
+- **Status:** approved
+- **Last Updated:** 2025-11-09 04:40
+---
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 04:40  
+**api-readiness-notes:** Перепроверено 2025-11-09 04:40. Файл служит оглавлением раздела и не содержит данных для постановки API задач.
+
 **Версия:** 1.5.0  
 **Дата:** 2025-11-07 21:04
 

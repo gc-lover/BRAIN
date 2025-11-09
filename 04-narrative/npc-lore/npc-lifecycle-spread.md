@@ -7,8 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:10
-**api-readiness-notes:** Методический документ для планирования активных периодов NPC
+**api-readiness-check-date:** 2025-11-09 04:38
+**api-readiness-notes:** Методический документ; подтверждено 2025-11-09 04:38, что он служит планированию и не формирует API задач
 
 ---
 

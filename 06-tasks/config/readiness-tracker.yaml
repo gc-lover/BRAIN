@@ -381,6 +381,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея пассивных медиа-пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hybrid-media-references.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "medium"
+    checked: "2025-11-09 04:28"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: "CURRENT-WORK/archive/2025-11-07-hybrid-media-references-expansion.md"
+      frontend_module: null
+    notes: "Готовый пакет гибридных отсылок перепроверен 2025-11-09 04:28; материалы зафиксированы в архивном документе."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1525,6 +1536,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Профиль netrunner за Blackwall; подтверждено 2025-11-09 04:34, что документ служит нарративным целям и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/netrunners/spider-murphy-legend-2020-2077.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "very high"
+    checked: "2025-11-09 04:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль легендарного netrunner; подтверждено 2025-11-09 04:38, что документ предназначен для лора и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/netrunners/t-bug-prodigy-2050-2077.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль netrunner T-Bug; подтверждено 2025-11-09 04:38, что документ описательный и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/npc-lifecycle-spread.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Методический документ распределения активных лет NPC; подтверждено 2025-11-09 04:38, что он служит планированию и не формирует API задач."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
@@ -1668,3 +1712,14 @@ mappings:
       directory: null
       frontend_module: "modules/economy/equipment"
     notes: "Перепроверено 2025-11-09 04:37: библиотека описывает генератор и параметры, но отсутствуют JSON-схемы, API контракты и согласованные экономические коэффициенты; требуется детализация перед постановкой задач."
+  - path: ".BRAIN/02-gameplay/economy/equipment/README.md"
+    version: "1.5.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 04:40"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 04:40: навигационное оглавление раздела, не содержит данных для API задач."

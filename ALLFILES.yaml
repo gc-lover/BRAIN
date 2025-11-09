@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/equipment/README.md"
   - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-analytics.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-api.md"
@@ -2175,9 +2174,6 @@
   - path: ".BRAIN/04-narrative/npc-lore/locations/README.md"
   - path: ".BRAIN/04-narrative/npc-lore/media/README.md"
   - path: ".BRAIN/04-narrative/npc-lore/netrunners/README.md"
-  - path: ".BRAIN/04-narrative/npc-lore/netrunners/spider-murphy-legend-2020-2077.md"
-  - path: ".BRAIN/04-narrative/npc-lore/netrunners/t-bug-prodigy-2050-2077.md"
-  - path: ".BRAIN/04-narrative/npc-lore/npc-lifecycle-spread.md"
   - path: ".BRAIN/04-narrative/npc-lore/npc-prioritization.md"
   - path: ".BRAIN/04-narrative/npc-lore/npc-status-tracker/README.md"
   - path: ".BRAIN/04-narrative/npc-lore/NPC-TEMPLATE.md"
@@ -2657,5 +2653,4 @@
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-cyberspace-easter-weaves.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-dynamic-media-crossovers.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hidden-media-easter-eggs.md"
-  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hybrid-media-references.md"
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-immersive-media-cheese.md"
