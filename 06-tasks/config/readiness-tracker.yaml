@@ -1371,6 +1371,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Описание вертикального города не содержит связей с системами, API каталогов и фронтенд-модуля; необходимо расширить ветвления, KPI и зависимости согласно QUEST-TEMPLATE."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-023-bridge-fortress.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 09:49"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест по контролю мостов описывает основные этапы, но отсутствуют ветвления, зависимости с quest-engine, economy и PvP системами; требуется шаблон QUEST-TEMPLATE, определить микросервис, каталоги API и фронтенд-модуль."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md"
     version: "0.1.0"
     status: "needs-work"
