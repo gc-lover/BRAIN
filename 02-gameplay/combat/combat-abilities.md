@@ -8,6 +8,13 @@
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/abilities
 
+- **API Tasks Status:**
+  - Status: created
+  - Tasks:
+    - API-TASK-404: api/v1/gameplay/combat/abilities/abilities.yaml (2025-11-09)
+  - Last Updated: 2025-11-09 23:15
+---
+
 **Статус:** approved  
 **Приоритет:** Высокий  
 **Дата создания:** 2025-11-03
