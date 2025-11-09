@@ -51,6 +51,50 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Служебный файл игнорирования Git, не связан с API задачами; статус not-applicable подтверждён 2025-11-09 03:08."
+  - path: ".BRAIN/ARCHITECTURE.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:48"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Архитектура директорий .BRAIN обновлена 2025-11-09 03:48; документ служит структурной схемой и не формирует API задачи."
+  - path: ".BRAIN/CORE.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "critical"
+    checked: "2025-11-09 03:48"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Ядро .BRAIN перепроверено 2025-11-09 03:48; документ задаёт процессы и не требует постановки API задач."
+  - path: ".BRAIN/scripts/autocommit.ps1"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 03:48"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "PowerShell-скрипт автокоммита подтверждён 2025-11-09 03:48; не связан с API задачами."
+  - path: ".BRAIN/scripts/autocommit.sh"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 03:48"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Bash-скрипт автокоммита подтверждён 2025-11-09 03:48; не требует постановки API задач."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -315,6 +359,17 @@ mappings:
       directory: "api/v1/economy/monetization/monetization.yaml"
       frontend_module: "modules/economy/monetization"
     notes: "Перепроверено 2025-11-09 03:36: гибридная монетизация, пользовательский контент и API потоки описаны полно; TODO по инструментам не блокируют постановку задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-overview.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 03:36: обзор служит навигацией по экономическим материалам и не формирует самостоятельных API задач."
   - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
     version: "1.1.0"
     status: "ready"
@@ -788,6 +843,39 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/cyberspace.yaml"
       frontend_module: "modules/combat/cyberspace"
     notes: "Перепроверено 2025-11-09 03:13; добавлена явная версия 1.0.0, режимы киберпространства и событийная структура готовы к формированию API контрактов gameplay-service."
+  - path: ".BRAIN/04-narrative/npc-lore/common/enemies/maelstrom-tech-2070s-watson.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:49"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль NPC врага для лора; подтверждено 2025-11-09 03:49, что постановка API задач не требуется."
+  - path: ".BRAIN/04-narrative/npc-lore/common/traders/rita-moreno.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:49"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Литературный профиль NPC торговки; подтверждено 2025-11-09 03:49, что API задачи не требуются."
+  - path: ".BRAIN/04-narrative/npc-lore/common/traders/street-food-vendor-2060s-heywood.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 03:49"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Описание NPC продавца уличной еды; подтверждено 2025-11-09 03:49, что API задачи не формируются."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
