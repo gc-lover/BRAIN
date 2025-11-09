@@ -7,8 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-09 04:20
-**api-readiness-notes:** Литературный документ; подтверждено 2025-11-09 04:20, что материал описывает NPC и не требует API задач
+**api-readiness-check-date:** 2025-11-09 04:23
+**api-readiness-notes:** Литературный документ; подтверждено 2025-11-09 04:23, что материал описывает NPC и не требует API задач
 
 **Категория:** important  
 **ID NPC:** npc-t-bug

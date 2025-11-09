@@ -293,6 +293,50 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Обзор очередей перепроверен 2025-11-09 04:18; документ пояснительный и не формирует API задачи."
+  - path: ".BRAIN/07-research/README.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:18"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Обзор раздела исследований перепроверен 2025-11-09 04:18; документ служебный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/README.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:18"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "README идей перепроверен 2025-11-09 04:18; документ служебный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/IDEA-TEMPLATE.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:18"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Шаблон идеи перепроверен 2025-11-09 04:18; документ служебный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/queues/README.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:18"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Обзор очередей перепроверен 2025-11-09 04:18; документ пояснительный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1298,35 +1342,35 @@ mappings:
     version: "1.1.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:20"
+    checked: "2025-11-09 04:23"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль элитного нетраннера NUSA; подтверждено 2025-11-09 04:20, что документ предназначен для лора и не требует API задач."
+    notes: "Профиль элитного нетраннера NUSA; подтверждено 2025-11-09 04:23, что документ предназначен для лора и не требует API задач."
   - path: ".BRAIN/04-narrative/npc-lore/important/susie-q.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "medium"
-    checked: "2025-11-09 04:20"
+    checked: "2025-11-09 04:23"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль лидера The Mox; подтверждено 2025-11-09 04:20, что документ описательный и не формирует API задачи."
+    notes: "Профиль лидера The Mox; подтверждено 2025-11-09 04:23, что документ описательный и не формирует API задачи."
   - path: ".BRAIN/04-narrative/npc-lore/important/t-bug.md"
     version: "1.0.0"
     status: "not-applicable"
     priority: "high"
-    checked: "2025-11-09 04:20"
+    checked: "2025-11-09 04:23"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Профиль независимого нетраннера; подтверждено 2025-11-09 04:20, что документ служит нарративным целям и не требует API задач."
+    notes: "Профиль независимого нетраннера; подтверждено 2025-11-09 04:23, что документ служит нарративным целям и не требует API задач."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
@@ -1382,6 +1426,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Перепроверено 2025-11-09 04:17: файл служит навигацией по материалам биржи и не формирует API задачи."
+  - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
+    version: "1.1.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 04:19"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/trading/trading-guilds.yaml"
+      frontend_module: "modules/economy/trading-guilds"
+    notes: "Перепроверено 2025-11-09 04:19: документ покрывает создание, управление капиталом, API, аудит и интеграции торговых гильдий; готов к постановке задач economy-service."
   - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
     version: "1.1.0"
     status: "ready"
