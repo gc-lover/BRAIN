@@ -238,6 +238,28 @@ mappings:
       directory: "api/v1/economy/auction-house/auction-operations.yaml"
       frontend_module: "modules/economy/auction-house"
     notes: "Auction House Operations перепроверен 2025-11-09 03:09: REST эндпоинты, операции ставок и мониторинг описаны для непосредственной постановки задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/crafting/README.md"
+    version: "1.0.1"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:22"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 03:22: индекс навигации по крафту, задачи формируются по дочерним файлам."
+  - path: ".BRAIN/02-gameplay/economy/economy-analytics.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:20"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/analytics/analytics.yaml"
+      frontend_module: "modules/economy/analytics"
+    notes: "Перепроверено 2025-11-09 03:20: аналитические диаграммы, индикаторы и REST/WS API описаны достаточно детально для постановки задач economy-service."
   - path: ".BRAIN/05-technical/backend/quest-engine-backend.md"
     version: "1.0.0"
     status: "ready"
@@ -396,13 +418,13 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "medium"
-    checked: "2025-11-09 03:13"
+    checked: "2025-11-09 03:21"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Сводка детализации боевой системы перепроверена 2025-11-09 03:13; документ фиксирует прогресс и не требует постановки API задач."
+    notes: "Перепроверено 2025-11-09 03:21; сводка расширения агрегирует прогресс документов по боевой системе и не формирует самостоятельных API задач."
   - path: ".BRAIN/02-gameplay/combat/combat-freerun.md"
     version: "1.1.0"
     status: "ready"
@@ -429,13 +451,13 @@ mappings:
     version: "1.0.0"
     status: "ready"
     priority: "high"
-    checked: "2025-11-09 03:13"
+    checked: "2025-11-09 03:21"
     checker: "Brain Manager"
     api_target:
       microservice: "gameplay-service"
       directory: "api/v1/gameplay/combat/shooting-advanced.yaml"
-      frontend_module: "modules/combat/shooting"
-    notes: "Расширенная система стрельбы перепроверена 2025-11-09 03:13: профили дистанций, рикошеты и кастомизация оружия готовы к постановке API задач gameplay-service."
+      frontend_module: "modules/combat/shooting/advanced"
+    notes: "Перепроверено 2025-11-09 03:21; целевые модуль и микросервис уточнены, профили дистанций, рикошеты и кастомизация оружия готовы к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-stealth.md"
     version: "1.1.0"
     status: "ready"

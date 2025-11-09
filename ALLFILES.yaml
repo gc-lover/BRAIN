@@ -1,6 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/crafting/README.md"
-  - path: ".BRAIN/02-gameplay/economy/economy-analytics.md"
   - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
   - path: ".BRAIN/02-gameplay/economy/economy-crafting.md"
   - path: ".BRAIN/02-gameplay/economy/economy-currencies-detailed.md"

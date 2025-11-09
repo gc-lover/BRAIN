@@ -1,8 +1,8 @@
 ﻿# Боевая система - PvP vs PvE баланс
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:13
-**api-readiness-notes:** Перепроверено 2025-11-09 03:13: PvP зоны, условные режимы, безопасные хабы и PvE сложности описаны детально, блокеров для API задач нет (v1.1.0).
+**api-readiness-check-date:** 2025-11-09 03:21
+**api-readiness-notes:** Перепроверено 2025-11-09 03:21; добавлена явная версия 1.1.0, PvP зоны, условные режимы, безопасные хабы и PvE сложности описаны детально, блокеров для API задач нет.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  

@@ -1,7 +1,7 @@
 ---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:13
-**api-readiness-notes:** Перепроверено 2025-11-09 03:13: REST/Async API, схемы данных и интеграции с экономикой/крафтом описаны, блокеров нет.
+**api-readiness-check-date:** 2025-11-09 03:21
+**api-readiness-notes:** Перепроверено 2025-11-09 03:21; добавлены целевые модуль/микросервис, REST/Async API, схемы данных и интеграции с экономикой/крафтом описаны, блокеров нет.
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/shooting/advanced  
