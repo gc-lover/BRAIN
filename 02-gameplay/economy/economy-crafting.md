@@ -1,8 +1,8 @@
 ﻿# Экономическая система - Крафт
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:20
-**api-readiness-notes:** Перепроверено 2025-11-09 03:20; гибрид крафта, рецепты и API требования остаются полными для задач economy-service.
+**api-readiness-check-date:** 2025-11-09 03:27
+**api-readiness-notes:** Перепроверено 2025-11-09 03:27: гибрид крафта, рецепты и API требования остаются полными для задач economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
