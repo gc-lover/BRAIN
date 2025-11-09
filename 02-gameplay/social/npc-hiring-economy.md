@@ -7,9 +7,9 @@
 
 # Система найма NPC — Экономика найма
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит стоимость найма и вознаграждение.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется вычислить формулы стоимости/вознаграждения и определить структуры данных/API перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

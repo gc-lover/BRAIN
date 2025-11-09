@@ -7,9 +7,9 @@
 
 # Система наставничества — Механика обучения
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит процесс обучения и прокачку навыков.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется проработать формулы бонусов, закрыть TODO и описать структуры данных/API перед передачей в разработку.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

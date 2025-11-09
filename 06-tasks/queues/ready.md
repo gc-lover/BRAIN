@@ -23,6 +23,10 @@
 
 - **Документ:** .BRAIN/05-technical/backend/auth/README.md (v1.0.1)  
   **Проверено:** 2025-11-09 02:47 — Brain Manager | Следующий шаг: подготовить пакет REST `/api/v1/auth/*`, событий auth-service и OAuth потоков для ДУАПИТАСК.
+- **Документ:** .BRAIN/02-gameplay/social/npc-relationships-system-детально.md (v1.0.0)  
+  **Проверено:** 2025-11-09 12:15 — Brain Manager | Следующий шаг: передать документ в ДУАПИТАСК и связать `api/v1/social/npc-relationships.yaml` с модулем `modules/social/npc-relations`.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:09 — Brain Readiness Checker | Следующий шаг: передать документ в ДУАПИТАСК и обновить `brain-mapping.yaml` для каталога `api/v1/narrative/quests/america/vancouver/granville-island.yaml`.
 - **Документ:** .BRAIN/05-technical/backend/player-character-mgmt/character-management.md (v1.1.0)  
   **Проверено:** 2025-11-09 02:47 — Brain Manager | Следующий шаг: оформить REST/Events по CRUD, переключению и восстановлению персонажей (`api/v1/characters/players.yaml`) для character-service.
 - **Документ:** .BRAIN/05-technical/backend/progression-backend.md (v1.0.0)  
@@ -35,6 +39,8 @@
   **Проверено:** 2025-11-09 01:30 — Brain Manager | Следующий шаг: подготовить задание по P2P трейду (economy-service, `api/v1/trade/trade-system.yaml`) с антифродом и очередью подтверждений.
 - **Документ:** .BRAIN/02-gameplay/economy/auction-house/auction-database.md (v1.0.0)  
   **Проверено:** 2025-11-09 03:09 — Brain Manager | Следующий шаг: подготовить задачи для economy-service по БД аукциона (`api/v1/economy/auction-house/auction-database.yaml`) и синхронизировать с фронтенд модулем `modules/economy/auction-house`.
+- **Документ:** .BRAIN/03-lore/_03-lore/characters/characters-overview.md (v1.2.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager | Следующий шаг: подготовить пакет API по каталогам NPC (`api/v1/narrative/characters/characters-overview.yaml`) и синхронизировать модуль `modules/narrative/characters`.
 - **Документ:** .BRAIN/02-gameplay/economy/auction-house/auction-mechanics.md (v1.0.0)  
   **Проверено:** 2025-11-09 03:09 — Brain Manager | Следующий шаг: сформировать REST/Events пакет по механикам ставок и buyout (`api/v1/economy/auction-house/auction-mechanics.yaml`) и передать в ДУАПИТАСК.
 - **Документ:** .BRAIN/02-gameplay/economy/auction-house/auction-operations.md (v1.0.0)  

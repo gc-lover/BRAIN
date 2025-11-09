@@ -7,9 +7,9 @@
 
 # Система наставничества — Влияние на игровой мир
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит влияние на мир и экономику.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется завершить расчёты влияния и определить API/индексы, указанные TODO, прежде чем ставить задачи.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

@@ -35,6 +35,24 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-038-isaac-cathedral-climb.md (v0.0.0)  
   **Проверено:** 2025-11-09 10:23 — Brain Readiness Checker  
   **Что доработать:** Привести к QUEST-TEMPLATE: добавить версию/статус, расписать ветвления (погодные условия, события), интеграции с туризмом/прогрессией и определить целевые API каталоги quest-engine.
+- **Документ:** .BRAIN/03-lore/_03-lore/culture/CYBERPUNK-CULTURE-MASTER-INDEX.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Определить целевые микросервисы и каталоги OpenAPI, зафиксировать фронтенд модули и KPI, связать культурные эпохи с economy/social/world системами перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/events/fifth-corporate-war-2085-2088.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Сформировать фазовую модель данных и KPI, определить целевые сервисы (world, narrative, economy), каталоги OpenAPI и фронтенд модули для событий войны перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/events/fifth-war-battles-detailed.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Оформить боевые сценарии как игровые события с API контрактами, определить сервисы world/narrative/economy, каталоги OpenAPI, KPI и фронтенд модули.
+- **Документ:** .BRAIN/03-lore/_03-lore/events/fifth-war-heroes-and-victims.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Превратить нарративные профили в структурированные модели NPC/событий, определить зависимости с progression/social системами и указать целевые каталоги OpenAPI.
+- **Документ:** .BRAIN/03-lore/_03-lore/factions/corporations/arasaka-internal-politics-2077-2093.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Структурировать фракции Arasaka и ключевые NPC как данные, определить сервисы и каталоги OpenAPI, зафиксировать интеграции с economy/social/world системами.
+- **Документ:** .BRAIN/03-lore/_03-lore/factions/corporations/CORPORATE-POLITICS-MASTER-INDEX.md (v1.0.0)  
+  **Проверено:** 2025-11-09 11:21 — Brain Manager  
+  **Что доработать:** Описать структуры данных для корпоративных фракций, определить целевые сервисы, каталоги OpenAPI и фронтенд модули, связать сценарии с economy/social/world зависимостями.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE: расписать зависимости (локации, NPC, цепочки), определить целевой микросервис, каталог OpenAPI и фронтенд-модуль, связать этапы и награды с системами прогрессии и экономики.
@@ -65,6 +83,12 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE, расписать ветвления лечения, связать с системами имплантов и указать целевые API/микросервисы и экономику наград.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-036-underground-arena.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:45 — Brain Manager  
+  **Что доработать:** Расписать турнирные стадии, NPC, систему ставок, интеграцию с economy/combat и указать целевые API каталоги quest-engine/betting.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-038-corpo-wedding.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:31 — Brain Manager  
+  **Что доработать:** Детализировать свадебные сценарии (категории расходов, NPC, подарки), интеграцию трансляций с social/economy системами и указать целевые каталоги API quest-engine/event-service.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-003-armenian-cognac.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Структурировать дегустационный квест по QUEST-TEMPLATE, добавить ветвления и зависимости, определить микросервисы narrative/gameplay, каталоги API и фронтенд модуль.
@@ -95,12 +119,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE: структурировать этапы с развилками, добавить зависимости (quest-engine, economy, social), определить микросервис, каталог API и фронтенд-модуль для Berlin Tech Summit.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-038-european-chip.md (v0.1.0)  
-  **Проверено:** 2025-11-09 10:33 — Brain Manager  
-  **Что доработать:** Применить QUEST-TEMPLATE: добавить YAML-метаданные, ветвления по стратегиям финансирования/кадров/экспорта, связать с системами quest-engine/economy/research, определить каталоги API и фронтенд-модуль, расширить награды и KPI проекта.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
-  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
-  **Что доработать:** Описать ветвления, NPC, требования к quest-engine, KPI наград и интеграции с экономикой/социальными системами; определить целевые API каталоги.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-037-quantum-computing.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:45 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления с последствиями передачи технологии, описать зависимости (quest-engine, research, economy), определить микросервис, каталог API и фронтенд-модуль, расширить награды и KPI.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-022-vertical-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE, определить микросервис quest-engine, каталоги API `api/v1/quests/...`, фронтенд-модуль и расширить ветки/награды, зависимости с социальными и экономическими системами.
@@ -201,9 +222,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-037-quantum-computing.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:45 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления с последствиями передачи технологии, описать зависимости (quest-engine, research, economy), определить микросервис, каталог API и фронтенд-модуль, расширить награды и KPI.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
-  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
-  **Что доработать:** Описать ветвления, NPC, требования к quest-engine, KPI наград и интеграции с экономикой/социальными системами; определить целевые API каталоги.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-022-vertical-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE, определить микросервис quest-engine, каталоги API `api/v1/quests/...`, фронтенд-модуль и расширить ветки/награды, зависимости с социальными и экономическими системами.

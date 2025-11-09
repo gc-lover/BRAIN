@@ -1,8 +1,8 @@
 ﻿# Классы персонажей — Общие навыки
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `classes-overview.md`. Содержит полный список общих навыков для всех классов.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется добавить формальные структуры данных, REST/GraphQL схемы и проверки соответствия навыков перед постановкой задач.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

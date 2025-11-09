@@ -7,8 +7,8 @@
 **Приоритет:** низкий (Expansion)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19
-**api-readiness-notes:** «Продвинутые механики описаны: short/margin/options/futures с API и контролем рисков."
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: продвинутые механики (short/margin/options/futures) остаются в полном объёме с API и контролем рисков, блокеров нет.
 
 ---
 

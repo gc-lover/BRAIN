@@ -324,6 +324,160 @@ mappings:
 
     notes: "Процедуры Clear Agent перепроверены 2025-11-09 04:05; документ описывает шаги архивации и не формирует API задачи."
 
+  - path: ".BRAIN/03-lore/_03-lore/characters/characters-overview.md"
+
+    version: "1.2.0"
+
+    status: "ready"
+
+    priority: "high"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: "narrative-service"
+
+      directory: "api/v1/narrative/characters/characters-overview.yaml"
+
+      frontend_module: "modules/narrative/characters"
+
+    notes: "Перепроверено 2025-11-09 11:21: категории NPC и роли структурированы, определены зависимости gameplay/social; документ готов к постановке API задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/culture/CYBERPUNK-CULTURE-MASTER-INDEX.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "high"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: мастер-индекс описывает культурные эпохи, но не определяет целевые сервисы, каталоги OpenAPI, структуру данных и KPI; требуется оформить модульную структуру, зависимости с economy/social/world и указать API директории перед постановкой задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/events/fifth-corporate-war-2085-2088.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "critical"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: описание войны содержит лор и последствия, но отсутствуют фазовая модель данных, целевые сервисы (world/narrative/economy), каталоги OpenAPI, KPI и фронтенд модули; требуется структурировать события и интеграции перед постановкой задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/events/fifth-war-battles-detailed.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "high"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: описания ключевых сражений не содержат разметки игровых событий, целевых сервисов, каталогов OpenAPI, KPI и зависимости с world/narrative/economy; необходимо оформить структуру боёв и API интеграции перед постановкой задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/events/fifth-war-heroes-and-victims.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "high"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: нарративные профили героев/жертв не привязаны к API структуре; требуется определить модели NPC, события, зависимости с progression/social системами и каталоги OpenAPI перед постановкой задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/factions/corporations/arasaka-internal-politics-2077-2093.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "critical"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: внутренняя политика Arasaka описана концептуально, однако отсутствуют модели фракций/NPC, зависимости с economy/social/world, каталоги OpenAPI и фронтенд модули; требуется структурировать данные и определить API пакеты перед постановкой задач."
+
+  - path: ".BRAIN/03-lore/_03-lore/factions/corporations/CORPORATE-POLITICS-MASTER-INDEX.md"
+
+    version: "1.0.0"
+
+    status: "needs-work"
+
+    priority: "high"
+
+    checked: "2025-11-09 11:21"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "Перепроверено 2025-11-09 11:21: мастер-индекс корпоративной политики не содержит структурных данных, ссылок на целевые сервисы, каталоги OpenAPI и фронтенд модули; требуется описать модели фракций, KPI и интеграции перед постановкой задач."
+
   - path: ".BRAIN/АПИТАСК.MD"
 
     version: "2.0.0"
@@ -11729,6 +11883,18 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Добавить ветки взаимодействия с группами, интеграции с системами социального рейтинга, экономики и музыкального контента, указать целевой микросервис и фронтенд-модуль."
+
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "medium"
+    checked: "2025-11-09 11:09"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "narrative-service"
+      directory: "api/v1/narrative/quests/america/vancouver/granville-island.yaml"
+      frontend_module: "modules/narrative/quests"
+    notes: "Подробно описаны ветвления, KPI, зависимости и требования к данным; документ готов для постановки задач ДУАПИТАСК."
 
   - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact.md"
     version: "1.0.0"

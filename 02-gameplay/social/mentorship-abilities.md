@@ -7,9 +7,9 @@
 
 # Система наставничества — Уникальные способности Teacher класса
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит активные и пассивные способности Teacher класса.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется закрыть TODO по балансировке способностей и оформить структуры данных/API перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

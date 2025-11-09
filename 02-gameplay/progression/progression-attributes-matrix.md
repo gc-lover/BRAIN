@@ -8,8 +8,8 @@
 # Матрица атрибутов — Старт, рост, капы и требования
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46
-**api-readiness-notes:** «Матрица синхронизирована с классами и предметами: добавлены таблицы хранения, экспорт для API, валидаторы требований. Готово к постановке задач.»
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: матрица, экспорт, валидаторы и связи с предметами остаются консистентными, блокеров нет.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

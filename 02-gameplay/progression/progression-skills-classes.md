@@ -4,12 +4,19 @@
 - **Last Updated:** 2025-11-07 00:18
 ---
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-002: api/v1/gameplay/progression/skills-classes/skills-classes.yaml (2025-11-09 12:30)
+- Last Updated: 2025-11-09 12:30
+---
 
 # Навыки — классовые и подклассовые различия, эксклюзивы
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:46
-**api-readiness-notes:** «Классовые навыки: расписаны матрицы модификаторов, ранги разблокировки, структура данных и REST API. Связь с progression-skills-mapping синхронизирована.»
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: матрицы модификаторов, ранги, структуры данных и REST API синхронизированы с progression-skills-mapping, блокеров нет.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

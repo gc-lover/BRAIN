@@ -1,22 +1,21 @@
 ﻿---
-
-- **Status:** queued
-- **Last Updated:** 2025-11-07 00:18
----
-
-
-# Обзор персонажей NECPGAME
-
-**Статус:** review - категории NPC и роли добавлены  
+**Статус:** review  
 **Версия:** 1.2.0  
 **Дата создания:** 2025-11-02  
-**Последнее обновление:** 2025-11-03  
+**Последнее обновление:** 2025-11-09 11:21  
 **Приоритет:** высокий
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 20:30
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит категории NPC и их роли (30+ категорий) из лора и функциональных (v1.2.0). Блокирующие TODO устранены. TODO только для детализации конкретных имен и личностей NPC (не блокирует создание API). Все необходимые детали для создания API спецификации присутствуют.
+**api-readiness-check-date:** 2025-11-09 11:21  
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21. Категории NPC, роли и решения высокого уровня структурированы (30+ категорий), зависимые системы и направления реализации определены; оставшиеся TODO касаются расширения персональных NPC и не блокируют постановку API задач.
+**target-domain:** narrative-characters  
+**target-microservice:** narrative-service (8087)  
+**target-secondary-services:** gameplay-service (8083), social-service (8084)  
+**target-frontend-module:** modules/narrative/characters  
+**api-directory:** api/v1/narrative/characters/characters-overview.yaml
+---
 
+# Обзор персонажей NECPGAME
 
 ## Концепция персонажей
 

@@ -1,5 +1,9 @@
 # Исторический Район MLK
 
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется оформить квест по QUEST-TEMPLATE: добавить YAML-метаданные, ветвления, NPC, KPI, зависимости с quest-engine и указать каталоги API/world-service.
+
 **quest-id:** ATLANTA-2029-002  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** hard | **solo-group:** solo | **time:** 4h+

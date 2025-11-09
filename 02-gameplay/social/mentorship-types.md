@@ -7,9 +7,9 @@
 
 # Система наставничества — Типы наставничества
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит все типы наставничества.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Нужно формализовать данные по типам, условиям и API/контрактам наставничества перед постановкой задач.
 
 ---
 

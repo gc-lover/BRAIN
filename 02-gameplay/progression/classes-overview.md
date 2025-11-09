@@ -1,8 +1,8 @@
 ﻿# Классы персонажей — Обзор
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Обзорный документ. Детализация вынесена в файлы-фичи.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: обзор служит индексом, API задачи формируются по профильным документам.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

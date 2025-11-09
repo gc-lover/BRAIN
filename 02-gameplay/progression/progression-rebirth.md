@@ -1,8 +1,8 @@
 ﻿# Система прокачки — Перерождения
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:35
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по системе перерождений (механика, типы, преимущества, ограничения) (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Нужны формальные данные, API/событийные контуры и расчёты бонусов перерождений перед постановкой задач.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

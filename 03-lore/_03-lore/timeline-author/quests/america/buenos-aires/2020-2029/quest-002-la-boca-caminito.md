@@ -1,5 +1,16 @@
 # Ла Бока и Каминито
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется привести документ к QUEST-TEMPLATE: добавить ветвления маршрутов и событий района, NPC артистов и фанатов, KPI туристической экономики и безопасности, интеграции с quest-engine/social/economy и определить каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BUENOSAIRES-2029-002  
 **city:** Буэнос-Айрес | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h

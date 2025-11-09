@@ -1,8 +1,8 @@
 ﻿# Система навыков — Активные и пассивные навыки
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 18:20
-**api-readiness-notes:** Создан базовый каркас таксономии навыков, формулы и связь с атрибутами. Нужна детализация списков навыков по категориям и классам.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется завершить детализацию навыков по категориям, оформить структуры данных и REST/GraphQL схемы прежде чем ставить API задачи.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

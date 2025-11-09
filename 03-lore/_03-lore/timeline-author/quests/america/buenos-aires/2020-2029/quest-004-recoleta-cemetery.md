@@ -1,5 +1,16 @@
 # Кладбище Реколета
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется структурировать документ по QUEST-TEMPLATE: добавить ветвления экскурсий и событий памяти, NPC гидов и семей, KPI репутации/эмпатии, интеграции с social/lore и определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BUENOSAIRES-2029-004  
 **city:** Буэнос-Айрес | **region:** Америка | **period:** 2020-2029  
 **quest-type:** side | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h

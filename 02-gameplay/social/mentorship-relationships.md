@@ -7,9 +7,9 @@
 
 # Система наставничества — Отношения наставник-ученик
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `mentorship-system.md`. Содержит развитие отношений и репутацию наставника.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Необходимы формулы репутации, структуры данных и API контуры для метрик отношений перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

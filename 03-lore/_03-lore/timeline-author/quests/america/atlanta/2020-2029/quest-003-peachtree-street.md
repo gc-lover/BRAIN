@@ -1,5 +1,9 @@
 # Улица Пичтри
 
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется оформить квест по QUEST-TEMPLATE: добавить YAML-метаданные, ветвления, NPC, KPI, зависимости с quest-engine и указать каталоги API/world-service.
+
 **quest-id:** ATLANTA-2029-003  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h

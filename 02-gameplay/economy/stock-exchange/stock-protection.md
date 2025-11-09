@@ -7,8 +7,8 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19
-**api-readiness-notes:** «Система защиты описана: circuit breakers, детекция инсайдов, структура данных и API. Готово к реализации.»
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: circuit breakers, детекция инсайдов, структуры данных и API остаются консистентными, готово к задачам.
 
 ---
 

@@ -1,5 +1,16 @@
 # Экономический Кризис
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется структурировать документ по QUEST-TEMPLATE: добавить ветвления экономических решений, NPC банков и граждан, KPI финансов и социальных последствий, интеграции с economy/social и определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BUENOSAIRES-2029-010  
 **city:** Буэнос-Айрес | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** hard | **solo-group:** solo | **time:** 2-4h

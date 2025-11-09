@@ -7,9 +7,9 @@
 
 # Система найма NPC — Эффективность нанятых NPC
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит факторы эффективности.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется задать формулы эффективности, уровни и API/данные для метрик перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

@@ -1,5 +1,16 @@
 # Фенуэй Парк
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется привести квест к QUEST-TEMPLATE: добавить ветвления матчей и погодных условий, NPC команд и фанатов, KPI зрелищности и экономики мерча, определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BOSTON-2029-004  
 **city:** Бостон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** event | **difficulty:** easy | **solo-group:** solo | **time:** 2-4h

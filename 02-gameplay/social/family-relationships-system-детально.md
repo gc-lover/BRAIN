@@ -9,7 +9,7 @@
 
 **target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** world-service (port 8092), economy-service (port 8089), character-service (port 8090)  \\n**target-frontend-module:** modules/social/families, modules/world/insights
 
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:53  \\n**api-readiness-notes:** Семейные отношения формализованы: дерево родства, события, наследование и REST/Kafka контуры согласованы с social/world/economy сервисами; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-09 11:21  \\n**api-readiness-notes:** Перепроверено 2025-11-09 11:21: дерево родства, события, наследование и REST/Kafka контуры остаются консистентными, блокеров нет.
 
 ---
 

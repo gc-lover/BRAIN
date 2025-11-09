@@ -8,8 +8,8 @@
 # Навыки — соответствия предметам и имплантам
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 00:14
-**api-readiness-notes:** «Добавлена синхронизация с боевыми лодаутами и PvE профилями, расширены структуры данных и API. Документ остаётся готов к задачам.»
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: синхронизация с лодаутами, структура данных и API остаются консистентными, блокеров нет.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

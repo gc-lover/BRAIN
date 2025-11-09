@@ -1,5 +1,16 @@
 # Суп Клэм Чаудер
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется оформить квест по QUEST-TEMPLATE: добавить ветвления дегустаций и проверок навыков кулинарии, NPC шефов, KPI гастрономии, интеграции с economy/social и определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BOSTON-2029-005  
 **city:** Бостон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 30-60min

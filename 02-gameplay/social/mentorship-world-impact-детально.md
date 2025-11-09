@@ -9,7 +9,7 @@
 
 **target-domain:** world  \\n**target-microservice:** world-service (port 8092)  \\n**target-microservice-secondary:** social-service (port 8084), economy-service (port 8089)  \\n**target-frontend-module:** modules/world/insights, modules/social/mentorship
 
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:33  \\n**api-readiness-notes:** Эффекты наставничества формализованы: индексы, world-events, REST/Kafka контуры и UX/QA согласование завершены; блокеров нет.
+**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-09 11:21  \\n**api-readiness-notes:** Перепроверено 2025-11-09 11:21: индексы, world-events и REST/Kafka контуры остаются согласованными, блокеров нет.
 
 ---
 

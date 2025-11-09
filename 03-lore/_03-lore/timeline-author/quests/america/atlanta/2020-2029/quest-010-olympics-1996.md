@@ -1,5 +1,16 @@
 # Олимпиада 1996
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется оформить квест по QUEST-TEMPLATE: добавить ветвления (торжественные события, безопасность), NPC организаторов, KPI наследия и определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** ATLANTA-2029-010  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h

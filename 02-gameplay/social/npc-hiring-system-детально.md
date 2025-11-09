@@ -12,8 +12,8 @@
 **target-frontend-module:** modules/social/npc-hiring, modules/world/insights
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:28  
-**api-readiness-notes:** Контракты, управление и экономика найма NPC перепроверены 2025-11-09 01:28: REST/Kafka контуры, UX-сценарии и метрики готовы к постановке API задач.
+**api-readiness-check-date:** 2025-11-09 11:21  
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: контракты, управление, экономика и REST/Kafka контуры остаются готовыми к постановке API задач.
 
 ---
 

@@ -7,9 +7,9 @@
 
 # Система найма NPC — Продвинутые возможности
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит продвинутые механики найма.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется проработать TODO по цепочке найма, группам и автоматизации, добавить данные и API перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

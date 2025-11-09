@@ -1,5 +1,16 @@
 # Париж Юга
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется оформить квест по QUEST-TEMPLATE: добавить ветвления маршрутов и событий, NPC гидов и туристов, KPI привлекательности и экономики, интеграции с quest-engine/economy/social и определить каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BUENOSAIRES-2029-009  
 **city:** Буэнос-Айрес | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 2-4h

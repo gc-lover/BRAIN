@@ -1,6 +1,7 @@
 ﻿---
-**api-readiness:** ready
-**api-readiness-check-date:** 2025-11-06
+**api-readiness:** needs-work
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется оформить метаданные (статус, версия, дата), добавить структуры данных и REST/событийные контуры для маршрутов и синхронизацию с economy-service перед постановкой API задач.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

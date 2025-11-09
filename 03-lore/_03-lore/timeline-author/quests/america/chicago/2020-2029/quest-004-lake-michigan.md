@@ -1,5 +1,16 @@
 # Озеро Мичиган
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется структурировать документ по QUEST-TEMPLATE: добавить ветвления сезонов и активностей, NPC гидов и жителей, KPI туризма и экологии, интеграции с quest-engine/social/economy и определить каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** CHICAGO-2029-004  
 **city:** Чикаго | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h

@@ -12,8 +12,8 @@
 **target-frontend-module:** modules/social/mentorship, modules/world/academies
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:28  
-**api-readiness-notes:** Наставничество перепроверено 2025-11-09 01:28: программы, контракты, академии и REST/Kafka контуры готовы к постановке API задач, блокеров нет.
+**api-readiness-check-date:** 2025-11-09 11:21  
+**api-readiness-notes:** Перепроверено 2025-11-09 11:21: программы, контракты, академии и REST/Kafka контуры остаются готовыми к постановке API задач.
 
 ---
 

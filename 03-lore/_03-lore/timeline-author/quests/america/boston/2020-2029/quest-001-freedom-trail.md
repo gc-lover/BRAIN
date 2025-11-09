@@ -1,5 +1,16 @@
 # Тропа Свободы
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется привести документ к QUEST-TEMPLATE: добавить ветвления маршрута, NPC гидов и охраны, KPI туризма, интеграции с progression/economy и определить микросервис quest-engine, каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BOSTON-2029-001  
 **city:** Бостон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** medium | **solo-group:** solo | **time:** 4h+

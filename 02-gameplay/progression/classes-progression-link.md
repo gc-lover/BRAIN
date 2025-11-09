@@ -1,8 +1,8 @@
 ﻿# Классы персонажей — Связь с системой прокачки
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `classes-overview.md`. Содержит связь классов с прокачкой.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется добавить формальные структуры данных, API и сценарии синхронизации прогрессии классов перед постановкой задач.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

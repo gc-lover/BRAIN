@@ -1,8 +1,8 @@
 ﻿# Система прокачки — Перки
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03 19:35
-**api-readiness-notes:** Документ готов к созданию API задач. Содержит детальные решения по системе перков (структура, получение, ограничения, комбинации) (v1.0.0). Все необходимые детали для создания API спецификации присутствуют.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется добавить формальные структуры данных, REST/GraphQL схемы и наборы перков с параметрами перед передачей в API поток.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

@@ -1,5 +1,16 @@
 # Футбольная Страсть
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 11:23  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:23  
+**api-readiness-notes:** Требуется привести квест к QUEST-TEMPLATE: добавить ветвления выбора стороны и исходов дерби, NPC клубов и фанатов, KPI безопасности и эмоций, интеграции с quest-engine/social/economy и определить каталоги API и фронтенд-модуль.
+
+---
+
 **quest-id:** BUENOSAIRES-2029-005  
 **city:** Буэнос-Айрес | **region:** Америка | **period:** 2020-2029  
 **quest-type:** event | **difficulty:** medium | **solo-group:** solo | **time:** 4h+

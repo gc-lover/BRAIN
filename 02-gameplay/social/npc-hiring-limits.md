@@ -7,9 +7,9 @@
 
 # Система найма NPC — Ограничения и требования
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит ограничения и требования для найма.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Нужны расчёты лимитов, требования и структуры данных/API перед постановкой задач.
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

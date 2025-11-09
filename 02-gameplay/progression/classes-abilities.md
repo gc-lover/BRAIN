@@ -1,8 +1,8 @@
 ﻿# Классы персонажей — Система классовых способностей
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `classes-overview.md`. Содержит систему классовых способностей и "Свой путь".
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется проработать TODO по конкретным способностям, добавить структуры данных и REST/событийные интерфейсы перед постановкой API задач.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  

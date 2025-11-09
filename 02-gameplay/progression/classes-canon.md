@@ -1,8 +1,8 @@
 ﻿# Классы персонажей — Основные классы из лора Cyberpunk
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `classes-overview.md`. Содержит список всех 10 основных классов из лора Cyberpunk с подклассами.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 11:21
+**api-readiness-notes:** Требуется добавить структуры данных, API контуры и связи с progression/skills перед постановкой задач.
 
 **target-domain:** gameplay-progression  
 **target-microservice:** gameplay-service (port 8083)  
