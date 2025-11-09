@@ -1932,6 +1932,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Файл заполнен краткими маркерами; необходимо применить QUEST-TEMPLATE, добавить версию, статусы, ветки, награды и связи с системами перед постановкой API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/denver/2020-2029/quest-004-craft-beer-scene.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:42"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Конспект тура по пивоварням не следует QUEST-TEMPLATE; требуется добавить YAML-метаданные, статус, ветви выбора, этапы с проверками и интеграции с системами перед формированием API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-003-armenian-cognac.md"
     version: "0.1.0"
     status: "needs-work"
