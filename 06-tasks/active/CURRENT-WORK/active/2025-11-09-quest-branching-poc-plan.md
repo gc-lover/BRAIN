@@ -68,6 +68,29 @@
 
 ---
 
+## Результаты PoC (2025-11-09 13:01)
+
+- `liquibase update` (docker liquibase/liquibase) — 58 changeSet, ~55 сек, выполнено без ошибок после правок (`BRIN`/`GIN` индексы через SQL, функции/роллы через `splitStatements="false"`).
+- Скрипт `sample_data.sql` — создаёт тестовый квест, ветку и прогресс (`ON CONFLICT` приведён к PK/уникальным ограничениям).
+- `quest_path_popularity` обновляется командой `REFRESH MATERIALIZED VIEW` (без `CONCURRENTLY`, уникальный индекс на `(quest_id, chosen_path)`).
+- RLS-политики работают (при установке `app.current_character_id` видим 1 запись; без параметра — суперпользователь всё равно видит строки, требуется non-superuser для полной проверки).
+- `quest_branching_rollback()` — отключает триггеры, снимает политики и роли (через revoke) без ошибок.
+- `liquibase rollback --tag=quest-branching-v1` — корректно выполняется (из-за тега после апдейта откат 0 changeSet; для чистого отката использовать helper + `drop database`).
+- Подготовлены скрипты `run_poc.ps1`, `refresh_mv.sql`, `sample_data.sql`, `check_rls.sql`, `bootstrap` (через psql) + `liquibase.properties`.
+
+### Замеченные доработки
+- `quest_branching_rollback()` требовал замены `DISABLE TRIGGER IF EXISTS` на проверку через `pg_trigger` и добавление `REVOKE ...` перед `DROP ROLE`.
+- Для PoC необходима предварительная схема (минимальные `quests`, `quest_progress`, `characters`, `factions`, `npcs`).
+- Liquibase 5.0.1 не поддерживает `indexType` — индексы BRIN/GIN переведены на `sql` блоки.
+- Команда `rollbackOneTag` недоступна в CLI 5.0.1 — используем `rollback --tag=...`.
+
+### Следующие шаги
+- Автоматизировать прогон (вынести bootstrap в отдельный SQL, добавить шаг `tag`/`rollback` в `run_poc.ps1`).
+- Зафиксировать метрики в отчёте (таблица update/refresh/rollback, вердикт по RLS).
+- При необходимости расширить PoC данными и прогнать нагрузки (k6 профили).
+
+---
+
 ## Отчёт
 
 - Таблица с метриками (update, refresh, rollback).  

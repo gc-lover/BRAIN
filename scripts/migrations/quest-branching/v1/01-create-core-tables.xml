@@ -121,11 +121,13 @@
         <createIndex tableName="quest_progress" indexName="idx_quest_progress_branch">
             <column name="current_branch_id"/>
         </createIndex>
-        <createIndex tableName="quest_progress" indexName="idx_quest_progress_last_interaction" indexType="BRIN">
-            <column name="last_interaction_at"/>
-        </createIndex>
+        <sql>
+            CREATE INDEX idx_quest_progress_last_interaction ON quest_progress USING BRIN (last_interaction_at);
+        </sql>
         <rollback>
-            <dropIndex indexName="idx_quest_progress_last_interaction" tableName="quest_progress"/>
+            <sql>
+                DROP INDEX IF EXISTS idx_quest_progress_last_interaction;
+            </sql>
             <dropIndex indexName="idx_quest_progress_branch" tableName="quest_progress"/>
             <dropIndex indexName="idx_quest_progress_status" tableName="quest_progress"/>
             <dropIndex indexName="idx_quest_progress_quest" tableName="quest_progress"/>

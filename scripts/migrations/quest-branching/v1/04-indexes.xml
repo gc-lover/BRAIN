@@ -58,11 +58,13 @@
 
     <changeSet id="idx-dialogue-choices-required-flags" author="ai-manager">
         <comment>GIN индекс для проверки флагов</comment>
-        <createIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_required_flags" indexType="GIN">
-            <column name="required_flags"/>
-        </createIndex>
+        <sql>
+            CREATE INDEX idx_dialogue_choices_required_flags ON dialogue_choices USING GIN (required_flags);
+        </sql>
         <rollback>
-            <dropIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_required_flags"/>
+            <sql>
+                DROP INDEX IF EXISTS idx_dialogue_choices_required_flags;
+            </sql>
         </rollback>
     </changeSet>
 
@@ -328,4 +330,3 @@
     </changeSet>
 
 </databaseChangeLog>
-

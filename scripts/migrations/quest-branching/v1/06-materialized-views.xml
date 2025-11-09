@@ -32,7 +32,7 @@
 
     <changeSet id="idx-mv-quest-path-popularity" author="ai-manager">
         <comment>Индекс по MV для быстрого поиска</comment>
-        <createIndex tableName="quest_path_popularity" indexName="idx_mv_quest_path_popularity">
+        <createIndex tableName="quest_path_popularity" indexName="idx_mv_quest_path_popularity" unique="true">
             <column name="quest_id"/>
             <column name="chosen_path"/>
         </createIndex>
@@ -44,7 +44,7 @@
     <changeSet id="refresh-mv-quest-path-popularity" author="ai-manager" runOnChange="true">
         <comment>Инкрементальное обновление MV</comment>
         <sql>
-            REFRESH MATERIALIZED VIEW CONCURRENTLY quest_path_popularity;
+            REFRESH MATERIALIZED VIEW quest_path_popularity;
         </sql>
         <rollback>
             <sql>
@@ -54,4 +54,3 @@
     </changeSet>
 
 </databaseChangeLog>
-

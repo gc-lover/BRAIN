@@ -8,54 +8,75 @@
 
     <changeSet id="create-quest-branching-roles" author="ai-manager">
         <comment>Создание ролей доступа для системы ветвящихся квестов</comment>
-        <sql>
-            CREATE ROLE IF NOT EXISTS game_server_role;
-            CREATE ROLE IF NOT EXISTS analytics_role;
-            CREATE ROLE IF NOT EXISTS quest_admin_role;
+        <sql splitStatements="false"><![CDATA[
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'game_server_role') THEN
+        CREATE ROLE game_server_role;
+    END IF;
+    IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'analytics_role') THEN
+        CREATE ROLE analytics_role;
+    END IF;
+    IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'quest_admin_role') THEN
+        CREATE ROLE quest_admin_role;
+    END IF;
+END
+$$;
 
-            GRANT USAGE ON SCHEMA public TO game_server_role, analytics_role, quest_admin_role;
+GRANT USAGE ON SCHEMA public TO game_server_role, analytics_role, quest_admin_role;
 
-            GRANT SELECT, INSERT, UPDATE, DELETE ON quests TO quest_admin_role;
-            GRANT SELECT ON quests TO analytics_role;
-            GRANT SELECT, INSERT, UPDATE ON quests TO game_server_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON quests TO quest_admin_role;
+GRANT SELECT ON quests TO analytics_role;
+GRANT SELECT, INSERT, UPDATE ON quests TO game_server_role;
 
-            GRANT SELECT, INSERT, UPDATE, DELETE ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
-                TO quest_admin_role;
-            GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
-                TO analytics_role;
-            GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
-                TO game_server_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+    TO quest_admin_role;
+GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+    TO analytics_role;
+GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+    TO game_server_role;
 
-            GRANT SELECT, INSERT, UPDATE, DELETE ON player_quest_choices, player_flags, quest_progress,
-                quest_consequences, player_quest_consequences
-                TO game_server_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON player_quest_choices, player_flags, quest_progress,
+    quest_consequences, player_quest_consequences
+    TO game_server_role;
 
-            GRANT SELECT ON player_quest_choices, player_flags, quest_progress,
-                quest_consequences, player_quest_consequences
-                TO analytics_role;
+GRANT SELECT ON player_quest_choices, player_flags, quest_progress,
+    quest_consequences, player_quest_consequences
+    TO analytics_role;
 
-            GRANT SELECT, INSERT, UPDATE ON quest_consequences, player_quest_consequences
-                TO quest_admin_role;
+GRANT SELECT, INSERT, UPDATE ON quest_consequences, player_quest_consequences
+    TO quest_admin_role;
 
-            GRANT SELECT, INSERT, UPDATE, DELETE ON world_state, world_state_history,
-                territory_control, npc_states
-                TO game_server_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON world_state, world_state_history,
+    territory_control, npc_states
+    TO game_server_role;
 
-            GRANT SELECT ON world_state, world_state_history, territory_control, npc_states
-                TO analytics_role;
-        </sql>
+GRANT SELECT ON world_state, world_state_history, territory_control, npc_states
+    TO analytics_role;
+        ]]></sql>
         <rollback>
-            <sql>
-                REVOKE ALL ON world_state, world_state_history, territory_control, npc_states FROM game_server_role, analytics_role;
-                REVOKE ALL ON quest_consequences, player_quest_consequences FROM game_server_role, analytics_role, quest_admin_role;
-                REVOKE ALL ON player_quest_choices, player_flags, quest_progress FROM game_server_role, analytics_role;
-                REVOKE ALL ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks FROM game_server_role, analytics_role, quest_admin_role;
-                REVOKE ALL ON quests FROM game_server_role, analytics_role, quest_admin_role;
-                REVOKE USAGE ON SCHEMA public FROM game_server_role, analytics_role, quest_admin_role;
-                DROP ROLE IF EXISTS quest_admin_role;
-                DROP ROLE IF EXISTS analytics_role;
-                DROP ROLE IF EXISTS game_server_role;
-            </sql>
+            <sql splitStatements="false"><![CDATA[
+REVOKE ALL ON world_state, world_state_history, territory_control, npc_states FROM game_server_role, analytics_role;
+REVOKE ALL ON quest_consequences, player_quest_consequences FROM game_server_role, analytics_role, quest_admin_role;
+REVOKE ALL ON player_quest_choices, player_flags, quest_progress FROM game_server_role, analytics_role;
+REVOKE ALL ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks FROM game_server_role, analytics_role, quest_admin_role;
+REVOKE ALL ON quests FROM game_server_role, analytics_role, quest_admin_role;
+REVOKE USAGE ON SCHEMA public FROM game_server_role, analytics_role, quest_admin_role;
+
+DO $$
+BEGIN
+    IF EXISTS (SELECT FROM pg_roles WHERE rolname = 'quest_admin_role') THEN
+        DROP ROLE quest_admin_role;
+    END IF;
+    IF EXISTS (SELECT FROM pg_roles WHERE rolname = 'analytics_role') THEN
+        DROP ROLE analytics_role;
+    END IF;
+    IF EXISTS (SELECT FROM pg_roles WHERE rolname = 'game_server_role') THEN
+        DROP ROLE game_server_role;
+    END IF;
+END
+$$;
+            ]]></sql>
         </rollback>
     </changeSet>
 
@@ -89,4 +110,3 @@
     </changeSet>
 
 </databaseChangeLog>
-
