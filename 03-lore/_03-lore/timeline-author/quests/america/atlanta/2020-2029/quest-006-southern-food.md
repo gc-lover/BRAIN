@@ -11,8 +11,6 @@
 
 ---
 
-# Южная Кухня
-
 **quest-id:** ATLANTA-2029-006  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h
