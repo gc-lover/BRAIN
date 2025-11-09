@@ -22,7 +22,7 @@
 ### Требуется исполнение
 
 1. **Liquibase миграции**
-   - [~] Сформировать changelog `quest-branching-v1` — готово `master.xml`, `v1/01-create-core-tables.xml`, `v1/02-create-branching-tables.xml`, `v1/03-create-world-state-tables.xml`, `v1/04-indexes.xml`, `v1/05-shadow-triggers.xml`, `v1/06-materialized-views.xml`, `v1/07-rls-and-roles.xml`; осталось `08` (rollback-сценарии и проверка на PoC).
+   - [ ] Прогнать PoC миграций (`quest-branching-v1`), проверить выполнение `quest_branching_rollback()` и подготовить отчёт о результатах.
 
 2. **Импорт квестов**
    - [ ] Реализовать утилиту конвертации JSON → SQL.

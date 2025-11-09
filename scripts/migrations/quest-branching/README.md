@@ -14,9 +14,10 @@ scripts/migrations/quest-branching/
     ├─ 02-create-branching-tables.xml
     ├─ 03-create-world-state-tables.xml
     ├─ 04-indexes.xml
-    ├─ 05-shadow-triggers.xml
-    ├─ 06-materialized-views.xml
-    └─ 07-rls-and-roles.xml
+   ├─ 05-shadow-triggers.xml
+   ├─ 06-materialized-views.xml
+   ├─ 07-rls-and-roles.xml
+   └─ 08-rollback-scripts.xml
 ```
 
 ## Запуск
@@ -31,6 +32,9 @@ scripts/migrations/quest-branching/
 liquibase --defaultsFile=liquibase.properties \
   --changelog-file=scripts/migrations/quest-branching/master.xml \
   rollbackOneTag quest-branching-v1
+
+-- при необходимости выполнить helper-функцию:
+SELECT quest_branching_rollback();
 ```
 
 ## Контроль

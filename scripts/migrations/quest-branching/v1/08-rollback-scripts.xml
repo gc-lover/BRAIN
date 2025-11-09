@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="quest-branching-rollback-helper" author="ai-manager">
+        <comment>Функция отката структуры ветвящихся квестов</comment>
+        <sql>
+            CREATE OR REPLACE FUNCTION quest_branching_rollback() RETURNS void AS $$
+            BEGIN
+                -- Отключаем триггеры shadow-write
+                BEGIN
+                    EXECUTE 'ALTER TABLE quests DISABLE TRIGGER IF EXISTS trg_quests_shadow';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                BEGIN
+                    EXECUTE 'ALTER TABLE quest_progress DISABLE TRIGGER IF EXISTS trg_quest_progress_shadow';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                -- Удаляем материализованные представления и вспомогательные объекты
+                BEGIN
+                    EXECUTE 'DROP MATERIALIZED VIEW IF EXISTS quest_path_popularity';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                -- Сбрасываем политики RLS
+                BEGIN
+                    EXECUTE 'DROP POLICY IF EXISTS quest_progress_player_policy ON quest_progress';
+                    EXECUTE 'ALTER TABLE quest_progress DISABLE ROW LEVEL SECURITY';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                BEGIN
+                    EXECUTE 'DROP POLICY IF EXISTS player_quest_choices_policy ON player_quest_choices';
+                    EXECUTE 'ALTER TABLE player_quest_choices DISABLE ROW LEVEL SECURITY';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                BEGIN
+                    EXECUTE 'DROP POLICY IF EXISTS player_flags_policy ON player_flags';
+                    EXECUTE 'ALTER TABLE player_flags DISABLE ROW LEVEL SECURITY';
+                EXCEPTION WHEN undefined_table THEN NULL;
+                END;
+
+                -- Удаляем роли на случай отката
+                BEGIN
+                    EXECUTE 'DROP ROLE IF EXISTS quest_admin_role';
+                EXCEPTION WHEN insufficient_privilege THEN NULL;
+                END;
+
+                BEGIN
+                    EXECUTE 'DROP ROLE IF EXISTS analytics_role';
+                EXCEPTION WHEN insufficient_privilege THEN NULL;
+                END;
+
+                BEGIN
+                    EXECUTE 'DROP ROLE IF EXISTS game_server_role';
+                EXCEPTION WHEN insufficient_privilege THEN NULL;
+                END;
+            END;
+            $$ LANGUAGE plpgsql;
+        </sql>
+        <rollback>
+            <sql>
+                DROP FUNCTION IF EXISTS quest_branching_rollback();
+            </sql>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+
