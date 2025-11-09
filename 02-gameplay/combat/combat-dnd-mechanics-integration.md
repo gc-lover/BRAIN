@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:12
-**api-readiness-notes:** Перепроверено 2025-11-09 03:12; интеграция D&D проверок в хакерство, крафт, торговлю и социальные механики остаётся полной и готова к постановке API задач gameplay-service.
+**api-readiness-check-date:** 2025-11-09 03:17
+**api-readiness-notes:** Перепроверено 2025-11-09 03:17: интеграция D&D проверок в хакерство, крафт, торговлю и социальные механики остаётся полной и готова к постановке API задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
