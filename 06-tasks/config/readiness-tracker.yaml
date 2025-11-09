@@ -95,6 +95,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Bash-скрипт автокоммита подтверждён 2025-11-09 03:48; не требует постановки API задач."
+  - path: ".BRAIN/МЕНЕДЖЕР.MD"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:55"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Сценарий Brain Manager перепроверен 2025-11-09 03:55; документ описывает процессы и не формирует прямых API задач."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -876,6 +887,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Описание NPC продавца уличной еды; подтверждено 2025-11-09 03:49, что API задачи не формируются."
+  - path: ".BRAIN/04-narrative/npc-lore/factions/corporations/militech/director-logistics-2048-2065.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:54"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль директора логистики Militech; подтверждено 2025-11-09 03:54, что API задачи не требуются."
+  - path: ".BRAIN/04-narrative/npc-lore/factions/gangs/mox/madame-2065-2080.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:54"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Описание лидера Mox; подтверждено 2025-11-09 03:54, что постановка API задач не требуется."
+  - path: ".BRAIN/04-narrative/npc-lore/factions/ncpd/maxtac/operator-razor-2075-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:54"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль снайпера MAX-TAC; подтверждено 2025-11-09 03:54, что API задачи не формируются."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"

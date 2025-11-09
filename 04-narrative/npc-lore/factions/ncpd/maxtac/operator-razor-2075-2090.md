@@ -7,7 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 12:06
+**api-readiness-check-date:** 2025-11-09 03:54
+**api-readiness-notes:** Профиль бойца MAX-TAC; подтверждено 2025-11-09 03:54, что API задачи не требуются
 
 **Категория:** important  
 **ID NPC:** npc-maxtac-operator-razor-2075-2090

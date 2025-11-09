@@ -7,7 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 10:00
+**api-readiness-check-date:** 2025-11-09 03:54
+**api-readiness-notes:** Литературный профиль руководителя Militech; подтверждено 2025-11-09 03:54, что API задачи не требуются
 
 **Категория:** important  
 **ID NPC:** npc-militech-director-logistics-2048-2065
