@@ -23,10 +23,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-104: api/v1/economy/events/economic-events.yaml (2025-11-09)
-- Last Updated: 2025-11-09 19:12
+  - API-TASK-104: Economic Events API — `api/v1/economy/events/economic-events/economic-events.yaml`
+    - Создано: 2025-11-09 19:12
+    - Завершено: 2025-11-09 22:02
+    - Доп. файлы: `economic-events-models.yaml`, `economic-events-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-104-economy-events-api.md`
+- Last Updated: 2025-11-09 22:02
 ---
 
 ---
