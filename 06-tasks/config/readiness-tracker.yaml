@@ -249,6 +249,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Перепроверено 2025-11-09 03:22: индекс навигации по крафту, задачи формируются по дочерним файлам."
+  - path: ".BRAIN/02-gameplay/economy/ECONOMY-EXPANSION-SUMMARY.md"
+    version: "2.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:27"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 03:27: сводка экономического расширения агрегирует прогресс и не требует постановки API задач."
   - path: ".BRAIN/02-gameplay/economy/economy-analytics.md"
     version: "1.0.0"
     status: "ready"
@@ -260,6 +271,17 @@ mappings:
       directory: "api/v1/economy/analytics/analytics.yaml"
       frontend_module: "modules/economy/analytics"
     notes: "Перепроверено 2025-11-09 03:22: аналитические диаграммы, индикаторы и REST/WS API описаны достаточно детально для постановки задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-investments.md"
+    version: "1.1.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:25"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/investments/investments.yaml"
+      frontend_module: "modules/economy/investments"
+    notes: "Перепроверено 2025-11-09 03:25: инвестиционные сценарии, портфель и API описаны детально и готовы к задачам economy-service."
   - path: ".BRAIN/02-gameplay/economy/economy-currency-exchange.md"
     version: "1.1.0"
     status: "ready"
@@ -271,6 +293,17 @@ mappings:
       directory: "api/v1/economy/currency/exchange.yaml"
       frontend_module: "modules/economy/currency-exchange"
     notes: "Перепроверено 2025-11-09 03:24: валютные пары, matching engine, тарифы, антифрод и событийные сценарии готовы к постановке задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-investments.md"
+    version: "1.1.0"
+    status: "ready"
+    priority: "medium"
+    checked: "2025-11-09 03:27"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/investments/investments.yaml"
+      frontend_module: "modules/economy/investments"
+    notes: "Перепроверено 2025-11-09 03:27: инвестиционные типы, портфель и API спецификации готовы к постановке задач economy-service."
   - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
     version: "1.1.0"
     status: "ready"
@@ -733,14 +766,3 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/cyberspace.yaml"
       frontend_module: "modules/combat/cyberspace"
     notes: "Перепроверено 2025-11-09 03:13; добавлена явная версия 1.0.0, режимы киберпространства и событийная структура готовы к формированию API контрактов gameplay-service."
-  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
-    version: "1.0.0"
-    status: "ready"
-    priority: "critical"
-    checked: "2025-11-09 03:25"
-    checker: "Brain Manager"
-    api_target:
-      microservice: "gameplay-service"
-      directory: "api/v1/gameplay/combat/"
-      frontend_module: "modules/combat/*"
-    notes: "Wave 1 combat бриф подтверждён 2025-11-09 03:25; агрегирует готовые документы для передачи ДУАПИТАСК."

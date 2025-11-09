@@ -14,8 +14,8 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19
-**api-readiness-notes:** «Добавлены lifecycle, портфель, API, отчётность и интеграции. Инвестиционный модуль готов к API.»
+**api-readiness-check-date:** 2025-11-09 03:25
+**api-readiness-notes:** Перепроверено 2025-11-09 03:25: lifecycle инвестиций, портфель и API остаются полными; модуль готов к задачам economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
