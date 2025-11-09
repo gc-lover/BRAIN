@@ -132,13 +132,13 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "critical"
-    checked: "2025-11-09 03:05"
+    checked: "2025-11-09 03:07"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Документ видения задаёт общую стратегию и не требует API; статус not-applicable подтверждён 2025-11-09 03:05."
+    notes: "Перепроверено 2025-11-09 03:07; документ видения задаёт общую стратегию и не требует прямых API задач."
   - path: ".BRAIN/05-technical/backend/auth/README.md"
     version: "1.0.1"
     status: "ready"
@@ -381,6 +381,17 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/types.yaml"
       frontend_module: "modules/combat/hacking"
     notes: "Типы боевого хакерства и ограничения классов перепроверены 2025-11-09 03:07; документ готов к постановке API задач gameplay-service."
+  - path: ".BRAIN/02-gameplay/combat/combat-implants-limits.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:11"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: "api/v1/gameplay/combat/implants/limits.yaml"
+      frontend_module: "modules/combat/implants"
+    notes: "Ограничения и энергетика имплантов перепроверены 2025-11-09 03:11; документ готов к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-hacking-networks.md"
     version: "1.0.0"
     status: "ready"

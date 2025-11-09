@@ -1,7 +1,4 @@
 files:
-  - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-ai-enemies/README.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-combos-synergies.md"
   - path: ".BRAIN/02-gameplay/combat/combat-cyberpsychosis.md"
   - path: ".BRAIN/02-gameplay/combat/combat-cyberspace.md"
   - path: ".BRAIN/02-gameplay/combat/combat-dnd-core.md"
@@ -13,7 +10,6 @@ files:
   - path: ".BRAIN/02-gameplay/combat/combat-hacking-networks.md"
   - path: ".BRAIN/02-gameplay/combat/combat-hacking.md"
   - path: ".BRAIN/02-gameplay/combat/combat-implants-acquisition.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-implants-limits.md"
   - path: ".BRAIN/02-gameplay/combat/combat-implants-mechanics.md"
   - path: ".BRAIN/02-gameplay/combat/combat-implants-types.md"
   - path: ".BRAIN/02-gameplay/combat/combat-implants-visuals.md"
