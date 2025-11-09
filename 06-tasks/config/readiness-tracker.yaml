@@ -205,6 +205,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Глоссарий перепроверен 2025-11-09 04:11; документ вспомогательный и не формирует API задачи."
+  - path: ".BRAIN/08-references/abbreviations.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:13"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Список сокращений перепроверен 2025-11-09 04:13; документ вспомогательный и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
