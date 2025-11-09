@@ -392,17 +392,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Навигационный файл по классам оружия; перепроверен 2025-11-09 03:09 и не требует постановки API задач."
+  - path: ".BRAIN/02-gameplay/combat/COMBAT-SYSTEM-EXPANSION-SUMMARY.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:13"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Сводка детализации боевой системы перепроверена 2025-11-09 03:13; документ фиксирует прогресс и не требует постановки API задач."
   - path: ".BRAIN/02-gameplay/combat/combat-freerun.md"
     version: "1.1.0"
     status: "ready"
     priority: "high"
-    checked: "2025-11-09 01:22"
+    checked: "2025-11-09 03:20"
     checker: "Brain Manager"
     api_target:
       microservice: "gameplay-service"
       directory: "api/v1/gameplay/combat/freerun.yaml"
       frontend_module: "modules/combat/movement"
-    notes: "Паркур перепроверен 2025-11-09 01:22: боевые манёвры, импланты и мобильные комбо готовы к постановке API задач для gameplay-service."
+    notes: "Перепроверено 2025-11-09 03:20: боевые манёвры, импланты и мобильные комбо готовы к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-shooting.md"
     version: "1.1.0"
     status: "ready"
@@ -414,6 +425,17 @@ mappings:
       directory: "api/v1/gameplay/combat/shooting.yaml"
       frontend_module: "modules/combat/shooting"
     notes: "TTK, отдача и имплант-модификаторы перепроверены 2025-11-09 01:37; документ готов к постановке задач gameplay-service."
+  - path: ".BRAIN/02-gameplay/combat/combat-shooting-advanced.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:13"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: "api/v1/gameplay/combat/shooting-advanced.yaml"
+      frontend_module: "modules/combat/shooting"
+    notes: "Расширенная система стрельбы перепроверена 2025-11-09 03:13: профили дистанций, рикошеты и кастомизация оружия готовы к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-stealth.md"
     version: "1.1.0"
     status: "ready"
@@ -517,13 +539,13 @@ mappings:
     version: "2.0.0"
     status: "not-applicable"
     priority: "medium"
-    checked: "2025-11-09 03:14"
+    checked: "2025-11-09 03:20"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Обзорная карта системы имплантов перепроверена 2025-11-09 03:14; документ служит хабом ссылок и не требует постановки API задач."
+    notes: "Перепроверено 2025-11-09 03:20: документ выступает обзорным хабом по файлам имплантов и не требует API задач."
   - path: ".BRAIN/02-gameplay/combat/combat-loadouts-system.md"
     version: "0.3.0"
     status: "ready"
@@ -539,13 +561,13 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "medium"
-    checked: "2025-11-09 03:13"
+    checked: "2025-11-09 03:20"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Обзор боевой системы перепроверен 2025-11-09 03:13; документ служит индексом ссылок и не формирует API задачи."
+    notes: "Перепроверено 2025-11-09 03:20: обзор боевой системы служит индексом ссылок и не формирует API задачи."
   - path: ".BRAIN/02-gameplay/combat/combat-pvp-pve.md"
     version: "1.0.0"
     status: "ready"
@@ -583,13 +605,13 @@ mappings:
     version: "1.1.0"
     status: "ready"
     priority: "critical"
-    checked: "2025-11-09 03:13"
+    checked: "2025-11-09 03:19"
     checker: "Brain Manager"
     api_target:
       microservice: "gameplay-service"
       directory: "api/v1/gameplay/combat/cyberpsychosis.yaml"
       frontend_module: "modules/combat/cyberpsychosis"
-    notes: "Перепроверено 2025-11-09 03:13; явная версия 1.1.0 добавлена в документ, человечность и стадии киберпсихоза готовы к постановке API задач gameplay-service."
+    notes: "Перепроверено 2025-11-09 03:19; версия 1.1.0 подтверждена, человечность, стадии симптомов и управление киберпсихозом готовы к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-cyberspace.md"
     version: "1.0.0"
     status: "ready"

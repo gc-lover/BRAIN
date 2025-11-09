@@ -7,6 +7,7 @@
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
 **target-frontend-module:** modules/combat/zones
+**version:** 1.1.0
 
 **Статус:** review - проверка готовности к созданию API задач  
 **Приоритет:** Высокий  

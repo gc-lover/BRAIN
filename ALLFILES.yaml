@@ -1,13 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/combat/combat-implants.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-loadouts-system.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-overview.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-pvp-pve.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-roles-detailed.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-shooting-advanced.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-shooting.md"
-  - path: ".BRAIN/02-gameplay/combat/combat-stealth.md"
-  - path: ".BRAIN/02-gameplay/combat/COMBAT-SYSTEM-EXPANSION-SUMMARY.md"
   - path: ".BRAIN/02-gameplay/economy/crafting/README.md"
   - path: ".BRAIN/02-gameplay/economy/economy-analytics.md"
   - path: ".BRAIN/02-gameplay/economy/economy-contracts.md"
