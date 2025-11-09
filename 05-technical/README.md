@@ -21,7 +21,7 @@
 ### UI/UX (Интерфейсы)
 - `ui-registration.md` - Экран регистрации ✅ ready
 - `ui-character-creation.md` - Начальный интерфейс: выбор и создание персонажа ✅ ready
-- `ui-game-start.md` - Начало игры и боевая система D&D формата ✅ ready
+- `ui-game-start.md` - Начало игры и шутерная боевая петля ✅ ready
 - `ui-main-game.md` - Основной игровой интерфейс (текстовая версия) ✅ ready
 
 ### Game Start Flow (Сценарий начала игры)
@@ -45,8 +45,9 @@
 - `api-requirements/mvp-data-models.md` - Модели данных для MVP ✅ ready
 - `api-requirements/equipment-matrix-entities.md` - Equipment Matrix entities ✅ ready
 
-### Attributes & D&D (Характеристики и D&D)
-- `attributes-dnd-mapping.md` - Сопоставление характеристик с D&D системой ✅ ready
+### Shooter Attributes (характеристики шутера)
+- `attributes-dnd-mapping.md` - [АРХИВ] сопоставление с D&D, не использовать
+- `shooter-attributes.md` - Модель характеристик для 3D-шутера ✅ draft
 
 ### Database (База данных)
 - `database/schema.md` - Схема БД для MVP (требует создания)
