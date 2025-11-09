@@ -99,6 +99,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-009-jade-buddha-temple.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:47 — Brain Manager  
+  **Что доработать:** Оформить квест по QUEST-TEMPLATE, добавить ветвления, связи с системами и целевые API, уточнить награды и зависимости перед постановкой задач.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/denver/2020-2029/quest-004-craft-beer-scene.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:42 — Brain Manager  
   **Что доработать:** Добавить YAML-метаданные, версию, статус, ветвления и интеграции по шаблону QUEST-TEMPLATE; расширить этапы, выборы и награды перед подготовкой API задач.

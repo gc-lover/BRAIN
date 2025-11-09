@@ -1,15 +1,19 @@
 # Система найма NPC — влияние на игровой мир (детально)
 
-- **Status:** queued
-- **Last Updated:** 2025-11-08 20:22
----
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 09:55  
+**api-readiness-notes:** Мировое влияние найма NPC формализовано: индексы занятости, REST/Kafka контуры и UX сценарии согласованы; блокеров перед API задачами нет.
 
+**Версия:** 1.0.0  
+**Статус:** approved  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-09 09:55  
+**Приоритет:** высокий
 
-**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 20:22  \\n**Приоритет:** высокий
-
-**target-domain:** world  \\n**target-microservice:** world-service (port 8092)  \\n**target-microservice-secondary:** economy-service (port 8089), social-service (port 8084)  \\n**target-frontend-module:** modules/world/insights, modules/social/npc-hiring
-
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:12  \\n**api-readiness-notes:** Мировое влияние найма NPC формализовано: индексы занятости, REST/Kafka контуры и UX сценарии согласованы; блокеров перед API задачами нет.
+**target-domain:** world  
+**target-microservice:** world-service (port 8092)  
+**target-microservice-secondary:** economy-service (port 8089), social-service (port 8084)  
+**target-frontend-module:** modules/world/insights, modules/social/npc-hiring
 
 ---
 
