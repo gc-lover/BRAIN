@@ -1,7 +1,7 @@
 ﻿---
 
-- **Status:** queued
-- **Last Updated:** 2025-11-07 00:18
+- **Status:** approved
+- **Last Updated:** 2025-11-09 03:36
 ---
 
 
@@ -10,12 +10,12 @@
 **Статус:** approved  
 **Версия:** 1.1.0  
 **Дата создания:** 2025-11-06  
-**Последнее обновление:** 2025-11-07 16:19  
+**Последнее обновление:** 2025-11-09 03:36  
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 16:19
-**api-readiness-notes:** «Логистика описана: транспорт, риски, страхование, lifecycle, API, мониторинг. Блокирующих TODO нет.»
+**api-readiness-check-date:** 2025-11-09 03:36
+**api-readiness-notes:** Перепроверено 2025-11-09 03:36: транспорт, риски, страхование, lifecycle, API и мониторинг детализированы, блокеров для economy-service нет.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

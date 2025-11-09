@@ -14,8 +14,8 @@
 **Приоритет:** высокий (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:24
-**api-readiness-notes:** Перепроверено 2025-11-09 03:24: валютные пары, matching engine, тарифы, антифрод и события описаны полно; блокеров для постановки economy-service нет.
+**api-readiness-check-date:** 2025-11-09 03:32
+**api-readiness-notes:** Перепроверено 2025-11-09 03:32; валютные пары, matching engine, тарифы, антифрод и события остаются полностью описанными для задач economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

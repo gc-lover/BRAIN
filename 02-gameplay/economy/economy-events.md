@@ -14,8 +14,8 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:25
-**api-readiness-notes:** Перепроверено 2025-11-09 03:25: lifecycle событий, планировщики, REST/WS API и мониторинг описаны полностью; блокеров для economy-service нет.
+**api-readiness-check-date:** 2025-11-09 03:32
+**api-readiness-notes:** Перепроверено 2025-11-09 03:32; lifecycle событий, планировщики, REST/WS API и мониторинг остаются полными, блокеров для economy-service нет.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

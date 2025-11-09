@@ -1,8 +1,8 @@
 ﻿# Экономическая система - Валюты и ресурсы
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:23  
-**api-readiness-notes:** Перепроверено 2025-11-09 03:23: типы валют, ресурсы, механики добычи и привязка к экономикам описаны достаточно детально для постановки API задач economy-service.
+**api-readiness-check-date:** 2025-11-09 03:34  
+**api-readiness-notes:** Перепроверено 2025-11-09 03:34: типы валют, ресурсы, механики добычи и привязка к экономикам описаны достаточно детально для постановки API задач economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
