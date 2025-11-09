@@ -3056,6 +3056,28 @@ mappings:
 
     notes: "Needs QUEST-TEMPLATE structure, NPCs, KPI, and quest-engine/economy/social integrations before API hand-off."
 
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-009-cnn-headquarters.md"
+
+    version: "0.1.0"
+
+    status: "needs-work"
+
+    priority: "low"
+
+    checked: "2025-11-09 10:46"
+
+    checker: "Brain Readiness Checker"
+
+    api_target:
+
+      microservice: null
+
+      directory: null
+
+      frontend_module: null
+
+    notes: "РўСЂРµР±СѓРµС‚СЃСЏ РѕС„РѕСЂРјРёС‚СЊ РєРІРµСЃС‚ РїРѕ QUEST-TEMPLATE, РґРѕР±Р°РІРёС‚СЊ NPC, РІРµС‚РІР»РµРЅРёСЏ, KPI Рё СЃРІСЏР·РєРё СЃ quest-engine/social/economy; СѓРєР°Р·Р°С‚СЊ С†РµР»РµРІС‹Рµ РєР°С‚Р°Р»РѕРіРё API."
+
   - path: ".BRAIN/03-lore/_03-lore/activities/activities-lore-compendium.md"
 
     version: "1.0.0"
@@ -11684,4 +11706,15 @@ mappings:
       directory: null
       frontend_module: null
 
-    notes: "Нужно расписать NPC, ветвления свадебных сценариев, интеграцию подарков и трансляций с economy/social/quest-engine, подготовить каталоги API мероприятий перед постановкой задач."
+    notes: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ NPC, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ economy/social/quest-engine, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ API пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-005-fishermans-wharf.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "narrative-service"
+      directory: null
+      frontend_module: "modules/narrative/quests"
+    notes: "РљРІРµСЃС‚ РѕРїРёСЃС‹РІР°РµС‚ С‚СѓСЂРёСЃС‚РёС‡РµСЃРєРёР№ РІРёР·РёС‚ Р±РµР· РІРµС‚РІР»РµРЅРёР№, СЃРёСЃС‚РµРјРЅС‹С… Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№ Рё API С‚СЂРµР±РѕРІР°РЅРёР№; С‚СЂРµР±СѓРµС‚СЃСЏ РїСЂРёРјРµРЅРёС‚СЊ QUEST-TEMPLATE, РґРѕР±Р°РІРёС‚СЊ РёРЅС‚РµРіСЂР°С†РёРё СЃ quest-engine, economy Рё social, РѕРїСЂРµРґРµР»РёС‚СЊ РєР°С‚Р°Р»РѕРіРё API Рё РјРѕРґСѓР»СЊ modules/narrative/quests РїРµСЂРµРґ РїРѕСЃС‚Р°РЅРѕРІРєРѕР№ Р·Р°РґР°С‡."

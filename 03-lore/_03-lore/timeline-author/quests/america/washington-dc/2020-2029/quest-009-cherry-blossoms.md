@@ -1,5 +1,13 @@
 # Цветение Сакуры
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:36  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:36  
+**api-readiness-notes:** Требуется расписать сезонные ветви, расписание фестиваля, NPC организаторов, KPI влияния на экономику/социалку и интеграции с quest-engine; указать каталоги API перед постановкой задач.
+
 **quest-id:** WASHINGTON-2029-009  
 **city:** Вашингтон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** event | **difficulty:** easy | **solo-group:** solo | **time:** 2-4h

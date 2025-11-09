@@ -10,6 +10,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Роуг-ИИ сценарий требует оформления по QUEST-TEMPLATE: добавить YAML-метаданные, ветвления, зависимости с quest-engine, ai-service и системами права, прописать каталоги API и модуль фронтенда, уточнить награды/прогрессию перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-028-tea-smuggling.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 10:46"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: null
+      frontend_module: "modules/economy/black-market"
+    notes: "Контрабандный квест описывает идею, но требует оформления по QUEST-TEMPLATE: добавить YAML-метаданные, ветвления (таможня, чайная), интеграции с quest-engine, customs-service и economy-service, определить каталоги API и фронтенд-модуль, уточнить экономику наград перед постановкой задач."
 mappings:
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-037-quantum-computing.md"
     version: "0.1.0"

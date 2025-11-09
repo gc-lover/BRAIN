@@ -1,5 +1,14 @@
 # Контрабанда Чая
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 10:46  
+**Приоритет:** low
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:46  
+**api-readiness-notes:** Требуется применить QUEST-TEMPLATE: добавить YAML-метаданные, структурировать этапы с проверками и выбором, описать зависимости (quest-engine, economy-service, customs-service), указать целевые каталоги API и фронтенд-модуль, детализировать награды и экономические интеграции перед постановкой задач.
+
 **quest-id:** LONDON-2060-028  
 **city:** Лондон | **region:** Европа | **period:** 2040-2060  
 **quest-type:** side | **difficulty:** easy | **solo-group:** solo | **time:** 30-60min

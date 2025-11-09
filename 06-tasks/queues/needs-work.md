@@ -95,12 +95,18 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE: структурировать этапы с развилками, добавить зависимости (quest-engine, economy, social), определить микросервис, каталог API и фронтенд-модуль для Berlin Tech Summit.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-038-european-chip.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:33 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE: добавить YAML-метаданные, ветвления по стратегиям финансирования/кадров/экспорта, связать с системами quest-engine/economy/research, определить каталоги API и фронтенд-модуль, расширить награды и KPI проекта.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать ветвления, NPC, требования к quest-engine, KPI наград и интеграции с экономикой/социальными системами; определить целевые API каталоги.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-022-vertical-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE, определить микросервис quest-engine, каталоги API `api/v1/quests/...`, фронтенд-модуль и расширить ветки/награды, зависимости с социальными и экономическими системами.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-024-red-sky-storm.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:13 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, описать зависимые системы, определить каталоги API и фронтенд-модуль, детализировать ветвления и KPI восстановления.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Зафиксировать сценарные развилки, KPI livability, экономические и социальные зависимости, определить REST/WS каталоги для quest-engine.
@@ -201,6 +207,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-022-vertical-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE, определить микросервис quest-engine, каталоги API `api/v1/quests/...`, фронтенд-модуль и расширить ветки/награды, зависимости с социальными и экономическими системами.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-024-red-sky-storm.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:13 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, описать зависимые системы, определить каталоги API и фронтенд-модуль, детализировать ветвления и KPI восстановления.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Зафиксировать сценарные развилки, KPI livability, экономические и социальные зависимости, определить REST/WS каталоги для quest-engine.
@@ -262,3 +271,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-006-frida-kahlo-house.md (v0.1.0)  
   **Проверено:** 2025-11-09 10:30 — Brain Manager  
   **Что доработать:** Добавить ветвления музейного визита, проверки навыков, связи с социальным рейтингом, арт-коллекциями и экономикой; определить целевой микросервис и фронтенд-модуль.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-007-mariachi-music.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:43 — Brain Manager  
+  **Что доработать:** Разработать ветки взаимодействия с марьячи, проверки навыков, связи с социальным рейтингом, экономикой и музыкальными системами; определить целевой микросервис и фронтенд-модуль.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-005-fishermans-wharf.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:38 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления маршрутов, интеграции с quest-engine, economy и social, определить каталоги API и модуль modules/narrative/quests перед постановкой задач.

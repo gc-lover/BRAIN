@@ -1,5 +1,18 @@
 # Штаб-квартира CNN
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 10:46  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:46  
+**api-readiness-notes:** Нет структуры по QUEST-TEMPLATE, отсутствуют ветвления, NPC и связки с системами; требуется определить интеграции с quest-engine, social и economy и целевые каталоги API.
+
+---
+
+# Штаб-квартира CNN
+
 **quest-id:** ATLANTA-2029-009  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** faction | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h
