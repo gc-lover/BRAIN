@@ -216,6 +216,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Список сокращений перепроверен 2025-11-09 04:13; документ вспомогательный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/README.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:13"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Обзор раздела задач перепроверен 2025-11-09 04:13; документ служебный и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
