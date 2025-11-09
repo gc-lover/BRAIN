@@ -6,6 +6,10 @@
 
 # Auction House Operations - Операции
 
+**target-domain:** economy-auction  
+**target-microservice:** economy-service (port 8085)  
+**target-frontend-module:** modules/economy/auction-house
+
 **Статус:** approved  
 **Версия:** 1.0.0  
 **Дата:** 2025-11-07 06:15  

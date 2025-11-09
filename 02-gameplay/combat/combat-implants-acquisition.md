@@ -1,8 +1,8 @@
 ﻿# Боевая система — Импланты: Получение и улучшение
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:10
-**api-readiness-notes:** Перепроверено 2025-11-09 03:10: детально описаны способы получения, улучшение и редкость имплантов (v1.1.0); документ готов к созданию API задач gameplay-service.
+**api-readiness-check-date:** 2025-11-09 03:16
+**api-readiness-notes:** Перепроверено 2025-11-09 03:16: детально описаны способы получения, улучшение и редкость имплантов (v1.1.0); документ готов к созданию API задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  
