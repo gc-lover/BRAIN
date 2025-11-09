@@ -1217,6 +1217,17 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/cyberspace.yaml"
       frontend_module: "modules/combat/cyberspace"
     notes: "Перепроверено 2025-11-09 03:13; добавлена явная версия 1.0.0, режимы киберпространства и событийная структура готовы к формированию API контрактов gameplay-service."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/tokyo/2061-2077/quest-037-love-hotel.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Отсутствуют статус/версия/приоритет в документе, нет ветвлений и привязки к сервисам; требуется структурировать этапы, награды и сценарные зависимости перед постановкой API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1887,4 +1898,15 @@ mappings:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Обзор найма NPC перепроверен 2025-11-09 09:34; документ служит навигацией по дочерни�
+    notes: "Обзор найма NPC перепроверен 2025-11-09 09:34; документ служит навигацией по дочерним материалам и не формирует API задачи напрямую."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/sao-paulo-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Сан-Паулу описывает �

@@ -25,6 +25,9 @@
 - **Документ:** .BRAIN/02-gameplay/economy/player-market/player-market-analytics.md (v1.0.0)  
   **Проверено:** 2025-11-09 09:34 — Brain Manager  
   **Что доработать:** Добавить API контракты витрин, SQL/ETL схемы и матрицу KPI для аналитики игрокового рынка.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-002-tacos-al-pastor.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:36 — Brain Manager  
+  **Что доработать:** Уточнить ветки квеста, описать связи с прогрессией и экономикой, указать целевой микросервис и фронтенд-модуль.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать ветвления, NPC, требования к сервисам quest-engine, KPI наград и связки с экономикой/социальными системами; сформировать целевые API каталоги.
