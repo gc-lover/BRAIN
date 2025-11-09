@@ -216,6 +216,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Список сокращений перепроверен 2025-11-09 04:16; документ вспомогательный и не формирует API задачи."
+  - path: ".BRAIN/03-lore/_03-lore/locations/world-cities/chicago-detailed-2020-2093.md"
+    version: "1.0.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "world-service"
+      directory: "api/v1/world/cities/chicago.yaml"
+      frontend_module: "modules/world/atlas"
+    notes: "Добавить модели данных, REST/Events контракты и UX-интеграции, чтобы подготовить задания для world-service."
   - path: ".BRAIN/06-tasks/queues/ready.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1217,17 +1228,6 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/cyberspace.yaml"
       frontend_module: "modules/combat/cyberspace"
     notes: "Перепроверено 2025-11-09 03:13; добавлена явная версия 1.0.0, режимы киберпространства и событийная структура готовы к формированию API контрактов gameplay-service."
-  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/tokyo/2061-2077/quest-037-love-hotel.md"
-    version: "0.1.0"
-    status: "needs-work"
-    priority: "medium"
-    checked: "2025-11-09 09:36"
-    checker: "Brain Readiness Checker"
-    api_target:
-      microservice: null
-      directory: null
-      frontend_module: null
-    notes: "Отсутствуют статус/версия/приоритет в документе, нет ветвлений и привязки к сервисам; требуется структурировать этапы, награды и сценарные зависимости перед постановкой API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1855,6 +1855,17 @@ mappings:
       directory: "api/v1/economy/player-market/analytics.yaml"
       frontend_module: "modules/economy/player-market"
     notes: "Перепроверено 2025-11-09 09:34: перечислены метрики и roadmap, но отсутствуют API контракты по витринам, SQL/ETL схемы и согласованная матрица KPI; требуется детализация перед постановкой задач economy-service."
+  - path: ".BRAIN/02-gameplay/world/world-state/player-impact-systems.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "critical"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "world-service"
+      directory: "api/v1/world/state/player-impact-systems.yaml"
+      frontend_module: "modules/world/state/player-impact"
+    notes: "Перепроверено 2025-11-09 09:35: интеграция квестов, экономики и боевых событий в мировое состояние описана полно; документ готов к постановке API задач world-service."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-004-atlanta-airport.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1888,6 +1899,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Нужно дополнить квест системными связями (прогрессия, экономика), определить ответственные микросервисы и фронтенд-модуль, а также расширить сценарные ветки перед постановкой API задачи."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-025-wembley-arena.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:37"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Квест описывает PvP-турнир, но не применяет QUEST-TEMPLATE: отсутствуют YAML-метаданные, ветвления, зависимости, связи с прогрессией и экономикой; требуется детальная доработка перед передачей в API поток."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-021-flooded-manhattan.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест описывает обстановку Манхэттена и ключевые этапы, но отсутствуют зависимости, API каталоги, фронтенд-модуль и детализация веток/награды; требуется оформить через QUEST-TEMPLATE перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "narrative-service"
+      directory: null
+      frontend_module: "modules/narrative/quests"
+    notes: "Квест фиксирует идею urban sprawl Феникса, но отсутствуют ветвления, зависимости и требования к API; требуется расширить сценарную структуру, увязать с quest-engine и указать микросервис/каталоги перед постановкой задач."
   - path: ".BRAIN/02-gameplay/social/npc-hiring-system.md"
     version: "2.0.0"
     status: "not-applicable"
@@ -1909,4 +1953,70 @@ mappings:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Таймлайн лора Сан-Паулу описывает �
+    notes: "Таймлайн лора Сан-Паулу описывает события региона и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/seattle-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Сиэтла описывает событийный контекст и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/toronto-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Торонто описывает региональные события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:37"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Киевский квест требует расширить структуру: добавить зависимости (локации, NPC, цепочки), указать целевой микросервис, каталог OpenAPI и фронтенд-модуль, а также связать этапы и награды с системами прогрессии/экономики."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-034-nicholas-ii-ghost.md"
+    version: "unversioned"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Нет версии и статуса документа; требуется конкретизировать этапы, награды, зависимости и связи с quest-engine перед постановкой API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:37"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Нужна детализация этапов и развилок, указание зависимых систем (импланты, лечение, психоз) и подготовка целевых API каталогов для quest-engine и economy перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/rome/2020-2029/quest-004-pasta-master.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Сценарий квеста требует оформления по QUEST-TEMPLATE: добавить версию и статус, прописать зависимости с системами, ветвления и ссылки на целевые микросервисы и фронтенд перед постановкой API задач."

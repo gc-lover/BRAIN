@@ -95,3 +95,5 @@
   **Проверено:** 2025-11-09 01:39 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по скрытности и обнаружению (gameplay-service, `api/v1/gameplay/combat/stealth.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
   **Проверено:** 2025-11-09 02:50 — Brain Manager | Следующий шаг: сформировать пакет задач по паркуру и мобильным комбо (gameplay-service, `api/v1/gameplay/combat/freerun.yaml`).
+- **Документ:** .BRAIN/02-gameplay/world/world-state/player-impact-systems.md (v1.0.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Manager | Следующий шаг: оформить пакет API мирового состояния по player impact (`api/v1/world/state/player-impact-systems.yaml`) и синхронизировать модуль `modules/world/state/player-impact` для world-service.

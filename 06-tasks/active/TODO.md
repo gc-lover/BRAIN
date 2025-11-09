@@ -22,6 +22,7 @@
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 ## Low
 - [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
+- [!] Granville Island Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md`: описать ветвления, NPC, зависимости с quest-engine и KPI наград перед передачей в ДУАПИТАСК (2025-11-09 09:35).
 
 ---
 

@@ -6,8 +6,13 @@
 **Статус:** review  
 **Приоритет:** высокий
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 09:20
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Требуется дополнить модели данных, REST/Events контракты и указать интеграцию с фронтендом перед постановкой API задач для world-service.
+
+**Целевой микросервис:** world-service  
+**API каталог:** api/v1/world/cities/chicago.yaml  
+**Фронтенд модуль:** modules/world/atlas
 
 ---
 

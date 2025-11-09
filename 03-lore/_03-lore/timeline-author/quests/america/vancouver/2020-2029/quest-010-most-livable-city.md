@@ -1,5 +1,13 @@
 # Самый Пригодный Город
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:35  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Не описаны ветви решений, KPI и интеграции с экономикой/социальными системами; требуется связать с quest-engine и задать параметры API перед постановкой задач.
+
 **quest-id:** VANCOUVER-2029-010  
 **city:** Ванкувер | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h
