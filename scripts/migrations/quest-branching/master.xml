@@ -14,5 +14,6 @@
     <include file="v1/04-indexes.xml"/>
     <include file="v1/05-shadow-triggers.xml"/>
     <include file="v1/06-materialized-views.xml"/>
+    <include file="v1/07-rls-and-roles.xml"/>
 
 </databaseChangeLog>

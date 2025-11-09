@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="create-quest-branching-roles" author="ai-manager">
+        <comment>Создание ролей доступа для системы ветвящихся квестов</comment>
+        <sql>
+            CREATE ROLE IF NOT EXISTS game_server_role;
+            CREATE ROLE IF NOT EXISTS analytics_role;
+            CREATE ROLE IF NOT EXISTS quest_admin_role;
+
+            GRANT USAGE ON SCHEMA public TO game_server_role, analytics_role, quest_admin_role;
+
+            GRANT SELECT, INSERT, UPDATE, DELETE ON quests TO quest_admin_role;
+            GRANT SELECT ON quests TO analytics_role;
+            GRANT SELECT, INSERT, UPDATE ON quests TO game_server_role;
+
+            GRANT SELECT, INSERT, UPDATE, DELETE ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+                TO quest_admin_role;
+            GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+                TO analytics_role;
+            GRANT SELECT ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks
+                TO game_server_role;
+
+            GRANT SELECT, INSERT, UPDATE, DELETE ON player_quest_choices, player_flags, quest_progress,
+                quest_consequences, player_quest_consequences
+                TO game_server_role;
+
+            GRANT SELECT ON player_quest_choices, player_flags, quest_progress,
+                quest_consequences, player_quest_consequences
+                TO analytics_role;
+
+            GRANT SELECT, INSERT, UPDATE ON quest_consequences, player_quest_consequences
+                TO quest_admin_role;
+
+            GRANT SELECT, INSERT, UPDATE, DELETE ON world_state, world_state_history,
+                territory_control, npc_states
+                TO game_server_role;
+
+            GRANT SELECT ON world_state, world_state_history, territory_control, npc_states
+                TO analytics_role;
+        </sql>
+        <rollback>
+            <sql>
+                REVOKE ALL ON world_state, world_state_history, territory_control, npc_states FROM game_server_role, analytics_role;
+                REVOKE ALL ON quest_consequences, player_quest_consequences FROM game_server_role, analytics_role, quest_admin_role;
+                REVOKE ALL ON player_quest_choices, player_flags, quest_progress FROM game_server_role, analytics_role;
+                REVOKE ALL ON quest_branches, dialogue_nodes, dialogue_choices, skill_checks FROM game_server_role, analytics_role, quest_admin_role;
+                REVOKE ALL ON quests FROM game_server_role, analytics_role, quest_admin_role;
+                REVOKE USAGE ON SCHEMA public FROM game_server_role, analytics_role, quest_admin_role;
+                DROP ROLE IF EXISTS quest_admin_role;
+                DROP ROLE IF EXISTS analytics_role;
+                DROP ROLE IF EXISTS game_server_role;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="enable-rls-quest-progress" author="ai-manager">
+        <comment>Настройка Row-Level Security для таблиц с прогрессом и флагами</comment>
+        <sql>
+            ALTER TABLE quest_progress ENABLE ROW LEVEL SECURITY;
+            CREATE POLICY quest_progress_player_policy ON quest_progress
+                FOR ALL USING (character_id = current_setting('app.current_character_id', true)::UUID);
+
+            ALTER TABLE player_quest_choices ENABLE ROW LEVEL SECURITY;
+            CREATE POLICY player_quest_choices_policy ON player_quest_choices
+                FOR ALL USING (character_id = current_setting('app.current_character_id', true)::UUID);
+
+            ALTER TABLE player_flags ENABLE ROW LEVEL SECURITY;
+            CREATE POLICY player_flags_policy ON player_flags
+                FOR ALL USING (character_id = current_setting('app.current_character_id', true)::UUID);
+        </sql>
+        <rollback>
+            <sql>
+                DROP POLICY IF EXISTS player_flags_policy ON player_flags;
+                ALTER TABLE player_flags DISABLE ROW LEVEL SECURITY;
+
+                DROP POLICY IF EXISTS player_quest_choices_policy ON player_quest_choices;
+                ALTER TABLE player_quest_choices DISABLE ROW LEVEL SECURITY;
+
+                DROP POLICY IF EXISTS quest_progress_player_policy ON quest_progress;
+                ALTER TABLE quest_progress DISABLE ROW LEVEL SECURITY;
+            </sql>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+
