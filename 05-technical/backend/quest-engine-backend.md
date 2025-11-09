@@ -6,10 +6,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-098: api/v1/gameplay/quests/quest-engine.yaml (2025-11-09)
-- Last Updated: 2025-11-09 17:28
+  - API-TASK-098: Quest Engine API — `api/v1/gameplay/quests/quest-engine/quest-engine.yaml`
+    - Создано: 2025-11-09 17:28
+    - Завершено: 2025-11-09 19:48
+    - Доп. файлы: `quest-engine-models.yaml`, `quest-engine-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-098-quest-engine-api.md`
+- Last Updated: 2025-11-09 19:48
 ---
 
 **target-domain:** gameplay-quests  
