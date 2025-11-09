@@ -20,9 +20,12 @@
 **Размер:** ~400 строк ✅
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-109: api/v1/economy/auction-house/auction-mechanics.yaml (2025-11-09)
+- Last Updated: 2025-11-09 20:15
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 20:16
 ---
 
 ## Философия
