@@ -1,8 +1,12 @@
 # Class Iconic Equipment Catalog
 
-**Версия:** 0.2.0  
-**Дата:** 2025-11-07 21:04  
-**Статус:** draft  
+---
+- **Status:** in-review
+- **Last Updated:** 2025-11-09 04:36
+---
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 04:36  
+**api-readiness-notes:** Каталог описывает лор и цепочки, но отсутствуют экономические показатели, схемы выдачи в API и ограничения торговли; требуется полная спецификация `/equipment/class-iconic` и синхронизация с progression.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  
