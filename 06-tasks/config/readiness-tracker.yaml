@@ -216,6 +216,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Список сокращений перепроверен 2025-11-09 04:16; документ вспомогательный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/queues/ready.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:16"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Очередь ready перепроверена 2025-11-09 04:16; файл служебный, фиксирует документы готовые к API задачам."
   - path: ".BRAIN/06-tasks/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1217,3 +1228,14 @@ mappings:
       directory: "api/v1/economy/resources/resources-catalog.yaml"
       frontend_module: "modules/economy/resources"
     notes: "Перепроверено 2025-11-09 04:10: классификация ресурсов, источники, стоимости и ограничения готовы к постановке API задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-stock-exchange/README.md"
+    version: "1.0.1"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:17"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 04:17: файл служит навигацией по материалам биржи и не формирует API задачи."

@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/economy-stock-exchange/README.md"
   - path: ".BRAIN/02-gameplay/economy/economy-trading-guilds.md"
   - path: ".BRAIN/02-gameplay/economy/economy-trading.md"
   - path: ".BRAIN/02-gameplay/economy/economy-type.md"
@@ -2696,5 +2695,4 @@
   - path: ".BRAIN/06-tasks/queues/needs-work.md"
   - path: ".BRAIN/06-tasks/queues/not-applicable.md"
   - path: ".BRAIN/06-tasks/queues/README.md"
-  - path: ".BRAIN/06-tasks/queues/ready.md"
   - path: ".BRAIN/07-research/README.md"
