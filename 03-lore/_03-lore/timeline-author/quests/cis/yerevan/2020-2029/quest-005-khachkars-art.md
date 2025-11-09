@@ -1,5 +1,14 @@
 # Искусство Хачкаров
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:56  
+**Приоритет:** medium
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:56  
+**api-readiness-notes:** Требуется структурировать квест по QUEST-TEMPLATE: расписать образовательные ветки и мастер-классы, определить интеграции quest-engine и культурных систем, целевые каталоги API и модуль фронтенда, согласовать KPI наград.
+
 **quest-id:** YEREVAN-2029-005  
 **city:** Ереван | **region:** СНГ | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** medium | **solo-group:** solo | **time:** 1-2h

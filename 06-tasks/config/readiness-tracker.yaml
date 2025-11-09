@@ -1643,3 +1643,14 @@ mappings:
       directory: null
       frontend_module: "modules/narrative/quests"
     notes: "Квест описывает цикл стартапа, но отсутствуют ветвления, системные зависимости и API требования; нужно применить QUEST-TEMPLATE, добавить интеграции с quest-engine, economy и progression и определить каталоги API/фронтенд модуль перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-006-frida-kahlo-house.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 10:30"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Добавить ветвления музейного визита, интеграции с системами социального рейтинга, арт-коллекций и экономики, определить целевые каталоги OpenAPI и фронтенд-модуль."
