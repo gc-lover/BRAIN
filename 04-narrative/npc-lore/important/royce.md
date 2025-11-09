@@ -7,8 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 22:34
-**api-readiness-notes:** NPC готов к использованию в уличной и технологической арках.
+**api-readiness-check-date:** 2025-11-09 04:15
+**api-readiness-notes:** Перепроверено 2025-11-09 04:15: NPC используется в сюжетных и технологических арках, API задачи не требуются
 
 **Категория:** important  
 **ID NPC:** npc-royce

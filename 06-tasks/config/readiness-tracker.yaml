@@ -209,13 +209,13 @@ mappings:
     version: "1.0.0"
     status: "not-applicable"
     priority: "medium"
-    checked: "2025-11-09 04:13"
+    checked: "2025-11-09 04:16"
     checker: "Brain Manager"
     api_target:
       microservice: null
       directory: null
       frontend_module: null
-    notes: "Список сокращений перепроверен 2025-11-09 04:13; документ вспомогательный и не формирует API задачи."
+    notes: "Список сокращений перепроверен 2025-11-09 04:16; документ вспомогательный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1140,6 +1140,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Профиль агента NetWatch; подтверждено 2025-11-09 04:11, что документ описывает сюжетную роль и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/important/rogue.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:15"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль легендарного фикcера Afterlife; подтверждено 2025-11-09 04:15, что документ носит нарративный характер и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/important/rosalind-myers.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:15"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль президента NUSA; подтверждено 2025-11-09 04:15, что документ служит лору и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/important/royce.md"
+    version: "1.1.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:15"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль лидера Maelstrom; перепроверено 2025-11-09 04:15: используется в сюжетных арках, но не требует API задач."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
