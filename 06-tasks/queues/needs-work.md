@@ -26,6 +26,12 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-035-kunstkamera-oddities.md (v0.0.0)  
   **Проверено:** 2025-11-09 09:43 — Brain Readiness Checker  
   **Что доработать:** Добавить версию и статус, детализировать этапы и выборы, расписать награды и системные зависимости, определить целевые API каталоги quest-engine перед постановкой задачи.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-036-catherine-palace-ball.md (v0.0.0)  
+  **Проверено:** 2025-11-09 09:46 — Brain Readiness Checker  
+  **Что доработать:** Привести к QUEST-TEMPLATE: зафиксировать версии/статус, расписать ветвления, аудиенцию, KPI наград и определить целевые API каталоги quest-engine и социального сервиса.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-037-faberge-collection.md (v0.0.0)  
+  **Проверено:** 2025-11-09 09:59 — Brain Readiness Checker  
+  **Что доработать:** Детализировать глобальные маршруты, способы получения яиц, экономические параметры и интеграции, определить целевые API каталоги quest-engine/economy перед постановкой задачи.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE: расписать зависимости (локации, NPC, цепочки), определить целевой микросервис, каталог OpenAPI и фронтенд-модуль, связать этапы и награды с системами прогрессии и экономики.
@@ -56,6 +62,12 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/locations/world-cities/chicago-detailed-2020-2093.md (v1.0.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Manager  
   **Что доработать:** Добавить модели данных, REST/Events контракты и связь с фронтендом `modules/world/atlas` для world-service.
+- **Документ:** .BRAIN/02-gameplay/economy/player-market/player-market-core.md (v1.0.0)  
+  **Проверено:** 2025-11-09 09:48 — Brain Manager  
+  **Что доработать:** Детализировать статусы сделок, ограничения и комиссии, прописать интеграцию с инвентарём и экономикой, события/очереди и схемы данных, увязать с API и БД перед постановкой задач economy-service.
+- **Документ:** .BRAIN/02-gameplay/economy/player-market/player-market-database.md (v1.0.0)  
+  **Проверено:** 2025-11-09 10:07 — Brain Manager  
+  **Что доработать:** Расширить схемы БД, описать миграции, ограничения, Events/CDC, интеграцию с API/UI и экономики перед постановкой задач economy-service.
 - **Документ:** .BRAIN/02-gameplay/economy/player-market/player-market-api.md (v1.0.0)  
   **Проверено:** 2025-11-09 09:42 — Brain Manager  
   **Что доработать:** Дополнить REST/WS спецификации кодами ошибок, авторизацией, схемами запросов/ответов, событиями и интеграцией с БД и аналитикой для подготовки задач economy-service.
@@ -202,6 +214,3 @@
   **Проверено:** 2025-11-09 09:42 — Brain Manager  
   **Что доработать:** Добавить YAML-метаданные, версию, статус, ветвления и интеграции по шаблону QUEST-TEMPLATE; расширить этапы, выборы и награды перед подготовкой API задач.
 
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-002-alcatraz-escape.md (v0.1.0)  
-  **Проверено:** 2025-11-09 10:11 — Brain Manager  
-  **Что доработать:** Применить QUEST-TEMPLATE, расписать ветвления побега, сценарии охраны, интеграции с quest-engine, системами безопасности и экономикой наград; определить каталоги API и модуль modules/narrative/quests.
