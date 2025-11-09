@@ -22,7 +22,7 @@
 ### Требуется исполнение
 
 1. **Liquibase миграции**
-   - [~] Сформировать changelog `quest-branching-v1` — готово `master.xml`, `v1/01-create-core-tables.xml`, `v1/02-create-branching-tables.xml`, `v1/03-create-world-state-tables.xml`, `v1/04-indexes.xml`, `v1/05-shadow-triggers.xml`; осталось `06+` (materialized view, RLS/роли, rollback).
+   - [~] Сформировать changelog `quest-branching-v1` — готово `master.xml`, `v1/01-create-core-tables.xml`, `v1/02-create-branching-tables.xml`, `v1/03-create-world-state-tables.xml`, `v1/04-indexes.xml`, `v1/05-shadow-triggers.xml`, `v1/06-materialized-views.xml`; осталось `07+` (RLS/роли, rollback).
    - [ ] Добавить триггеры shadow-write.
 
 2. **Импорт квестов**

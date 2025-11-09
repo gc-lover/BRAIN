@@ -14,7 +14,8 @@ scripts/migrations/quest-branching/
     ├─ 02-create-branching-tables.xml
     ├─ 03-create-world-state-tables.xml
     ├─ 04-indexes.xml
-    └─ 05-shadow-triggers.xml
+    ├─ 05-shadow-triggers.xml
+    └─ 06-materialized-views.xml
 ```
 
 ## Запуск

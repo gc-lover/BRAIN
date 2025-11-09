@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="mv-quest-path-popularity" author="ai-manager">
+        <comment>Материализованное представление популярности путей квестов</comment>
+        <sql>
+            CREATE MATERIALIZED VIEW quest_path_popularity AS
+            SELECT
+                quest_id,
+                COALESCE(chosen_path, 'unknown') AS chosen_path,
+                COUNT(*) AS times_chosen,
+                ROUND(
+                    COUNT(*) * 100.0 /
+                    NULLIF(SUM(COUNT(*)) OVER (PARTITION BY quest_id), 0),
+                    2
+                ) AS percentage
+            FROM quest_progress
+            WHERE status = 'COMPLETED'
+            GROUP BY quest_id, COALESCE(chosen_path, 'unknown');
+        </sql>
+        <rollback>
+            <sql>
+                DROP MATERIALIZED VIEW IF EXISTS quest_path_popularity;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-mv-quest-path-popularity" author="ai-manager">
+        <comment>Индекс по MV для быстрого поиска</comment>
+        <createIndex tableName="quest_path_popularity" indexName="idx_mv_quest_path_popularity">
+            <column name="quest_id"/>
+            <column name="chosen_path"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="quest_path_popularity" indexName="idx_mv_quest_path_popularity"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="refresh-mv-quest-path-popularity" author="ai-manager" runOnChange="true">
+        <comment>Инкрементальное обновление MV</comment>
+        <sql>
+            REFRESH MATERIALIZED VIEW CONCURRENTLY quest_path_popularity;
+        </sql>
+        <rollback>
+            <sql>
+                REFRESH MATERIALIZED VIEW CONCURRENTLY quest_path_popularity;
+            </sql>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+

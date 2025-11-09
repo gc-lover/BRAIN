@@ -13,5 +13,6 @@
     <include file="v1/03-create-world-state-tables.xml"/>
     <include file="v1/04-indexes.xml"/>
     <include file="v1/05-shadow-triggers.xml"/>
+    <include file="v1/06-materialized-views.xml"/>
 
 </databaseChangeLog>
