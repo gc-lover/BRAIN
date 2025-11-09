@@ -1415,6 +1415,17 @@ mappings:
       directory: null
       frontend_module: "modules/social/npc-hiring"
     notes: "Перепроверено 2025-11-09 09:43: отсутствует балансировка стоимости и эффективности ролей, не оформлены API контракты social-service; требуется доработка."
+  - path: ".BRAIN/02-gameplay/social/npc-hiring-world-impact-детально.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 09:55"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "world-service"
+      directory: "api/v1/world/npc-hiring/impact.yaml"
+      frontend_module: "modules/world/insights"
+    notes: "Перепроверено 2025-11-09 09:55: индексы влияния найма NPC, REST/Kafka контуры и UX дэшборды оформлены; пакет готов к постановке задач world-service (economy/social синхронизированы)."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/america/cities/sao-paulo-2020-2093.md"
     version: "0.1.0"
     status: "not-applicable"
