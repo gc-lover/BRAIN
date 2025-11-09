@@ -10,10 +10,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-097: api/v1/characters/players.yaml (2025-11-09)
-- Last Updated: 2025-11-09 17:05
+  - API-TASK-097: Player Character Lifecycle API — `api/v1/characters/players/players.yaml`
+    - Создано: 2025-11-09 17:05
+    - Завершено: 2025-11-09 19:35
+    - Доп. файлы: `players-models.yaml`, `players-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-097-character-management-api.md`
+- Last Updated: 2025-11-09 19:35
 ---
 
 ---
