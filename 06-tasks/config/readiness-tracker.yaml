@@ -227,6 +227,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Шаблон профиля города используется для оформления документов и не требует постановки API задач."
+  - path: ".BRAIN/03-lore/_03-lore/locations/world-cities/delhi-detailed-2020-2093.md"
+    version: "1.0.0"
+    status: "needs-work"
+    priority: "high"
+    checked: "2025-11-09 09:47"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "world-service"
+      directory: "api/v1/world/cities/delhi.yaml"
+      frontend_module: "modules/world/atlas"
+    notes: "Добавить модели данных, REST/Events контракты и интеграцию с фронтендом для подготовки API пакета world-service."
   - path: ".BRAIN/03-lore/_03-lore/locations/world-cities/chicago-detailed-2020-2093.md"
     version: "1.0.0"
     status: "needs-work"
@@ -1371,17 +1382,6 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Описание вертикального города не содержит связей с системами, API каталогов и фронтенд-модуля; необходимо расширить ветвления, KPI и зависимости согласно QUEST-TEMPLATE."
-  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-023-bridge-fortress.md"
-    version: "0.1.0"
-    status: "needs-work"
-    priority: "high"
-    checked: "2025-11-09 09:49"
-    checker: "Brain Manager"
-    api_target:
-      microservice: null
-      directory: null
-      frontend_module: null
-    notes: "Квест по контролю мостов описывает основные этапы, но отсутствуют ветвления, зависимости с quest-engine, economy и PvP системами; требуется шаблон QUEST-TEMPLATE, определить микросервис, каталоги API и фронтенд-модуль."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1514,17 +1514,6 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Дакки описывает городские события и не требует API задач."
-  - path: ".BRAIN/03-lore/_03-lore/activities/activities-lore-compendium.md"
-    version: "1.0.0"
-    status: "not-applicable"
-    priority: "medium"
-    checked: "2025-11-09 09:46"
-    checker: "Brain Manager"
-    api_target:
-      microservice: null
-      directory: null
-      frontend_module: null
-    notes: "Перепроверено 2025-11-09 09:46: лор-компендиум активностей используется как справочник и не формирует API задачи."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/ho-chi-minh-2020-2093.md"
     version: "0.1.0"
     status: "not-applicable"
@@ -1624,6 +1613,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Киевский квест требует расширить структуру: добавить зависимости (локации, NPC, цепочки), указать целевой микросервис, каталог OpenAPI и фронтенд-модуль, а также связать этапы и награды с системами прогрессии/экономики."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест про китайскую оперу описан поверхностно: отсутствуют ветвления, связи с системами и целевые API; требуется привести документ к QUEST-TEMPLATE, детализировать этапы и награды перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-009-jade-buddha-temple.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:47"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест описан лишь базово: нет ветвлений, зависимостей с системами и целевых API; нужно оформить по QUEST-TEMPLATE, добавить интеграции и детализировать награды перед передачей в API поток."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-034-nicholas-ii-ghost.md"
     version: "unversioned"
     status: "needs-work"
