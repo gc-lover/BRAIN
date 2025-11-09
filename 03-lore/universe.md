@@ -21,6 +21,25 @@
 **target-microservice:** world-service (port 8086)  
 **target-frontend-module:** modules/world/lore
 
+---
+
+## API Tasks Status
+
+**Статус:** Спецификация создана  
+**Последнее обновление:** 2025-11-09 14:05
+
+**Созданные задания:**
+- **API-TASK-095:** Universe Simulation API — `api/v1/world/universe/universe.yaml` (completed)
+  - Создано: 2025-11-09 15:10
+  - Завершено: 2025-11-09 14:05
+  - Файл задания: `API-SWAGGER/tasks/completed/2025-11-09/task-095-universe-simulation-api.md`
+  - Описание: Спецификация временной шкалы лиг, стадий симуляции и blackwall insights
+
+**Статус обработки:**
+- ✅ Документ отмечен как готовый для API задач
+- ✅ Задание выполнено world-service
+- ✅ Интеграции Narrative/Economy/Analytics подготовлены
+
 
 ## Концепция вселенной
 
