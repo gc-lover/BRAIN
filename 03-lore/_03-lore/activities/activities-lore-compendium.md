@@ -1,9 +1,9 @@
 ---
 
 ---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:37
-**api-readiness-notes:** Завершённый лор-компендиум по активностям для синхронизации геймдизайна и нарратива.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 09:46
+**api-readiness-notes:** Лор-компендиум служит справочным архивом активностей и не формирует API задачи; перепроверено 2025-11-09 09:46.
 ---
 
 # Activities Lore Compendium - Архив Неоновых Активностей
@@ -82,9 +82,9 @@
 ---
 
 ---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 20:34
-**api-readiness-notes:** Завершённый лор-компендиум по активностям для синхронизации геймдизайна и нарратива.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 09:46
+**api-readiness-notes:** Лор-компендиум служит справочным архивом активностей и не формирует API задачи; перепроверено 2025-11-09 09:46.
 ---
 
 # Activities Lore Compendium - Архив Неоновых Активностей
