@@ -119,21 +119,21 @@ implementations:
   - api_path: "api/v1/quests/main/red-dawn.yaml"
     task_id: "API-TASK-TBD"
     brain_source: ".BRAIN/05-technical/start-content/quests/quest-main-2040-red-dawn.md"
-    api_status: "not_started"
+    api_status: "archived"
     backend:
-      status: "not_started"
+      status: "not_applicable"
     frontend:
-      status: "not_started"
-    priority: "high"
-    notes: "Shooter-документ готов. Требуется постановка задач для API-SWAGGER."
+      status: "not_applicable"
+    priority: "low"
+    notes: "Документ переведён в архив после pivot на shooter. Использовать `quest-main-2040` только как историческую справку."
   - api_path: "api/v1/quests/main/shattered-city.yaml"
     task_id: "API-TASK-TBD"
     brain_source: ".BRAIN/05-technical/start-content/quests/quest-main-2023-shattered-city.md"
-    api_status: "not_started"
+    api_status: "in_review"
     backend:
       status: "not_started"
     frontend:
       status: "not_started"
     priority: "high"
-    notes: "Shooter-документ готов. После постановки задач синхронизировать с economy-service."
+    notes: "Shooter-версия документа подготовлена. После ревью синхронизировать с economy-service и combat wave."
 

@@ -47,7 +47,8 @@
 
 ### Shooter Attributes (характеристики шутера)
 - `attributes-dnd-mapping.md` - [АРХИВ] сопоставление с D&D, не использовать
-- `shooter-attributes.md` - Модель характеристик для 3D-шутера ✅ draft
+- `shooter-attributes.md` - Параметры точности, мобильности и стойкости для 3D-шутера ⚠️ in-review
+- `ui-game-start.md` - UI потоки старта игры и боевой петли шутера ✅ ready
 
 ### Database (База данных)
 - `database/schema.md` - Схема БД для MVP (требует создания)

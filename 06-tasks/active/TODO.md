@@ -20,6 +20,8 @@
 - [ ] Combat Shooter Core — подготовить материалы `.BRAIN/02-gameplay/combat/combat-shooter-core.md` (оружие, TTK, баллистика, anti-cheat) и оформить бриф для ДУАПИТАСК (2025-11-09 15:15 — черновик документа создан, требуется детализация).
 - [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 15:05 — черновик брифа готов, ждём окно).
 - [~] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 14:15 — черновик готов, ждём окно).
+- [ ] Quest Docs Shooter Update — переписать квестовые шаблоны на shooter-события (приоритет: main/side стартовые ветки, 2025-11-09 15:20 — требуется декомпозиция).
+- [ ] Shooter UI Launchpad — синхронизировать `ui-game-start.md` с frontend и обучением (новый спринт, 2025-11-10 00:45 — требуется разработка JSON-конфигов).
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 - [!] Player Market API — доработать `.BRAIN/02-gameplay/economy/player-market/player-market-api.md`: добавить авторизацию, ошибки, схемы запросов/ответов, событийные потоки и интеграцию с БД/аналитикой перед постановкой задач economy-service (2025-11-09 09:42).
 ## Low
