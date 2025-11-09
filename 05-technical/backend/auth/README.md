@@ -6,10 +6,14 @@
 
 ---
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-099: api/v1/auth/auth-core.yaml (2025-11-09)
-- Last Updated: 2025-11-09 17:50
+  - API-TASK-099: Auth Core API — `api/v1/auth/auth-core/auth-core.yaml`
+    - Создано: 2025-11-09 17:50
+    - Завершено: 2025-11-09 20:05
+    - Доп. файлы: `auth-core-models.yaml`, `auth-core-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-099-auth-core-api.md`
+- Last Updated: 2025-11-09 20:05
 ---
 
 **Версия:** 1.0.1  
