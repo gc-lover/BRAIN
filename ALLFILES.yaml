@@ -1,5 +1,4 @@
 ﻿files:
-  - path: ".BRAIN/02-gameplay/economy/equipment/procedural-equipment-library.md"
   - path: ".BRAIN/02-gameplay/economy/equipment/README.md"
   - path: ".BRAIN/02-gameplay/economy/loot-tables.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-analytics.md"
