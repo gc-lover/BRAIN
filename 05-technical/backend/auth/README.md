@@ -4,6 +4,14 @@
 **api-readiness-check-date:** 2025-11-07
 **api-readiness-notes:** Система аутентификации, реализована в auth-service
 
+---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-099: api/v1/auth/auth-core.yaml (2025-11-09)
+- Last Updated: 2025-11-09 17:50
+---
+
 **Версия:** 1.0.1  
 **Дата:** 2025-11-07  
 **Статус:** approved
