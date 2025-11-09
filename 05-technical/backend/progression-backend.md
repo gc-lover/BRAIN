@@ -4,6 +4,13 @@
 **api-readiness-notes:** Перепроверено 2025-11-09 02:47: REST `/api/v1/gameplay/progression/*`, события `character:level-up`/`skill-leveled`, схемы БД и расчёт EXP подтверждены; готово к постановке задач gameplay-service.
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-101: api/v1/gameplay/progression/progression-core.yaml (2025-11-09)
+- Last Updated: 2025-11-09 18:24
+---
+
 # Progression System Backend - Backend системы прогрессии
 
 **Статус:** approved  
