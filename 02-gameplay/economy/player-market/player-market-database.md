@@ -1,15 +1,15 @@
 ﻿---
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-07 06:10
-**api-readiness-notes:** Player Market Database. БД schema (listings, trades, reviews), UI/UX концепция. ~320 строк.
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 10:07
+**api-readiness-notes:** Перепроверено 2025-11-09 10:07. Требуется описать схемы БД глубже (partitioning, индексы, связи с экономикой), Events/CDC, валидацию, миграции, ограничения и интеграцию с API/UI перед постановкой задач.
 ---
 
 # Player Market Database - База данных и UI
 
-**Статус:** approved  
+**Статус:** in-review  
 **Версия:** 1.0.0  
 **Дата создания:** 2025-11-07  
-**Дата обновления:** 2025-11-07 06:10  
+**Дата обновления:** 2025-11-09 10:07  
 **Приоритет:** высокий  
 **Автор:** AI Brain Manager
 
@@ -18,8 +18,8 @@
 
 ---
 
-- **Status:** created
-- **Last Updated:** 2025-11-07 20:16
+- **Status:** in-review
+- **Last Updated:** 2025-11-09 10:07
 ---
 
 ## Database Schema
@@ -182,7 +182,7 @@ CREATE TABLE seller_reviews (
 
 ## Связанные документы
 
-- `.BRAIN/02-gameplay/economy/player-market/player-market-database.md` - Database (микрофича 2/4)
+- `.BRAIN/02-gameplay/economy/player-market/player-market-core.md` - Core (микрофича 1/4)
 - `.BRAIN/02-gameplay/economy/player-market/player-market-api.md` - API (микрофича 3/4)
 - `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md` - Analytics (микрофича 4/4)
 

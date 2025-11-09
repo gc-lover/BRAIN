@@ -3,13 +3,13 @@
 
 **Статус:** active  
 **Версия:** 1.0.0  
-**Последнее обновление:** 2025-11-09 04:16  
+**Последнее обновление:** 2025-11-09 09:55  
 
 ---
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-09 04:16  
-**api-readiness-notes:** Перепроверено 2025-11-09 04:16: очередь служебная, используется для трекинга статуса ready и не формирует API задачи.
+**api-readiness-check-date:** 2025-11-09 09:55  
+**api-readiness-notes:** Перепроверено 2025-11-09 09:55: очередь служебная, используется для трекинга статуса ready и не формирует API задачи.
 
 - Лимит файла: ≤ 500 строк. При превышении создайте `ready_0001.md`, `ready_0002.md`, указывая ссылку на продолжение.
 - Формат записи:
@@ -97,3 +97,5 @@
   **Проверено:** 2025-11-09 02:50 — Brain Manager | Следующий шаг: сформировать пакет задач по паркуру и мобильным комбо (gameplay-service, `api/v1/gameplay/combat/freerun.yaml`).
 - **Документ:** .BRAIN/02-gameplay/world/world-state/player-impact-systems.md (v1.0.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Manager | Следующий шаг: оформить пакет API мирового состояния по player impact (`api/v1/world/state/player-impact-systems.yaml`) и синхронизировать модуль `modules/world/state/player-impact` для world-service.
+- **Документ:** .BRAIN/02-gameplay/social/npc-hiring-world-impact-детально.md (v1.0.0)  
+  **Проверено:** 2025-11-09 09:55 — Brain Manager | Следующий шаг: подготовить пакет API влияния найма (`api/v1/world/npc-hiring/impact.yaml`) и передать задачу ДУАПИТАСК для world-service (economy/social зависимости учтены).
