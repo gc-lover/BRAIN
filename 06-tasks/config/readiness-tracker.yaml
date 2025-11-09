@@ -1470,6 +1470,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Профиль наследника Arasaka; подтверждено 2025-11-09 04:31, что документ предназначен для лора и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/media/gillean-jordan-2065-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:34"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль журналиста-расследователя; подтверждено 2025-11-09 04:34, что документ описательный и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/media/ziggy-q-braindance-editor-2070-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:34"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль редактора braindance; подтверждено 2025-11-09 04:34, что документ описательный и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/netrunners/ghost-walker-blackwall-diver-2065-2090.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:34"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль netrunner за Blackwall; подтверждено 2025-11-09 04:34, что документ служит нарративным целям и не требует API задач."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
