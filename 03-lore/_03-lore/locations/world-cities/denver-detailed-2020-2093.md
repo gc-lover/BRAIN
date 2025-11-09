@@ -6,8 +6,13 @@
 **Статус:** review  
 **Приоритет:** высокий
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 09:20
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:58  
+**api-readiness-notes:** Требуется дополнить модели данных, REST/Events контракты и UX-интеграцию перед передачей world-service в API-SWAGGER.
+
+**Целевой микросервис:** world-service  
+**API каталог:** api/v1/world/cities/denver.yaml  
+**Фронтенд модуль:** modules/world/atlas
 
 ---
 
@@ -119,8 +124,13 @@
 **Статус:** draft  
 **Приоритет:** высокий
 
-**api-readiness:** draft  
-**api-readiness-check-date:** 2025-11-07 20:06
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:58  
+**api-readiness-notes:** Требуется дополнить модели данных, REST/Events контракты и UX-интеграцию перед передачей world-service в API-SWAGGER.
+
+**Целевой микросервис:** world-service  
+**API каталог:** api/v1/world/cities/denver.yaml  
+**Фронтенд модуль:** modules/world/atlas
 
 ---
 
