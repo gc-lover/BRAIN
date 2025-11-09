@@ -381,6 +381,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея пассивных медиа-пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hidden-media-easter-eggs.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:28"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея скрытых медиа-пасхалок перепроверена 2025-11-09 04:28; документ концептуальный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-hybrid-media-references.md"
     version: "1.0.0"
     status: "ready"
