@@ -22,6 +22,14 @@
 **target-frontend-module:** modules/economy/events
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-104: api/v1/economy/events/economic-events.yaml (2025-11-09)
+- Last Updated: 2025-11-09 19:12
+---
+
+---
 
 ## Краткое описание
 
