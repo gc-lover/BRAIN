@@ -1,167 +1,180 @@
 # Combat Shooter Core — Боевая петля 3D-шутера
 
 **Статус:** draft  
-**Версия:** 0.1.0  
+**Версия:** 0.2.0  
 **Дата создания:** 2025-11-09  
-**Последнее обновление:** 2025-11-09 15:15  
+**Последнее обновление:** 2025-11-09 23:45  
 **Приоритет:** критический
 
 **api-readiness:** in-progress  
-**api-readiness-check-date:** 2025-11-09 15:15  
-**api-readiness-notes:** Документ в работе — заменяет D&D ядро. Требуется заполнить разделы по баллистике, TTK, recoil, suppression, хитбоксам, сетевой синхронизации, античиту.
-
-**target-domain:** gameplay-combat  
-**target-microservice:** gameplay-service (8083)  
-**target-frontend-module:** modules/combat/mechanics  
-
----
-
-## 1. Цель
-Перевести боевую систему NECPGAME на полноценный 3D-шутер: первый этап — веб-клиент (WebGL/WebGPU), далее перенос в UE5. Документ определяет боевую петлю, необходимые API и события, чтобы заменить D&D-проверки.
-
-## 2. Основные компоненты
-- **Классы оружия:** пистолеты, SMG, штурмовые, снайперские, дробовики, тяжелое оружие, энергетическое.
-- **Баллистика:** hitscan и projectile, скорость пули, падение, проникающая способность, ricochet.
-- **Модель урона:** hitboxes (head, torso, limbs), armor penetration, stagger, suppression.
-- **Recoil & Spread:** вертикальная/горизонтальная отдача, bloom, стабилизация имплантами и перками.
-- **TTK профили:** базовые time-to-kill по классам брони и уровням имплантов.
-- **Movement modifiers:** влияние паркура, стелса, имплантов на точность, разброс и гашение отдачи.
-- **Abilities & implants:** модификация оружия (переключение режимов, особые боеприпасы, усиление/ослабление).
-- **Networking:** authoritative server, client-side prediction, reconciliation, shot validation, anticheat hooks.
-- **Telemetry:** события `combat.shooter.fire`, `combat.shooter.hit`, `combat.shooter.kill`, `combat.shooter.suppress`, `combat.shooter.reload`.
-
-## 3. API черновик
-| Endpoint | Назначение | Приоритет |
-| --- | --- | --- |
-| `POST /combat/shooter/fire` | Отправка выстрела (оружие, позиция, направление, latency) | P0 |
-| `POST /combat/shooter/hit` | Подтверждение попадания, урон, хитбокс | P0 |
-| `POST /combat/shooter/reload` | Запуск/отмена перезарядки | P0 |
-| `POST /combat/shooter/recoil` | Обновление отдачи/рассеивания (для UI) | P1 |
-| `POST /combat/shooter/suppress` | Событие подавления, влияние на команду | P1 |
-| `GET /combat/shooter/weapon-stats` | Каталог параметров оружия и апгрейдов | P1 |
-| `POST /combat/shooter/ability-modifiers` | Применение способностей/имплантов к оружию | P1 |
-| `POST /combat/shooter/projectile` | Отслеживание медленных снарядов (ракеты, гранаты) | P1 |
-| `GET /combat/shooter/telemetry` | Агрегированные метрики (accuracy, TTK) | P2 |
-
-## 4. Следующие шаги
-1. Заполнить детальные параметры по оружию, баллистике и хитбоксам (совместно с combat-shooting.md).
-2. Определить payload для WebSocket и Kafka потоков (raid, session, suppression).
-3. Согласовать с quest-engine и analytics переход на новые события (без D&D).
-4. Подготовить схему античита и клиент-серверной валидации (shot validation, prediction).
-
-## 5. История изменений
-- 2025-11-09 15:15 — создан черновик как замена D&D ядру.
----
-**api-readiness:** drafting  
-**api-readiness-check-date:** 2025-11-09 23:30  
-**api-readiness-notes:** Новый документ, заменяющий устаревшие D&D материалы. Требуется заполнить метрики TTK, баллистики, сетевой авторитетности и античита для wave 1 combat.
+**api-readiness-check-date:** 2025-11-09 23:45  
+**api-readiness-notes:** Заполнены базовые параметры оружия, хитбоксов и сетевых SLA. Требуется верификация с combat-shooting.md и итоговый чек analytics-service перед переводом в ready.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
 **target-frontend-module:** modules/combat/shooter
----
-
-# Combat Shooter Core — Реалтайм боевая петля
-
-**Статус:** draft  
-**Версия:** 0.1.0  
-**Дата создания:** 2025-11-09  
-**Ответственный:** Brain Manager  
-**Приоритет:** critical
-
-Документ описывает фундаментальные механики 3D-шутера NECPGAME для веб-версии и дальнейшего переноса в UE5. Заменяет dice-based материалы (`combat-dnd-*`). Ориентиры: Valorant (чистота стрельбы), Tarkov (экстрактшутер риски), Cyberpunk 2077 (импланты), ARC Raiders (кооперативные рейды).
 
 ---
 
-## 1. Основные цели
-- Определить модели оружия, баллистики и Time-to-Kill (TTK) для PvE и PvP.
-- Зафиксировать правила хитскана и projectile баллистики, включая падение пули, пробитие и рикошеты.
-- Описать систему контроля отдачи, рассеивания, перегрева и обслуживания оружия.
-- Сформулировать требования к сетевой синхронизации: authoritative сервер, предикция клиента, reconciliation.
-- Указать античит ограничения (скорость кликов, макросы, сетевые подписи).
-- Прописать зависимость от имплантов, способностей, лоадаутов и прогрессии без кубиков и D&D бросков.
+## 1. Цель
+Перевести боевые взаимодействия NECPGAME на детерминированную 3D-шутерную модель (web-клиент → UE5), заменив все D&D-проверки на статические параметры оружия, имплантов и сетевые SLA. Документ служит базой для API задач, телеметрии и античита.
+
+## 2. Ключевые компоненты
+- **Классы оружия**: пистолеты, SMG, штурмовые, снайперские, дробовики, тяжелые, энергетические, экзотические.
+- **Баллистика**: hitscan, projectile, drop tables, penetration, ricochet.
+- **Хитбоксы и броня**: head, neck, torso, arms, legs, cyber-узлы; модификаторы и устойчивость по tier.
+- **Отдача и перегрев**: паттерны, bloom, управление имплантами, охлаждение.
+- **Импланты/способности**: модификация конуса, recoil, энергобюджета, боеприпасов.
+- **Сетевой слой**: authoritative сервер, client prediction, shot validation, lag compensation.
+- **Telemetry & Anti-cheat**: события `combat.shooter.*`, макрос-контроль, latency SLA.
+- **API**: REST, WebSocket, Kafka для реестра оружия, событий стрельбы, suppression, аналитики.
 
 ---
 
-## 2. Категории оружия
-| Класс | Примеры | Механика | Диапазон TTK | Особенности |
+## 3. Категории оружия
+| Класс | Примеры | Баллистика | Базовый TTK (PvP/PvE) | Особенности |
 | --- | --- | --- | --- | --- |
-| Пистолеты | Лазерные, кинетические | Hitscan, низкая отдача | 550–700 мс | Бонус к мобильности, быстрые смены |
-| ПП/SMG | Электромагнитные, плазменные | Hitscan + легкий спад | 450–600 мс | Высокий DPS вблизи, штраф на дистанции |
-| Штурмовые винтовки | Баллистические, гибридные | Projectile + контролируемый пад | 500–650 мс | Универсальный класс, моды под роли |
-| Тяжелое оружие | Миниганы, рейлган | Projectile + разогрев | 400–520 мс | Перегрев, серво-импланты обязательны |
-| Снайперские | Рельсовые, оптические | Hitscan/Projectile | 250–400 мс | Пробитие брони, требование устойчивости |
-| Экзотические | Наномеханика | Особые эффекты | 600–800 мс | Допэффекты (dot, stun), высокий расход энергии |
-
-TTK учитывает базовое попадание в тело без критов. Критические зоны снижают TTK на 20–40% в зависимости от имплантов и роли.
-
----
-
-## 3. Баллистика и попадания
-- **Hitscan:** используется для пистолетов, SMG, части винтовок. Сервер проверяет линию, учитывает укрытия, фазу кадра и лаг компенсацию.
-- **Projectile:** скорость пули, гравитационный спад, пробитие материалов. Синхронизация через server-authoritative state + client prediction.
-- **Пробитие и рикошет:** таблицы материалов (`light_cover`, `medium_cover`, `heavy_cover`) с параметрами пробития и отклонения угла.
-- **Импланты влияния:** `optic_suite`, `neural_reflex`, `gyro_stabilizer` — снижают разброс, ускоряют reacquire, повышают точность.
-- **Anti-cheat:** `X-AntiCheat-Signature`, rate limits на fire events, server-side validation (cone check, recoil pattern, time since last shot).
+| Пистолеты | Кинетические, лазерные | Hitscan | 620 мс / 780 мс | Низкий recoil, +15% скорость бега |
+| SMG | Плазменные, электромагнитные | Hitscan + лёгкий drop после 25 м | 480 мс / 650 мс | Высокий DPS вблизи, штраф точности на дистанции |
+| Штурмовые винтовки | Баллистические, гибридные | Projectile, drop −0.8 м на 100 м | 540 мс / 700 мс | Универсальный класс, моды под роли |
+| Дробовики | Магнитные, термобарические | Hitscan cone | 320 мс / 520 мс | Рассеивание, стихийные эффекты, stagger |
+| Снайперские | Рельсовые, оптические | Hitscan/Projectile, drop −0.4 м на 100 м | 280 мс / 420 мс | Высокий урон по head/torso, требует устойчивости |
+| Тяжелое оружие | Миниганы, рейлган | Projectile, зарядка | 360 мс / 520 мс | Режим разогрева, энергопотребление, suppression |
+| Энергетическое | Лазеры, лучевые | Hitscan, перегрев | 400 мс / 600 мс | Проникает средние укрытия, управляется охлаждением |
+| Экзотические | Нанодроны, smart | Projectile, автокоррекция | 520 мс / 680 мс | DOT, само-наведение, высокий энергобюджет |
 
 ---
 
-## 4. Контроль отдачи и разброс
-- **Паттерны отдачи:** определяются профилем оружия (линейный, Z-пила, спираль). Отображаются в клиенте для обучения.
-- **Ресурсы контроля:** импланты (`stability implants`), перки (`recoil discipline`), лоадаут (приклады, компенсаторы).
-- **Механика перегрева:** энергетическое оружие и импланты нагреваются, требуя системы охлаждения. При перегреве — штраф к точности или отключение.
-- **Рассеивание:** базовый конус + случайный фактор <2°. Активация способностей может временно уменьшать или увеличивать конус.
+## 4. Параметры оружия по классам
+| Класс | Урон Head / Torso / Limbs | RPM | Скорость снаряда | Паттерн отдачи | Overheat (°C) | Эффективная дальность |
+| --- | --- | --- | --- | --- | --- | --- |
+| Пистолеты | 120 / 60 / 45 | 420 | 600 м/с | Линейный | 65 | 0–25 м |
+| SMG | 105 / 55 / 42 | 720 | 520 м/с | Z-пила | 75 | 0–30 м |
+| Штурмовые | 135 / 70 / 50 | 650 | 720 м/с | Спираль | 80 | 0–70 м |
+| Дробовики (×8 пеллет) | 45 / 35 / 25 | 120 | 400 м/с | Конический | 60 | 0–15 м |
+| Снайперские | 260 / 140 / 90 | 72 | 950 м/с | Линейный | 70 | 40–150 м |
+| Тяжелое оружие | 80 / 65 / 50 | 900 | 680 м/с | Уступчатый | 95 | 15–60 м |
+| Энергетическое | 140 / 75 / 55 | 540 | 1 000 м/с | Стабильный | 110 | 20–80 м |
+| Экзотические | 90 / 55 / 45 + DOT 30 | 420 | 480 м/с | Адаптивный | 105 | 10–50 м |
+
+- RPM = rounds per minute.  
+- Overheat — температура выключения; охлаждение 2 °С/сек без имплантов, 4 °С/сек с `cooling_matrix`.
 
 ---
 
-## 5. Сетевой уровень
-- **Server-authoritative:** сервер фиксирует попадания, рассчитывает урон и раздаёт события. Клиент отправляет `fire`, `hit`, `reload`.
-- **Client prediction:** локальное отображение попаданий с последующим reconciliation (сервер подтверждает/отклоняет).
-- **Lag compensation:** хранение history позиций (`rewind buffer` до 250 мс). Выстрелы проверяются по истории цели.
-- **Telemetry:** `combat.shooter.fire`, `combat.shooter.hit`, `combat.shooter.miss`, `combat.shooter.reload`, `combat.shooter.overheat`.
+## 5. Хитбоксы и броня
+| Хитбокс | Модификатор (без брони) | Броня Tier 1 | Tier 2 | Tier 3 | Особенности |
+| --- | --- | --- | --- | --- | --- |
+| Head/Neck | ×2.0 | ×1.7 | ×1.5 | ×1.3 | Шлемы добавляют шанс рикошета 12/18/25% |
+| Torso | ×1.0 | ×0.85 | ×0.75 | ×0.65 | Уменьшение stagger по мере tier |
+| Arms | ×0.75 | ×0.65 | ×0.55 | ×0.45 | Снижение точности при попадании <60% |
+| Legs | ×0.7 | ×0.6 | ×0.5 | ×0.4 | Вводит debuff `slow` 10% на 1 сек |
+| Cyber-core (implants) | ×1.2 | ×1.0 | ×0.9 | ×0.8 | Уязвимость к EMP ×1.5, immunity к bleed |
+
+- Armor tiers потребляют `armor_integrity` (0–100%). При снижении <25% модификаторы растут на +0.1.
+- EMP и кибер-урон игнорируют органическую броню; физический урон отражается по таблице.
 
 ---
 
-## 6. Влияние ролей и имплантов
-- **Tank:** повышенный `resilience`, доступ к тяжелому оружию, импланты поглощения урона.
-- **DPS:** бонус к `accuracy`, `handling`, доступ к rapid-fire модам.
-- **Support:** усилители боевых имплантов, перезарядка союзников, модули стабилизации.
-- **Hybrid:** гибкие лоадауты, баланс между точностью и утилити.
-- Импланты подключаются через `combat-implants-types`, расходуют энергию и влияют на `energy_budget`.
+## 6. Влияние имплантов и способностей
+| Модуль | Эффект | Энергобюджет | Синергии |
+| --- | --- | --- | --- |
+| `optic_suite MK.IV` | −15% конус, +12% точность в движении | 8 энергии | `combat-stealth` (уменьшает шум выстрела) |
+| `neural_reflex accelerator` | +10% RPM (пистолеты/SMG), сокращение отката recoil на 0.1 сек | 12 | `combat-abilities` (ultimates boosting fire mode) |
+| `gyro_stabilizer` | −20% вертикальная отдача, +8% устойчивость при ADS | 10 | `combat-freerun` (снижение штрафа при прыжках) |
+| `cooling_matrix` | +3 °С/сек охлаждение, −10% перегрев энергетики | 9 | `combat-hacking` (перенаправление тепла в скафандр) |
+| `ammo_fabricator` | Перегенерация боеприпасов 5%/сек, переключение типов | 14 | `economy/equipment-matrix` (редкие материалы) |
+| `suppression_field` ability | Создает зону подавления: −25% точность врагов, ↑ telem `combat.shooter.suppress` | 0 (ability cooldown) | `combat-stealth` (маскировка шума) |
+
+- Энергобюджет суммируется; базовый лимит 40, увеличивается имплантом ядра до 60.
+- Способности/импланты отражаются в API `/combat/shooter/ability-modifiers`.
 
 ---
 
-## 7. Прогрессия и лоадауты
-- **Лоадауты:** `primary`, `secondary`, `heavy`, `gadget`, `implant`, `ability`. Управляются документом `combat-loadouts-system.md`.
-- **Разблокировки:** уровни персонажа, клановые исследования, экономические контракты.
-- **Моды:** прицелы, компенсаторы, barrel моды, ammo типы (AP, shock, EMP, incendiary).
-- **Недоступность кубиков:** исход битвы определяется точностью, позиционированием и имплантами, а не случайными бросками.
+## 7. Баллистика и попадания
+- Hitscan latency windows: 16 мс (PvP), 32 мс (PvE) — сервер валидирует по последнему acknowledged кадру.
+- Projectile drop: `drop = gravity_coeff × (distance² / 1000)`; коэффициенты 0.35 (штурмовое), 0.18 (снайперское), 0.6 (экзотическое).
+- Penetration: `light_cover` 30 % урона проходит, `medium_cover` 60 % снижение, `heavy_cover` блокирует физический урон, но пропускает энергетический 40%.
+- Ricochet: угол >35° с `hard_surface` даёт шанс 25% рикошета, уменьшение урона ×0.4.
+- Suppression radius: 4 м для тяжелого оружия, 2 м для штурмовых; при попаданиях создаёт debuff `suppressed` (−20% точность, +15% разброс).
 
 ---
 
-## 8. Метрики и телеметрия
-- `shooter_ttk_average`, `shooter_accuracy_rate`, `shooter_headshot_rate`, `shooter_overheat_events`, `shooter_macro_flagged`.
-- `/api/v1/telemetry/combat/shooter` — агрегирование показателей; интеграция с analytics-service и anti-cheat.
+## 8. Контроль отдачи и перегрев
+- Recoil pattern задаётся массивом точек на 12 выстрелов, затем повторяется с увеличением ×1.05.
+- Bloom: старт 0.6°, максимум 4.2°; ADS снижает на 40%, crouch — ещё на 20%.
+- Перегрев энергетики: предупреждение на 85 °С, отключение на пороге из таблицы; охлаждение ускоряют импланты и `support` способности.
+- Дробовики используют подход pellets spread: σ = 1.6° (без модов), минимально 0.9° при стабилизаторах.
+- Тяжелое оружие вводит `spin-up` 0.5 сек и `spin-down` 0.3 сек; отмена стоит 15 энергии `servo_implant`.
 
 ---
 
-## 9. Интеграции
-- **combat-session-backend:** старт/завершение сессий, события damage/hit, синхронизация с raid AI.
-- **combat-abilities.md:** навыки, которые модифицируют отдачу, конус, перегрев.
-- **combat-stealth.md:** шум, вспышки и сигнатуры влияют на детекцию.
-- **combat-hacking-combat-integration.md:** remote overrides, временные бафы/дебафы оружия.
-- **quest-engine-backend.md:** использует shooter events (`skill-test`) вместо D&D бросков.
+## 9. Сетевой слой и SLA
+| Метрика | PvP таргет | PvE таргет | Комментарий |
+| --- | --- | --- | --- |
+| Tickrate сервера | 128 Hz | 64 Hz | Уровень ядра gameplay-service |
+| Round-trip latency | ≤80 мс | ≤120 мс | При превышении включается интерполяция 1.5× |
+| Частота событий `fire` | ≤1 каждые 20 мс | ≤1 каждые 15 мс | Throttle на сервере, очередь до 10 событий |
+| Частота событий `hit` | ≤1 каждые 15 мс | ≤1 каждые 12 мс | Консолидируются при burst |
+| Rewind buffer | 280 мс | 320 мс | История позиций для лаг-компенсации |
+| Максимальный desync | 12 см | 20 см | Если выше — сервер шлёт корректировку позиции |
+| Packet loss tolerance | до 2% | до 5% | При превышении сервер включает `degraded mode` |
+
+- Shot validation: сравнение паттерна отдачи и временных интервалов; >5% отклонение маркируется событием `combat.shooter.macro-flagged`.
+- WebSocket `/ws/gameplay/combat/shooter/{sessionId}` отправляет батчи раз в 33 мс (PvP) и 50 мс (PvE).
 
 ---
 
-## 10. Следующие шаги
-1. Дополнить таблицы оружия конкретными моделями и параметрами (урон, скорострельность, падения).
-2. Согласовать с analytics-service набор событий и агрегатов.
-3. Подготовить требования к QA (latency tests, anti-cheat сценарии).
-4. Обновить связанные документы, исключив ссылки на D&D механики.
+## 10. Телеметрия и античит
+- События:
+  - `combat.shooter.fire`: weaponId, fireMode, latency, clientTimestamp, predictionFrame.
+  - `combat.shooter.hit`: weaponId, targetId, hitbox, damageApplied, penetration, distance.
+  - `combat.shooter.kill`: targetType, overkill, assistors, streakId.
+  - `combat.shooter.suppress`: radius, suppressionScore, affectedTargets.
+  - `combat.shooter.reload`: reloadType, duration, canceled.
+  - `combat.shooter.overheat`: temperature, cooldownTime, shutdownReason.
+- Античит-порог: максимум 9 триггеров `fire` за 100 мс; >12 маркируется `macro_flagged`.  
+  Отдача сверяется по кривой; если 3 подряд попадания отклоняются <5% от идеального паттерна без корректировок — отправляется предупреждение.
+- Telemetry агрегируется в `shooter_accuracy_rate`, `shooter_ttk_pvp`, `shooter_ttk_pve`, `shooter_macro_flags`, `shooter_latency_p95`.
+
+---
+
+## 11. API черновик
+| Endpoint | Ключевые поля запроса | Основные ответы / события |
+| --- | --- | --- |
+| `POST /combat/shooter/fire` | weaponId, shotId, position, direction, latency, predictionFrame | 202 + event `combat.shooter.fire` |
+| `POST /combat/shooter/hit` | shotId, targetId, hitbox, rawDamage, modifiers | 200 + recalculated damage, stagger flag |
+| `POST /combat/shooter/reload` | weaponId, mode (start/cancel), magazineState | 200 + `reloadId`, websocket broadcast |
+| `POST /combat/shooter/suppress` | sourceId, radius, intensity | 200; triggers Kafka `combat.shooter.suppress` |
+| `POST /combat/shooter/projectile` | projectileId, path nodes, detonation | 202 + server authoritative trajectory |
+| `GET /combat/shooter/weapon-stats` | filters: class, rarity, manufacturer | 200 JSON с таблицей параметров, ссылки на моды |
+| `POST /combat/shooter/ability-modifiers` | loadoutId, modifiers[], duration | 200 с валидированным энергобюджетом |
+| `GET /combat/shooter/telemetry` | timeframe, aggregation (p50/p95/max) | 200 с KPI, refs на analytics-service |
+
+- WebSocket `/ws/gameplay/combat/shooter/{sessionId}`: пакет `stateFrame` содержит массив событий `[fire, hit, suppression, overheat]` за тик.
+- Kafka topics: `combat.shooter.fire`, `combat.shooter.hit`, `combat.shooter.kill`, `combat.shooter.suppress`, `combat.shooter.macro-flagged`.
+
+---
+
+## 12. Интеграции
+- **combat-session-backend**: lifecycle, синхронизация sessionId, отчёт о фейлах latency.
+- **combat-abilities.md**: способности, которые временно меняют RPM, recoil, энергетическое потребление.
+- **combat-stealth.md**: шум выстрелов, вспышки, suppression → модификаторы угрозы.
+- **combat-freerun.md**: штрафы к точности при движении, wall-run бонусы.
+- **combat-hacking-combat-integration.md**: удалённое отключение оружия, overrides охлаждения.
+- **quest-engine-backend.md**: `skill-test` опирается на показатели `accuracy`, `resilience`, `handling`, исключая рандом.
+- **analytics-service**: агрегация телеметрии, авто-балансировка TTK, отчёты для live-ops.
+
+---
+
+## 13. Статус и следующие шаги
+1. Перекрестная сверка параметров с `combat-shooting.md` и `combat-shooting-advanced.md`; обновить при необходимости.
+2. Подготовить JSON-примеры для `weapon-stats`, `fire`, `hit` и WebSocket `stateFrame`.
+3. Согласовать античит thresholds и SLA с security-service (Kafka `macro-flagged`).
+4. После верификации — обновить `readiness-tracker.yaml` до `ready` и сформировать API задачу `combat-shooter-core`.
 
 ---
 
 ## История изменений
+- v0.2.0 (2025-11-09) — добавлены таблицы оружия, хитбоксов, сетевых SLA и античита.
 - v0.1.0 (2025-11-09) — создан базовый каркас, перенёс фокус с D&D на реалтайм шутер.
-

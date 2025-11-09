@@ -2070,13 +2070,13 @@ mappings:
 
   - path: ".BRAIN/02-gameplay/combat/combat-shooter-core.md"
 
-    version: "0.1.0"
+    version: "0.2.0"
 
     status: "drafting"
 
     priority: "critical"
 
-    checked: "2025-11-09 23:30"
+    checked: "2025-11-09 23:45"
 
     checker: "Brain Manager"
 
@@ -2088,7 +2088,7 @@ mappings:
 
       frontend_module: "modules/combat/shooter"
 
-    notes: "Новый документ для боевой петли 3D-шутера. Требуется заполнить параметрические таблицы (оружие, баллистика, TTK, сетевые требования) перед постановкой API задач."
+    notes: "Обновлены таблицы оружия, хитбоксов и SLA. Перед переводом в ready нужно сверить значения с combat-shooting.md и утвердить античит пороги."
 
   - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
 
