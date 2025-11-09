@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="player-quest-choices-table" author="ai-manager">
+        <comment>История выборов игрока в квестах</comment>
+        <createTable tableName="player_quest_choices">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="character_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quest_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="node_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="choice_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="choice_text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="branch_id" type="VARCHAR(50)"/>
+            <column name="skill_check_id" type="INTEGER"/>
+            <column name="skill_check_roll" type="INTEGER"/>
+            <column name="skill_check_total" type="INTEGER"/>
+            <column name="skill_check_result" type="VARCHAR(20)"/>
+            <column name="applied_reputation" type="JSONB"/>
+            <column name="applied_flags" type="JSONB"/>
+            <column name="applied_loot" type="JSONB"/>
+            <column name="decision_time_seconds" type="INTEGER"/>
+            <column name="was_timed" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="moral_weight" type="VARCHAR(20)"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="player_quest_choices"
+                                 baseColumnNames="character_id"
+                                 constraintName="fk_player_choice_character"
+                                 referencedTableName="characters"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="player_quest_choices"
+                                 baseColumnNames="quest_id"
+                                 constraintName="fk_player_choice_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="player_quest_choices"
+                                 baseColumnNames="node_id"
+                                 constraintName="fk_player_choice_node"
+                                 referencedTableName="dialogue_nodes"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="player_quest_choices"
+                                 baseColumnNames="skill_check_id"
+                                 constraintName="fk_player_choice_skill_check"
+                                 referencedTableName="skill_checks"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="player_quest_choices" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="player-flags-table" author="ai-manager">
+        <comment>Флаги состояния игрока</comment>
+        <createTable tableName="player_flags">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="character_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="flag_name" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="flag_value" type="VARCHAR(500)"/>
+            <column name="flag_type" type="VARCHAR(20)" defaultValue="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="set_by_quest_id" type="VARCHAR(100)"/>
+            <column name="set_by_choice_id" type="VARCHAR(50)"/>
+            <column name="description" type="TEXT"/>
+            <column name="expires_at" type="TIMESTAMP"/>
+            <column name="is_permanent" type="BOOLEAN" defaultValueBoolean="true"/>
+            <column name="category" type="VARCHAR(50)"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="player_flags"
+                             columnNames="character_id,flag_name"
+                             constraintName="uq_player_flag_per_character"/>
+        <addForeignKeyConstraint baseTableName="player_flags"
+                                 baseColumnNames="character_id"
+                                 constraintName="fk_player_flags_character"
+                                 referencedTableName="characters"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="player_flags"
+                                 baseColumnNames="set_by_quest_id"
+                                 constraintName="fk_player_flags_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="player_flags" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="world-state-table" author="ai-manager">
+        <comment>Глобальное состояние мира</comment>
+        <createTable tableName="world_state">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="server_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_key" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_value" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_type" type="VARCHAR(20)" defaultValue="STRING">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="region" type="VARCHAR(100)"/>
+            <column name="description" type="TEXT"/>
+            <column name="set_by_quest_id" type="VARCHAR(100)"/>
+            <column name="set_by_event_id" type="VARCHAR(100)"/>
+            <column name="affected_players_count" type="INTEGER" defaultValueNumeric="0"/>
+            <column name="previous_value" type="TEXT"/>
+            <column name="changed_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="expires_at" type="TIMESTAMP"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="world_state"
+                             columnNames="server_id,state_key"
+                             constraintName="uq_world_state_key"/>
+        <addForeignKeyConstraint baseTableName="world_state"
+                                 baseColumnNames="set_by_quest_id"
+                                 constraintName="fk_world_state_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="world_state" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="world-state-history-table" author="ai-manager">
+        <comment>История изменений мирового состояния</comment>
+        <createTable tableName="world_state_history">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="server_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_key" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="old_value" type="TEXT"/>
+            <column name="new_value" type="TEXT"/>
+            <column name="changed_by_quest_id" type="VARCHAR(100)"/>
+            <column name="changed_by_event_id" type="VARCHAR(100)"/>
+            <column name="changed_by_character_id" type="UUID"/>
+            <column name="change_reason" type="TEXT"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="world_state_history"
+                                 baseColumnNames="changed_by_quest_id"
+                                 constraintName="fk_world_state_history_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="world_state_history"
+                                 baseColumnNames="changed_by_character_id"
+                                 constraintName="fk_world_state_history_character"
+                                 referencedTableName="characters"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="world_state_history" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="territory-control-table" author="ai-manager">
+        <comment>Контроль территорий фракциями</comment>
+        <createTable tableName="territory_control">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="server_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="region" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="district" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="controlling_faction" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="control_strength" type="INTEGER" defaultValueNumeric="100">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_contested" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="challenging_faction" type="VARCHAR(100)"/>
+            <column name="contest_started_at" type="TIMESTAMP"/>
+            <column name="faction_patrols" type="JSONB"/>
+            <column name="npc_vendors" type="JSONB"/>
+            <column name="quest_givers" type="JSONB"/>
+            <column name="price_modifiers" type="JSONB"/>
+            <column name="previous_controller" type="VARCHAR(100)"/>
+            <column name="control_changed_at" type="TIMESTAMP"/>
+            <column name="control_changed_by_quest" type="VARCHAR(100)"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="territory_control"
+                             columnNames="server_id,region,district"
+                             constraintName="uq_territory_per_district"/>
+        <addForeignKeyConstraint baseTableName="territory_control"
+                                 baseColumnNames="controlling_faction"
+                                 constraintName="fk_territory_control_faction"
+                                 referencedTableName="factions"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="territory_control"
+                                 baseColumnNames="challenging_faction"
+                                 constraintName="fk_territory_challenging_faction"
+                                 referencedTableName="factions"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="territory_control"
+                                 baseColumnNames="control_changed_by_quest"
+                                 constraintName="fk_territory_control_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="territory_control" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="npc-states-table" author="ai-manager">
+        <comment>Состояния NPC</comment>
+        <createTable tableName="npc_states">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="server_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="npc_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="location" type="VARCHAR(100)"/>
+            <column name="reputation_value" type="INTEGER" defaultValueNumeric="0"/>
+            <column name="is_hostile" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="is_romanceable" type="BOOLEAN" defaultValueBoolean="false"/>
+            <column name="romance_stage" type="INTEGER" defaultValueNumeric="0"/>
+            <column name="fate" type="VARCHAR(100)"/>
+            <column name="fate_set_by_quest" type="VARCHAR(100)"/>
+            <column name="fate_set_by_character" type="UUID"/>
+            <column name="previous_state" type="VARCHAR(50)"/>
+            <column name="state_changed_at" type="TIMESTAMP"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="npc_states"
+                             columnNames="server_id,npc_id"
+                             constraintName="uq_npc_state_per_server"/>
+        <addForeignKeyConstraint baseTableName="npc_states"
+                                 baseColumnNames="npc_id"
+                                 constraintName="fk_npc_states_npc"
+                                 referencedTableName="npcs"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="npc_states"
+                                 baseColumnNames="fate_set_by_quest"
+                                 constraintName="fk_npc_states_fate_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="npc_states"
+                                 baseColumnNames="fate_set_by_character"
+                                 constraintName="fk_npc_states_fate_character"
+                                 referencedTableName="characters"
+                                 referencedColumnNames="id"
+                                 onDelete="SET NULL"/>
+        <rollback>
+            <dropTable tableName="npc_states" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="quest-consequences-table" author="ai-manager">
+        <comment>Последствия квестов</comment>
+        <createTable tableName="quest_consequences">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="source_quest_id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source_branch_id" type="VARCHAR(50)"/>
+            <column name="affects_quest_id" type="VARCHAR(100)"/>
+            <column name="affects_era" type="VARCHAR(20)"/>
+            <column name="consequence_type" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="required_path" type="VARCHAR(50)"/>
+            <column name="required_flags" type="JSONB"/>
+            <column name="modifiers" type="JSONB"/>
+            <column name="world_state_changes" type="JSONB"/>
+            <column name="description" type="TEXT"/>
+            <column name="is_permanent" type="BOOLEAN" defaultValueBoolean="true"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="quest_consequences"
+                                 baseColumnNames="source_quest_id"
+                                 constraintName="fk_consequence_source_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="quest_consequences"
+                                 baseColumnNames="affects_quest_id"
+                                 constraintName="fk_consequence_target_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="quest_consequences" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="player-quest-consequences-table" author="ai-manager">
+        <comment>Применённые последствия к игроку</comment>
+        <createTable tableName="player_quest_consequences">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="character_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="consequence_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="applied_from_quest" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="applied_from_branch" type="VARCHAR(50)"/>
+            <column name="is_active" type="BOOLEAN" defaultValueBoolean="true"/>
+            <column name="applied_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="expires_at" type="TIMESTAMP"/>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <addUniqueConstraint tableName="player_quest_consequences"
+                             columnNames="character_id,consequence_id"
+                             constraintName="uq_player_consequence_per_character"/>
+        <addForeignKeyConstraint baseTableName="player_quest_consequences"
+                                 baseColumnNames="character_id"
+                                 constraintName="fk_player_consequences_character"
+                                 referencedTableName="characters"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="player_quest_consequences"
+                                 baseColumnNames="consequence_id"
+                                 constraintName="fk_player_consequences_consequence"
+                                 referencedTableName="quest_consequences"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="player_quest_consequences"
+                                 baseColumnNames="applied_from_quest"
+                                 constraintName="fk_player_consequences_applied_quest"
+                                 referencedTableName="quests"
+                                 referencedColumnNames="id"/>
+        <rollback>
+            <dropTable tableName="player_quest_consequences" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+
