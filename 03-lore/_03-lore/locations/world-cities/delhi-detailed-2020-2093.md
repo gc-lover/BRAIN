@@ -6,8 +6,13 @@
 **Статус:** review  
 **Приоритет:** высокий
 
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 09:20
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:47  
+**api-readiness-notes:** Дополнить модели данных, REST/Events контракты и связь с фронтендом перед передачей world-service в API-SWAGGER.
+
+**Целевой микросервис:** world-service  
+**API каталог:** api/v1/world/cities/delhi.yaml  
+**Фронтенд модуль:** modules/world/atlas
 
 ---
 

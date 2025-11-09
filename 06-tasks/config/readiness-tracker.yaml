@@ -1503,6 +1503,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Дакки описывает городские события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/activities/activities-lore-compendium.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:46"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Перепроверено 2025-11-09 09:46: лор-компендиум активностей используется как справочник и не формирует API задачи."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/ho-chi-minh-2020-2093.md"
     version: "0.1.0"
     status: "not-applicable"

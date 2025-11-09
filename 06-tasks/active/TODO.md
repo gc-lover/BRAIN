@@ -33,8 +33,8 @@
 - [!] Lincoln Memorial Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-003-lincoln-memorial.md`: привести к QUEST-TEMPLATE, добавить ветвления, NPC и KPI для интеграции с quest-engine (2025-11-09 09:35).
 - [!] Smithsonian Museums Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md`: сформировать маршруты, NPC, KPI и интеграции с образовательными/экономическими системами перед постановкой задач (2025-11-09 09:35).
 - [!] Washington Monument Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-005-washington-monument.md`: описать бронирование, очереди, погодные ограничения, NPC и KPI для интеграции с системами туризма/безопасности (2025-11-09 09:35).
+- [!] Vietnam Memorial Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-006-vietnam-memorial.md`: добавить сценарии взаимодействия с ветеранами, моральные выборы, KPI и интеграции с системами эмоций/социальных связей (2025-11-09 09:35).
 - [!] Phoenix Urban Sprawl Quest — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md` к QUEST-TEMPLATE, добавить ветвления, KPI, связи с narrative-service и определить каталоги API/фронтенда перед постановкой задач (2025-11-09 09:36).
-- [!] Golden Gate Jump Quest — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-001-golden-gate-jump.md` к QUEST-TEMPLATE, добавить ветвления по разрешениям/авариям, интеграции с quest-engine и системами безопасности, определить каталоги API и модуль `modules/narrative/quests` (2025-11-09 09:44).
 
 ---
 
