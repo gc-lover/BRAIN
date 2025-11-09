@@ -12,7 +12,8 @@ scripts/migrations/quest-branching/
  └─ v1/
     ├─ 01-create-core-tables.xml
     ├─ 02-create-branching-tables.xml
-    └─ 03-create-world-state-tables.xml
+    ├─ 03-create-world-state-tables.xml
+    └─ 04-indexes.xml
 ```
 
 ## Запуск

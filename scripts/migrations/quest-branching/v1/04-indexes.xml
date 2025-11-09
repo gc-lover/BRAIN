@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="idx-quest-branches-quest" author="ai-manager">
+        <comment>Индекс ветвей квеста по идентификатору квеста</comment>
+        <createIndex tableName="quest_branches" indexName="idx_quest_branches_quest">
+            <column name="quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="quest_branches" indexName="idx_quest_branches_quest"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-dialogue-nodes-quest" author="ai-manager">
+        <comment>Индекс диалоговых узлов по квесту</comment>
+        <createIndex tableName="dialogue_nodes" indexName="idx_dialogue_nodes_quest">
+            <column name="quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="dialogue_nodes" indexName="idx_dialogue_nodes_quest"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-dialogue-nodes-type" author="ai-manager">
+        <comment>Индекс диалоговых узлов по типу</comment>
+        <createIndex tableName="dialogue_nodes" indexName="idx_dialogue_nodes_type">
+            <column name="node_type"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="dialogue_nodes" indexName="idx_dialogue_nodes_type"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-dialogue-choices-node" author="ai-manager">
+        <comment>Индекс вариантов выбора по узлу</comment>
+        <createIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_node">
+            <column name="node_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_node"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-dialogue-choices-next" author="ai-manager">
+        <comment>Индекс вариантов выбора по следующему узлу</comment>
+        <createIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_next">
+            <column name="next_node_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_next"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-dialogue-choices-required-flags" author="ai-manager">
+        <comment>GIN индекс для проверки флагов</comment>
+        <createIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_required_flags" indexType="GIN">
+            <column name="required_flags"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="dialogue_choices" indexName="idx_dialogue_choices_required_flags"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-skill-checks-quest" author="ai-manager">
+        <comment>Индекс проверок навыков по квесту</comment>
+        <createIndex tableName="skill_checks" indexName="idx_skill_checks_quest">
+            <column name="quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="skill_checks" indexName="idx_skill_checks_quest"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-skill-checks-type" author="ai-manager">
+        <comment>Индекс проверок по типу</comment>
+        <createIndex tableName="skill_checks" indexName="idx_skill_checks_type">
+            <column name="check_type"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="skill_checks" indexName="idx_skill_checks_type"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-skill-checks-success" author="ai-manager">
+        <comment>Индекс по узлу успеха</comment>
+        <createIndex tableName="skill_checks" indexName="idx_skill_checks_success_node">
+            <column name="success_node_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="skill_checks" indexName="idx_skill_checks_success_node"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-skill-checks-failure" author="ai-manager">
+        <comment>Индекс по узлу провала</comment>
+        <createIndex tableName="skill_checks" indexName="idx_skill_checks_failure_node">
+            <column name="failure_node_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="skill_checks" indexName="idx_skill_checks_failure_node"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-choices-character" author="ai-manager">
+        <comment>Индекс истории выборов по персонажу</comment>
+        <createIndex tableName="player_quest_choices" indexName="idx_player_choices_character">
+            <column name="character_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_choices" indexName="idx_player_choices_character"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-choices-quest" author="ai-manager">
+        <comment>Индекс истории выборов по квесту</comment>
+        <createIndex tableName="player_quest_choices" indexName="idx_player_choices_quest">
+            <column name="quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_choices" indexName="idx_player_choices_quest"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-choices-branch" author="ai-manager">
+        <comment>Индекс истории выборов по ветви</comment>
+        <createIndex tableName="player_quest_choices" indexName="idx_player_choices_branch">
+            <column name="branch_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_choices" indexName="idx_player_choices_branch"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-choices-created" author="ai-manager">
+        <comment>Индекс по времени создания записи</comment>
+        <createIndex tableName="player_quest_choices" indexName="idx_player_choices_created">
+            <column name="created_at"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_choices" indexName="idx_player_choices_created"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-flags-character" author="ai-manager">
+        <comment>Индекс флагов по персонажу</comment>
+        <createIndex tableName="player_flags" indexName="idx_player_flags_character">
+            <column name="character_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_flags" indexName="idx_player_flags_character"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-flags-name" author="ai-manager">
+        <comment>Индекс флагов по имени</comment>
+        <createIndex tableName="player_flags" indexName="idx_player_flags_name">
+            <column name="flag_name"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_flags" indexName="idx_player_flags_name"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-flags-category" author="ai-manager">
+        <comment>Индекс флагов по категории</comment>
+        <createIndex tableName="player_flags" indexName="idx_player_flags_category">
+            <column name="category"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_flags" indexName="idx_player_flags_category"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-category" author="ai-manager">
+        <comment>Индекс мирового состояния по категории</comment>
+        <createIndex tableName="world_state" indexName="idx_world_state_category">
+            <column name="category"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state" indexName="idx_world_state_category"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-region" author="ai-manager">
+        <comment>Индекс мирового состояния по региону</comment>
+        <createIndex tableName="world_state" indexName="idx_world_state_region">
+            <column name="region"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state" indexName="idx_world_state_region"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-key" author="ai-manager">
+        <comment>Индекс мирового состояния по ключу</comment>
+        <createIndex tableName="world_state" indexName="idx_world_state_key">
+            <column name="state_key"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state" indexName="idx_world_state_key"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-history-server" author="ai-manager">
+        <comment>Индекс истории состояния по серверу</comment>
+        <createIndex tableName="world_state_history" indexName="idx_world_state_history_server">
+            <column name="server_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state_history" indexName="idx_world_state_history_server"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-history-key" author="ai-manager">
+        <comment>Индекс истории состояния по ключу</comment>
+        <createIndex tableName="world_state_history" indexName="idx_world_state_history_key">
+            <column name="state_key"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state_history" indexName="idx_world_state_history_key"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-world-state-history-created" author="ai-manager">
+        <comment>Индекс истории состояния по времени</comment>
+        <createIndex tableName="world_state_history" indexName="idx_world_state_history_created">
+            <column name="created_at"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="world_state_history" indexName="idx_world_state_history_created"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-territory-control-server" author="ai-manager">
+        <comment>Индекс контроля территорий по серверу</comment>
+        <createIndex tableName="territory_control" indexName="idx_territory_control_server">
+            <column name="server_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="territory_control" indexName="idx_territory_control_server"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-territory-control-region" author="ai-manager">
+        <comment>Индекс контроля территорий по региону</comment>
+        <createIndex tableName="territory_control" indexName="idx_territory_control_region">
+            <column name="region"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="territory_control" indexName="idx_territory_control_region"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-territory-control-faction" author="ai-manager">
+        <comment>Индекс контроля территорий по фракции</comment>
+        <createIndex tableName="territory_control" indexName="idx_territory_control_faction">
+            <column name="controlling_faction"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="territory_control" indexName="idx_territory_control_faction"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-npc-states-server-npc" author="ai-manager">
+        <comment>Комбинированный индекс состояния NPC</comment>
+        <createIndex tableName="npc_states" indexName="idx_npc_states_server_npc">
+            <column name="server_id"/>
+            <column name="npc_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="npc_states" indexName="idx_npc_states_server_npc"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-npc-states-state" author="ai-manager">
+        <comment>Индекс состояния NPC по статусу</comment>
+        <createIndex tableName="npc_states" indexName="idx_npc_states_state">
+            <column name="state"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="npc_states" indexName="idx_npc_states_state"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-quest-consequences-source" author="ai-manager">
+        <comment>Индекс последствий по исходному квесту</comment>
+        <createIndex tableName="quest_consequences" indexName="idx_quest_consequences_source">
+            <column name="source_quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="quest_consequences" indexName="idx_quest_consequences_source"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-quest-consequences-target" author="ai-manager">
+        <comment>Индекс последствий по целевому квесту</comment>
+        <createIndex tableName="quest_consequences" indexName="idx_quest_consequences_target">
+            <column name="affects_quest_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="quest_consequences" indexName="idx_quest_consequences_target"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-consequences-character" author="ai-manager">
+        <comment>Индекс применённых последствий по персонажу</comment>
+        <createIndex tableName="player_quest_consequences" indexName="idx_player_consequences_character">
+            <column name="character_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_consequences" indexName="idx_player_consequences_character"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="idx-player-consequences-consequence" author="ai-manager">
+        <comment>Индекс применённых последствий по идентификатору последствия</comment>
+        <createIndex tableName="player_quest_consequences" indexName="idx_player_consequences_consequence">
+            <column name="consequence_id"/>
+        </createIndex>
+        <rollback>
+            <dropIndex tableName="player_quest_consequences" indexName="idx_player_consequences_consequence"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+
