@@ -150,6 +150,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Сценарий Clear Agent перепроверен 2025-11-09 04:03; документ описывает архивные процессы и не формирует API задачи."
+  - path: ".BRAIN/КЛИР-PROCEDURES.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Процедуры Clear Agent перепроверены 2025-11-09 04:05; документ описывает шаги архивации и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1018,4 +1029,15 @@ mappings:
       microservice: "economy-service"
       directory: "api/v1/economy/pricing/pricing-detailed.yaml"
       frontend_module: "modules/economy/pricing"
-    notes: "Перепроверено 2025-11-09 03:25: детальная система ценообразования, тарифы, скидки и события готовы к постановке API задач economy-service."
+    notes: "Перепроверено 2025-11-09 04:03: детальная система ценообразования, тарифы, скидки и события готовы к постановке API задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-production-chains.md"
+    version: "2.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 04:03"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/production/production-chains.yaml"
+      frontend_module: "modules/economy/production"
+    notes: "Перепроверено 2025-11-09 04:03: последовательности крафта, временные затраты и экономические показатели готовы к пакетированию API задач economy-service."
