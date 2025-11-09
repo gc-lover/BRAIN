@@ -63,6 +63,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-025-wembley-arena.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE, оформить YAML-метаданные, этапы с проверками и ветвлениями, связать награды с прогрессией и экономикой и указать целевой пакет quest-engine (`gameplay-service`, modules/quests).
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-026-abbey-road.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:44 — Brain Manager  
+  **Что доработать:** Применить QUEST-TEMPLATE, добавить YAML-метаданные, ветвления, KPI наград и связи с прогрессией/экономикой, указать целевой пакет quest-engine (`gameplay-service`, modules/quests) перед постановкой API задач.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE: структурировать этапы с развилками, добавить зависимости (quest-engine, economy, social), определить микросервис, каталог API и фронтенд-модуль для Berlin Tech Summit.
