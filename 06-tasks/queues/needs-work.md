@@ -32,9 +32,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-037-faberge-collection.md (v0.0.0)  
   **Проверено:** 2025-11-09 09:59 — Brain Readiness Checker  
   **Что доработать:** Детализировать глобальные маршруты, способы получения яиц, экономические параметры и интеграции, определить целевые API каталоги quest-engine/economy перед постановкой задачи.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-038-isaac-cathedral-climb.md (v0.0.0)  
-  **Проверено:** 2025-11-09 10:23 — Brain Readiness Checker  
-  **Что доработать:** Привести к QUEST-TEMPLATE: добавить версию/статус, расписать ветвления (погодные условия, события), интеграции с туризмом/прогрессией и определить целевые API каталоги quest-engine.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Оформить квест по QUEST-TEMPLATE: расписать зависимости (локации, NPC, цепочки), определить целевой микросервис, каталог OpenAPI и фронтенд-модуль, связать этапы и награды с системами прогрессии и экономики.
@@ -119,6 +116,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-007-pentagon.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать security clearance, ветви допуска/отказа, NPC фракций и интеграции с системами угроз; определить KPI и каталоги API quest-engine перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-008-supreme-court.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Расписать судебные сценарии и ветвления слушаний, добавить NPC судей/адвокатов, определить KPI влияния решений и каталоги API quest-engine.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
@@ -250,6 +250,3 @@
 - **��������:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/atlanta/2020-2029/quest-008-aquarium.md (v0.1.0)  
   **���������:** 2025-11-09 10:10 � Brain Readiness Checker  
   **��� ����������:** ��������� QUEST-TEMPLATE, �������� NPC/������/KPI ���������, ���������� ���������� quest-engine/economy/social � ������� API ��������.
-- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-003-silicon-valley-startup.md (v0.1.0)  
-  **Проверено:** 2025-11-09 10:30 — Brain Manager  
-  **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления (финансирование, IPO, провал), интеграции с quest-engine, economy и progression, определить каталоги API и модуль modules/narrative/quests перед постановкой задач.
