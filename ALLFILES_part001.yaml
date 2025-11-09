@@ -1,5 +1,4 @@
 files:
-  - path: ".BRAIN/02-gameplay/economy/player-market/player-market-api.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-core.md"
   - path: ".BRAIN/02-gameplay/economy/player-market/player-market-database.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/README.md"
@@ -12,7 +11,7 @@ files:
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-indices.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-integration.md"
   - path: ".BRAIN/02-gameplay/economy/stock-exchange/stock-protection.md"
-  - path: ".BRAIN/02-gameplay/economy/trading-routes-global.md"
+  - path: ".BRAIN/02-gameplay/trading-routes-global.md"
   - path: ".BRAIN/02-gameplay/meta/league-system-mechanics.md"
   - path: ".BRAIN/02-gameplay/progression/classes-abilities.md"
   - path: ".BRAIN/02-gameplay/progression/classes-authored.md"

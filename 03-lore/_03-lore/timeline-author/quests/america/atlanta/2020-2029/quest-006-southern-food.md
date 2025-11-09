@@ -1,5 +1,18 @@
 # Южная Кухня
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:45  
+**Приоритет:** низкий
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:45  
+**api-readiness-notes:** Не хватает сценарных веток, зависимостей с системами и целевых API; требуется шаблон QUEST-TEMPLATE, NPC и интеграции с economics/progression перед передачей в работу.
+
+---
+
+# Южная Кухня
+
 **quest-id:** ATLANTA-2029-006  
 **city:** Атланта | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h
