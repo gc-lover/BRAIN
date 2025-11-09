@@ -1,8 +1,12 @@
 # Equipment Catalog (Manual Snapshot)
 
-**Версия:** 0.1.0  
-**Дата:** 2025-11-07 16:45  
-**Статус:** draft  
+---
+- **Status:** in-review
+- **Last Updated:** 2025-11-09 04:35
+---
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 04:35  
+**api-readiness-notes:** Частичный каталог без параметров стоимости, дропа, процедурных связок и статистики. Требуется синхронизация с экономическими коэффициентами перед постановкой API задач.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

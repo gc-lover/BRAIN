@@ -348,6 +348,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея скрытых коллабораций перепроверена 2025-11-09 04:27; документ концептуальный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-subliminal-easter-network.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:27"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея сублиминальной сети перепроверена 2025-11-09 04:27; документ концептуальный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1558,3 +1569,14 @@ mappings:
       directory: "api/v1/economy/world/impact.yaml"
       frontend_module: "modules/economy/world-impact"
     notes: "Перепроверено 2025-11-09 04:33: влияния экономики на фракции, регионы и живые события описаны полно; документ готов к постановке API задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/equipment/equipment-catalog-manual.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 04:35"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: null
+      frontend_module: "modules/economy/equipment"
+    notes: "Перепроверено 2025-11-09 04:35: вручную составленный каталог без цен, дропа и процедурных связок; требуется синхронизация с экономическими коэффициентами перед постановкой API задач."

@@ -7,7 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 11:34
+**api-readiness-check-date:** 2025-11-09 04:34
+**api-readiness-notes:** Литературный документ; подтверждено 2025-11-09 04:34, что материал описывает NPC и не требует API задач
 
 **Категория:** important  
 **ID NPC:** npc-media-gillean-2065-2090
