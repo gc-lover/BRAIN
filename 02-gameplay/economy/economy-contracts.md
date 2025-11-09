@@ -14,8 +14,8 @@
 **Приоритет:** средний (Post-MVP)
 
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 03:20
-**api-readiness-notes:** Перепроверено 2025-11-09 03:20; lifecycle контрактов, escrow и API остаются полными и готовы к задачам economy-service.
+**api-readiness-check-date:** 2025-11-09 03:22
+**api-readiness-notes:** Перепроверено 2025-11-09 03:22: lifecycle контрактов, escrow и API остаются полными и готовы к задачам economy-service.
 
 **target-domain:** economy  
 **target-microservice:** economy-service (port 8085)  

@@ -1,4 +1,10 @@
 # Combat Systems — Wave 1 (готовность)
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 03:25
+**api-readiness-notes:** Пакет combat wave 1 перепроверен 2025-11-09 03:25; бриф аккумулирует готовые документы для ДУАПИТАСК и готов к передаче.
+**target-domain:** gameplay-combat  
+**target-microservice:** gameplay-service (8083)  
+**target-frontend-module:** modules/combat/*
 
 **Обновлено:** 2025-11-09 02:55  
 **Ответственный:** Brain Manager  
