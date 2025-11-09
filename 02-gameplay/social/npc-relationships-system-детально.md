@@ -20,6 +20,14 @@
 **api-readiness-notes:** Перепроверено 2025-11-09 12:15 — менеджер подтвердил полноту шкал, событий и REST/Kafka контуров; блокировок для API задач нет.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-096: api/v1/gameplay/social/npc-relationships.yaml (2025-11-09)
+- Last Updated: 2025-11-09 16:40
+---
+
+---
 
 ## 1. Методика детализации
 

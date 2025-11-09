@@ -9,6 +9,14 @@
 **api-readiness-notes:** Перепроверено 2025-11-09 02:47: CRUD персонажей, переключение, восстановление и события `Character*` подтверждены; документ готов к постановке задач для character-service.
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-097: api/v1/characters/players.yaml (2025-11-09)
+- Last Updated: 2025-11-09 17:05
+---
+
+---
 
 ## Микросервис и каталоги
 
