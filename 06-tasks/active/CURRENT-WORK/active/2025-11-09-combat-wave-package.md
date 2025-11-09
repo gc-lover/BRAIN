@@ -8,8 +8,7 @@
 - `.BRAIN/05-technical/backend/combat-session-backend.md`  
 - `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`  
 - `.BRAIN/02-gameplay/combat/combat-implants-types.md`  
-- `.BRAIN/02-gameplay/combat/combat-dnd-core.md`  
-- `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md`  
+- `.BRAIN/02-gameplay/combat/combat-shooter-core.md`  
 - `.BRAIN/02-gameplay/combat/combat-abilities.md`  
 - `.BRAIN/02-gameplay/combat/combat-shooting.md`  
 - `.BRAIN/02-gameplay/combat/combat-combos-synergies.md`  
@@ -21,6 +20,8 @@
 - `.BRAIN/02-gameplay/combat/combat-stealth.md`  
 - `.BRAIN/02-gameplay/combat/arena-system.md`
 
+> Архив: `combat-dnd-core.md`, `combat-dnd-integration-shooter.md` перенесены в архив и не учитываются в wave 1.
+
 ---
 
 ## 1. Сводка готовности
@@ -30,8 +31,7 @@
 | combat-session-backend.md | 1.0.0 | ready | `api/v1/gameplay/combat/combat-session.yaml` | `modules/combat` | lifecycle, damage loop, event bus |
 | combat-ai-enemies.md | 1.0.0 | ready | `api/v1/gameplay/combat/ai-enemies.yaml` | `modules/combat/ai` | AI матрица, WS рейдов, античит |
 | combat-implants-types.md | 1.1.0 | ready | `api/v1/gameplay/combat/implants.yaml` | `modules/combat/implants` | типы имплантов, ограничения, синергии |
-| combat-dnd-core.md | 1.0.0 | ready | `api/v1/gameplay/combat/dnd-core.yaml` | `modules/combat/mechanics` | DC, модификаторы, преимуществ/помеха |
-| combat-dnd-integration-shooter.md | 1.0.0 | ready | `api/v1/gameplay/combat/dnd-integration-shooter.yaml` | `modules/combat/mechanics` | микро-проверки, импланты, stealth synergy |
+| combat-shooter-core.md | 0.1.0 | in_progress | `api/v1/gameplay/combat/shooter-core.yaml` | `modules/combat/mechanics` | оружие, баллистика, recoil, suppression |
 | combat-abilities.md | 1.2.0 | ready | `api/v1/gameplay/combat/abilities.yaml` | `modules/combat/abilities` | источники, ранги, киберпсихоз |
 | combat-shooting.md | 1.1.0 | ready | `api/v1/gameplay/combat/shooting.yaml` | `modules/combat/shooting` | TTK, отдача, имплант-модификаторы |
 | combat-combos-synergies.md | 1.0.0 | ready | `api/v1/gameplay/combat/combos-synergies.yaml` | `modules/combat/combos` | цепочки умений, эффект синергий |

@@ -1,14 +1,16 @@
 ---
-**Статус:** review  
+**Статус:** archived  
 **Версия:** 2.0.0  
 **Дата создания:** 2025-11-06  
 **Приоритет:** highest  
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-06 22:10
-**api-readiness-notes:** Полный обзор контента игры 2020-2093. Квесты, системы, raids, romance, origins. Ready for API-SWAGGER.
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 23:59
+**api-readiness-notes:** Документ содержит D&D-ориентированное покрытие контента. Использовать только как историческую ссылку.
 ---
 
-# CONTENT OVERVIEW 2020-2093: Полная документация
+# [АРХИВ] CONTENT OVERVIEW 2020-2093: Полная документация
+
+> ⚠️ Shooter pivot: данные устарели. Для актуальных планов используйте shooter-дорожные карты и `combat-shooter-core.md`.
 
 
 ---
