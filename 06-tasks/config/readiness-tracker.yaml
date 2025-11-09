@@ -337,6 +337,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Идея городских легенд перепроверена 2025-11-09 04:27; документ остаётся концептуальным и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-subtle-media-collabs.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:27"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея скрытых коллабораций перепроверена 2025-11-09 04:27; документ концептуальный и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
