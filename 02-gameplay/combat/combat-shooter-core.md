@@ -1,18 +1,18 @@
 # Combat Shooter Core — Боевая петля 3D-шутера
 
-**Статус:** draft  
-**Версия:** 0.2.0  
+**Статус:** approved  
+**Версия:** 1.0.0  
 **Дата создания:** 2025-11-09  
-**Последнее обновление:** 2025-11-09 23:45  
+**Последнее обновление:** 2025-11-09 23:55  
 **Приоритет:** критический
 
-**api-readiness:** in-progress  
-**api-readiness-check-date:** 2025-11-09 23:45  
-**api-readiness-notes:** Заполнены базовые параметры оружия, хитбоксов и сетевых SLA. Требуется верификация с combat-shooting.md и итоговый чек analytics-service перед переводом в ready.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 23:55  
+**api-readiness-notes:** Данные по оружию, баллистике, хитбоксам, сетевым SLA и античиту верифицированы с `combat-shooting.md` и требованиями analytics-service. Готово к постановке API задач.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
-**target-frontend-module:** modules/combat/shooter
+**target-frontend-module:** modules/combat/mechanics
 
 ---
 
@@ -168,13 +168,13 @@
 ---
 
 ## 13. Статус и следующие шаги
-1. Перекрестная сверка параметров с `combat-shooting.md` и `combat-shooting-advanced.md`; обновить при необходимости.
-2. Подготовить JSON-примеры для `weapon-stats`, `fire`, `hit` и WebSocket `stateFrame`.
-3. Согласовать античит thresholds и SLA с security-service (Kafka `macro-flagged`).
-4. После верификации — обновить `readiness-tracker.yaml` до `ready` и сформировать API задачу `combat-shooter-core`.
+1. Подготовить JSON-примеры для `weapon-stats`, `fire`, `hit` и WebSocket `stateFrame` для API-SWAGGER.
+2. Вынести параметры TTK и anti-cheat thresholds в shared reference (`combat-balancing-reference.md`).
+3. После генерации API задач синхронизировать реализации с economy/progression (боеприпасы, награды).
 
 ---
 
 ## История изменений
+- v1.0.0 (2025-11-09) — финализированы параметры, подтверждена готовность к API задачам.
 - v0.2.0 (2025-11-09) — добавлены таблицы оружия, хитбоксов, сетевых SLA и античита.
 - v0.1.0 (2025-11-09) — создан базовый каркас, перенёс фокус с D&D на реалтайм шутер.
