@@ -7,7 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 11:26
+**api-readiness-check-date:** 2025-11-09 03:58
+**api-readiness-notes:** Профиль фикcера City Center; подтверждено 2025-11-09 03:58, что API задачи не требуются
 
 **Категория:** important  
 **ID NPC:** npc-fixer-dino-2050-2085

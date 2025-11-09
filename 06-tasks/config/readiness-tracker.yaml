@@ -106,6 +106,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Сценарий Brain Manager перепроверен 2025-11-09 03:55; документ описывает процессы и не формирует прямых API задач."
+  - path: ".BRAIN/МЕНЕДЖЕР-PROCEDURES.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:57"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Процедуры Brain Manager перепроверены 2025-11-09 03:57; документ регламентирует процессы и не формирует API задачи."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -931,3 +942,14 @@ mappings:
       directory: "api/v1/gameplay/combat/"
       frontend_module: "modules/combat/*"
     notes: "Wave 1 combat бриф подтверждён 2025-11-09 03:25; агрегирует готовые документы для передачи ДУАПИТАСК."
+  - path: ".BRAIN/02-gameplay/economy/economy-pricing-detailed.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:25"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/pricing/pricing-detailed.yaml"
+      frontend_module: "modules/economy/pricing"
+    notes: "Перепроверено 2025-11-09 03:25: детальная система ценообразования, тарифы, скидки и события готовы к постановке API задач economy-service."

@@ -1,4 +1,16 @@
-﻿# Процедуры Brain Manager Agent
+﻿---
+
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Последнее обновление:** 2025-11-09 03:57  
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 03:57  
+**api-readiness-notes:** Процедуры Brain Manager описывают внутренние процессы и не требуют постановки API задач; статус not-applicable подтверждён 2025-11-09 03:57.
+
+---
+
+# Процедуры Brain Manager Agent
 
 ## Ссылки
 - `../GLOBAL-RULES.md` — главные правила, лимиты, микросервисы, коммиты.
