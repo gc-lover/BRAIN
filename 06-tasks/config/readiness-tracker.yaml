@@ -1415,6 +1415,39 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Профиль фикcера Japantown; подтверждено 2025-11-09 04:28, что документ описательный и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/important/wilson-2nd-amendment.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:31"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль владельца 2nd Amendment; подтверждено 2025-11-09 04:31, что документ описательный и не формирует API задачи."
+  - path: ".BRAIN/04-narrative/npc-lore/important/yoko-tsuru.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 04:31"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль торговца BD контентом; подтверждено 2025-11-09 04:31, что документ описательный и не требует API задач."
+  - path: ".BRAIN/04-narrative/npc-lore/important/yorinobu-arasaka.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 04:31"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Профиль наследника Arasaka; подтверждено 2025-11-09 04:31, что документ предназначен для лора и не формирует API задачи."
   - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
     version: "1.0.0"
     status: "ready"
