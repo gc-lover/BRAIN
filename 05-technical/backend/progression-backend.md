@@ -5,10 +5,14 @@
 ---
 
 **API Tasks Status:**
-- Status: created
+- Status: completed
 - Tasks:
-  - API-TASK-101: api/v1/gameplay/progression/progression-core.yaml (2025-11-09)
-- Last Updated: 2025-11-09 18:24
+  - API-TASK-101: Progression Core API — `api/v1/gameplay/progression/progression-core/progression-core.yaml`
+    - Создано: 2025-11-09 18:24
+    - Завершено: 2025-11-09 20:37
+    - Доп. файлы: `progression-core-models.yaml`, `progression-core-models-operations.yaml`, `README.md`
+    - Файл задачи: `API-SWAGGER/tasks/completed/2025-11-09/task-101-progression-core-api.md`
+- Last Updated: 2025-11-09 20:37
 ---
 
 # Progression System Backend - Backend системы прогрессии
