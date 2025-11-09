@@ -18,6 +18,83 @@
 # На старте все записи очищены — заполняйте этот список по мере проверок.
 
 mappings:
+  - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Концептуальный документ, не предполагает постановку API задач; подтверждён статус not-applicable 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/core-pillars.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "critical"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Документ фиксирует стратегические столпы, не содержит требований к API; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/design-philosophy-ui-ux.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "UI/UX принципы не требуют API реализации; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/design-philosophy.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "critical"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Философия дизайна служит для выравнивания концепции и не генерирует API задачи; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/README.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Индекс раздела концепций не предназначен для API задач; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/simulation-reality-truth.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "critical"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Мета-лоровый документ без требований к API; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/vision-unique-features.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Каталог уникальных особенностей служит маркетинговой и концептуальной цели; статус not-applicable подтверждён 2025-11-09 03:05."
   - path: ".BRAIN/05-technical/backend/auth/README.md"
     version: "1.0.1"
     status: "ready"
@@ -198,13 +275,13 @@ mappings:
     version: "1.1.0"
     status: "ready"
     priority: "high"
-    checked: "2025-11-09 01:39"
+    checked: "2025-11-09 02:49"
     checker: "Brain Manager"
     api_target:
       microservice: "gameplay-service"
       directory: "api/v1/gameplay/combat/stealth.yaml"
       frontend_module: "modules/combat/stealth"
-    notes: "Системы скрытности, импланты и социальная инженерия перепроверены 2025-11-09 01:39; документ готов к постановке задач gameplay-service."
+    notes: "Системы скрытности, импланты и социальная инженерия перепроверены 2025-11-09 02:49; документ готов к постановке задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-extract.md"
     version: "1.3.0"
     status: "ready"
@@ -216,6 +293,17 @@ mappings:
       directory: "api/v1/gameplay/combat/extraction.yaml"
       frontend_module: "modules/combat/extraction"
     notes: "Экстрактшутер механики перепроверены 2025-11-09 01:44: риски, точки экстракции и страховка готовы к планированию API задач."
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking-types.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 03:07"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: "api/v1/gameplay/combat/hacking/types.yaml"
+      frontend_module: "modules/combat/hacking"
+    notes: "Типы боевого хакерства и ограничения классов перепроверены 2025-11-09 03:07; документ готов к постановке API задач gameplay-service."
   - path: ".BRAIN/02-gameplay/combat/combat-hacking-networks.md"
     version: "1.0.0"
     status: "ready"

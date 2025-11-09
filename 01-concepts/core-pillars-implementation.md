@@ -7,7 +7,7 @@
 **Приоритет:** высокий
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-03 21:05
+**api-readiness-check-date:** 2025-11-09 03:05
 **api-readiness-notes:** Концептуальный документ, описывает реализацию столпов, не предназначен для создания API
 
 ---

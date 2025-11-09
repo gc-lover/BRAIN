@@ -1,15 +1,19 @@
 # Система наставничества — детальная версия
 
-- **Status:** queued
-- **Last Updated:** 2025-11-08 19:10
----
+**Статус:** approved  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-07  
+**Последнее обновление:** 2025-11-09 01:28  
+**Приоритет:** высокий
 
+**target-domain:** social  
+**target-microservice:** social-service (8084)  
+**target-microservice-secondary:** economy-service (8089), world-service (8092), gameplay-service (8086)  
+**target-frontend-module:** modules/social/mentorship, modules/world/academies
 
-**Статус:** approved  \\n**Версия:** 1.0.0  \\n**Дата создания:** 2025-11-07  \\n**Последнее обновление:** 2025-11-08 19:10  \\n**Приоритет:** высокий
-
-**target-domain:** social  \\n**target-microservice:** social-service (port 8084)  \\n**target-microservice-secondary:** economy-service (port 8089), world-service (port 8092), gameplay-service (port 8086)  \\n**target-frontend-module:** modules/social/mentorship, modules/world/academies
-
-**api-readiness:** ready  \\n**api-readiness-check-date:** 2025-11-08 10:20  \\n**api-readiness-notes:** Наставничество формализовано: программы, контракты, академии, REST/Kafka контуры и UX готовы к API постановке; блокеров нет.
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 01:28  
+**api-readiness-notes:** Наставничество перепроверено 2025-11-09 01:28: программы, контракты, академии и REST/Kafka контуры готовы к постановке API задач, блокеров нет.
 
 ---
 

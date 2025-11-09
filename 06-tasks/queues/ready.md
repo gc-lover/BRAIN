@@ -51,4 +51,4 @@
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:39 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по скрытности и обнаружению (gameplay-service, `api/v1/gameplay/combat/stealth.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  
-  **Проверено:** 2025-11-09 01:22 — Brain Manager | Следующий шаг: сформировать задачи по паркур-системе и боевым манёврам (gameplay-service, api/v1/gameplay/combat/freerun.yaml).
+  **Проверено:** 2025-11-09 02:50 — Brain Manager | Следующий шаг: сформировать пакет задач по паркуру и мобильным комбо (gameplay-service, `api/v1/gameplay/combat/freerun.yaml`).

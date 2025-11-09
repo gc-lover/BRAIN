@@ -1,3 +1,50 @@
+# Combat Systems — Wave 1 (готовность)
+
+**Обновлено:** 2025-11-09 02:55  
+**Ответственный:** Brain Manager  
+**Статус пакета:** материалы `.BRAIN` перепроверены, готовы к постановке задач (ожидаем разрешения на ДУАПИТАСК/АПИТАСК).
+
+---
+
+## Пакет документов (готовность: `ready`)
+- `.BRAIN/02-gameplay/combat/combat-ai-enemies.md` — AI-матрица, REST/WS, Kafka топики, схемы БД.
+- `.BRAIN/02-gameplay/combat/combat-dnd-core.md` — ядро проверок D20/D100, DC, групповые проверки.
+- `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md` — интеграция проверок в realtime бой.
+- `.BRAIN/02-gameplay/combat/combat-abilities.md` — источники/типы способностей, ограничения, киберпсихоз.
+- `.BRAIN/02-gameplay/combat/combat-shooting.md` — TTK, отдача, имплант-модификаторы, режимы стрельбы.
+- `.BRAIN/02-gameplay/combat/combat-stealth.md` — скрытность, обнаружение, социальная инженерия.
+- `.BRAIN/02-gameplay/combat/combat-freerun.md` — паркур и боевые манёвры.
+- `.BRAIN/02-gameplay/combat/combat-extract.md` — экстрактшутер механики, страховка, риски.
+- `.BRAIN/02-gameplay/combat/combat-hacking-networks.md` — архитектура сетей, уровни ICE.
+- `.BRAIN/02-gameplay/combat/combat-hacking-combat-integration.md` — хакерство в бою, контрмеры.
+- `.BRAIN/02-gameplay/combat/arena-system.md` — режимы арен, рейтинги, экономические связи.
+- `.BRAIN/05-technical/backend/combat-session-backend.md` — ядро боевых сессий (инстансы, логи, события).
+- `.BRAIN/05-technical/backend/trade-system.md` — P2P торговля (антифрод, подтверждения).
+- `.BRAIN/05-technical/backend/quest-engine-backend.md` — state machine квестов, диалоги, события.
+
+Все документы имеют актуальные записи в `readiness-tracker.yaml` и очередь `ready.md`. Приоритеты: `critical` для боевого ядра и квестов, `high` для остальных боевых подсистем.
+
+---
+
+## Интеграции и зависимости
+- **gameplay-service (8083):** combat AI, abilities, D&D ядро/интеграция, shooting, stealth, freerun, extract, hacking, arena, quest engine, combat session.
+- **economy-service (8085):** trade system, inventory core (зависимость для боевых задач).
+- **character-service (8082):** события персонажей (`Character*`), слоты, восстановление — требуется для боевых задач.
+- **shared фронтенд-модули:** `modules/combat/*`, `modules/quests`, `modules/economy/*`.
+- **Event/Kafka:** `combat.ai.state`, `world.events.trigger`, `raid.telemetry`, `combat.*`, `quest.*`, `trade.*`.
+
+---
+
+## Следующие шаги (после разрешения на постановку задач)
+1. Для каждого документа сформировать бриф ДУАПИТАСК (использовать конспект в `2025-11-09-combat-ai-package.md` и актуальные заметки).
+2. Синхронизировать пакеты задач между `combat` блоками (AI, abilities, shooting, stealth, freerun) так, чтобы они учитывали общие модели и события.
+3. Подготовить сводную таблицу зависимостей (REST/WS/Kafka) для включения в задания.
+4. После постановки задач обновить `readiness-tracker.yaml`, `ready.md`, `CURRENT-WORK/current-status.md` и проинформировать смежных агентов.
+
+---
+
+> Пока действует запрет на создание задач в `API-SWAGGER`, пакет фиксируем в `.BRAIN`. После снятия запрета используем эту сводку как основу для wave 1 combat задач.
+
 # Combat Systems Wave 1 — Brief для ДУАПИТАСК
 
 **Статус:** ready-to-hand-off  

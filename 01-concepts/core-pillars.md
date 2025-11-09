@@ -7,7 +7,7 @@
 **Приоритет:** критический
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-02 23:10
+**api-readiness-check-date:** 2025-11-09 03:05
 **api-readiness-notes:** Документ описывает столпы игры, не содержит конкретных механик для создания API
 
 ## Структура столпов
