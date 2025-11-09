@@ -22,6 +22,14 @@
 **target-frontend-module:** modules/economy/investments
 
 ---
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-105: api/v1/economy/investments/investments.yaml (2025-11-09)
+- Last Updated: 2025-11-09 19:27
+---
+
+---
 
 ## Краткое описание
 
