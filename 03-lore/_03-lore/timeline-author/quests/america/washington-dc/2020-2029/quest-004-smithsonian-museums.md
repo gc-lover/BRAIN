@@ -1,5 +1,13 @@
 # Смитсоновские Музеи
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:35  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Нужна структура маршрутов, расписаний и KPI посещений, отсутствуют ветвления, NPC и интеграции с образовательными/экономическими системами; требуется подготовка к QUEST-TEMPLATE.
+
 **quest-id:** WASHINGTON-2029-004  
 **city:** Вашингтон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** medium | **solo-group:** solo | **time:** 8h+

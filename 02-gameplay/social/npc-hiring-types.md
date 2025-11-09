@@ -1,15 +1,12 @@
-﻿---
+﻿# Система найма NPC — Типы найма
 
-- **Status:** queued
-- **Last Updated:** 2025-11-07 00:18
----
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:43  
+**api-readiness-notes:** Требуется балансировка стоимости, эффективности ролей и расширенных ролей, нет согласованных API контрактов.
 
-
-# Система найма NPC — Типы найма
-
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-03
-**api-readiness-notes:** Выделено из `npc-hiring-system.md`. Содержит все типы найма NPC.
+**Версия:** 1.0.0  
+**Статус:** draft  
+**Последнее обновление:** 2025-11-07 00:18
 
 **target-domain:** social  
 **target-microservice:** social-service (port 8084)  

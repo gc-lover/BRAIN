@@ -28,6 +28,7 @@
 - [!] Most Livable City Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md`: расписать сценарио, livability KPI, интеграции с экономикой и социальными системами перед постановкой задач (2025-11-09 09:35).
 - [!] White House Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-001-white-house.md`: описать контроль доступа, NPC Secret Service, развилки туров и целевые API каталоги quest-engine (2025-11-09 09:35).
 - [!] Capitol Building Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md`: структурировать ветви, NPC и события Jan 6, определить интеграции и каталоги API quest-engine (2025-11-09 09:35).
+- [!] Lincoln Memorial Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-003-lincoln-memorial.md`: привести к QUEST-TEMPLATE, добавить ветвления, NPC и KPI для интеграции с quest-engine (2025-11-09 09:35).
 - [!] Phoenix Urban Sprawl Quest — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md` к QUEST-TEMPLATE, добавить ветвления, KPI, связи с narrative-service и определить каталоги API/фронтенда перед постановкой задач (2025-11-09 09:36).
 
 ---

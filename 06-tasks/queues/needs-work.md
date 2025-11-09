@@ -27,6 +27,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-034-nicholas-ii-ghost.md (v0.0.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Добавить версию, статус и приоритет, расширить этапы и ветвления, описать награды, зависимости и целевые API пакета quest-engine перед постановкой задачи.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:37 — Brain Manager  
+  **Что доработать:** Оформить квест по QUEST-TEMPLATE: расписать зависимости (локации, NPC, цепочки), определить целевой микросервис, каталог OpenAPI и фронтенд-модуль, связать этапы и награды с системами прогрессии и экономики.
 
 - После устранения замечаний удалите запись отсюда и перенесите в файл нового статуса (например, `ready.md`).
 
@@ -65,8 +68,17 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-002-capitol-building.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Разработать ветвления (тур, заседание, тревога), NPC и события Jan 6, интеграции с системами безопасности/политики и указать каталоги API quest-engine.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-003-lincoln-memorial.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Привести к QUEST-TEMPLATE, добавить ветвления, NPC и социальные эффекты (MLK), определить KPI и каталоги API для интеграции с quest-engine.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-004-smithsonian-museums.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Сформировать маршруты, расписания, ветвления и KPI посещений Smithsonian, добавить NPC и определить интеграции с образовательными/экономическими системами и каталогами API quest-engine.
 >>>>>>> Stashed changes
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/denver/2020-2029/quest-004-craft-beer-scene.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:42 — Brain Manager  
+  **Что доработать:** Добавить YAML-метаданные, версию, статус, ветвления и интеграции по шаблону QUEST-TEMPLATE; расширить этапы, выборы и награды перед подготовкой API задач.
 
