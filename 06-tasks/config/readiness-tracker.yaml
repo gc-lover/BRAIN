@@ -2860,6 +2860,72 @@ mappings:
 
     notes: "Требуется добавить версию/статус, ветвления, интеграции с туризмом/прогрессией и определить целевые API каталоги перед постановкой задачи."
 
+  - path: ".BRAIN/04-narrative/quests/QUEST-TEMPLATE-SHOOTER.md"
+
+    version: "1.0.0"
+
+    status: "ready"
+
+    priority: "high"
+
+    checked: "2025-11-10 00:30"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: "gameplay-service"
+
+      directory: "api/v1/quests/templates/"
+
+      frontend_module: "modules/quests/shared"
+
+    notes: "Shooter-шаблон оформлен: включает таблицы интеракций, SLA и античит. Использовать вместо D&D шаблона."
+
+  - path: ".BRAIN/05-technical/start-content/quests/quest-main-2040-red-dawn.md"
+
+    version: "2.0.0"
+
+    status: "ready"
+
+    priority: "high"
+
+    checked: "2025-11-10 00:30"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: "gameplay-service"
+
+      directory: "api/v1/quests/main/"
+
+      frontend_module: "modules/quests/main"
+
+    notes: "Shooter rescue/escort сценарий: взаимодействия, encounters, hazards, API и античит."
+
+  - path: ".BRAIN/05-technical/start-content/quests/quest-main-2023-shattered-city.md"
+
+    version: "2.0.0"
+
+    status: "ready"
+
+    priority: "high"
+
+    checked: "2025-11-10 00:30"
+
+    checker: "Brain Manager"
+
+    api_target:
+
+      microservice: "gameplay-service"
+
+      directory: "api/v1/quests/main/"
+
+      frontend_module: "modules/quests/main"
+
+    notes: "Shooter-вариант восстановления сетевого узла: стадии, интеракции, экономика, anti-cheat события."
+
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md"
 
     version: "0.1.0"
