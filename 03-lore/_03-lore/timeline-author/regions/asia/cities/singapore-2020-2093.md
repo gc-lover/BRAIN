@@ -1,8 +1,8 @@
 # Сингапур: авторские события 2020–2093
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 18:26
-**api-readiness-notes:** Локальные события Сингапура, совместимые с Азией
+**api-readiness-check-date:** 2025-11-09 09:36
+**api-readiness-notes:** Авторский таймлайн лора Сингапура, API задачи не требуются
 
 **Статус:** draft  
 **Версия:** 0.1.0  

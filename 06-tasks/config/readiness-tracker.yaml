@@ -1899,6 +1899,17 @@ mappings:
       directory: "api/v1/economy/player-market/analytics.yaml"
       frontend_module: "modules/economy/player-market"
     notes: "Перепроверено 2025-11-09 09:34: перечислены метрики и roadmap, но отсутствуют API контракты по витринам, SQL/ETL схемы и согласованная матрица KPI; требуется детализация перед постановкой задач economy-service."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/saint-petersburg/2061-2077/quest-035-kunstkamera-oddities.md"
+    version: "unversioned"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:43"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Нет версии и статуса документа; требуется расширить этапы, награды, выборы и связи с системами для подготовки API пакета quest-engine."
   - path: ".BRAIN/02-gameplay/world/world-state/player-impact-systems.md"
     version: "1.0.0"
     status: "ready"
@@ -1965,6 +1976,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Конспект тура по пивоварням не следует QUEST-TEMPLATE; требуется добавить YAML-метаданные, статус, ветви выбора, этапы с проверками и интеграции с системами перед формированием API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/denver/2020-2029/quest-005-skiing-resorts.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:44"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Краткое описание лыжных курортов не приведено к QUEST-TEMPLATE; необходимо добавить YAML-метаданные, статусы, ветвления, этапы с проверками и связи с системами (economy, progression) перед подготовкой API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/yerevan/2020-2029/quest-003-armenian-cognac.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1987,6 +2009,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Нужно дополнить квест системными связями (прогрессия, экономика), определить ответственные микросервисы и фронтенд-модуль, а также расширить сценарные ветки перед постановкой API задачи."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-003-teotihuacan-pyramids.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:43"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Необходимо расширить сценарий (ветки, проверка навыков), описать интеграции с системами эксплоринга, транспорта и экономики, а также указать целевой микросервис и фронтенд-модуль."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-025-wembley-arena.md"
     version: "0.1.0"
     status: "needs-work"
@@ -2020,6 +2053,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Квест описывает обстановку Манхэттена и ключевые этапы, но отсутствуют зависимости, API каталоги, фронтенд-модуль и детализация веток/награды; требуется оформить через QUEST-TEMPLATE перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-022-vertical-city.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "medium"
+    checked: "2025-11-09 09:43"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Описание вертикального города не содержит связей с системами, API каталогов и фронтенд-модуля; необходимо расширить ветвления, KPI и зависимости согласно QUEST-TEMPLATE."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md"
     version: "0.1.0"
     status: "needs-work"
@@ -2185,6 +2229,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Сеула описывает городские события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/shanghai-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Шанхая описывает городские события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/singapore-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Сингапура описывает городские события и не требует API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md"
     version: "0.1.0"
     status: "needs-work"

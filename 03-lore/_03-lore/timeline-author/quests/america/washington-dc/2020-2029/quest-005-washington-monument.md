@@ -1,5 +1,13 @@
 # Монумент Вашингтона
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:35  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Требуются ветвления (бронирование, погодные условия, очереди), NPC и KPI посещаемости; необходимо связать с системами туризма/безопасности и определить каталоги API quest-engine.
+
 **quest-id:** WASHINGTON-2029-005  
 **city:** Вашингтон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** social | **difficulty:** easy | **solo-group:** solo | **time:** 1-2h
