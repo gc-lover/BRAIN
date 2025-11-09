@@ -11,8 +11,8 @@
 **API Tasks Status:**
 - Status: created
 - Tasks:
-  - API-TASK-115: api/v1/gameplay/combat/implants/implants-types.yaml (2025-11-09)
-- Last Updated: 2025-11-09 22:30
+  - API-TASK-401: api/v1/gameplay/combat/implants/implants-types.yaml (2025-11-09)
+- Last Updated: 2025-11-09 22:35
 ---
 
 ## 1. Типы имплантов для боя — ✅ Решение
