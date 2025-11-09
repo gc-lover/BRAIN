@@ -1,8 +1,4 @@
 files:
-  - path: ".BRAIN/.cursor/rules/brain-readiness-checker-rules.mdc"
-  - path: ".BRAIN/.cursor/rules/brain-rules.mdc"
-  - path: ".BRAIN/.gitignore"
-  - path: ".BRAIN/01-concepts/vision.md"
   - path: ".BRAIN/02-gameplay/combat/arena-system.md"
   - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
   - path: ".BRAIN/02-gameplay/combat/combat-abilities/README.md"

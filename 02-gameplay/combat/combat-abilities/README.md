@@ -1,7 +1,24 @@
 # Combat Abilities Catalog - Навигация
 
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 03:09  
+**api-readiness-notes:** Навигационный индекс каталога боевых способностей; документ не требует постановки API задач, статус not-applicable подтвержден 2025-11-09.
+
+**target-domain:** gameplay-combat  
+**target-microservice:** n/a  
+**target-frontend-module:** n/a
+
+**Статус:** approved  
+**Приоритет:** Низкий  
+
 **Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:22
+**Дата:** 2025-11-07 02:22  
+**Статус:** approved  
+**Приоритет:** medium
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 03:08  
+**api-readiness-notes:** Служебный каталог для навигации по материалам способностей, не требует постановки API задач.
 
 ---
 

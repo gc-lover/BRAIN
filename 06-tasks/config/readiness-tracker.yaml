@@ -18,6 +18,39 @@
 # На старте все записи очищены — заполняйте этот список по мере проверок.
 
 mappings:
+  - path: ".BRAIN/.cursor/rules/brain-readiness-checker-rules.mdc"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:08"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Правила для Brain Readiness Checker, не требуют API задач; статус not-applicable подтверждён 2025-11-09 03:08."
+  - path: ".BRAIN/.cursor/rules/brain-rules.mdc"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 03:08"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Глобальные правила агента .BRAIN, не формируют API задачи; статус not-applicable подтверждён 2025-11-09 03:08."
+  - path: ".BRAIN/.gitignore"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 03:08"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Служебный файл игнорирования Git, не связан с API задачами; статус not-applicable подтверждён 2025-11-09 03:08."
   - path: ".BRAIN/01-concepts/core-pillars-implementation.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -95,6 +128,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Каталог уникальных особенностей служит маркетинговой и концептуальной цели; статус not-applicable подтверждён 2025-11-09 03:05."
+  - path: ".BRAIN/01-concepts/vision.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "critical"
+    checked: "2025-11-09 03:05"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Документ видения задаёт общую стратегию и не требует API; статус not-applicable подтверждён 2025-11-09 03:05."
   - path: ".BRAIN/05-technical/backend/auth/README.md"
     version: "1.0.1"
     status: "ready"
@@ -249,6 +293,17 @@ mappings:
       directory: "api/v1/gameplay/combat/abilities.yaml"
       frontend_module: "modules/combat/abilities"
     notes: "Система боевых способностей перепроверена 2025-11-09 02:49: источники, типы, ограничения и влияние на киберпсихоз подтверждены; готово к постановке API задач."
+  - path: ".BRAIN/02-gameplay/combat/combat-abilities/README.md"
+    version: "1.0.1"
+    status: "not-applicable"
+    priority: "low"
+    checked: "2025-11-09 03:09"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Навигационный индекс каталога боевых способностей; API задачи не формируются, статус not-applicable подтвержден 2025-11-09."
   - path: ".BRAIN/02-gameplay/combat/combat-freerun.md"
     version: "1.1.0"
     status: "ready"
@@ -293,6 +348,17 @@ mappings:
       directory: "api/v1/gameplay/combat/extraction.yaml"
       frontend_module: "modules/combat/extraction"
     notes: "Экстрактшутер механики перепроверены 2025-11-09 01:44: риски, точки экстракции и страховка готовы к планированию API задач."
+  - path: ".BRAIN/02-gameplay/combat/combat-hacking.md"
+    version: "2.0.0"
+    status: "not-applicable"
+    priority: "high"
+    checked: "2025-11-09 03:09"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Обзорный документ перепроверен 2025-11-09 03:09: агрегирует ссылки на специализированные файлы по хакерству, не содержит контрактов и не передаётся в API-пакеты."
   - path: ".BRAIN/02-gameplay/combat/combat-hacking-types.md"
     version: "1.0.0"
     status: "ready"

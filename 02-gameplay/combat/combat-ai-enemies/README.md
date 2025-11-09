@@ -1,7 +1,13 @@
 # Combat AI Enemies - Навигация
 
 **Версия:** 1.0.1  
-**Дата:** 2025-11-07 02:24
+**Дата:** 2025-11-07 02:24  
+**Статус:** approved  
+**Приоритет:** medium
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 03:08  
+**api-readiness-notes:** Индексный документ по материалам AI врагов, не содержит требований к API.
 
 ---
 
