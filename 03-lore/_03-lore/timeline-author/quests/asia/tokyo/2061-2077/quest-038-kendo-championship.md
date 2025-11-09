@@ -1,5 +1,9 @@
 # Чемпионат Кендо
 
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:45  
+**api-readiness-notes:** Нет статуса, версии и приоритета документа; отсутствуют ветвления, системные зависимости и целевые API/модули, требуется расширить структуру по QUEST-TEMPLATE перед постановкой задач.
+
 **quest-id:** TOKYO-2077-038  
 **city:** Токио | **region:** Азия | **period:** 2061-2077  
 **quest-type:** event | **difficulty:** hard | **solo-group:** solo | **time:** 2-4h

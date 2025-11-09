@@ -53,6 +53,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/phoenix/2020-2029/quest-010-urban-sprawl.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:36 — Brain Manager  
   **Что доработать:** Расширить сценарную структуру, добавить ветвления, KPI, зависимости с quest-engine и narrative-service, определить целевые каталоги API и фронтенд модуль.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-001-golden-gate-jump.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:44 — Brain Manager  
+  **Что доработать:** Привести квест к QUEST-TEMPLATE, детализировать ветвления (разрешения, аварии), описать интеграции с quest-engine, системами безопасности и экономикой наград, определить каталоги API и модуль `modules/narrative/quests`.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/europe/london/2040-2060/quest-025-wembley-arena.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:37 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE, оформить YAML-метаданные, этапы с проверками и ветвлениями, связать награды с прогрессией и экономикой и указать целевой пакет quest-engine (`gameplay-service`, modules/quests).
@@ -83,6 +86,9 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-005-washington-monument.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
   **Что доработать:** Описать бронирование, очереди, погодные ограничения, NPC и KPI посещаемости, определить интеграции с системами туризма/безопасности и каталоги API quest-engine.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-006-vietnam-memorial.md (v0.1.0)  
+  **Проверено:** 2025-11-09 09:35 — Brain Readiness Checker  
+  **Что доработать:** Привести к QUEST-TEMPLATE, добавить сценарии взаимодействия с ветеранами, моральные выборы, KPI и интеграции с системами эмоций/социальных связей и каталогами API quest-engine.
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md (v0.1.0)  
   **Проверено:** 2025-11-09 09:38 — Brain Manager  
   **Что доработать:** Привести квест к QUEST-TEMPLATE, добавить ветвления, интеграции с системами и целевые API, детализировать награды перед постановкой задач.
