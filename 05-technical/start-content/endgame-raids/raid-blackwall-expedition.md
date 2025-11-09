@@ -1,12 +1,16 @@
-﻿---
-**Статус:** review  
+﻿# [АРХИВ] Рейд: Экспедиция за Блэкволл
+
+**Статус:** archived  
 **Версия:** 1.0.0  
-**Дата создания:** 2025-11-06  
-**Приоритет:** highest  
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 12:20
-**api-readiness-notes:** Полная спецификация endgame raid «Blackwall Expedition». WebSocket переведён на `wss://api.necp.game/v1/gameplay/raids/{raidId}`; 10-15 игроков, 3 фазы, hardcore механики.
----
+**Дата создания:** 2025-11-05  
+**Последнее обновление:** 2025-11-05  
+**Приоритет:** высокий
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 23:59
+**api-readiness-notes:** Включает D&D проверки и устаревшие механики. Хранится только для истории.
+
+> ⚠️ Shooter pivot: рейд потребуется переписать под shooter-механику, используя новые боевые петли.
 
 ---
 

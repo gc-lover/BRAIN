@@ -1,11 +1,36 @@
 ﻿---
-**Статус:** review  
+**Статус:** archived  
 **Версия:** 1.0.0  
-**Дата создания:** 2025-11-06  
-**Приоритет:** highest  
-**api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-08 12:20
-**api-readiness-notes:** Полная спецификация endgame raid «Corpo Tower Assault». WebSocket переведён на `wss://api.necp.game/v1/gameplay/raids/{raidId}`; 10-15 игроков, 3 фазы, hardcore stealth/combat.
+**Дата создания:** 2025-11-05  
+**Последнее обновление:** 2025-11-05  
+**Приоритет:** высокий
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 23:59
+**api-readiness-notes:** D&D-параметры утратили актуальность. Сценарий хранится исключительно как архив.
+
+> ⚠️ Shooter pivot: требуется новая версия под shooter-механику и UE5-ориентированную реализацию.
+---
+
+---
+
+- **Status:** created
+- **Last Updated:** 2025-11-07 06:45
+---
+
+# [АРХИВ] Рейд: Штурм башни корпорации
+
+**Статус:** archived  
+**Версия:** 1.0.0  
+**Дата создания:** 2025-11-05  
+**Последнее обновление:** 2025-11-05  
+**Приоритет:** высокий
+
+**api-readiness:** not-applicable  
+**api-readiness-check-date:** 2025-11-09 23:59
+**api-readiness-notes:** D&D-параметры утратили актуальность. Сценарий хранится исключительно как архив.
+
+> ⚠️ Shooter pivot: требуется новая версия под shooter-механику и UE5-ориентированную реализацию.
 ---
 
 ---
