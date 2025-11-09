@@ -37,8 +37,21 @@ implementations:
       commit: "0932b7d"
       notes: "Реализованы Backend API для персональных NPC сценариев: контроллер, сервис, репозитории, маппер, миграции и юнит-тесты."
     frontend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-09 14:48"
+      completed: "2025-11-09 16:42"
       agent: "Frontend Agent"
+      notes: "Фронтенд модуль social/personal-npc реализован: Zustand store, React Query хуки, страницы списка/деталей/запуска сценариев, маршруты."
+    priority: "critical"
+  - api_path: "api/v1/characters/players/players.yaml"
+    task_id: "API-TASK-097"
+    brain_source: ".BRAIN/05-technical/backend/player-character-mgmt/character-management.md"
+    api_status: "completed"
+    backend:
+      status: "in_progress"
+      started: "2025-11-09 15:43"
+      agent: "Backend Agent"
+    frontend:
+      status: "not_started"
     priority: "critical"
 
