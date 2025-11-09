@@ -1,8 +1,12 @@
 ﻿# Детальные Боевые Роли
 
+**api-readiness:** ready  
+**api-readiness-check-date:** 2025-11-09 03:14  
+**api-readiness-notes:** Подтверждено 2025-11-09 03:14: боевые роли (танк, DPS, саппорт и гибриды) описаны со статами, имплантами, синергиями и тактиками; документ готов к постановке API задач gameplay-service.
+
 **Версия:** 1.0.0  
 **Дата:** 2025-11-06  
-**Статус:** Ready for API
+**Статус:** approved
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (port 8083)  

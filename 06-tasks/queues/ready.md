@@ -22,6 +22,8 @@
   **Проверено:** 2025-11-09 01:24 — Brain Manager | Следующий шаг: использовать конспект `2025-11-09-combat-wave-package.md` для разбивки combat session API.
 - **Документ:** .BRAIN/05-technical/backend/trade-system.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:30 — Brain Manager | Следующий шаг: подготовить задание по P2P трейду (economy-service, `api/v1/trade/trade-system.yaml`) с антифродом и очередью подтверждений.
+- **Документ:** .BRAIN/02-gameplay/economy/auction-house/auction-database.md (v1.0.0)  
+  **Проверено:** 2025-11-09 03:09 — Brain Manager | Следующий шаг: подготовить задачи для economy-service по БД аукциона (`api/v1/economy/auction-house/auction-database.yaml`) и синхронизировать с фронтенд модулем `modules/economy/auction-house`.
 - **Документ:** .BRAIN/05-technical/backend/quest-engine-backend.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:19 — Brain Manager | Следующий шаг: оформить REST/WS/EventBus задачи по конспекту `2025-11-09-quest-engine-package.md` и подготовить передачу в ДУАПИТАСК (`api/v1/gameplay/quests/quest-engine.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-implants-types.md (v1.1.0)  
@@ -52,6 +54,8 @@
   **Проверено:** 2025-11-09 02:49 — Brain Manager | Следующий шаг: подготовить API задачи по системе боевых способностей (gameplay-service, `api/v1/gameplay/combat/abilities.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-core.md (v1.0.0)  
   **Проверено:** 2025-11-09 01:44 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по ядру D&D проверок (gameplay-service, `api/v1/gameplay/combat/dnd-core.yaml`).
+- **Документ:** .BRAIN/02-gameplay/combat/combat-dnd-mechanics-integration.md (v1.0.0)  
+  **Проверено:** 2025-11-09 03:08 — Brain Manager | Следующий шаг: оформить пакет API задач по интеграции D&D проверок в хакерство, крафт, торговлю и социальные механики (gameplay-service, `api/v1/gameplay/combat/dnd-mechanics-integration.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-stealth.md (v1.1.0)  
   **Проверено:** 2025-11-09 01:39 — Brain Manager | Следующий шаг: подготовить REST/Events пакет по скрытности и обнаружению (gameplay-service, `api/v1/gameplay/combat/stealth.yaml`).
 - **Документ:** .BRAIN/02-gameplay/combat/combat-freerun.md (v1.1.0)  

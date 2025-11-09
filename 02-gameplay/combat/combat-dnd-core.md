@@ -1,7 +1,7 @@
 ﻿---
 **api-readiness:** ready  
-**api-readiness-check-date:** 2025-11-09 01:44
-**api-readiness-notes:** Перепроверено 2025-11-09 01:44. D&D система проверок (d20/d100, DC, модификаторы, критические случаи, атрибуты, навыки, преимущества/помехи) готова для API задач.
+**api-readiness-check-date:** 2025-11-09 03:14
+**api-readiness-notes:** Перепроверено 2025-11-09 03:14: ядро D&D проверок (кубики, DC, модификаторы, критические случаи, преимущества/помехи) полностью готово к постановке задач gameplay-service.
 
 **target-domain:** gameplay-combat  
 **target-microservice:** gameplay-service (8083)  
