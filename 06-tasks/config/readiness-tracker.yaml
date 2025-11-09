@@ -148,49 +148,6 @@ mappings:
 
     notes: "Ядро .BRAIN перепроверено 2025-11-09 03:48; документ задаёт процессы и не требует постановки API задач."
 
-  - path: ".BRAIN/scripts/autocommit.ps1"
-
-    version: "1.0.0"
-
-    status: "not-applicable"
-
-    priority: "low"
-
-    checked: "2025-11-09 03:48"
-
-    checker: "Brain Manager"
-
-    api_target:
-
-      microservice: null
-
-      directory: null
-
-      frontend_module: null
-
-    notes: "PowerShell-скрипт автокоммита подтверждён 2025-11-09 03:48; не связан с API задачами."
-
-  - path: ".BRAIN/scripts/autocommit.sh"
-
-    version: "1.0.0"
-
-    status: "not-applicable"
-
-    priority: "low"
-
-    checked: "2025-11-09 03:48"
-
-    checker: "Brain Manager"
-
-    api_target:
-
-      microservice: null
-
-      directory: null
-
-      frontend_module: null
-
-    notes: "Bash-скрипт автокоммита подтверждён 2025-11-09 03:48; не требует постановки API задач."
 
   - path: ".BRAIN/МЕНЕДЖЕР.MD"
 
@@ -2066,55 +2023,60 @@ mappings:
 
     version: "1.0.0"
 
-    status: "ready"
+    status: "archived"
 
-    priority: "high"
+    priority: "low"
 
-    checked: "2025-11-09 03:15"
+    checked: "2025-11-09 23:30"
 
     checker: "Brain Manager"
 
-    api_target:
+    api_target: null
 
-      microservice: "gameplay-service"
+    notes: "АРХИВ. D&D-гибрид отменён. Используйте новые спецификации боевой петли шутера (`combat-shooter-core` и связанные документы)."
 
-      directory: "api/v1/gameplay/combat/dnd-integration-shooter.yaml"
-
-      frontend_module: "modules/combat/mechanics"
-
-    notes: "Перепроверено 2025-11-09 03:15: гибрид D&D-проверок с шутерным боем, микро-ивенты, импланты и способности готовы к постановке задач gameplay-service."
 
   - path: ".BRAIN/02-gameplay/combat/combat-dnd-mechanics-integration.md"
 
     version: "1.0.0"
 
-    status: "ready"
+    status: "archived"
 
-    priority: "high"
+    priority: "low"
 
-    checked: "2025-11-09 03:17"
+    checked: "2025-11-09 23:30"
 
     checker: "Brain Manager"
 
-    api_target:
+    api_target: null
 
-      microservice: "gameplay-service"
-
-      directory: "api/v1/gameplay/combat/dnd-mechanics-integration.yaml"
-
-      frontend_module: "modules/combat/mechanics"
-
-    notes: "Перепроверено 2025-11-09 03:17: интеграция D&D проверок в хакерство, крафт, торговлю и социальные механики готова к постановке задач gameplay-service."
+    notes: "АРХИВ. Интеграция D&D механик больше не используется. Вся дальнейшая работа ведётся на realtime shooter-компоненты."
 
   - path: ".BRAIN/02-gameplay/combat/combat-dnd-core.md"
 
     version: "1.0.0"
 
-    status: "ready"
+    status: "archived"
 
-    priority: "high"
+    priority: "low"
 
-    checked: "2025-11-09 03:14"
+    checked: "2025-11-09 23:30"
+
+    checker: "Brain Manager"
+
+    api_target: null
+
+    notes: "АРХИВ. D&D ядро исключено из боевой системы. Требуется разработать и использовать `combat-shooter-core.md` вместо dice-based механики."
+
+  - path: ".BRAIN/02-gameplay/combat/combat-shooter-core.md"
+
+    version: "0.1.0"
+
+    status: "drafting"
+
+    priority: "critical"
+
+    checked: "2025-11-09 23:30"
 
     checker: "Brain Manager"
 
@@ -2122,11 +2084,11 @@ mappings:
 
       microservice: "gameplay-service"
 
-      directory: "api/v1/gameplay/combat/dnd-core.yaml"
+      directory: "api/v1/gameplay/combat/shooter-core.yaml"
 
-      frontend_module: "modules/combat/mechanics"
+      frontend_module: "modules/combat/shooter"
 
-    notes: "Перепроверено 2025-11-09 03:14: DC, модификаторы, критические случаи, преимущества/помехи и групповая механика готовы к пакетированию API задач."
+    notes: "Новый документ для боевой петли 3D-шутера. Требуется заполнить параметрические таблицы (оружие, баллистика, TTK, сетевые требования) перед постановкой API задач."
 
   - path: ".BRAIN/02-gameplay/combat/combat-abilities.md"
 

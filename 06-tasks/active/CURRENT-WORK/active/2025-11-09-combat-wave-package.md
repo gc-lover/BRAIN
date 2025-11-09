@@ -53,7 +53,7 @@
 - **Event Bus:** `combat.ai.state`, `raid.telemetry`, `combat.session.events`, `combat.freerun.movement`, `combat.hacking.alert`. Продюсеры/консьюмеры описаны в исходных документах.
 - **WebSocket:** основной канал `wss://api.necp.game/v1/gameplay/raid/{raidId}`, дополнительные каналы для арен (`/arenas/{arenaId}/stream`) и киберпространства (`/cyberspace/{instanceId}`) — отразить в постановке задач.
 - **Базы данных:** `enemy_ai_profiles`, `combat_sessions`, `combat_loadouts`, `cyberspace_instances`, `arena_matches` — схемы указаны в соответствующих документах.
-- **D&D слой:** базовые проверки из `combat-dnd-core` используются во всех документах (abilities, stealth, freerun, hacking). Необходимо планировать повторное использование контрактов/справочников.
+- **Shooter слой:** единая спецификация `combat-shooter-core` (в разработке) описывает оружие, баллистику, TTK и используется всеми подсистемами (abilities, stealth, freerun, hacking).
 
 ---
 
@@ -65,7 +65,8 @@
    - `/combat/abilities/*` — CRUD по активным способностям, синергия;  
    - `/combat/hacking/*` — сетевые уровни, интеграция в бою, cyberspace;  
    - `/combat/stealth/*`, `/combat/freerun/*`, `/combat/extraction/*`, `/combat/arenas/*`;  
-   - вспомогательные `/combat/dnd/checks`, `/combat/combos`.
+   - `/combat/shooter/*` — выстрелы, попадания, перезарядки, suppression;  
+   - вспомогательные `/combat/combos`, `/combat/freerun/*`, `/combat/stealth/*`.
 
 2. **WebSocket**  
    - `raid/{raidId}` — события AI, механики, проверки;  
@@ -78,7 +79,7 @@
    - подготовить схемы telemetry topics для analytics-service.
 
 4. **Cross-cutting**  
-   - единый reference по D&D проверкам (`combat-dnd-core`) и синхронизация с quest-engine.  
+   - единый reference по shooter спецификации (`combat-shooter-core`), синхронизация с quest-engine и analytics.  
    - согласование security (anti-cheat, rate-limits) с `combat-session-backend`.
 
 ### 3.1 REST backlog (черновая декомпозиция)
@@ -89,9 +90,9 @@
 | P0 | `POST /combat/ai/profiles` | combat-ai-enemies | регистрация AI профиля врага (behaviour tree, skill deck) |
 | P0 | `PUT /combat/ai/profiles/{enemyId}/phase` | combat-ai-enemies | обновление фазы рейда, механики, телеметрия |
 | P1 | `GET /combat/abilities` | combat-abilities | перечень активных способностей и связанной синергии |
-| P1 | `POST /combat/abilities/{abilityId}/sync` | combat-abilities + combat-combos-synergies | синхронизация способностей с комбо и D&D модификаторами |
-| P1 | `POST /combat/dnd/checks` | combat-dnd-core | расчёт проверки (атрибуты, бонусы, модификаторы) |
-| P1 | `POST /combat/dnd/micro-events` | combat-dnd-integration-shooter | логирование микро-проверок в бою |
+| P1 | `POST /combat/abilities/{abilityId}/sync` | combat-abilities + combat-combos-synergies | синхронизация способностей с комбо и шутерными модификаторами |
+| P1 | `POST /combat/shooter/fire` | combat-shooter-core | регистрация выстрела (оружие, позиция, баллистика) |
+| P1 | `POST /combat/shooter/hit` | combat-shooter-core | подтверждение попадания и нанесённого урона |
 | P1 | `POST /combat/hacking/networks/{networkId}/breach` | combat-hacking-networks | запуск взлома, уровни доступа, время |
 | P1 | `POST /combat/hacking/combat/{sessionId}` | combat-hacking-combat-integration | интеграция боевого хакерства (offensive/defensive) |
 | P1 | `POST /combat/cyberspace/instances` | combat-cyberspace | создание VR-сессии, уровни доступа |
@@ -104,10 +105,10 @@
 ### 3.2 WebSocket backlog
 | Приоритет | Канал | Источник | Описание payload |
 | --- | --- | --- | --- |
-| P0 | `wss://.../combat/raid/{raidId}` | combat-ai-enemies, combat-session-backend | `phase`, `mechanic`, `target`, `dndCheck` |
+| P0 | `wss://.../combat/raid/{raidId}` | combat-ai-enemies, combat-session-backend | `phase`, `mechanic`, `target`, `damage`, `suppression` |
 | P0 | `wss://.../combat/sessions/{sessionId}` | combat-session-backend | события damage/heal, состояние участников |
 | P1 | `wss://.../combat/stealth/{sessionId}` | combat-stealth | `threatLevel`, `channel`, `detectedBy`, `timestamp` |
-| P1 | `wss://.../combat/freerun/{sessionId}` | combat-freerun | `action`, `success`, `buffs`, `dndCheckId` |
+| P1 | `wss://.../combat/freerun/{sessionId}` | combat-freerun | `action`, `success`, `buffs`, `momentum` |
 | P1 | `wss://.../combat/cyberspace/{instanceId}` | combat-cyberspace | `layer`, `eventType`, `accessLevel`, `reward` |
 | P2 | `wss://.../combat/arenas/{arenaId}/match` | arena-system | `score`, `phase`, `voiceInvite`, `rewardPreview` |
 
@@ -123,7 +124,7 @@
 
 ### 3.4 Зависимости и этапы
 - **Этап 1 (P0):** combat sessions + raid AI (REST + WS + Kafka) — блокирует остальные подсистемы.
-- **Этап 2 (P1):** D&D ядро, abilities, hacking, stealth/freerun — требует Stage 1 и готовности D&D контрактов.
+- **Этап 2 (P1):** shooter ядро (`combat-shooter-core`), abilities, hacking, stealth/freerun — требует Stage 1.
 - **Этап 3 (P2):** extraction, arenas, combos — можно запускать после стабилизации предыдущих этапов.
 - **Shared requirements:** security (rate limits, anti-cheat), telemetry (analytics-service), economy (награждения).
 
@@ -135,11 +136,49 @@
 2. Подготовить сетку зависимостей (какие задачи блокируют другие), чтобы этапировать создание API задач.
 3. Проверить, нужно ли дополнительно обновить `implementation-tracker.yaml` (сейчас awaiting slot для всех боевых задач).
 4. После снятия запрета на API-SWAGGER — передать пакет в ДУАПИТАСК одной волной либо несколькими подпакетами (AI, Hacking, Movement, Stealth/Abilities).
-5. Продолжить синхронизацию с Quest Engine, чтобы D&D проверки и боевые события были согласованы до постановки задач.
+5. Продолжить синхронизацию с Quest Engine, чтобы shooter-события (damage, detection, stealth) были согласованы до постановки задач.
 
 ---
 
 ## 5. История
 
 - 2025-11-09 01:15 — собрана сводка Wave 1, подтверждена готовность документов, зафиксированы зависимости и план передачи.
+- 2025-11-09 13:25 — подготовлен подробный резюме-блок по REST/WebSocket/Kafka каналам для быстрой постановки задач ДУАПИТАСК.
+- 2025-11-09 15:10 — пересобрано под шутерную боевую модель, удалены зависимости от D&D.
+
+---
+
+## 6. Резюме по ключевым контрактам
+
+### REST
+- `POST /combat/sessions` — запускает боевую сессию, валидирует состав и выдаёт `sessionId`; потребляет combat-session backend, блокирует остальные подсистемы.
+- `POST /combat/sessions/{id}/events` — журналирует боевые события (damage, revive, state change) с обязательным указанием источника и времени; синхронизируется с analytics и economy.
+- `POST /combat/ai/profiles` / `PUT /combat/ai/profiles/{enemyId}/phase` — регистрируют и обновляют профили врагов, включая поведение и телеметрию фаз; критично для raid AI.
+- `POST /combat/abilities/{abilityId}/sync` — стыкует способности с комбо и шутерными модификаторами; учитывает импланты и киберпсихоз.
+- `POST /combat/shooter/fire` + `/combat/shooter/hit` — центральные точки для стрельбы и регистрации попаданий; используются всеми боевыми подсистемами.
+- `POST /combat/hacking/networks/{networkId}/breach` / `POST /combat/hacking/combat/{sessionId}` — запускают сетевой взлом и боевое хакерство, описывают тайминги, уровни доступа и ответные действия.
+- `POST /combat/cyberspace/instances` — создаёт VR-инстанс, возвращает токены доступа и лимиты; увязан с quest-engine и analytics.
+- `POST /combat/stealth/events` / `/combat/freerun/actions` — фиксируют стелс и паркур события, возвращают параметры угрозы, выносливости и скрытности.
+- `POST /combat/extraction/zones/{zoneId}/extract` — управляет эвакуацией, подтягивает расчёт лута и риск; триггерит economy/inventory.
+- `POST /combat/arenas/{arenaId}/match` — стартует матч арены, управляет рейтингами и наградами; готовит payload для лидербордов.
+- `POST /combat/combos/apply` — проверяет условия исполнения комбо, возвращает эффекты, cooldown и потребление ресурсов.
+
+### WebSocket
+- `wss://.../combat/raid/{raidId}` / `/combat/sessions/{sessionId}` — главный поток рейда: AI фазы, состояния игроков, события стрельбы; требуется минимальная задержка.
+- `wss://.../combat/stealth/{sessionId}` и `/combat/freerun/{sessionId}` — пушат оповещения об обнаружении и манёврах паркура; работают на основе shooter-телеметрии (скорость, шум, видимость).
+- `wss://.../combat/cyberspace/{instanceId}` — real-time события VR уровня, передаёт слои доступа и награды.
+- `wss://.../combat/arenas/{arenaId}/match` — рейтинговые события, voice-инвайты и live-таблицы.
+
+### Event Bus
+- `combat.ai.state` — телеметрия врагов, которую используют analytics и quest-engine для прогресса/эвентов.
+- `combat.session.events` — поток боевых событий для аналитики и экономики; хранит оригинальный payload REST `/events`.
+- `combat.freerun.movement` — движение персонажей, KPI мобилиности.
+- `combat.hacking.alert` — алерты взлома, потребляются security-service и quest-engine.
+- `combat.extraction.result` — результат эвакуации, инициирует обновление экономики и инвентаря.
+- `combat.arena.match` — выдаёт финальные рейтинги/награды матчей, подключает social/leaderboard сервисы.
+
+### Этапность
+- **Stage P0:** `/combat/sessions*`, `/combat/ai/*`, raid WebSocket и `combat.ai.state` / `combat.session.events` должны быть подняты первыми.
+- **Stage P1:** shooter core (`combat-shooter-core`), abilities, hacking, stealth/freerun — требуют готовности Stage P0.
+- **Stage P2:** extraction, arenas, combos — ждут стабилизации предыдущих уровней и обратной связи analytics/economy.
 

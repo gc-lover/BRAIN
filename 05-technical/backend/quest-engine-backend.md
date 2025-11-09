@@ -2,7 +2,7 @@
 
 **api-readiness:** ready  
 **api-readiness-check-date:** 2025-11-09 01:03  
-**api-readiness-notes:** Quest Engine backend перепроверен 2025-11-09 01:03: state machine, диалоговый движок, D&D skill checks и branching готовы к постановке задач для gameplay-service.
+**api-readiness-notes:** Quest Engine backend перепроверен 2025-11-09 01:03 и обновлён 2025-11-09 23:30: state machine, диалоговый движок, shooter skill tests и branching готовы к постановке задач для gameplay-service.
 
 ---
 **API Tasks Status:**
@@ -40,7 +40,7 @@
 
 ## Краткое описание
 
-**Quest Engine Backend** - движок для выполнения квестов с ветвлениями, диалогами и D&D skill checks. **БЕЗ ЭТОГО НЕТ КОНТЕНТА В ИГРЕ!**
+**Quest Engine Backend** - движок для выполнения квестов с ветвлениями, диалогами и shooter skill tests. **БЕЗ ЭТОГО НЕТ КОНТЕНТА В ИГРЕ!**
 
 **Микрофича:** Quest execution engine  
 **Размер:** ~400 строк (соблюдает лимит!)
@@ -48,7 +48,7 @@
 **Ключевые возможности:**
 - ✅ Quest state machine (запуск, прогресс, завершение)
 - ✅ Dialogue tree execution (nodes, choices)
-- ✅ Skill check processing (D&D dice rolls)
+- ✅ Skill test processing (deterministic shooter thresholds)
 - ✅ Branch selection logic
 - ✅ Condition evaluation (player flags, reputation, items)
 
@@ -281,7 +281,7 @@ private SkillCheckResult performSkillCheck(
     // 2. Get attribute modifier
     String relatedAttribute = getRelatedAttribute(skillCheck.getSkillName());
     int attributeValue = character.getAttributes().get(relatedAttribute);
-    int attributeModifier = (attributeValue - 10) / 2; // D&D formula
+    int attributeModifier = ShooterSkillScaling.calculate(attributeValue); // shooter skill scaling
     
     // 3. Roll dice
     int diceRoll = rollDice(skillCheck.getDiceType()); // d20 or d100

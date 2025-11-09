@@ -9,17 +9,17 @@
 - [x] Провести аудит `.BRAIN` и удалить устаревшие блоки `API Tasks Status` (2025-11-09 00:25).
 ## High
 - [x] Quest Branching Liquibase — прогнать PoC миграций, выполнить нагрузочные тесты и подготовить отчёт по `2025-11-09-quest-branching-liquibase-plan.md`.
-- [~] Combat Systems Wave 1 — собрать материалы (combat-session, combat-ai-enemies, combat-implants-types, combat-dnd-core, combat-dnd-integration-shooter, combat-abilities, combat-shooting, combat-combos-synergies, combat-extract, combat-freerun, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace, arena-system) и передать пакет ДУАПИТАСК (2025-11-09 01:44).
+- [~] Combat Systems Wave 1 — обновить пакет под shooter (combat-session, combat-ai-enemies, combat-implants-types, combat-shooter-core, combat-abilities, combat-shooting, combat-combos-synergies, combat-extract, combat-freerun, combat-hacking-networks, combat-hacking-combat-integration, combat-cyberspace, arena-system) и подготовить передачу ДУАПИТАСК (pivot 2025-11-09 15:10).
 - [~] Economy Core Refresh — синхронизировать постановку задач для `.BRAIN/05-technical/backend/trade-system.md` и `.BRAIN/05-technical/backend/inventory-system/part1-core-system.md` (REST/Events подготовлены, ждём слот, 2025-11-09 02:20).
 - [~] Auth/Characters/Progression — оформить бриф по auth README, character-management и progression-backend (REST/Events/Storage, 2025-11-09 02:47).
 - [~] Quest Engine Package — подготовить материалы `.BRAIN/05-technical/backend/quest-engine-backend.md` для передачи в ДУАПИТАСК (REST/WebSocket/Events/Storage сводка, 2025-11-09 01:19).
 ## Medium
 - [~] Combat Shooting — подготовить материалы `.BRAIN/02-gameplay/combat/combat-shooting.md` (TTK, отдача, импланты) для передачи в ДУАПИТАСК (2025-11-09 01:37).
-- [~] Combat Stealth — подготовить материалы `.BRAIN/02-gameplay/combat/combat-stealth.md` (каналы обнаружения, импланты) для передачи в ДУАПИТАСК (2025-11-09 01:39).
-- [~] Combat Abilities — подготовить материалы `.BRAIN/02-gameplay/combat/combat-abilities.md` (источники, ранги, ограничения) для передачи в ДУАПИТАСК (2025-11-09 01:42).
-- [~] Combat D&D Core — подготовить материалы `.BRAIN/02-gameplay/combat/combat-dnd-core.md` (DC, модификаторы, групповые проверки) для передачи в ДУАПИТАСК (2025-11-09 01:44).
-- [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 02:48).
-- [ ] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 01:22).
+- [~] Combat Stealth — подготовить материалы `.BRAIN/02-gameplay/combat/combat-stealth.md` (каналы обнаружения, импланты) для передачи в ДУАПИТАСК (2025-11-09 14:35 — черновик брифа готов, ждём окно).
+- [~] Combat Abilities — подготовить материалы `.BRAIN/02-gameplay/combat/combat-abilities.md` (источники, ранги, ограничения) для передачи в ДУАПИТАСК (2025-11-09 14:25 — черновик брифа готов, ждём окно).
+- [ ] Combat Shooter Core — подготовить материалы `.BRAIN/02-gameplay/combat/combat-shooter-core.md` (оружие, TTK, баллистика, anti-cheat) и оформить бриф для ДУАПИТАСК (2025-11-09 15:15 — черновик документа создан, требуется детализация).
+- [~] Combat Combos — подготовить материалы `.BRAIN/02-gameplay/combat/combat-combos-synergies.md` (solo/team/equipment synergies, scoring) для передачи в ДУАПИТАСК (2025-11-09 15:05 — черновик брифа готов, ждём окно).
+- [~] Combat Freerun — подготовить brief по `.BRAIN/02-gameplay/combat/combat-freerun.md` (паркур, боевые манёвры) для ДУАПИТАСК (2025-11-09 14:15 — черновик готов, ждём окно).
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 - [!] Player Market API — доработать `.BRAIN/02-gameplay/economy/player-market/player-market-api.md`: добавить авторизацию, ошибки, схемы запросов/ответов, событийные потоки и интеграцию с БД/аналитикой перед постановкой задач economy-service (2025-11-09 09:42).
 ## Low

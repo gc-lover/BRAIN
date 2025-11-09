@@ -92,9 +92,21 @@
 
 ---
 
+## Безопасность, хранение и дополнительные требования (2025-11-09 13:55)
+- **JWT/Refresh токены:** хранение в `account_sessions` (`sessionId`, `refreshTokenHash`, `device`, `ip`, `expiresAt`); требуется единый TTL (1d/30d) и принудительная инвалидация через `LOGOUT`.
+- **OAuth провайдеры:** таблица `account_oauth` (provider, providerAccountId, scope, linkedAt); endpoints обязаны проверять привязку и дубли.
+- **Парольная политика:** `auth-database-registration.md` описывает сложность (12+ символов, символы разных групп) и историю паролей. API `password/reset` должен сохранять запись в `account_security_audit`.
+- **Role/Permission хранение:** `auth-authorization-security.md` вводит таблицы `roles`, `role_permissions`, `account_roles`; REST `GET /auth/roles` и `POST /auth/roles/{roleId}/permissions` работают только для admin роли, события `ROLE_UPDATED`.
+- **Character slots:** `character_slots` содержит `slotType`, `limit`, `purchasedWith`; покупка слота должна публиковать событие `CharacterSlotPurchased` (учесть economy-service).
+- **Progression snapshots:** `character_progression`, `skill_experience`, `attribute_allocations` + `character_state_snapshots` для отката. Все апдейты должны логироваться в `progression_audit`.
+- **Антифрод входов:** `LOGIN_SUCCESS` дополняется полями risk score, требуются интеграции с security-service для анализа IP/Device fingerprint.
+- **GDPR/Удаление:** soft-delete аккаунта вызывает каскадное помечание персонажей и прогрессии, хранится предел восстановления (`accounts.deleted_until`).
+
+---
+
 ## Следующие действия
 - Подготовить черновик задач ДУАПИТАСК на базе REST/WS/EventBus backlog (Auth, Characters, Progression — волнами A→B→C).
-- Проверить согласование с `combat wave` и `quest engine` (использование D&D проверок и событий прогрессии).
+- Проверить согласование с `combat wave` и `quest engine` (использование shooter-проверок и событий прогрессии).
 - Наметить обновление `implementation-tracker.yaml` после открытия слота для auth/characters/progression задач.
 - Отражать прогресс в `ready.md`, `readiness-tracker.yaml`, `current-status.md` и `TODO.md`.
 
@@ -102,3 +114,4 @@
 
 ## История
 - 2025-11-09 01:24 — создана сводка и backlog для Auth/Characters/Progression.
+- 2025-11-09 13:55 — добавлены требования к безопасности, хранению и событиям (JWT, OAuth, слоты, прогрессия) для постановки задач.

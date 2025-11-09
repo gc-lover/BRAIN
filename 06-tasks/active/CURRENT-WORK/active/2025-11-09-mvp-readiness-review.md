@@ -55,7 +55,7 @@
 
 ## 9. Combat AI Matrix (`.BRAIN/02-gameplay/combat/combat-ai-enemies.md`)
 - **Статус:** ready (v1.0.0, 2025-11-09 00:55)  
-- **Покрытие:** поведенческие слои NPC, Kafka/WebSocket, D&D проверки, рейдовые сценарии.  
+- **Покрытие:** поведенческие слои NPC, Kafka/WebSocket, shooter-проверки, рейдовые сценарии.  
 - **Архитектура:** `gameplay-service`, порт 8083, WebSocket `wss://api.necp.game/v1/gameplay/raid/{raidId}`, интеграции с world/social/economy.  
 - **Замечания:** удалены устаревшие статусы, документ готов к постановке задач по AI и телеметрии.
 
@@ -65,7 +65,7 @@
 - **Архитектура:** `gameplay-service`, модули `modules/combat/arenas`, orchestrator через gRPC, Kafka `arena.match.state`.  
 - **Замечания:** структура соответствует микросервисной карте, до постановки задач дополнительно ничего не требуется.
 
-## 11. D&D Integration (`.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md`)
+## 11. Shooter Core (`.BRAIN/02-gameplay/combat/combat-shooter-core.md`)
 - **Статус:** ready (v1.0.0, 2025-11-09 00:55)  
 - **Покрытие:** гибрид D20 проверок с realtime боем, импланты, advantage/disadvantage, логирование.  
 - **Архитектура:** `gameplay-service`, модуль `modules/combat/mechanics`, интеграция с combat session и имплантами.  

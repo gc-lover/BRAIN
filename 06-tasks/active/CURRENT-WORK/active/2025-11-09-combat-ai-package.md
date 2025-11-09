@@ -6,8 +6,7 @@
 **Старт:** 2025-11-09 00:57  
 **Связанные документы:**
 - `.BRAIN/02-gameplay/combat/combat-ai-enemies.md`
-- `.BRAIN/02-gameplay/combat/combat-dnd-core.md`
-- `.BRAIN/02-gameplay/combat/combat-dnd-integration-shooter.md`
+- `.BRAIN/02-gameplay/combat/combat-shooter-core.md`
 - `.BRAIN/02-gameplay/combat/combat-implants-types.md`
 - `.BRAIN/02-gameplay/combat/combat-combos-synergies.md`
 - `.BRAIN/02-gameplay/combat/combat-extract.md`
@@ -25,17 +24,16 @@
 ## Прогресс
 - Перепроверены метаданные `combat-ai-enemies`: статус `approved`, `api-readiness: ready`, актуализирован приоритет `highest`.
 - Зафиксированы ключевые REST (`/combat/ai/...`) и WebSocket (`wss://api.necp.game/v1/gameplay/raid/{raidId}`) контракты, Kafka-потоки (`combat.ai.state`, `world.events.trigger`, `raid.telemetry`).
-- Подтверждено ядро D&D (`combat-dnd-core`): DC, модификаторы, групповые/кооперативные проверки; документ добавлен в `ready.md` и `readiness-tracker.yaml`.
-- Синхронизированы записи в `ready.md` и `readiness-tracker.yaml` для combat-комплекта (AI, D&D core, D&D shooter integration, arenas, combat session, implants, combos, extraction, hacking).
+- Зафиксирован pivot на shooter-ядро: D&D документы переведены в `archived`, подготовлена новая спецификация `combat-shooter-core`.
+- Обновлены `ready.md` и `readiness-tracker.yaml` для combat-комплекта (AI, shooter core, arenas, combat session, implants, combos, extraction, hacking) — архивные строки исключены из рабочих очередей.
 - Выявлены зависимости между документами (combat session, hacking, extraction, implants) — все находятся в статусе `ready` и перечислены в пакете.
 - Подготовлен отдельный brief `2025-11-09-combat-systems-wave1-brief.md` для передачи ДУАПИТАСК (сводка каталогов, контрактов, зависимостей).
 
 ## Сводка документов для пакета
 | Документ | Версия | Каталог API | Следующий шаг |
 | --- | --- | --- | --- |
-| combat-ai-enemies.md | 1.0.0 | `api/v1/gameplay/combat/ai-enemies.yaml` | Подготовить задания ДУАПИТАСК по REST/WS/Kafka и D&D проверкам |
-| combat-dnd-core.md | 1.0.0 | `api/v1/gameplay/combat/dnd-core.yaml` | Описать контракты для проверки атрибутов, групповых ролей |
-| combat-dnd-integration-shooter.md | 1.0.0 | `api/v1/gameplay/combat/dnd-integration-shooter.yaml` | Сформировать задачи по интеграции проверок в шутерный бой |
+| combat-ai-enemies.md | 1.0.0 | `api/v1/gameplay/combat/ai-enemies.yaml` | Подготовить задания ДУАПИТАСК по REST/WS/Kafka и shooter телеметрии |
+| combat-shooter-core.md | _в работе_ | `api/v1/gameplay/combat/shooter-core.yaml` | Сформировать спецификацию оружия, TTK, recoil, suppression |
 | combat-session-backend.md | 1.0.0 | `api/v1/gameplay/combat/combat-session.yaml` | Разделить по lifecycle, damage loop, событиям |
 | combat-implants-types.md | 1.1.0 | `api/v1/gameplay/combat/implants.yaml` | Согласовать задания по имплантам и модификаторам |
 | combat-combos-synergies.md | 1.0.0 | `api/v1/gameplay/combat/combos-synergies.yaml` | Вторая волна задач по синергиям |
@@ -55,21 +53,21 @@
 - **REST:** `/combat/ai/profiles`, `/combat/ai/profiles/{id}`, `/combat/ai/profiles/{id}/telemetry`, `/combat/raids/{raidId}/phase`, `/combat/ai/encounter`.
 - **WebSocket:** `wss://api.necp.game/v1/gameplay/raid/{raidId}` с событиями `PhaseStart`, `MechanicTrigger`, `PlayerDown`, `CheckRequired`.
 - **Kafka:** `combat.ai.state`, `world.events.trigger`, `raid.telemetry` — указаны producer/consumer и payload.
-- **D&D проверки:** Street REF 15 / TECH 14, Tactical INT 18 / WIS 17, Mythic WIS 20 / TECH 19, Raid INT 22 / STR 21.
+- **Shooter параметры:** TTK профили, recoil кривые, suppression и поведение AI (будут описаны в `combat-shooter-core`).
 - **Схемы БД:** `enemy_ai_profiles`, `enemy_ai_abilities`, `raid_boss_phases` (JSONB поля для поведений и механик).
 - **Зависимости:** материалы `combat-extract`, `combat-hacking`, `combat-combos`, `combat-implants`, `combat-session` (все в статусе ready) — обеспечивают связность навыков и телеметрии.
 
 ## Бриф для ДУАПИТАСК — Combat Systems Wave 1
 - **Приоритет:** критический (подготовка боевого ядра для gameplay-service).
 - **Оценка объёма:** 5-6 задач (REST 3, WebSocket 1, Kafka 1, вспомогательные справочники 1).
-- **Готовые документы:** combat-ai-enemies, combat-dnd-core, combat-dnd-integration-shooter, combat-abilities, combat-stealth, combat-freerun, combat-combos-synergies, combat-extract, combat-hacking-networks, combat-hacking-combat-integration, combat-session-backend, arena-system.
+- **Готовые документы:** combat-ai-enemies, combat-shooter-core, combat-abilities, combat-stealth, combat-freerun, combat-combos-synergies, combat-extract, combat-hacking-networks, combat-hacking-combat-integration, combat-session-backend, arena-system.
 
 ### Рекомендуемое разбиение задач
 - `combat-ai-profiles-api` — CRUD профилей AI, фильтры, связанные телеметрии (REST).
 - `combat-raid-lifecycle-api` — REST для фаз рейда и интеграция с WebSocket.
-- `combat-ai-telemetry-socket` — WebSocket поток `wss://api.necp.game/v1/gameplay/raid/{raidId}` с событиями Phase/Mechanics/Checks.
+- `combat-ai-telemetry-socket` — WebSocket поток `wss://api.necp.game/v1/gameplay/raid/{raidId}` с событиями Phase/Mechanics/ShooterDamage.
 - `combat-ai-kafka-streams` — контракты Kafka `combat.ai.state`, `world.events.trigger`, `raid.telemetry` (+ схемы payload).
-- `combat-dd-core-reference` — вспомогательные справочники DC, модификаторов, групповых проверок (REST read-only + JSON схемы).
+- `combat-shooter-core` — справочники оружия, TTK, recoil, suppression.
 - `combat-abilities-metadata` — REST для источников и ограничений способностей ( CRUD + фильтры ), завязан на импланты/экипировку.
 
 ### Зависимости и интеграции
@@ -81,12 +79,12 @@
 
 ### Checks перед передачей
 - Уточнить конечные SLA для WebSocket событий (частота, размер payload).
-- Согласовать список обязательных D&D проверок с narrative (перекрестная ссылка на combat-dnd-core).
+- Согласовать shooter-метрики (TTK, accuracy thresholds) с narrative и progression.
 - Подготовить сводную таблицу маппинга способностей ↔ имплантов/экипировки для задачи `combat-abilities-metadata`.
 
 ## Следующие действия
 1. Оформить бриф ДУАПИТАСК (использовать резюме выше, добавить уровни приоритета и оценки трудозатрат).
-2. Приложить список готовых документов (abilities, dnd-core, freerun, combos, hacking, extract) с версиями и целевыми каталогами в виде приложения.
+2. Приложить список готовых документов (abilities, shooter-core, freerun, combos, hacking, extract) с версиями и целевыми каталогами в виде приложения.
 3. Сверить зависимости с другими документами (`combat-extract`, `combat-hacking`, `combat-stealth`) и указать их в итоговом пакете.
 4. После разрешения на работу в `API-SWAGGER` подготовить задачу и обновить очереди/трекеры.
 
