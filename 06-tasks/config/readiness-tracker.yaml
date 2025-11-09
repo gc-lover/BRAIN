@@ -1250,6 +1250,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Документ без версии утверждения и API целей; требуется расписать сценарные ветви, показатели livability/affordability, зависимости с экономикой и социалкой перед постановкой задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/washington-dc/2020-2029/quest-001-white-house.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:35"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: "gameplay-service"
+      directory: null
+      frontend_module: "modules/quests"
+    notes: "Требуется описать расписание туров, NPC Secret Service, ветви допуска/отказа и API интеграции с дипломатическими/безопасными системами прежде чем формировать задачи."
   - path: ".BRAIN/04-narrative/npc-lore/common/enemies/maelstrom-tech-2070s-watson.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1888,6 +1899,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Квест описан поверхностно: нет сценарных веток, зависимостей с системами и ссылок на API; требуется структура этапов, наград и интеграций перед передачей в API."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/asia/shanghai/2020-2029/quest-008-chinese-opera.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:38"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест описан поверхностно: отсутствуют ветвления, связи с системами и целевые API; требуется привести к QUEST-TEMPLATE, детализировать этапы и награды перед постановкой задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/denver/2020-2029/quest-003-red-rocks-amphitheatre.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1921,6 +1943,17 @@ mappings:
       directory: null
       frontend_module: "modules/quests"
     notes: "Квест описывает PvP-турнир, но не применяет QUEST-TEMPLATE: отсутствуют YAML-метаданные, ветвления, зависимости, связи с прогрессией и экономикой; требуется детальная доработка перед передачей в API поток."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/europe/berlin/2061-2077/quest-036-berlin-tech-conference.md"
+    version: "0.1.0"
+    status: "needs-work"
+    priority: "low"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Квест описывает участие в Berlin Tech Summit, но отсутствуют ветвления, зависимости с системами и целевые каталоги API; необходимо применить QUEST-TEMPLATE, указать микросервис quest-engine, каталог api/v1/... и фронтенд-модуль, расширить награды и интеграции."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/america/new-york/2040-2060/quest-021-flooded-manhattan.md"
     version: "0.1.0"
     status: "needs-work"
@@ -1998,6 +2031,28 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Таймлайн лора Ванкувера описывает региональные события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Азии описывает общеисторические события и не требует API задач."
+  - path: ".BRAIN/03-lore/_03-lore/timeline-author/regions/asia/cities/bangkok-2020-2093.md"
+    version: "0.1.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 09:36"
+    checker: "Brain Readiness Checker"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Таймлайн лора Бангкока описывает городские события и не требует API задач."
   - path: ".BRAIN/03-lore/_03-lore/timeline-author/quests/cis/kiev/2020-2029/quest-006-golden-gate.md"
     version: "0.1.0"
     status: "needs-work"

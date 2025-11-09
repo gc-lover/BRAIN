@@ -1,5 +1,13 @@
 # Белый Дом
 
+**Статус:** draft  
+**Версия:** 0.1.0  
+**Последнее обновление:** 2025-11-09 09:35  
+
+**api-readiness:** needs-work  
+**api-readiness-check-date:** 2025-11-09 09:35  
+**api-readiness-notes:** Нет сценарных развилок, механизмов безопасности и связей с дипломатическими системами; требуется определить очереди, NPC Secret Service и API каталоги для quest-engine.
+
 **quest-id:** WASHINGTON-2029-001  
 **city:** Вашингтон | **region:** Америка | **period:** 2020-2029  
 **quest-type:** main | **difficulty:** medium | **solo-group:** solo | **time:** 2-4h

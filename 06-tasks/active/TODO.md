@@ -1,6 +1,6 @@
 # TODO — Brain Manager
 
-**Обновлено:** 2025-11-09 02:48  
+**Обновлено:** 2025-11-09 09:37  
 **Ответственный:** Brain Manager
 
 ---
@@ -22,7 +22,9 @@
 - [!] Player Market Analytics — детализация `.BRAIN/02-gameplay/economy/player-market/player-market-analytics.md`: оформить API контракты витрин, SQL/ETL схемы и финальную матрицу KPI перед передачей в ДУАПИТАСК (2025-11-09 09:34).
 ## Low
 - [!] Quest 034 Николай II — добавить версию, статус, сценарные зависимости и цели API для передачи в ДУАПИТАСК (2025-11-09 09:35).
+- [!] Quest 035 Имплантная зависимость — привести `.BRAIN/03-lore/_03-lore/timeline-author/quests/cis/moscow/2061-2077/quest-035-implant-addiction.md` к QUEST-TEMPLATE, расписать ветвления лечения, связать с имплантами и подготовить цели API quest-engine/economy (2025-11-09 09:37).
 - [!] Granville Island Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md`: описать ветвления, NPC, зависимости с quest-engine и KPI наград перед передачей в ДУАПИТАСК (2025-11-09 09:35).
+- [!] Most Livable City Quest — доработать `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md`: расписать сценарио, livability KPI, интеграции с экономикой и социальными системами перед постановкой задач (2025-11-09 09:35).
 
 ---
 

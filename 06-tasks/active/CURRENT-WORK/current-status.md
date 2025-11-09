@@ -18,7 +18,7 @@
 - gameplay-service/freerun — подготовить пакет задач по `.BRAIN/02-gameplay/combat/combat-freerun.md` (ready, паркур и мобильность, `api/v1/gameplay/combat/freerun.yaml`).
 - gameplay-service/stealth — подготовить пакет задач по `.BRAIN/02-gameplay/combat/combat-stealth.md` (ready, системы скрытности, `api/v1/gameplay/combat/stealth.yaml`).
 - gameplay-service/quests — финализировать REST/WS декомпозицию для ДУАПИТАСК после утверждения пакета.
-- lore/quest timelines — требуется структура и API цели для `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md` и аналогичных файлов; оформить связи с quest-engine перед постановкой задач (проверено 2025-11-09 09:35, Brain Readiness Checker).
+ - lore/quest timelines — требуется структура и API цели для `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-009-granville-island.md`, `.BRAIN/03-lore/_03-lore/timeline-author/quests/america/vancouver/2020-2029/quest-010-most-livable-city.md` и следующих по списку; оформить связи с quest-engine перед постановкой задач (проверено 2025-11-09 09:35, Brain Readiness Checker).
 ## Blocked
 - *(блокеров нет)*
 
