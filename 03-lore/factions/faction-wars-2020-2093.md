@@ -49,7 +49,7 @@
 ### 3.2 Panamax Blockade Wars (2025–2032)
 - **Сюжет:** Ever Given 2.0 блокирует Panamax, Maelstrom и Valentinos используют хаос.
 - **Рацион:** контроль поставок, рост black market.
-- **Активности:** `maelstrom-blockade-raid`, контрабанда, D&D проверки Streetwise 18.
+- **Активности:** `maelstrom-blockade-raid`, контрабанда, shooter skill tests Streetwise (threshold 0.66).
 - **Пасхалки:** TikTok 2045 ремиксы «Ever Given is back», мемы о Suez.
 
 ### 3.3 Helios-Indra Corporate Feud (2033–2040)

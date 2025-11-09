@@ -157,7 +157,7 @@
 - [2020-2040: Разрушение и восстановление](./2020-2040-destruction-recovery.md) — продолжение хронологии
 - [Фракции](../factions/) — Arasaka, Militech
 - [Локации](../locations/) — Найт-Сити
-- [Механики мировых событий 2000–2020](../../02-gameplay/world/events/world-events-2000-2020.md) - D&D/MMORPG механики периода
+- [Механики мировых событий 2000–2020](../../02-gameplay/world/events/world-events-2000-2020.md) — shooter/MMORPG механики периода (skill tests, телеметрия)
 
 ## История изменений
 
