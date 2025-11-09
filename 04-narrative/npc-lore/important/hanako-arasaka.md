@@ -7,8 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-07 22:34
-**api-readiness-notes:** Нарративный NPC. Связи и арки проработаны для основных квестов и корпоративной ветки.
+**api-readiness-check-date:** 2025-11-09 04:07
+**api-readiness-notes:** Нарративный NPC; подтверждено 2025-11-09 04:07, что материал служит для сюжетных арок и не требует API задач
 
 **Категория:** important  
 **ID NPC:** npc-hanako-arasaka

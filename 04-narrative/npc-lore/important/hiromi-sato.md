@@ -7,8 +7,8 @@
 **Приоритет:** medium
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-06 07:56
-**api-readiness-notes:** Литературный документ, описание NPC
+**api-readiness-check-date:** 2025-11-09 04:07
+**api-readiness-notes:** Литературный документ NPC с TODO; подтверждено 2025-11-09 04:07, что API задачи не формируются, требуется дальнейшая детализация контента
 
 **Категория:** important  
 **ID NPC:** npc-hiromi-sato

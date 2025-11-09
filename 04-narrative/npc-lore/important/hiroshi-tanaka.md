@@ -7,8 +7,8 @@
 **Приоритет:** high
 
 **api-readiness:** not-applicable  
-**api-readiness-check-date:** 2025-11-05 16:40
-**api-readiness-notes:** Литературный документ, описание NPC, не предназначен для создания API
+**api-readiness-check-date:** 2025-11-09 04:07
+**api-readiness-notes:** Литературный документ, описание NPC; подтверждено 2025-11-09 04:07, что API задачи не требуются
 
 **Категория:** important  
 **ID NPC:** npc-hiroshi-tanaka
