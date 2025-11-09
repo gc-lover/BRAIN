@@ -1,4 +1,4 @@
-# Трекер готовности документов .BRAIN к созданию API задач
+﻿# Трекер готовности документов .BRAIN к созданию API задач
 #
 # Формат записи:
 # - path: относительный путь к документу .BRAIN
@@ -292,7 +292,7 @@ mappings:
       microservice: "economy-service"
       directory: "api/v1/economy/crafting/crafting.yaml"
       frontend_module: "modules/economy/crafting"
-    notes: "Перепроверено 2025-11-09 03:20: гибридная система крафта, рецепты и интеграции описаны полно и готовы к задачам economy-service."
+    notes: "Перепроверено 2025-11-09 03:27: гибридная система крафта, рецепты и интеграции описаны полно и готовы к задачам economy-service."
   - path: ".BRAIN/02-gameplay/economy/economy-currencies-detailed.md"
     version: "2.0.0"
     status: "ready"
@@ -733,3 +733,14 @@ mappings:
       directory: "api/v1/gameplay/combat/hacking/cyberspace.yaml"
       frontend_module: "modules/combat/cyberspace"
     notes: "Перепроверено 2025-11-09 03:13; добавлена явная версия 1.0.0, режимы киберпространства и событийная структура готовы к формированию API контрактов gameplay-service."
+  - path: ".BRAIN/06-tasks/active/CURRENT-WORK/active/2025-11-09-combat-systems-wave1-brief.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "critical"
+    checked: "2025-11-09 03:25"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "gameplay-service"
+      directory: "api/v1/gameplay/combat/"
+      frontend_module: "modules/combat/*"
+    notes: "Wave 1 combat бриф подтверждён 2025-11-09 03:25; агрегирует готовые документы для передачи ДУАПИТАСК."
