@@ -326,6 +326,17 @@ mappings:
       directory: null
       frontend_module: null
     notes: "Шаблон идеи перепроверен 2025-11-09 04:18; документ служебный и не формирует API задачи."
+  - path: ".BRAIN/06-tasks/ideas/2025-11-07-IDEA-urban-legend-easter-eggs.md"
+    version: "1.0.0"
+    status: "not-applicable"
+    priority: "medium"
+    checked: "2025-11-09 04:27"
+    checker: "Brain Manager"
+    api_target:
+      microservice: null
+      directory: null
+      frontend_module: null
+    notes: "Идея городских легенд перепроверена 2025-11-09 04:27; документ остаётся концептуальным и не формирует API задачи."
   - path: ".BRAIN/06-tasks/queues/README.md"
     version: "1.0.0"
     status: "not-applicable"
@@ -1481,3 +1492,14 @@ mappings:
       directory: "api/v1/economy/trading/trading-guilds.yaml"
       frontend_module: "modules/economy/trading-guilds"
     notes: "Перепроверено 2025-11-09 04:19: документ покрывает создание, управление капиталом, API, аудит и интеграции торговых гильдий; готов к постановке задач economy-service."
+  - path: ".BRAIN/02-gameplay/economy/economy-type.md"
+    version: "1.0.0"
+    status: "ready"
+    priority: "high"
+    checked: "2025-11-09 04:30"
+    checker: "Brain Manager"
+    api_target:
+      microservice: "economy-service"
+      directory: "api/v1/economy/core/economy-type.yaml"
+      frontend_module: "modules/economy/core"
+    notes: "Перепроверено 2025-11-09 04:30: гибридная модель экономики, архитектура рынков и система цен описаны полно; документ готов к постановке API задач economy-service."
