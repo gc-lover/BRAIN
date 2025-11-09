@@ -30,10 +30,15 @@ implementations:
     brain_source: ".BRAIN/02-gameplay/social/personal-npc-tool.md"
     api_status: "completed"
     backend:
-      status: "in_progress"
+      status: "completed"
       started: "2025-11-09 13:15"
+      completed: "2025-11-09 13:43"
       agent: "Backend Agent"
+      commit: "0932b7d"
+      notes: "Реализованы Backend API для персональных NPC сценариев: контроллер, сервис, репозитории, маппер, миграции и юнит-тесты."
     frontend:
-      status: "not_started"
+      status: "in_progress"
+      started: "2025-11-09 14:48"
+      agent: "Frontend Agent"
     priority: "critical"
 
