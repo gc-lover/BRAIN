@@ -18,6 +18,13 @@
 - **Last Updated:** 2025-11-06 23:15
 ---
 
+**API Tasks Status:**
+- Status: created
+- Tasks:
+  - API-TASK-403: api/v1/gameplay/combat/roles/roles.yaml (2025-11-09)
+- Last Updated: 2025-11-09 23:05
+---
+
 ---
 
 ## 🎯 Концепция Ролей
