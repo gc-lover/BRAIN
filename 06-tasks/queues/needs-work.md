@@ -253,3 +253,6 @@
 - **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/san-francisco/2020-2029/quest-003-silicon-valley-startup.md (v0.1.0)  
   **Проверено:** 2025-11-09 10:30 — Brain Manager  
   **Что доработать:** Применить QUEST-TEMPLATE, добавить ветвления (финансирование, IPO, провал), интеграции с quest-engine, economy и progression, определить каталоги API и модуль modules/narrative/quests перед постановкой задач.
+- **Документ:** .BRAIN/03-lore/_03-lore/timeline-author/quests/america/mexico-city/2020-2029/quest-006-frida-kahlo-house.md (v0.1.0)  
+  **Проверено:** 2025-11-09 10:30 — Brain Manager  
+  **Что доработать:** Добавить ветвления музейного визита, проверки навыков, связи с социальным рейтингом, арт-коллекциями и экономикой; определить целевой микросервис и фронтенд-модуль.
